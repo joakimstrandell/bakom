@@ -120,7 +120,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.7
+    "bakomScore": 6.4
   },
   {
     "id": "a-bar-called-gemma-grev-turegatan-30",
@@ -253,7 +253,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.3
+    "bakomScore": 6.2
   },
   {
     "id": "adam-albin-rådmansgatan-16",
@@ -289,7 +289,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 8.7
+    "bakomScore": 8.8
   },
   {
     "id": "adria-tulegatan-10",
@@ -390,7 +390,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 7.1
+    "bakomScore": 7.4
   },
   {
     "id": "agnes-norra-agnegatan-43",
@@ -443,7 +443,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.9
+    "bakomScore": 7.1
   },
   {
     "id": "agrikultur-franska-bukten-10",
@@ -918,7 +918,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 7.6
+    "bakomScore": 7.8
   },
   {
     "id": "aperitivo-by-ingrosso-sankt-eriksgatan-87",
@@ -1116,7 +1116,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.5
+    "bakomScore": 7
   },
   {
     "id": "asian-post-office-regeringsgatan-66",
@@ -1373,7 +1373,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 7.1
+    "bakomScore": 7.3
   },
   {
     "id": "bacchanale-ringvägen-110",
@@ -1645,7 +1645,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.6
+    "bakomScore": 7
   },
   {
     "id": "banacado-tegnérgatan-6",
@@ -1914,7 +1914,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 7.4
+    "bakomScore": 7.5
   },
   {
     "id": "bar-allegrine-kammakargatan-22",
@@ -1958,16 +1958,20 @@
       "krogguiden": 3.8,
       "google": null,
       "michelin": null,
-      "whiteguide": null
+      "whiteguide": null,
+      "svd": 4
     },
     "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/allegrine"
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/allegrine",
+      "svd": "https://www.svd.se/a/kw4RXB/recension-av-bar-allegrine-hoga-toppar-men-racker-inte-hela-vagen"
     },
     "sourceIds": {
-      "krogguiden": "allegrine"
+      "krogguiden": "allegrine",
+      "svd": "kw4RXB"
     },
     "sources": [
-      "krogguiden"
+      "krogguiden",
+      "svd"
     ],
     "bakomScore": 6.2
   },
@@ -2105,7 +2109,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.6
+    "bakomScore": 7
   },
   {
     "id": "bar-montan-förbindelsehallen",
@@ -2149,7 +2153,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.7
+    "bakomScore": 7
   },
   {
     "id": "bar-nimes-rådmansgatan-25",
@@ -2360,7 +2364,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.9
+    "bakomScore": 6.4
   },
   {
     "id": "barobao-hornsgatan-66",
@@ -2404,7 +2408,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.6
+    "bakomScore": 6.3
   },
   {
     "id": "barrels-burgers-beer-stora-nygatan-20",
@@ -2552,7 +2556,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 7.7
+    "bakomScore": 7.9
   },
   {
     "id": "bâtard-nybrogatan-5",
@@ -2737,7 +2741,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.6
+    "bakomScore": 6.3
   },
   {
     "id": "bibliotek-live-medborgarplatsen-2",
@@ -3513,7 +3517,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 7
+    "bakomScore": 7.2
   },
   {
     "id": "bistro-renard-swedenborgsgatan-25",
@@ -3702,16 +3706,24 @@
       "krogguiden": null,
       "google": null,
       "michelin": null,
-      "whiteguide": null
+      "whiteguide": null,
+      "svd": 4,
+      "dn": true
     },
     "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/bistro-tartine"
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/bistro-tartine",
+      "svd": "https://www.svd.se/a/LM8eEJ/recension-bistro-tartine-vallagade-franska-klassiker-i-generisk-miljo",
+      "dn": "https://www.dn.se/kultur/bistro-tartine-mer-malgruppstank-an-entusiasm-pa-odslig-retrosatsning/"
     },
     "sourceIds": {
-      "krogguiden": "bistro-tartine"
+      "krogguiden": "bistro-tartine",
+      "svd": "LM8eEJ",
+      "dn": "bistro-tartine-mer-malgruppstank-an-entusiasm-pa-odslig-retrosatsning"
     },
     "sources": [
-      "krogguiden"
+      "krogguiden",
+      "svd",
+      "dn"
     ],
     "bakomScore": null
   },
@@ -3783,16 +3795,20 @@
       "krogguiden": null,
       "google": null,
       "michelin": null,
-      "whiteguide": null
+      "whiteguide": null,
+      "svd": 5
     },
     "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/bistrot-du-passage"
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/bistrot-du-passage",
+      "svd": "https://www.svd.se/a/q6AG2E/recension-av-bistrot-du-passage-i-ostermalmshallen-trangt-men-hogklassigt-franskt"
     },
     "sourceIds": {
-      "krogguiden": "bistrot-du-passage"
+      "krogguiden": "bistrot-du-passage",
+      "svd": "q6AG2E"
     },
     "sources": [
-      "krogguiden"
+      "krogguiden",
+      "svd"
     ],
     "bakomScore": null
   },
@@ -3854,7 +3870,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.5
+    "bakomScore": 6.2
   },
   {
     "id": "bistroteket-bondegatan-54",
@@ -4028,7 +4044,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 6.3
+    "bakomScore": 7
   },
   {
     "id": "bleck-katarina-bangata-68",
@@ -4064,7 +4080,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.2
+    "bakomScore": 6.7
   },
   {
     "id": "blue-light-yokohama-åsögatan-170-170",
@@ -4254,7 +4270,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 7.1
+    "bakomScore": 7.4
   },
   {
     "id": "bobergs-smörrebröd-hamngatan-18",
@@ -4353,7 +4369,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 4.4
+    "bakomScore": 5.7
   },
   {
     "id": "bonaccorso-runebergsgatan-1",
@@ -4444,7 +4460,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.9
+    "bakomScore": 6.4
   },
   {
     "id": "boqueria-jakobsbergsgatan-17",
@@ -4556,7 +4572,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 6.3
+    "bakomScore": 7
   },
   {
     "id": "boteco-da-silvania-kungsholm-strand-173",
@@ -4796,7 +4812,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 7
+    "bakomScore": 7.6
   },
   {
     "id": "brasserie-balzac-odengatan-26",
@@ -4862,7 +4878,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.3
+    "bakomScore": 6.1
   },
   {
     "id": "brasserie-bobonne-storgatan-12",
@@ -4906,7 +4922,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.9
+    "bakomScore": 6.4
   },
   {
     "id": "brasserie-elverket-linnégatan-69",
@@ -5021,7 +5037,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.2
+    "bakomScore": 6.7
   },
   {
     "id": "brasserie-lou-lou-katarinavägen-3",
@@ -5578,7 +5594,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.9
+    "bakomScore": 6.4
   },
   {
     "id": "café-facile-luntmakargatan-99",
@@ -5632,7 +5648,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.5
+    "bakomScore": 6.2
   },
   {
     "id": "café-klotet-stadsgården-6",
@@ -5701,7 +5717,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.8
+    "bakomScore": 7
   },
   {
     "id": "café-parkvillan-per-brahes-väg-5",
@@ -6148,7 +6164,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 7.8
+    "bakomScore": 7.9
   },
   {
     "id": "chicce-sankt-eriksgatan-119",
@@ -6539,21 +6555,25 @@
       "krogguiden": 4.1,
       "google": null,
       "michelin": null,
-      "whiteguide": "very_good_class"
+      "whiteguide": "very_good_class",
+      "svd": 4
     },
     "links": {
       "krogguiden": "https://www.krogguiden.se/restauranger/view/coco--carmen",
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/11465"
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/11465",
+      "svd": "https://www.svd.se/a/d4nQow/recension-av-coco-carmen-pa-ostermalm-omtumlande-upplevelse"
     },
     "sourceIds": {
       "krogguiden": "coco--carmen",
-      "whiteguide": 11465
+      "whiteguide": 11465,
+      "svd": "d4nQow"
     },
     "sources": [
       "krogguiden",
-      "whiteguide"
+      "whiteguide",
+      "svd"
     ],
-    "bakomScore": 7.2
+    "bakomScore": 7.5
   },
   {
     "id": "coco-beach-club-elfviks-udde",
@@ -6723,21 +6743,25 @@
       "krogguiden": 4.1,
       "google": null,
       "michelin": null,
-      "whiteguide": "very_good_class"
+      "whiteguide": "very_good_class",
+      "svd": 5
     },
     "links": {
       "krogguiden": "https://www.krogguiden.se/restauranger/view/copine",
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/11383"
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/11383",
+      "svd": "https://www.svd.se/a/8qbeQw/recension-av-restaurang-copine-magiska-ratter-stralande-service-och-hog-stamning"
     },
     "sourceIds": {
       "krogguiden": "copine",
-      "whiteguide": 11383
+      "whiteguide": 11383,
+      "svd": "8qbeQw"
     },
     "sources": [
       "krogguiden",
-      "whiteguide"
+      "whiteguide",
+      "svd"
     ],
-    "bakomScore": 7.2
+    "bakomScore": 7.5
   },
   {
     "id": "cork-vinbar-stora-nygatan-22",
@@ -7676,7 +7700,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.9
+    "bakomScore": 6.4
   },
   {
     "id": "dersch-tulegatan-22",
@@ -7698,21 +7722,25 @@
       "krogguiden": 3.4,
       "google": null,
       "michelin": null,
-      "whiteguide": "very_good_class"
+      "whiteguide": "very_good_class",
+      "dn": true
     },
     "links": {
       "krogguiden": "https://www.krogguiden.se/restauranger/view/dersch",
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/12757"
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/12757",
+      "dn": "https://www.dn.se/kultur/dersch-hart-nischad-krog-serverar-schnitzel-pa-lopande-band/"
     },
     "sourceIds": {
       "krogguiden": "dersch",
-      "whiteguide": 12757
+      "whiteguide": 12757,
+      "dn": "dersch-hart-nischad-krog-serverar-schnitzel-pa-lopande-band"
     },
     "sources": [
       "krogguiden",
-      "whiteguide"
+      "whiteguide",
+      "dn"
     ],
-    "bakomScore": 6.4
+    "bakomScore": 7
   },
   {
     "id": "det-arroganta-svinet-dåntorpsvägen-29",
@@ -7764,7 +7792,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 4.4
+    "bakomScore": 5.7
   },
   {
     "id": "dining-room-hotel-at-six-brunkebergstorg-6",
@@ -7881,7 +7909,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 7
+    "bakomScore": 7.2
   },
   {
     "id": "dotter-voltaire-sergels-torg-3",
@@ -8474,7 +8502,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.9
+    "bakomScore": 6.4
   },
   {
     "id": "enoteca-la-mela-hornsgatan-149",
@@ -9050,7 +9078,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 6.8
+    "bakomScore": 7.2
   },
   {
     "id": "filmhuset-bar-bistro-lunch-borgvägen-1",
@@ -9501,7 +9529,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.9
+    "bakomScore": 7.1
   },
   {
     "id": "framfickan-mat-bar-maximteatern-karlaplan-4",
@@ -9763,7 +9791,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 6.1
+    "bakomScore": 6.4
   },
   {
     "id": "frippe-nybrogatan-6",
@@ -9911,7 +9939,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 7
+    "bakomScore": 7.2
   },
   {
     "id": "funkalistic-bistro-bar-sehlstedtsgatan-1",
@@ -10088,7 +10116,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.6
+    "bakomScore": 7
   },
   {
     "id": "gaijin-döbelnsgatan-8",
@@ -10128,16 +10156,24 @@
       "krogguiden": 3.7,
       "google": null,
       "michelin": null,
-      "whiteguide": null
+      "whiteguide": null,
+      "svd": 5,
+      "dn": true
     },
     "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/gaijin"
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/gaijin",
+      "svd": "https://www.svd.se/a/d4dVnB/recension-av-gaijin-japanska-smaker-lyft-till-fullanding",
+      "dn": "https://www.dn.se/kultur/gaijin-splittrat-och-spretigt-nar-gasten-far-gissa-sig-fram-i-menyn/"
     },
     "sourceIds": {
-      "krogguiden": "gaijin"
+      "krogguiden": "gaijin",
+      "svd": "d4dVnB",
+      "dn": "gaijin-splittrat-och-spretigt-nar-gasten-far-gissa-sig-fram-i-menyn"
     },
     "sources": [
-      "krogguiden"
+      "krogguiden",
+      "svd",
+      "dn"
     ],
     "bakomScore": 5.9
   },
@@ -10347,7 +10383,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.3
+    "bakomScore": 7
   },
   {
     "id": "gigis-odengatan-25",
@@ -10570,7 +10606,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.5
+    "bakomScore": 7
   },
   {
     "id": "gossip-skånegatan-71",
@@ -11754,7 +11790,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 6.2
+    "bakomScore": 6.5
   },
   {
     "id": "himlen-götgatan-78",
@@ -11807,16 +11843,20 @@
       "krogguiden": 3.2,
       "google": null,
       "michelin": null,
-      "whiteguide": null
+      "whiteguide": null,
+      "svd": 2
     },
     "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/himlen"
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/himlen",
+      "svd": "https://www.svd.se/a/5p6gGe/recension-av-himlen-utsikten-ar-fantastisk-nivan-pa-maten-for-lag"
     },
     "sourceIds": {
-      "krogguiden": "himlen"
+      "krogguiden": "himlen",
+      "svd": "5p6gGe"
     },
     "sources": [
-      "krogguiden"
+      "krogguiden",
+      "svd"
     ],
     "bakomScore": 4.8
   },
@@ -12316,7 +12356,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.9
+    "bakomScore": 6.4
   },
   {
     "id": "il-forno-da-gino-fridhemsgatan-41",
@@ -12544,7 +12584,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.7
+    "bakomScore": 6.4
   },
   {
     "id": "ingmarsö-krog-ingmarsö-byväg-2",
@@ -13171,7 +13211,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.7
+    "bakomScore": 7
   },
   {
     "id": "kapten-jack-malmskillnadsgatan-40",
@@ -13217,16 +13257,20 @@
       "krogguiden": null,
       "google": null,
       "michelin": null,
-      "whiteguide": null
+      "whiteguide": null,
+      "svd": 3
     },
     "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/kapten-jack"
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/kapten-jack",
+      "svd": "https://www.svd.se/a/d4O2Jz/recension-av-kapten-jack-stimmigt-och-overraskande-bra-mat"
     },
     "sourceIds": {
-      "krogguiden": "kapten-jack"
+      "krogguiden": "kapten-jack",
+      "svd": "d4O2Jz"
     },
     "sources": [
-      "krogguiden"
+      "krogguiden",
+      "svd"
     ],
     "bakomScore": null
   },
@@ -13733,7 +13777,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.5
+    "bakomScore": 6.2
   },
   {
     "id": "kryp-in-timmermansgatan-22",
@@ -13925,16 +13969,20 @@
       "krogguiden": null,
       "google": null,
       "michelin": null,
-      "whiteguide": null
+      "whiteguide": null,
+      "svd": 4
     },
     "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/koket-vid-bordet"
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/koket-vid-bordet",
+      "svd": "https://www.svd.se/a/2p1dBq/recension-av-koket-vid-bordet-krogen-dar-vinet-kommer-i-forsta-hand"
     },
     "sourceIds": {
-      "krogguiden": "koket-vid-bordet"
+      "krogguiden": "koket-vid-bordet",
+      "svd": "2p1dBq"
     },
     "sources": [
-      "krogguiden"
+      "krogguiden",
+      "svd"
     ],
     "bakomScore": null
   },
@@ -14044,7 +14092,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.3
+    "bakomScore": 6.8
   },
   {
     "id": "la-boca-doce-fredsgatan-12",
@@ -14420,7 +14468,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 7
+    "bakomScore": 7.2
   },
   {
     "id": "le-bon-plat-odengatan-100",
@@ -14695,7 +14743,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 4.4
+    "bakomScore": 5.7
   },
   {
     "id": "lennart-bror-fisk-tegnérgatan-9",
@@ -14868,7 +14916,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.7
+    "bakomScore": 6.2
   },
   {
     "id": "lilla-ego-västmannagatan-69",
@@ -14907,7 +14955,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 7.5
+    "bakomScore": 7.7
   },
   {
     "id": "lilla-ljunggren-tegnergatan-11",
@@ -15403,7 +15451,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 6.9
+    "bakomScore": 7.4
   },
   {
     "id": "luzette-centralplan-25",
@@ -15454,7 +15502,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.2
+    "bakomScore": 6.7
   },
   {
     "id": "lydmar-hotel",
@@ -15794,7 +15842,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.1
+    "bakomScore": 6.5
   },
   {
     "id": "mahalo-hornsgatan-61",
@@ -16141,7 +16189,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.6
+    "bakomScore": 7
   },
   {
     "id": "mathias-dahlgren-matbaren-södra-blasieholmshamnen-6",
@@ -16202,7 +16250,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 7.2
+    "bakomScore": 7.5
   },
   {
     "id": "matrosen-smörrebröd-skeppsbron-24",
@@ -16797,7 +16845,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 6.7
+    "bakomScore": 7.1
   },
   {
     "id": "miss-clara",
@@ -16937,7 +16985,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.7
+    "bakomScore": 7
   },
   {
     "id": "mister-french-tullhus-2",
@@ -17044,7 +17092,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 7.1
+    "bakomScore": 7.4
   },
   {
     "id": "moderna-museet-exercisplan-4",
@@ -17294,7 +17342,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.7
+    "bakomScore": 6.2
   },
   {
     "id": "nabo-brasseri-tegnérgatan-34",
@@ -17800,16 +17848,20 @@
       "krogguiden": 4.1,
       "google": null,
       "michelin": null,
-      "whiteguide": null
+      "whiteguide": null,
+      "svd": 5
     },
     "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/nook"
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/nook",
+      "svd": "https://www.svd.se/a/JbPMJm/recension-av-restaurang-nook-elegant-och-prisvart-vi-faller-pladask"
     },
     "sourceIds": {
-      "krogguiden": "nook"
+      "krogguiden": "nook",
+      "svd": "JbPMJm"
     },
     "sources": [
-      "krogguiden"
+      "krogguiden",
+      "svd"
     ],
     "bakomScore": 6.8
   },
@@ -18310,7 +18362,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.9
+    "bakomScore": 7.1
   },
   {
     "id": "omino-by-ingrosso-rörstrandsgatan-18",
@@ -18626,7 +18678,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.5
+    "bakomScore": 7
   },
   {
     "id": "paganini-västerlånggatan-75",
@@ -18988,7 +19040,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.8
+    "bakomScore": 6.5
   },
   {
     "id": "paul-s-haymarket-kungsgatan-47",
@@ -19210,7 +19262,7 @@
       "krogguiden",
       "michelin"
     ],
-    "bakomScore": 6.9
+    "bakomScore": 7.9
   },
   {
     "id": "pet-sounds-bar-stadsgården-6",
@@ -19339,7 +19391,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 7.5
+    "bakomScore": 8.1
   },
   {
     "id": "pharmarium-stortorget-7",
@@ -19773,7 +19825,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 7.2
+    "bakomScore": 7.5
   },
   {
     "id": "prime-burger-olof-palmes-gata-12",
@@ -19876,7 +19928,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 6.9
+    "bakomScore": 7.4
   },
   {
     "id": "ps-foajé-nytorgsgatan-42",
@@ -19963,7 +20015,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 7.1
+    "bakomScore": 7.4
   },
   {
     "id": "racamaca-wollmar-yxkullsgatan-5b",
@@ -20336,7 +20388,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.9
+    "bakomScore": 6.4
   },
   {
     "id": "restaurang-boketto-gävlegatan-18",
@@ -20436,16 +20488,24 @@
       "krogguiden": null,
       "google": null,
       "michelin": null,
-      "whiteguide": null
+      "whiteguide": null,
+      "svd": 3,
+      "dn": true
     },
     "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/restaurang-chingu"
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/restaurang-chingu",
+      "svd": "https://www.svd.se/a/Arz0MA/recension-av-chingu-koreansk-barbecue-ar-ett-trevligt-satt-att-ata-pa",
+      "dn": "https://www.dn.se/kultur/chingu-koreansk-grillkrog-dar-upplevelsen-avgors-av-sallskapet/"
     },
     "sourceIds": {
-      "krogguiden": "restaurang-chingu"
+      "krogguiden": "restaurang-chingu",
+      "svd": "Arz0MA",
+      "dn": "chingu-koreansk-grillkrog-dar-upplevelsen-avgors-av-sallskapet"
     },
     "sources": [
-      "krogguiden"
+      "krogguiden",
+      "svd",
+      "dn"
     ],
     "bakomScore": null
   },
@@ -21006,7 +21066,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.8
+    "bakomScore": 6.3
   },
   {
     "id": "restaurang-sensum-wallingatan-40",
@@ -21066,7 +21126,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.9
+    "bakomScore": 7.1
   },
   {
     "id": "restaurang-ted-linnégatan-11",
@@ -21159,16 +21219,20 @@
       "krogguiden": null,
       "google": null,
       "michelin": null,
-      "whiteguide": null
+      "whiteguide": null,
+      "dn": true
     },
     "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/restaurang-tte"
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/restaurang-tte",
+      "dn": "https://www.dn.se/kultur/tete-den-libanesiska-maten-ar-sharing-food-pa-riktigt/"
     },
     "sourceIds": {
-      "krogguiden": "restaurang-tte"
+      "krogguiden": "restaurang-tte",
+      "dn": "tete-den-libanesiska-maten-ar-sharing-food-pa-riktigt"
     },
     "sources": [
-      "krogguiden"
+      "krogguiden",
+      "dn"
     ],
     "bakomScore": null
   },
@@ -21209,7 +21273,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 7.1
+    "bakomScore": 7.2
   },
   {
     "id": "restaurang-ärla-danderydsgatan-25",
@@ -21472,7 +21536,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.2
+    "bakomScore": 6.7
   },
   {
     "id": "riche-fenix-götgatan-40",
@@ -21763,7 +21827,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.9
+    "bakomScore": 7.1
   },
   {
     "id": "rockin-grill-lövängsgatan-14",
@@ -21849,7 +21913,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.9
+    "bakomScore": 7.1
   },
   {
     "id": "rolfs-kök-tegnérgatan-41",
@@ -21910,7 +21974,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 7
+    "bakomScore": 7.5
   },
   {
     "id": "rosettas-lindvallsgatan-11",
@@ -22383,16 +22447,20 @@
       "krogguiden": null,
       "google": null,
       "michelin": null,
-      "whiteguide": null
+      "whiteguide": null,
+      "svd": 3
     },
     "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/savoca"
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/savoca",
+      "svd": "https://www.svd.se/a/Ar2Kzq/recension-av-savoca-italiensk-krog-pa-kungsholmen-med-avslutande-toppar"
     },
     "sourceIds": {
-      "krogguiden": "savoca"
+      "krogguiden": "savoca",
+      "svd": "Ar2Kzq"
     },
     "sources": [
-      "krogguiden"
+      "krogguiden",
+      "svd"
     ],
     "bakomScore": null
   },
@@ -22590,7 +22658,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 7
+    "bakomScore": 7.2
   },
   {
     "id": "seafood-gastro-södra-blasieholmshamnen-6",
@@ -22838,16 +22906,20 @@
       "krogguiden": null,
       "google": null,
       "michelin": null,
-      "whiteguide": null
+      "whiteguide": null,
+      "dn": true
     },
     "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/shibumi-"
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/shibumi-",
+      "dn": "https://www.dn.se/kultur/shibumi-det-kallas-for-izakaya-men-upplagget-ar-provocerande/"
     },
     "sourceIds": {
-      "krogguiden": "shibumi-"
+      "krogguiden": "shibumi-",
+      "dn": "shibumi-det-kallas-for-izakaya-men-upplagget-ar-provocerande"
     },
     "sources": [
-      "krogguiden"
+      "krogguiden",
+      "dn"
     ],
     "bakomScore": null
   },
@@ -23181,7 +23253,7 @@
       "krogguiden",
       "michelin"
     ],
-    "bakomScore": 6.1
+    "bakomScore": 6.2
   },
   {
     "id": "sosta-bar-sveavägen-84",
@@ -23372,16 +23444,24 @@
       "krogguiden": 3.8,
       "google": null,
       "michelin": null,
-      "whiteguide": null
+      "whiteguide": null,
+      "svd": 5,
+      "dn": true
     },
     "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/sperling--co"
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/sperling--co",
+      "svd": "https://www.svd.se/a/Exwjoa/recension-av-sperling-co-vid-stureplan-grillkott-i-toppklass",
+      "dn": "https://www.dn.se/kultur/sperling-co-kottet-i-fokus-pa-stureplans-nya-lyxbrasseri/"
     },
     "sourceIds": {
-      "krogguiden": "sperling--co"
+      "krogguiden": "sperling--co",
+      "svd": "Exwjoa",
+      "dn": "sperling-co-kottet-i-fokus-pa-stureplans-nya-lyxbrasseri"
     },
     "sources": [
-      "krogguiden"
+      "krogguiden",
+      "svd",
+      "dn"
     ],
     "bakomScore": 6.2
   },
@@ -23434,7 +23514,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.2
+    "bakomScore": 6.7
   },
   {
     "id": "spisa-hos-helena-scheelegatan-18",
@@ -23597,7 +23677,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.9
+    "bakomScore": 7.1
   },
   {
     "id": "stallmästaregården",
@@ -24225,7 +24305,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.8
+    "bakomScore": 6.3
   },
   {
     "id": "sturebaren-by-poké-burger-stureplan-4",
@@ -24317,7 +24397,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 7
+    "bakomScore": 7.2
   },
   {
     "id": "styrelsen-bar-bistro-hantverkargatan-31",
@@ -24750,7 +24830,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.9
+    "bakomScore": 7.1
   },
   {
     "id": "svenska-hamburgerköket-tellusborgsvägen-78",
@@ -24987,7 +25067,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 7
+    "bakomScore": 7.2
   },
   {
     "id": "teatern-götgatan-132",
@@ -25031,7 +25111,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 4.4
+    "bakomScore": 5.7
   },
   {
     "id": "teddys-sibyllegatan-43",
@@ -25110,7 +25190,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 7.2
+    "bakomScore": 7.5
   },
   {
     "id": "tehran-grill-timmermansgatan-5",
@@ -25265,7 +25345,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.8
+    "bakomScore": 6.3
   },
   {
     "id": "tennstopet-dalagatan-50",
@@ -25325,7 +25405,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.8
+    "bakomScore": 7
   },
   {
     "id": "tennstopet-grill-odengatan-72",
@@ -25391,7 +25471,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.5
+    "bakomScore": 7
   },
   {
     "id": "teppanyaki-kiri",
@@ -25494,16 +25574,20 @@
       "krogguiden": null,
       "google": null,
       "michelin": null,
-      "whiteguide": null
+      "whiteguide": null,
+      "svd": 2
     },
     "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/teuf"
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/teuf",
+      "svd": "https://www.svd.se/a/k0J0aL/recension-av-teuf-gor-man-bara-en-sak-sa-maste-man-gora-det-ritkigt-bra"
     },
     "sourceIds": {
-      "krogguiden": "teuf"
+      "krogguiden": "teuf",
+      "svd": "k0J0aL"
     },
     "sources": [
-      "krogguiden"
+      "krogguiden",
+      "svd"
     ],
     "bakomScore": null
   },
@@ -26056,7 +26140,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.3
+    "bakomScore": 6.2
   },
   {
     "id": "tosto",
@@ -26087,16 +26171,24 @@
       "krogguiden": null,
       "google": null,
       "michelin": null,
-      "whiteguide": null
+      "whiteguide": null,
+      "svd": 3,
+      "dn": true
     },
     "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/tosto"
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/tosto",
+      "svd": "https://www.svd.se/a/n1QRwm/recension-av-tosto-fina-smaker-men-spretigt-och-hetsigt",
+      "dn": "https://www.dn.se/kultur/tosto-overtand-satsning-med-monsterkonst-och-italiensk-mat-i-miniformat/"
     },
     "sourceIds": {
-      "krogguiden": "tosto"
+      "krogguiden": "tosto",
+      "svd": "n1QRwm",
+      "dn": "tosto-overtand-satsning-med-monsterkonst-och-italiensk-mat-i-miniformat"
     },
     "sources": [
-      "krogguiden"
+      "krogguiden",
+      "svd",
+      "dn"
     ],
     "bakomScore": null
   },
@@ -26232,7 +26324,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.8
+    "bakomScore": 6.3
   },
   {
     "id": "trattoria-corazza-rörstrandsgatan-3",
@@ -26432,16 +26524,20 @@
       "krogguiden": 4,
       "google": null,
       "michelin": null,
-      "whiteguide": null
+      "whiteguide": null,
+      "svd": 4
     },
     "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/tripletta"
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/tripletta",
+      "svd": "https://www.svd.se/a/q6pr70/recension-av-tripletta-mysig-atmosfar-och-mat-med-toppar-och-bottnar"
     },
     "sourceIds": {
-      "krogguiden": "tripletta"
+      "krogguiden": "tripletta",
+      "svd": "q6pr70"
     },
     "sources": [
-      "krogguiden"
+      "krogguiden",
+      "svd"
     ],
     "bakomScore": 6.6
   },
@@ -26655,7 +26751,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 6.3
+    "bakomScore": 7
   },
   {
     "id": "un-poco-karlavägen-28",
@@ -27072,7 +27168,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.6
+    "bakomScore": 7
   },
   {
     "id": "villa-dahlia-tegnérlunden-8",
@@ -27443,7 +27539,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 6.7
+    "bakomScore": 7.1
   },
   {
     "id": "waan-thai-s-t-eriksgatan-92",
@@ -27552,7 +27648,7 @@
       "krogguiden",
       "michelin"
     ],
-    "bakomScore": 6.5
+    "bakomScore": 7
   },
   {
     "id": "wedholms-fisk-nybrokajen-17",
@@ -27596,7 +27692,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 7.1
+    "bakomScore": 7.4
   },
   {
     "id": "woodstockholm-mosebacke-torg-9",
@@ -27635,7 +27731,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 6.9
+    "bakomScore": 7.4
   },
   {
     "id": "a-h-glassbar-skånegatan-83",
@@ -30090,7 +30186,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 5.3
+    "bakomScore": 6.2
   },
   {
     "id": "restaurang-rot-norrlanda-mangsarve-169",
@@ -31867,7 +31963,7 @@
       "krogguiden",
       "whiteguide"
     ],
-    "bakomScore": 6.8
+    "bakomScore": 7
   },
   {
     "id": "tako-grev-turegatan-1",
@@ -31959,7 +32055,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 6.3
+    "bakomScore": 7
   },
   {
     "id": "restaurang-b-a-r",
@@ -32028,7 +32124,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 6.3
+    "bakomScore": 7
   },
   {
     "id": "allegrine",
@@ -32064,7 +32160,7 @@
       "michelin",
       "whiteguide"
     ],
-    "bakomScore": 6.8
+    "bakomScore": 7
   },
   {
     "id": "matbaren",
@@ -32196,7 +32292,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 5.3
+    "bakomScore": 6.2
   },
   {
     "id": "bistro-süd-swedenborgsgatan-8-stockholm-stockholm",
@@ -32229,7 +32325,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 5.3
+    "bakomScore": 6.2
   },
   {
     "id": "surfers-stockholm-norrlandsgatan-24-stockholm-stockholm",
@@ -32262,7 +32358,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 6.6
+    "bakomScore": 7
   },
   {
     "id": "restaurang-varvet-högmarsövägen-83-stockholm-furusund",
@@ -32295,7 +32391,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 5.3
+    "bakomScore": 6.2
   },
   {
     "id": "grinda-wärdshus-södra-bryggan-grinda-stockholm-vaxholm",
@@ -32328,7 +32424,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 4.4
+    "bakomScore": 5.7
   },
   {
     "id": "gällnö-bar-stf-vandrarhem-gällnö-stockholm-gällnöby",
@@ -32361,7 +32457,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 4.4
+    "bakomScore": 5.7
   },
   {
     "id": "svartsö-krog-svartsö-alsviks-by-398-stockholm-skälvik",
@@ -32394,7 +32490,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 6.6
+    "bakomScore": 7
   },
   {
     "id": "canta-lola-grev-turegatan-6-stockholm-stockholm",
@@ -32427,7 +32523,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 4.4
+    "bakomScore": 5.7
   },
   {
     "id": "kagges-lilla-nygatan-21-stockholm-stockholm",
@@ -32460,7 +32556,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 6.6
+    "bakomScore": 7
   },
   {
     "id": "la-vecchia-signora-åsögatan-163-stockholm-stockholm",
@@ -32493,7 +32589,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 5.3
+    "bakomScore": 6.2
   },
   {
     "id": "långbro-värdshus-stora-mans-väg-4-stockholm-älvsjö",
@@ -32526,7 +32622,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 5.3
+    "bakomScore": 6.2
   },
   {
     "id": "sardin-solnavägen-55-stockholm-solna",
@@ -32559,7 +32655,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 5.3
+    "bakomScore": 6.2
   },
   {
     "id": "monrads-vendevägen-8-stockholm-djursholm",
@@ -32592,7 +32688,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 5.3
+    "bakomScore": 6.2
   },
   {
     "id": "taverna-brillo-sturegatan-6-humlegårdsgatan-19-stockholm-stockholm",
@@ -32625,7 +32721,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 5.3
+    "bakomScore": 6.2
   },
   {
     "id": "shanti-ultimat-karlbergsvägen-70-stockholm-stockholm",
@@ -32658,7 +32754,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 5.3
+    "bakomScore": 6.2
   },
   {
     "id": "operakällarens-matsal-operahuset-karl-xii-s-torg-stockholm-stockholm",
@@ -32724,7 +32820,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 6.6
+    "bakomScore": 7
   },
   {
     "id": "café-atlantique-tegnérgatan-11-stockholm-stockholm",
@@ -32757,7 +32853,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 4.4
+    "bakomScore": 5.7
   },
   {
     "id": "aloë-svartlösavägen-52-stockholm-stockholm",
@@ -32823,7 +32919,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 6.6
+    "bakomScore": 7
   },
   {
     "id": "ai-ramen-sofia-erstagatan-22-stockholm-stockholm",
@@ -32856,7 +32952,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 4.4
+    "bakomScore": 5.7
   },
   {
     "id": "hantverket-mat-bar-sturegatan-15-stockholm-stockholm",
@@ -32889,7 +32985,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 6.6
+    "bakomScore": 7
   },
   {
     "id": "la-tour-rålambsvägen-17-stockholm-stockholm",
@@ -32955,7 +33051,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 5.3
+    "bakomScore": 6.2
   },
   {
     "id": "växthuset-hammarby-slussväg-2-stockholm-stockholm",
@@ -32988,7 +33084,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 5.3
+    "bakomScore": 6.2
   },
   {
     "id": "rinos-svartlösavägen-52-stockholm-älvsjö",
@@ -33021,7 +33117,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 4.4
+    "bakomScore": 5.7
   },
   {
     "id": "plais-högbergsgatan-62-stockholm-stockholm",
@@ -33054,7 +33150,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 5.3
+    "bakomScore": 6.2
   },
   {
     "id": "symbios-skånegatan-80-stockholm-stockholm",
@@ -33087,7 +33183,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 6.6
+    "bakomScore": 7
   },
   {
     "id": "brutalisten-regeringsgatan-71-stockholm-stockholm",
@@ -33153,7 +33249,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 6.6
+    "bakomScore": 7
   },
   {
     "id": "hornsgatan-kvarterskrog-hornsgatan-81-stockholm-stockholm",
@@ -33186,7 +33282,7 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 5.3
+    "bakomScore": 6.2
   },
   {
     "id": "krogen-soldaten-svejk-östgötagatan-35-stockholm-stockholm",
@@ -33219,6 +33315,142 @@
     "sources": [
       "whiteguide"
     ],
-    "bakomScore": 4.4
+    "bakomScore": 5.7
+  },
+  {
+    "id": "kotetsu-högalidsgatan-40b",
+    "name": "Kotetsu",
+    "slug": "",
+    "address": "Högalidsgatan 40B",
+    "postalCode": "",
+    "city": "Stockholm",
+    "region": "",
+    "phone": "",
+    "website": "",
+    "priceRange": "",
+    "cuisine": "Mellanklass",
+    "image": "",
+    "hours": [],
+    "lat": null,
+    "lng": null,
+    "ratings": {
+      "krogguiden": null,
+      "google": null,
+      "michelin": null,
+      "whiteguide": null,
+      "svd": 3
+    },
+    "links": {
+      "svd": "https://www.svd.se/a/0p4mQg/recension-av-kotetsu-prisvarda-rustika-ratter-pa-japansk-krog-men-dyrare-om-man-bokar-bord"
+    },
+    "sourceIds": {
+      "svd": "0p4mQg"
+    },
+    "sources": [
+      "svd"
+    ],
+    "bakomScore": null
+  },
+  {
+    "id": "oscars-bar-brasserie-narvavägen-32",
+    "name": "Oscars bar & brasserie",
+    "slug": "",
+    "address": "Narvavägen 32.",
+    "postalCode": "",
+    "city": "Stockholm",
+    "region": "",
+    "phone": "",
+    "website": "",
+    "priceRange": "",
+    "cuisine": "Mellanklass",
+    "image": "",
+    "hours": [],
+    "lat": null,
+    "lng": null,
+    "ratings": {
+      "krogguiden": null,
+      "google": null,
+      "michelin": null,
+      "whiteguide": null,
+      "svd": 4
+    },
+    "links": {
+      "svd": "https://www.svd.se/a/PdRgbb/recension-av-oscars-bar-och-brasserie-vallagade-franska-klassiker"
+    },
+    "sourceIds": {
+      "svd": "PdRgbb"
+    },
+    "sources": [
+      "svd"
+    ],
+    "bakomScore": null
+  },
+  {
+    "id": "krog-agrikultur-franska-bukten-10",
+    "name": "Krog Agrikultur",
+    "slug": "",
+    "address": "Franska bukten 10",
+    "postalCode": "",
+    "city": "Stockholm",
+    "region": "",
+    "phone": "",
+    "website": "",
+    "priceRange": "",
+    "cuisine": "Mellanklass",
+    "image": "",
+    "hours": [],
+    "lat": null,
+    "lng": null,
+    "ratings": {
+      "krogguiden": null,
+      "google": null,
+      "michelin": null,
+      "whiteguide": null,
+      "svd": 4
+    },
+    "links": {
+      "svd": "https://www.svd.se/a/73X9Jv/krog-agrikultur-recension-rustik-och-trivsamt"
+    },
+    "sourceIds": {
+      "svd": "73X9Jv"
+    },
+    "sources": [
+      "svd"
+    ],
+    "bakomScore": null
+  },
+  {
+    "id": "bar-nordic-vasagatan-52",
+    "name": "Bar Nordic",
+    "slug": "",
+    "address": "Vasagatan 52.",
+    "postalCode": "",
+    "city": "Stockholm",
+    "region": "",
+    "phone": "",
+    "website": "",
+    "priceRange": "",
+    "cuisine": "Mellanklass",
+    "image": "",
+    "hours": [],
+    "lat": null,
+    "lng": null,
+    "ratings": {
+      "krogguiden": null,
+      "google": null,
+      "michelin": null,
+      "whiteguide": null,
+      "svd": 3
+    },
+    "links": {
+      "svd": "https://www.svd.se/a/JbKL7X/bar-nordic-recension-lyckat-blabarsvin-men-maten-behover-mer-karlek"
+    },
+    "sourceIds": {
+      "svd": "JbKL7X"
+    },
+    "sources": [
+      "svd"
+    ],
+    "bakomScore": null
   }
 ]

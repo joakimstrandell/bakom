@@ -23,6 +23,8 @@ export type SourceLinks = {
   michelin?: string;
   google?: string;
   whiteguide?: string;
+  svd?: string;
+  dn?: string;
 };
 
 export type SourceIds = {
@@ -30,6 +32,8 @@ export type SourceIds = {
   michelin?: string; // URL path from guide.michelin.com
   whiteguide?: number; // placeId from White Guide API
   google?: string; // placeId from Google Places API
+  svd?: string; // article ID from svd.se
+  dn?: string; // article slug from dn.se
 };
 
 export type SourceRatings = {
@@ -37,6 +41,8 @@ export type SourceRatings = {
   google?: number | null;
   michelin?: MichelinDistinction | null;
   whiteguide?: WhiteGuideClassification | null;
+  svd?: number | null; // 1-6 scale
+  dn?: boolean | null; // true = reviewed (no numeric rating)
 };
 
 export type Restaurant = {

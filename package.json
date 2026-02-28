@@ -11,6 +11,8 @@
     "pipeline:krogguiden": "tsx pipeline/collect/krogguiden.ts",
     "pipeline:michelin": "tsx pipeline/collect/michelin.ts",
     "pipeline:whiteguide": "tsx pipeline/collect/whiteguide.ts",
+    "pipeline:svd": "tsx pipeline/collect/svd.ts",
+    "pipeline:dn": "tsx pipeline/collect/dn.ts",
     "pipeline:google": "tsx pipeline/collect/google.ts",
     "pipeline:merge": "tsx pipeline/process/merge.ts",
     "pipeline:geocode": "tsx pipeline/process/geocode.ts",

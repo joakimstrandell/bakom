@@ -9,6 +9,8 @@
 import { scrapeKrogguiden } from "./collect/krogguiden.js";
 import { scrapeMichelin } from "./collect/michelin.js";
 import { scrapeWhiteGuide } from "./collect/whiteguide.js";
+import { scrapeSvd } from "./collect/svd.js";
+import { scrapeDn } from "./collect/dn.js";
 import { refineWithGoogle } from "./collect/google.js";
 import { merge } from "./process/merge.js";
 import { geocodeAll } from "./process/geocode.js";
@@ -28,15 +30,23 @@ async function main() {
   await scrapeMichelin();
 
   // Step 3: Scrape White Guide
-  console.log("\n━━━ Step 3/6: White Guide ━━━\n");
+  console.log("\n━━━ Step 3/8: White Guide ━━━\n");
   await scrapeWhiteGuide();
 
-  // Step 4: Merge all sources
-  console.log("\n━━━ Step 4/6: Merge ━━━\n");
+  // Step 4: Scrape SvD Krogguiden
+  console.log("\n━━━ Step 4/8: SvD Krogguiden ━━━\n");
+  await scrapeSvd();
+
+  // Step 5: Scrape DN Krogkommissionen
+  console.log("\n━━━ Step 5/8: DN Krogkommissionen ━━━\n");
+  await scrapeDn();
+
+  // Step 6: Merge all sources
+  console.log("\n━━━ Step 6/8: Merge ━━━\n");
   await merge();
 
-  // Step 5: Refine with Google Places API
-  console.log("\n━━━ Step 5/6: Google Places (refine) ━━━\n");
+  // Step 7: Refine with Google Places API
+  console.log("\n━━━ Step 7/8: Google Places (refine) ━━━\n");
   try {
     await refineWithGoogle();
   } catch (err) {
@@ -48,8 +58,8 @@ async function main() {
     }
   }
 
-  // Step 6: Geocode missing coordinates
-  console.log("\n━━━ Step 6/6: Geocode ━━━\n");
+  // Step 8: Geocode missing coordinates
+  console.log("\n━━━ Step 8/8: Geocode ━━━\n");
   await geocodeAll();
 
   const elapsed = ((Date.now() - start) / 1000 / 60).toFixed(1);

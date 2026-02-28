@@ -1,0 +1,202 @@
+[
+  {
+    "source": "svd",
+    "articleId": "n1QRwm",
+    "name": "Tosto",
+    "address": "Sturegatan 6.",
+    "cuisine": "Mellanklass",
+    "rating": 3,
+    "url": "https://www.svd.se/a/n1QRwm/recension-av-tosto-fina-smaker-men-spretigt-och-hetsigt",
+    "publishedAt": "2026-02-24T12:31:26.000Z"
+  },
+  {
+    "source": "svd",
+    "articleId": "d4nQow",
+    "name": "Coco & Carmen",
+    "address": "Banérgatan 7",
+    "cuisine": "Lyx",
+    "rating": 4,
+    "url": "https://www.svd.se/a/d4nQow/recension-av-coco-carmen-pa-ostermalm-omtumlande-upplevelse",
+    "publishedAt": "2026-02-17T12:20:32.000Z"
+  },
+  {
+    "source": "svd",
+    "articleId": "0p4mQg",
+    "name": "Kotetsu",
+    "address": "Högalidsgatan 40B",
+    "cuisine": "Mellanklass",
+    "rating": 3,
+    "url": "https://www.svd.se/a/0p4mQg/recension-av-kotetsu-prisvarda-rustika-ratter-pa-japansk-krog-men-dyrare-om-man-bokar-bord",
+    "publishedAt": "2026-02-09T12:39:10.000Z"
+  },
+  {
+    "source": "svd",
+    "articleId": "Exwjoa",
+    "name": "Sperling & Co",
+    "address": "Adress: Sturegatan 6.",
+    "cuisine": "Lyx",
+    "rating": 5,
+    "url": "https://www.svd.se/a/Exwjoa/recension-av-sperling-co-vid-stureplan-grillkott-i-toppklass",
+    "publishedAt": "2026-02-02T13:55:26.000Z"
+  },
+  {
+    "source": "svd",
+    "articleId": "q6AG2E",
+    "name": "Bistrot du Passage",
+    "address": "Nybrogatan 29, Östermalms Saluhall",
+    "cuisine": "Mellanklass",
+    "rating": 5,
+    "url": "https://www.svd.se/a/q6AG2E/recension-av-bistrot-du-passage-i-ostermalmshallen-trangt-men-hogklassigt-franskt",
+    "publishedAt": "2026-01-27T12:07:58.000Z"
+  },
+  {
+    "source": "svd",
+    "articleId": "5p6gGe",
+    "name": "Himlen",
+    "address": "Götgatan 78 (Skrapan).",
+    "cuisine": "Mellanklass",
+    "rating": 2,
+    "url": "https://www.svd.se/a/5p6gGe/recension-av-himlen-utsikten-ar-fantastisk-nivan-pa-maten-for-lag",
+    "publishedAt": "2026-01-20T14:32:09.000Z"
+  },
+  {
+    "source": "svd",
+    "articleId": "PdRgbb",
+    "name": "Oscars bar & brasserie",
+    "address": "Narvavägen 32.",
+    "cuisine": "Mellanklass",
+    "rating": 4,
+    "url": "https://www.svd.se/a/PdRgbb/recension-av-oscars-bar-och-brasserie-vallagade-franska-klassiker",
+    "publishedAt": "2026-01-14T07:44:00.000Z"
+  },
+  {
+    "source": "svd",
+    "articleId": "d4O2Jz",
+    "name": "Kapten Jack",
+    "address": "Malmskillnadsgatan 40",
+    "cuisine": "Budget",
+    "rating": 3,
+    "url": "https://www.svd.se/a/d4O2Jz/recension-av-kapten-jack-stimmigt-och-overraskande-bra-mat",
+    "publishedAt": "2026-01-05T12:23:29.000Z"
+  },
+  {
+    "source": "svd",
+    "articleId": "k0J0aL",
+    "name": "Teuf",
+    "address": "Mälartorget 15.",
+    "cuisine": "Mellanklass",
+    "rating": 2,
+    "url": "https://www.svd.se/a/k0J0aL/recension-av-teuf-gor-man-bara-en-sak-sa-maste-man-gora-det-ritkigt-bra",
+    "publishedAt": "2025-12-30T09:15:00.000Z"
+  },
+  {
+    "source": "svd",
+    "articleId": "d4dVnB",
+    "name": "Gaijin",
+    "address": "Döbelnsgatan 8",
+    "cuisine": "Mellanklass",
+    "rating": 5,
+    "url": "https://www.svd.se/a/d4dVnB/recension-av-gaijin-japanska-smaker-lyft-till-fullanding",
+    "publishedAt": "2025-12-25T09:47:03.000Z"
+  },
+  {
+    "source": "svd",
+    "articleId": "Ar2Kzq",
+    "name": "Savocca",
+    "address": "Kungsholmsgatan 16",
+    "cuisine": "Mellanklass",
+    "rating": 3,
+    "url": "https://www.svd.se/a/Ar2Kzq/recension-av-savoca-italiensk-krog-pa-kungsholmen-med-avslutande-toppar",
+    "publishedAt": "2025-12-16T12:53:18.000Z"
+  },
+  {
+    "source": "svd",
+    "articleId": "2p1dBq",
+    "name": "Köket vid bordet",
+    "address": "Timmermansgatan 39.",
+    "cuisine": "Mellanklass",
+    "rating": 4,
+    "url": "https://www.svd.se/a/2p1dBq/recension-av-koket-vid-bordet-krogen-dar-vinet-kommer-i-forsta-hand",
+    "publishedAt": "2025-12-08T13:43:25.000Z"
+  },
+  {
+    "source": "svd",
+    "articleId": "q6pr70",
+    "name": "Tripletta",
+    "address": "Åsögatan 163",
+    "cuisine": "Mellanklass",
+    "rating": 4,
+    "url": "https://www.svd.se/a/q6pr70/recension-av-tripletta-mysig-atmosfar-och-mat-med-toppar-och-bottnar",
+    "publishedAt": "2025-12-01T14:17:37.000Z"
+  },
+  {
+    "source": "svd",
+    "articleId": "Arz0MA",
+    "name": "Chingu",
+    "address": "Mäster Samuelsgatan 42.",
+    "cuisine": "Mellanklass",
+    "rating": 3,
+    "url": "https://www.svd.se/a/Arz0MA/recension-av-chingu-koreansk-barbecue-ar-ett-trevligt-satt-att-ata-pa",
+    "publishedAt": "2025-11-25T14:34:00.000Z"
+  },
+  {
+    "source": "svd",
+    "articleId": "8qbeQw",
+    "name": "Copine",
+    "address": "Kommendörsgatan 23.",
+    "cuisine": "Mellanklass",
+    "rating": 5,
+    "url": "https://www.svd.se/a/8qbeQw/recension-av-restaurang-copine-magiska-ratter-stralande-service-och-hog-stamning",
+    "publishedAt": "2025-11-18T08:30:00.000Z"
+  },
+  {
+    "source": "svd",
+    "articleId": "JbPMJm",
+    "name": "Nook",
+    "address": "Högbergsgatan 62",
+    "cuisine": "Mellanklass",
+    "rating": 5,
+    "url": "https://www.svd.se/a/JbPMJm/recension-av-restaurang-nook-elegant-och-prisvart-vi-faller-pladask",
+    "publishedAt": "2025-11-11T08:39:26.000Z"
+  },
+  {
+    "source": "svd",
+    "articleId": "73X9Jv",
+    "name": "Krog Agrikultur",
+    "address": "Franska bukten 10",
+    "cuisine": "Mellanklass",
+    "rating": 4,
+    "url": "https://www.svd.se/a/73X9Jv/krog-agrikultur-recension-rustik-och-trivsamt",
+    "publishedAt": "2025-11-04T14:29:41.000Z"
+  },
+  {
+    "source": "svd",
+    "articleId": "JbKL7X",
+    "name": "Bar Nordic",
+    "address": "Vasagatan 52.",
+    "cuisine": "Mellanklass",
+    "rating": 3,
+    "url": "https://www.svd.se/a/JbKL7X/bar-nordic-recension-lyckat-blabarsvin-men-maten-behover-mer-karlek",
+    "publishedAt": "2025-10-27T12:47:06.000Z"
+  },
+  {
+    "source": "svd",
+    "articleId": "kw4RXB",
+    "name": "Bar Allegrine",
+    "address": "Kammakargatan 22.",
+    "cuisine": "Mellanklass",
+    "rating": 4,
+    "url": "https://www.svd.se/a/kw4RXB/recension-av-bar-allegrine-hoga-toppar-men-racker-inte-hela-vagen",
+    "publishedAt": "2025-10-21T13:37:51.000Z"
+  },
+  {
+    "source": "svd",
+    "articleId": "LM8eEJ",
+    "name": "Bistro Tartine",
+    "address": "Malmskillnadsgatan 42.",
+    "cuisine": "Mellanklass",
+    "rating": 4,
+    "url": "https://www.svd.se/a/LM8eEJ/recension-bistro-tartine-vallagade-franska-klassiker-i-generisk-miljo",
+    "publishedAt": "2025-10-13T13:44:03.000Z"
+  }
+]

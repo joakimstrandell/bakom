@@ -21,7 +21,7 @@ import {
   validateRestaurant,
 } from "../utils/validate.js";
 import type { Restaurant } from "../../src/types.js";
-import type { KrogguidenRaw, MichelinRaw, WhiteGuideRaw, ManualData } from "../types.js";
+import type { KrogguidenRaw, MichelinRaw, WhiteGuideRaw, SvdRaw, DnRaw, ManualData } from "../types.js";
 import { calculateBakomScore } from "../../src/lib/score.js";
 
 // ─── Manual Data Processing ──────────────────────────────────────
@@ -466,6 +466,125 @@ export async function merge(): Promise<Restaurant[]> {
     }
   }
 
+  // Match SvD and DN reviews to existing restaurants
+  const svd = loadRawJson<SvdRaw[]>("svd.json");
+  const dn = loadRawJson<DnRaw[]>("dn.json");
+
+  console.log(`  SvD: ${svd?.length ?? 0} reviews`);
+  console.log(`  DN: ${dn?.length ?? 0} reviews`);
+
+  // Build restaurant lookup for newspaper matching
+  const restaurantByName = new Map<string, Restaurant>();
+  for (const r of restaurants) {
+    restaurantByName.set(normalizeName(r.name), r);
+  }
+
+  let svdMatches = 0;
+  let dnMatches = 0;
+
+  // Match SvD reviews
+  if (svd) {
+    for (const s of svd) {
+      const match = findRestaurantMatch(
+        s.name,
+        s.address,
+        restaurantByName,
+        (item) => item.address,
+        0.85
+      );
+
+      if (match) {
+        const r = match.item;
+        r.ratings.svd = s.rating;
+        r.links.svd = s.url;
+        r.sourceIds.svd = s.articleId;
+        if (!r.sources.includes("svd")) {
+          r.sources.push("svd");
+        }
+        svdMatches++;
+        if (match.result.nameSimilarity < 1.0) {
+          console.log(`  Fuzzy: SvD "${s.name}" -> "${r.name}" (${(match.result.nameSimilarity * 100).toFixed(0)}%)`);
+        }
+      } else if (s.address) {
+        // Create new restaurant from SvD review (has address)
+        const id = generateId(s.name, s.address);
+        const prev = existingById.get(id);
+
+        const restaurant: Restaurant = {
+          id,
+          name: s.name,
+          slug: "",
+          address: s.address,
+          postalCode: "",
+          city: "Stockholm",
+          region: "",
+          phone: "",
+          website: "",
+          priceRange: "",
+          cuisine: s.cuisine || "",
+          image: "",
+          hours: [],
+          lat: prev?.lat ?? null,
+          lng: prev?.lng ?? null,
+          ratings: {
+            krogguiden: null,
+            google: prev?.ratings.google ?? null,
+            michelin: null,
+            whiteguide: null,
+            svd: s.rating,
+          },
+          links: {
+            svd: s.url,
+            google: prev?.links.google,
+          },
+          sourceIds: {
+            svd: s.articleId,
+            google: prev?.sourceIds?.google ?? prev?.googlePlaceId,
+          },
+          sources: ["svd"],
+        };
+
+        if (prev?.googlePlaceId) {
+          restaurant.googlePlaceId = prev.googlePlaceId;
+          restaurant.googleRatingCount = prev.googleRatingCount;
+          preserved++;
+        }
+
+        restaurants.push(restaurant);
+        restaurantByName.set(normalizeName(s.name), restaurant);
+        svdMatches++;
+        console.log(`  SvD-only: "${s.name}" (${s.rating}/6)`);
+      }
+    }
+  }
+
+  // Match DN reviews (no address, can only match existing)
+  if (dn) {
+    for (const d of dn) {
+      const match = findRestaurantMatch(
+        d.name,
+        undefined,
+        restaurantByName,
+        (item) => item.address,
+        0.85
+      );
+
+      if (match) {
+        const r = match.item;
+        r.ratings.dn = true; // DN has no numeric rating
+        r.links.dn = d.url;
+        r.sourceIds.dn = d.slug;
+        if (!r.sources.includes("dn")) {
+          r.sources.push("dn");
+        }
+        dnMatches++;
+        if (match.result.nameSimilarity < 1.0) {
+          console.log(`  Fuzzy: DN "${d.name}" -> "${r.name}" (${(match.result.nameSimilarity * 100).toFixed(0)}%)`);
+        }
+      }
+    }
+  }
+
   // Apply manual data (additions, merges, overrides)
   const manual = loadManualData();
   let manualStats = { added: 0, merged: 0, overridden: 0 };
@@ -520,9 +639,14 @@ export async function merge(): Promise<Restaurant[]> {
   const withMichelin = restaurants.filter((r) => r.ratings.michelin).length;
   const withWg = restaurants.filter((r) => r.ratings.whiteguide).length;
 
+  const withSvd = restaurants.filter((r) => r.ratings.svd).length;
+  const withDn = restaurants.filter((r) => r.ratings.dn).length;
+
   console.log(`\nMerge complete: ${restaurants.length} restaurants`);
   console.log(`  Michelin matches: ${michelinMatches} (${fuzzyMatches} fuzzy)`);
   console.log(`  White Guide matches: ${wgMatches}`);
+  console.log(`  SvD matches: ${svdMatches}`);
+  console.log(`  DN matches: ${dnMatches}`);
   console.log(`  Michelin-only: ${michelin ? michelin.length - michelinMatches : 0}`);
   console.log(`  White Guide-only: ${whiteguide ? whiteguide.length - wgMatches : 0}`);
   console.log(`  Preserved enrichment: ${preserved}`);
@@ -533,6 +657,8 @@ export async function merge(): Promise<Restaurant[]> {
   console.log(`  With hours: ${withHours}`);
   console.log(`  With Michelin distinction: ${withMichelin}`);
   console.log(`  With White Guide classification: ${withWg}`);
+  console.log(`  With SvD rating: ${withSvd}`);
+  console.log(`  With DN review: ${withDn}`);
 
   const withScore = restaurants.filter((r) => r.bakomScore != null);
   if (withScore.length > 0) {

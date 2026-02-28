@@ -75,7 +75,28 @@ export type WhiteGuideRaw = {
   url: string;
 };
 
-export type SourceRecord = KrogguidenRaw | GoogleRaw | MichelinRaw | WhiteGuideRaw;
+/** Raw output from SvD Krogguiden scraper */
+export type SvdRaw = {
+  source: "svd";
+  articleId: string;
+  name: string;
+  address: string;
+  cuisine: string;
+  rating: number; // 1-6 scale
+  url: string;
+  publishedAt: string;
+};
+
+/** Raw output from DN Krogkommissionen scraper */
+export type DnRaw = {
+  source: "dn";
+  slug: string;
+  name: string;
+  url: string;
+  publishedAt: string;
+};
+
+export type SourceRecord = KrogguidenRaw | GoogleRaw | MichelinRaw | WhiteGuideRaw | SvdRaw | DnRaw;
 
 // ─── Manual Data Types ────────────────────────────────────────────
 

@@ -1,6 +1,6 @@
 # Krogguiden Map
 
-Interactive map of Stockholm restaurants with data from Krogguiden, Guide Michelin, White Guide, and Google Places.
+Interactive map of Stockholm restaurants with data from Krogguiden, Guide Michelin, White Guide, SvD, DN, and Google Places.
 
 ## Getting Started
 
@@ -19,9 +19,11 @@ The pipeline collects restaurant data from multiple sources and merges them into
 1. Krogguiden   →  data/raw/krogguiden.json   (restaurants from krogguiden.se)
 2. Michelin     →  data/raw/michelin.json     (restaurants from Guide Michelin)
 3. White Guide  →  data/raw/whiteguide.json   (restaurants from White Guide API)
-4. Merge        →  data/restaurants.json      (merged data with fuzzy matching)
-5. Google       →  data/restaurants.json      (enriches with address, hours, ratings)
-6. Geocode      →  data/restaurants.json      (fills in missing coordinates)
+4. SvD          →  data/raw/svd.json          (reviews from SvD Krogguiden)
+5. DN           →  data/raw/dn.json           (reviews from DN Krogkommissionen)
+6. Merge        →  data/restaurants.json      (merged data with fuzzy matching)
+7. Google       →  data/restaurants.json      (enriches with address, hours, ratings)
+8. Geocode      →  data/restaurants.json      (fills in missing coordinates)
 ```
 
 ### Step Details
@@ -35,13 +37,19 @@ Scrapes Guide Michelin's Stockholm page. Fetches distinctions (Selected, Bib Gou
 **Step 3 — White Guide**
 Fetches restaurant data from White Guide's API (`admin.whiteguide.com`). Includes classification (Recommended, Good Class, Very Good Class, Master Class, Global Master Class), scores, tags, and coordinates.
 
-**Step 4 — Merge**
-Merges Krogguiden + Michelin + White Guide into `data/restaurants.json`. Krogguiden is the base. Michelin and White Guide data is matched using fuzzy name matching with address proximity (85% similarity threshold). Also applies manual data from `data/manual.json` (see below).
+**Step 4 — SvD Krogguiden**
+Fetches restaurant reviews from Svenska Dagbladet's Krogguiden section via RSS. Each review has JSON-LD with restaurant name, address, and rating (1-6 scale).
 
-**Step 5 — Google (enrichment)**
+**Step 5 — DN Krogkommissionen**
+Fetches restaurant reviews from Dagens Nyheter's Krogkommissionen section via RSS. Extracts restaurant names from article titles. No numeric rating (just reviewed/not).
+
+**Step 6 — Merge**
+Merges all sources into `data/restaurants.json`. Krogguiden is the base. Other sources are matched using fuzzy name matching with address proximity (85% similarity threshold). SvD reviews with addresses can create new restaurants. Also applies manual data from `data/manual.json` (see below).
+
+**Step 7 — Google (enrichment)**
 Takes restaurants from step 4 and looks them up via Google Places Text Search. Enriches with updated hours, addresses, phone numbers, website, ratings, and coordinates. Restaurants with existing `googlePlaceId` are skipped.
 
-**Step 6 — Geocode**
+**Step 8 — Geocode**
 Geocodes restaurants still missing coordinates (those Google didn't find) via OpenStreetMap Nominatim.
 
 ### Run Full Pipeline
@@ -57,9 +65,11 @@ npm run pipeline:krogguiden              # Step 1 — only new restaurants
 npm run pipeline:krogguiden -- --force   # Step 1 — re-scrape all
 npm run pipeline:michelin                # Step 2
 npm run pipeline:whiteguide              # Step 3
-npm run pipeline:merge                   # Step 4
-npm run pipeline:google                  # Step 5 — skips already enriched
-npm run pipeline:geocode                 # Step 6 — skips those with coordinates
+npm run pipeline:svd                     # Step 4
+npm run pipeline:dn                      # Step 5
+npm run pipeline:merge                   # Step 6
+npm run pipeline:google                  # Step 7 — skips already enriched
+npm run pipeline:geocode                 # Step 8 — skips those with coordinates
 npm run pipeline:duplicates              # Find potential duplicates
 ```
 
@@ -190,6 +200,8 @@ pipeline/
     krogguiden.ts      Krogguiden.se scraper (slugs + details + hours)
     michelin.ts        Guide Michelin scraper (Selected, Bib Gourmand, 1-3 stars)
     whiteguide.ts      White Guide API (classification, scores, coordinates)
+    svd.ts             SvD Krogguiden (RSS + JSON-LD, rating 1-6)
+    dn.ts              DN Krogkommissionen (RSS, restaurant names)
     google.ts          Google Places API (enriches existing restaurants)
   process/
     merge.ts           Merge sources with fuzzy matching + manual data
@@ -217,7 +229,7 @@ src/
     score.ts           Calculate Bakom Score
 
 data/
-  raw/                 Raw data per source (krogguiden.json, michelin.json, whiteguide.json)
+  raw/                 Raw data per source (krogguiden, michelin, whiteguide, svd, dn)
   restaurants.json     Final merged data (used by frontend)
   manual.json          Manual additions, merges, and overrides
 ```
@@ -229,6 +241,8 @@ data/
 | Krogguiden | Web scraping | Name, address, cuisine, price, rating, hours, image |
 | Guide Michelin | Web scraping | Distinctions (Selected, Bib Gourmand, 1–3 stars), cuisine |
 | White Guide | API | Classification, scores (food/drink/service/environment), tags, coordinates |
+| SvD Krogguiden | RSS + scraping | Restaurant reviews with rating (1-6 scale), name, address |
+| DN Krogkommissionen | RSS + scraping | Restaurant reviews, name (no numeric rating) |
 | Google Places | API | Address, hours, phone, website, rating, coordinates |
 
 ### Priority During Merge and Enrichment

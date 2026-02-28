@@ -10,7 +10,7 @@ import MarkerClusterGroup from "react-leaflet-cluster";
 import L from "leaflet";
 import "react-leaflet-cluster/dist/assets/MarkerCluster.css";
 import "react-leaflet-cluster/dist/assets/MarkerCluster.Default.css";
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Restaurant, MichelinDistinction, WhiteGuideClassification } from "../types";
 import { isOpen } from "../lib/isOpen";
 
@@ -186,53 +186,26 @@ function StarDisplay({ rating }: { rating: number }) {
   );
 }
 
-/** Michelin distinction labels */
+/** Michelin distinction labels (short, for rating display) */
 const MICHELIN_LABELS: Record<MichelinDistinction, string> = {
-  selected: "Michelin Selected",
+  selected: "Selected",
   bib_gourmand: "Bib Gourmand",
-  "1_star": "★ Michelin",
-  "2_star": "★★ Michelin",
-  "3_star": "★★★ Michelin",
+  "1_star": "★",
+  "2_star": "★★",
+  "3_star": "★★★",
 };
 
-/** Michelin distinction badge */
-function MichelinBadge({
-  distinction,
-}: {
-  distinction: MichelinDistinction;
-}) {
-  return (
-    <span className="inline-flex items-center gap-1 text-red-600 font-medium text-xs">
-      {MICHELIN_LABELS[distinction]}
-    </span>
-  );
-}
-
-/** White Guide classification labels */
+/** White Guide classification labels (short) */
 const WHITEGUIDE_LABELS: Record<WhiteGuideClassification, string> = {
-  recommended: "WG Rekommenderad",
-  good_class: "WG God Klass",
-  very_good_class: "WG Mycket God Klass",
-  master_class: "WG Mästarklass",
-  global_master_class: "WG Global Mästarklass",
+  recommended: "Rekommenderad",
+  good_class: "God Klass",
+  very_good_class: "Mycket God Klass",
+  master_class: "Mästarklass",
+  global_master_class: "Global Mästarklass",
 };
-
-/** White Guide classification badge */
-function WhiteGuideBadge({
-  classification,
-}: {
-  classification: WhiteGuideClassification;
-}) {
-  return (
-    <span className="inline-flex items-center gap-1 text-emerald-700 font-medium text-xs">
-      {WHITEGUIDE_LABELS[classification]}
-    </span>
-  );
-}
 
 /** Bakom Score badge — prominent composite score */
 function BakomScoreBadge({ score }: { score: number }) {
-  // Color: green for high, amber for mid, slate for low
   const color =
     score >= 8
       ? "bg-emerald-600 text-white"
@@ -250,62 +223,197 @@ function BakomScoreBadge({ score }: { score: number }) {
   );
 }
 
-/** Multi-source ratings display */
-function Ratings({ restaurant }: { restaurant: Restaurant }) {
-  const { ratings } = restaurant;
-  const hasAnyRating =
-    (ratings.google != null && ratings.google > 0) ||
-    (ratings.krogguiden != null && ratings.krogguiden > 0) ||
-    ratings.michelin;
+// ─── Source rating row (link left, rating right) ──────────────
 
-  if (!hasAnyRating) return null;
+function SourceRow({
+  label,
+  href,
+  color,
+  children,
+}: {
+  label: string;
+  href?: string;
+  color: string;
+  children: React.ReactNode;
+}) {
+  const name = href ? (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`${color} hover:underline`}
+    >
+      {label}
+    </a>
+  ) : (
+    <span className={color}>{label}</span>
+  );
 
   return (
-    <div className="!text-xs !mt-0.5 !mb-0 space-y-0.5">
-      {/* Google rating */}
-      {ratings.google != null && ratings.google > 0 && (
-        <div className="flex items-center gap-1">
-          <span
-            className="text-slate-400 w-3 text-center font-bold"
-            title="Google"
-          >
-            G
-          </span>
-          <StarDisplay rating={ratings.google} />
-          <span className="text-slate-500">
-            {ratings.google.toFixed(1)}
-            {restaurant.googleRatingCount != null &&
-              restaurant.googleRatingCount > 0 &&
-              ` (${restaurant.googleRatingCount})`}
-          </span>
-        </div>
+    <div className="flex items-center justify-between gap-3">
+      <span className="text-xs font-medium">{name}</span>
+      <span className="text-xs text-slate-600 whitespace-nowrap">{children}</span>
+    </div>
+  );
+}
+
+/** Tab: Betyg — source ratings with links */
+function SourceRatingsTab({ restaurant: r }: { restaurant: Restaurant }) {
+  const { ratings } = r;
+  const hasAny =
+    (ratings.krogguiden != null && ratings.krogguiden > 0) ||
+    (ratings.google != null && ratings.google > 0) ||
+    ratings.michelin ||
+    ratings.whiteguide;
+
+  if (!hasAny) {
+    return <p className="!text-xs !text-slate-400 !mt-1 !mb-0">Inga betyg</p>;
+  }
+
+  return (
+    <div className="space-y-1 mt-1">
+      {ratings.michelin && (
+        <SourceRow label="Michelin" href={r.links.michelin} color="text-red-600">
+          {MICHELIN_LABELS[ratings.michelin]}
+        </SourceRow>
       )}
-      {/* Krogguiden rating */}
+      {ratings.whiteguide && (
+        <SourceRow label="White Guide" href={r.links.whiteguide} color="text-emerald-700">
+          {WHITEGUIDE_LABELS[ratings.whiteguide]}
+        </SourceRow>
+      )}
       {ratings.krogguiden != null && ratings.krogguiden > 0 && (
-        <div className="flex items-center gap-1">
-          <span
-            className="text-slate-400 w-3 text-center font-bold"
-            title="Krogguiden"
-          >
-            K
-          </span>
-          <StarDisplay rating={ratings.krogguiden} />
-          <span className="text-slate-500">
+        <SourceRow label="Krogguiden" href={r.links.krogguiden} color="text-blue-600">
+          <span className="inline-flex items-center gap-1">
+            <StarDisplay rating={ratings.krogguiden} />
             {ratings.krogguiden.toFixed(1)}
           </span>
+        </SourceRow>
+      )}
+      {ratings.google != null && ratings.google > 0 && (
+        <SourceRow label="Google" href={r.links.google} color="text-blue-600">
+          <span className="inline-flex items-center gap-1">
+            <StarDisplay rating={ratings.google} />
+            {ratings.google.toFixed(1)}
+            {r.googleRatingCount != null &&
+              r.googleRatingCount > 0 &&
+              ` (${r.googleRatingCount})`}
+          </span>
+        </SourceRow>
+      )}
+    </div>
+  );
+}
+
+/** Tab: Info — hours, address, phone, links */
+function InfoTab({ restaurant: r }: { restaurant: Restaurant }) {
+  const hours = formatHours(r);
+
+  return (
+    <div className="mt-1 space-y-1">
+      {hours && (
+        <div className="!text-xs !text-slate-500 leading-relaxed">
+          {hours.map((line, i) => (
+            <div key={i}>{line}</div>
+          ))}
         </div>
       )}
-      {/* Michelin distinction */}
-      {ratings.michelin && (
-        <div className="flex items-center gap-1">
-          <MichelinBadge distinction={ratings.michelin} />
-        </div>
+      <a
+        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(r.name + " " + r.address + " " + r.city)}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="!text-xs !text-slate-600 flex items-start hover:text-blue-600 hover:underline cursor-pointer transition-colors"
+      >
+        <GoogleMapsIcon />
+        <span>
+          {r.address}
+          {r.postalCode && `, ${r.postalCode}`} {r.city}
+        </span>
+      </a>
+      {r.phone && (
+        <p className="!text-xs !mb-0">
+          <span className="text-slate-500">Tel:</span>{" "}
+          <a href={`tel:${r.phone}`} className="text-blue-600 hover:underline">
+            {r.phone}
+          </a>
+        </p>
       )}
-      {/* White Guide classification */}
-      {ratings.whiteguide && (
-        <div className="flex items-center gap-1">
-          <WhiteGuideBadge classification={ratings.whiteguide} />
-        </div>
+      {r.priceRange && (
+        <p className="!text-xs !mb-0">
+          <span className="text-slate-500">Pris:</span> {r.priceRange}
+        </p>
+      )}
+      <div className="flex gap-3 pt-0.5 flex-wrap">
+        <a
+          href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(r.name + " " + r.address + " " + r.city)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="!text-xs text-blue-600 hover:underline"
+        >
+          Vägbeskrivning
+        </a>
+        {r.website && (
+          <a
+            href={r.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="!text-xs text-blue-600 hover:underline"
+          >
+            Webbplats
+          </a>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/** Complete popup content with tabs */
+function PopupContent({ restaurant: r }: { restaurant: Restaurant }) {
+  const [tab, setTab] = useState<"betyg" | "info">("betyg");
+
+  return (
+    <div className="min-w-[220px] max-w-[280px] font-sans">
+      {/* Header — always visible */}
+      <div className="flex items-start justify-between gap-2">
+        <p className="!text-sm !font-semibold !leading-tight !m-0">{r.name}</p>
+        {r.bakomScore != null && <BakomScoreBadge score={r.bakomScore} />}
+      </div>
+      {r.cuisine && (
+        <p className="!text-xs !text-slate-500 !mt-0.5 !m-0">{r.cuisine}</p>
+      )}
+      <OpenStatus restaurant={r} />
+
+      {/* Tab bar */}
+      <div className="flex gap-4 mt-1.5 border-b border-slate-200">
+        <button
+          type="button"
+          onClick={() => setTab("betyg")}
+          className={`pb-1 text-xs font-medium transition-colors border-b-2 -mb-px ${
+            tab === "betyg"
+              ? "border-slate-800 text-slate-800"
+              : "border-transparent text-slate-400 hover:text-slate-600"
+          }`}
+        >
+          Betyg
+        </button>
+        <button
+          type="button"
+          onClick={() => setTab("info")}
+          className={`pb-1 text-xs font-medium transition-colors border-b-2 -mb-px ${
+            tab === "info"
+              ? "border-slate-800 text-slate-800"
+              : "border-transparent text-slate-400 hover:text-slate-600"
+          }`}
+        >
+          Info
+        </button>
+      </div>
+
+      {/* Tab content */}
+      {tab === "betyg" ? (
+        <SourceRatingsTab restaurant={r} />
+      ) : (
+        <InfoTab restaurant={r} />
       )}
     </div>
   );
@@ -398,112 +506,7 @@ export default function Map({ restaurants, userLocation }: MapProps) {
       {restaurants.map((r) => (
         <Marker key={r.id} position={[r.lat!, r.lng!]} icon={getMarkerIcon(r)}>
           <Popup>
-            <div className="min-w-[220px] font-sans">
-              <div className="flex items-start justify-between gap-2">
-                <p className="!text-sm !font-semibold !leading-tight !m-0">
-                  {r.name}
-                </p>
-                {r.bakomScore != null && (
-                  <BakomScoreBadge score={r.bakomScore} />
-                )}
-              </div>
-              {r.cuisine && (
-                <p className="!text-xs !text-slate-500 !mt-0.5 !m-0">
-                  {r.cuisine}
-                </p>
-              )}
-              <Ratings restaurant={r} />
-              <OpenStatus restaurant={r} />
-              {formatHours(r) && (
-                <div className="!text-xs !text-slate-500 !mt-0.5 !mb-0 leading-relaxed">
-                  {formatHours(r)!.map((line, i) => (
-                    <div key={i}>{line}</div>
-                  ))}
-                </div>
-              )}
-              <a
-                href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(r.name + " " + r.address + " " + r.city)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="!text-xs !text-slate-600 !mt-1.5 !mb-0 flex items-start hover:text-blue-600 hover:underline cursor-pointer transition-colors"
-              >
-                <GoogleMapsIcon />
-                <span>
-                  {r.address}
-                  {r.postalCode && `, ${r.postalCode}`} {r.city}
-                </span>
-              </a>
-              {r.phone && (
-                <p className="!text-xs !mt-0.5 !mb-0">
-                  <span className="text-slate-500">Tel:</span> {r.phone}
-                </p>
-              )}
-              {r.priceRange && (
-                <p className="!text-xs !mt-0.5 !mb-0">
-                  <span className="text-slate-500">Pris:</span> {r.priceRange}
-                </p>
-              )}
-              <div className="flex gap-3 mt-2 flex-wrap">
-                <a
-                  href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(r.name + " " + r.address + " " + r.city)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="!text-xs text-blue-600 hover:underline"
-                >
-                  Vägbeskrivning
-                </a>
-                {r.website && (
-                  <a
-                    href={r.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="!text-xs text-blue-600 hover:underline"
-                  >
-                    Webbplats
-                  </a>
-                )}
-                {r.links.krogguiden && (
-                  <a
-                    href={r.links.krogguiden}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="!text-xs text-blue-600 hover:underline"
-                  >
-                    Krogguiden
-                  </a>
-                )}
-                {r.links.michelin && (
-                  <a
-                    href={r.links.michelin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="!text-xs text-red-600 hover:underline"
-                  >
-                    Michelin
-                  </a>
-                )}
-                {r.links.whiteguide && (
-                  <a
-                    href={r.links.whiteguide}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="!text-xs text-emerald-700 hover:underline"
-                  >
-                    White Guide
-                  </a>
-                )}
-                {r.links.google && (
-                  <a
-                    href={r.links.google}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="!text-xs text-blue-600 hover:underline"
-                  >
-                    Google Maps
-                  </a>
-                )}
-              </div>
-            </div>
+            <PopupContent restaurant={r} />
           </Popup>
         </Marker>
       ))}
