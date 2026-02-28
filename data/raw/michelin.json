@@ -1,0 +1,452 @@
+[
+  {
+    "source": "michelin",
+    "name": "Woodstockholm",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/woodstockholm"
+  },
+  {
+    "source": "michelin",
+    "name": "Rolfs Kök",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/rolfs-kok"
+  },
+  {
+    "source": "michelin",
+    "name": "Babette",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "bib_gourmand",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/babette"
+  },
+  {
+    "source": "michelin",
+    "name": "Etoile",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "1_star",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/etoile"
+  },
+  {
+    "source": "michelin",
+    "name": "Forma",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/forma-1210349"
+  },
+  {
+    "source": "michelin",
+    "name": "Celeste",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "1_star",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/celeste-1209889"
+  },
+  {
+    "source": "michelin",
+    "name": "Black Milk Gastro Bar",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/black-milk-gastro-bar"
+  },
+  {
+    "source": "michelin",
+    "name": "Petri",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/petri"
+  },
+  {
+    "source": "michelin",
+    "name": "ÄRLA",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "bib_gourmand",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/arla"
+  },
+  {
+    "source": "michelin",
+    "name": "Essence",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/essence-1203656"
+  },
+  {
+    "source": "michelin",
+    "name": "Brasserie Astoria",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/brasserie-astoria"
+  },
+  {
+    "source": "michelin",
+    "name": "AIRA",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "2_star",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/aira"
+  },
+  {
+    "source": "michelin",
+    "name": "Bar Agrikultur",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "bib_gourmand",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/bar-agrikultur"
+  },
+  {
+    "source": "michelin",
+    "name": "Lilla Ego",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "bib_gourmand",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/lilla-ego"
+  },
+  {
+    "source": "michelin",
+    "name": "Frantzén",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "3_star",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/frantzen"
+  },
+  {
+    "source": "michelin",
+    "name": "Ekstedt",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "1_star",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/ekstedt"
+  },
+  {
+    "source": "michelin",
+    "name": "Hillenberg",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/hillenberg"
+  },
+  {
+    "source": "michelin",
+    "name": "SOLEN",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/solen"
+  },
+  {
+    "source": "michelin",
+    "name": "ergo.",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "1_star",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/ergo"
+  },
+  {
+    "source": "michelin",
+    "name": "Seafood Gastro",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "1_star",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/seafood-gastro"
+  },
+  {
+    "source": "michelin",
+    "name": "Triton",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "bib_gourmand",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/triton"
+  },
+  {
+    "source": "michelin",
+    "name": "Oxenstiernan",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/oxenstiernan"
+  },
+  {
+    "source": "michelin",
+    "name": "freyja",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/freyja"
+  },
+  {
+    "source": "michelin",
+    "name": "Leijontornet",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/leijontornet"
+  },
+  {
+    "source": "michelin",
+    "name": "Minh Mat",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/minh-mat"
+  },
+  {
+    "source": "michelin",
+    "name": "BORD",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/bord"
+  },
+  {
+    "source": "michelin",
+    "name": "Prospero",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/prospero"
+  },
+  {
+    "source": "michelin",
+    "name": "Nour",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "1_star",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/nour"
+  },
+  {
+    "source": "michelin",
+    "name": "Restaurang B.A.R.",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/b-a-r"
+  },
+  {
+    "source": "michelin",
+    "name": "Lux Dag för Dag",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/lux-dag-for-dag"
+  },
+  {
+    "source": "michelin",
+    "name": "Farang",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/farang"
+  },
+  {
+    "source": "michelin",
+    "name": "Operakällaren",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "1_star",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/operakallaren"
+  },
+  {
+    "source": "michelin",
+    "name": "NISCH",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/nisch"
+  },
+  {
+    "source": "michelin",
+    "name": "Allegrine",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "bib_gourmand",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/allegrine"
+  },
+  {
+    "source": "michelin",
+    "name": "Ulla Winbladh",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/ulla-winbladh"
+  },
+  {
+    "source": "michelin",
+    "name": "Matbaren",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "bib_gourmand",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/matbaren"
+  },
+  {
+    "source": "michelin",
+    "name": "Sushi Sho",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "1_star",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/sushi-sho"
+  },
+  {
+    "source": "michelin",
+    "name": "Washoku TOMO",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/washoku-tomo"
+  },
+  {
+    "source": "michelin",
+    "name": "Voisine",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/voisine"
+  },
+  {
+    "source": "michelin",
+    "name": "Dashi",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "1_star",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/dashi"
+  },
+  {
+    "source": "michelin",
+    "name": "Persona",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/persona"
+  },
+  {
+    "source": "michelin",
+    "name": "Koizen",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/koizen"
+  },
+  {
+    "source": "michelin",
+    "name": "Tavolo",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/tavolo"
+  },
+  {
+    "source": "michelin",
+    "name": "Woodstockholm",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/woodstockholm"
+  },
+  {
+    "source": "michelin",
+    "name": "Rolfs Kök",
+    "address": "",
+    "city": "Stockholm",
+    "distinction": "selected",
+    "cuisine": "",
+    "priceRange": "",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/rolfs-kok"
+  }
+]
