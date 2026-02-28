@@ -1,6 +1,6 @@
 /**
  * SvD (Svenska Dagbladet) Krogguiden scraper.
- * Fetches restaurant reviews from svd.se/story/krogguiden via RSS feed.
+ * Fetches restaurant reviews from svd.se/story/krogguiden via backfill API.
  * Each review page contains JSON-LD with Restaurant schema.
  *
  * Output: data/raw/svd.json (SvdRaw[])
@@ -12,28 +12,44 @@ import * as cheerio from "cheerio";
 import { fetchWithRetry, sleep, saveRawJson, loadRawJson } from "../utils/fetch.js";
 import type { SvdRaw } from "../types.js";
 
-const RSS_URL = "https://www.svd.se/feed/articles/story/krogguiden.rss";
+const API_URL = "https://www.svd.se/api/topic-backfill/story/krogguiden";
+const PAGE_SIZE = 50;
 
 /**
- * Parse RSS feed to get article URLs
+ * Fetch all article URLs via the backfill API (paginated)
  */
 async function fetchArticleUrls(): Promise<string[]> {
-  console.log("Fetching SvD Krogguiden RSS feed...");
-  const res = await fetchWithRetry(RSS_URL);
-  const xml = await res.text();
-  const $ = cheerio.load(xml, { xmlMode: true });
-
+  console.log("Fetching SvD Krogguiden articles via API...");
   const urls: string[] = [];
-  $("item link").each((_, el) => {
-    const url = $(el).text().trim();
-    // Only include review articles (recension)
-    if (url.includes("/a/") && url.includes("recension")) {
-      urls.push(url);
-    }
-  });
+  let offset = 0;
+  let hasMore = true;
 
-  console.log(`  Found ${urls.length} review articles`);
-  return urls;
+  while (hasMore) {
+    const res = await fetchWithRetry(
+      `${API_URL}?limit=${PAGE_SIZE}&offset=${offset}&variant=grid`
+    );
+    const html = await res.text();
+
+    // Extract article URLs from HTML
+    const matches = html.match(/svd\.se\/a\/[^"<>\s]+/g) || [];
+    const pageUrls = matches
+      .map((m) => `https://www.${m}`)
+      .filter((url) => url.includes("recension") || url.includes("krog"));
+
+    if (pageUrls.length === 0) {
+      hasMore = false;
+    } else {
+      // Deduplicate within page
+      const uniqueUrls = [...new Set(pageUrls)];
+      urls.push(...uniqueUrls);
+      offset += PAGE_SIZE;
+      process.stdout.write(`  Page ${offset / PAGE_SIZE}: ${urls.length} articles total\r`);
+      await sleep(500);
+    }
+  }
+
+  console.log(`\n  Found ${urls.length} review articles`);
+  return [...new Set(urls)]; // Final dedup
 }
 
 /**
