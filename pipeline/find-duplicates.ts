@@ -5,11 +5,11 @@
 import { loadJson } from "./utils/fetch.js";
 import { similarityRatio } from "./utils/fuzzy.js";
 import { normalizeName } from "./utils/match.js";
-import type { Restaurant } from "../src/types.js";
+import type { PipelineRestaurant } from "./types.js";
 
 // CLI: tsx pipeline/find-duplicates.ts
 
-const data = loadJson<Restaurant[]>("restaurants.json");
+const data = loadJson<PipelineRestaurant[]>("restaurants.json");
 if (!data) {
   console.error("Could not load restaurants.json");
   process.exit(1);

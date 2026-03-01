@@ -194,11 +194,19 @@ async function scrapeRestaurantDetail(
     const hours = parseHoursFromHtml(html);
 
     if (parsed?.name) {
+      // Skip entries without a real address — these are usually
+      // non-restaurant pages (wines, events, hotels without detail)
+      const addr = (parsed.address || "").trim();
+      if (!addr) {
+        console.log(`  Skipping "${parsed.name}" (no address)`);
+        return null;
+      }
+
       return {
         source: "krogguiden",
         slug,
         name: parsed.name,
-        address: parsed.address || "",
+        address: addr,
         postalCode: parsed.postalCode || "",
         city: parsed.city || "Stockholm",
         region: parsed.region || "",
@@ -213,28 +221,9 @@ async function scrapeRestaurantDetail(
       };
     }
 
-    // Fallback: extract basic info from HTML
-    const $ = cheerio.load(html);
-    const name = $("h1").first().text().trim();
-    if (!name) return null;
-
-    return {
-      source: "krogguiden",
-      slug,
-      name,
-      address: "",
-      postalCode: "",
-      city: "Stockholm",
-      region: "",
-      phone: "",
-      website: "",
-      priceRange: "",
-      cuisine: "",
-      image: "",
-      rating: null,
-      hours,
-      url: `${KROGGUIDEN_BASE_URL}/restauranger/view/${slug}`,
-    };
+    // No JSON-LD found — skip (fallback without structured data
+    // produces low-quality entries with no address or metadata)
+    return null;
   } catch (err) {
     console.log(`  Failed to scrape ${slug}: ${err}`);
     return null;

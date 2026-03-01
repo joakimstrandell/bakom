@@ -1,6 +1,25 @@
 {
   "$schema": "./manual.schema.json",
-  "additions": [],
-  "merges": [],
+  "additions": [
+    {
+      "id": "brasserie-branneri-dalaro",
+      "name": "Brasserie & Bränneri",
+      "address": "Fiskargränd 4, 137 36 Dalarö",
+      "city": "Dalarö",
+      "lat": 59.1336,
+      "lng": 18.4064,
+      "cuisine": "Crossover",
+      "links": {
+        "krogguiden": "https://www.krogguiden.se/restauranger/view/brasserie--branneri"
+      }
+    }
+  ],
+  "merges": [
+    {
+      "keep": "oscars-bar-och-brasserie-narvavägen-32",
+      "merge": "oscars-bar-brasserie-narvavägen-32",
+      "reason": "Same restaurant — Krogguiden uses 'och', SvD uses '&'"
+    }
+  ],
   "overrides": []
 }

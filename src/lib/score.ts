@@ -1,14 +1,20 @@
 /**
  * Bakom Score — aggregated restaurant rating (0–10).
  *
- * Combines ratings from four sources with different weights:
- *   Michelin:    0.35  (most prestigious, strict assessment)
- *   White Guide: 0.25  (expert assessment, Swedish context)
- *   Krogguiden:  0.25  (professional reviewers)
- *   Google:      0.15  (crowd ratings, lowest weight)
+ * Combines ratings from multiple sources with different weights:
+ *   Michelin:    0.28  (most prestigious, strict assessment)
+ *   White Guide: 0.20  (expert assessment, Swedish context)
+ *   SvD:         0.16  (professional critic, 1–6 scale)
+ *   Krogguiden:  0.16  (professional reviewers)
+ *   Google:      0.10  (crowd ratings)
+ *   Thatsup:     0.10  (crowd ratings, Stockholm-focused)
+ *
+ * DN has no numeric rating (boolean only) — contributes to source
+ * diversity but not to the weighted average.
  *
  * Only present sources are weighted. Additional adjustments:
- *   - Google ratings scaled by confidence (review count)
+ *   - Google/Thatsup: Bayesian dampening pulls scores toward a prior (7.0)
+ *     when review count is low — prevents inflated scores from few reviews
  *   - Source diversity factor: single-source ratings are dampened
  *   - Michelin star floors: starred restaurants guaranteed minimum score
  *   - Monotonicity guarantee: adding a source never lowers the score
@@ -47,18 +53,47 @@ const MICHELIN_FLOORS: Partial<Record<MichelinDistinction, number>> = {
   "3_star": 10.0,
 };
 
-/** Normalize a 1–5 numeric rating to 0–10 */
-function normalizeNumeric(rating: number): number {
+/** Normalize a 1–5 expert rating (Krogguiden) to 0–10 */
+function normalize1to5(rating: number): number {
   return (rating - 1) * 2.5;
+}
+
+/**
+ * Normalize a 1–5 crowd rating (Google/Thatsup) to 0–10.
+ * More conservative than expert scale — maps 1→1, 5→9.
+ * Reflects that crowd ratings cluster around 3.5–4.8 and
+ * a 4.6 should be "very good" (~8) not "near perfect" (~9).
+ */
+function normalizeCrowd1to5(rating: number): number {
+  return (rating - 1) * 2.0 + 1.0;
+}
+
+/** Normalize a 1–6 numeric rating (SvD scale) to 0–10 */
+function normalize1to6(rating: number): number {
+  return ((rating - 1) / 5) * 10;
+}
+
+/**
+ * Bayesian dampening for crowd-sourced ratings.
+ * With few reviews, the score is pulled toward CROWD_PRIOR (neutral-good).
+ * With many reviews (≥100), the raw score is used as-is.
+ */
+const CROWD_PRIOR = 7.0;
+
+function bayesianDampen(rawScore: number, reviewCount: number): number {
+  const confidence = Math.min(1, reviewCount / 100);
+  return confidence * rawScore + (1 - confidence) * CROWD_PRIOR;
 }
 
 // ─── Weights ────────────────────────────────────────────────────
 
 const WEIGHTS = {
-  michelin: 0.35,
-  whiteguide: 0.25,
-  krogguiden: 0.25,
-  google: 0.15,
+  michelin: 0.28,
+  whiteguide: 0.20,
+  svd: 0.16,
+  krogguiden: 0.16,
+  google: 0.10,
+  thatsup: 0.10,
 } as const;
 
 // ─── Score calculation ──────────────────────────────────────────
@@ -66,53 +101,84 @@ const WEIGHTS = {
 export type ScoreInput = {
   ratings: SourceRatings;
   googleRatingCount?: number;
+  thatsupRatingCount?: number;
 };
 
 type SourceEntry = { weight: number; score: number };
 
 /**
  * Collect all available source scores and weights for a restaurant.
+ * DN is boolean-only (no numeric rating) so it's tracked separately
+ * via the dnReviewed flag for diversity counting.
  */
-function collectSources(input: ScoreInput): SourceEntry[] {
+function collectSources(input: ScoreInput): {
+  entries: SourceEntry[];
+  extraDiversitySources: number;
+} {
   const { ratings, googleRatingCount } = input;
-  const sources: SourceEntry[] = [];
+  const entries: SourceEntry[] = [];
+  let extraDiversitySources = 0;
 
   if (ratings.michelin) {
-    sources.push({
+    entries.push({
       weight: WEIGHTS.michelin,
       score: MICHELIN_SCORES[ratings.michelin],
     });
   }
 
   if (ratings.whiteguide) {
-    sources.push({
+    entries.push({
       weight: WEIGHTS.whiteguide,
       score: WHITEGUIDE_SCORES[ratings.whiteguide],
     });
   }
 
+  if (ratings.svd != null && ratings.svd > 0) {
+    entries.push({
+      weight: WEIGHTS.svd,
+      score: normalize1to6(ratings.svd),
+    });
+  }
+
   if (ratings.krogguiden != null && ratings.krogguiden > 0) {
-    sources.push({
+    entries.push({
       weight: WEIGHTS.krogguiden,
-      score: normalizeNumeric(ratings.krogguiden),
+      score: normalize1to5(ratings.krogguiden),
     });
   }
 
   if (ratings.google != null && ratings.google > 0) {
-    const confidence = Math.min(1, (googleRatingCount ?? 0) / 100);
-    sources.push({
-      weight: WEIGHTS.google * (0.5 + 0.5 * confidence),
-      score: normalizeNumeric(ratings.google),
+    const count = googleRatingCount ?? 0;
+    entries.push({
+      weight: WEIGHTS.google,
+      score: bayesianDampen(normalizeCrowd1to5(ratings.google), count),
     });
   }
 
-  return sources;
+  if (ratings.thatsup != null && ratings.thatsup > 0) {
+    const count = input.thatsupRatingCount ?? 0;
+    entries.push({
+      weight: WEIGHTS.thatsup,
+      score: bayesianDampen(normalizeCrowd1to5(ratings.thatsup), count),
+    });
+  }
+
+  // DN has no numeric rating — count it for diversity only
+  if (ratings.dn) {
+    extraDiversitySources = 1;
+  }
+
+  return { entries, extraDiversitySources };
 }
 
 /**
  * Compute the weighted average for a subset of sources, with diversity dampening.
+ * extraDiversity counts non-numeric sources (DN) that still contribute to diversity.
  */
-function computeScore(sources: SourceEntry[]): number {
+function computeScore(
+  sources: SourceEntry[],
+  extraDiversity: number = 0,
+): number {
   if (sources.length === 0) return 0;
 
   let weightedSum = 0;
@@ -124,8 +190,8 @@ function computeScore(sources: SourceEntry[]): number {
 
   let score = weightedSum / totalWeight;
 
-  // Source diversity dampening
-  const n = sources.length;
+  // Source diversity dampening (includes extra non-numeric sources like DN)
+  const n = sources.length + extraDiversity;
   const diversityFactor = n === 1 ? 0.88 : n === 2 ? 0.95 : 1.0;
   score *= diversityFactor;
 
@@ -141,11 +207,11 @@ function computeScore(sources: SourceEntry[]): number {
  * (removing one source at a time) and take the maximum.
  */
 export function calculateBakomScore(input: ScoreInput): number | null {
-  const sources = collectSources(input);
+  const { entries: sources, extraDiversitySources } = collectSources(input);
   if (sources.length === 0) return null;
 
   // Full score with all sources
-  let score = computeScore(sources);
+  let score = computeScore(sources, extraDiversitySources);
 
   // Monotonicity: check each "leave-one-out" subset.
   // If removing a source yields a higher score, that source was dragging
@@ -153,7 +219,7 @@ export function calculateBakomScore(input: ScoreInput): number | null {
   if (sources.length >= 2) {
     for (let i = 0; i < sources.length; i++) {
       const subset = sources.filter((_, j) => j !== i);
-      const subScore = computeScore(subset);
+      const subScore = computeScore(subset, extraDiversitySources);
       if (subScore > score) score = subScore;
     }
   }

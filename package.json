@@ -13,6 +13,7 @@
     "pipeline:whiteguide": "tsx pipeline/collect/whiteguide.ts",
     "pipeline:svd": "tsx pipeline/collect/svd.ts",
     "pipeline:dn": "tsx pipeline/collect/dn.ts",
+    "pipeline:thatsup": "tsx pipeline/collect/thatsup.ts",
     "pipeline:google": "tsx pipeline/collect/google.ts",
     "pipeline:merge": "tsx pipeline/process/merge.ts",
     "pipeline:geocode": "tsx pipeline/process/geocode.ts",
@@ -21,6 +22,8 @@
   "dependencies": {
     "@tanstack/react-router": "^1.163.2",
     "@tanstack/react-start": "^1.163.2",
+    "@vercel/analytics": "^1.6.1",
+    "@vercel/speed-insights": "^1.3.1",
     "cheerio": "^1.2.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

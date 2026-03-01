@@ -1,7 +1,7 @@
 /**
  * Full data pipeline: runs all steps in sequence.
  *
- * Pipeline: krogguiden → michelin → whiteguide → merge → google (refine) → geocode
+ * Pipeline: krogguiden → michelin → whiteguide → svd → dn → thatsup → merge → google → geocode
  *
  * CLI: tsx pipeline/run.ts
  */
@@ -11,6 +11,7 @@ import { scrapeMichelin } from "./collect/michelin.js";
 import { scrapeWhiteGuide } from "./collect/whiteguide.js";
 import { scrapeSvd } from "./collect/svd.js";
 import { scrapeDn } from "./collect/dn.js";
+import { scrapeThatsup } from "./collect/thatsup.js";
 import { refineWithGoogle } from "./collect/google.js";
 import { merge } from "./process/merge.js";
 import { geocodeAll } from "./process/geocode.js";
@@ -22,31 +23,35 @@ async function main() {
   console.log("╚══════════════════════════════════════╝\n");
 
   // Step 1: Scrape Krogguiden
-  console.log("━━━ Step 1/6: Krogguiden ━━━\n");
+  console.log("━━━ Step 1/9: Krogguiden ━━━\n");
   await scrapeKrogguiden();
 
   // Step 2: Scrape Michelin Guide
-  console.log("\n━━━ Step 2/6: Michelin Guide ━━━\n");
+  console.log("\n━━━ Step 2/9: Michelin Guide ━━━\n");
   await scrapeMichelin();
 
   // Step 3: Scrape White Guide
-  console.log("\n━━━ Step 3/8: White Guide ━━━\n");
+  console.log("\n━━━ Step 3/9: White Guide ━━━\n");
   await scrapeWhiteGuide();
 
   // Step 4: Scrape SvD Krogguiden
-  console.log("\n━━━ Step 4/8: SvD Krogguiden ━━━\n");
+  console.log("\n━━━ Step 4/9: SvD Krogguiden ━━━\n");
   await scrapeSvd();
 
   // Step 5: Scrape DN Krogkommissionen
-  console.log("\n━━━ Step 5/8: DN Krogkommissionen ━━━\n");
+  console.log("\n━━━ Step 5/9: DN Krogkommissionen ━━━\n");
   await scrapeDn();
 
-  // Step 6: Merge all sources
-  console.log("\n━━━ Step 6/8: Merge ━━━\n");
+  // Step 6: Scrape Thatsup
+  console.log("\n━━━ Step 6/9: Thatsup ━━━\n");
+  await scrapeThatsup();
+
+  // Step 7: Merge all sources
+  console.log("\n━━━ Step 7/9: Merge ━━━\n");
   await merge();
 
-  // Step 7: Refine with Google Places API
-  console.log("\n━━━ Step 7/8: Google Places (refine) ━━━\n");
+  // Step 8: Refine with Google Places API
+  console.log("\n━━━ Step 8/9: Google Places (refine) ━━━\n");
   try {
     await refineWithGoogle();
   } catch (err) {
@@ -58,8 +63,8 @@ async function main() {
     }
   }
 
-  // Step 8: Geocode missing coordinates
-  console.log("\n━━━ Step 8/8: Geocode ━━━\n");
+  // Step 9: Geocode missing coordinates
+  console.log("\n━━━ Step 9/9: Geocode ━━━\n");
   await geocodeAll();
 
   const elapsed = ((Date.now() - start) / 1000 / 60).toFixed(1);

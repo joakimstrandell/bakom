@@ -4,7 +4,19 @@
  * The merge step combines these into the final Restaurant type from src/types.ts.
  */
 
-import type { HoursEntry, MichelinDistinction, WhiteGuideClassification } from "../src/types.js";
+import type { HoursEntry, MichelinDistinction, WhiteGuideClassification, Restaurant, SourceIds } from "../src/types.js";
+
+/**
+ * Pipeline-internal Restaurant type where pipeline-only fields are guaranteed present.
+ * The base Restaurant type has these as optional since they're stripped from the frontend JSON.
+ */
+export type PipelineRestaurant = Restaurant & {
+  slug: string;
+  image: string;
+  sourceIds: SourceIds;
+  sources: string[];
+  googlePlaceId?: string;
+};
 
 /** Raw output from the Krogguiden scraper */
 export type KrogguidenRaw = {
@@ -96,7 +108,27 @@ export type DnRaw = {
   publishedAt: string;
 };
 
-export type SourceRecord = KrogguidenRaw | GoogleRaw | MichelinRaw | WhiteGuideRaw | SvdRaw | DnRaw;
+/** Raw output from Thatsup scraper */
+export type ThatsupRaw = {
+  source: "thatsup";
+  slug: string;
+  name: string;
+  address: string;
+  postalCode: string;
+  city: string;
+  phone: string;
+  website: string;
+  cuisine: string[];
+  priceRange: string;
+  rating: number | null; // 1-5 scale (user reviews)
+  reviewCount: number;
+  hours: import("../src/types.js").HoursEntry[];
+  lat: number | null;
+  lng: number | null;
+  url: string;
+};
+
+export type SourceRecord = KrogguidenRaw | GoogleRaw | MichelinRaw | WhiteGuideRaw | SvdRaw | DnRaw | ThatsupRaw;
 
 // ─── Manual Data Types ────────────────────────────────────────────
 

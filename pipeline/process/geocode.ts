@@ -10,10 +10,10 @@
 
 import { sleep, loadJson, saveJson } from "../utils/fetch.js";
 import { geocodeAddress } from "../utils/geocode.js";
-import type { Restaurant } from "../../src/types.js";
+import type { PipelineRestaurant } from "../types.js";
 
 export async function geocodeAll(): Promise<void> {
-  const restaurants = loadJson<Restaurant[]>("restaurants.json");
+  const restaurants = loadJson<PipelineRestaurant[]>("restaurants.json");
   if (!restaurants) {
     throw new Error("data/restaurants.json not found. Run scrape:merge first.");
   }

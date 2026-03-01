@@ -20,9 +20,30 @@ import {
   printQualityReport,
   validateRestaurant,
 } from "../utils/validate.js";
-import type { Restaurant } from "../../src/types.js";
-import type { KrogguidenRaw, MichelinRaw, WhiteGuideRaw, SvdRaw, DnRaw, ManualData } from "../types.js";
+import type { KrogguidenRaw, MichelinRaw, WhiteGuideRaw, SvdRaw, DnRaw, ThatsupRaw, ManualData, PipelineRestaurant } from "../types.js";
 import { calculateBakomScore } from "../../src/lib/score.js";
+
+/** Valid price ranges — anything outside this set is treated as empty */
+const VALID_PRICES = new Set(["$", "$$", "$$$", "$$$$"]);
+
+/** Sanitize a priceRange value — drop bogus values like $$$$$ */
+function sanitizePrice(price: string | undefined | null): string {
+  if (!price) return "";
+  return VALID_PRICES.has(price) ? price : "";
+}
+
+/**
+ * Check if a restaurant entry has enough data to be useful.
+ * Rejects entries without an address (unless they have Google data
+ * from a previous enrichment run that already resolved them).
+ */
+function hasMinimumData(name: string, address: string, googlePlaceId?: string): boolean {
+  // Already Google-enriched — keep it
+  if (googlePlaceId) return true;
+  // Must have a non-empty address
+  if (!address.trim()) return false;
+  return true;
+}
 
 // ─── Manual Data Processing ──────────────────────────────────────
 
@@ -42,11 +63,11 @@ function loadManualData(): ManualData | null {
  * Apply manual additions, merges, and overrides to the restaurant list.
  */
 function applyManualData(
-  restaurants: Restaurant[],
+  restaurants: PipelineRestaurant[],
   manual: ManualData
 ): { added: number; merged: number; overridden: number } {
   const stats = { added: 0, merged: 0, overridden: 0 };
-  const byId = new Map<string, Restaurant>();
+  const byId = new Map<string, PipelineRestaurant>();
   for (const r of restaurants) {
     byId.set(r.id, r);
   }
@@ -58,7 +79,7 @@ function applyManualData(
       continue;
     }
 
-    const restaurant: Restaurant = {
+    const restaurant: PipelineRestaurant = {
       id: add.id,
       name: add.name,
       slug: "",
@@ -68,7 +89,7 @@ function applyManualData(
       region: "",
       phone: add.phone ?? "",
       website: add.website ?? "",
-      priceRange: add.priceRange ?? "",
+      priceRange: sanitizePrice(add.priceRange),
       cuisine: add.cuisine ?? "",
       image: "",
       hours: [],
@@ -184,7 +205,7 @@ function generateId(name: string, address: string): string {
 
 // ─── Main merge function ─────────────────────────────────────────
 
-export async function merge(): Promise<Restaurant[]> {
+export async function merge(): Promise<PipelineRestaurant[]> {
   console.log("=== Merging Sources ===\n");
 
   const krogguiden = loadRawJson<KrogguidenRaw[]>("krogguiden.json");
@@ -196,8 +217,8 @@ export async function merge(): Promise<Restaurant[]> {
   }
 
   // Load existing restaurants.json to preserve Google/geocode data
-  const existing = loadJson<Restaurant[]>("restaurants.json") ?? [];
-  const existingById = new Map<string, Restaurant>();
+  const existing = loadJson<PipelineRestaurant[]>("restaurants.json") ?? [];
+  const existingById = new Map<string, PipelineRestaurant>();
   for (const r of existing) {
     existingById.set(r.id, r);
   }
@@ -225,16 +246,22 @@ export async function merge(): Promise<Restaurant[]> {
     }
   }
 
-  const restaurants: Restaurant[] = [];
+  let restaurants: PipelineRestaurant[] = [];
   const matchedMichelinNames = new Set<string>();
   const matchedWgNames = new Set<string>();
   let michelinMatches = 0;
   let wgMatches = 0;
   let fuzzyMatches = 0;
   let preserved = 0;
+  let skippedNoData = 0;
 
   // Process Krogguiden records as the base
   for (const kg of krogguiden) {
+    const kgId = generateId(kg.name, kg.address);
+    if (!hasMinimumData(kg.name, kg.address, existingById.get(kgId)?.googlePlaceId)) {
+      skippedNoData++;
+      continue;
+    }
     // Use fuzzy matching with address proximity
     const michelinMatch = findRestaurantMatch(
       kg.name,
@@ -285,7 +312,7 @@ export async function merge(): Promise<Restaurant[]> {
     if (w) sources.push("whiteguide");
     if (prev?.sources.includes("google")) sources.push("google");
 
-    const restaurant: Restaurant = {
+    const restaurant: PipelineRestaurant = {
       id,
       name: kg.name,
       slug: kg.slug,
@@ -295,7 +322,7 @@ export async function merge(): Promise<Restaurant[]> {
       region: kg.region,
       phone: prev?.googlePlaceId ? prev.phone : kg.phone,
       website: prev?.googlePlaceId ? prev.website : kg.website,
-      priceRange: kg.priceRange,
+      priceRange: sanitizePrice(kg.priceRange),
       cuisine: kg.cuisine || (m?.cuisine ?? ""),
       image: kg.image,
       hours: prev?.googlePlaceId && prev.hours.length > 0 ? prev.hours : kg.hours,
@@ -326,6 +353,7 @@ export async function merge(): Promise<Restaurant[]> {
     if (prev?.googlePlaceId) {
       restaurant.googlePlaceId = prev.googlePlaceId;
       restaurant.googleRatingCount = prev.googleRatingCount;
+      if (prev.businessStatus) restaurant.businessStatus = prev.businessStatus;
       preserved++;
     }
 
@@ -340,6 +368,11 @@ export async function merge(): Promise<Restaurant[]> {
 
       const id = generateId(mich.name, mich.address);
       const prev = existingById.get(id);
+
+      if (!hasMinimumData(mich.name, mich.address, prev?.googlePlaceId)) {
+        skippedNoData++;
+        continue;
+      }
 
       // Fuzzy match against White Guide
       const wgMatch = findRestaurantMatch(
@@ -366,7 +399,7 @@ export async function merge(): Promise<Restaurant[]> {
       if (wgMatch) sources.push("whiteguide");
       if (prev?.sources.includes("google")) sources.push("google");
 
-      const restaurant: Restaurant = {
+      const restaurant: PipelineRestaurant = {
         id,
         name: mich.name,
         slug: "",
@@ -376,7 +409,7 @@ export async function merge(): Promise<Restaurant[]> {
         region: "",
         phone: prev?.phone ?? "",
         website: prev?.website ?? "",
-        priceRange: mich.priceRange,
+        priceRange: sanitizePrice(mich.priceRange),
         cuisine: mich.cuisine,
         image: "",
         hours: prev?.hours ?? [],
@@ -404,6 +437,7 @@ export async function merge(): Promise<Restaurant[]> {
       if (prev?.googlePlaceId) {
         restaurant.googlePlaceId = prev.googlePlaceId;
         restaurant.googleRatingCount = prev.googleRatingCount;
+          if (prev.businessStatus) restaurant.businessStatus = prev.businessStatus;
         preserved++;
       }
 
@@ -420,10 +454,15 @@ export async function merge(): Promise<Restaurant[]> {
       const id = generateId(w.name, w.address);
       const prev = existingById.get(id);
 
+      if (!hasMinimumData(w.name, w.address, prev?.googlePlaceId)) {
+        skippedNoData++;
+        continue;
+      }
+
       const sources: string[] = ["whiteguide"];
       if (prev?.sources.includes("google")) sources.push("google");
 
-      const restaurant: Restaurant = {
+      const restaurant: PipelineRestaurant = {
         id,
         name: w.name,
         slug: "",
@@ -459,6 +498,7 @@ export async function merge(): Promise<Restaurant[]> {
       if (prev?.googlePlaceId) {
         restaurant.googlePlaceId = prev.googlePlaceId;
         restaurant.googleRatingCount = prev.googleRatingCount;
+          if (prev.businessStatus) restaurant.businessStatus = prev.businessStatus;
         preserved++;
       }
 
@@ -474,7 +514,7 @@ export async function merge(): Promise<Restaurant[]> {
   console.log(`  DN: ${dn?.length ?? 0} reviews`);
 
   // Build restaurant lookup for newspaper matching
-  const restaurantByName = new Map<string, Restaurant>();
+  const restaurantByName = new Map<string, PipelineRestaurant>();
   for (const r of restaurants) {
     restaurantByName.set(normalizeName(r.name), r);
   }
@@ -510,7 +550,7 @@ export async function merge(): Promise<Restaurant[]> {
         const id = generateId(s.name, s.address);
         const prev = existingById.get(id);
 
-        const restaurant: Restaurant = {
+        const restaurant: PipelineRestaurant = {
           id,
           name: s.name,
           slug: "",
@@ -585,6 +625,100 @@ export async function merge(): Promise<Restaurant[]> {
     }
   }
 
+  // Match Thatsup restaurants
+  const thatsup = loadRawJson<ThatsupRaw[]>("thatsup.json");
+  console.log(`  Thatsup: ${thatsup?.length ?? 0} restaurants`);
+
+  let thatsupMatches = 0;
+  let thatsupNew = 0;
+
+  if (thatsup) {
+    for (const t of thatsup) {
+      const match = findRestaurantMatch(
+        t.name,
+        t.address,
+        restaurantByName,
+        (item) => item.address,
+        0.85
+      );
+
+      if (match) {
+        const r = match.item;
+        r.ratings.thatsup = t.rating;
+        r.thatsupRatingCount = t.reviewCount;
+        r.links.thatsup = t.url;
+        r.sourceIds.thatsup = t.slug;
+        if (!r.sources.includes("thatsup")) {
+          r.sources.push("thatsup");
+        }
+        // Enrich with Thatsup data if missing
+        if (!r.lat && t.lat) r.lat = t.lat;
+        if (!r.lng && t.lng) r.lng = t.lng;
+        if (!r.phone && t.phone) r.phone = t.phone;
+        if (!r.website && t.website) r.website = t.website;
+        if (r.hours.length === 0 && t.hours.length > 0) r.hours = t.hours;
+
+        thatsupMatches++;
+        if (match.result.nameSimilarity < 1.0) {
+          console.log(`  Fuzzy: Thatsup "${t.name}" -> "${r.name}" (${(match.result.nameSimilarity * 100).toFixed(0)}%)`);
+        }
+      } else if (t.address) {
+        // Create new restaurant from Thatsup
+        const id = generateId(t.name, t.address);
+        const prev = existingById.get(id);
+
+        const restaurant: PipelineRestaurant = {
+          id,
+          name: t.name,
+          slug: "",
+          address: t.address,
+          postalCode: t.postalCode || "",
+          city: t.city || "Stockholm",
+          region: "",
+          phone: t.phone || "",
+          website: t.website || "",
+          priceRange: sanitizePrice(t.priceRange),
+          cuisine: t.cuisine.join(", "),
+          image: "",
+          hours: t.hours || [],
+          lat: prev?.lat ?? t.lat,
+          lng: prev?.lng ?? t.lng,
+          ratings: {
+            krogguiden: null,
+            google: prev?.ratings.google ?? null,
+            michelin: null,
+            whiteguide: null,
+            svd: null,
+            dn: null,
+            thatsup: t.rating,
+          },
+          links: {
+            thatsup: t.url,
+            google: prev?.links.google,
+          },
+          sourceIds: {
+            thatsup: t.slug,
+            google: prev?.sourceIds?.google ?? prev?.googlePlaceId,
+          },
+          sources: ["thatsup"],
+          thatsupRatingCount: t.reviewCount,
+        };
+
+        if (prev?.googlePlaceId) {
+          restaurant.googlePlaceId = prev.googlePlaceId;
+          restaurant.googleRatingCount = prev.googleRatingCount;
+          preserved++;
+        }
+
+        restaurants.push(restaurant);
+        restaurantByName.set(normalizeName(t.name), restaurant);
+        thatsupNew++;
+        const ratingStr = t.rating ? `${t.rating}/5` : "no rating";
+        console.log(`  Thatsup-only: "${t.name}" (${ratingStr})`);
+      }
+    }
+  }
+
   // Apply manual data (additions, merges, overrides)
   const manual = loadManualData();
   let manualStats = { added: 0, merged: 0, overridden: 0 };
@@ -600,11 +734,99 @@ export async function merge(): Promise<Restaurant[]> {
     }
   }
 
+  // Deduplicate by Google Place ID — same physical location = same restaurant
+  {
+    const byPlaceId = new Map<string, PipelineRestaurant[]>();
+    for (const r of restaurants) {
+      if (!r.googlePlaceId) continue;
+      const group = byPlaceId.get(r.googlePlaceId);
+      if (group) group.push(r);
+      else byPlaceId.set(r.googlePlaceId, [r]);
+    }
+
+    const toRemove = new Set<string>();
+    let deduped = 0;
+
+    for (const [placeId, group] of byPlaceId) {
+      if (group.length < 2) continue;
+
+      // Pick primary: most sources, then most ratings, then longest name
+      group.sort((a, b) => {
+        const aSources = a.sources.length;
+        const bSources = b.sources.length;
+        if (aSources !== bSources) return bSources - aSources;
+        const aRatings = Object.values(a.ratings).filter((v) => v != null).length;
+        const bRatings = Object.values(b.ratings).filter((v) => v != null).length;
+        if (aRatings !== bRatings) return bRatings - aRatings;
+        return b.name.length - a.name.length;
+      });
+
+      const primary = group[0];
+      const others = group.slice(1);
+
+      for (const other of others) {
+        // Merge ratings (keep non-null values)
+        for (const [key, val] of Object.entries(other.ratings)) {
+          if (val != null && (primary.ratings as Record<string, unknown>)[key] == null) {
+            (primary.ratings as Record<string, unknown>)[key] = val;
+          }
+        }
+
+        // Merge links
+        for (const [key, val] of Object.entries(other.links)) {
+          if (val && !(primary.links as Record<string, string | undefined>)[key]) {
+            (primary.links as Record<string, string | undefined>)[key] = val;
+          }
+        }
+
+        // Merge sourceIds
+        for (const [key, val] of Object.entries(other.sourceIds)) {
+          if (val != null && !(primary.sourceIds as Record<string, unknown>)[key]) {
+            (primary.sourceIds as Record<string, unknown>)[key] = val;
+          }
+        }
+
+        // Merge sources array
+        for (const src of other.sources) {
+          if (!primary.sources.includes(src)) {
+            primary.sources.push(src);
+          }
+        }
+
+        // Merge numeric fields
+        if (!primary.googleRatingCount && other.googleRatingCount) {
+          primary.googleRatingCount = other.googleRatingCount;
+        }
+        if (!primary.thatsupRatingCount && other.thatsupRatingCount) {
+          primary.thatsupRatingCount = other.thatsupRatingCount;
+        }
+
+        // Fill missing basic fields from other
+        if (!primary.phone && other.phone) primary.phone = other.phone;
+        if (!primary.website && other.website) primary.website = other.website;
+        if (!primary.cuisine && other.cuisine) primary.cuisine = other.cuisine;
+        if (!primary.priceRange && other.priceRange) primary.priceRange = other.priceRange;
+        if (primary.hours.length === 0 && other.hours.length > 0) primary.hours = other.hours;
+        if (!primary.lat && other.lat) { primary.lat = other.lat; primary.lng = other.lng; }
+
+        toRemove.add(other.id);
+        deduped++;
+      }
+    }
+
+    if (deduped > 0) {
+      const before = restaurants.length;
+      restaurants = restaurants.filter((r) => !toRemove.has(r.id));
+      console.log(`\n  Dedup by Google Place ID: merged ${deduped} duplicates (${before} → ${restaurants.length})`);
+    }
+  }
+
   // Calculate Bakom Score for all restaurants
   for (const r of restaurants) {
     r.bakomScore = calculateBakomScore({
       ratings: r.ratings,
       googleRatingCount: r.googleRatingCount,
+      thatsupRatingCount: r.thatsupRatingCount,
     });
   }
 
@@ -641,15 +863,21 @@ export async function merge(): Promise<Restaurant[]> {
 
   const withSvd = restaurants.filter((r) => r.ratings.svd).length;
   const withDn = restaurants.filter((r) => r.ratings.dn).length;
+  const withThatsup = restaurants.filter((r) => r.ratings.thatsup).length;
 
   console.log(`\nMerge complete: ${restaurants.length} restaurants`);
   console.log(`  Michelin matches: ${michelinMatches} (${fuzzyMatches} fuzzy)`);
   console.log(`  White Guide matches: ${wgMatches}`);
   console.log(`  SvD matches: ${svdMatches}`);
   console.log(`  DN matches: ${dnMatches}`);
+  console.log(`  Thatsup matches: ${thatsupMatches}`);
+  console.log(`  Thatsup-only: ${thatsupNew}`);
   console.log(`  Michelin-only: ${michelin ? michelin.length - michelinMatches : 0}`);
   console.log(`  White Guide-only: ${whiteguide ? whiteguide.length - wgMatches : 0}`);
   console.log(`  Preserved enrichment: ${preserved}`);
+  if (skippedNoData > 0) {
+    console.log(`  Skipped (no address): ${skippedNoData}`);
+  }
   if (manualStats.added || manualStats.merged || manualStats.overridden) {
     console.log(`  Manual: ${manualStats.added} added, ${manualStats.merged} merged, ${manualStats.overridden} overridden`);
   }
@@ -659,6 +887,7 @@ export async function merge(): Promise<Restaurant[]> {
   console.log(`  With White Guide classification: ${withWg}`);
   console.log(`  With SvD rating: ${withSvd}`);
   console.log(`  With DN review: ${withDn}`);
+  console.log(`  With Thatsup rating: ${withThatsup}`);
 
   const withScore = restaurants.filter((r) => r.bakomScore != null);
   if (withScore.length > 0) {
@@ -671,7 +900,79 @@ export async function merge(): Promise<Restaurant[]> {
   const metrics = calculateQualityMetrics(restaurants);
   printQualityReport(metrics, "Merged Restaurants");
 
+  // Generate stripped frontend JSON (no pipeline-only fields, no empty values)
+  generateFrontendJson(restaurants);
+
   return restaurants;
+}
+
+/**
+ * Generate a stripped restaurants.frontend.json for the web app.
+ * Removes pipeline-only fields (slug, image, sourceIds, sources, googlePlaceId)
+ * and strips null/empty values to minimize bundle size.
+ */
+function generateFrontendJson(restaurants: PipelineRestaurant[]): void {
+  const stripped = restaurants.map((r) => {
+    const out: Record<string, unknown> = {};
+
+    // Required fields (always present)
+    out.id = r.id;
+    out.name = r.name;
+    out.lat = r.lat;
+    out.lng = r.lng;
+
+    // Optional string fields — omit if empty
+    if (r.address) out.address = r.address;
+    if (r.postalCode) out.postalCode = r.postalCode;
+    if (r.city) out.city = r.city;
+    if (r.region) out.region = r.region;
+    if (r.phone) out.phone = r.phone;
+    if (r.website) out.website = r.website;
+    if (r.priceRange) out.priceRange = r.priceRange;
+    if (r.cuisine) out.cuisine = r.cuisine;
+
+    // Hours — omit if empty array
+    if (r.hours && r.hours.length > 0) out.hours = r.hours;
+
+    // Ratings — only include non-null values
+    const ratings: Record<string, unknown> = {};
+    if (r.ratings) {
+      for (const [k, v] of Object.entries(r.ratings)) {
+        if (v != null) ratings[k] = v;
+      }
+    }
+    out.ratings = ratings;
+
+    // Links — only include non-empty values
+    const links: Record<string, unknown> = {};
+    if (r.links) {
+      for (const [k, v] of Object.entries(r.links)) {
+        if (v) links[k] = v;
+      }
+    }
+    out.links = links;
+
+    // Numeric optional fields
+    if (r.googleRatingCount) out.googleRatingCount = r.googleRatingCount;
+    if (r.thatsupRatingCount) out.thatsupRatingCount = r.thatsupRatingCount;
+    if (r.bakomScore != null) out.bakomScore = r.bakomScore;
+
+    // Only include businessStatus if not operational (saves space)
+    if (r.businessStatus && r.businessStatus !== "OPERATIONAL") {
+      out.businessStatus = r.businessStatus;
+    }
+
+    return out;
+  });
+
+  saveJson("restaurants.frontend.json", stripped);
+
+  const fullSize = JSON.stringify(restaurants).length;
+  const strippedSize = JSON.stringify(stripped).length;
+  console.log(
+    `\nFrontend JSON: ${(strippedSize / 1024).toFixed(0)}KB ` +
+    `(${((1 - strippedSize / fullSize) * 100).toFixed(0)}% smaller than full ${(fullSize / 1024).toFixed(0)}KB)`
+  );
 }
 
 // ─── CLI entry point ─────────────────────────────────────────────

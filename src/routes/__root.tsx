@@ -5,6 +5,8 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import "../index.css";
 
 export const Route = createRootRoute({
@@ -49,6 +51,8 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
       <body className="m-0 font-sans antialiased">
         {children}
         <Scripts />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -257,40 +257,128 @@ function SourceRow({
   );
 }
 
-/** Tab: Betyg — source ratings with links */
+/** SvD score as pips (1–6 scale) */
+function SvdPips({ score }: { score: number }) {
+  return (
+    <span className="inline-flex gap-0.5">
+      {Array.from({ length: 6 }, (_, i) => (
+        <span
+          key={i}
+          className={`inline-block w-1.5 h-1.5 rounded-full ${
+            i < score ? "bg-slate-700" : "bg-slate-200"
+          }`}
+        />
+      ))}
+    </span>
+  );
+}
+
+/** Tab: Omdöme — source ratings with links, "Besökt" fallback */
 function SourceRatingsTab({ restaurant: r }: { restaurant: Restaurant }) {
   const { ratings } = r;
+
+  // Check if we have any rating OR any source link
   const hasAny =
     (ratings.krogguiden != null && ratings.krogguiden > 0) ||
     (ratings.google != null && ratings.google > 0) ||
+    (ratings.thatsup != null && ratings.thatsup > 0) ||
     ratings.michelin ||
-    ratings.whiteguide;
+    ratings.whiteguide ||
+    (ratings.svd != null && ratings.svd > 0) ||
+    ratings.dn ||
+    r.links.krogguiden ||
+    r.links.google ||
+    r.links.thatsup ||
+    r.links.michelin ||
+    r.links.whiteguide ||
+    r.links.svd ||
+    r.links.dn;
 
   if (!hasAny) {
-    return <p className="!text-xs !text-slate-400 !mt-1 !mb-0">Inga betyg</p>;
+    return <p className="!text-xs !text-slate-400 !mt-1 !mb-0">Inga omdömen</p>;
   }
+
+  const visited = <span className="text-slate-400 italic">Besökt</span>;
 
   return (
     <div className="space-y-1 mt-1">
-      {ratings.michelin && (
+      {/* Michelin */}
+      {ratings.michelin ? (
         <SourceRow label="Michelin" href={r.links.michelin} color="text-red-600">
           {MICHELIN_LABELS[ratings.michelin]}
         </SourceRow>
-      )}
-      {ratings.whiteguide && (
+      ) : r.links.michelin ? (
+        <SourceRow label="Michelin" href={r.links.michelin} color="text-red-600">
+          {visited}
+        </SourceRow>
+      ) : null}
+
+      {/* White Guide */}
+      {ratings.whiteguide ? (
         <SourceRow label="White Guide" href={r.links.whiteguide} color="text-emerald-700">
           {WHITEGUIDE_LABELS[ratings.whiteguide]}
         </SourceRow>
-      )}
-      {ratings.krogguiden != null && ratings.krogguiden > 0 && (
+      ) : r.links.whiteguide ? (
+        <SourceRow label="White Guide" href={r.links.whiteguide} color="text-emerald-700">
+          {visited}
+        </SourceRow>
+      ) : null}
+
+      {/* SvD */}
+      {ratings.svd != null && ratings.svd > 0 ? (
+        <SourceRow label="SvD" href={r.links.svd} color="text-sky-700">
+          <span className="inline-flex items-center gap-1.5">
+            <SvdPips score={ratings.svd} />
+            {ratings.svd}/6
+          </span>
+        </SourceRow>
+      ) : r.links.svd ? (
+        <SourceRow label="SvD" href={r.links.svd} color="text-sky-700">
+          {visited}
+        </SourceRow>
+      ) : null}
+
+      {/* DN */}
+      {ratings.dn ? (
+        <SourceRow label="DN" href={r.links.dn} color="text-orange-700">
+          Recenserad
+        </SourceRow>
+      ) : r.links.dn ? (
+        <SourceRow label="DN" href={r.links.dn} color="text-orange-700">
+          {visited}
+        </SourceRow>
+      ) : null}
+
+      {/* Krogguiden */}
+      {ratings.krogguiden != null && ratings.krogguiden > 0 ? (
         <SourceRow label="Krogguiden" href={r.links.krogguiden} color="text-blue-600">
           <span className="inline-flex items-center gap-1">
             <StarDisplay rating={ratings.krogguiden} />
             {ratings.krogguiden.toFixed(1)}
           </span>
         </SourceRow>
-      )}
-      {ratings.google != null && ratings.google > 0 && (
+      ) : r.links.krogguiden ? (
+        <SourceRow label="Krogguiden" href={r.links.krogguiden} color="text-blue-600">
+          {visited}
+        </SourceRow>
+      ) : null}
+
+      {/* Thatsup */}
+      {ratings.thatsup != null && ratings.thatsup > 0 ? (
+        <SourceRow label="Thatsup" href={r.links.thatsup} color="text-pink-600">
+          <span className="inline-flex items-center gap-1">
+            <StarDisplay rating={ratings.thatsup} />
+            {ratings.thatsup.toFixed(1)}
+          </span>
+        </SourceRow>
+      ) : r.links.thatsup ? (
+        <SourceRow label="Thatsup" href={r.links.thatsup} color="text-pink-600">
+          {visited}
+        </SourceRow>
+      ) : null}
+
+      {/* Google */}
+      {ratings.google != null && ratings.google > 0 ? (
         <SourceRow label="Google" href={r.links.google} color="text-blue-600">
           <span className="inline-flex items-center gap-1">
             <StarDisplay rating={ratings.google} />
@@ -300,7 +388,11 @@ function SourceRatingsTab({ restaurant: r }: { restaurant: Restaurant }) {
               ` (${r.googleRatingCount})`}
           </span>
         </SourceRow>
-      )}
+      ) : r.links.google ? (
+        <SourceRow label="Google" href={r.links.google} color="text-blue-600">
+          {visited}
+        </SourceRow>
+      ) : null}
     </div>
   );
 }
@@ -369,7 +461,7 @@ function InfoTab({ restaurant: r }: { restaurant: Restaurant }) {
 
 /** Complete popup content with tabs */
 function PopupContent({ restaurant: r }: { restaurant: Restaurant }) {
-  const [tab, setTab] = useState<"betyg" | "info">("betyg");
+  const [tab, setTab] = useState<"omdome" | "info">("omdome");
 
   return (
     <div className="min-w-[220px] max-w-[280px] font-sans">
@@ -387,14 +479,14 @@ function PopupContent({ restaurant: r }: { restaurant: Restaurant }) {
       <div className="flex gap-4 mt-1.5 border-b border-slate-200">
         <button
           type="button"
-          onClick={() => setTab("betyg")}
+          onClick={() => setTab("omdome")}
           className={`pb-1 text-xs font-medium transition-colors border-b-2 -mb-px ${
-            tab === "betyg"
+            tab === "omdome"
               ? "border-slate-800 text-slate-800"
               : "border-transparent text-slate-400 hover:text-slate-600"
           }`}
         >
-          Betyg
+          Omdöme
         </button>
         <button
           type="button"
@@ -410,7 +502,7 @@ function PopupContent({ restaurant: r }: { restaurant: Restaurant }) {
       </div>
 
       {/* Tab content */}
-      {tab === "betyg" ? (
+      {tab === "omdome" ? (
         <SourceRatingsTab restaurant={r} />
       ) : (
         <InfoTab restaurant={r} />

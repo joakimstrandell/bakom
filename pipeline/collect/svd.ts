@@ -53,6 +53,22 @@ async function fetchArticleUrls(): Promise<string[]> {
 }
 
 /**
+ * Clean up messy SvD addresses.
+ * Raw data often contains prefixes ("Adress:"), embedded phone numbers
+ * ("tel: 08-..."), and trailing punctuation.
+ */
+function cleanSvdAddress(raw: string): string {
+  let addr = raw.trim();
+  // Strip leading "Adress:" / "Address:" prefix
+  addr = addr.replace(/^Adress:\s*/i, "");
+  // Strip embedded phone numbers: ", tel: 08-32 34 40" or "tel: 08-665 62 09."
+  addr = addr.replace(/,?\s*tel:?\s*[\d\s()+-]+\.?$/i, "");
+  // Strip trailing dots and whitespace
+  addr = addr.replace(/\.\s*$/, "").trim();
+  return addr;
+}
+
+/**
  * Parse JSON-LD from article page to extract restaurant data
  */
 function parseJsonLd(html: string): Partial<SvdRaw> | null {
@@ -83,7 +99,7 @@ function parseJsonLd(html: string): Partial<SvdRaw> | null {
 
   return {
     name: restaurant.name || "",
-    address: restaurant.address || "",
+    address: cleanSvdAddress(restaurant.address || ""),
     cuisine: restaurant.servesCuisine || "",
     rating: rating?.ratingValue ?? null,
     publishedAt: reviewData.datePublished || "",

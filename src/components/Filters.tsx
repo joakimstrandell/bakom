@@ -11,6 +11,8 @@ import {
   Star,
   Award,
   TrendingUp,
+  Newspaper,
+  ThumbsUp,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -31,78 +33,159 @@ const CUISINES = [
   { key: "Mexikanskt", label: "Mexikanskt" },
 ] as const;
 
-const PRICES = ["$", "$$", "$$$", "$$$$", "$$$$$"] as const;
+const PRICES = ["$", "$$", "$$$", "$$$$"] as const;
 
-const RATINGS = [
-  { value: 0, label: "Alla" },
-  { value: 3, label: "3+" },
-  { value: 3.5, label: "3.5+" },
-  { value: 4, label: "4+" },
-] as const;
+// ─── Per-source filter options ───────────────────────────────────
 
-const BAKOM_SCORES = [
+type FilterOption = { value: number; label: string };
+
+const BAKOM_FILTERS: FilterOption[] = [
   { value: 0, label: "Alla" },
   { value: 5, label: "5+" },
   { value: 6, label: "6+" },
   { value: 7, label: "7+" },
   { value: 8, label: "8+" },
+];
+
+const KROGGUIDEN_FILTERS: FilterOption[] = [
+  { value: 0, label: "Alla" },
+  { value: 3, label: "3+" },
+  { value: 3.5, label: "3.5+" },
+  { value: 4, label: "4+" },
+];
+
+const GOOGLE_FILTERS: FilterOption[] = [
+  { value: 0, label: "Alla" },
+  { value: 3, label: "3+" },
+  { value: 3.5, label: "3.5+" },
+  { value: 4, label: "4+" },
+];
+
+const SVD_FILTERS: FilterOption[] = [
+  { value: 0, label: "Alla" },
+  { value: 3, label: "3+" },
+  { value: 4, label: "4+" },
+  { value: 5, label: "5+" },
+];
+
+const MICHELIN_FILTERS: FilterOption[] = [
+  { value: 0, label: "Alla" },
+  { value: 1, label: "Selected+" },
+  { value: 2, label: "Bib Gourmand+" },
+  { value: 3, label: "★+" },
+];
+
+const WG_FILTERS: FilterOption[] = [
+  { value: 0, label: "Alla" },
+  { value: 1, label: "Rekommenderad+" },
+  { value: 2, label: "God Klass+" },
+  { value: 3, label: "MGK+" },
+];
+
+const THATSUP_FILTERS: FilterOption[] = [
+  { value: 0, label: "Alla" },
+  { value: 3, label: "3+" },
+  { value: 3.5, label: "3.5+" },
+  { value: 4, label: "4+" },
+];
+
+const DN_FILTERS: FilterOption[] = [
+  { value: 0, label: "Alla" },
+  { value: 1, label: "Recenserad" },
+];
+
+// Source filter configuration for rendering
+const SOURCE_FILTERS = [
+  { key: "bakom", label: "Bakom", icon: TrendingUp, options: BAKOM_FILTERS },
+  { key: "krogguiden", label: "Krogguiden", icon: Star, options: KROGGUIDEN_FILTERS },
+  { key: "google", label: "Google", icon: Star, options: GOOGLE_FILTERS },
+  { key: "thatsup", label: "Thatsup", icon: ThumbsUp, options: THATSUP_FILTERS },
+  { key: "svd", label: "SvD", icon: Newspaper, options: SVD_FILTERS },
+  { key: "michelin", label: "Michelin", icon: Award, options: MICHELIN_FILTERS },
+  { key: "whiteguide", label: "White Guide", icon: Award, options: WG_FILTERS },
+  { key: "dn", label: "DN", icon: Newspaper, options: DN_FILTERS },
 ] as const;
+
+// ─── Props ───────────────────────────────────────────────────────
 
 type FiltersProps = {
   cuisines: Set<string>;
   prices: Set<string>;
   searchQuery: string;
-  minRating: number;
   minBakomScore: number;
-  michelinOnly: boolean;
-  whiteGuideOnly: boolean;
+  minKrogguiden: number;
+  minGoogle: number;
+  minThatsup: number;
+  minSvd: number;
+  minMichelin: number;
+  minWhiteGuide: number;
+  minDn: number;
   onToggleCuisine: (c: string) => void;
   onTogglePrice: (p: string) => void;
   onSearchChange: (q: string) => void;
-  onRatingChange: (r: number) => void;
-  onBakomScoreChange: (s: number) => void;
-  onMichelinToggle: () => void;
-  onWhiteGuideToggle: () => void;
+  onSourceFilterChange: (source: string, value: number) => void;
   onClear: () => void;
   total: number;
   filtered: number;
 };
 
-export default function Filters({
-  cuisines,
-  prices,
-  searchQuery,
-  minRating,
-  minBakomScore,
-  michelinOnly,
-  whiteGuideOnly,
-  onToggleCuisine,
-  onTogglePrice,
-  onSearchChange,
-  onRatingChange,
-  onBakomScoreChange,
-  onMichelinToggle,
-  onWhiteGuideToggle,
-  onClear,
-  total,
-  filtered,
-}: FiltersProps) {
+/** Get the current threshold value for a source key */
+function getSourceValue(key: string, props: FiltersProps): number {
+  switch (key) {
+    case "bakom": return props.minBakomScore;
+    case "krogguiden": return props.minKrogguiden;
+    case "google": return props.minGoogle;
+    case "thatsup": return props.minThatsup;
+    case "svd": return props.minSvd;
+    case "michelin": return props.minMichelin;
+    case "whiteguide": return props.minWhiteGuide;
+    case "dn": return props.minDn;
+    default: return 0;
+  }
+}
+
+/** Get active label for a source filter (for collapsed pills) */
+function getActiveLabel(key: string, value: number): string | null {
+  if (value === 0) return null;
+  const source = SOURCE_FILTERS.find((s) => s.key === key);
+  if (!source) return null;
+  const option = source.options.find((o) => o.value === value);
+  return option ? `${source.label} ${option.label}` : null;
+}
+
+// ─── Component ───────────────────────────────────────────────────
+
+export default function Filters(props: FiltersProps) {
+  const {
+    cuisines,
+    prices,
+    searchQuery,
+    onToggleCuisine,
+    onTogglePrice,
+    onSearchChange,
+    onSourceFilterChange,
+    onClear,
+    total,
+    filtered,
+  } = props;
+
   const [expanded, setExpanded] = useState(false);
+
+  // Collect all active source filters
+  const activeSourceFilters = SOURCE_FILTERS
+    .map((s) => ({ key: s.key, value: getSourceValue(s.key, props) }))
+    .filter((s) => s.value > 0);
+
   const hasFilters =
     cuisines.size > 0 ||
     prices.size > 0 ||
     searchQuery.length > 0 ||
-    minRating > 0 ||
-    minBakomScore > 0 ||
-    michelinOnly ||
-    whiteGuideOnly;
+    activeSourceFilters.length > 0;
+
   const activeFilterCount =
     cuisines.size +
     prices.size +
-    (minRating > 0 ? 1 : 0) +
-    (minBakomScore > 0 ? 1 : 0) +
-    (michelinOnly ? 1 : 0) +
-    (whiteGuideOnly ? 1 : 0);
+    activeSourceFilters.length;
 
   return (
     <div className="border-b bg-card">
@@ -136,50 +219,21 @@ export default function Filters({
                 {searchQuery}
               </Badge>
             )}
-            {minBakomScore > 0 && (
-              <Badge
-                variant="secondary"
-                className="shrink-0 cursor-pointer gap-1"
-                onClick={() => onBakomScoreChange(0)}
-              >
-                <TrendingUp className="size-3 text-emerald-600" />
-                Bakom {minBakomScore}+
-                <X className="size-3" />
-              </Badge>
-            )}
-            {minRating > 0 && (
-              <Badge
-                variant="secondary"
-                className="shrink-0 cursor-pointer gap-1"
-                onClick={() => onRatingChange(0)}
-              >
-                <Star className="size-3 fill-amber-400 text-amber-400" />
-                {minRating}+
-                <X className="size-3" />
-              </Badge>
-            )}
-            {michelinOnly && (
-              <Badge
-                variant="secondary"
-                className="shrink-0 cursor-pointer gap-1"
-                onClick={onMichelinToggle}
-              >
-                <Award className="size-3 text-red-600" />
-                Michelin
-                <X className="size-3" />
-              </Badge>
-            )}
-            {whiteGuideOnly && (
-              <Badge
-                variant="secondary"
-                className="shrink-0 cursor-pointer gap-1"
-                onClick={onWhiteGuideToggle}
-              >
-                <Award className="size-3 text-emerald-700" />
-                White Guide
-                <X className="size-3" />
-              </Badge>
-            )}
+            {activeSourceFilters.map(({ key, value }) => {
+              const label = getActiveLabel(key, value);
+              if (!label) return null;
+              return (
+                <Badge
+                  key={key}
+                  variant="secondary"
+                  className="shrink-0 cursor-pointer gap-1"
+                  onClick={() => onSourceFilterChange(key, 0)}
+                >
+                  {label}
+                  <X className="size-3" />
+                </Badge>
+              );
+            })}
             {[...cuisines].map((c) => (
               <Badge
                 key={c}
@@ -272,75 +326,42 @@ export default function Filters({
             ))}
           </div>
 
-          {/* Bakom Score filter */}
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide shrink-0">
-              <TrendingUp className="size-3.5" />
-              Bakom
-            </span>
-            {BAKOM_SCORES.map(({ value, label }) => (
-              <Badge
-                key={value}
-                variant={minBakomScore === value ? "default" : "outline"}
-                className="cursor-pointer select-none transition-colors hover:bg-primary/10"
-                onClick={() => onBakomScoreChange(value)}
-              >
-                {label}
-              </Badge>
-            ))}
-          </div>
+          {/* Per-source rating filters */}
+          {SOURCE_FILTERS.map(({ key, label, icon: Icon, options }) => {
+            const currentValue = getSourceValue(key, props);
+            return (
+              <div key={key} className="flex items-center gap-2 flex-wrap">
+                <span className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide shrink-0">
+                  <Icon className="size-3.5" />
+                  {label}
+                </span>
+                {options.map(({ value, label: optLabel }) => (
+                  <Badge
+                    key={value}
+                    variant={currentValue === value ? "default" : "outline"}
+                    className="cursor-pointer select-none transition-colors hover:bg-primary/10"
+                    onClick={() => onSourceFilterChange(key, value)}
+                  >
+                    {optLabel}
+                  </Badge>
+                ))}
+              </div>
+            );
+          })}
 
-          {/* Rating filter */}
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide shrink-0">
-              <Star className="size-3.5" />
-              Betyg
-            </span>
-            {RATINGS.map(({ value, label }) => (
-              <Badge
-                key={value}
-                variant={minRating === value ? "default" : "outline"}
-                className="cursor-pointer select-none transition-colors hover:bg-primary/10"
-                onClick={() => onRatingChange(value)}
-              >
-                {label}
-              </Badge>
-            ))}
-          </div>
-
-          {/* Guides filter */}
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide shrink-0">
-              <Award className="size-3.5" />
-              Guider
-            </span>
-            <Badge
-              variant={michelinOnly ? "default" : "outline"}
-              className="cursor-pointer select-none transition-colors hover:bg-primary/10"
-              onClick={onMichelinToggle}
-            >
-              Michelin
-            </Badge>
-            <Badge
-              variant={whiteGuideOnly ? "default" : "outline"}
-              className="cursor-pointer select-none transition-colors hover:bg-primary/10"
-              onClick={onWhiteGuideToggle}
-            >
-              White Guide
-            </Badge>
-
-            {hasFilters && (
+          {hasFilters && (
+            <div>
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={onClear}
-                className="ml-2 h-6 px-2 text-xs text-destructive hover:text-destructive"
+                className="h-6 px-2 text-xs text-destructive hover:text-destructive"
               >
                 <X className="size-3 mr-1" />
                 Rensa
               </Button>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       )}
     </div>

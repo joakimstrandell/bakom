@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { lazy, Suspense, useState, useMemo, useCallback } from "react";
-import allRestaurants from "../../data/restaurants.json";
+import allRestaurants from "../../data/restaurants.frontend.json";
 import Filters from "../components/Filters";
-import type { Restaurant } from "../types";
+import type { Restaurant, MichelinDistinction, WhiteGuideClassification } from "../types";
 import { Button } from "@/components/ui/button";
 import { MapPin, Navigation, Loader2 } from "lucide-react";
 
@@ -11,6 +11,23 @@ const Map = lazy(() => import("../components/Map"));
 const validRestaurants = (allRestaurants as Restaurant[]).filter(
   (r) => r.lat && r.lng
 );
+
+// Hierarchical rank for categorical sources (higher = better)
+const MICHELIN_RANK: Record<MichelinDistinction, number> = {
+  selected: 1,
+  bib_gourmand: 2,
+  "1_star": 3,
+  "2_star": 4,
+  "3_star": 5,
+};
+
+const WG_RANK: Record<WhiteGuideClassification, number> = {
+  recommended: 1,
+  good_class: 2,
+  very_good_class: 3,
+  master_class: 4,
+  global_master_class: 5,
+};
 
 export const Route = createFileRoute("/")(
   {
@@ -24,10 +41,17 @@ function HomePage() {
   );
   const [selectedPrices, setSelectedPrices] = useState<Set<string>>(new Set());
   const [searchQuery, setSearchQuery] = useState("");
-  const [minRating, setMinRating] = useState(0);
+
+  // Per-source rating thresholds (0 = no filter)
   const [minBakomScore, setMinBakomScore] = useState(0);
-  const [michelinOnly, setMichelinOnly] = useState(false);
-  const [whiteGuideOnly, setWhiteGuideOnly] = useState(false);
+  const [minKrogguiden, setMinKrogguiden] = useState(0);
+  const [minGoogle, setMinGoogle] = useState(0);
+  const [minThatsup, setMinThatsup] = useState(0);
+  const [minSvd, setMinSvd] = useState(0);
+  const [minMichelin, setMinMichelin] = useState(0);
+  const [minWhiteGuide, setMinWhiteGuide] = useState(0);
+  const [minDn, setMinDn] = useState(0);
+
   const [userLocation, setUserLocation] = useState<{
     lat: number;
     lng: number;
@@ -53,30 +77,32 @@ function HomePage() {
     });
   }, []);
 
-  const handleRatingChange = useCallback((r: number) => {
-    setMinRating(r);
-  }, []);
-
-  const handleBakomScoreChange = useCallback((s: number) => {
-    setMinBakomScore(s);
-  }, []);
-
-  const handleMichelinToggle = useCallback(() => {
-    setMichelinOnly((prev) => !prev);
-  }, []);
-
-  const handleWhiteGuideToggle = useCallback(() => {
-    setWhiteGuideOnly((prev) => !prev);
+  // Generic callback for all source filters
+  const handleSourceFilterChange = useCallback((source: string, value: number) => {
+    switch (source) {
+      case "bakom": setMinBakomScore(value); break;
+      case "krogguiden": setMinKrogguiden(value); break;
+      case "google": setMinGoogle(value); break;
+      case "thatsup": setMinThatsup(value); break;
+      case "svd": setMinSvd(value); break;
+      case "michelin": setMinMichelin(value); break;
+      case "whiteguide": setMinWhiteGuide(value); break;
+      case "dn": setMinDn(value); break;
+    }
   }, []);
 
   const clearFilters = useCallback(() => {
     setSelectedCuisines(new Set());
     setSelectedPrices(new Set());
     setSearchQuery("");
-    setMinRating(0);
     setMinBakomScore(0);
-    setMichelinOnly(false);
-    setWhiteGuideOnly(false);
+    setMinKrogguiden(0);
+    setMinGoogle(0);
+    setMinThatsup(0);
+    setMinSvd(0);
+    setMinMichelin(0);
+    setMinWhiteGuide(0);
+    setMinDn(0);
   }, []);
 
   const locateUser = useCallback(() => {
@@ -132,23 +158,34 @@ function HomePage() {
       if (selectedPrices.size > 0) {
         if (!selectedPrices.has(r.priceRange)) return false;
       }
-      if (minRating > 0) {
-        // Use best available numeric rating (Google preferred, then Krogguiden)
-        const bestRating = r.ratings.google ?? r.ratings.krogguiden ?? null;
-        if (!bestRating || bestRating < minRating) return false;
-      }
+      // Per-source rating filters
       if (minBakomScore > 0) {
         if (r.bakomScore == null || r.bakomScore < minBakomScore) return false;
       }
-      if (michelinOnly) {
-        if (!r.ratings.michelin) return false;
+      if (minKrogguiden > 0) {
+        if (!r.ratings.krogguiden || r.ratings.krogguiden < minKrogguiden) return false;
       }
-      if (whiteGuideOnly) {
-        if (!r.ratings.whiteguide) return false;
+      if (minGoogle > 0) {
+        if (!r.ratings.google || r.ratings.google < minGoogle) return false;
+      }
+      if (minThatsup > 0) {
+        if (!r.ratings.thatsup || r.ratings.thatsup < minThatsup) return false;
+      }
+      if (minSvd > 0) {
+        if (!r.ratings.svd || r.ratings.svd < minSvd) return false;
+      }
+      if (minMichelin > 0) {
+        if (!r.ratings.michelin || MICHELIN_RANK[r.ratings.michelin] < minMichelin) return false;
+      }
+      if (minWhiteGuide > 0) {
+        if (!r.ratings.whiteguide || WG_RANK[r.ratings.whiteguide] < minWhiteGuide) return false;
+      }
+      if (minDn > 0) {
+        if (!r.ratings.dn) return false;
       }
       return true;
     });
-  }, [selectedCuisines, selectedPrices, searchQuery, minRating, minBakomScore, michelinOnly, whiteGuideOnly]);
+  }, [selectedCuisines, selectedPrices, searchQuery, minBakomScore, minKrogguiden, minGoogle, minThatsup, minSvd, minMichelin, minWhiteGuide, minDn]);
 
   return (
     <div className="h-screen flex flex-col">
@@ -184,17 +221,18 @@ function HomePage() {
         cuisines={selectedCuisines}
         prices={selectedPrices}
         searchQuery={searchQuery}
-        minRating={minRating}
         minBakomScore={minBakomScore}
-        michelinOnly={michelinOnly}
-        whiteGuideOnly={whiteGuideOnly}
+        minKrogguiden={minKrogguiden}
+        minGoogle={minGoogle}
+        minThatsup={minThatsup}
+        minSvd={minSvd}
+        minMichelin={minMichelin}
+        minWhiteGuide={minWhiteGuide}
+        minDn={minDn}
         onToggleCuisine={toggleCuisine}
         onTogglePrice={togglePrice}
         onSearchChange={setSearchQuery}
-        onRatingChange={handleRatingChange}
-        onBakomScoreChange={handleBakomScoreChange}
-        onMichelinToggle={handleMichelinToggle}
-        onWhiteGuideToggle={handleWhiteGuideToggle}
+        onSourceFilterChange={handleSourceFilterChange}
         onClear={clearFilters}
         total={validRestaurants.length}
         filtered={filtered.length}

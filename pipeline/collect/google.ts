@@ -15,7 +15,8 @@
 
 import { sleep, loadJson, saveJson } from "../utils/fetch.js";
 import { parseGoogleHours } from "../utils/hours.js";
-import type { Restaurant } from "../../src/types.js";
+import { calculateBakomScore } from "../../src/lib/score.js";
+import type { PipelineRestaurant } from "../types.js";
 
 const API_KEY = process.env.GOOGLE_PLACES_API_KEY;
 
@@ -31,6 +32,7 @@ const FIELD_MASK = [
   "places.priceLevel",
   "places.googleMapsUri",
   "places.location",
+  "places.businessStatus",
 ].join(",");
 
 /**
@@ -49,10 +51,11 @@ async function searchPlace(
   website: string;
   rating: number | null;
   ratingCount: number;
-  hours: Restaurant["hours"];
+  hours: PipelineRestaurant["hours"];
   lat: number;
   lng: number;
   googleMapsUri: string;
+  businessStatus: string;
 } | null> {
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), API_TIMEOUT);
@@ -104,6 +107,7 @@ async function searchPlace(
       lat: place.location?.latitude ?? 0,
       lng: place.location?.longitude ?? 0,
       googleMapsUri: place.googleMapsUri ?? "",
+      businessStatus: place.businessStatus ?? "OPERATIONAL",
     };
   } catch (err) {
     clearTimeout(timeoutId);
@@ -128,7 +132,7 @@ export async function refineWithGoogle(): Promise<void> {
 
   console.log("=== Google Places Refinement ===\n");
 
-  const restaurants = loadJson<Restaurant[]>("restaurants.json");
+  const restaurants = loadJson<PipelineRestaurant[]>("restaurants.json");
   if (!restaurants) {
     throw new Error(
       "data/restaurants.json not found. Run scrape:merge first."
@@ -167,10 +171,9 @@ export async function refineWithGoogle(): Promise<void> {
         if (result.phone) r.phone = result.phone;
         if (result.website) r.website = result.website;
         if (result.hours.length > 0) r.hours = result.hours;
-        if (result.lat && result.lng) {
-          r.lat = result.lat;
-          r.lng = result.lng;
-        }
+        // Always overwrite coords — Google is more accurate than geocode
+        r.lat = result.lat;
+        r.lng = result.lng;
 
         // Always set Google-specific fields
         r.googlePlaceId = result.placeId;
@@ -178,14 +181,25 @@ export async function refineWithGoogle(): Promise<void> {
         r.ratings.google = result.rating;
         r.links.google = result.googleMapsUri;
         r.sourceIds = { ...r.sourceIds, google: result.placeId };
+        r.businessStatus = result.businessStatus;
 
         // Add "google" to sources if not already there
         if (!r.sources.includes("google")) {
           r.sources.push("google");
         }
 
+        // Recalculate Bakom Score with new Google data
+        r.bakomScore = calculateBakomScore({
+          ratings: r.ratings,
+          googleRatingCount: r.googleRatingCount,
+          thatsupRatingCount: r.thatsupRatingCount,
+        });
+
         enriched++;
-        process.stdout.write(` ✓ (${result.rating ?? "no rating"})\n`);
+        const statusTag = result.businessStatus !== "OPERATIONAL"
+          ? ` [${result.businessStatus}]`
+          : "";
+        process.stdout.write(` ✓ (${result.rating ?? "no rating"})${statusTag}\n`);
       } else {
         notFound++;
         process.stdout.write(` not found\n`);
