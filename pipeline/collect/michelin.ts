@@ -14,20 +14,7 @@ import type { MichelinRaw } from "../types.js";
 import type { MichelinDistinction } from "../../src/types.js";
 
 const MICHELIN_BASE = "https://guide.michelin.com";
-
-// All Swedish regions with Michelin restaurants
-const SWEDISH_REGIONS = [
-  "stockholm-region",
-  "goteborg-och-vastra-gotaland",
-  "skane",
-  "uppsala",
-  "orebro",
-  "vasterbotten",
-  "ostergotland",
-  "jamtland",
-  "halland",
-  "blekinge",
-];
+const SWEDEN_URL = `${MICHELIN_BASE}/se/en/selection/sweden/restaurants`;
 
 /**
  * Determine the Michelin distinction from the card's distinction icons.
@@ -59,11 +46,20 @@ function parseDistinction($card: cheerio.Cheerio<any>, $: cheerio.CheerioAPI): M
 }
 
 /**
- * Scrape all Michelin-listed restaurants from a region listing page.
+ * Scrape all Michelin-listed restaurants from a listing page.
+ * Returns null if the page doesn't exist (404).
  */
-async function scrapeListingPage(url: string): Promise<MichelinRaw[]> {
+async function scrapeListingPage(url: string): Promise<MichelinRaw[] | null> {
   console.log(`Fetching ${url}`);
-  const res = await fetchWithRetry(url);
+
+  const res = await fetchWithRetry(url, { allowStatus: [404] });
+
+  // 404 means no more pages
+  if (res.status === 404) {
+    console.log(`  No more pages (404)\n`);
+    return null;
+  }
+
   const html = await res.text();
   const $ = cheerio.load(html);
 
@@ -131,34 +127,39 @@ async function enrichFromDetailPage(
     const html = await res.text();
     const $ = cheerio.load(html);
 
-    // Try to get address from the detail page
-    const addressEl = $(".restaurant-details__heading--address").first();
-    if (addressEl.length) {
-      const detailAddress = addressEl.text().trim();
-      if (detailAddress) {
-        restaurant.address = detailAddress;
-      }
-    }
+    // Extract data from .data-sheet__block--text elements
+    $(".data-sheet__block--text").each((_, el) => {
+      const text = $(el).text().trim();
 
-    // Try to get cuisine from detail page if missing
-    if (!restaurant.cuisine) {
-      const cuisineEl = $(".restaurant-details__heading-price").first();
-      const text = cuisineEl.text().trim();
-      const match = text.match(/·\s*(.+)/);
-      if (match) {
-        restaurant.cuisine = match[1].trim();
+      // Address contains "Sweden" at the end
+      if (text.match(/Sweden\s*$/i)) {
+        restaurant.address = text;
+        // Extract city from address (format: "Street, City, Postal, Sweden")
+        const parts = text.split(",").map((p) => p.trim());
+        if (parts.length >= 3) {
+          restaurant.city = parts[1]; // City is typically second part
+        }
       }
-    }
 
-    // Try to parse price from detail page if missing
-    if (!restaurant.priceRange) {
-      const priceEl = $(".restaurant-details__heading-price").first();
-      const text = priceEl.text().trim();
-      const priceMatch = text.match(/^[€$]+/);
+      // Price and cuisine format: "€€ · Contemporary, International"
+      // Use a more flexible regex to handle different separators
+      const priceMatch = text.match(/^([€$]+)\s*[·•\-]\s*(.+)$/);
       if (priceMatch) {
-        restaurant.priceRange = priceMatch[0];
+        restaurant.priceRange = priceMatch[1];
+        restaurant.cuisine = priceMatch[2].trim();
       }
-    }
+    });
+
+    // Also check the header area for price/cuisine (shown under restaurant name)
+    // Format: "€€ · Contemporary, International"
+    $(".restaurant-details__heading-price, .data-sheet__heading").each((_, el) => {
+      const text = $(el).text().trim();
+      const match = text.match(/^([€$]+)\s*[·•\-]\s*(.+)$/);
+      if (match && !restaurant.priceRange) {
+        restaurant.priceRange = match[1];
+        restaurant.cuisine = match[2].trim();
+      }
+    });
   } catch (err) {
     console.log(`  Failed to enrich ${restaurant.name}: ${err}`);
   }
@@ -182,27 +183,36 @@ export async function scrapeMichelin(
     }
   }
 
-  // Scrape all Swedish regions
+  // Scrape all Swedish restaurants (with pagination)
   const restaurants: MichelinRaw[] = [];
   const seenUrls = new Set<string>();
+  let page = 1;
+  let hasMore = true;
 
-  for (const region of SWEDISH_REGIONS) {
-    const url = `${MICHELIN_BASE}/se/en/${region}/restaurants`;
-    const regionRestaurants = await scrapeListingPage(url);
+  while (hasMore) {
+    const url = page === 1 ? SWEDEN_URL : `${SWEDEN_URL}/page/${page}`;
+    const pageRestaurants = await scrapeListingPage(url);
 
-    // Deduplicate (some restaurants may appear in multiple regions)
-    for (const r of regionRestaurants) {
+    // null means 404 (no more pages)
+    if (pageRestaurants === null || pageRestaurants.length === 0) {
+      hasMore = false;
+      break;
+    }
+
+    // Deduplicate
+    for (const r of pageRestaurants) {
       if (!seenUrls.has(r.url)) {
         seenUrls.add(r.url);
         restaurants.push(r);
       }
     }
 
-    console.log(`  ${region}: ${regionRestaurants.length} restaurants (${restaurants.length} total unique)\n`);
+    console.log(`  Page ${page}: ${pageRestaurants.length} restaurants (${restaurants.length} total)\n`);
+    page++;
     await sleep(1000);
   }
 
-  console.log(`Found ${restaurants.length} Michelin-listed restaurants across Sweden\n`);
+  console.log(`Found ${restaurants.length} Michelin-listed restaurants in Sweden\n`);
 
   // Enrich each restaurant with detail page data
   console.log("Enriching with detail page data...\n");

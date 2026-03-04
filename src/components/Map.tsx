@@ -13,7 +13,7 @@ import "react-leaflet-cluster/dist/assets/MarkerCluster.Default.css";
 import { useEffect, useRef } from "react";
 import type { Restaurant } from "../types";
 import { scoreColor, scoreStrokeColor } from "../lib/colors";
-import type { Region } from "../lib/regions";
+import type { RegionFilter } from "../lib/regions";
 import { getRegionConfig } from "../lib/regions";
 
 // ─── Marker Constants ────────────────────────────────────────────
@@ -133,7 +133,7 @@ function FlyToUser({ location }: { location: UserLocation }) {
 }
 
 /** Flies to region center when region changes */
-function FlyToRegion({ region }: { region: Region }) {
+function FlyToRegion({ region }: { region: RegionFilter }) {
   const map = useMap();
   const isFirstRender = useRef(true);
 
@@ -214,7 +214,7 @@ type MapProps = {
   userLocation: UserLocation;
   selectedRestaurant?: Restaurant | null;
   onSelectRestaurant?: (restaurant: Restaurant) => void;
-  region: Region;
+  region: RegionFilter;
 };
 
 export default function Map({

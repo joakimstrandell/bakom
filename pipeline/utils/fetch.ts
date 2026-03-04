@@ -20,6 +20,8 @@ export const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 export interface FetchOptions extends RequestInit {
   /** Request timeout in milliseconds. Default: 30000 (30s) */
   timeout?: number;
+  /** Status codes that should not throw an error (e.g., [404] for pagination) */
+  allowStatus?: number[];
 }
 
 /**
@@ -54,6 +56,8 @@ export async function fetchWithRetry(
       clearTimeout(timeoutId);
 
       if (res.ok) return res;
+      // Return response for explicitly allowed status codes (e.g., 404 for pagination)
+      if (options?.allowStatus?.includes(res.status)) return res;
       if (res.status === 429) {
         const backoff = (i + 1) * 5000;
         console.log(`  Rate limited, waiting ${backoff / 1000}s...`);

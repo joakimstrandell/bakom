@@ -32,6 +32,67 @@ function sanitizePrice(price: string | undefined | null): string {
   return VALID_PRICES.has(price) ? price : "";
 }
 
+/** White Guide descriptor tags that should NOT be used as cuisine */
+const WG_TAG_PATTERNS = [
+  // Descriptor tags
+  "stark personlighet",
+  "se och synas",
+  "wow",
+  "fab",
+  "excellent",
+  "premium",
+  "star",
+  "premi",
+  // Repeated tags (White Guide pollution)
+  "stort dryckesfokus",
+  "maffig miljö",
+  "kvarterskrog",
+  "naturnära",
+  "nynordiskt",
+  "nyöppnat",
+  "sommarkrog",
+  "säkert kort",
+  "take away",
+  "mat och kultur",
+  "mest på sommaren",
+  "fokus på fisk",
+  "fokus på grönt",
+  "fokus på kött",
+  "äta ensam",
+  "äta och handla",
+  "talk of the town",
+  "udda koncept",
+  "tête à tête",
+  "måndagsöppet",
+  "söndagsöppet",
+  "parkering",
+  "parking",
+  "uteservering",
+  "vegetariska rätter",
+  "öppet för lunch",
+  "nyligen testat",
+  "newly opened",
+];
+
+/** Sanitize cuisine — remove White Guide tag pollution */
+function sanitizeCuisine(cuisine: string | undefined | null): string {
+  if (!cuisine) return "";
+  const lower = cuisine.toLowerCase();
+
+  // If cuisine contains any WG tag pattern, it's polluted
+  if (WG_TAG_PATTERNS.some((tag) => lower.includes(tag))) {
+    return "";
+  }
+
+  // Detect repeated value pattern: "X, X" or "X, X, X" (White Guide tag pollution)
+  const parts = cuisine.split(", ");
+  if (parts.length >= 2 && parts[0] === parts[1]) {
+    return "";
+  }
+
+  return cuisine;
+}
+
 /**
  * Check if a restaurant entry has enough data to be useful.
  * Rejects entries without an address (unless they have Google data
@@ -323,7 +384,7 @@ export async function merge(): Promise<PipelineRestaurant[]> {
       phone: prev?.googlePlaceId ? prev.phone : kg.phone,
       website: prev?.googlePlaceId ? prev.website : kg.website,
       priceRange: sanitizePrice(kg.priceRange),
-      cuisine: kg.cuisine || (m?.cuisine ?? ""),
+      cuisine: sanitizeCuisine(kg.cuisine) || sanitizeCuisine(m?.cuisine),
       image: kg.image,
       hours: prev?.googlePlaceId && prev.hours.length > 0 ? prev.hours : kg.hours,
       lat: prev?.lat ?? w?.lat ?? null,
@@ -410,7 +471,7 @@ export async function merge(): Promise<PipelineRestaurant[]> {
         phone: prev?.phone ?? "",
         website: prev?.website ?? "",
         priceRange: sanitizePrice(mich.priceRange),
-        cuisine: mich.cuisine,
+        cuisine: sanitizeCuisine(mich.cuisine),
         image: "",
         hours: prev?.hours ?? [],
         lat: prev?.lat ?? w?.lat ?? null,
@@ -473,7 +534,7 @@ export async function merge(): Promise<PipelineRestaurant[]> {
         phone: prev?.phone ?? "",
         website: prev?.website ?? "",
         priceRange: "",
-        cuisine: w.tags.slice(0, 3).join(", "),
+        cuisine: sanitizeCuisine(prev?.cuisine),
         image: "",
         hours: prev?.hours ?? [],
         lat: prev?.lat ?? w.lat,
@@ -565,7 +626,7 @@ export async function merge(): Promise<PipelineRestaurant[]> {
           phone: "",
           website: "",
           priceRange: "",
-          cuisine: s.cuisine || "",
+          cuisine: sanitizeCuisine(s.cuisine),
           image: "",
           hours: [],
           lat: prev?.lat ?? null,

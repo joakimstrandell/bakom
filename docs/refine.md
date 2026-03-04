@@ -1,7 +1,7 @@
 # Refine
 
-The refine step enriches the merged restaurant data with external sources
-and calculates Bakom Score.
+The refine step applies collected Google data, geocodes missing coordinates,
+deduplicates, calculates Bakom Score, and validates.
 
 Source file: [`pipeline/process/refine.ts`](../pipeline/process/refine.ts)
 
@@ -14,6 +14,7 @@ Source file: [`pipeline/process/refine.ts`](../pipeline/process/refine.ts)
 | File | Required | Content |
 |------|----------|---------|
 | `data/restaurants.json` | Yes | Merged dataset from merge step |
+| `data/raw/google.json` | No | Google Places data from collect step |
 
 ### Output
 
@@ -25,30 +26,41 @@ Source file: [`pipeline/process/refine.ts`](../pipeline/process/refine.ts)
 
 ## Processing Steps
 
-### 1. Google Places enrichment
+### 1. Apply Google Places data
 
-If `GOOGLE_PLACES_API_KEY` is set, query the Google Places Text Search
-API for every restaurant that doesn't already have a `googlePlaceId`.
+Applies pre-collected Google Places data from `data/raw/google.json` to
+restaurants. Google data is collected separately via:
 
-With `--force`, re-enrich **all** restaurants regardless of existing
-Google data. Use this to update business status, ratings, and contact
-info for previously enriched restaurants.
+```
+npm run pipeline:collect --source google
+```
+
+This separation means:
+- **Collect step** (slow, uses API): Fetches Google data for all restaurants
+- **Refine step** (fast, no API): Applies cached data from `google.json`
 
 For each match, Google provides:
 - Address, phone, website, opening hours (preferred over scraped data)
+- Country suffix stripped from addresses (e.g., ", Sverige" removed)
 - Coordinates (always overwrites — Google is more accurate)
 - Rating and review count
 - Google Maps link
 - Business status (`OPERATIONAL`, `CLOSED_TEMPORARILY`, `CLOSED_PERMANENTLY`)
+- **Cuisine fallback:** If the restaurant has no cuisine from Krogguiden or
+  Michelin, Google's `primaryType` is used (e.g., `"italian_restaurant"` →
+  `"Italian"`, `"japanese_restaurant"` → `"Japanese"`)
 
-Progress is saved every 100 restaurants. If the API key is not set,
-this step is skipped with a warning.
+**Non-Swedish filtering:** Matches to non-Swedish locations (detected by
+address keywords like "København", "Danmark", "Oslo", "Norge") are skipped
+to prevent false matches.
+
+If `google.json` doesn't exist, this step prints a hint to run collection.
 
 Source: [`pipeline/collect/google.ts`](../pipeline/collect/google.ts)
 
 ### 2. Geocode missing coordinates
 
-For restaurants still missing `lat`/`lng` after Google enrichment,
+For restaurants still missing `lat`/`lng` after Google data application,
 geocode the address using OpenStreetMap Nominatim. Rate limited to
 1 request per second.
 
@@ -106,18 +118,17 @@ merge re-runs. They are filtered out in the
 
 ```
 npm run pipeline:refine
-npm run pipeline:refine --force
 ```
-
-The `--force` flag re-enriches all restaurants with Google Places,
-even those already enriched. This updates business status (detects
-closed restaurants) and refreshes ratings and contact info.
-
-Without `--force`, only restaurants without a `googlePlaceId` are
-enriched.
 
 The refine step is also run as part of the full pipeline:
 
 ```
 npm run pipeline
+```
+
+To update Google data, run collection with `--force` to re-fetch all:
+
+```
+npm run pipeline:collect --source google --force
+npm run pipeline:refine
 ```

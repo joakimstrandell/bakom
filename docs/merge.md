@@ -65,6 +65,9 @@ For Michelin restaurants not matched in step 2:
 For White Guide restaurants not matched in steps 2-3:
 - Create new restaurant record
 - Use White Guide coordinates if available
+- **Note:** White Guide tags (descriptors like "stark personlighet", "wow") are
+  NOT used as cuisine — only Name, Address, Classification, and Coordinates
+  are extracted from White Guide
 
 ### 5. Match newspaper reviews
 
@@ -88,7 +91,23 @@ Load `data/manual.json` and apply three types of corrections:
 
 See [Manual Data](#manual-data) below.
 
-### 7. Deduplicate by Google Place ID
+### 7. Sanitize cuisine
+
+Cuisine values are sanitized to remove polluted data:
+
+- **Priority:** Krogguiden cuisine → Michelin cuisine → empty
+- **Filtered out:** White Guide descriptor tags that are not cuisines:
+  - Descriptors: "stark personlighet", "se och synas", "wow", "fab",
+    "excellent", "premium", "star", "premi"
+  - Service tags: "kvarterskrog", "take away", "nyöppnat", "sommarkrog",
+    "stort dryckesfokus", "maffig miljö", "naturnära", "nynordiskt", etc.
+  - Repeated values: patterns like "X, X" or "X, X, X" (tag pollution)
+
+If a cuisine value contains any of these patterns, it is cleared. The
+[refine step](./refine.md) can later fill empty cuisines using Google
+Places `primaryType`.
+
+### 8. Deduplicate by Google Place ID
 
 Group restaurants sharing the same `googlePlaceId` (same physical
 location found by Google in a previous enrichment run). Select a
@@ -96,7 +115,7 @@ primary by: most sources → most ratings → longest name. Merge
 ratings, links, and sourceIds from secondaries into the primary.
 Remove secondaries.
 
-### 8. Validate
+### 9. Validate
 
 Run validation on all records:
 - **Errors**: Missing name (blocks output)

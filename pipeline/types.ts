@@ -37,10 +37,12 @@ export type KrogguidenRaw = {
   url: string;
 };
 
-/** Raw output from the Google Places API scraper */
+/** Raw output from the Google Places API collector */
 export type GoogleRaw = {
   source: "google";
-  /** The original restaurant name used to search (for matching back) */
+  /** The restaurant ID from restaurants.json (for matching back) */
+  restaurantId: string;
+  /** The original restaurant name used to search */
   searchName: string;
   placeId: string;
   name: string;
@@ -49,11 +51,12 @@ export type GoogleRaw = {
   website: string;
   rating: number | null;
   ratingCount: number;
-  priceLevel: string;
+  primaryType: string;
   hours: HoursEntry[];
   lat: number;
   lng: number;
   googleMapsUri: string;
+  businessStatus: string;
 };
 
 /** Raw output from the Michelin Guide scraper */

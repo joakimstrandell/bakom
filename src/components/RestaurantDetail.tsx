@@ -1,9 +1,10 @@
-import { X, MapPin, Phone, Globe, Navigation, Clock, ExternalLink } from "lucide-react";
+import { X, MapPin, Phone, Globe, Navigation, Clock, ExternalLink, Trophy } from "lucide-react";
 import type { Restaurant, MichelinDistinction, WhiteGuideClassification } from "../types";
 import { isOpen } from "../lib/isOpen";
 import { ScoreBadge } from "./ScoreBadge";
 import { StarDisplay, PipDisplay, OpenStatus } from "./Ratings";
 import { Button } from "./ui/button";
+import { getMetroRegionLabel } from "../lib/regions";
 
 // ─── Labels ─────────────────────────────────────────────────────
 
@@ -127,18 +128,23 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
                 {r.name}
               </h2>
               {r.bakomScore != null && (
-                <span className="shrink-0 inline-flex items-center gap-1.5">
-                  <ScoreBadge score={r.bakomScore} />
-                  {r.bakomRank != null && r.bakomRank <= 20 && (
-                    <span className="inline-flex items-center px-1.5 py-0.5 rounded bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-semibold">
-                      #{r.bakomRank}
-                    </span>
-                  )}
-                </span>
+                <ScoreBadge score={r.bakomScore} />
               )}
             </div>
             {r.cuisine && (
               <p className="text-sm text-muted-foreground mt-0.5 truncate">{r.cuisine}</p>
+            )}
+            {r.bakomRank != null && (
+              <p className="text-xs text-muted-foreground mt-1 flex items-center gap-1">
+                <Trophy className="size-3" />
+                <span>#{r.bakomRank} i Sverige</span>
+                {r.metroRegion && r.metroRegion !== "sweden" && r.bakomRankRegion != null && (
+                  <>
+                    <span>·</span>
+                    <span>#{r.bakomRankRegion} i {getMetroRegionLabel(r.metroRegion)}</span>
+                  </>
+                )}
+              </p>
             )}
             {openStatus !== null && (
               <OpenStatus isOpen={openStatus} className="block mt-1" />
@@ -272,14 +278,15 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
             </div>
             <a
               href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-                r.name + " " + r.address + " " + r.city
+                r.name + " " + r.address
               )}`}
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm hover:underline"
             >
               {r.address}
-              {r.postalCode && `, ${r.postalCode}`} {r.city}
+              {r.postalCode && `, ${r.postalCode}`}
+              {r.city && !r.address.includes(r.city) && ` ${r.city}`}
             </a>
           </div>
 

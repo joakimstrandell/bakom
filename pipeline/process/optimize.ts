@@ -1,16 +1,12 @@
 /**
- * Optimize step: generates region-specific frontend JSON files.
+ * Optimize step: generates frontend JSON with region tags.
  *
  * Filters closed restaurants, removes pipeline-only fields,
- * splits by region, calculates per-region ranks, and strips
- * null/empty values to minimize bundle size.
+ * assigns region based on coordinates, calculates global ranks,
+ * and strips null/empty values to minimize bundle size.
  *
  * Reads: data/restaurants.json
- * Writes:
- *   - data/restaurants.stockholm.frontend.json
- *   - data/restaurants.gothenburg.frontend.json
- *   - data/restaurants.malmo.frontend.json
- *   - data/restaurants.sweden.frontend.json (rest of Sweden)
+ * Writes: data/restaurants.frontend.json
  *
  * npm scripts:
  *   npm run pipeline:optimize
@@ -76,7 +72,11 @@ function getRegion(lat: number | null, lng: number | null): Region {
 /**
  * Strip a restaurant to frontend-optimized format.
  */
-function stripRestaurant(r: PipelineRestaurant): Record<string, unknown> {
+function stripRestaurant(
+  r: PipelineRestaurant,
+  metroRegion: Region,
+  regionalRank: number | undefined
+): Record<string, unknown> {
   const out: Record<string, unknown> = {};
 
   // Required fields (always present)
@@ -84,6 +84,7 @@ function stripRestaurant(r: PipelineRestaurant): Record<string, unknown> {
   out.name = r.name;
   out.lat = r.lat;
   out.lng = r.lng;
+  out.metroRegion = metroRegion;
 
   // Optional string fields — omit if empty
   if (r.address) out.address = r.address;
@@ -120,6 +121,7 @@ function stripRestaurant(r: PipelineRestaurant): Record<string, unknown> {
   if (r.googleRatingCount) out.googleRatingCount = r.googleRatingCount;
   if (r.bakomScore != null) out.bakomScore = r.bakomScore;
   if (r.bakomRank != null) out.bakomRank = r.bakomRank;
+  if (regionalRank != null) out.bakomRankRegion = regionalRank;
 
   // Only include businessStatus if not operational (saves space)
   if (r.businessStatus && r.businessStatus !== "OPERATIONAL") {
@@ -130,10 +132,10 @@ function stripRestaurant(r: PipelineRestaurant): Record<string, unknown> {
 }
 
 /**
- * Calculate ranks for a set of restaurants (mutates in place).
+ * Calculate global ranks for all restaurants (mutates in place).
  * Ranks are 1-based, sorted by raw score descending.
  */
-function calculateRanks(restaurants: PipelineRestaurant[]): void {
+function calculateGlobalRanks(restaurants: PipelineRestaurant[]): void {
   const withScore = restaurants
     .filter((r) => r.bakomScore != null)
     .sort((a, b) => (b.bakomScoreRaw ?? b.bakomScore ?? 0) - (a.bakomScoreRaw ?? a.bakomScore ?? 0));
@@ -150,30 +152,72 @@ function calculateRanks(restaurants: PipelineRestaurant[]): void {
   }
 }
 
+/** City regions that get regional rankings (excludes "sweden") */
+const CITY_REGIONS: Region[] = ["stockholm", "gothenburg", "malmo"];
+
 /**
- * Generate frontend JSON for a region.
+ * Calculate regional ranks for city regions only.
+ * Restaurants outside the 3 cities don't get a regional rank.
+ * Returns a map of restaurant ID to regional rank.
  */
-function generateRegionJson(
+function calculateRegionalRanks(
   restaurants: PipelineRestaurant[],
-  regionName: string,
-  filename: string
-): void {
-  // Calculate ranks for this region
-  calculateRanks(restaurants);
+  getRegionFn: (r: PipelineRestaurant) => Region
+): Map<string, number> {
+  const byRegion: Record<string, PipelineRestaurant[]> = {
+    stockholm: [],
+    gothenburg: [],
+    malmo: [],
+  };
 
-  const stripped = restaurants.map(stripRestaurant);
-  saveJson(filename, stripped);
+  // Group by region (only city regions)
+  for (const r of restaurants) {
+    const region = getRegionFn(r);
+    if (region !== "sweden") {
+      byRegion[region].push(r);
+    }
+  }
 
-  const size = JSON.stringify(stripped).length;
-  console.log(
-    `  ${regionName}: ${restaurants.length} restaurants (${(size / 1024).toFixed(0)}KB)`
-  );
+  // Calculate ranks per city region
+  const rankMap = new Map<string, number>();
+
+  for (const region of CITY_REGIONS) {
+    const regionRestaurants = byRegion[region]
+      .filter((r) => r.bakomScore != null)
+      .sort((a, b) => (b.bakomScoreRaw ?? b.bakomScore ?? 0) - (a.bakomScoreRaw ?? a.bakomScore ?? 0));
+
+    for (let i = 0; i < regionRestaurants.length; i++) {
+      rankMap.set(regionRestaurants[i].id, i + 1);
+    }
+  }
+
+  return rankMap;
+}
+
+
+// ─── Non-Swedish address detection ───────────────────────────────
+
+/** Cities/terms that indicate non-Swedish addresses */
+const NON_SWEDISH_PATTERNS = [
+  /\bKøbenhavn\b/i,
+  /\bCopenhagen\b/i,
+  /\bOslo\b/i,
+  /\bHelsinki\b/i,
+  /\bDenmark\b/i,
+  /\bDanmark\b/i,
+  /\bNorway\b/i,
+  /\bNorge\b/i,
+  /\bFinland\b/i,
+];
+
+function isNonSwedishAddress(address: string): boolean {
+  return NON_SWEDISH_PATTERNS.some((pattern) => pattern.test(address));
 }
 
 // ─── Main optimize function ───────────────────────────────────────
 
 export function optimize(): void {
-  console.log("=== Optimize (by region) ===\n");
+  console.log("=== Optimize ===\n");
 
   const restaurants = loadJson<PipelineRestaurant[]>("restaurants.json");
   if (!restaurants) {
@@ -182,16 +226,27 @@ export function optimize(): void {
     );
   }
 
+  // Filter non-Swedish restaurants
+  const nonSwedish = restaurants.filter((r) => isNonSwedishAddress(r.address));
+  if (nonSwedish.length > 0) {
+    console.log(`Filtered ${nonSwedish.length} non-Swedish restaurant(s):`);
+    for (const r of nonSwedish) {
+      console.log(`  - ${r.name} (${r.address})`);
+    }
+    console.log("");
+  }
+
   // Filter closed restaurants
-  const permClosed = restaurants.filter(
+  const afterNonSwedish = restaurants.filter((r) => !isNonSwedishAddress(r.address));
+  const permClosed = afterNonSwedish.filter(
     (r) => r.businessStatus === "CLOSED_PERMANENTLY"
   ).length;
-  const tempClosed = restaurants.filter(
+  const tempClosed = afterNonSwedish.filter(
     (r) => r.businessStatus === "CLOSED_TEMPORARILY"
   ).length;
   const closedTotal = permClosed + tempClosed;
 
-  const active = restaurants.filter(
+  const active = afterNonSwedish.filter(
     (r) =>
       r.businessStatus !== "CLOSED_PERMANENTLY" &&
       r.businessStatus !== "CLOSED_TEMPORARILY"
@@ -207,39 +262,37 @@ export function optimize(): void {
     );
   }
 
-  // Split by region
-  const stockholm: PipelineRestaurant[] = [];
-  const gothenburg: PipelineRestaurant[] = [];
-  const malmo: PipelineRestaurant[] = [];
-  const sweden: PipelineRestaurant[] = [];
+  // Calculate global ranks
+  calculateGlobalRanks(active);
 
-  for (const r of active) {
+  // Calculate regional ranks
+  const regionalRanks = calculateRegionalRanks(active, (r) => getRegion(r.lat, r.lng));
+
+  // Count by region
+  const regionCounts: Record<Region, number> = {
+    stockholm: 0,
+    gothenburg: 0,
+    malmo: 0,
+    sweden: 0,
+  };
+
+  // Strip and add region to each restaurant
+  const stripped = active.map((r) => {
     const region = getRegion(r.lat, r.lng);
-    switch (region) {
-      case "stockholm":
-        stockholm.push(r);
-        break;
-      case "gothenburg":
-        gothenburg.push(r);
-        break;
-      case "malmo":
-        malmo.push(r);
-        break;
-      default:
-        sweden.push(r);
-    }
-  }
+    regionCounts[region]++;
+    return stripRestaurant(r, region, regionalRanks.get(r.id));
+  });
 
-  console.log("Generating region files:");
+  // Save single file
+  saveJson("restaurants.frontend.json", stripped);
 
-  // Generate per-region files with per-region ranks
-  generateRegionJson(stockholm, "Stockholm", "restaurants.stockholm.frontend.json");
-  generateRegionJson(gothenburg, "Gothenburg", "restaurants.gothenburg.frontend.json");
-  generateRegionJson(malmo, "Malmö", "restaurants.malmo.frontend.json");
-  generateRegionJson(sweden, "Rest of Sweden", "restaurants.sweden.frontend.json");
-
-  const total = stockholm.length + gothenburg.length + malmo.length + sweden.length;
-  console.log(`\nOptimize complete: ${total} restaurants across 4 regions`);
+  const size = JSON.stringify(stripped).length;
+  console.log(`Generated restaurants.frontend.json (${(size / 1024).toFixed(0)}KB)`);
+  console.log(`  Stockholm: ${regionCounts.stockholm}`);
+  console.log(`  Göteborg: ${regionCounts.gothenburg}`);
+  console.log(`  Malmö: ${regionCounts.malmo}`);
+  console.log(`  Övriga: ${regionCounts.sweden}`);
+  console.log(`\nOptimize complete: ${active.length} restaurants`);
 }
 
 // ─── CLI entry point ─────────────────────────────────────────────

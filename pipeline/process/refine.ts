@@ -1,9 +1,9 @@
 /**
- * Refine step: enriches merged restaurant data with external sources,
+ * Refine step: applies collected data, geocodes, deduplicates,
  * calculates Bakom Score, and validates.
  *
  * Processing order:
- *   1. Google Places enrichment (if API key set)
+ *   1. Apply Google Places data (from data/raw/google.json)
  *   2. Geocode missing coordinates (OSM Nominatim)
  *   3. Deduplicate by ID and Google Place ID
  *   4. Calculate Bakom Score
@@ -14,16 +14,19 @@
  * in the optimize step (restaurants.frontend.json).
  *
  * Reads & updates: data/restaurants.json
+ * Reads: data/raw/google.json
  *
  * npm scripts:
  *   npm run pipeline:refine
- *   npm run pipeline:refine --force   # re-enrich all with Google
  *
- * CLI: tsx pipeline/process/refine.ts [--force]
+ * To re-collect Google data with --force, use:
+ *   npm run pipeline:collect --source google --force
+ *
+ * CLI: tsx pipeline/process/refine.ts
  */
 
 import { loadJson, saveJson } from "../utils/fetch.js";
-import { enrichWithGoogle } from "../collect/google.js";
+import { applyGoogleData } from "../collect/google.js";
 import { geocodeRestaurants } from "./geocode.js";
 import { calculateBakomScore } from "../../src/lib/score.js";
 import {
@@ -35,11 +38,8 @@ import type { PipelineRestaurant } from "../types.js";
 
 // ─── Main refine function ────────────────────────────────────────
 
-export async function refine(
-  options: { force?: boolean } = {}
-): Promise<PipelineRestaurant[]> {
-  const force = options.force ?? false;
-  console.log(`=== Refine${force ? " (--force)" : ""} ===\n`);
+export async function refine(): Promise<PipelineRestaurant[]> {
+  console.log("=== Refine ===\n");
 
   const restaurants = loadJson<PipelineRestaurant[]>("restaurants.json");
   if (!restaurants) {
@@ -52,15 +52,23 @@ export async function refine(
 
   const save = () => saveJson("restaurants.json", restaurants);
 
-  // ── 1. Google Places enrichment ──────────────────────────────
+  // ── 1. Apply Google Places data ────────────────────────────────
+  // Google data is collected separately via pipeline:collect --source google
+  // Here we just apply the raw data from data/raw/google.json
 
-  if (process.env.GOOGLE_PLACES_API_KEY) {
-    await enrichWithGoogle(restaurants, { saveProgress: save, force });
+  const googleResult = applyGoogleData(restaurants);
+  if (googleResult.applied > 0) {
+    console.log(
+      `Google Places: applied to ${googleResult.applied} restaurants` +
+        (googleResult.missing > 0 ? `, ${googleResult.missing} missing` : "") +
+        (googleResult.skippedNonSweden > 0 ? `, ${googleResult.skippedNonSweden} non-Swedish skipped` : "")
+    );
     save();
     console.log("");
-  } else {
+  } else if (googleResult.missing > 0) {
     console.log(
-      "⚠️  Skipping Google Places (no GOOGLE_PLACES_API_KEY set)\n"
+      `Google Places: no data applied (${googleResult.missing} restaurants missing from google.json)\n` +
+        `  Run: npm run pipeline:collect --source google\n`
     );
   }
 
@@ -282,8 +290,7 @@ export async function refine(
 // ─── CLI entry point ─────────────────────────────────────────────
 
 if (process.argv[1]?.includes("refine")) {
-  const force = process.argv.includes("--force");
-  refine({ force }).catch((err) => {
+  refine().catch((err) => {
     console.error("Fatal error:", err);
     process.exit(1);
   });

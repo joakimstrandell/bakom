@@ -5,7 +5,7 @@ import RestaurantDetail from "../components/RestaurantDetail";
 import RestaurantList from "../components/RestaurantList";
 import type { Restaurant } from "../types";
 import { useFilters } from "../hooks/useFilters";
-import { type Region, REGIONS, DEFAULT_REGION } from "../lib/regions";
+import { type RegionFilter, REGIONS, DEFAULT_REGION, getRegionConfig } from "../lib/regions";
 import {
   Search,
   SlidersHorizontal,
@@ -18,21 +18,19 @@ import {
 } from "lucide-react";
 import FeedbackModal from "../components/FeedbackModal";
 
-// Static imports for all region data files
-import stockholmData from "../../data/restaurants.stockholm.frontend.json";
-import gothenburgData from "../../data/restaurants.gothenburg.frontend.json";
-import malmoData from "../../data/restaurants.malmo.frontend.json";
-import swedenData from "../../data/restaurants.sweden.frontend.json";
+// Static import of all restaurant data
+import restaurantData from "../../data/restaurants.frontend.json";
 
 const Map = lazy(() => import("../components/Map"));
 
-// Pre-filter valid restaurants for each region
-const REGION_DATA: Record<Region, Restaurant[]> = {
-  stockholm: (stockholmData as Restaurant[]).filter((r) => r.lat && r.lng),
-  gothenburg: (gothenburgData as Restaurant[]).filter((r) => r.lat && r.lng),
-  malmo: (malmoData as Restaurant[]).filter((r) => r.lat && r.lng),
-  sweden: (swedenData as Restaurant[]).filter((r) => r.lat && r.lng),
-};
+// Pre-filter valid restaurants (with coordinates)
+const ALL_RESTAURANTS = (restaurantData as Restaurant[]).filter((r) => r.lat && r.lng);
+
+// Count restaurants per region for the dropdown
+function getRegionCount(regionId: RegionFilter): number {
+  if (regionId === "all") return ALL_RESTAURANTS.length;
+  return ALL_RESTAURANTS.filter((r) => r.metroRegion === regionId).length;
+}
 
 export const Route = createFileRoute("/")({
   ssr: false,
@@ -43,16 +41,28 @@ type SidebarMode = "filters" | "restaurant" | null;
 
 function HomePage() {
   // ─── Region State ─────────────────────────────────────────────────
-  const [region, setRegion] = useState<Region>(DEFAULT_REGION);
+  const [region, setRegion] = useState<RegionFilter>(DEFAULT_REGION);
   const [regionMenuOpen, setRegionMenuOpen] = useState(false);
   const regionMenuRef = useRef<HTMLDivElement>(null);
 
-  // Get restaurants for current region
-  const validRestaurants = useMemo(() => REGION_DATA[region], [region]);
+  // All restaurants for the map
+  const allRestaurants = ALL_RESTAURANTS;
+
+  // Filter restaurants by region for the list
+  const regionRestaurants = useMemo(() => {
+    if (region === "all") return allRestaurants;
+    return allRestaurants.filter((r) => r.metroRegion === region);
+  }, [region, allRestaurants]);
 
   // ─── Filter State (via useReducer hook) ────────────────────────
+  // First filter by region, then apply other filters
+  const regionFiltered = useMemo(() => {
+    if (region === "all") return allRestaurants;
+    return allRestaurants.filter((r) => r.metroRegion === region);
+  }, [region, allRestaurants]);
+
   const { state: filterState, dispatch, filtered, activeFilterCount, hasActiveFilters } =
-    useFilters(validRestaurants);
+    useFilters(regionFiltered);
 
   // ─── UI State ──────────────────────────────────────────────────
   const [searchExpanded, setSearchExpanded] = useState(false);
@@ -75,7 +85,7 @@ function HomePage() {
 
   // ─── Handlers ──────────────────────────────────────────────────
 
-  const handleRegionChange = useCallback((newRegion: Region) => {
+  const handleRegionChange = useCallback((newRegion: RegionFilter) => {
     setRegion(newRegion);
     setRegionMenuOpen(false);
     // Clear selection when changing regions
@@ -221,7 +231,7 @@ function HomePage() {
                   >
                     {r.label}
                     <span className="text-muted-foreground ml-2">
-                      ({REGION_DATA[r.id].length})
+                      ({getRegionCount(r.id)})
                     </span>
                   </button>
                 ))}
@@ -278,9 +288,9 @@ function HomePage() {
           <div className="count-badge hidden sm:flex">
             <MapPin className="size-3.5" />
             <strong>{filtered.length}</strong>
-            {filtered.length !== validRestaurants.length && (
+            {filtered.length !== regionFiltered.length && (
               <span className="text-muted-foreground">
-                / {validRestaurants.length}
+                / {regionFiltered.length}
               </span>
             )}
           </div>
@@ -393,7 +403,7 @@ function HomePage() {
               state={filterState}
               dispatch={dispatch}
               onClose={closeSidebar}
-              total={validRestaurants.length}
+              total={regionFiltered.length}
               filtered={filtered.length}
               hasActiveFilters={hasActiveFilters}
             />

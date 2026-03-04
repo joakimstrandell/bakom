@@ -1,18 +1,18 @@
 /**
- * Google Places API enrichment.
- * Enriches restaurants with Google Places data: address, phone, website,
- * hours, rating, coordinates, placeId, and Google Maps link.
+ * Google Places API collector.
+ * Fetches Google Places data for restaurants and saves to data/raw/google.json.
  *
- * Skips restaurants that already have a googlePlaceId (already enriched).
+ * In incremental mode (default), only fetches for restaurants not already
+ * in google.json. Use --force to re-fetch all.
  *
  * Requires: GOOGLE_PLACES_API_KEY environment variable.
  *
- * CLI: tsx pipeline/collect/google.ts
+ * CLI: tsx pipeline/collect/google.ts [--force]
  */
 
-import { sleep, loadJson, saveJson } from "../utils/fetch.js";
+import { sleep, loadJson, saveRawJson, loadRawJson } from "../utils/fetch.js";
 import { parseGoogleHours } from "../utils/hours.js";
-import type { PipelineRestaurant } from "../types.js";
+import type { PipelineRestaurant, GoogleRaw } from "../types.js";
 
 const API_KEY = process.env.GOOGLE_PLACES_API_KEY;
 
@@ -25,7 +25,7 @@ const FIELD_MASK = [
   "places.userRatingCount",
   "places.nationalPhoneNumber",
   "places.websiteUri",
-  "places.priceLevel",
+  "places.primaryType",
   "places.googleMapsUri",
   "places.location",
   "places.businessStatus",
@@ -74,26 +74,13 @@ function getLocationBias(city: string): { latitude: number; longitude: number } 
 
 /**
  * Search for a restaurant via Google Places Text Search API.
- * Uses location bias based on the restaurant's city.
  */
 const API_TIMEOUT = 15000; // 15s timeout for API calls
 
 async function searchPlace(
   name: string,
   city: string
-): Promise<{
-  placeId: string;
-  address: string;
-  phone: string;
-  website: string;
-  rating: number | null;
-  ratingCount: number;
-  hours: PipelineRestaurant["hours"];
-  lat: number;
-  lng: number;
-  googleMapsUri: string;
-  businessStatus: string;
-} | null> {
+): Promise<Omit<GoogleRaw, "source" | "restaurantId" | "searchName"> | null> {
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), API_TIMEOUT);
 
@@ -137,11 +124,13 @@ async function searchPlace(
 
     return {
       placeId: place.id,
+      name: place.displayName?.text ?? "",
       address: place.formattedAddress ?? "",
       phone: place.nationalPhoneNumber ?? "",
       website: place.websiteUri ?? "",
       rating: place.rating ?? null,
       ratingCount: place.userRatingCount ?? 0,
+      primaryType: place.primaryType ?? "",
       hours: parseGoogleHours(place.regularOpeningHours),
       lat: place.location?.latitude ?? 0,
       lng: place.location?.longitude ?? 0,
@@ -159,20 +148,17 @@ async function searchPlace(
   }
 }
 
-// ─── Enrichment function ─────────────────────────────────────────
+// ─── Collector function ─────────────────────────────────────────
 
 /**
- * Enrich restaurants with Google Places data.
- * Mutates the restaurants array in place.
+ * Collect Google Places data for all restaurants.
+ * Saves results to data/raw/google.json.
  *
- * @param restaurants - Array of restaurants to enrich
- * @param options.saveProgress - Optional callback to save intermediate progress
- * @returns Stats: how many enriched vs not found
+ * @param options.force - Re-fetch all restaurants, not just missing ones
  */
-export async function enrichWithGoogle(
-  restaurants: PipelineRestaurant[],
-  options?: { saveProgress?: () => void; force?: boolean }
-): Promise<{ enriched: number; notFound: number }> {
+export async function collectGoogle(
+  options: { force?: boolean } = {}
+): Promise<GoogleRaw[]> {
   if (!API_KEY) {
     throw new Error(
       "GOOGLE_PLACES_API_KEY environment variable is required.\n" +
@@ -180,63 +166,69 @@ export async function enrichWithGoogle(
     );
   }
 
-  const force = options?.force ?? false;
-  console.log(`=== Google Places Enrichment${force ? " (--force)" : ""} ===\n`);
+  const force = options.force ?? false;
+  console.log(`=== Google Places Collector${force ? " (--force)" : ""} ===\n`);
 
-  // With --force, re-enrich all restaurants. Otherwise only those without googlePlaceId.
-  const needsEnrichment = force
-    ? restaurants
-    : restaurants.filter((r) => !r.googlePlaceId);
-  const alreadyEnriched = restaurants.length - needsEnrichment.length;
+  // Load restaurants to know what to fetch
+  const restaurants = loadJson<PipelineRestaurant[]>("restaurants.json");
+  if (!restaurants) {
+    throw new Error("data/restaurants.json not found. Run pipeline:merge first.");
+  }
+
+  // Load existing Google data (incremental mode)
+  const existing = loadRawJson<GoogleRaw[]>("google.json") ?? [];
+  const existingById = new Map<string, GoogleRaw>();
+  for (const g of existing) {
+    existingById.set(g.restaurantId, g);
+  }
 
   console.log(`  Total restaurants: ${restaurants.length}`);
-  if (!force) {
-    console.log(`  Already enriched (has googlePlaceId): ${alreadyEnriched}`);
-  }
-  console.log(`  ${force ? "Will re-enrich" : "Needs enrichment"}: ${needsEnrichment.length}\n`);
+  console.log(`  Existing Google data: ${existing.length}`);
 
-  if (needsEnrichment.length === 0) {
-    console.log("All restaurants already have Google data. Nothing to do.");
-    return { enriched: 0, notFound: 0 };
+  // Determine what needs fetching
+  const needsFetch = force
+    ? restaurants
+    : restaurants.filter((r) => !existingById.has(r.id));
+
+  console.log(`  ${force ? "Will re-fetch" : "Needs fetching"}: ${needsFetch.length}\n`);
+
+  if (needsFetch.length === 0) {
+    console.log("All restaurants already have Google data. Nothing to fetch.");
+    return existing;
   }
 
-  let enriched = 0;
+  // Start with existing data (will be updated/added to)
+  const results = force ? [] : [...existing];
+  const resultsById = force ? new Map<string, GoogleRaw>() : new Map(existingById);
+
+  let fetched = 0;
   let notFound = 0;
 
-  for (let i = 0; i < needsEnrichment.length; i++) {
-    const r = needsEnrichment[i];
-    process.stdout.write(
-      `[${i + 1}/${needsEnrichment.length}] ${r.name}...`
-    );
+  for (let i = 0; i < needsFetch.length; i++) {
+    const r = needsFetch[i];
+    process.stdout.write(`[${i + 1}/${needsFetch.length}] ${r.name}...`);
 
     try {
       const result = await searchPlace(r.name, r.city || "Sweden");
 
       if (result) {
-        // Update restaurant with Google data
-        // Google is preferred for address, phone, website, hours, coordinates
-        if (result.address) r.address = result.address;
-        if (result.phone) r.phone = result.phone;
-        if (result.website) r.website = result.website;
-        if (result.hours.length > 0) r.hours = result.hours;
-        // Always overwrite coords — Google is more accurate than geocode
-        r.lat = result.lat;
-        r.lng = result.lng;
+        const googleRaw: GoogleRaw = {
+          source: "google",
+          restaurantId: r.id,
+          searchName: r.name,
+          ...result,
+        };
 
-        // Always set Google-specific fields
-        r.googlePlaceId = result.placeId;
-        r.googleRatingCount = result.ratingCount;
-        r.ratings.google = result.rating;
-        r.links.google = result.googleMapsUri;
-        r.sourceIds = { ...r.sourceIds, google: result.placeId };
-        r.businessStatus = result.businessStatus;
-
-        // Add "google" to sources if not already there
-        if (!r.sources.includes("google")) {
-          r.sources.push("google");
+        // Update or add to results
+        if (resultsById.has(r.id)) {
+          const idx = results.findIndex((g) => g.restaurantId === r.id);
+          if (idx >= 0) results[idx] = googleRaw;
+        } else {
+          results.push(googleRaw);
         }
+        resultsById.set(r.id, googleRaw);
 
-        enriched++;
+        fetched++;
         const statusTag = result.businessStatus !== "OPERATIONAL"
           ? ` [${result.businessStatus}]`
           : "";
@@ -255,35 +247,161 @@ export async function enrichWithGoogle(
 
     // Save progress every 100 restaurants
     if (i % 100 === 99) {
-      options?.saveProgress?.();
-      console.log(`  [progress saved — ${enriched} enriched so far]\n`);
+      saveRawJson("google.json", results);
+      console.log(`  [progress saved — ${fetched} fetched so far]\n`);
     }
   }
 
-  console.log(`\nGoogle Places enrichment complete:`);
-  console.log(`  Enriched: ${enriched}`);
-  console.log(`  Not found: ${notFound}`);
-  console.log(`  Previously enriched: ${alreadyEnriched}`);
-  console.log(`  Total with Google data: ${alreadyEnriched + enriched}`);
+  // Save final results
+  saveRawJson("google.json", results);
 
-  return { enriched, notFound };
+  console.log(`\nGoogle Places collection complete:`);
+  console.log(`  Fetched: ${fetched}`);
+  console.log(`  Not found: ${notFound}`);
+  console.log(`  Total in google.json: ${results.length}`);
+
+  return results;
+}
+
+// ─── Apply function (for refine step) ───────────────────────────
+
+/**
+ * Format Google primaryType to a readable cuisine string.
+ * E.g., "italian_restaurant" → "Italian", "japanese_restaurant" → "Japanese"
+ */
+function formatGoogleType(type: string): string {
+  const cleaned = type
+    .replace(/_restaurant$/, "")
+    .replace(/_/g, " ");
+
+  return cleaned
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+/**
+ * Strip country suffix from Google's formattedAddress.
+ * E.g., "Karlavägen 28, 114 31 Stockholm, Sverige" → "Karlavägen 28, 114 31 Stockholm"
+ */
+function stripCountrySuffix(address: string): string {
+  return address
+    .replace(/,\s*Sverige$/i, "")
+    .replace(/,\s*Sweden$/i, "")
+    .replace(/,\s*Danmark$/i, "")
+    .replace(/,\s*Denmark$/i, "");
+}
+
+/**
+ * Check if a Google result is in Sweden.
+ * Uses both coordinates and address to catch edge cases (e.g., Copenhagen
+ * has similar longitude to southern Sweden).
+ */
+function isInSweden(lat: number, lng: number, address: string): boolean {
+  const addr = address.toLowerCase();
+
+  // Explicitly exclude non-Swedish addresses
+  if (addr.includes("københavn") || addr.includes("copenhagen") ||
+      addr.includes("danmark") || addr.includes("denmark") ||
+      addr.includes("oslo") || addr.includes("norge") || addr.includes("norway")) {
+    return false;
+  }
+
+  // Sweden bounding box: lat 55.3-69.1, lng 10.9-24.2
+  // But this isn't enough since Copenhagen is within this range
+  return lat >= 55.3 && lat <= 69.1 && lng >= 10.9 && lng <= 24.2;
+}
+
+/**
+ * Apply Google Places data from raw file to restaurants.
+ * Used by the refine step.
+ */
+export function applyGoogleData(restaurants: PipelineRestaurant[]): {
+  applied: number;
+  missing: number;
+  skippedNonSweden: number;
+} {
+  const googleData = loadRawJson<GoogleRaw[]>("google.json");
+  if (!googleData || googleData.length === 0) {
+    console.log("  No Google data found in data/raw/google.json");
+    return { applied: 0, missing: restaurants.length, skippedNonSweden: 0 };
+  }
+
+  // Build lookup by restaurant ID
+  const googleById = new Map<string, GoogleRaw>();
+  for (const g of googleData) {
+    googleById.set(g.restaurantId, g);
+  }
+
+  let applied = 0;
+  let missing = 0;
+
+  let skippedNonSweden = 0;
+
+  for (const r of restaurants) {
+    const g = googleById.get(r.id);
+
+    if (!g) {
+      missing++;
+      continue;
+    }
+
+    // Skip non-Swedish matches (Google matched wrong country)
+    if (!isInSweden(g.lat, g.lng, g.address)) {
+      console.log(`  Skipping non-Swedish match: "${r.name}" → ${g.address}`);
+      skippedNonSweden++;
+      missing++;
+      continue;
+    }
+
+    // Apply Google data to restaurant
+    if (g.address) {
+      // Strip country suffix and set address
+      r.address = stripCountrySuffix(g.address);
+      // Google's formattedAddress includes postal code and city
+      r.postalCode = "";
+    }
+    if (g.phone) r.phone = g.phone;
+    if (g.website) r.website = g.website;
+    if (g.hours.length > 0) r.hours = g.hours;
+
+    // Always overwrite coords — Google is more accurate
+    r.lat = g.lat;
+    r.lng = g.lng;
+
+    // Set Google-specific fields
+    r.googlePlaceId = g.placeId;
+    r.googleRatingCount = g.ratingCount;
+    r.ratings.google = g.rating;
+    r.links.google = g.googleMapsUri;
+    r.sourceIds = { ...r.sourceIds, google: g.placeId };
+    r.businessStatus = g.businessStatus;
+
+    // Use Google primaryType as cuisine fallback
+    if (!r.cuisine && g.primaryType) {
+      r.cuisine = formatGoogleType(g.primaryType);
+    }
+
+    // Add "google" to sources
+    if (!r.sources.includes("google")) {
+      r.sources.push("google");
+    }
+
+    applied++;
+  }
+
+  if (skippedNonSweden > 0) {
+    console.log(`  Skipped ${skippedNonSweden} non-Swedish matches`);
+  }
+
+  return { applied, missing, skippedNonSweden };
 }
 
 // ─── CLI entry point ─────────────────────────────────────────────
 
 if (process.argv[1]?.includes("google")) {
-  (async () => {
-    const restaurants = loadJson<PipelineRestaurant[]>("restaurants.json");
-    if (!restaurants) {
-      throw new Error("data/restaurants.json not found. Run pipeline:merge first.");
-    }
-
-    await enrichWithGoogle(restaurants, {
-      saveProgress: () => saveJson("restaurants.json", restaurants),
-    });
-
-    saveJson("restaurants.json", restaurants);
-  })().catch((err) => {
+  const force = process.argv.includes("--force");
+  collectGoogle({ force }).catch((err) => {
     console.error("Fatal error:", err);
     process.exit(1);
   });

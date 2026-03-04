@@ -2,6 +2,7 @@ import { useState, useMemo } from "react";
 import { MapPin, ArrowDownAZ, TrendingUp, Trophy } from "lucide-react";
 import type { Restaurant } from "../types";
 import { ScoreBadge } from "./ScoreBadge";
+import { getMetroRegionLabel } from "../lib/regions";
 
 type SortOption = "name" | "score";
 
@@ -17,15 +18,6 @@ export default function RestaurantList({
   onSelectRestaurant,
 }: RestaurantListProps) {
   const [sortBy, setSortBy] = useState<SortOption>("name");
-
-  // Calculate top 20 restaurant IDs by score
-  const top20Ids = useMemo(() => {
-    const withScores = restaurants
-      .filter((r) => r.bakomScore != null)
-      .sort((a, b) => (b.bakomScore ?? 0) - (a.bakomScore ?? 0))
-      .slice(0, 20);
-    return new Set(withScores.map((r) => r.id));
-  }, [restaurants]);
 
   const sortedRestaurants = useMemo(() => {
     const sorted = [...restaurants];
@@ -93,7 +85,6 @@ export default function RestaurantList({
           <div className="divide-y divide-black/5 dark:divide-white/5">
             {sortedRestaurants.map((r) => {
               const isSelected = selectedRestaurant?.id === r.id;
-              const isTop20 = top20Ids.has(r.id);
               return (
                 <button
                   key={r.id}
@@ -116,10 +107,10 @@ export default function RestaurantList({
                         >
                           {r.name}
                         </span>
-                        {isTop20 && r.bakomRank != null && (
-                          <span className="shrink-0 inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400">
+                        {r.bakomRank != null && r.bakomRank <= 50 && (
+                          <span className="shrink-0 inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-[10px] font-semibold">
                             <Trophy className="size-3" />
-                            <span className="text-[10px] font-semibold">#{r.bakomRank}</span>
+                            Top 50
                           </span>
                         )}
                       </div>
@@ -131,6 +122,14 @@ export default function RestaurantList({
                       <div className="text-xs text-muted-foreground truncate mt-0.5">
                         {r.address}
                       </div>
+                      {r.bakomRank != null && (
+                        <div className="text-[10px] text-muted-foreground mt-0.5">
+                          #{r.bakomRank} Sverige
+                          {r.metroRegion && r.metroRegion !== "sweden" && r.bakomRankRegion != null && (
+                            <> · #{r.bakomRankRegion} {getMetroRegionLabel(r.metroRegion)}</>
+                          )}
+                        </div>
+                      )}
                     </div>
 
                     {/* Price */}

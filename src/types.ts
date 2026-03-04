@@ -48,6 +48,8 @@ export type SourceRatings = {
   di?: number | null; // 15-25 scale (totalScore)
 };
 
+export type MetroRegion = "stockholm" | "gothenburg" | "malmo" | "sweden";
+
 export type Restaurant = {
   id: string;
   name: string;
@@ -67,7 +69,9 @@ export type Restaurant = {
   googleRatingCount?: number;
   bakomScore?: number | null; // 0–100 (integer for display)
   bakomScoreRaw?: number | null; // 0–100 (decimal for ranking)
-  bakomRank?: number | null; // 1-based rank among scored restaurants
+  bakomRank?: number | null; // 1-based global rank among all scored restaurants
+  bakomRankRegion?: number | null; // 1-based rank within metro region
+  metroRegion?: MetroRegion; // stockholm, gothenburg, malmo, or sweden (rest)
   /** Google business status: "OPERATIONAL" | "CLOSED_TEMPORARILY" | "CLOSED_PERMANENTLY" */
   businessStatus?: string;
   // ── Pipeline-only fields (not in frontend JSON) ──

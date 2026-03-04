@@ -10,27 +10,39 @@ Source file: [`pipeline/collect.ts`](../pipeline/collect.ts)
 
 ## Sources
 
+### Pre-merge sources
+
+These sources provide primary restaurant data that is combined in the merge step:
+
 | Source | Type | Speed | Scale | Output |
 |--------|------|-------|-------|--------|
-| Krogguiden | HTML scraper | ~7 min | ~850 restaurants | `data/raw/krogguiden.json` |
-| Michelin | HTML scraper | ~30s | ~41 restaurants | `data/raw/michelin.json` |
-| White Guide | JSON API | ~2s | ~200 restaurants | `data/raw/whiteguide.json` |
-| SvD | HTML scraper | ~2-3 min | ~150 reviews | `data/raw/svd.json` |
-| DN | HTML scraper | ~1-2 min | ~80 reviews | `data/raw/dn.json` |
-| DI Weekend | JSON API | ~3s | ~100 restaurants | `data/raw/di.json` |
+| Krogguiden | HTML scraper | ~7 min | ~680 restaurants | `data/raw/krogguiden.json` |
+| Michelin | HTML scraper | ~30s | ~76 restaurants | `data/raw/michelin.json` |
+| White Guide | JSON API | ~2s | ~530 restaurants | `data/raw/whiteguide.json` |
+| SvD | HTML scraper | ~2-3 min | ~280 reviews | `data/raw/svd.json` |
+| DN | HTML scraper | ~1-2 min | ~60 reviews | `data/raw/dn.json` |
+| DI Weekend | JSON API | ~3s | ~140 restaurants | `data/raw/di.json` |
+
+### Post-merge sources
+
+These sources enrich existing restaurants and require `data/restaurants.json`:
+
+| Source | Type | Speed | Scale | Output |
+|--------|------|-------|-------|--------|
+| Google | API | ~15 min | ~1100 restaurants | `data/raw/google.json` |
 
 ---
 
 ## CLI Usage
 
-### Run all sources
+### Run all pre-merge sources
 
 ```
 npm run pipeline:collect
 ```
 
-Runs all 6 sources sequentially. Fast APIs always re-fetch. Slow scrapers
-run in incremental mode (only new items).
+Runs all 6 pre-merge sources sequentially. Fast APIs always re-fetch. Slow
+scrapers run in incremental mode (only new items).
 
 ### Run a single source
 
@@ -41,6 +53,7 @@ npm run pipeline:collect --source whiteguide
 npm run pipeline:collect --source svd
 npm run pipeline:collect --source dn
 npm run pipeline:collect --source di
+npm run pipeline:collect --source google  # requires restaurants.json
 ```
 
 ### Force full re-fetch
@@ -84,6 +97,7 @@ the entire dataset comes from a single HTTP request in under 5 seconds.
 | SvD | Incremental (by articleId) | Full re-scrape |
 | DN | Incremental (by slug) | Full re-scrape |
 | DI Weekend | Always re-fetch | Always re-fetch |
+| Google | Incremental (by restaurantId) | Full re-fetch |
 
 ---
 
@@ -141,6 +155,18 @@ the entire dataset comes from a single HTTP request in under 5 seconds.
 - **Incremental:** N/A (always re-fetches, ~3s)
 - **Collector:** [`pipeline/collect/di.ts`](../pipeline/collect/di.ts)
 
+### Google (post-merge)
+
+- **URL:** `places.googleapis.com/v1/places:searchText`
+- **Requires:** `GOOGLE_PLACES_API_KEY` environment variable, `data/restaurants.json`
+- **Method:** Text Search API for each restaurant name + city
+- **Data:** Address (with postal code/city), phone, website, hours, rating, review count,
+  coordinates, business status, Google Maps URL, primaryType (for cuisine fallback)
+- **Incremental key:** `restaurantId` — skips restaurants already in `google.json`
+- **Rate limit:** Sequential, 200ms delay between requests
+- **Non-Swedish filtering:** Rejects matches to non-Swedish addresses (København, Danmark, etc.)
+- **Collector:** [`pipeline/collect/google.ts`](../pipeline/collect/google.ts)
+
 ---
 
 ## Output
@@ -155,8 +181,12 @@ Each source writes a typed JSON array to `data/raw/{source}.json`:
 | `data/raw/svd.json` | `SvdRaw[]` |
 | `data/raw/dn.json` | `DnRaw[]` |
 | `data/raw/di.json` | `DiRaw[]` |
+| `data/raw/google.json` | `GoogleRaw[]` |
 
 Types are defined in [`pipeline/types.ts`](../pipeline/types.ts).
 
-These raw files are consumed by the merge step, which combines them into
+Pre-merge raw files are consumed by the merge step, which combines them into
 a single `data/restaurants.json` with fuzzy matching and deduplication.
+
+The Google raw file is applied in the refine step to enrich existing restaurants
+with address, contact info, coordinates, and ratings.
