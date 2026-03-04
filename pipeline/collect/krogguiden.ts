@@ -26,8 +26,6 @@ import { batchProcess } from "../utils/concurrency.js";
 import { parseHoursFromHtml } from "../utils/hours.js";
 import type { KrogguidenRaw } from "../types.js";
 
-const FORCE = process.argv.includes("--force");
-
 // ─── Slug fetching ───────────────────────────────────────────────
 
 async function fetchAllSlugs(): Promise<string[]> {
@@ -167,7 +165,7 @@ function parseJsonLd(
     name: restaurantData.name || "",
     address: address.streetAddress || "",
     postalCode: (address.postalCode || "").replace(/\s/g, "").trim(),
-    city: address.addressLocality || "Stockholm",
+    city: address.addressLocality || "",
     region: address.addressRegion || "",
     phone: restaurantData.telephone || "",
     website: restaurantData.url || "",
@@ -208,7 +206,7 @@ async function scrapeRestaurantDetail(
         name: parsed.name,
         address: addr,
         postalCode: parsed.postalCode || "",
-        city: parsed.city || "Stockholm",
+        city: parsed.city || "",
         region: parsed.region || "",
         phone: parsed.phone || "",
         website: parsed.website || "",
@@ -232,14 +230,17 @@ async function scrapeRestaurantDetail(
 
 // ─── Main scraper function ───────────────────────────────────────
 
-export async function scrapeKrogguiden(): Promise<KrogguidenRaw[]> {
+export async function scrapeKrogguiden(
+  options: { force?: boolean } = {},
+): Promise<KrogguidenRaw[]> {
+  const force = options.force ?? false;
   console.log("=== Krogguiden Scraper ===\n");
 
   // Load existing raw data (already scraped restaurants)
   const existing = loadRawJson<KrogguidenRaw[]>("krogguiden.json") ?? [];
   const existingSlugs = new Set(existing.map((r) => r.slug));
 
-  if (existing.length > 0 && !FORCE) {
+  if (existing.length > 0 && !force) {
     console.log(
       `Loaded ${existing.length} existing restaurants from krogguiden.json`
     );
@@ -260,7 +261,7 @@ export async function scrapeKrogguiden(): Promise<KrogguidenRaw[]> {
 
   // Determine which slugs need scraping
   let toScrape: string[];
-  if (FORCE) {
+  if (force) {
     toScrape = slugs;
     console.log(`\n--force: Scraping ALL ${toScrape.length} restaurants\n`);
   } else {
@@ -277,7 +278,7 @@ export async function scrapeKrogguiden(): Promise<KrogguidenRaw[]> {
   }
 
   // Start with existing data (unless force, then start fresh)
-  let restaurants: KrogguidenRaw[] = FORCE ? [] : [...existing];
+  let restaurants: KrogguidenRaw[] = force ? [] : [...existing];
 
   // Process in parallel with concurrency limits
   // 3 concurrent requests with 2s minimum delay = ~1.5 req/s (respectful rate)
@@ -313,7 +314,7 @@ export async function scrapeKrogguiden(): Promise<KrogguidenRaw[]> {
   // Final save
   saveRawJson("krogguiden.json", restaurants);
 
-  const newCount = FORCE ? restaurants.length : toScrape.length;
+  const newCount = force ? restaurants.length : toScrape.length;
   console.log(`\nKrogguiden scrape complete:`);
   console.log(`  New: ${newCount}`);
   console.log(`  Total: ${restaurants.length}`);
@@ -327,7 +328,7 @@ export async function scrapeKrogguiden(): Promise<KrogguidenRaw[]> {
 // ─── CLI entry point ─────────────────────────────────────────────
 
 if (process.argv[1]?.includes("krogguiden")) {
-  scrapeKrogguiden().catch((err) => {
+  scrapeKrogguiden({ force: process.argv.includes("--force") }).catch((err) => {
     console.error("Fatal error:", err);
     process.exit(1);
   });

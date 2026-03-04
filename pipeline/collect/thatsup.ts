@@ -1,6 +1,7 @@
 /**
  * Thatsup scraper.
  * Fetches restaurant data from thatsup.se via paginated listings + JSON-LD.
+ * Supports multiple Swedish cities.
  *
  * Output: data/raw/thatsup.json (ThatsupRaw[])
  *
@@ -13,55 +14,78 @@ import type { ThatsupRaw } from "../types.js";
 import type { HoursEntry } from "../../src/types.js";
 
 const BASE_URL = "https://thatsup.se";
-const LISTING_URL = `${BASE_URL}/stockholm/explore/restaurang/`;
-const MAX_PAGES = 15; // Safety limit
+const MAX_PAGES = 15; // Safety limit per city
+
+// Swedish cities available on Thatsup
+const THATSUP_CITIES = [
+  "stockholm",
+  "goteborg",
+  "malmo",
+  "uppsala",
+  "linkoping",
+  "orebro",
+  "vasteras",
+  "helsingborg",
+  "norrkoping",
+  "jonkoping",
+  "lund",
+  "umea",
+  "gavle",
+  "boras",
+  "sodertalje",
+  "eskilstuna",
+  "halmstad",
+  "vaxjo",
+  "karlstad",
+  "sundsvall",
+];
 
 /**
- * Fetch all restaurant slugs from paginated listings
+ * Fetch all restaurant slugs from paginated listings for a city
  */
-async function fetchAllSlugs(): Promise<string[]> {
-  console.log("Fetching restaurant slugs from Thatsup...");
+async function fetchAllSlugsForCity(city: string): Promise<{ slug: string; city: string }[]> {
+  const listingUrl = `${BASE_URL}/${city}/explore/restaurang/`;
+  const results: { slug: string; city: string }[] = [];
   const slugs: Set<string> = new Set();
 
   for (let page = 1; page <= MAX_PAGES; page++) {
-    const url = page === 1 ? LISTING_URL : `${LISTING_URL}?page=${page}`;
+    const url = page === 1 ? listingUrl : `${listingUrl}?page=${page}`;
 
     try {
       const res = await fetchWithRetry(url);
 
       // Check for 404 or other non-OK status
       if (!res.ok) {
-        console.log(`  Page ${page}: status ${res.status}, stopping pagination`);
         break;
       }
 
       const html = await res.text();
 
-      // Extract restaurant URLs
-      const matches = html.match(/\/stockholm\/restaurang\/[^"]+/g) || [];
+      // Extract restaurant URLs (match the city in the URL pattern)
+      const regex = new RegExp(`\\/${city}\\/restaurang\\/[^"]+`, "g");
+      const matches = html.match(regex) || [];
       const pageSlugs = matches
-        .map((m) => m.replace(/\/stockholm\/restaurang\//, "").replace(/\/$/, ""))
+        .map((m) => m.replace(new RegExp(`\\/${city}\\/restaurang\\/`), "").replace(/\/$/, ""))
         .filter((s) => s && !s.includes("/"));
 
       if (pageSlugs.length === 0) {
-        console.log(`  Page ${page}: no results, stopping pagination`);
         break;
       }
 
-      const beforeCount = slugs.size;
-      pageSlugs.forEach((s) => slugs.add(s));
-      console.log(`  Page ${page}: ${slugs.size - beforeCount} new (${slugs.size} total)`);
+      for (const slug of pageSlugs) {
+        if (!slugs.has(slug)) {
+          slugs.add(slug);
+          results.push({ slug, city });
+        }
+      }
 
-      await sleep(500);
+      await sleep(300);
     } catch (err) {
-      // End of pagination (404 or other error)
-      console.log(`  Page ${page}: error, stopping pagination`);
       break;
     }
   }
 
-  console.log(`\n  Found ${slugs.size} unique restaurants\n`);
-  return [...slugs];
+  return results;
 }
 
 /**
@@ -172,9 +196,9 @@ function parseJsonLd(html: string): Partial<ThatsupRaw> | null {
 /**
  * Scrape a single restaurant page
  */
-async function scrapeRestaurant(slug: string): Promise<ThatsupRaw | null> {
+async function scrapeRestaurant(slug: string, thatsupCity: string): Promise<ThatsupRaw | null> {
   try {
-    const url = `${BASE_URL}/stockholm/restaurang/${slug}/`;
+    const url = `${BASE_URL}/${thatsupCity}/restaurang/${slug}/`;
     const res = await fetchWithRetry(url);
     const html = await res.text();
     const parsed = parseJsonLd(html);
@@ -208,7 +232,7 @@ async function scrapeRestaurant(slug: string): Promise<ThatsupRaw | null> {
 // ─── Main scraper function ───────────────────────────────────────
 
 export async function scrapeThatsup(): Promise<ThatsupRaw[]> {
-  console.log("=== Thatsup Scraper ===\n");
+  console.log("=== Thatsup Scraper (All Sweden) ===\n");
 
   // Load existing data to avoid re-scraping
   const existing = loadRawJson<ThatsupRaw[]>("thatsup.json") ?? [];
@@ -218,26 +242,39 @@ export async function scrapeThatsup(): Promise<ThatsupRaw[]> {
     console.log(`Loaded ${existing.length} existing restaurants from thatsup.json`);
   }
 
-  // Fetch all slugs
-  const slugs = await fetchAllSlugs();
+  // Fetch slugs from all cities
+  console.log("\nFetching restaurant slugs from all cities...");
+  const allSlugs: { slug: string; city: string }[] = [];
 
-  // Filter to new slugs
-  const newSlugs = slugs.filter((slug) => !existingSlugs.has(slug));
-  console.log(`New restaurants to scrape: ${newSlugs.length}`);
+  for (const city of THATSUP_CITIES) {
+    const citySlugs = await fetchAllSlugsForCity(city);
+    // Only add slugs we haven't seen (dedupe across cities)
+    for (const item of citySlugs) {
+      if (!existingSlugs.has(item.slug) && !allSlugs.find((s) => s.slug === item.slug)) {
+        allSlugs.push(item);
+      }
+    }
+    if (citySlugs.length > 0) {
+      console.log(`  ${city}: ${citySlugs.length} restaurants`);
+    }
+    await sleep(300);
+  }
+
+  console.log(`\nNew restaurants to scrape: ${allSlugs.length}`);
   console.log(`Already scraped: ${existingSlugs.size}\n`);
 
-  if (newSlugs.length === 0) {
+  if (allSlugs.length === 0) {
     console.log("All restaurants already scraped. Nothing to do.");
     return existing;
   }
 
   const restaurants: ThatsupRaw[] = [...existing];
 
-  for (let i = 0; i < newSlugs.length; i++) {
-    const slug = newSlugs[i];
-    process.stdout.write(`[${i + 1}/${newSlugs.length}] `);
+  for (let i = 0; i < allSlugs.length; i++) {
+    const { slug, city } = allSlugs[i];
+    process.stdout.write(`[${i + 1}/${allSlugs.length}] `);
 
-    const restaurant = await scrapeRestaurant(slug);
+    const restaurant = await scrapeRestaurant(slug, city);
     if (restaurant) {
       restaurants.push(restaurant);
       const ratingStr = restaurant.rating ? `${restaurant.rating}/5` : "no rating";
@@ -260,7 +297,7 @@ export async function scrapeThatsup(): Promise<ThatsupRaw[]> {
   saveRawJson("thatsup.json", restaurants);
 
   console.log(`\nThatsup scrape complete: ${restaurants.length} restaurants`);
-  console.log(`  New: ${newSlugs.length}`);
+  console.log(`  New: ${allSlugs.length}`);
   console.log(`  Previously scraped: ${existing.length}`);
 
   // Stats by rating

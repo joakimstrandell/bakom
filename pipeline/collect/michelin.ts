@@ -1,6 +1,6 @@
 /**
- * Guide Michelin scraper for Stockholm restaurants.
- * Scrapes the listing page at guide.michelin.com for all Michelin-listed
+ * Guide Michelin scraper for Swedish restaurants.
+ * Scrapes the listing pages at guide.michelin.com for all Michelin-listed
  * restaurants: Selected (Good Cooking), Bib Gourmand, and 1-3 stars.
  *
  * Output: data/raw/michelin.json (MichelinRaw[])
@@ -9,12 +9,25 @@
  */
 
 import * as cheerio from "cheerio";
-import { fetchWithRetry, sleep, saveRawJson } from "../utils/fetch.js";
+import { fetchWithRetry, sleep, saveRawJson, loadRawJson } from "../utils/fetch.js";
 import type { MichelinRaw } from "../types.js";
 import type { MichelinDistinction } from "../../src/types.js";
 
 const MICHELIN_BASE = "https://guide.michelin.com";
-const LISTING_URL = `${MICHELIN_BASE}/se/en/stockholm-region/restaurants`;
+
+// All Swedish regions with Michelin restaurants
+const SWEDISH_REGIONS = [
+  "stockholm-region",
+  "goteborg-och-vastra-gotaland",
+  "skane",
+  "uppsala",
+  "orebro",
+  "vasterbotten",
+  "ostergotland",
+  "jamtland",
+  "halland",
+  "blekinge",
+];
 
 /**
  * Determine the Michelin distinction from the card's distinction icons.
@@ -46,8 +59,7 @@ function parseDistinction($card: cheerio.Cheerio<any>, $: cheerio.CheerioAPI): M
 }
 
 /**
- * Scrape all Michelin-listed restaurants from the Stockholm listing page.
- * The page shows all ~41 restaurants without needing pagination.
+ * Scrape all Michelin-listed restaurants from a region listing page.
  */
 async function scrapeListingPage(url: string): Promise<MichelinRaw[]> {
   console.log(`Fetching ${url}`);
@@ -73,7 +85,7 @@ async function scrapeListingPage(url: string): Promise<MichelinRaw[]> {
 
     // Location/city from the card
     const location = $card.find(".card__menu-footer--location").text().trim();
-    const city = location.split(",")[0]?.trim() || "Stockholm";
+    const city = location.split(",")[0]?.trim() || "";
 
     // Cuisine
     const cuisine = $card.find(".card__menu-footer--price").text().trim();
@@ -156,15 +168,41 @@ async function enrichFromDetailPage(
 
 // ─── Main scraper function ───────────────────────────────────────
 
-export async function scrapeMichelin(): Promise<MichelinRaw[]> {
-  console.log("=== Michelin Guide Scraper ===\n");
+export async function scrapeMichelin(
+  options: { force?: boolean } = {},
+): Promise<MichelinRaw[]> {
+  console.log("=== Michelin Guide Scraper (All Sweden) ===\n");
 
-  // Scrape the main listing page (all restaurants fit on one page)
-  let restaurants = await scrapeListingPage(LISTING_URL);
-  console.log(`Found ${restaurants.length} Michelin-listed restaurants\n`);
+  // In incremental mode, skip scraping if data already exists
+  if (!options.force) {
+    const existing = loadRawJson<MichelinRaw[]>("michelin.json");
+    if (existing && existing.length > 0) {
+      console.log(`Loaded ${existing.length} existing restaurants from michelin.json (use --force to re-scrape)`);
+      return existing;
+    }
+  }
 
-  // Check for additional pages if there are pagination links
-  // (Currently Stockholm has ~41 restaurants, all on one page)
+  // Scrape all Swedish regions
+  const restaurants: MichelinRaw[] = [];
+  const seenUrls = new Set<string>();
+
+  for (const region of SWEDISH_REGIONS) {
+    const url = `${MICHELIN_BASE}/se/en/${region}/restaurants`;
+    const regionRestaurants = await scrapeListingPage(url);
+
+    // Deduplicate (some restaurants may appear in multiple regions)
+    for (const r of regionRestaurants) {
+      if (!seenUrls.has(r.url)) {
+        seenUrls.add(r.url);
+        restaurants.push(r);
+      }
+    }
+
+    console.log(`  ${region}: ${regionRestaurants.length} restaurants (${restaurants.length} total unique)\n`);
+    await sleep(1000);
+  }
+
+  console.log(`Found ${restaurants.length} Michelin-listed restaurants across Sweden\n`);
 
   // Enrich each restaurant with detail page data
   console.log("Enriching with detail page data...\n");
@@ -201,7 +239,7 @@ export async function scrapeMichelin(): Promise<MichelinRaw[]> {
 // ─── CLI entry point ─────────────────────────────────────────────
 
 if (process.argv[1]?.includes("michelin")) {
-  scrapeMichelin().catch((err) => {
+  scrapeMichelin({ force: process.argv.includes("--force") }).catch((err) => {
     console.error("Fatal error:", err);
     process.exit(1);
   });

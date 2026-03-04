@@ -1,6 +1,6 @@
 /**
  * White Guide API scraper.
- * Fetches Stockholm restaurant data from the White Guide admin API.
+ * Fetches Swedish restaurant data from the White Guide admin API.
  *
  * Output: data/raw/whiteguide.json (WhiteGuideRaw[])
  *
@@ -14,7 +14,6 @@ import type { WhiteGuideClassification } from "../../src/types.js";
 const API_URL = "https://admin.whiteguide.com/api/search/detailed";
 
 const RELEASE_IDS = [93, 59, 60, 58, 98, 181];
-const STOCKHOLM_CITY_ID = 11;
 const SWEDEN_CHANNEL_ID = 3;
 
 /**
@@ -33,15 +32,16 @@ function mapClassification(
 
 // ─── Main scraper function ───────────────────────────────────────
 
-export async function scrapeWhiteGuide(): Promise<WhiteGuideRaw[]> {
-  console.log("=== White Guide Scraper ===\n");
+export async function scrapeWhiteGuide(
+  _options: { force?: boolean } = {},
+): Promise<WhiteGuideRaw[]> {
+  console.log("=== White Guide Scraper (All Sweden) ===\n");
 
-  // Build query string
+  // Build query string - no city filter to get all Swedish restaurants
   const params = new URLSearchParams();
   params.set("search[query]", "");
   params.set("type", "restaurant");
   params.set(`search[channel_ids][]`, String(SWEDEN_CHANNEL_ID));
-  params.set(`search[city_ids][]`, String(STOCKHOLM_CITY_ID));
   params.set("locale", "sv");
   params.set("search[tags_and]", "true");
 
@@ -61,7 +61,7 @@ export async function scrapeWhiteGuide(): Promise<WhiteGuideRaw[]> {
   const data: any[] = await res.json();
   console.log(`  API returned ${data.length} results`);
 
-  // Filter to Stockholm restaurants and map to our type
+  // Map to our type (no city filter - include all Swedish restaurants)
   const restaurants: WhiteGuideRaw[] = [];
   const seen = new Set<number>();
 
@@ -72,21 +72,22 @@ export async function scrapeWhiteGuide(): Promise<WhiteGuideRaw[]> {
     if (seen.has(placeId)) continue;
     seen.add(placeId);
 
-    // Extra safety: filter to Stockholm
     const address = item.address ?? "";
-    if (!address.toLowerCase().includes("stockholm")) continue;
-
     const scores = item.detailed?.scores_totals ?? {};
     const classification = mapClassification(
       item.classification_total_label ?? "REKOMMENDERAD"
     );
+
+    // Extract city from address (format: "Street, PostalCode City")
+    const cityMatch = address.match(/\d{3}\s?\d{2}\s+(.+?)$/);
+    const city = cityMatch?.[1]?.trim() || "";
 
     restaurants.push({
       source: "whiteguide",
       placeId,
       name: item.place_title ?? item.title ?? "",
       address,
-      city: "Stockholm",
+      city,
       classification,
       totalScore: scores.total ?? 0,
       foodScore: scores.food ?? 0,
@@ -109,7 +110,7 @@ export async function scrapeWhiteGuide(): Promise<WhiteGuideRaw[]> {
     byClass.set(r.classification, (byClass.get(r.classification) ?? 0) + 1);
   }
 
-  console.log(`\nWhite Guide scrape complete: ${restaurants.length} Stockholm restaurants`);
+  console.log(`\nWhite Guide scrape complete: ${restaurants.length} Swedish restaurants`);
   for (const [cls, count] of [...byClass.entries()].sort()) {
     console.log(`  ${cls}: ${count}`);
   }

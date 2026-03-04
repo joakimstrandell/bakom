@@ -7,17 +7,23 @@
     "dev": "vite dev",
     "build": "vite build",
     "start": "node .output/server/index.mjs",
+    "pipeline:collect": "tsx pipeline/collect.ts",
     "pipeline": "tsx pipeline/run.ts",
     "pipeline:krogguiden": "tsx pipeline/collect/krogguiden.ts",
     "pipeline:michelin": "tsx pipeline/collect/michelin.ts",
     "pipeline:whiteguide": "tsx pipeline/collect/whiteguide.ts",
     "pipeline:svd": "tsx pipeline/collect/svd.ts",
     "pipeline:dn": "tsx pipeline/collect/dn.ts",
+    "pipeline:di": "tsx pipeline/collect/di.ts",
     "pipeline:thatsup": "tsx pipeline/collect/thatsup.ts",
     "pipeline:google": "tsx pipeline/collect/google.ts",
     "pipeline:merge": "tsx pipeline/process/merge.ts",
+    "pipeline:refine": "tsx pipeline/process/refine.ts",
+    "pipeline:optimize": "tsx pipeline/process/optimize.ts",
     "pipeline:geocode": "tsx pipeline/process/geocode.ts",
-    "pipeline:duplicates": "tsx pipeline/find-duplicates.ts"
+    "pipeline:duplicates": "tsx pipeline/find-duplicates.ts",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.163.2",
@@ -49,6 +55,7 @@
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "vite": "^7.3.1",
-    "vite-tsconfig-paths": "^6.1.1"
+    "vite-tsconfig-paths": "^6.1.1",
+    "vitest": "^4.0.18"
   }
 }

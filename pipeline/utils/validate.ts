@@ -2,14 +2,6 @@
  * Input validation and data quality metrics for restaurant data.
  */
 
-// Stockholm region coordinate bounds (approximate)
-const STOCKHOLM_BOUNDS = {
-  latMin: 59.0,
-  latMax: 59.6,
-  lngMin: 17.5,
-  lngMax: 18.5,
-};
-
 export interface ValidationResult {
   isValid: boolean;
   errors: string[];
@@ -20,11 +12,10 @@ export interface QualityMetrics {
   total: number;
   withName: number;
   withAddress: number;
-  withValidCoords: number;
+  withCoords: number;
   withPhone: number;
   withWebsite: number;
   withHours: number;
-  coordsOutOfBounds: number;
   missingRequired: number;
 }
 
@@ -68,18 +59,6 @@ export function validateRestaurant(
     if (isNaN(lat) || isNaN(lng)) {
       errors.push(`[${source}] Invalid coordinates for ${record.name}: NaN`);
     }
-    // Check if within Stockholm bounds
-    else if (
-      lat < STOCKHOLM_BOUNDS.latMin ||
-      lat > STOCKHOLM_BOUNDS.latMax ||
-      lng < STOCKHOLM_BOUNDS.lngMin ||
-      lng > STOCKHOLM_BOUNDS.lngMax
-    ) {
-      warnings.push(
-        `[${source}] Coordinates outside Stockholm for ${record.name}: ` +
-          `${lat.toFixed(4)}, ${lng.toFixed(4)}`
-      );
-    }
   }
 
   // Phone validation (basic Swedish format check)
@@ -121,11 +100,10 @@ export function calculateQualityMetrics<
     total: records.length,
     withName: 0,
     withAddress: 0,
-    withValidCoords: 0,
+    withCoords: 0,
     withPhone: 0,
     withWebsite: 0,
     withHours: 0,
-    coordsOutOfBounds: 0,
     missingRequired: 0,
   };
 
@@ -139,16 +117,7 @@ export function calculateQualityMetrics<
     if (r.hours && r.hours.length > 0) metrics.withHours++;
 
     if (r.lat != null && r.lng != null && !isNaN(r.lat) && !isNaN(r.lng)) {
-      if (
-        r.lat >= STOCKHOLM_BOUNDS.latMin &&
-        r.lat <= STOCKHOLM_BOUNDS.latMax &&
-        r.lng >= STOCKHOLM_BOUNDS.lngMin &&
-        r.lng <= STOCKHOLM_BOUNDS.lngMax
-      ) {
-        metrics.withValidCoords++;
-      } else {
-        metrics.coordsOutOfBounds++;
-      }
+      metrics.withCoords++;
     }
   }
 
@@ -176,7 +145,7 @@ export function printQualityReport(
     `  With address: ${metrics.withAddress} (${pct(metrics.withAddress, metrics.total)})`
   );
   console.log(
-    `  With valid coords: ${metrics.withValidCoords} (${pct(metrics.withValidCoords, metrics.total)})`
+    `  With coords: ${metrics.withCoords} (${pct(metrics.withCoords, metrics.total)})`
   );
   console.log(
     `  With phone: ${metrics.withPhone} (${pct(metrics.withPhone, metrics.total)})`
@@ -187,10 +156,6 @@ export function printQualityReport(
   console.log(
     `  With hours: ${metrics.withHours} (${pct(metrics.withHours, metrics.total)})`
   );
-
-  if (metrics.coordsOutOfBounds > 0) {
-    console.log(`  Coords outside Stockholm: ${metrics.coordsOutOfBounds}`);
-  }
   if (metrics.missingRequired > 0) {
     console.log(`  Missing required fields: ${metrics.missingRequired}`);
   }

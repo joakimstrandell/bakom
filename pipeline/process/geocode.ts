@@ -3,8 +3,6 @@
  * This is mainly for restaurants where Google Places didn't return results.
  * Uses OpenStreetMap Nominatim (1 request/second rate limit).
  *
- * Reads and updates: data/restaurants.json
- *
  * CLI: tsx pipeline/process/geocode.ts
  */
 
@@ -12,12 +10,18 @@ import { sleep, loadJson, saveJson } from "../utils/fetch.js";
 import { geocodeAddress } from "../utils/geocode.js";
 import type { PipelineRestaurant } from "../types.js";
 
-export async function geocodeAll(): Promise<void> {
-  const restaurants = loadJson<PipelineRestaurant[]>("restaurants.json");
-  if (!restaurants) {
-    throw new Error("data/restaurants.json not found. Run scrape:merge first.");
-  }
-
+/**
+ * Geocode restaurants missing coordinates.
+ * Mutates the restaurants array in place.
+ *
+ * @param restaurants - Array of restaurants to geocode
+ * @param options.saveProgress - Optional callback to save intermediate progress
+ * @returns Stats: how many geocoded, skipped, failed
+ */
+export async function geocodeRestaurants(
+  restaurants: PipelineRestaurant[],
+  options?: { saveProgress?: () => void }
+): Promise<{ geocoded: number; skipped: number; failed: number }> {
   console.log(`=== Geocoding ${restaurants.length} restaurants ===\n`);
 
   let geocoded = 0;
@@ -60,24 +64,34 @@ export async function geocodeAll(): Promise<void> {
 
     // Save progress every 50 restaurants
     if (i % 50 === 49) {
-      saveJson("restaurants.json", restaurants);
+      options?.saveProgress?.();
       console.log(`  [progress saved — ${geocoded} geocoded so far]`);
     }
   }
-
-  // Final save
-  saveJson("restaurants.json", restaurants);
 
   console.log(`\nGeocoding complete:`);
   console.log(`  Geocoded: ${geocoded}`);
   console.log(`  Already had coords: ${skipped}`);
   console.log(`  Failed: ${failed}`);
+
+  return { geocoded, skipped, failed };
 }
 
 // ─── CLI entry point ─────────────────────────────────────────────
 
 if (process.argv[1]?.includes("geocode")) {
-  geocodeAll().catch((err) => {
+  (async () => {
+    const restaurants = loadJson<PipelineRestaurant[]>("restaurants.json");
+    if (!restaurants) {
+      throw new Error("data/restaurants.json not found. Run pipeline:merge first.");
+    }
+
+    await geocodeRestaurants(restaurants, {
+      saveProgress: () => saveJson("restaurants.json", restaurants),
+    });
+
+    saveJson("restaurants.json", restaurants);
+  })().catch((err) => {
     console.error("Fatal error:", err);
     process.exit(1);
   });

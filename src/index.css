@@ -1,3 +1,6 @@
+/* Premium typography - distinctive font pairing */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,400&display=swap');
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -6,8 +9,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-display: "Fraunces", Georgia, serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -123,19 +127,258 @@
 
 /* Marker cluster icons */
 .custom-cluster-icon {
-  background: rgba(15, 23, 42, 0.85);
+  background: rgba(15, 23, 42, 0.9);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid rgba(255, 255, 255, 0.8);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
 }
 
 .custom-cluster-icon span {
   color: white;
   font-size: 13px;
   font-weight: 600;
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: "DM Sans", system-ui, sans-serif;
   line-height: 1;
+}
+
+/* Small clusters (< 10 markers): more subtle */
+.custom-cluster-icon.custom-cluster-small {
+  background: rgba(100, 116, 139, 0.75);
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.custom-cluster-icon.custom-cluster-small span {
+  font-size: 11px;
+}
+
+/* ─── Premium Header & Search ─────────────────────────────────── */
+
+.header-bar {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.dark .header-bar {
+  background: rgba(20, 20, 25, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.search-input-wrapper {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.search-input-wrapper.collapsed {
+  width: 44px;
+}
+
+.search-input-wrapper.expanded {
+  width: min(400px, 50vw);
+}
+
+.search-input {
+  width: 100%;
+  height: 40px;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.03);
+  padding: 0 16px 0 44px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--foreground);
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 400;
+}
+
+.search-input:focus {
+  background: white;
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.dark .search-input {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark .search-input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.dark .search-input:focus {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ─── Filter Sidebar ──────────────────────────────────────────── */
+
+.dark .filter-sidebar-panel {
+  background: #18181b;
+}
+
+/* ─── Map Overlay Controls ────────────────────────────────────── */
+
+.map-overlay-btn {
+  position: absolute !important;
+  z-index: 1000 !important; /* Above Leaflet controls */
+  background: white;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.04);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.map-overlay-btn:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+.map-overlay-btn:active {
+  transform: translateY(0);
+}
+
+.map-overlay-btn:disabled {
+  cursor: wait;
+}
+
+.dark .map-overlay-btn {
+  background: rgba(30, 30, 35, 0.95);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+/* Mobile count badge on map */
+.count-badge.absolute {
+  z-index: 1000 !important;
+}
+
+/* ─── Filter Section Styling ──────────────────────────────────── */
+
+.filter-section {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.dark .filter-section {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
+}
+
+.filter-section-title {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dark .filter-section-title {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: transparent;
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.filter-chip:hover {
+  border-color: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.filter-chip.active {
+  background: var(--foreground);
+  color: var(--background);
+  border-color: transparent;
+}
+
+.dark .filter-chip {
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dark .filter-chip:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dark .filter-chip.active {
+  background: white;
+  color: #18181b;
+}
+
+/* ─── Logo & Branding ─────────────────────────────────────────── */
+
+.logo-text {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .logo-text {
+  background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* ─── Count Badge ─────────────────────────────────────────────── */
+
+.count-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.04);
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.count-badge strong {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.dark .count-badge {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.dark .count-badge strong {
+  color: white;
 }

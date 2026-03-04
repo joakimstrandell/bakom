@@ -1,20 +1,16 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { useCallback } from "react";
 import {
-  MapPin,
+  X,
   UtensilsCrossed,
   DollarSign,
-  X,
-  Search,
-  SlidersHorizontal,
-  ChevronUp,
   Star,
   Award,
   TrendingUp,
   Newspaper,
-  ThumbsUp,
+  RotateCcw,
 } from "lucide-react";
-import { useState } from "react";
+import type { MichelinDistinction, WhiteGuideClassification } from "../types";
+import type { FilterState, Range, FilterAction, RangeFilterKey } from "../hooks/useFilters";
 
 const CUISINES = [
   { key: "Crossover", label: "Crossover" },
@@ -35,333 +31,377 @@ const CUISINES = [
 
 const PRICES = ["$", "$$", "$$$", "$$$$"] as const;
 
-// ─── Per-source filter options ───────────────────────────────────
-
-type FilterOption = { value: number; label: string };
-
-const BAKOM_FILTERS: FilterOption[] = [
-  { value: 0, label: "Alla" },
-  { value: 5, label: "5+" },
-  { value: 6, label: "6+" },
-  { value: 7, label: "7+" },
-  { value: 8, label: "8+" },
+// Michelin distinctions for multi-select
+const MICHELIN_OPTIONS: { key: MichelinDistinction; label: string }[] = [
+  { key: "selected", label: "Selected" },
+  { key: "bib_gourmand", label: "Bib Gourmand" },
+  { key: "1_star", label: "★" },
+  { key: "2_star", label: "★★" },
+  { key: "3_star", label: "★★★" },
 ];
 
-const KROGGUIDEN_FILTERS: FilterOption[] = [
-  { value: 0, label: "Alla" },
-  { value: 3, label: "3+" },
-  { value: 3.5, label: "3.5+" },
-  { value: 4, label: "4+" },
+// White Guide classifications for multi-select
+const WG_OPTIONS: { key: WhiteGuideClassification; label: string }[] = [
+  { key: "recommended", label: "Rekommenderad" },
+  { key: "good_class", label: "God Klass" },
+  { key: "very_good_class", label: "Mycket God Klass" },
+  { key: "master_class", label: "Mästarklass" },
+  { key: "global_master_class", label: "Global Mästarklass" },
 ];
-
-const GOOGLE_FILTERS: FilterOption[] = [
-  { value: 0, label: "Alla" },
-  { value: 3, label: "3+" },
-  { value: 3.5, label: "3.5+" },
-  { value: 4, label: "4+" },
-];
-
-const SVD_FILTERS: FilterOption[] = [
-  { value: 0, label: "Alla" },
-  { value: 3, label: "3+" },
-  { value: 4, label: "4+" },
-  { value: 5, label: "5+" },
-];
-
-const MICHELIN_FILTERS: FilterOption[] = [
-  { value: 0, label: "Alla" },
-  { value: 1, label: "Selected+" },
-  { value: 2, label: "Bib Gourmand+" },
-  { value: 3, label: "★+" },
-];
-
-const WG_FILTERS: FilterOption[] = [
-  { value: 0, label: "Alla" },
-  { value: 1, label: "Rekommenderad+" },
-  { value: 2, label: "God Klass+" },
-  { value: 3, label: "MGK+" },
-];
-
-const THATSUP_FILTERS: FilterOption[] = [
-  { value: 0, label: "Alla" },
-  { value: 3, label: "3+" },
-  { value: 3.5, label: "3.5+" },
-  { value: 4, label: "4+" },
-];
-
-const DN_FILTERS: FilterOption[] = [
-  { value: 0, label: "Alla" },
-  { value: 1, label: "Recenserad" },
-];
-
-// Source filter configuration for rendering
-const SOURCE_FILTERS = [
-  { key: "bakom", label: "Bakom", icon: TrendingUp, options: BAKOM_FILTERS },
-  { key: "krogguiden", label: "Krogguiden", icon: Star, options: KROGGUIDEN_FILTERS },
-  { key: "google", label: "Google", icon: Star, options: GOOGLE_FILTERS },
-  { key: "thatsup", label: "Thatsup", icon: ThumbsUp, options: THATSUP_FILTERS },
-  { key: "svd", label: "SvD", icon: Newspaper, options: SVD_FILTERS },
-  { key: "michelin", label: "Michelin", icon: Award, options: MICHELIN_FILTERS },
-  { key: "whiteguide", label: "White Guide", icon: Award, options: WG_FILTERS },
-  { key: "dn", label: "DN", icon: Newspaper, options: DN_FILTERS },
-] as const;
 
 // ─── Props ───────────────────────────────────────────────────────
 
 type FiltersProps = {
-  cuisines: Set<string>;
-  prices: Set<string>;
-  searchQuery: string;
-  minBakomScore: number;
-  minKrogguiden: number;
-  minGoogle: number;
-  minThatsup: number;
-  minSvd: number;
-  minMichelin: number;
-  minWhiteGuide: number;
-  minDn: number;
-  onToggleCuisine: (c: string) => void;
-  onTogglePrice: (p: string) => void;
-  onSearchChange: (q: string) => void;
-  onSourceFilterChange: (source: string, value: number) => void;
-  onClear: () => void;
+  state: FilterState;
+  dispatch: React.Dispatch<FilterAction>;
+  onClose: () => void;
   total: number;
   filtered: number;
+  hasActiveFilters: boolean;
 };
 
-/** Get the current threshold value for a source key */
-function getSourceValue(key: string, props: FiltersProps): number {
-  switch (key) {
-    case "bakom": return props.minBakomScore;
-    case "krogguiden": return props.minKrogguiden;
-    case "google": return props.minGoogle;
-    case "thatsup": return props.minThatsup;
-    case "svd": return props.minSvd;
-    case "michelin": return props.minMichelin;
-    case "whiteguide": return props.minWhiteGuide;
-    case "dn": return props.minDn;
-    default: return 0;
-  }
-}
+// ─── Range Slider Component ──────────────────────────────────────
 
-/** Get active label for a source filter (for collapsed pills) */
-function getActiveLabel(key: string, value: number): string | null {
-  if (value === 0) return null;
-  const source = SOURCE_FILTERS.find((s) => s.key === key);
-  if (!source) return null;
-  const option = source.options.find((o) => o.value === value);
-  return option ? `${source.label} ${option.label}` : null;
+type RangeSliderProps = {
+  label: string;
+  icon: React.ReactNode;
+  range: Range;
+  min: number;
+  max: number;
+  step: number;
+  filterKey: RangeFilterKey;
+  dispatch: React.Dispatch<FilterAction>;
+  formatValue?: (value: number) => string;
+};
+
+function RangeSlider({
+  label,
+  icon,
+  range,
+  min,
+  max,
+  step,
+  filterKey,
+  dispatch,
+  formatValue,
+}: RangeSliderProps) {
+  const format = formatValue || ((v: number) => v.toString());
+  const isActive = range.min > min || range.max < max;
+
+  // Calculate percentages for the track highlight
+  const minPercent = ((range.min - min) / (max - min)) * 100;
+  const maxPercent = ((range.max - min) / (max - min)) * 100;
+
+  const handleMinChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const newMin = parseFloat(e.target.value);
+      dispatch({
+        type: "SET_RANGE",
+        payload: {
+          key: filterKey,
+          range: { min: Math.min(newMin, range.max - step), max: range.max },
+        },
+      });
+    },
+    [dispatch, filterKey, range.max, step]
+  );
+
+  const handleMaxChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const newMax = parseFloat(e.target.value);
+      dispatch({
+        type: "SET_RANGE",
+        payload: {
+          key: filterKey,
+          range: { min: range.min, max: Math.max(newMax, range.min + step) },
+        },
+      });
+    },
+    [dispatch, filterKey, range.min, step]
+  );
+
+  return (
+    <div className="filter-section">
+      <div className="filter-section-title">
+        {icon}
+        {label}
+        {isActive && (
+          <span className="ml-auto text-foreground font-semibold text-xs">
+            {format(range.min)} – {format(range.max)}
+          </span>
+        )}
+      </div>
+      <div className="relative h-6 flex items-center">
+        {/* Track background */}
+        <div className="absolute inset-x-0 h-2 bg-black/10 dark:bg-white/10 rounded-full" />
+
+        {/* Active range highlight */}
+        <div
+          className="absolute h-2 bg-foreground/30 rounded-full"
+          style={{
+            left: `${minPercent}%`,
+            right: `${100 - maxPercent}%`,
+          }}
+        />
+
+        {/* Min slider */}
+        <input
+          type="range"
+          min={min}
+          max={max}
+          step={step}
+          value={range.min}
+          onChange={handleMinChange}
+          className="absolute inset-x-0 w-full h-2 appearance-none bg-transparent cursor-pointer pointer-events-none
+            [&::-webkit-slider-thumb]:appearance-none
+            [&::-webkit-slider-thumb]:pointer-events-auto
+            [&::-webkit-slider-thumb]:w-4
+            [&::-webkit-slider-thumb]:h-4
+            [&::-webkit-slider-thumb]:rounded-full
+            [&::-webkit-slider-thumb]:bg-foreground
+            [&::-webkit-slider-thumb]:cursor-pointer
+            [&::-webkit-slider-thumb]:shadow-md
+            [&::-webkit-slider-thumb]:transition-transform
+            [&::-webkit-slider-thumb]:hover:scale-110"
+        />
+
+        {/* Max slider */}
+        <input
+          type="range"
+          min={min}
+          max={max}
+          step={step}
+          value={range.max}
+          onChange={handleMaxChange}
+          className="absolute inset-x-0 w-full h-2 appearance-none bg-transparent cursor-pointer pointer-events-none
+            [&::-webkit-slider-thumb]:appearance-none
+            [&::-webkit-slider-thumb]:pointer-events-auto
+            [&::-webkit-slider-thumb]:w-4
+            [&::-webkit-slider-thumb]:h-4
+            [&::-webkit-slider-thumb]:rounded-full
+            [&::-webkit-slider-thumb]:bg-foreground
+            [&::-webkit-slider-thumb]:cursor-pointer
+            [&::-webkit-slider-thumb]:shadow-md
+            [&::-webkit-slider-thumb]:transition-transform
+            [&::-webkit-slider-thumb]:hover:scale-110"
+        />
+      </div>
+
+      {/* Value labels */}
+      <div className="flex justify-between mt-1 text-xs text-muted-foreground">
+        <span>{format(min)}</span>
+        <span>{format(max)}</span>
+      </div>
+    </div>
+  );
 }
 
 // ─── Component ───────────────────────────────────────────────────
 
-export default function Filters(props: FiltersProps) {
-  const {
-    cuisines,
-    prices,
-    searchQuery,
-    onToggleCuisine,
-    onTogglePrice,
-    onSearchChange,
-    onSourceFilterChange,
-    onClear,
-    total,
-    filtered,
-  } = props;
-
-  const [expanded, setExpanded] = useState(false);
-
-  // Collect all active source filters
-  const activeSourceFilters = SOURCE_FILTERS
-    .map((s) => ({ key: s.key, value: getSourceValue(s.key, props) }))
-    .filter((s) => s.value > 0);
-
-  const hasFilters =
-    cuisines.size > 0 ||
-    prices.size > 0 ||
-    searchQuery.length > 0 ||
-    activeSourceFilters.length > 0;
-
-  const activeFilterCount =
-    cuisines.size +
-    prices.size +
-    activeSourceFilters.length;
-
+export default function Filters({
+  state,
+  dispatch,
+  onClose,
+  total,
+  filtered,
+  hasActiveFilters,
+}: FiltersProps) {
   return (
-    <div className="border-b bg-card">
-      {/* Collapsed bar — always visible */}
-      <div className="flex items-center gap-2 px-4 py-2">
-        <Button
-          variant={expanded ? "secondary" : "outline"}
-          size="sm"
-          onClick={() => setExpanded(!expanded)}
-          className="gap-1.5 shrink-0"
+    <div className="h-full flex flex-col">
+      {/* Header */}
+      <div className="flex items-center justify-between px-5 py-4 border-b border-black/6">
+        <div>
+          <h2
+            className="text-lg font-semibold"
+            style={{ fontFamily: "var(--font-display)" }}
+          >
+            Filter
+          </h2>
+          <p className="text-sm text-muted-foreground mt-0.5">
+            Visar <strong className="text-foreground">{filtered}</strong> av{" "}
+            {total} restauranger
+          </p>
+        </div>
+        <button
+          onPointerDown={onClose}
+          className="size-10 rounded-full flex items-center justify-center hover:bg-black/5 transition-colors select-none"
+          aria-label="Stäng filter"
         >
-          {expanded ? (
-            <ChevronUp className="size-4" />
-          ) : (
-            <SlidersHorizontal className="size-4" />
-          )}
-          <span className="hidden sm:inline">Filter & Sök</span>
-          {activeFilterCount > 0 && !expanded && (
-            <Badge variant="default" className="ml-1 h-5 min-w-5 px-1.5">
-              {activeFilterCount}
-            </Badge>
-          )}
-        </Button>
+          <X className="size-5" />
+        </button>
+      </div>
 
-        {/* Active filter pills when collapsed */}
-        {!expanded && hasFilters && (
-          <div className="flex items-center gap-1.5 overflow-x-auto min-w-0">
-            {searchQuery && (
-              <Badge variant="secondary" className="shrink-0 gap-1">
-                <Search className="size-3" />
-                {searchQuery}
-              </Badge>
-            )}
-            {activeSourceFilters.map(({ key, value }) => {
-              const label = getActiveLabel(key, value);
-              if (!label) return null;
-              return (
-                <Badge
-                  key={key}
-                  variant="secondary"
-                  className="shrink-0 cursor-pointer gap-1"
-                  onClick={() => onSourceFilterChange(key, 0)}
-                >
-                  {label}
-                  <X className="size-3" />
-                </Badge>
-              );
-            })}
-            {[...cuisines].map((c) => (
-              <Badge
-                key={c}
-                variant="secondary"
-                className="shrink-0 cursor-pointer gap-1"
-                onClick={() => onToggleCuisine(c)}
+      {/* Filter sections */}
+      <div className="flex-1 overflow-y-auto">
+        {/* Bakom Score range */}
+        <RangeSlider
+          label="Bakom Score"
+          icon={<TrendingUp className="size-4" />}
+          range={state.bakomScore}
+          min={0}
+          max={100}
+          step={5}
+          filterKey="bakomScore"
+          dispatch={dispatch}
+        />
+
+        {/* Krogguiden range */}
+        <RangeSlider
+          label="Krogguiden"
+          icon={<Star className="size-4" />}
+          range={state.krogguiden}
+          min={0}
+          max={5}
+          step={0.1}
+          filterKey="krogguiden"
+          dispatch={dispatch}
+          formatValue={(v) => v.toFixed(1)}
+        />
+
+        {/* Google range */}
+        <RangeSlider
+          label="Google"
+          icon={<Star className="size-4" />}
+          range={state.google}
+          min={0}
+          max={5}
+          step={0.1}
+          filterKey="google"
+          dispatch={dispatch}
+          formatValue={(v) => v.toFixed(1)}
+        />
+
+        {/* SvD range */}
+        <RangeSlider
+          label="SvD"
+          icon={<Newspaper className="size-4" />}
+          range={state.svd}
+          min={0}
+          max={6}
+          step={1}
+          filterKey="svd"
+          dispatch={dispatch}
+        />
+
+        {/* DI range */}
+        <RangeSlider
+          label="DI Weekend"
+          icon={<Newspaper className="size-4" />}
+          range={state.di}
+          min={0}
+          max={25}
+          step={1}
+          filterKey="di"
+          dispatch={dispatch}
+        />
+
+        {/* Michelin multi-select */}
+        <div className="filter-section">
+          <div className="filter-section-title">
+            <Award className="size-4" />
+            Michelin
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {MICHELIN_OPTIONS.map(({ key, label }) => (
+              <button
+                key={key}
+                onClick={() =>
+                  dispatch({ type: "TOGGLE_MICHELIN", payload: key })
+                }
+                className={`filter-chip ${state.selectedMichelin.has(key) ? "active" : ""}`}
               >
-                {CUISINES.find((x) => x.key === c)?.label ?? c}
-                <X className="size-3" />
-              </Badge>
-            ))}
-            {[...prices].map((p) => (
-              <Badge
-                key={p}
-                variant="secondary"
-                className="shrink-0 cursor-pointer gap-1"
-                onClick={() => onTogglePrice(p)}
-              >
-                {p}
-                <X className="size-3" />
-              </Badge>
+                {label}
+              </button>
             ))}
           </div>
-        )}
+        </div>
 
-        <div className="flex items-center gap-1.5 text-sm text-muted-foreground ml-auto shrink-0">
-          <MapPin className="size-4" />
-          <span>
-            {filtered === total ? (
-              <span className="font-medium text-foreground">{total}</span>
-            ) : (
-              <>
-                <span className="font-medium text-foreground">{filtered}</span>
-                <span className="hidden sm:inline"> av {total}</span>
-              </>
-            )}
-          </span>
+        {/* White Guide multi-select */}
+        <div className="filter-section">
+          <div className="filter-section-title">
+            <Award className="size-4" />
+            White Guide
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {WG_OPTIONS.map(({ key, label }) => (
+              <button
+                key={key}
+                onClick={() =>
+                  dispatch({ type: "TOGGLE_WHITEGUIDE", payload: key })
+                }
+                className={`filter-chip ${state.selectedWhiteGuide.has(key) ? "active" : ""}`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* DN toggle */}
+        <div className="filter-section">
+          <div className="filter-section-title">
+            <Newspaper className="size-4" />
+            DN
+          </div>
+          <button
+            onClick={() => dispatch({ type: "TOGGLE_DN" })}
+            className={`filter-chip ${state.dnRequired ? "active" : ""}`}
+          >
+            {state.dnRequired ? "Endast DN-recenserade" : "Alla"}
+          </button>
+        </div>
+
+        {/* Cuisine filters */}
+        <div className="filter-section">
+          <div className="filter-section-title">
+            <UtensilsCrossed className="size-4" />
+            Kök
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {CUISINES.map(({ key, label }) => (
+              <button
+                key={key}
+                onClick={() =>
+                  dispatch({ type: "TOGGLE_CUISINE", payload: key })
+                }
+                className={`filter-chip ${state.selectedCuisines.has(key) ? "active" : ""}`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Price filters */}
+        <div className="filter-section">
+          <div className="filter-section-title">
+            <DollarSign className="size-4" />
+            Prisklass
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {PRICES.map((p) => (
+              <button
+                key={p}
+                onClick={() => dispatch({ type: "TOGGLE_PRICE", payload: p })}
+                className={`filter-chip ${state.selectedPrices.has(p) ? "active" : ""}`}
+              >
+                {p}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
-      {/* Expanded panel */}
-      {expanded && (
-        <div className="px-4 pb-3 space-y-3 animate-in slide-in-from-top-2 duration-200">
-          {/* Search */}
-          <div className="relative max-w-sm">
-            <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 size-4 text-muted-foreground" />
-            <input
-              type="text"
-              placeholder="Sök restaurang..."
-              value={searchQuery}
-              onChange={(e) => onSearchChange(e.target.value)}
-              autoFocus
-              className="h-9 w-full rounded-md border border-input bg-transparent pl-9 pr-3 text-sm shadow-xs placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-            />
-          </div>
-
-          {/* Cuisine filters */}
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide shrink-0">
-              <UtensilsCrossed className="size-3.5" />
-              Kök
-            </span>
-            {CUISINES.map(({ key, label }) => (
-              <Badge
-                key={key}
-                variant={cuisines.has(key) ? "default" : "outline"}
-                className="cursor-pointer select-none transition-colors hover:bg-primary/10"
-                onClick={() => onToggleCuisine(key)}
-              >
-                {label}
-              </Badge>
-            ))}
-          </div>
-
-          {/* Price filters */}
-          <div className="flex items-center gap-2 flex-wrap">
-            <span className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide shrink-0">
-              <DollarSign className="size-3.5" />
-              Pris
-            </span>
-            {PRICES.map((p) => (
-              <Badge
-                key={p}
-                variant={prices.has(p) ? "default" : "outline"}
-                className="cursor-pointer select-none transition-colors hover:bg-primary/10"
-                onClick={() => onTogglePrice(p)}
-              >
-                {p}
-              </Badge>
-            ))}
-          </div>
-
-          {/* Per-source rating filters */}
-          {SOURCE_FILTERS.map(({ key, label, icon: Icon, options }) => {
-            const currentValue = getSourceValue(key, props);
-            return (
-              <div key={key} className="flex items-center gap-2 flex-wrap">
-                <span className="flex items-center gap-1.5 text-xs font-medium text-muted-foreground uppercase tracking-wide shrink-0">
-                  <Icon className="size-3.5" />
-                  {label}
-                </span>
-                {options.map(({ value, label: optLabel }) => (
-                  <Badge
-                    key={value}
-                    variant={currentValue === value ? "default" : "outline"}
-                    className="cursor-pointer select-none transition-colors hover:bg-primary/10"
-                    onClick={() => onSourceFilterChange(key, value)}
-                  >
-                    {optLabel}
-                  </Badge>
-                ))}
-              </div>
-            );
-          })}
-
-          {hasFilters && (
-            <div>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={onClear}
-                className="h-6 px-2 text-xs text-destructive hover:text-destructive"
-              >
-                <X className="size-3 mr-1" />
-                Rensa
-              </Button>
-            </div>
-          )}
+      {/* Footer */}
+      {hasActiveFilters && (
+        <div className="px-5 py-4 border-t border-black/6">
+          <button
+            onClick={() => dispatch({ type: "CLEAR_ALL" })}
+            className="w-full flex items-center justify-center gap-2 h-11 rounded-full border border-black/10 text-sm font-medium hover:bg-black/5 transition-colors"
+          >
+            <RotateCcw className="size-4" />
+            Rensa alla filter
+          </button>
         </div>
       )}
     </div>

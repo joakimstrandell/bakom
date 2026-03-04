@@ -1,7 +1,7 @@
 /**
  * Full data pipeline: runs all steps in sequence.
  *
- * Pipeline: krogguiden → michelin → whiteguide → svd → dn → thatsup → merge → google → geocode
+ * Pipeline: collect → merge → refine → optimize
  *
  * CLI: tsx pipeline/run.ts
  */
@@ -11,61 +11,51 @@ import { scrapeMichelin } from "./collect/michelin.js";
 import { scrapeWhiteGuide } from "./collect/whiteguide.js";
 import { scrapeSvd } from "./collect/svd.js";
 import { scrapeDn } from "./collect/dn.js";
-import { scrapeThatsup } from "./collect/thatsup.js";
-import { refineWithGoogle } from "./collect/google.js";
+import { scrapeDi } from "./collect/di.js";
 import { merge } from "./process/merge.js";
-import { geocodeAll } from "./process/geocode.js";
+import { refine } from "./process/refine.js";
+import { optimize } from "./process/optimize.js";
 
 async function main() {
   const start = Date.now();
   console.log("╔══════════════════════════════════════╗");
-  console.log("║   Stockholm Restaurant Scraper       ║");
+  console.log("║   Stockholm Restaurant Pipeline      ║");
   console.log("╚══════════════════════════════════════╝\n");
 
-  // Step 1: Scrape Krogguiden
+  // ── Collect ────────────────────────────────────────────────────
+
   console.log("━━━ Step 1/9: Krogguiden ━━━\n");
   await scrapeKrogguiden();
 
-  // Step 2: Scrape Michelin Guide
   console.log("\n━━━ Step 2/9: Michelin Guide ━━━\n");
   await scrapeMichelin();
 
-  // Step 3: Scrape White Guide
   console.log("\n━━━ Step 3/9: White Guide ━━━\n");
   await scrapeWhiteGuide();
 
-  // Step 4: Scrape SvD Krogguiden
   console.log("\n━━━ Step 4/9: SvD Krogguiden ━━━\n");
   await scrapeSvd();
 
-  // Step 5: Scrape DN Krogkommissionen
   console.log("\n━━━ Step 5/9: DN Krogkommissionen ━━━\n");
   await scrapeDn();
 
-  // Step 6: Scrape Thatsup
-  console.log("\n━━━ Step 6/9: Thatsup ━━━\n");
-  await scrapeThatsup();
+  console.log("\n━━━ Step 6/9: DI Weekend ━━━\n");
+  await scrapeDi();
 
-  // Step 7: Merge all sources
+  // ── Merge ──────────────────────────────────────────────────────
+
   console.log("\n━━━ Step 7/9: Merge ━━━\n");
   await merge();
 
-  // Step 8: Refine with Google Places API
-  console.log("\n━━━ Step 8/9: Google Places (refine) ━━━\n");
-  try {
-    await refineWithGoogle();
-  } catch (err) {
-    if ((err as Error).message?.includes("GOOGLE_PLACES_API_KEY")) {
-      console.log("⚠️  Skipping Google Places (no API key set)");
-      console.log("   Set GOOGLE_PLACES_API_KEY to enable this step.\n");
-    } else {
-      throw err;
-    }
-  }
+  // ── Refine ─────────────────────────────────────────────────────
 
-  // Step 9: Geocode missing coordinates
-  console.log("\n━━━ Step 9/9: Geocode ━━━\n");
-  await geocodeAll();
+  console.log("\n━━━ Step 8/9: Refine ━━━\n");
+  await refine();
+
+  // ── Optimize ───────────────────────────────────────────────────
+
+  console.log("\n━━━ Step 9/9: Optimize ━━━\n");
+  optimize();
 
   const elapsed = ((Date.now() - start) / 1000 / 60).toFixed(1);
   console.log(`\n✅ Pipeline complete in ${elapsed} minutes`);

@@ -1,14 +1,15 @@
 /**
- * Merge step: combines raw data from Krogguiden, Michelin and White Guide
- * into a single unified restaurants.json consumed by the frontend.
+ * Merge step: combines raw data from all sources into a single unified
+ * restaurants.json.
  *
  * Preserves existing Google data and coordinates from a previous
  * restaurants.json if it exists — so re-running merge doesn't wipe
  * out enrichment from later pipeline steps.
  *
- * Google is NOT part of merge — it runs after as a refinement step.
+ * Score calculation, enrichment, and frontend JSON generation are
+ * handled by the refine and optimize steps.
  *
- * Output: data/restaurants.json (Restaurant[])
+ * Output: data/restaurants.json (PipelineRestaurant[])
  *
  * CLI: tsx pipeline/process/merge.ts
  */
@@ -20,8 +21,7 @@ import {
   printQualityReport,
   validateRestaurant,
 } from "../utils/validate.js";
-import type { KrogguidenRaw, MichelinRaw, WhiteGuideRaw, SvdRaw, DnRaw, ThatsupRaw, ManualData, PipelineRestaurant } from "../types.js";
-import { calculateBakomScore } from "../../src/lib/score.js";
+import type { KrogguidenRaw, MichelinRaw, WhiteGuideRaw, SvdRaw, DnRaw, DiRaw, ManualData, PipelineRestaurant } from "../types.js";
 
 /** Valid price ranges — anything outside this set is treated as empty */
 const VALID_PRICES = new Set(["$", "$$", "$$$", "$$$$"]);
@@ -85,7 +85,7 @@ function applyManualData(
       slug: "",
       address: add.address ?? "",
       postalCode: add.postalCode ?? "",
-      city: add.city ?? "Stockholm",
+      city: add.city ?? "",
       region: "",
       phone: add.phone ?? "",
       website: add.website ?? "",
@@ -550,13 +550,17 @@ export async function merge(): Promise<PipelineRestaurant[]> {
         const id = generateId(s.name, s.address);
         const prev = existingById.get(id);
 
+        // Try to extract city from address (format: "Street, PostalCode City")
+        const cityMatch = s.address.match(/\d{3}\s?\d{2}\s+(.+?)$/);
+        const extractedCity = cityMatch?.[1]?.trim() || "";
+
         const restaurant: PipelineRestaurant = {
           id,
           name: s.name,
           slug: "",
           address: s.address,
           postalCode: "",
-          city: "Stockholm",
+          city: extractedCity,
           region: "",
           phone: "",
           website: "",
@@ -625,18 +629,16 @@ export async function merge(): Promise<PipelineRestaurant[]> {
     }
   }
 
-  // Match Thatsup restaurants
-  const thatsup = loadRawJson<ThatsupRaw[]>("thatsup.json");
-  console.log(`  Thatsup: ${thatsup?.length ?? 0} restaurants`);
+  // Match DI Weekend reviews
+  const di = loadRawJson<DiRaw[]>("di.json");
+  console.log(`  DI: ${di?.length ?? 0} reviews`);
+  let diMatches = 0;
 
-  let thatsupMatches = 0;
-  let thatsupNew = 0;
-
-  if (thatsup) {
-    for (const t of thatsup) {
+  if (di) {
+    for (const d of di) {
       const match = findRestaurantMatch(
-        t.name,
-        t.address,
+        d.name,
+        d.address,
         restaurantByName,
         (item) => item.address,
         0.85
@@ -644,64 +646,58 @@ export async function merge(): Promise<PipelineRestaurant[]> {
 
       if (match) {
         const r = match.item;
-        r.ratings.thatsup = t.rating;
-        r.thatsupRatingCount = t.reviewCount;
-        r.links.thatsup = t.url;
-        r.sourceIds.thatsup = t.slug;
-        if (!r.sources.includes("thatsup")) {
-          r.sources.push("thatsup");
+        r.ratings.di = d.totalScore;
+        r.links.di = d.url;
+        r.sourceIds.di = normalizeName(d.name);
+        if (!r.sources.includes("di")) {
+          r.sources.push("di");
         }
-        // Enrich with Thatsup data if missing
-        if (!r.lat && t.lat) r.lat = t.lat;
-        if (!r.lng && t.lng) r.lng = t.lng;
-        if (!r.phone && t.phone) r.phone = t.phone;
-        if (!r.website && t.website) r.website = t.website;
-        if (r.hours.length === 0 && t.hours.length > 0) r.hours = t.hours;
-
-        thatsupMatches++;
+        // Use DI coordinates as fallback if restaurant has none
+        if (!r.lat && d.lat) {
+          r.lat = d.lat;
+          r.lng = d.lng;
+        }
+        diMatches++;
         if (match.result.nameSimilarity < 1.0) {
-          console.log(`  Fuzzy: Thatsup "${t.name}" -> "${r.name}" (${(match.result.nameSimilarity * 100).toFixed(0)}%)`);
+          console.log(`  Fuzzy: DI "${d.name}" -> "${r.name}" (${(match.result.nameSimilarity * 100).toFixed(0)}%)`);
         }
-      } else if (t.address) {
-        // Create new restaurant from Thatsup
-        const id = generateId(t.name, t.address);
+      } else if (d.address) {
+        // Create new restaurant from DI review (has address + coords)
+        const id = generateId(d.name, d.address);
         const prev = existingById.get(id);
 
         const restaurant: PipelineRestaurant = {
           id,
-          name: t.name,
+          name: d.name,
           slug: "",
-          address: t.address,
-          postalCode: t.postalCode || "",
-          city: t.city || "Stockholm",
+          address: d.address,
+          postalCode: "",
+          city: d.city || "",
           region: "",
-          phone: t.phone || "",
-          website: t.website || "",
-          priceRange: sanitizePrice(t.priceRange),
-          cuisine: t.cuisine.join(", "),
+          phone: "",
+          website: "",
+          priceRange: "",
+          cuisine: "",
           image: "",
-          hours: t.hours || [],
-          lat: prev?.lat ?? t.lat,
-          lng: prev?.lng ?? t.lng,
+          hours: [],
+          lat: prev?.lat ?? d.lat,
+          lng: prev?.lng ?? d.lng,
           ratings: {
             krogguiden: null,
             google: prev?.ratings.google ?? null,
             michelin: null,
             whiteguide: null,
-            svd: null,
-            dn: null,
-            thatsup: t.rating,
+            di: d.totalScore,
           },
           links: {
-            thatsup: t.url,
+            di: d.url,
             google: prev?.links.google,
           },
           sourceIds: {
-            thatsup: t.slug,
+            di: normalizeName(d.name),
             google: prev?.sourceIds?.google ?? prev?.googlePlaceId,
           },
-          sources: ["thatsup"],
-          thatsupRatingCount: t.reviewCount,
+          sources: ["di"],
         };
 
         if (prev?.googlePlaceId) {
@@ -711,10 +707,9 @@ export async function merge(): Promise<PipelineRestaurant[]> {
         }
 
         restaurants.push(restaurant);
-        restaurantByName.set(normalizeName(t.name), restaurant);
-        thatsupNew++;
-        const ratingStr = t.rating ? `${t.rating}/5` : "no rating";
-        console.log(`  Thatsup-only: "${t.name}" (${ratingStr})`);
+        restaurantByName.set(normalizeName(d.name), restaurant);
+        diMatches++;
+        console.log(`  DI-only: "${d.name}" (${d.totalScore}/25)`);
       }
     }
   }
@@ -797,9 +792,6 @@ export async function merge(): Promise<PipelineRestaurant[]> {
         if (!primary.googleRatingCount && other.googleRatingCount) {
           primary.googleRatingCount = other.googleRatingCount;
         }
-        if (!primary.thatsupRatingCount && other.thatsupRatingCount) {
-          primary.thatsupRatingCount = other.thatsupRatingCount;
-        }
 
         // Fill missing basic fields from other
         if (!primary.phone && other.phone) primary.phone = other.phone;
@@ -819,15 +811,6 @@ export async function merge(): Promise<PipelineRestaurant[]> {
       restaurants = restaurants.filter((r) => !toRemove.has(r.id));
       console.log(`\n  Dedup by Google Place ID: merged ${deduped} duplicates (${before} → ${restaurants.length})`);
     }
-  }
-
-  // Calculate Bakom Score for all restaurants
-  for (const r of restaurants) {
-    r.bakomScore = calculateBakomScore({
-      ratings: r.ratings,
-      googleRatingCount: r.googleRatingCount,
-      thatsupRatingCount: r.thatsupRatingCount,
-    });
   }
 
   // Validate all restaurants
@@ -863,15 +846,14 @@ export async function merge(): Promise<PipelineRestaurant[]> {
 
   const withSvd = restaurants.filter((r) => r.ratings.svd).length;
   const withDn = restaurants.filter((r) => r.ratings.dn).length;
-  const withThatsup = restaurants.filter((r) => r.ratings.thatsup).length;
+  const withDi = restaurants.filter((r) => r.ratings.di).length;
 
   console.log(`\nMerge complete: ${restaurants.length} restaurants`);
   console.log(`  Michelin matches: ${michelinMatches} (${fuzzyMatches} fuzzy)`);
   console.log(`  White Guide matches: ${wgMatches}`);
   console.log(`  SvD matches: ${svdMatches}`);
   console.log(`  DN matches: ${dnMatches}`);
-  console.log(`  Thatsup matches: ${thatsupMatches}`);
-  console.log(`  Thatsup-only: ${thatsupNew}`);
+  console.log(`  DI matches: ${diMatches}`);
   console.log(`  Michelin-only: ${michelin ? michelin.length - michelinMatches : 0}`);
   console.log(`  White Guide-only: ${whiteguide ? whiteguide.length - wgMatches : 0}`);
   console.log(`  Preserved enrichment: ${preserved}`);
@@ -887,92 +869,13 @@ export async function merge(): Promise<PipelineRestaurant[]> {
   console.log(`  With White Guide classification: ${withWg}`);
   console.log(`  With SvD rating: ${withSvd}`);
   console.log(`  With DN review: ${withDn}`);
-  console.log(`  With Thatsup rating: ${withThatsup}`);
-
-  const withScore = restaurants.filter((r) => r.bakomScore != null);
-  if (withScore.length > 0) {
-    const scores = withScore.map((r) => r.bakomScore!);
-    const avg = scores.reduce((a, b) => a + b, 0) / scores.length;
-    console.log(`  With Bakom Score: ${withScore.length} (avg ${avg.toFixed(1)}, max ${Math.max(...scores).toFixed(1)})`);
-  }
+  console.log(`  With DI rating: ${withDi}`);
 
   // Print quality report
   const metrics = calculateQualityMetrics(restaurants);
   printQualityReport(metrics, "Merged Restaurants");
 
-  // Generate stripped frontend JSON (no pipeline-only fields, no empty values)
-  generateFrontendJson(restaurants);
-
   return restaurants;
-}
-
-/**
- * Generate a stripped restaurants.frontend.json for the web app.
- * Removes pipeline-only fields (slug, image, sourceIds, sources, googlePlaceId)
- * and strips null/empty values to minimize bundle size.
- */
-function generateFrontendJson(restaurants: PipelineRestaurant[]): void {
-  const stripped = restaurants.map((r) => {
-    const out: Record<string, unknown> = {};
-
-    // Required fields (always present)
-    out.id = r.id;
-    out.name = r.name;
-    out.lat = r.lat;
-    out.lng = r.lng;
-
-    // Optional string fields — omit if empty
-    if (r.address) out.address = r.address;
-    if (r.postalCode) out.postalCode = r.postalCode;
-    if (r.city) out.city = r.city;
-    if (r.region) out.region = r.region;
-    if (r.phone) out.phone = r.phone;
-    if (r.website) out.website = r.website;
-    if (r.priceRange) out.priceRange = r.priceRange;
-    if (r.cuisine) out.cuisine = r.cuisine;
-
-    // Hours — omit if empty array
-    if (r.hours && r.hours.length > 0) out.hours = r.hours;
-
-    // Ratings — only include non-null values
-    const ratings: Record<string, unknown> = {};
-    if (r.ratings) {
-      for (const [k, v] of Object.entries(r.ratings)) {
-        if (v != null) ratings[k] = v;
-      }
-    }
-    out.ratings = ratings;
-
-    // Links — only include non-empty values
-    const links: Record<string, unknown> = {};
-    if (r.links) {
-      for (const [k, v] of Object.entries(r.links)) {
-        if (v) links[k] = v;
-      }
-    }
-    out.links = links;
-
-    // Numeric optional fields
-    if (r.googleRatingCount) out.googleRatingCount = r.googleRatingCount;
-    if (r.thatsupRatingCount) out.thatsupRatingCount = r.thatsupRatingCount;
-    if (r.bakomScore != null) out.bakomScore = r.bakomScore;
-
-    // Only include businessStatus if not operational (saves space)
-    if (r.businessStatus && r.businessStatus !== "OPERATIONAL") {
-      out.businessStatus = r.businessStatus;
-    }
-
-    return out;
-  });
-
-  saveJson("restaurants.frontend.json", stripped);
-
-  const fullSize = JSON.stringify(restaurants).length;
-  const strippedSize = JSON.stringify(stripped).length;
-  console.log(
-    `\nFrontend JSON: ${(strippedSize / 1024).toFixed(0)}KB ` +
-    `(${((1 - strippedSize / fullSize) * 100).toFixed(0)}% smaller than full ${(fullSize / 1024).toFixed(0)}KB)`
-  );
 }
 
 // ─── CLI entry point ─────────────────────────────────────────────

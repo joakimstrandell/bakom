@@ -26,7 +26,7 @@ export function normalizeName(name: string): string {
       ""
     )
     .replace(/[''´`]/g, "")
-    .replace(/[^\p{L}\p{N}\s]/gu, "") // keep only letters, numbers, spaces
+    .replace(/[^\p{L}\p{N}\s]/gu, " ") // replace punctuation with space (so "PA&Co" → "pa co")
     .replace(/\s+/g, " ")
     .trim();
 }

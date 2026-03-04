@@ -1,23 +1,23 @@
 /**
- * Bakom Score — aggregated restaurant rating (0–10).
+ * Bakom Score — aggregated restaurant rating (0–100).
  *
  * Combines ratings from multiple sources with different weights:
  *   Michelin:    0.28  (most prestigious, strict assessment)
  *   White Guide: 0.20  (expert assessment, Swedish context)
  *   SvD:         0.16  (professional critic, 1–6 scale)
  *   Krogguiden:  0.16  (professional reviewers)
+ *   DI:          0.16  (professional critic, 15–25 scale)
  *   Google:      0.10  (crowd ratings)
- *   Thatsup:     0.10  (crowd ratings, Stockholm-focused)
  *
  * DN has no numeric rating (boolean only) — contributes to source
  * diversity but not to the weighted average.
  *
  * Only present sources are weighted. Additional adjustments:
- *   - Google/Thatsup: Bayesian dampening pulls scores toward a prior (7.0)
+ *   - Google: Bayesian dampening pulls scores toward a prior (7.0)
  *     when review count is low — prevents inflated scores from few reviews
  *   - Source diversity factor: single-source ratings are dampened
- *   - Michelin star floors: starred restaurants guaranteed minimum score
- *   - Monotonicity guarantee: adding a source never lowers the score
+ *   - Prestige ceiling: restaurants without expert sources are capped
+ *   - Perfection requirement: 100 requires all sources ≥ 9.5/10
  */
 
 import type {
@@ -29,48 +29,59 @@ import type {
 // ─── Normalization to 0–10 ──────────────────────────────────────
 
 const MICHELIN_SCORES: Record<MichelinDistinction, number> = {
-  selected: 6,
-  bib_gourmand: 7,
-  "1_star": 8.5,
+  selected: 6.5,
+  bib_gourmand: 8,
+  "1_star": 9,
   "2_star": 9.5,
   "3_star": 10,
 };
 
-// WG scores calibrated to Krogguiden equivalents:
-//   recommended ≈ K:3.6, good_class ≈ K:3.8, very_good_class ≈ K:4.2
+// WG scores calibrated so prestige sources always lift scores above non-prestige:
+//   recommended ≈ K:3.8, good_class ≈ K:4.0, very_good_class ≈ K:4.4
 const WHITEGUIDE_SCORES: Record<WhiteGuideClassification, number> = {
-  recommended: 6.5,
-  good_class: 7,
-  very_good_class: 8,
+  recommended: 7,
+  good_class: 7.5,
+  very_good_class: 8.5,
   master_class: 9,
   global_master_class: 10,
 };
 
-/** Michelin star floors — starred restaurants always rank at the top */
-const MICHELIN_FLOORS: Partial<Record<MichelinDistinction, number>> = {
-  "1_star": 8.0,
-  "2_star": 9.0,
-  "3_star": 10.0,
-};
+// ─── Prestige & Perfection thresholds ────────────────────────────
 
-/** Normalize a 1–5 expert rating (Krogguiden) to 0–10 */
+/** Minimum normalized score (0–10) required from ALL sources to achieve 100 */
+const PERFECTION_THRESHOLD = 9.5;
+
+/** Prestige ceiling levels (internal 0–10 scale) */
+const PRESTIGE_CEILINGS = {
+  none: 8.0, // No Michelin AND no White Guide → max 80
+  basic: 9.5, // Has White Guide OR Michelin selected/bib → max 95
+  // Michelin 1★+ → no ceiling
+} as const;
+
+/** Cap for "visited but no score" — Krogguiden link exists but no rating */
+const VISITED_NO_SCORE_CEILING = 7.0; // max 70
+
+/** Michelin distinctions that grant unlimited ceiling */
+const MICHELIN_STARRED: MichelinDistinction[] = ["1_star", "2_star", "3_star"];
+
+/** Normalize a 1–5 rating (Krogguiden) to 0–10: score/max */
 function normalize1to5(rating: number): number {
-  return (rating - 1) * 2.5;
+  return (rating / 5) * 10;
 }
 
-/**
- * Normalize a 1–5 crowd rating (Google/Thatsup) to 0–10.
- * More conservative than expert scale — maps 1→1, 5→9.
- * Reflects that crowd ratings cluster around 3.5–4.8 and
- * a 4.6 should be "very good" (~8) not "near perfect" (~9).
- */
+/** Normalize a 1–5 crowd rating (Google) to 0–10: score/max, then Bayesian dampened */
 function normalizeCrowd1to5(rating: number): number {
-  return (rating - 1) * 2.0 + 1.0;
+  return (rating / 5) * 10;
 }
 
-/** Normalize a 1–6 numeric rating (SvD scale) to 0–10 */
+/** Normalize a 1–6 numeric rating (SvD scale) to 0–10: score/max */
 function normalize1to6(rating: number): number {
-  return ((rating - 1) / 5) * 10;
+  return (rating / 6) * 10;
+}
+
+/** Normalize a 0–25 total score (DI Weekend scale) to 0–10 */
+function normalize0to25(rating: number): number {
+  return (rating / 25) * 10;
 }
 
 /**
@@ -92,8 +103,8 @@ const WEIGHTS = {
   whiteguide: 0.20,
   svd: 0.16,
   krogguiden: 0.16,
+  di: 0.16,
   google: 0.10,
-  thatsup: 0.10,
 } as const;
 
 // ─── Score calculation ──────────────────────────────────────────
@@ -101,7 +112,10 @@ const WEIGHTS = {
 export type ScoreInput = {
   ratings: SourceRatings;
   googleRatingCount?: number;
-  thatsupRatingCount?: number;
+  /** Links to source pages (used to detect "visited but no score" cases) */
+  links?: {
+    krogguiden?: string;
+  };
 };
 
 type SourceEntry = { weight: number; score: number };
@@ -110,57 +124,53 @@ type SourceEntry = { weight: number; score: number };
  * Collect all available source scores and weights for a restaurant.
  * DN is boolean-only (no numeric rating) so it's tracked separately
  * via the dnReviewed flag for diversity counting.
+ * Also returns all normalized scores for the perfection check.
  */
 function collectSources(input: ScoreInput): {
   entries: SourceEntry[];
   extraDiversitySources: number;
+  allNormalizedScores: number[];
 } {
   const { ratings, googleRatingCount } = input;
   const entries: SourceEntry[] = [];
+  const allNormalizedScores: number[] = [];
   let extraDiversitySources = 0;
 
   if (ratings.michelin) {
-    entries.push({
-      weight: WEIGHTS.michelin,
-      score: MICHELIN_SCORES[ratings.michelin],
-    });
+    const score = MICHELIN_SCORES[ratings.michelin];
+    entries.push({ weight: WEIGHTS.michelin, score });
+    allNormalizedScores.push(score);
   }
 
   if (ratings.whiteguide) {
-    entries.push({
-      weight: WEIGHTS.whiteguide,
-      score: WHITEGUIDE_SCORES[ratings.whiteguide],
-    });
+    const score = WHITEGUIDE_SCORES[ratings.whiteguide];
+    entries.push({ weight: WEIGHTS.whiteguide, score });
+    allNormalizedScores.push(score);
   }
 
   if (ratings.svd != null && ratings.svd > 0) {
-    entries.push({
-      weight: WEIGHTS.svd,
-      score: normalize1to6(ratings.svd),
-    });
+    const score = normalize1to6(ratings.svd);
+    entries.push({ weight: WEIGHTS.svd, score });
+    allNormalizedScores.push(score);
   }
 
   if (ratings.krogguiden != null && ratings.krogguiden > 0) {
-    entries.push({
-      weight: WEIGHTS.krogguiden,
-      score: normalize1to5(ratings.krogguiden),
-    });
+    const score = normalize1to5(ratings.krogguiden);
+    entries.push({ weight: WEIGHTS.krogguiden, score });
+    allNormalizedScores.push(score);
+  }
+
+  if (ratings.di != null && ratings.di > 0) {
+    const score = normalize0to25(ratings.di);
+    entries.push({ weight: WEIGHTS.di, score });
+    allNormalizedScores.push(score);
   }
 
   if (ratings.google != null && ratings.google > 0) {
     const count = googleRatingCount ?? 0;
-    entries.push({
-      weight: WEIGHTS.google,
-      score: bayesianDampen(normalizeCrowd1to5(ratings.google), count),
-    });
-  }
-
-  if (ratings.thatsup != null && ratings.thatsup > 0) {
-    const count = input.thatsupRatingCount ?? 0;
-    entries.push({
-      weight: WEIGHTS.thatsup,
-      score: bayesianDampen(normalizeCrowd1to5(ratings.thatsup), count),
-    });
+    const score = bayesianDampen(normalizeCrowd1to5(ratings.google), count);
+    entries.push({ weight: WEIGHTS.google, score });
+    allNormalizedScores.push(score);
   }
 
   // DN has no numeric rating — count it for diversity only
@@ -168,7 +178,7 @@ function collectSources(input: ScoreInput): {
     extraDiversitySources = 1;
   }
 
-  return { entries, extraDiversitySources };
+  return { entries, extraDiversitySources, allNormalizedScores };
 }
 
 /**
@@ -198,39 +208,65 @@ function computeScore(
   return score;
 }
 
+export type BakomScoreResult = {
+  /** Display score: integer 0–100 */
+  score: number;
+  /** Raw score: decimal 0–100 for fine-grained ranking */
+  scoreRaw: number;
+};
+
 /**
  * Calculate the Bakom Score for a restaurant.
- * Returns a number 0–10, or null if no ratings exist.
- *
- * Includes a monotonicity guarantee: adding a source can never
- * lower the score. We compute the score for every possible subset
- * (removing one source at a time) and take the maximum.
+ * Returns both display score (integer) and raw score (decimal), or null if no ratings exist.
  */
-export function calculateBakomScore(input: ScoreInput): number | null {
-  const { entries: sources, extraDiversitySources } = collectSources(input);
+export function calculateBakomScore(input: ScoreInput): BakomScoreResult | null {
+  const { entries: sources, extraDiversitySources, allNormalizedScores } =
+    collectSources(input);
   if (sources.length === 0) return null;
 
-  // Full score with all sources
+  const { ratings, links } = input;
+
+  // Compute weighted average with diversity dampening
   let score = computeScore(sources, extraDiversitySources);
 
-  // Monotonicity: check each "leave-one-out" subset.
-  // If removing a source yields a higher score, that source was dragging
-  // the average down — use the higher score instead.
-  if (sources.length >= 2) {
-    for (let i = 0; i < sources.length; i++) {
-      const subset = sources.filter((_, j) => j !== i);
-      const subScore = computeScore(subset, extraDiversitySources);
-      if (subScore > score) score = subScore;
+  // "Visited but no score" ceiling — Krogguiden reviewed but didn't rate
+  // This suggests the restaurant wasn't good enough to earn a score
+  const krogguidenVisitedNoScore =
+    links?.krogguiden && (ratings.krogguiden == null || ratings.krogguiden === 0);
+  if (krogguidenVisitedNoScore) {
+    score = Math.min(score, VISITED_NO_SCORE_CEILING);
+  }
+
+  // Prestige ceiling — restaurants without expert sources are capped
+  const hasMichelinStars =
+    ratings.michelin && MICHELIN_STARRED.includes(ratings.michelin);
+  const hasMichelin = !!ratings.michelin;
+  const hasWhiteGuide = !!ratings.whiteguide;
+
+  if (!hasMichelinStars) {
+    if (!hasMichelin && !hasWhiteGuide) {
+      // No prestige sources at all → cap at 85
+      score = Math.min(score, PRESTIGE_CEILINGS.none);
+    } else {
+      // Has White Guide OR Michelin selected/bib → cap at 95
+      score = Math.min(score, PRESTIGE_CEILINGS.basic);
     }
   }
 
-  // Michelin star floors — starred restaurants are always guaranteed
-  // a minimum score regardless of other factors
-  const { ratings } = input;
-  const floor = ratings.michelin
-    ? MICHELIN_FLOORS[ratings.michelin] ?? 0
-    : 0;
-  score = Math.max(score, floor);
+  // Convert from internal 0–10 scale to output 0–100 scale
+  const scoreRaw = score * 10;
+  let finalScore = Math.round(scoreRaw);
 
-  return Math.round(score * 10) / 10;
+  // Perfection requirement — 100 requires all sources ≥ 9.5
+  // and must have Michelin 1★+
+  if (finalScore >= 100) {
+    const allPerfect = allNormalizedScores.every(
+      (s) => s >= PERFECTION_THRESHOLD,
+    );
+    if (!hasMichelinStars || !allPerfect) {
+      finalScore = 99;
+    }
+  }
+
+  return { score: finalScore, scoreRaw };
 }

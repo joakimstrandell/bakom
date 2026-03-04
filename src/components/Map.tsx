@@ -10,18 +10,52 @@ import MarkerClusterGroup from "react-leaflet-cluster";
 import L from "leaflet";
 import "react-leaflet-cluster/dist/assets/MarkerCluster.css";
 import "react-leaflet-cluster/dist/assets/MarkerCluster.Default.css";
-import { useEffect, useMemo, useState } from "react";
-import type { Restaurant, MichelinDistinction, WhiteGuideClassification } from "../types";
-import { isOpen } from "../lib/isOpen";
+import { useEffect, useRef } from "react";
+import type { Restaurant } from "../types";
+import { scoreColor, scoreStrokeColor } from "../lib/colors";
+import type { Region } from "../lib/regions";
+import { getRegionConfig } from "../lib/regions";
+
+// ─── Marker Constants ────────────────────────────────────────────
 
 // SVG marker factory — creates a pin-shaped marker with the given color
-const MARKER_W = 20;
-const MARKER_H = 33;
+// Base viewBox is 25x41, padding added to prevent stroke clipping
+const MARKER_PAD = 2;
+const MARKER_W = 24;
+const MARKER_H = 37;
+const MARKER_ANCHOR_X = Math.round(
+  ((12.5 + MARKER_PAD) / (25 + MARKER_PAD * 2)) * MARKER_W
+);
+const MARKER_ANCHOR_Y = Math.round(
+  ((41 + MARKER_PAD) / (41 + MARKER_PAD * 2)) * MARKER_H
+);
+
+// Selected marker is larger with more padding for glow effect
+const SELECTED_PAD = 8;
+const MARKER_W_SELECTED = 32;
+const MARKER_H_SELECTED = 46;
+const SELECTED_ANCHOR_X = Math.round(
+  ((12.5 + SELECTED_PAD) / (25 + SELECTED_PAD * 2)) * MARKER_W_SELECTED
+);
+const SELECTED_ANCHOR_Y = Math.round(
+  ((41 + SELECTED_PAD) / (41 + SELECTED_PAD * 2)) * MARKER_H_SELECTED
+);
+
+// ─── SVG Marker Factories ────────────────────────────────────────
 
 function createMarkerSvg(fill: string, stroke: string): string {
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${MARKER_W}" height="${MARKER_H}" viewBox="0 0 25 41">
+  const p = MARKER_PAD;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${MARKER_W}" height="${MARKER_H}" viewBox="${-p} ${-p} ${25 + p * 2} ${41 + p * 2}">
     <path d="M12.5 0C5.6 0 0 5.6 0 12.5C0 21.9 12.5 41 12.5 41S25 21.9 25 12.5C25 5.6 19.4 0 12.5 0Z" fill="${fill}" stroke="${stroke}" stroke-width="1.5"/>
     <circle cx="12.5" cy="12.5" r="5.5" fill="white" opacity="0.9"/>
+  </svg>`;
+}
+
+function createSelectedMarkerSvg(): string {
+  const p = SELECTED_PAD;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${MARKER_W_SELECTED}" height="${MARKER_H_SELECTED}" viewBox="${-p} ${-p} ${25 + p * 2} ${41 + p * 2}">
+    <path d="M12.5 0C5.6 0 0 5.6 0 12.5C0 21.9 12.5 41 12.5 41S25 21.9 25 12.5C25 5.6 19.4 0 12.5 0Z" fill="#0f172a" stroke="#000000" stroke-width="2"/>
+    <circle cx="12.5" cy="12.5" r="5.5" fill="white" opacity="1"/>
   </svg>`;
 }
 
@@ -29,32 +63,59 @@ function svgToDataUrl(svg: string): string {
   return `data:image/svg+xml;base64,${btoa(svg)}`;
 }
 
-const greenIcon = L.icon({
-  iconUrl: svgToDataUrl(createMarkerSvg("#22c55e", "#16a34a")),
-  iconSize: [MARKER_W, MARKER_H],
-  iconAnchor: [MARKER_W / 2, MARKER_H],
-  popupAnchor: [1, -MARKER_H + 6],
-});
-
-const redIcon = L.icon({
-  iconUrl: svgToDataUrl(createMarkerSvg("#ef4444", "#dc2626")),
-  iconSize: [MARKER_W, MARKER_H],
-  iconAnchor: [MARKER_W / 2, MARKER_H],
-  popupAnchor: [1, -MARKER_H + 6],
-});
+// ─── Static Icons ────────────────────────────────────────────────
 
 const grayIcon = L.icon({
   iconUrl: svgToDataUrl(createMarkerSvg("#94a3b8", "#64748b")),
   iconSize: [MARKER_W, MARKER_H],
-  iconAnchor: [MARKER_W / 2, MARKER_H],
-  popupAnchor: [1, -MARKER_H + 6],
+  iconAnchor: [MARKER_ANCHOR_X, MARKER_ANCHOR_Y],
+  popupAnchor: [1, -MARKER_ANCHOR_Y + 6],
 });
 
-function getMarkerIcon(r: Restaurant): L.Icon {
-  const status = isOpen(r.hours);
-  if (status === null) return grayIcon; // no hours data
-  return status ? greenIcon : redIcon;
+// Single black icon for all selected states
+const selectedIcon = L.icon({
+  iconUrl: svgToDataUrl(createSelectedMarkerSvg()),
+  iconSize: [MARKER_W_SELECTED, MARKER_H_SELECTED],
+  iconAnchor: [SELECTED_ANCHOR_X, SELECTED_ANCHOR_Y],
+  popupAnchor: [1, -SELECTED_ANCHOR_Y + 6],
+});
+
+// Cache score-based marker icons (keyed by score rounded to nearest 5)
+// NOTE: Cannot use `new Map()` here — the default export `function Map` hoists
+// and shadows the global Map constructor, causing a runtime crash.
+const scoreIconCache: Record<string, L.Icon> = {};
+
+// ─── Marker Icon Factory ─────────────────────────────────────────
+
+function getMarkerIcon(r: Restaurant, isSelected: boolean = false): L.Icon {
+  // All selected pins use the same black icon
+  if (isSelected) {
+    return selectedIcon;
+  }
+
+  if (r.bakomScore == null) {
+    return grayIcon;
+  }
+
+  // Round to nearest 5 for caching (max 21 unique icons)
+  const rounded = Math.round(r.bakomScore / 5) * 5;
+  const key = String(rounded);
+
+  if (!scoreIconCache[key]) {
+    const fill = scoreColor(rounded);
+    const stroke = scoreStrokeColor(rounded);
+    scoreIconCache[key] = L.icon({
+      iconUrl: svgToDataUrl(createMarkerSvg(fill, stroke)),
+      iconSize: [MARKER_W, MARKER_H],
+      iconAnchor: [MARKER_ANCHOR_X, MARKER_ANCHOR_Y],
+      popupAnchor: [1, -MARKER_ANCHOR_Y + 6],
+    });
+  }
+
+  return scoreIconCache[key];
 }
+
+// ─── Map Helper Components ───────────────────────────────────────
 
 type UserLocation = { lat: number; lng: number } | null;
 
@@ -71,481 +132,114 @@ function FlyToUser({ location }: { location: UserLocation }) {
   return null;
 }
 
-// Weekday order for display (Monday first, Swedish convention)
-const DISPLAY_ORDER = [1, 2, 3, 4, 5, 6, 0]; // mån, tis, ons, tor, fre, lör, sön
-const DAY_NAMES = ["sön", "mån", "tis", "ons", "tor", "fre", "lör"];
+/** Flies to region center when region changes */
+function FlyToRegion({ region }: { region: Region }) {
+  const map = useMap();
+  const isFirstRender = useRef(true);
 
-/**
- * Formats hours by aggregating days with the same opening times.
- * e.g. mån 11–22, tis 11–22, ons 11–22 → mån–ons 11:00–22:00
- */
-function formatHours(r: Restaurant): string[] | null {
-  if (!r.hours || r.hours.length === 0) return null;
-
-  // Build a lookup: day → "open–close"
-  const dayTimeLookup: Record<number, string> = {};
-  for (const entry of r.hours) {
-    const timeStr = `${entry.open}–${entry.close}`;
-    for (const day of entry.days) {
-      dayTimeLookup[day] = timeStr;
+  useEffect(() => {
+    // Skip initial render - MapContainer handles that
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
     }
-  }
 
-  if (Object.keys(dayTimeLookup).length === 0) return null;
+    const config = getRegionConfig(region);
+    map.flyTo(config.center, config.zoom, { duration: 0.8 });
+  }, [region, map]);
 
-  // Group consecutive days (in display order) with the same time
-  const groups: { days: number[]; time: string }[] = [];
-  for (const day of DISPLAY_ORDER) {
-    const time = dayTimeLookup[day];
-    if (!time) continue;
-
-    const lastGroup = groups[groups.length - 1];
-    if (lastGroup && lastGroup.time === time) {
-      lastGroup.days.push(day);
-    } else {
-      groups.push({ days: [day], time });
-    }
-  }
-
-  return groups.map((g) => {
-    const first = DAY_NAMES[g.days[0]];
-    const last = DAY_NAMES[g.days[g.days.length - 1]];
-    const dayStr = g.days.length === 1 ? first : `${first}–${last}`;
-    return `${dayStr} ${g.time}`;
-  });
+  return null;
 }
 
-/** Tiny inline Google Maps pin icon */
-function GoogleMapsIcon() {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 92.3 132.3"
-      className="inline-block shrink-0"
-      style={{ width: 10, height: 14, marginRight: 3, verticalAlign: "middle" }}
-    >
-      <path
-        fill="#1a73e8"
-        d="M60.2 2.2C55.8.8 51 0 46.1 0 32 0 19.3 6.4 10.8 16.5l21.8 18.3L60.2 2.2z"
-      />
-      <path
-        fill="#ea4335"
-        d="M10.8 16.5C4.1 24.5 0 34.9 0 46.1c0 8.7 1.7 15.7 4.6 22l28-33.3-21.8-18.3z"
-      />
-      <path
-        fill="#4285f4"
-        d="M46.2 28.5c9.8 0 17.7 7.9 17.7 17.7 0 4.3-1.6 8.3-4.2 11.4 0 0 13.9-16.6 27.5-32.7-5.6-10.8-15.3-19-27-22.7L32.6 34.8c3.3-3.8 8.1-6.3 13.6-6.3"
-      />
-      <path
-        fill="#fbbc04"
-        d="M46.2 63.8c-9.8 0-17.7-7.9-17.7-17.7 0-4.3 1.5-8.3 4.1-11.3l-28 33.3c4.8 10.6 12.8 19.2 21 29.9l34.1-40.5c-3.3 3.9-8.1 6.3-13.5 6.3"
-      />
-      <path
-        fill="#34a853"
-        d="M59.1 109.2c15.4-24.1 33.3-35 33.3-63 0-7.7-1.9-14.9-5.2-21.3L25.6 98c2.6 3.4 5.3 7.3 7.9 11.3 9.4 14.5 6.8 23.1 12.8 23.1s3.4-8.7 12.8-23.2"
-      />
-    </svg>
-  );
-}
+/** Pans/zooms map to selected restaurant if not visible or in a cluster */
+const DECLUSTER_ZOOM = 14; // Zoom level where clusters break apart
 
-function OpenStatus({ restaurant }: { restaurant: Restaurant }) {
-  const status = isOpen(restaurant.hours);
-  if (status === null) return null;
-
-  return (
-    <p className="!text-xs !font-medium !mt-1 !mb-0">
-      {status ? (
-        <span className="text-green-600">● Öppet nu</span>
-      ) : (
-        <span className="text-red-500">● Stängt</span>
-      )}
-    </p>
-  );
-}
-
-/** Star display helper for numeric ratings */
-function StarDisplay({ rating }: { rating: number }) {
-  const fullStars = Math.floor(rating);
-  const hasHalf = rating - fullStars >= 0.3;
-  const emptyStars = 5 - fullStars - (hasHalf ? 1 : 0);
-
-  return (
-    <span className="inline-flex">
-      {Array.from({ length: fullStars }, (_, i) => (
-        <span key={`f${i}`} className="text-amber-400">
-          ★
-        </span>
-      ))}
-      {hasHalf && <span className="text-amber-400 opacity-50">★</span>}
-      {Array.from({ length: emptyStars }, (_, i) => (
-        <span key={`e${i}`} className="text-slate-300">
-          ★
-        </span>
-      ))}
-    </span>
-  );
-}
-
-/** Michelin distinction labels (short, for rating display) */
-const MICHELIN_LABELS: Record<MichelinDistinction, string> = {
-  selected: "Selected",
-  bib_gourmand: "Bib Gourmand",
-  "1_star": "★",
-  "2_star": "★★",
-  "3_star": "★★★",
-};
-
-/** White Guide classification labels (short) */
-const WHITEGUIDE_LABELS: Record<WhiteGuideClassification, string> = {
-  recommended: "Rekommenderad",
-  good_class: "God Klass",
-  very_good_class: "Mycket God Klass",
-  master_class: "Mästarklass",
-  global_master_class: "Global Mästarklass",
-};
-
-/** Bakom Score badge — prominent composite score */
-function BakomScoreBadge({ score }: { score: number }) {
-  const color =
-    score >= 8
-      ? "bg-emerald-600 text-white"
-      : score >= 6
-        ? "bg-amber-500 text-white"
-        : "bg-slate-500 text-white";
-
-  return (
-    <span
-      className={`inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-xs font-bold ${color}`}
-      title="Bakom Score — sammanvägt betyg 0–10"
-    >
-      {score.toFixed(1)}
-    </span>
-  );
-}
-
-// ─── Source rating row (link left, rating right) ──────────────
-
-function SourceRow({
-  label,
-  href,
-  color,
-  children,
+function PanToSelected({
+  restaurant,
+  rightSidebarWidth = 360,
 }: {
-  label: string;
-  href?: string;
-  color: string;
-  children: React.ReactNode;
+  restaurant: Restaurant | null;
+  rightSidebarWidth?: number;
 }) {
-  const name = href ? (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`${color} hover:underline`}
-    >
-      {label}
-    </a>
-  ) : (
-    <span className={color}>{label}</span>
-  );
+  const map = useMap();
 
-  return (
-    <div className="flex items-center justify-between gap-3">
-      <span className="text-xs font-medium">{name}</span>
-      <span className="text-xs text-slate-600 whitespace-nowrap">{children}</span>
-    </div>
-  );
+  useEffect(() => {
+    if (!restaurant || restaurant.lat == null || restaurant.lng == null) return;
+
+    const latlng = L.latLng(restaurant.lat, restaurant.lng);
+    const bounds = map.getBounds();
+    const currentZoom = map.getZoom();
+
+    // If zoomed out (clustered), zoom in to show individual pin
+    if (currentZoom < DECLUSTER_ZOOM) {
+      map.flyTo(latlng, DECLUSTER_ZOOM, { duration: 0.5 });
+      return;
+    }
+
+    // Check if outside map bounds entirely
+    if (!bounds.contains(latlng)) {
+      map.panTo(latlng, { duration: 0.3 });
+      return;
+    }
+
+    // Check if hidden under the right sidebar
+    const point = map.latLngToContainerPoint(latlng);
+    const mapSize = map.getSize();
+    const visibleWidth = mapSize.x - rightSidebarWidth;
+    const padding = 40;
+
+    if (point.x > visibleWidth - padding) {
+      // Pan to center the pin in the visible area
+      const targetX = visibleWidth / 2;
+      const offsetX = point.x - targetX;
+
+      const center = map.getCenter();
+      const targetPoint = map.latLngToContainerPoint(center);
+      const newCenter = map.containerPointToLatLng([
+        targetPoint.x + offsetX,
+        targetPoint.y,
+      ]);
+
+      map.panTo(newCenter, { duration: 0.3 });
+    }
+  }, [restaurant, map, rightSidebarWidth]);
+
+  return null;
 }
 
-/** SvD score as pips (1–6 scale) */
-function SvdPips({ score }: { score: number }) {
-  return (
-    <span className="inline-flex gap-0.5">
-      {Array.from({ length: 6 }, (_, i) => (
-        <span
-          key={i}
-          className={`inline-block w-1.5 h-1.5 rounded-full ${
-            i < score ? "bg-slate-700" : "bg-slate-200"
-          }`}
-        />
-      ))}
-    </span>
-  );
-}
-
-/** Tab: Omdöme — source ratings with links, "Besökt" fallback */
-function SourceRatingsTab({ restaurant: r }: { restaurant: Restaurant }) {
-  const { ratings } = r;
-
-  // Check if we have any rating OR any source link
-  const hasAny =
-    (ratings.krogguiden != null && ratings.krogguiden > 0) ||
-    (ratings.google != null && ratings.google > 0) ||
-    (ratings.thatsup != null && ratings.thatsup > 0) ||
-    ratings.michelin ||
-    ratings.whiteguide ||
-    (ratings.svd != null && ratings.svd > 0) ||
-    ratings.dn ||
-    r.links.krogguiden ||
-    r.links.google ||
-    r.links.thatsup ||
-    r.links.michelin ||
-    r.links.whiteguide ||
-    r.links.svd ||
-    r.links.dn;
-
-  if (!hasAny) {
-    return <p className="!text-xs !text-slate-400 !mt-1 !mb-0">Inga omdömen</p>;
-  }
-
-  const visited = <span className="text-slate-400 italic">Besökt</span>;
-
-  return (
-    <div className="space-y-1 mt-1">
-      {/* Michelin */}
-      {ratings.michelin ? (
-        <SourceRow label="Michelin" href={r.links.michelin} color="text-red-600">
-          {MICHELIN_LABELS[ratings.michelin]}
-        </SourceRow>
-      ) : r.links.michelin ? (
-        <SourceRow label="Michelin" href={r.links.michelin} color="text-red-600">
-          {visited}
-        </SourceRow>
-      ) : null}
-
-      {/* White Guide */}
-      {ratings.whiteguide ? (
-        <SourceRow label="White Guide" href={r.links.whiteguide} color="text-emerald-700">
-          {WHITEGUIDE_LABELS[ratings.whiteguide]}
-        </SourceRow>
-      ) : r.links.whiteguide ? (
-        <SourceRow label="White Guide" href={r.links.whiteguide} color="text-emerald-700">
-          {visited}
-        </SourceRow>
-      ) : null}
-
-      {/* SvD */}
-      {ratings.svd != null && ratings.svd > 0 ? (
-        <SourceRow label="SvD" href={r.links.svd} color="text-sky-700">
-          <span className="inline-flex items-center gap-1.5">
-            <SvdPips score={ratings.svd} />
-            {ratings.svd}/6
-          </span>
-        </SourceRow>
-      ) : r.links.svd ? (
-        <SourceRow label="SvD" href={r.links.svd} color="text-sky-700">
-          {visited}
-        </SourceRow>
-      ) : null}
-
-      {/* DN */}
-      {ratings.dn ? (
-        <SourceRow label="DN" href={r.links.dn} color="text-orange-700">
-          Recenserad
-        </SourceRow>
-      ) : r.links.dn ? (
-        <SourceRow label="DN" href={r.links.dn} color="text-orange-700">
-          {visited}
-        </SourceRow>
-      ) : null}
-
-      {/* Krogguiden */}
-      {ratings.krogguiden != null && ratings.krogguiden > 0 ? (
-        <SourceRow label="Krogguiden" href={r.links.krogguiden} color="text-blue-600">
-          <span className="inline-flex items-center gap-1">
-            <StarDisplay rating={ratings.krogguiden} />
-            {ratings.krogguiden.toFixed(1)}
-          </span>
-        </SourceRow>
-      ) : r.links.krogguiden ? (
-        <SourceRow label="Krogguiden" href={r.links.krogguiden} color="text-blue-600">
-          {visited}
-        </SourceRow>
-      ) : null}
-
-      {/* Thatsup */}
-      {ratings.thatsup != null && ratings.thatsup > 0 ? (
-        <SourceRow label="Thatsup" href={r.links.thatsup} color="text-pink-600">
-          <span className="inline-flex items-center gap-1">
-            <StarDisplay rating={ratings.thatsup} />
-            {ratings.thatsup.toFixed(1)}
-          </span>
-        </SourceRow>
-      ) : r.links.thatsup ? (
-        <SourceRow label="Thatsup" href={r.links.thatsup} color="text-pink-600">
-          {visited}
-        </SourceRow>
-      ) : null}
-
-      {/* Google */}
-      {ratings.google != null && ratings.google > 0 ? (
-        <SourceRow label="Google" href={r.links.google} color="text-blue-600">
-          <span className="inline-flex items-center gap-1">
-            <StarDisplay rating={ratings.google} />
-            {ratings.google.toFixed(1)}
-            {r.googleRatingCount != null &&
-              r.googleRatingCount > 0 &&
-              ` (${r.googleRatingCount})`}
-          </span>
-        </SourceRow>
-      ) : r.links.google ? (
-        <SourceRow label="Google" href={r.links.google} color="text-blue-600">
-          {visited}
-        </SourceRow>
-      ) : null}
-    </div>
-  );
-}
-
-/** Tab: Info — hours, address, phone, links */
-function InfoTab({ restaurant: r }: { restaurant: Restaurant }) {
-  const hours = formatHours(r);
-
-  return (
-    <div className="mt-1 space-y-1">
-      {hours && (
-        <div className="!text-xs !text-slate-500 leading-relaxed">
-          {hours.map((line, i) => (
-            <div key={i}>{line}</div>
-          ))}
-        </div>
-      )}
-      <a
-        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(r.name + " " + r.address + " " + r.city)}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="!text-xs !text-slate-600 flex items-start hover:text-blue-600 hover:underline cursor-pointer transition-colors"
-      >
-        <GoogleMapsIcon />
-        <span>
-          {r.address}
-          {r.postalCode && `, ${r.postalCode}`} {r.city}
-        </span>
-      </a>
-      {r.phone && (
-        <p className="!text-xs !mb-0">
-          <span className="text-slate-500">Tel:</span>{" "}
-          <a href={`tel:${r.phone}`} className="text-blue-600 hover:underline">
-            {r.phone}
-          </a>
-        </p>
-      )}
-      {r.priceRange && (
-        <p className="!text-xs !mb-0">
-          <span className="text-slate-500">Pris:</span> {r.priceRange}
-        </p>
-      )}
-      <div className="flex gap-3 pt-0.5 flex-wrap">
-        <a
-          href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(r.name + " " + r.address + " " + r.city)}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="!text-xs text-blue-600 hover:underline"
-        >
-          Vägbeskrivning
-        </a>
-        {r.website && (
-          <a
-            href={r.website}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="!text-xs text-blue-600 hover:underline"
-          >
-            Webbplats
-          </a>
-        )}
-      </div>
-    </div>
-  );
-}
-
-/** Complete popup content with tabs */
-function PopupContent({ restaurant: r }: { restaurant: Restaurant }) {
-  const [tab, setTab] = useState<"omdome" | "info">("omdome");
-
-  return (
-    <div className="min-w-[220px] max-w-[280px] font-sans">
-      {/* Header — always visible */}
-      <div className="flex items-start justify-between gap-2">
-        <p className="!text-sm !font-semibold !leading-tight !m-0">{r.name}</p>
-        {r.bakomScore != null && <BakomScoreBadge score={r.bakomScore} />}
-      </div>
-      {r.cuisine && (
-        <p className="!text-xs !text-slate-500 !mt-0.5 !m-0">{r.cuisine}</p>
-      )}
-      <OpenStatus restaurant={r} />
-
-      {/* Tab bar */}
-      <div className="flex gap-4 mt-1.5 border-b border-slate-200">
-        <button
-          type="button"
-          onClick={() => setTab("omdome")}
-          className={`pb-1 text-xs font-medium transition-colors border-b-2 -mb-px ${
-            tab === "omdome"
-              ? "border-slate-800 text-slate-800"
-              : "border-transparent text-slate-400 hover:text-slate-600"
-          }`}
-        >
-          Omdöme
-        </button>
-        <button
-          type="button"
-          onClick={() => setTab("info")}
-          className={`pb-1 text-xs font-medium transition-colors border-b-2 -mb-px ${
-            tab === "info"
-              ? "border-slate-800 text-slate-800"
-              : "border-transparent text-slate-400 hover:text-slate-600"
-          }`}
-        >
-          Info
-        </button>
-      </div>
-
-      {/* Tab content */}
-      {tab === "omdome" ? (
-        <SourceRatingsTab restaurant={r} />
-      ) : (
-        <InfoTab restaurant={r} />
-      )}
-    </div>
-  );
-}
-
-/** Helper to get the best numeric rating for a restaurant */
-export function bestNumericRating(r: Restaurant): number | null {
-  return r.ratings.google ?? r.ratings.krogguiden ?? null;
-}
+// ─── Main Map Component ──────────────────────────────────────────
 
 type MapProps = {
   restaurants: Restaurant[];
   userLocation: UserLocation;
+  selectedRestaurant?: Restaurant | null;
+  onSelectRestaurant?: (restaurant: Restaurant) => void;
+  region: Region;
 };
 
-export default function Map({ restaurants, userLocation }: MapProps) {
-  // Recalculate open/closed status every minute
-  const now = useMemo(() => new Date(), []);
-  const minuteKey = `${now.getHours()}:${now.getMinutes()}`;
-
-  // Force re-render every minute for live status updates
-  useEffect(() => {
-    const interval = setInterval(() => {
-      // Trigger re-render by updating state in parent
-    }, 60000);
-    return () => clearInterval(interval);
-  }, []);
+export default function Map({
+  restaurants,
+  userLocation,
+  selectedRestaurant,
+  onSelectRestaurant,
+  region,
+}: MapProps) {
+  const regionConfig = getRegionConfig(region);
 
   return (
     <MapContainer
-      center={[59.33, 18.07]}
-      zoom={12}
+      center={regionConfig.center}
+      zoom={regionConfig.zoom}
       style={{ height: "100%", width: "100%" }}
     >
       <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/">CARTO</a>'
+        url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
       />
 
+      <FlyToRegion region={region} />
       <FlyToUser location={userLocation} />
+      <PanToSelected restaurant={selectedRestaurant ?? null} />
 
       {/* User location indicator */}
       {userLocation && (
@@ -584,10 +278,31 @@ export default function Map({ restaurants, userLocation }: MapProps) {
       {/* Restaurant markers */}
       <MarkerClusterGroup
         chunkedLoading
-        maxClusterRadius={28}
-        iconCreateFunction={(cluster: L.MarkerCluster) => {
+        maxClusterRadius={60}
+        disableClusteringAtZoom={14}
+        zoomToBoundsOnClick={false}
+        spiderfyOnMaxZoom={false}
+        showCoverageOnHover
+        eventHandlers={{
+          clusterclick: (e) => {
+            const cluster = e.propagatedFrom;
+            const bounds = cluster.getBounds();
+            // Zoom to cluster bounds, ensuring we reach zoom 14+ where pins show individually
+            e.target._map.fitBounds(bounds, { maxZoom: 16, padding: [40, 40] });
+          },
+        }}
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        iconCreateFunction={(cluster: any) => {
           const count = cluster.getChildCount();
-          const size = count < 20 ? 36 : count < 50 ? 42 : 48;
+          // Small clusters (< 10): smaller, more subtle appearance
+          if (count < 10) {
+            return L.divIcon({
+              html: `<span>${count}</span>`,
+              className: "custom-cluster-icon custom-cluster-small",
+              iconSize: L.point(28, 28),
+            });
+          }
+          const size = count < 50 ? 40 : count < 100 ? 48 : 56;
           return L.divIcon({
             html: `<span>${count}</span>`,
             className: "custom-cluster-icon",
@@ -595,13 +310,20 @@ export default function Map({ restaurants, userLocation }: MapProps) {
           });
         }}
       >
-      {restaurants.map((r) => (
-        <Marker key={r.id} position={[r.lat!, r.lng!]} icon={getMarkerIcon(r)}>
-          <Popup>
-            <PopupContent restaurant={r} />
-          </Popup>
-        </Marker>
-      ))}
+        {restaurants.map((r) => {
+          const isSelected = selectedRestaurant?.id === r.id;
+          return (
+            <Marker
+              key={r.id}
+              position={[r.lat!, r.lng!]}
+              icon={getMarkerIcon(r, isSelected)}
+              zIndexOffset={isSelected ? 1000 : 0}
+              eventHandlers={{
+                click: () => onSelectRestaurant?.(r),
+              }}
+            />
+          );
+        })}
       </MarkerClusterGroup>
     </MapContainer>
   );

@@ -108,27 +108,24 @@ export type DnRaw = {
   publishedAt: string;
 };
 
-/** Raw output from Thatsup scraper */
-export type ThatsupRaw = {
-  source: "thatsup";
-  slug: string;
+/** Raw output from DI Weekend krogguide */
+export type DiRaw = {
+  source: "di";
   name: string;
   address: string;
-  postalCode: string;
   city: string;
-  phone: string;
-  website: string;
-  cuisine: string[];
-  priceRange: string;
-  rating: number | null; // 1-5 scale (user reviews)
-  reviewCount: number;
-  hours: import("../src/types.js").HoursEntry[];
+  totalScore: number; // 15–24 (Mat + Miljö + Service, max 25)
+  foodScore: number; // 9–15
+  environmentScore: number; // 3–5
+  serviceScore: number; // 2–5
+  priceClass: string; // "Lågt" | "Medel" | "Högt" | "Mycket högt"
+  url: string;
+  publishedAt: string;
   lat: number | null;
   lng: number | null;
-  url: string;
 };
 
-export type SourceRecord = KrogguidenRaw | GoogleRaw | MichelinRaw | WhiteGuideRaw | SvdRaw | DnRaw | ThatsupRaw;
+export type SourceRecord = KrogguidenRaw | GoogleRaw | MichelinRaw | WhiteGuideRaw | SvdRaw | DnRaw | DiRaw;
 
 // ─── Manual Data Types ────────────────────────────────────────────
 

@@ -1,21 +1,17 @@
 /**
- * Google Places API refinement step.
- * Reads data/restaurants.json (post-merge) and enriches each restaurant
- * with Google Places data: address, phone, website, hours, rating,
- * coordinates, placeId, and Google Maps link.
+ * Google Places API enrichment.
+ * Enriches restaurants with Google Places data: address, phone, website,
+ * hours, rating, coordinates, placeId, and Google Maps link.
  *
  * Skips restaurants that already have a googlePlaceId (already enriched).
  *
  * Requires: GOOGLE_PLACES_API_KEY environment variable.
- *
- * Reads & updates: data/restaurants.json
  *
  * CLI: tsx pipeline/collect/google.ts
  */
 
 import { sleep, loadJson, saveJson } from "../utils/fetch.js";
 import { parseGoogleHours } from "../utils/hours.js";
-import { calculateBakomScore } from "../../src/lib/score.js";
 import type { PipelineRestaurant } from "../types.js";
 
 const API_KEY = process.env.GOOGLE_PLACES_API_KEY;
@@ -36,8 +32,49 @@ const FIELD_MASK = [
 ].join(",");
 
 /**
+ * Approximate coordinates for major Swedish cities (for location bias).
+ */
+const CITY_COORDS: Record<string, { lat: number; lng: number }> = {
+  stockholm: { lat: 59.33, lng: 18.07 },
+  göteborg: { lat: 57.71, lng: 11.97 },
+  gothenburg: { lat: 57.71, lng: 11.97 },
+  malmö: { lat: 55.60, lng: 13.00 },
+  malmo: { lat: 55.60, lng: 13.00 },
+  uppsala: { lat: 59.86, lng: 17.64 },
+  linköping: { lat: 58.41, lng: 15.62 },
+  örebro: { lat: 59.27, lng: 15.21 },
+  västerås: { lat: 59.61, lng: 16.55 },
+  helsingborg: { lat: 56.05, lng: 12.69 },
+  norrköping: { lat: 58.59, lng: 16.18 },
+  jönköping: { lat: 57.78, lng: 14.16 },
+  lund: { lat: 55.70, lng: 13.19 },
+  umeå: { lat: 63.83, lng: 20.26 },
+  gävle: { lat: 60.67, lng: 17.14 },
+  borås: { lat: 57.72, lng: 12.94 },
+  södertälje: { lat: 59.20, lng: 17.63 },
+  eskilstuna: { lat: 59.37, lng: 16.51 },
+  halmstad: { lat: 56.67, lng: 12.86 },
+  växjö: { lat: 56.88, lng: 14.81 },
+  karlstad: { lat: 59.40, lng: 13.50 },
+  sundsvall: { lat: 62.39, lng: 17.31 },
+};
+
+/**
+ * Get location bias for a city (returns Sweden center if city not found).
+ */
+function getLocationBias(city: string): { latitude: number; longitude: number } {
+  const normalized = city.toLowerCase().trim();
+  const coords = CITY_COORDS[normalized];
+  if (coords) {
+    return { latitude: coords.lat, longitude: coords.lng };
+  }
+  // Default to Sweden center (covers whole country reasonably)
+  return { latitude: 62.0, longitude: 15.0 };
+}
+
+/**
  * Search for a restaurant via Google Places Text Search API.
- * Uses location bias around Stockholm to improve match accuracy.
+ * Uses location bias based on the restaurant's city.
  */
 const API_TIMEOUT = 15000; // 15s timeout for API calls
 
@@ -60,6 +97,8 @@ async function searchPlace(
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), API_TIMEOUT);
 
+  const locationBias = getLocationBias(city);
+
   try {
     const res = await fetch(
       "https://places.googleapis.com/v1/places:searchText",
@@ -72,11 +111,11 @@ async function searchPlace(
           "X-Goog-FieldMask": FIELD_MASK,
         },
         body: JSON.stringify({
-          textQuery: `${name}, ${city}`,
+          textQuery: `${name}, ${city}, Sweden`,
           locationBias: {
             circle: {
-              center: { latitude: 59.33, longitude: 18.07 },
-              radius: 30000.0, // 30km around Stockholm center
+              center: locationBias,
+              radius: 50000.0, // 50km radius
             },
           },
           languageCode: "sv",
@@ -120,9 +159,20 @@ async function searchPlace(
   }
 }
 
-// ─── Main refinement function ─────────────────────────────────────
+// ─── Enrichment function ─────────────────────────────────────────
 
-export async function refineWithGoogle(): Promise<void> {
+/**
+ * Enrich restaurants with Google Places data.
+ * Mutates the restaurants array in place.
+ *
+ * @param restaurants - Array of restaurants to enrich
+ * @param options.saveProgress - Optional callback to save intermediate progress
+ * @returns Stats: how many enriched vs not found
+ */
+export async function enrichWithGoogle(
+  restaurants: PipelineRestaurant[],
+  options?: { saveProgress?: () => void; force?: boolean }
+): Promise<{ enriched: number; notFound: number }> {
   if (!API_KEY) {
     throw new Error(
       "GOOGLE_PLACES_API_KEY environment variable is required.\n" +
@@ -130,26 +180,24 @@ export async function refineWithGoogle(): Promise<void> {
     );
   }
 
-  console.log("=== Google Places Refinement ===\n");
+  const force = options?.force ?? false;
+  console.log(`=== Google Places Enrichment${force ? " (--force)" : ""} ===\n`);
 
-  const restaurants = loadJson<PipelineRestaurant[]>("restaurants.json");
-  if (!restaurants) {
-    throw new Error(
-      "data/restaurants.json not found. Run scrape:merge first."
-    );
-  }
-
-  // Split into already-enriched and needs-enrichment
-  const needsEnrichment = restaurants.filter((r) => !r.googlePlaceId);
+  // With --force, re-enrich all restaurants. Otherwise only those without googlePlaceId.
+  const needsEnrichment = force
+    ? restaurants
+    : restaurants.filter((r) => !r.googlePlaceId);
   const alreadyEnriched = restaurants.length - needsEnrichment.length;
 
   console.log(`  Total restaurants: ${restaurants.length}`);
-  console.log(`  Already enriched (has googlePlaceId): ${alreadyEnriched}`);
-  console.log(`  Needs enrichment: ${needsEnrichment.length}\n`);
+  if (!force) {
+    console.log(`  Already enriched (has googlePlaceId): ${alreadyEnriched}`);
+  }
+  console.log(`  ${force ? "Will re-enrich" : "Needs enrichment"}: ${needsEnrichment.length}\n`);
 
   if (needsEnrichment.length === 0) {
     console.log("All restaurants already have Google data. Nothing to do.");
-    return;
+    return { enriched: 0, notFound: 0 };
   }
 
   let enriched = 0;
@@ -162,7 +210,7 @@ export async function refineWithGoogle(): Promise<void> {
     );
 
     try {
-      const result = await searchPlace(r.name, r.city || "Stockholm");
+      const result = await searchPlace(r.name, r.city || "Sweden");
 
       if (result) {
         // Update restaurant with Google data
@@ -188,13 +236,6 @@ export async function refineWithGoogle(): Promise<void> {
           r.sources.push("google");
         }
 
-        // Recalculate Bakom Score with new Google data
-        r.bakomScore = calculateBakomScore({
-          ratings: r.ratings,
-          googleRatingCount: r.googleRatingCount,
-          thatsupRatingCount: r.thatsupRatingCount,
-        });
-
         enriched++;
         const statusTag = result.businessStatus !== "OPERATIONAL"
           ? ` [${result.businessStatus}]`
@@ -214,25 +255,35 @@ export async function refineWithGoogle(): Promise<void> {
 
     // Save progress every 100 restaurants
     if (i % 100 === 99) {
-      saveJson("restaurants.json", restaurants);
+      options?.saveProgress?.();
       console.log(`  [progress saved — ${enriched} enriched so far]\n`);
     }
   }
 
-  // Final save
-  saveJson("restaurants.json", restaurants);
-
-  console.log(`\nGoogle Places refinement complete:`);
+  console.log(`\nGoogle Places enrichment complete:`);
   console.log(`  Enriched: ${enriched}`);
   console.log(`  Not found: ${notFound}`);
   console.log(`  Previously enriched: ${alreadyEnriched}`);
   console.log(`  Total with Google data: ${alreadyEnriched + enriched}`);
+
+  return { enriched, notFound };
 }
 
 // ─── CLI entry point ─────────────────────────────────────────────
 
 if (process.argv[1]?.includes("google")) {
-  refineWithGoogle().catch((err) => {
+  (async () => {
+    const restaurants = loadJson<PipelineRestaurant[]>("restaurants.json");
+    if (!restaurants) {
+      throw new Error("data/restaurants.json not found. Run pipeline:merge first.");
+    }
+
+    await enrichWithGoogle(restaurants, {
+      saveProgress: () => saveJson("restaurants.json", restaurants),
+    });
+
+    saveJson("restaurants.json", restaurants);
+  })().catch((err) => {
     console.error("Fatal error:", err);
     process.exit(1);
   });

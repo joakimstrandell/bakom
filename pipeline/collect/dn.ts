@@ -112,11 +112,13 @@ async function scrapeArticle(url: string): Promise<DnRaw | null> {
 
 // ─── Main scraper function ───────────────────────────────────────
 
-export async function scrapeDn(): Promise<DnRaw[]> {
+export async function scrapeDn(
+  options: { force?: boolean } = {},
+): Promise<DnRaw[]> {
   console.log("=== DN Krogkommissionen Scraper ===\n");
 
-  // Load existing data to avoid re-scraping
-  const existing = loadRawJson<DnRaw[]>("dn.json") ?? [];
+  // Load existing data to avoid re-scraping (skip when --force)
+  const existing = options.force ? [] : (loadRawJson<DnRaw[]>("dn.json") ?? []);
   const existingSlugs = new Set(existing.map((r) => r.slug));
 
   if (existing.length > 0) {
@@ -177,7 +179,7 @@ export async function scrapeDn(): Promise<DnRaw[]> {
 // ─── CLI entry point ─────────────────────────────────────────────
 
 if (process.argv[1]?.includes("dn")) {
-  scrapeDn().catch((err) => {
+  scrapeDn({ force: process.argv.includes("--force") }).catch((err) => {
     console.error("Fatal error:", err);
     process.exit(1);
   });

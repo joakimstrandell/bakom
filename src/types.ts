@@ -25,7 +25,7 @@ export type SourceLinks = {
   whiteguide?: string;
   svd?: string;
   dn?: string;
-  thatsup?: string;
+  di?: string;
 };
 
 export type SourceIds = {
@@ -35,7 +35,7 @@ export type SourceIds = {
   google?: string; // placeId from Google Places API
   svd?: string; // article ID from svd.se
   dn?: string; // article slug from dn.se
-  thatsup?: string; // slug from thatsup.se
+  di?: string; // name slug from DI Weekend
 };
 
 export type SourceRatings = {
@@ -45,7 +45,7 @@ export type SourceRatings = {
   whiteguide?: WhiteGuideClassification | null;
   svd?: number | null; // 1-6 scale
   dn?: boolean | null; // true = reviewed (no numeric rating)
-  thatsup?: number | null; // 1-5 scale (user reviews)
+  di?: number | null; // 15-25 scale (totalScore)
 };
 
 export type Restaurant = {
@@ -65,8 +65,9 @@ export type Restaurant = {
   ratings: SourceRatings;
   links: SourceLinks;
   googleRatingCount?: number;
-  thatsupRatingCount?: number;
-  bakomScore?: number | null;
+  bakomScore?: number | null; // 0–100 (integer for display)
+  bakomScoreRaw?: number | null; // 0–100 (decimal for ranking)
+  bakomRank?: number | null; // 1-based rank among scored restaurants
   /** Google business status: "OPERATIONAL" | "CLOSED_TEMPORARILY" | "CLOSED_PERMANENTLY" */
   businessStatus?: string;
   // ── Pipeline-only fields (not in frontend JSON) ──

@@ -143,11 +143,13 @@ async function scrapeArticle(url: string): Promise<SvdRaw | null> {
 
 // ─── Main scraper function ───────────────────────────────────────
 
-export async function scrapeSvd(): Promise<SvdRaw[]> {
+export async function scrapeSvd(
+  options: { force?: boolean } = {},
+): Promise<SvdRaw[]> {
   console.log("=== SvD Krogguiden Scraper ===\n");
 
-  // Load existing data to avoid re-scraping
-  const existing = loadRawJson<SvdRaw[]>("svd.json") ?? [];
+  // Load existing data to avoid re-scraping (skip when --force)
+  const existing = options.force ? [] : (loadRawJson<SvdRaw[]>("svd.json") ?? []);
   const existingIds = new Set(existing.map((r) => r.articleId));
 
   if (existing.length > 0) {
@@ -219,7 +221,7 @@ export async function scrapeSvd(): Promise<SvdRaw[]> {
 // ─── CLI entry point ─────────────────────────────────────────────
 
 if (process.argv[1]?.includes("svd")) {
-  scrapeSvd().catch((err) => {
+  scrapeSvd({ force: process.argv.includes("--force") }).catch((err) => {
     console.error("Fatal error:", err);
     process.exit(1);
   });
