@@ -34,6 +34,7 @@ import {
   printQualityReport,
   validateRestaurant,
 } from "../utils/validate.js";
+import { deduplicateByGooglePlaceId } from "../utils/dedup.js";
 import type { PipelineRestaurant } from "../types.js";
 
 // ─── Main refine function ────────────────────────────────────────
@@ -105,79 +106,9 @@ export async function refine(): Promise<PipelineRestaurant[]> {
   // 3b. Deduplicate by Google Place ID — same physical location = same restaurant
   //     Catches cases like "Operakällaren" vs "Operakällarens Matsal" that
   //     have different names/IDs but resolve to the same Google Place.
-  {
-    const byPlaceId = new Map<string, PipelineRestaurant[]>();
-    for (const r of deduped) {
-      if (!r.googlePlaceId) continue;
-      const group = byPlaceId.get(r.googlePlaceId);
-      if (group) group.push(r);
-      else byPlaceId.set(r.googlePlaceId, [r]);
-    }
-
-    const toRemove = new Set<string>();
-    let placeIdDupes = 0;
-
-    for (const [, group] of byPlaceId) {
-      if (group.length < 2) continue;
-
-      // Pick primary: most sources, then most ratings, then longest name
-      group.sort((a, b) => {
-        const aSources = a.sources.length;
-        const bSources = b.sources.length;
-        if (aSources !== bSources) return bSources - aSources;
-        const aRatings = Object.values(a.ratings).filter((v) => v != null).length;
-        const bRatings = Object.values(b.ratings).filter((v) => v != null).length;
-        if (aRatings !== bRatings) return bRatings - aRatings;
-        return b.name.length - a.name.length;
-      });
-
-      const primary = group[0];
-
-      for (const other of group.slice(1)) {
-        // Merge ratings (keep non-null values from other)
-        for (const [key, val] of Object.entries(other.ratings)) {
-          if (val != null && (primary.ratings as Record<string, unknown>)[key] == null) {
-            (primary.ratings as Record<string, unknown>)[key] = val;
-          }
-        }
-
-        // Merge links
-        for (const [key, val] of Object.entries(other.links)) {
-          if (val && !(primary.links as Record<string, string | undefined>)[key]) {
-            (primary.links as Record<string, string | undefined>)[key] = val;
-          }
-        }
-
-        // Merge sourceIds
-        for (const [key, val] of Object.entries(other.sourceIds)) {
-          if (val != null && !(primary.sourceIds as Record<string, unknown>)[key]) {
-            (primary.sourceIds as Record<string, unknown>)[key] = val;
-          }
-        }
-
-        // Merge sources array
-        for (const src of other.sources) {
-          if (!primary.sources.includes(src)) {
-            primary.sources.push(src);
-          }
-        }
-
-        // Fill missing basic fields
-        if (!primary.phone && other.phone) primary.phone = other.phone;
-        if (!primary.website && other.website) primary.website = other.website;
-        if (!primary.cuisine && other.cuisine) primary.cuisine = other.cuisine;
-        if (!primary.priceRange && other.priceRange) primary.priceRange = other.priceRange;
-        if (primary.hours.length === 0 && other.hours.length > 0) primary.hours = other.hours;
-
-        console.log(`  Dedup by Google Place ID: merged "${other.name}" → "${primary.name}"`);
-        toRemove.add(other.id);
-        placeIdDupes++;
-      }
-    }
-
-    if (placeIdDupes > 0) {
-      deduped = deduped.filter((r) => !toRemove.has(r.id));
-    }
+  const dedupResult = deduplicateByGooglePlaceId(deduped, { logEachMerge: true });
+  if (dedupResult.removedCount > 0) {
+    deduped = dedupResult.restaurants;
   }
 
   if (beforeDedup !== deduped.length) {

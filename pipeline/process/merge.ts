@@ -21,6 +21,7 @@ import {
   printQualityReport,
   validateRestaurant,
 } from "../utils/validate.js";
+import { deduplicateByGooglePlaceId } from "../utils/dedup.js";
 import type { KrogguidenRaw, MichelinRaw, WhiteGuideRaw, SvdRaw, DnRaw, DiRaw, ManualData, PipelineRestaurant } from "../types.js";
 
 /** Valid price ranges — anything outside this set is treated as empty */
@@ -666,9 +667,10 @@ export async function merge(): Promise<PipelineRestaurant[]> {
   // Match DN reviews (no address, can only match existing)
   if (dn) {
     for (const d of dn) {
+      if (!d.name) continue;
       const match = findRestaurantMatch(
         d.name,
-        undefined,
+        d.address ?? undefined,
         restaurantByName,
         (item) => item.address,
         0.85
@@ -676,7 +678,7 @@ export async function merge(): Promise<PipelineRestaurant[]> {
 
       if (match) {
         const r = match.item;
-        r.ratings.dn = true; // DN has no numeric rating
+        r.ratings.dn = d.score ?? null;
         r.links.dn = d.url;
         r.sourceIds.dn = d.slug;
         if (!r.sources.includes("dn")) {
@@ -791,87 +793,13 @@ export async function merge(): Promise<PipelineRestaurant[]> {
   }
 
   // Deduplicate by Google Place ID — same physical location = same restaurant
-  {
-    const byPlaceId = new Map<string, PipelineRestaurant[]>();
-    for (const r of restaurants) {
-      if (!r.googlePlaceId) continue;
-      const group = byPlaceId.get(r.googlePlaceId);
-      if (group) group.push(r);
-      else byPlaceId.set(r.googlePlaceId, [r]);
-    }
-
-    const toRemove = new Set<string>();
-    let deduped = 0;
-
-    for (const [placeId, group] of byPlaceId) {
-      if (group.length < 2) continue;
-
-      // Pick primary: most sources, then most ratings, then longest name
-      group.sort((a, b) => {
-        const aSources = a.sources.length;
-        const bSources = b.sources.length;
-        if (aSources !== bSources) return bSources - aSources;
-        const aRatings = Object.values(a.ratings).filter((v) => v != null).length;
-        const bRatings = Object.values(b.ratings).filter((v) => v != null).length;
-        if (aRatings !== bRatings) return bRatings - aRatings;
-        return b.name.length - a.name.length;
-      });
-
-      const primary = group[0];
-      const others = group.slice(1);
-
-      for (const other of others) {
-        // Merge ratings (keep non-null values)
-        for (const [key, val] of Object.entries(other.ratings)) {
-          if (val != null && (primary.ratings as Record<string, unknown>)[key] == null) {
-            (primary.ratings as Record<string, unknown>)[key] = val;
-          }
-        }
-
-        // Merge links
-        for (const [key, val] of Object.entries(other.links)) {
-          if (val && !(primary.links as Record<string, string | undefined>)[key]) {
-            (primary.links as Record<string, string | undefined>)[key] = val;
-          }
-        }
-
-        // Merge sourceIds
-        for (const [key, val] of Object.entries(other.sourceIds)) {
-          if (val != null && !(primary.sourceIds as Record<string, unknown>)[key]) {
-            (primary.sourceIds as Record<string, unknown>)[key] = val;
-          }
-        }
-
-        // Merge sources array
-        for (const src of other.sources) {
-          if (!primary.sources.includes(src)) {
-            primary.sources.push(src);
-          }
-        }
-
-        // Merge numeric fields
-        if (!primary.googleRatingCount && other.googleRatingCount) {
-          primary.googleRatingCount = other.googleRatingCount;
-        }
-
-        // Fill missing basic fields from other
-        if (!primary.phone && other.phone) primary.phone = other.phone;
-        if (!primary.website && other.website) primary.website = other.website;
-        if (!primary.cuisine && other.cuisine) primary.cuisine = other.cuisine;
-        if (!primary.priceRange && other.priceRange) primary.priceRange = other.priceRange;
-        if (primary.hours.length === 0 && other.hours.length > 0) primary.hours = other.hours;
-        if (!primary.lat && other.lat) { primary.lat = other.lat; primary.lng = other.lng; }
-
-        toRemove.add(other.id);
-        deduped++;
-      }
-    }
-
-    if (deduped > 0) {
-      const before = restaurants.length;
-      restaurants = restaurants.filter((r) => !toRemove.has(r.id));
-      console.log(`\n  Dedup by Google Place ID: merged ${deduped} duplicates (${before} → ${restaurants.length})`);
-    }
+  const dedupResult = deduplicateByGooglePlaceId(restaurants);
+  if (dedupResult.removedCount > 0) {
+    const before = restaurants.length;
+    restaurants = dedupResult.restaurants;
+    console.log(
+      `\n  Dedup by Google Place ID: merged ${dedupResult.removedCount} duplicates (${before} → ${restaurants.length})`
+    );
   }
 
   // Validate all restaurants

@@ -99,11 +99,11 @@ function RangeSlider({
         type: "SET_RANGE",
         payload: {
           key: filterKey,
-          range: { min: Math.min(newMin, range.max - step), max: range.max },
+          range: { min: Math.min(newMin, range.max), max: range.max },
         },
       });
     },
-    [dispatch, filterKey, range.max, step]
+    [dispatch, filterKey, range.max]
   );
 
   const handleMaxChange = useCallback(
@@ -113,11 +113,11 @@ function RangeSlider({
         type: "SET_RANGE",
         payload: {
           key: filterKey,
-          range: { min: range.min, max: Math.max(newMax, range.min + step) },
+          range: { min: range.min, max: Math.max(newMax, range.min) },
         },
       });
     },
-    [dispatch, filterKey, range.min, step]
+    [dispatch, filterKey, range.min]
   );
 
   return (
@@ -144,7 +144,7 @@ function RangeSlider({
           }}
         />
 
-        {/* Min slider */}
+        {/* Min slider - higher z-index when at max to allow dragging back */}
         <input
           type="range"
           min={min}
@@ -152,6 +152,7 @@ function RangeSlider({
           step={step}
           value={range.min}
           onChange={handleMinChange}
+          style={{ zIndex: range.min >= range.max ? 20 : 10 }}
           className="absolute inset-x-0 w-full h-2 appearance-none bg-transparent cursor-pointer pointer-events-none
             [&::-webkit-slider-thumb]:appearance-none
             [&::-webkit-slider-thumb]:pointer-events-auto
@@ -173,6 +174,7 @@ function RangeSlider({
           step={step}
           value={range.max}
           onChange={handleMaxChange}
+          style={{ zIndex: 10 }}
           className="absolute inset-x-0 w-full h-2 appearance-none bg-transparent cursor-pointer pointer-events-none
             [&::-webkit-slider-thumb]:appearance-none
             [&::-webkit-slider-thumb]:pointer-events-auto
@@ -337,19 +339,17 @@ export default function Filters({
           </div>
         </div>
 
-        {/* DN toggle */}
-        <div className="filter-section">
-          <div className="filter-section-title">
-            <Newspaper className="size-4" />
-            DN
-          </div>
-          <button
-            onClick={() => dispatch({ type: "TOGGLE_DN" })}
-            className={`filter-chip ${state.dnRequired ? "active" : ""}`}
-          >
-            {state.dnRequired ? "Endast DN-recenserade" : "Alla"}
-          </button>
-        </div>
+        {/* DN range */}
+        <RangeSlider
+          label="DN"
+          icon={<Newspaper className="size-4" />}
+          range={state.dn}
+          min={0}
+          max={5}
+          step={1}
+          filterKey="dn"
+          dispatch={dispatch}
+        />
 
         {/* Cuisine filters */}
         <div className="filter-section">
