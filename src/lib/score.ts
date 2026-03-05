@@ -1,22 +1,4 @@
-/**
- * Bakom Score — aggregated restaurant rating (0–100).
- *
- * Combines ratings from multiple sources with different weights:
- *   Michelin:    0.28  (most prestigious, strict assessment)
- *   White Guide: 0.20  (expert assessment, Swedish context)
- *   SvD:         0.16  (professional critic, 1–6 scale)
- *   Krogguiden:  0.16  (professional reviewers)
- *   DI:          0.16  (professional critic, 15–25 scale)
- *   DN:          0.14  (professional critic, 0–5 scale)
- *   Google:      0.10  (crowd ratings)
- *
- * Only present sources are weighted. Additional adjustments:
- *   - Google: Bayesian dampening pulls scores toward a prior (7.0)
- *     when review count is low — prevents inflated scores from few reviews
- *   - Source diversity factor: single-source ratings are dampened
- *   - Prestige ceiling: restaurants without expert sources are capped
- *   - Perfection requirement: 100 requires all sources ≥ 9.5/10
- */
+/** Bakom Score — aggregated restaurant rating (0–100). @see docs/score.md */
 
 import type {
   MichelinDistinction,

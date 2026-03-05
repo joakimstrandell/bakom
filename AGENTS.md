@@ -1,3 +1,18 @@
+# Krogguiden Map
+
+## Documentation
+
+See `docs/` for detailed documentation:
+
+- `docs/architecture.md` - System overview and data flow
+- `docs/collect.md` - Data collection from sources
+- `docs/merge.md` - Fuzzy matching and deduplication
+- `docs/refine.md` - Google enrichment and geocoding
+- `docs/optimize.md` - Frontend JSON generation
+- `docs/score.md` - Bakom Score algorithm
+
+---
+
 # Component Guidelines
 
 ## Folder Structure

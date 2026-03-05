@@ -1,12 +1,4 @@
-/**
- * Guide Michelin scraper for Swedish restaurants.
- * Scrapes the listing pages at guide.michelin.com for all Michelin-listed
- * restaurants: Selected (Good Cooking), Bib Gourmand, and 1-3 stars.
- *
- * Output: data/raw/michelin.json (MichelinRaw[])
- *
- * CLI: tsx pipeline/collect/michelin.ts
- */
+/** Guide Michelin scraper. @see docs/collect.md */
 
 import * as cheerio from "cheerio";
 import { fetchWithRetry, sleep, saveRawJson, loadRawJson } from "../utils/fetch.js";

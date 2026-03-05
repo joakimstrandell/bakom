@@ -1,12 +1,4 @@
-/**
- * SvD (Svenska Dagbladet) Krogguiden scraper.
- * Fetches restaurant reviews from svd.se/story/krogguiden via backfill API.
- * Each review page contains JSON-LD with Restaurant schema.
- *
- * Output: data/raw/svd.json (SvdRaw[])
- *
- * CLI: tsx pipeline/collect/svd.ts
- */
+/** SvD Krogguiden scraper. @see docs/collect.md */
 
 import * as cheerio from "cheerio";
 import { fetchWithRetry, sleep, saveRawJson, loadRawJson } from "../utils/fetch.js";

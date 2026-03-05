@@ -1,12 +1,4 @@
-/**
- * DN (Dagens Nyheter) Krogkommissionen scraper.
- * Fetches restaurant reviews from dn.se/om/krogkommissionen via RSS feed.
- * Extracts restaurant name from article title.
- *
- * Output: data/raw/dn.json (DnRaw[])
- *
- * CLI: tsx pipeline/collect/dn.ts
- */
+/** DN Krogkommissionen scraper. @see docs/collect.md */
 
 import * as cheerio from "cheerio";
 import { fetchWithRetry, sleep, saveRawJson, loadRawJson } from "../utils/fetch.js";

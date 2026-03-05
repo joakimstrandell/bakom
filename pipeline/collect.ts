@@ -1,22 +1,4 @@
-/**
- * Unified collect entry point.
- * Runs one or all source collectors with incremental or force mode.
- *
- * Pre-merge sources (run without --source): krogguiden, michelin, whiteguide, svd, dn, di
- * Post-merge sources (must specify --source): google
- *
- * CLI:
- *   tsx pipeline/collect.ts                        # run all pre-merge sources
- *   tsx pipeline/collect.ts --source krogguiden    # run just one
- *   tsx pipeline/collect.ts --source google        # run Google (requires restaurants.json)
- *   tsx pipeline/collect.ts --force                # force full re-fetch for slow scrapers
- *   tsx pipeline/collect.ts --source svd --force   # force one specific source
- *
- * npm scripts:
- *   npm run pipeline:collect
- *   npm run pipeline:collect --source krogguiden
- *   npm run pipeline:collect --source google --force
- */
+/** Unified collect entry point. @see docs/collect.md */
 
 import { scrapeKrogguiden } from "./collect/krogguiden.js";
 import { scrapeMichelin } from "./collect/michelin.js";
@@ -56,18 +38,20 @@ const SOURCES: SourceConfig[] = [...PRE_MERGE_SOURCES, ...POST_MERGE_SOURCES];
 
 // ─── CLI argument parsing ────────────────────────────────────────
 
-function parseArgs(): { source?: string; force: boolean } {
+function parseArgs(): { source?: string; skip: string[]; force: boolean } {
   const args = process.argv.slice(2);
   const sourceIdx = args.indexOf("--source");
   const source = sourceIdx !== -1 ? args[sourceIdx + 1] : undefined;
+  const skipIdx = args.indexOf("--skip");
+  const skip = skipIdx !== -1 ? args[skipIdx + 1]?.split(",") ?? [] : [];
   const force = args.includes("--force");
-  return { source, force };
+  return { source, skip, force };
 }
 
 // ─── Main ────────────────────────────────────────────────────────
 
 async function main() {
-  const { source, force } = parseArgs();
+  const { source, skip, force } = parseArgs();
 
   // Validate --source argument
   if (source) {
@@ -79,15 +63,30 @@ async function main() {
     }
   }
 
+  // Validate --skip argument
+  for (const s of skip) {
+    if (!SOURCES.find((src) => src.name === s)) {
+      const names = SOURCES.map((src) => src.name).join(", ");
+      console.error(`Unknown source to skip "${s}". Valid sources: ${names}`);
+      process.exit(1);
+    }
+  }
+
   // When running all sources, only run pre-merge sources
   // (post-merge sources like "google" require restaurants.json)
-  const toRun = source
+  let toRun = source
     ? SOURCES.filter((s) => s.name === source)
     : PRE_MERGE_SOURCES;
 
+  // Apply --skip filter
+  if (skip.length > 0) {
+    toRun = toRun.filter((s) => !skip.includes(s.name));
+  }
+
   const modeLabel = force ? " (--force)" : "";
+  const skipLabel = skip.length > 0 ? ` (skipping: ${skip.join(", ")})` : "";
   console.log(
-    `Collecting ${toRun.length} source(s)${modeLabel}...\n`,
+    `Collecting ${toRun.length} source(s)${modeLabel}${skipLabel}...\n`,
   );
 
   // Check if user is trying to run a post-merge source

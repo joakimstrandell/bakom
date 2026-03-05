@@ -1,11 +1,4 @@
-/**
- * White Guide API scraper.
- * Fetches Swedish restaurant data from the White Guide admin API.
- *
- * Output: data/raw/whiteguide.json (WhiteGuideRaw[])
- *
- * CLI: tsx pipeline/collect/whiteguide.ts
- */
+/** White Guide API scraper. @see docs/collect.md */
 
 import { fetchWithRetry, saveRawJson } from "../utils/fetch.js";
 import type { WhiteGuideRaw } from "../types.js";

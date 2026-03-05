@@ -1,13 +1,4 @@
-/**
- * DI Weekend (Dagens Industri) krogguide scraper.
- * Fetches restaurant reviews from the DI RestaurantGuide widget API.
- *
- * The API returns a { cols, rows } JSON structure with all reviewed restaurants.
- *
- * Output: data/raw/di.json (DiRaw[])
- *
- * CLI: tsx pipeline/collect/di.ts
- */
+/** DI Weekend krogguide scraper. @see docs/collect.md */
 
 import { fetchWithRetry, saveRawJson } from "../utils/fetch.js";
 import type { DiRaw } from "../types.js";

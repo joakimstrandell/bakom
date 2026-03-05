@@ -1,29 +1,4 @@
-/**
- * Refine step: applies collected data, geocodes, deduplicates,
- * calculates Bakom Score, and validates.
- *
- * Processing order:
- *   1. Apply Google Places data (from data/raw/google.json)
- *   2. Geocode missing coordinates (OSM Nominatim)
- *   3. Deduplicate by ID and Google Place ID
- *   4. Calculate Bakom Score
- *   5. Validate
- *
- * Note: permanently closed restaurants are kept in restaurants.json
- * so enrichment data survives merge re-runs. They are filtered out
- * in the optimize step (restaurants.frontend.json).
- *
- * Reads & updates: data/restaurants.json
- * Reads: data/raw/google.json
- *
- * npm scripts:
- *   npm run pipeline:refine
- *
- * To re-collect Google data with --force, use:
- *   npm run pipeline:collect --source google --force
- *
- * CLI: tsx pipeline/process/refine.ts
- */
+/** Refine step: applies Google data, deduplicates, calculates scores. @see docs/refine.md */
 
 import { loadJson, saveJson } from "../utils/fetch.js";
 import { applyGoogleData } from "../collect/google.js";

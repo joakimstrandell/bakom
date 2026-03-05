@@ -1,18 +1,4 @@
-/**
- * Merge step: combines raw data from all sources into a single unified
- * restaurants.json.
- *
- * Preserves existing Google data and coordinates from a previous
- * restaurants.json if it exists — so re-running merge doesn't wipe
- * out enrichment from later pipeline steps.
- *
- * Score calculation, enrichment, and frontend JSON generation are
- * handled by the refine and optimize steps.
- *
- * Output: data/restaurants.json (PipelineRestaurant[])
- *
- * CLI: tsx pipeline/process/merge.ts
- */
+/** Merge step: combines raw data into unified restaurants.json. @see docs/merge.md */
 
 import { loadJson, loadRawJson, saveJson } from "../utils/fetch.js";
 import { normalizeName, findRestaurantMatch } from "../utils/match.js";

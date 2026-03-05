@@ -1,15 +1,4 @@
-/**
- * Krogguiden.se collector.
- * Fetches all restaurant slugs via AJAX pagination, then scrapes
- * detail pages for each restaurant (JSON-LD + HTML hours parsing).
- *
- * Skips restaurants that already exist in data/raw/krogguiden.json
- * unless --force flag is passed.
- *
- * Output: data/raw/krogguiden.json (KrogguidenRaw[])
- *
- * CLI: tsx pipeline/collect/krogguiden.ts [--force]
- */
+/** Krogguiden.se collector. @see docs/collect.md */
 
 import * as cheerio from "cheerio";
 import { existsSync } from "fs";

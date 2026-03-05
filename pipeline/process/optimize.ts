@@ -1,18 +1,4 @@
-/**
- * Optimize step: generates frontend JSON with region tags.
- *
- * Filters closed restaurants, removes pipeline-only fields,
- * assigns region based on coordinates, calculates global ranks,
- * and strips null/empty values to minimize bundle size.
- *
- * Reads: data/restaurants.json
- * Writes: data/restaurants.frontend.json
- *
- * npm scripts:
- *   npm run pipeline:optimize
- *
- * CLI: tsx pipeline/process/optimize.ts
- */
+/** Optimize step: generates frontend JSON with region tags. @see docs/optimize.md */
 
 import { loadJson, saveJson } from "../utils/fetch.js";
 import type { PipelineRestaurant } from "../types.js";

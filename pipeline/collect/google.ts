@@ -1,14 +1,4 @@
-/**
- * Google Places API collector.
- * Fetches Google Places data for restaurants and saves to data/raw/google.json.
- *
- * In incremental mode (default), only fetches for restaurants not already
- * in google.json. Use --force to re-fetch all.
- *
- * Requires: GOOGLE_PLACES_API_KEY environment variable.
- *
- * CLI: tsx pipeline/collect/google.ts [--force]
- */
+/** Google Places API collector. @see docs/collect.md */
 
 import { sleep, loadJson, saveRawJson, loadRawJson } from "../utils/fetch.js";
 import { parseGoogleHours } from "../utils/hours.js";
