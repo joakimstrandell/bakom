@@ -232,11 +232,17 @@
   border: 1px solid rgba(0, 0, 0, 0.08);
   background: rgba(0, 0, 0, 0.03);
   padding: 0 16px 0 44px;
-  font-size: 14px;
+  font-size: 16px; /* Prevent iOS Safari zoom on focus */
   font-weight: 500;
   color: var(--foreground);
   transition: all 0.25s ease;
   outline: none;
+}
+
+@media (min-width: 641px) {
+  .search-input {
+    font-size: 14px; /* Smaller on desktop */
+  }
 }
 
 .search-input::placeholder {

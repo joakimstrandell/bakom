@@ -51,7 +51,7 @@ export default function RestaurantList({
           {/* Sort toggle */}
           <div className="flex gap-1 p-0.5 bg-black/5 dark:bg-white/5 rounded-md">
             <button
-              onPointerDown={() => setSortBy("name")}
+              onClick={() => setSortBy("name")}
               className={`flex items-center gap-1 px-2 py-1 rounded text-xs font-medium transition-colors ${
                 sortBy === "name"
                   ? "bg-white dark:bg-zinc-800 shadow-sm text-foreground"
@@ -62,7 +62,7 @@ export default function RestaurantList({
               <ArrowDownAZ className="size-3.5" />
             </button>
             <button
-              onPointerDown={() => setSortBy("score")}
+              onClick={() => setSortBy("score")}
               className={`flex items-center gap-1 px-2 py-1 rounded text-xs font-medium transition-colors ${
                 sortBy === "score"
                   ? "bg-white dark:bg-zinc-800 shadow-sm text-foreground"
@@ -89,7 +89,7 @@ export default function RestaurantList({
               return (
                 <button
                   key={r.id}
-                  onPointerDown={() => onSelectRestaurant(r)}
+                  onClick={() => onSelectRestaurant(r)}
                   className={`w-full text-left px-4 py-3 transition-colors hover:bg-black/3 dark:hover:bg-white/3 ${
                     isSelected ? "bg-black/5 dark:bg-white/5" : ""
                   }`}

@@ -161,7 +161,7 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
             )}
           </div>
           <button
-            onPointerDown={onClose}
+            onClick={onClose}
             className="shrink-0 size-10 rounded-full flex items-center justify-center hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
           >
             <X className="size-5" />
@@ -286,7 +286,7 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
           {hoursByDay.length > 0 && (
             <div>
               <button
-                onPointerDown={() => setHoursExpanded(!hoursExpanded)}
+                onClick={() => setHoursExpanded(!hoursExpanded)}
                 className="w-full flex items-center gap-3 text-left py-1 group"
               >
                 <Clock className="size-4 text-muted-foreground shrink-0" />

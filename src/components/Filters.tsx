@@ -224,7 +224,7 @@ export default function Filters({
           />
         </div>
         <button
-          onPointerDown={onClose}
+          onClick={onClose}
           className="size-10 rounded-full flex items-center justify-center hover:bg-black/5 transition-colors select-none"
           aria-label={t("filters.close_aria")}
         >
@@ -256,7 +256,7 @@ export default function Filters({
             {MICHELIN_OPTIONS.map(({ key, label }) => (
               <button
                 key={key}
-                onPointerDown={() => dispatch({ type: "TOGGLE_MICHELIN", payload: key })}
+                onClick={() => dispatch({ type: "TOGGLE_MICHELIN", payload: key })}
                 className={`filter-chip ${state.selectedMichelin.has(key) ? "active" : ""}`}
               >
                 {label}
@@ -275,7 +275,7 @@ export default function Filters({
             {WG_KEYS.map((key) => (
               <button
                 key={key}
-                onPointerDown={() => dispatch({ type: "TOGGLE_WHITEGUIDE", payload: key })}
+                onClick={() => dispatch({ type: "TOGGLE_WHITEGUIDE", payload: key })}
                 className={`filter-chip ${state.selectedWhiteGuide.has(key) ? "active" : ""}`}
               >
                 {t(`whiteguide.${key}`)}
@@ -356,7 +356,7 @@ export default function Filters({
             {CUISINE_KEYS.map((key) => (
               <button
                 key={key}
-                onPointerDown={() => dispatch({ type: "TOGGLE_CUISINE", payload: key })}
+                onClick={() => dispatch({ type: "TOGGLE_CUISINE", payload: key })}
                 className={`filter-chip ${state.selectedCuisines.has(key) ? "active" : ""}`}
               >
                 {t(`cuisines.${key}`)}
@@ -375,7 +375,7 @@ export default function Filters({
             {PRICES.map((p) => (
               <button
                 key={p}
-                onPointerDown={() => dispatch({ type: "TOGGLE_PRICE", payload: p })}
+                onClick={() => dispatch({ type: "TOGGLE_PRICE", payload: p })}
                 className={`filter-chip ${state.selectedPrices.has(p) ? "active" : ""}`}
               >
                 {p}
@@ -389,7 +389,7 @@ export default function Filters({
       {hasActiveFilters && (
         <div className="px-5 py-4 border-t border-black/6">
           <button
-            onPointerDown={() => dispatch({ type: "CLEAR_ALL" })}
+            onClick={() => dispatch({ type: "CLEAR_ALL" })}
             className="w-full flex items-center justify-center gap-2 h-11 rounded-full border border-black/10 text-sm font-medium hover:bg-black/5 transition-colors"
           >
             <RotateCcw className="size-4" />

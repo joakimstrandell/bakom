@@ -247,7 +247,7 @@ function MapLayout() {
           {/* Region selector */}
           <div className="relative" ref={regionMenuRef}>
             <button
-              onPointerDown={() => setRegionMenuOpen(!regionMenuOpen)}
+              onClick={() => setRegionMenuOpen(!regionMenuOpen)}
               className="flex items-center gap-1.5 h-8 px-3 rounded-full border border-black/10 bg-white/50 hover:bg-white/80 transition-colors text-sm font-medium"
             >
               <span className="hidden sm:inline">{t(`regions.${region}`)}</span>
@@ -262,7 +262,7 @@ function MapLayout() {
                 {REGIONS.map((r) => (
                   <button
                     key={r.id}
-                    onPointerDown={() => handleRegionChange(r.id)}
+                    onClick={() => handleRegionChange(r.id)}
                     className={`w-full text-left px-4 py-2 text-sm hover:bg-black/5 dark:hover:bg-white/5 transition-colors ${
                       r.id === region ? "font-semibold bg-black/5 dark:bg-white/5" : ""
                     }`}
@@ -295,7 +295,7 @@ function MapLayout() {
               />
               {filterState.searchQuery && (
                 <button
-                  onPointerDown={() => {
+                  onClick={() => {
                     dispatch({ type: "SET_SEARCH", payload: "" });
                     searchInputRef.current?.focus();
                   }}
@@ -326,7 +326,7 @@ function MapLayout() {
 
           {/* Filter button */}
           <button
-            onPointerDown={toggleFilters}
+            onClick={toggleFilters}
             aria-label={sidebarMode === "filters" ? t("filters.close_aria") : t("header.filter")}
             aria-expanded={sidebarMode === "filters"}
             className={`header-icon-btn relative ${sidebarMode === "filters" ? "active" : ""}`}
@@ -372,7 +372,7 @@ function MapLayout() {
 
           {/* Location button overlay - only show when map is visible */}
           <button
-            onPointerDown={locateUser}
+            onClick={locateUser}
             disabled={locating}
             className={`map-overlay-btn bottom-4 right-4 size-12 ${mobileView === "list" ? "md:flex hidden" : ""}`}
             title={locationError || (userLocation ? t("location.update") : t("location.show"))}
@@ -403,7 +403,7 @@ function MapLayout() {
 
       {/* Mobile view toggle button */}
       <button
-        onPointerDown={() => setMobileView(mobileView === "map" ? "list" : "map")}
+        onClick={() => setMobileView(mobileView === "map" ? "list" : "map")}
         className="md:hidden mobile-view-toggle"
         aria-label={mobileView === "map" ? t("header.list") : t("header.map")}
       >
@@ -422,7 +422,6 @@ function MapLayout() {
               closeSidebar();
             }
           }}
-          onPointerDown={(e) => e.stopPropagation()}
         />
       )}
 
