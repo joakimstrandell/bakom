@@ -152,8 +152,6 @@ function FlyToRegion({ region }: { region: RegionFilter }) {
 }
 
 /** Pans/zooms map to selected restaurant if not visible or in a cluster */
-const DECLUSTER_ZOOM = 14; // Zoom level where clusters break apart
-
 function PanToSelected({
   restaurant,
   rightSidebarWidth = 360,
@@ -170,12 +168,10 @@ function PanToSelected({
     if (!restaurant || restaurant.lat == null || restaurant.lng == null) return;
 
     const latlng = L.latLng(restaurant.lat, restaurant.lng);
-    const bounds = map.getBounds();
-
-    // Check if pin is hidden in a cluster
     const clusterGroup = clusterGroupRef.current;
+
+    // Find the marker for this restaurant in the cluster group
     if (clusterGroup) {
-      // Find the marker for this restaurant
       const layers = clusterGroup.getLayers() as L.Marker[];
       const marker = layers.find((layer: L.Marker) => {
         const pos = layer.getLatLng();
@@ -183,17 +179,35 @@ function PanToSelected({
       });
 
       if (marker) {
-        const visibleParent = clusterGroup.getVisibleParent(marker);
-        // If visible parent is different from marker, it's in a cluster
-        if (visibleParent && visibleParent !== marker) {
-          // Zoom to show the individual pin
-          map.flyTo(latlng, DECLUSTER_ZOOM, { duration: 0.5 });
-          return;
-        }
+        // Use zoomToShowLayer - it handles clustered markers properly
+        // and zooms just enough to show the marker outside its cluster
+        clusterGroup.zoomToShowLayer(marker, () => {
+          // After zoom completes, check if marker is under the sidebar
+          setTimeout(() => {
+            const point = map.latLngToContainerPoint(latlng);
+            const mapSize = map.getSize();
+            const visibleWidth = mapSize.x - rightSidebarWidth;
+            const padding = 40;
+
+            if (point.x > visibleWidth - padding) {
+              const targetX = visibleWidth / 2;
+              const offsetX = point.x - targetX;
+              const center = map.getCenter();
+              const targetPoint = map.latLngToContainerPoint(center);
+              const newCenter = map.containerPointToLatLng([
+                targetPoint.x + offsetX,
+                targetPoint.y,
+              ]);
+              map.panTo(newCenter, { duration: 0.3 });
+            }
+          }, 100);
+        });
+        return;
       }
     }
 
-    // Check if outside map bounds entirely
+    // Fallback: marker not found in cluster group, just pan to location
+    const bounds = map.getBounds();
     if (!bounds.contains(latlng)) {
       map.panTo(latlng, { duration: 0.3 });
       return;
@@ -206,17 +220,14 @@ function PanToSelected({
     const padding = 40;
 
     if (point.x > visibleWidth - padding) {
-      // Pan to center the pin in the visible area
       const targetX = visibleWidth / 2;
       const offsetX = point.x - targetX;
-
       const center = map.getCenter();
       const targetPoint = map.latLngToContainerPoint(center);
       const newCenter = map.containerPointToLatLng([
         targetPoint.x + offsetX,
         targetPoint.y,
       ]);
-
       map.panTo(newCenter, { duration: 0.3 });
     }
   }, [restaurant, map, rightSidebarWidth, clusterGroupRef]);

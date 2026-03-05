@@ -1909,13 +1909,13 @@
     "name": "Tripletta",
     "address": "Åsögatan 163",
     "city": "Stockholm",
-    "totalScore": 20,
-    "foodScore": 12,
+    "totalScore": 19,
+    "foodScore": 11,
     "environmentScore": 4,
     "serviceScore": 4,
     "priceClass": "Medel",
-    "url": "https://www.di.se/nyheter/rustikt-och-utan-knussel-med-magnifik-avslutning/",
-    "publishedAt": "2025-10-31",
+    "url": "https://www.di.se/nyheter/stora-smaker-i-stockholms-little-italy/",
+    "publishedAt": "2026-03-06",
     "lat": 59.31454092774259,
     "lng": 18.08483500658484
   },
@@ -2113,5 +2113,20 @@
     "publishedAt": "2026-02-27",
     "lat": 59.33864154820027,
     "lng": 18.056868363457557
+  },
+  {
+    "source": "di",
+    "name": "Triton",
+    "address": "Ringvägen 87",
+    "city": "Stockholm",
+    "totalScore": 19,
+    "foodScore": 11,
+    "environmentScore": 4,
+    "serviceScore": 4,
+    "priceClass": "Medel",
+    "url": "https://www.di.se/nyheter/triton-prisvart-med-varkansla/",
+    "publishedAt": "2026-02-27",
+    "lat": 59.30854261971486,
+    "lng": 18.066276394073764
   }
 ]
