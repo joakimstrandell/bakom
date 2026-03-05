@@ -13,7 +13,7 @@ import {
 
 // ─── Action Types ────────────────────────────────────────────────
 
-export type RangeFilterKey = "bakomScore" | "krogguiden" | "google" | "svd" | "di";
+export type RangeFilterKey = "bakomScore" | "krogguiden" | "google" | "svd" | "di" | "dn";
 
 export type FilterAction =
   | { type: "TOGGLE_CUISINE"; payload: string }
@@ -22,7 +22,6 @@ export type FilterAction =
   | { type: "SET_RANGE"; payload: { key: RangeFilterKey; range: Range } }
   | { type: "TOGGLE_MICHELIN"; payload: MichelinDistinction }
   | { type: "TOGGLE_WHITEGUIDE"; payload: WhiteGuideClassification }
-  | { type: "TOGGLE_DN" }
   | { type: "CLEAR_ALL" };
 
 // ─── Reducer ─────────────────────────────────────────────────────
@@ -78,12 +77,6 @@ function filterReducer(state: FilterState, action: FilterAction): FilterState {
         ),
       };
 
-    case "TOGGLE_DN":
-      return {
-        ...state,
-        dnRequired: !state.dnRequired,
-      };
-
     case "CLEAR_ALL":
       return {
         ...DEFAULT_FILTERS,
@@ -107,6 +100,7 @@ const RANGE_DEFAULTS: Record<RangeFilterKey, { min: number; max: number }> = {
   google: { min: 0, max: 5 },
   svd: { min: 0, max: 6 },
   di: { min: 0, max: 25 },
+  dn: { min: 0, max: 5 },
 };
 
 function isRangeActive(range: Range, key: RangeFilterKey): boolean {
@@ -145,8 +139,6 @@ export function useFilters(restaurants: Restaurant[]) {
 
     count += state.selectedMichelin.size;
     count += state.selectedWhiteGuide.size;
-
-    if (state.dnRequired) count++;
 
     return count;
   }, [state]);

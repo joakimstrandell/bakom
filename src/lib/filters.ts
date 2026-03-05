@@ -17,11 +17,10 @@ export type FilterState = {
   google: Range;          // 0-5 (0.1 step)
   svd: Range;             // 0-6
   di: Range;              // 0-25
+  dn: Range;              // 0-5
   // Multi-select (show restaurants with ANY of selected distinctions)
   selectedMichelin: Set<MichelinDistinction>;
   selectedWhiteGuide: Set<WhiteGuideClassification>;
-  // Toggle
-  dnRequired: boolean;
 };
 
 export const DEFAULT_FILTERS: FilterState = {
@@ -33,9 +32,9 @@ export const DEFAULT_FILTERS: FilterState = {
   google: { min: 0, max: 5 },
   svd: { min: 0, max: 6 },
   di: { min: 0, max: 25 },
+  dn: { min: 0, max: 5 },
   selectedMichelin: new Set(),
   selectedWhiteGuide: new Set(),
-  dnRequired: false,
 };
 
 /** Check if a range filter is active (not at default bounds) */
@@ -82,7 +81,7 @@ export function filterRestaurants(
 
     // Price
     if (filters.selectedPrices.size > 0) {
-      if (!filters.selectedPrices.has(r.priceRange)) return false;
+      if (!r.priceRange || !filters.selectedPrices.has(r.priceRange)) return false;
     }
 
     // Bakom Score range (0-100)
@@ -100,6 +99,9 @@ export function filterRestaurants(
     // DI range (0-25)
     if (!inRange(r.ratings.di, filters.di, 0, 25)) return false;
 
+    // DN range (0-5)
+    if (!inRange(r.ratings.dn, filters.dn, 0, 5)) return false;
+
     // Michelin multi-select: restaurant must have one of the selected distinctions
     if (filters.selectedMichelin.size > 0) {
       if (!r.ratings.michelin || !filters.selectedMichelin.has(r.ratings.michelin))
@@ -110,11 +112,6 @@ export function filterRestaurants(
     if (filters.selectedWhiteGuide.size > 0) {
       if (!r.ratings.whiteguide || !filters.selectedWhiteGuide.has(r.ratings.whiteguide))
         return false;
-    }
-
-    // DN toggle: if required, restaurant must have DN review
-    if (filters.dnRequired) {
-      if (!r.ratings.dn) return false;
     }
 
     return true;

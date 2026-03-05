@@ -74,14 +74,13 @@ export async function refine(): Promise<PipelineRestaurant[]> {
   }
 
   // ── 2. Geocode missing coordinates ───────────────────────────
-
+  // NOTE: Geocoding is disabled - coordinates come from Google Places data.
+  // To geocode missing restaurants, run: npm run pipeline:geocode
   const needsGeocode = restaurants.filter((r) => !r.lat || !r.lng).length;
   if (needsGeocode > 0) {
-    await geocodeRestaurants(restaurants, { saveProgress: save });
-    save();
-    console.log("");
+    console.log(`${needsGeocode} restaurants missing coordinates (run pipeline:geocode to fix)\n`);
   } else {
-    console.log("All restaurants have coordinates. Skipping geocode.\n");
+    console.log("All restaurants have coordinates.\n");
   }
 
   // ── 3. Deduplicate ──────────────────────────────────────────

@@ -7,8 +7,8 @@ Interactive map of Swedish restaurants aggregating data from 6 sources: Krogguid
 ## Getting Started
 
 ```bash
-npm install
-npm run dev        # Start dev server at http://localhost:3000
+pnpm install
+pnpm dev           # Start dev server at http://localhost:3000
 ```
 
 ## Data Pipeline
@@ -29,11 +29,11 @@ collect  →  merge  →  refine  →  optimize
 ### Run
 
 ```bash
-npm run pipeline                # Run all steps
-npm run pipeline:collect        # Collect all sources
-npm run pipeline:merge          # Merge only
-npm run pipeline:refine         # Refine only
-npm run pipeline:optimize       # Optimize only
+pnpm pipeline                   # Run all steps
+pnpm pipeline:collect           # Collect all sources
+pnpm pipeline:merge             # Merge only
+pnpm pipeline:refine            # Refine only
+pnpm pipeline:optimize          # Optimize only
 ```
 
 Individual collectors can also be run directly — see [docs/collect.md](docs/collect.md).
@@ -56,3 +56,5 @@ Override or supplement scraped data via `data/manual.json` (additions, merges, o
 - **Geocoding**: OpenStreetMap Nominatim
 - **Analytics**: Vercel Analytics + Speed Insights
 - **Build**: Vite, Nitro
+
+See [docs/architecture.md](docs/architecture.md) for a detailed overview.

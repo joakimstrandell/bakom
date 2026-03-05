@@ -12,7 +12,7 @@ const NOMINATIM_URL = "https://nominatim.openstreetmap.org/search";
  */
 export async function geocodeAddress(
   address: string,
-  postalCode: string,
+  postalCode: string | undefined,
   city: string
 ): Promise<{ lat: number; lng: number } | null> {
   const query = [address, postalCode, city, "Sweden"]

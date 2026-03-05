@@ -140,12 +140,19 @@ the entire dataset comes from a single HTTP request in under 5 seconds.
 
 ### DN (Dagens Nyheter)
 
-- **URL:** `dn.se/rss/om/krogkommissionen/`
-- **Method:** RSS feed for article URLs, then scrape each article for restaurant name
-- **Data:** Restaurant name, article URL, publish date (boolean review, no numeric rating)
+- **URL:** `dn.se/om/krogkommissionen/?page=1` through `?page=9`
+- **Method:** Chrome MCP browser scraping (paywall requires DN login session).
+  Article URLs are collected from the topic listing pages, then each article is
+  fetched to extract the `.ds-factbox` element containing structured review data.
+  Older articles (pre-2022) use `/sthlm/` URL paths instead of `/kultur/`.
+- **Data:** Restaurant name, score (0-5), address, price class, website, contact,
+  hours, article URL, publish date
 - **Incremental key:** `slug` — skips articles already in `dn.json`
-- **Rate limit:** Sequential, 1.5s delay between articles
-- **Collector:** [`pipeline/collect/dn.ts`](../pipeline/collect/dn.ts)
+- **Rate limit:** Sequential with 300ms delay every 5 requests
+- **Note:** Cannot be automated via CLI due to paywall. Must be run via Chrome MCP
+  with a logged-in DN session. See `pipeline/collect/dn.ts` for the original
+  RSS-based scraper (limited to basic metadata only).
+- **Collector:** Chrome MCP (manual), [`pipeline/collect/dn.ts`](../pipeline/collect/dn.ts) (legacy)
 
 ### DI Weekend (Dagens Industri)
 

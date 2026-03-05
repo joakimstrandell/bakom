@@ -1,10 +1,13 @@
-import { createFileRoute } from "@tanstack/react-router";
+/**
+ * Shared layout for map-based routes.
+ * The Map component lives here and is shared between / and /r/:id routes.
+ */
+import { createFileRoute, Outlet, useNavigate, useParams } from "@tanstack/react-router";
 import { lazy, Suspense, useState, useCallback, useRef, useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import Filters from "../components/Filters";
 import RestaurantDetail from "../components/RestaurantDetail";
 import RestaurantList from "../components/RestaurantList";
-import LanguageSwitcher from "../components/LanguageSwitcher";
 import type { Restaurant } from "../types";
 import { useFilters } from "../hooks/useFilters";
 import { type RegionFilter, REGIONS, DEFAULT_REGION } from "../lib/regions";
@@ -14,7 +17,8 @@ import {
   Navigation,
   Loader2,
   X,
-  MapPin,
+  MapIcon,
+  List,
   MessageSquare,
   ChevronDown,
 } from "lucide-react";
@@ -34,15 +38,25 @@ function getRegionCount(regionId: RegionFilter): number {
   return ALL_RESTAURANTS.filter((r) => r.metroRegion === regionId).length;
 }
 
-export const Route = createFileRoute("/")({
-  ssr: false,
-  component: HomePage,
+export const Route = createFileRoute("/_map")({
+  component: MapLayout,
 });
 
 type SidebarMode = "filters" | "restaurant" | null;
 
-function HomePage() {
+function MapLayout() {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  // Get restaurant ID from child route params (if on /r/:id)
+  const params = useParams({ strict: false }) as { id?: string };
+  const restaurantId = params.id;
+
+  // Find the restaurant by ID
+  const selectedRestaurant = useMemo(
+    () => (restaurantId ? ALL_RESTAURANTS.find((r) => r.id === restaurantId) ?? null : null),
+    [restaurantId]
+  );
 
   // ─── Region State ─────────────────────────────────────────────────
   const [region, setRegion] = useState<RegionFilter>(DEFAULT_REGION);
@@ -51,12 +65,6 @@ function HomePage() {
 
   // All restaurants for the map
   const allRestaurants = ALL_RESTAURANTS;
-
-  // Filter restaurants by region for the list
-  const regionRestaurants = useMemo(() => {
-    if (region === "all") return allRestaurants;
-    return allRestaurants.filter((r) => r.metroRegion === region);
-  }, [region, allRestaurants]);
 
   // ─── Filter State (via useReducer hook) ────────────────────────
   // First filter by region, then apply other filters
@@ -73,8 +81,21 @@ function HomePage() {
   const searchInputRef = useRef<HTMLInputElement>(null);
 
   // Sidebar state
-  const [sidebarMode, setSidebarMode] = useState<SidebarMode>(null);
-  const [selectedRestaurant, setSelectedRestaurant] = useState<Restaurant | null>(null);
+  const [sidebarMode, setSidebarMode] = useState<SidebarMode>(
+    selectedRestaurant ? "restaurant" : null
+  );
+
+  // Update sidebar mode when restaurant selection changes
+  useEffect(() => {
+    if (selectedRestaurant) {
+      setSidebarMode("restaurant");
+    } else {
+      // Only close if we were showing a restaurant
+      if (sidebarMode === "restaurant") {
+        setSidebarMode(null);
+      }
+    }
+  }, [selectedRestaurant]);
 
   // Geolocation state
   const [userLocation, setUserLocation] = useState<{
@@ -87,17 +108,15 @@ function HomePage() {
   // Feedback modal state
   const [feedbackOpen, setFeedbackOpen] = useState(false);
 
+  // Mobile view toggle (map vs list)
+  const [mobileView, setMobileView] = useState<"map" | "list">("map");
+
   // ─── Handlers ──────────────────────────────────────────────────
 
   const handleRegionChange = useCallback((newRegion: RegionFilter) => {
     setRegion(newRegion);
     setRegionMenuOpen(false);
-    // Clear selection when changing regions
-    setSelectedRestaurant(null);
-    if (sidebarMode === "restaurant") {
-      setSidebarMode(null);
-    }
-  }, [sidebarMode]);
+  }, []);
 
   const locateUser = useCallback(() => {
     if (!navigator.geolocation) {
@@ -134,27 +153,25 @@ function HomePage() {
     );
   }, [t]);
 
-  // Handle restaurant selection - opens sidebar with restaurant details
+  // Handle restaurant selection - navigates to restaurant URL
   const handleSelectRestaurant = useCallback((restaurant: Restaurant) => {
-    setSelectedRestaurant(restaurant);
-    setSidebarMode("restaurant");
-  }, []);
+    navigate({ to: "/r/$id", params: { id: restaurant.id } });
+  }, [navigate]);
 
-  // Handle closing sidebar
+  // Handle closing sidebar - navigates back to home
   const closeSidebar = useCallback(() => {
     setSidebarMode(null);
-    setSelectedRestaurant(null);
-  }, []);
+    navigate({ to: "/" });
+  }, [navigate]);
 
   // Toggle filter sidebar
   const toggleFilters = useCallback(() => {
     if (sidebarMode === "filters") {
-      setSidebarMode(null);
+      setSidebarMode(selectedRestaurant ? "restaurant" : null);
     } else {
       setSidebarMode("filters");
-      setSelectedRestaurant(null);
     }
-  }, [sidebarMode]);
+  }, [sidebarMode, selectedRestaurant]);
 
   // ─── Effects ───────────────────────────────────────────────────
 
@@ -176,14 +193,16 @@ function HomePage() {
         if (searchExpanded && !filterState.searchQuery) {
           setSearchExpanded(false);
         }
-        if (sidebarMode) {
+        if (sidebarMode === "filters") {
+          setSidebarMode(selectedRestaurant ? "restaurant" : null);
+        } else if (sidebarMode === "restaurant") {
           closeSidebar();
         }
       }
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [searchExpanded, filterState.searchQuery, sidebarMode, closeSidebar, regionMenuOpen]);
+  }, [searchExpanded, filterState.searchQuery, sidebarMode, closeSidebar, regionMenuOpen, selectedRestaurant]);
 
   // Close region menu on outside click
   useEffect(() => {
@@ -205,15 +224,15 @@ function HomePage() {
   return (
     <div className="h-screen flex flex-col overflow-hidden">
       {/* ─── Compact Header ─────────────────────────────────────── */}
-      <header className="header-bar flex items-center h-14 px-4 relative z-[1003]">
-        {/* Logo + Region Selector - left side */}
+      <header className="header-bar flex items-center justify-between h-14 px-4 relative z-[1003]">
+        {/* Left side: Logo + Region Selector */}
         <div className="flex items-center gap-3 shrink-0">
-          <span className="logo-text">Bakom</span>
+          <button onClick={() => navigate({ to: "/" })} className="logo-text logo-mark">B</button>
 
           {/* Region selector */}
           <div className="relative" ref={regionMenuRef}>
             <button
-              onClick={() => setRegionMenuOpen(!regionMenuOpen)}
+              onPointerDown={() => setRegionMenuOpen(!regionMenuOpen)}
               className="flex items-center gap-1.5 h-8 px-3 rounded-full border border-black/10 bg-white/50 hover:bg-white/80 transition-colors text-sm font-medium"
             >
               <span className="hidden sm:inline">{t(`regions.${region}`)}</span>
@@ -226,7 +245,7 @@ function HomePage() {
                 {REGIONS.map((r) => (
                   <button
                     key={r.id}
-                    onClick={() => handleRegionChange(r.id)}
+                    onPointerDown={() => handleRegionChange(r.id)}
                     className={`w-full text-left px-4 py-2 text-sm hover:bg-black/5 dark:hover:bg-white/5 transition-colors ${
                       r.id === region ? "font-semibold bg-black/5 dark:bg-white/5" : ""
                     }`}
@@ -240,80 +259,66 @@ function HomePage() {
               </div>
             )}
           </div>
+        </div>
 
+        {/* Right side: Search + Feedback + Filter */}
+        <div className="flex items-center gap-1 shrink-0 relative">
+          {/* Search - icon only when collapsed, expands left on click */}
+          {searchExpanded || filterState.searchQuery ? (
+            <div className="search-input-wrapper expanded">
+              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 size-4 text-muted-foreground pointer-events-none" />
+              <input
+                ref={searchInputRef}
+                type="text"
+                placeholder={t("header.search")}
+                value={filterState.searchQuery}
+                onChange={(e) =>
+                  dispatch({ type: "SET_SEARCH", payload: e.target.value })
+                }
+                onBlur={() => {
+                  if (!filterState.searchQuery) setSearchExpanded(false);
+                }}
+                className="search-input"
+              />
+              {filterState.searchQuery && (
+                <button
+                  onPointerDown={() => {
+                    dispatch({ type: "SET_SEARCH", payload: "" });
+                    searchInputRef.current?.focus();
+                  }}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 p-1 rounded-full hover:bg-black/5 transition-colors"
+                >
+                  <X className="size-3.5 text-muted-foreground" />
+                </button>
+              )}
+            </div>
+          ) : (
+            <button
+              onClick={() => setSearchExpanded(true)}
+              className="header-icon-btn"
+              title={t("header.search")}
+            >
+              <Search className="size-5" />
+            </button>
+          )}
+
+          {/* Feedback icon button */}
           <button
             onClick={() => setFeedbackOpen(true)}
-            className="hidden sm:flex items-center gap-1.5 h-8 px-3 rounded-full border border-black/10 bg-white/50 hover:bg-white/80 transition-colors text-xs font-medium text-muted-foreground hover:text-foreground"
+            className="header-icon-btn"
             title={t("feedback.title")}
           >
-            <MessageSquare className="size-3.5" />
-            <span>{t("header.feedback")}</span>
+            <MessageSquare className="size-5" />
           </button>
 
-          <div className="hidden sm:block">
-            <LanguageSwitcher />
-          </div>
-        </div>
-
-        {/* Search - centered */}
-        <div className="flex-1 flex justify-center px-4">
-          <div
-            className={`search-input-wrapper ${searchExpanded || filterState.searchQuery ? "expanded" : "collapsed"}`}
-          >
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 size-4 text-muted-foreground pointer-events-none" />
-            <input
-              ref={searchInputRef}
-              type="text"
-              placeholder={t("header.search")}
-              value={filterState.searchQuery}
-              onChange={(e) =>
-                dispatch({ type: "SET_SEARCH", payload: e.target.value })
-              }
-              onFocus={() => setSearchExpanded(true)}
-              onBlur={() => {
-                if (!filterState.searchQuery) setSearchExpanded(false);
-              }}
-              className="search-input"
-            />
-            {filterState.searchQuery && (
-              <button
-                onClick={() => {
-                  dispatch({ type: "SET_SEARCH", payload: "" });
-                  searchInputRef.current?.focus();
-                }}
-                className="absolute right-3 top-1/2 -translate-y-1/2 p-1 rounded-full hover:bg-black/5 transition-colors"
-              >
-                <X className="size-3.5 text-muted-foreground" />
-              </button>
-            )}
-          </div>
-        </div>
-
-        {/* Filter button & count - right side */}
-        <div className="flex items-center gap-2 shrink-0">
-          <div className="count-badge hidden sm:flex">
-            <MapPin className="size-3.5" />
-            <strong>{filtered.length}</strong>
-            {filtered.length !== regionFiltered.length && (
-              <span className="text-muted-foreground">
-                / {regionFiltered.length}
-              </span>
-            )}
-          </div>
+          {/* Filter button */}
           <button
             onPointerDown={toggleFilters}
             aria-label={sidebarMode === "filters" ? t("filters.close_aria") : t("header.filter")}
             aria-expanded={sidebarMode === "filters"}
-            className={`relative flex items-center gap-2 h-10 px-4 rounded-full border transition-all text-sm font-medium select-none ${
-              sidebarMode === "filters"
-                ? "bg-foreground text-background border-foreground"
-                : "border-black/10 bg-white/50 hover:bg-white/80"
-            }`}
+            className={`header-icon-btn relative ${sidebarMode === "filters" ? "active" : ""}`}
           >
-            <SlidersHorizontal className="size-4" />
-            <span className="hidden sm:inline">
-              {sidebarMode === "filters" ? t("header.close") : t("header.filter")}
-            </span>
+            <SlidersHorizontal className="size-5" />
             {activeFilterCount > 0 && sidebarMode !== "filters" && (
               <span className="absolute -top-1 -right-1 size-5 rounded-full bg-foreground text-background text-xs font-semibold flex items-center justify-center">
                 {activeFilterCount}
@@ -324,7 +329,7 @@ function HomePage() {
       </header>
 
       {/* ─── Main Content: Left Sidebar + Map ─────────────────────── */}
-      <div className="flex-1 flex overflow-hidden">
+      <div className="flex-1 flex overflow-hidden relative">
         {/* Left sidebar - Restaurant list (desktop only) */}
         <div className="hidden md:block w-80 border-r border-black/5 dark:border-white/5 overflow-hidden">
           <RestaurantList
@@ -334,7 +339,7 @@ function HomePage() {
           />
         </div>
 
-        {/* Map container */}
+        {/* Map container - always rendered, use z-index to layer on mobile */}
         <div className="flex-1 relative overflow-hidden">
           <Suspense
             fallback={
@@ -352,11 +357,11 @@ function HomePage() {
             />
           </Suspense>
 
-          {/* Location button overlay */}
+          {/* Location button overlay - only show when map is visible */}
           <button
-            onClick={locateUser}
+            onPointerDown={locateUser}
             disabled={locating}
-            className="map-overlay-btn bottom-6 right-4 size-12"
+            className={`map-overlay-btn bottom-4 right-4 size-12 ${mobileView === "list" ? "md:flex hidden" : ""}`}
             title={
               locationError || (userLocation ? t("location.update") : t("location.show"))
             }
@@ -369,20 +374,48 @@ function HomePage() {
               />
             )}
           </button>
+        </div>
 
-          {/* Mobile count badge */}
-          <div className="sm:hidden count-badge absolute bottom-6 left-4 z-[1000]">
-            <MapPin className="size-3.5" />
-            <strong>{filtered.length}</strong>
-          </div>
+        {/* Mobile list view - slides in from left */}
+        <div
+          className={`md:hidden absolute inset-0 bg-background z-[1000] overflow-hidden transition-transform duration-300 ${
+            mobileView === "list" ? "translate-x-0" : "-translate-x-full"
+          }`}
+        >
+          <RestaurantList
+            restaurants={filtered}
+            selectedRestaurant={selectedRestaurant}
+            onSelectRestaurant={handleSelectRestaurant}
+          />
         </div>
       </div>
+
+      {/* Mobile view toggle button */}
+      <button
+        onPointerDown={() => setMobileView(mobileView === "map" ? "list" : "map")}
+        className="md:hidden mobile-view-toggle"
+        aria-label={mobileView === "map" ? t("header.list") : t("header.map")}
+      >
+        {mobileView === "map" ? (
+          <List className="size-5" />
+        ) : (
+          <MapIcon className="size-5" />
+        )}
+      </button>
 
       {/* Mobile overlay tap-to-close */}
       {sidebarOpen && (
         <div
           className="md:hidden fixed inset-0 top-14 z-[1001] bg-black/20"
-          onPointerDown={closeSidebar}
+          onClick={(e) => {
+            e.stopPropagation();
+            if (sidebarMode === "filters") {
+              setSidebarMode(selectedRestaurant ? "restaurant" : null);
+            } else {
+              closeSidebar();
+            }
+          }}
+          onPointerDown={(e) => e.stopPropagation()}
         />
       )}
 
@@ -391,7 +424,7 @@ function HomePage() {
         className={`
           fixed top-14 bottom-0 right-0
           bg-white dark:bg-zinc-900 border-l border-black/5 dark:border-white/10
-          transition-all duration-300 ease-out
+          transition-[width] duration-200 ease-out
           overflow-hidden z-[1002]
           ${sidebarOpen ? "shadow-[-8px_0_24px_rgba(0,0,0,0.1)]" : ""}
         `}
@@ -408,7 +441,7 @@ function HomePage() {
             <Filters
               state={filterState}
               dispatch={dispatch}
-              onClose={closeSidebar}
+              onClose={() => setSidebarMode(selectedRestaurant ? "restaurant" : null)}
               total={regionFiltered.length}
               filtered={filtered.length}
               hasActiveFilters={hasActiveFilters}
@@ -425,6 +458,9 @@ function HomePage() {
 
       {/* Feedback Modal */}
       <FeedbackModal isOpen={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
+
+      {/* Child routes render here (but we don't need them to render anything visible) */}
+      <Outlet />
     </div>
   );
 }

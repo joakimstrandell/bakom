@@ -7,10 +7,8 @@
  *   SvD:         0.16  (professional critic, 1–6 scale)
  *   Krogguiden:  0.16  (professional reviewers)
  *   DI:          0.16  (professional critic, 15–25 scale)
+ *   DN:          0.14  (professional critic, 0–5 scale)
  *   Google:      0.10  (crowd ratings)
- *
- * DN has no numeric rating (boolean only) — contributes to source
- * diversity but not to the weighted average.
  *
  * Only present sources are weighted. Additional adjustments:
  *   - Google: Bayesian dampening pulls scores toward a prior (7.0)
@@ -84,6 +82,11 @@ function normalize0to25(rating: number): number {
   return (rating / 25) * 10;
 }
 
+/** Normalize a 0–5 rating (DN scale) to 0–10: score/max */
+function normalize0to5(rating: number): number {
+  return (rating / 5) * 10;
+}
+
 /**
  * Bayesian dampening for crowd-sourced ratings.
  * With few reviews, the score is pulled toward CROWD_PRIOR (neutral-good).
@@ -104,6 +107,7 @@ const WEIGHTS = {
   svd: 0.16,
   krogguiden: 0.16,
   di: 0.16,
+  dn: 0.14,
   google: 0.10,
 } as const;
 
@@ -122,19 +126,15 @@ type SourceEntry = { weight: number; score: number };
 
 /**
  * Collect all available source scores and weights for a restaurant.
- * DN is boolean-only (no numeric rating) so it's tracked separately
- * via the dnReviewed flag for diversity counting.
  * Also returns all normalized scores for the perfection check.
  */
 function collectSources(input: ScoreInput): {
   entries: SourceEntry[];
-  extraDiversitySources: number;
   allNormalizedScores: number[];
 } {
   const { ratings, googleRatingCount } = input;
   const entries: SourceEntry[] = [];
   const allNormalizedScores: number[] = [];
-  let extraDiversitySources = 0;
 
   if (ratings.michelin) {
     const score = MICHELIN_SCORES[ratings.michelin];
@@ -166,6 +166,12 @@ function collectSources(input: ScoreInput): {
     allNormalizedScores.push(score);
   }
 
+  if (ratings.dn != null && ratings.dn > 0) {
+    const score = normalize0to5(ratings.dn);
+    entries.push({ weight: WEIGHTS.dn, score });
+    allNormalizedScores.push(score);
+  }
+
   if (ratings.google != null && ratings.google > 0) {
     const count = googleRatingCount ?? 0;
     const score = bayesianDampen(normalizeCrowd1to5(ratings.google), count);
@@ -173,22 +179,13 @@ function collectSources(input: ScoreInput): {
     allNormalizedScores.push(score);
   }
 
-  // DN has no numeric rating — count it for diversity only
-  if (ratings.dn) {
-    extraDiversitySources = 1;
-  }
-
-  return { entries, extraDiversitySources, allNormalizedScores };
+  return { entries, allNormalizedScores };
 }
 
 /**
  * Compute the weighted average for a subset of sources, with diversity dampening.
- * extraDiversity counts non-numeric sources (DN) that still contribute to diversity.
  */
-function computeScore(
-  sources: SourceEntry[],
-  extraDiversity: number = 0,
-): number {
+function computeScore(sources: SourceEntry[]): number {
   if (sources.length === 0) return 0;
 
   let weightedSum = 0;
@@ -200,8 +197,8 @@ function computeScore(
 
   let score = weightedSum / totalWeight;
 
-  // Source diversity dampening (includes extra non-numeric sources like DN)
-  const n = sources.length + extraDiversity;
+  // Source diversity dampening
+  const n = sources.length;
   const diversityFactor = n === 1 ? 0.88 : n === 2 ? 0.95 : 1.0;
   score *= diversityFactor;
 
@@ -220,14 +217,13 @@ export type BakomScoreResult = {
  * Returns both display score (integer) and raw score (decimal), or null if no ratings exist.
  */
 export function calculateBakomScore(input: ScoreInput): BakomScoreResult | null {
-  const { entries: sources, extraDiversitySources, allNormalizedScores } =
-    collectSources(input);
+  const { entries: sources, allNormalizedScores } = collectSources(input);
   if (sources.length === 0) return null;
 
   const { ratings, links } = input;
 
   // Compute weighted average with diversity dampening
-  let score = computeScore(sources, extraDiversitySources);
+  let score = computeScore(sources);
 
   // "Visited but no score" ceiling — Krogguiden reviewed but didn't rate
   // This suggests the restaurant wasn't good enough to earn a score

@@ -37,7 +37,6 @@ function score(overrides: Parameters<typeof input>[0]): number | null {
 describe("calculateBakomScore", () => {
   it("returns null when no ratings exist", () => {
     expect(score({})).toBeNull();
-    expect(score({ dn: true })).toBeNull(); // DN alone = no numeric score
   });
 
   it("returns an integer between 0 and 100", () => {
@@ -91,6 +90,16 @@ describe("calculateBakomScore", () => {
       const s15 = score({ di: 15 });
       expect(s15).toBe(53);
     });
+
+    it("DN 0-5 maps correctly", () => {
+      // 5/5 → internal 10.0, single-source = 10.0 * 0.88 = 8.8, capped at 8.0 → 80
+      const s5 = score({ dn: 5 });
+      expect(s5).toBe(80);
+
+      // 3/5 → internal 6.0, single-source = 6.0 * 0.88 = 5.28, *10 = 53
+      const s3 = score({ dn: 3 });
+      expect(s3).toBe(53);
+    });
   });
 
   // ─── Bayesian dampening ──────────────────────────────────────
@@ -141,9 +150,9 @@ describe("calculateBakomScore", () => {
       expect(s).toBeGreaterThan(60);
     });
 
-    it("DN counts for diversity but not score", () => {
+    it("DN counts as a numeric source for diversity and score", () => {
       const withoutDn = score({ krogguiden: 4.0 })!; // 1 source, 0.88 factor
-      const withDn = score({ krogguiden: 4.0, dn: true })!; // 1 numeric + DN = 2, 0.95 factor
+      const withDn = score({ krogguiden: 4.0, dn: 4 })!; // 2 sources, 0.95 factor
       expect(withDn).toBeGreaterThan(withoutDn);
     });
   });

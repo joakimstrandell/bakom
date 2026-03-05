@@ -255,14 +255,54 @@ function applyManualData(
 }
 
 /**
- * Generate a deterministic ID from name + address.
+ * Transliterate Swedish/Nordic characters to ASCII.
  */
-function generateId(name: string, address: string): string {
-  return `${name} ${address}`
+function transliterate(str: string): string {
+  const map: Record<string, string> = {
+    å: "a", ä: "a", ö: "o", Å: "A", Ä: "A", Ö: "O",
+    é: "e", è: "e", ê: "e", ë: "e", É: "E", È: "E", Ê: "E", Ë: "E",
+    á: "a", à: "a", â: "a", ã: "a", Á: "A", À: "A", Â: "A", Ã: "A",
+    í: "i", ì: "i", î: "i", ï: "i", Í: "I", Ì: "I", Î: "I", Ï: "I",
+    ó: "o", ò: "o", ô: "o", õ: "o", Ó: "O", Ò: "O", Ô: "O", Õ: "O",
+    ú: "u", ù: "u", û: "u", ü: "u", Ú: "U", Ù: "U", Û: "U", Ü: "U",
+    ý: "y", ÿ: "y", Ý: "Y", ñ: "n", Ñ: "N", ç: "c", Ç: "C",
+    ø: "o", Ø: "O", æ: "ae", Æ: "AE", ß: "ss",
+  };
+  return str.replace(/[^\x00-\x7F]/g, (char) => map[char] || char);
+}
+
+/**
+ * Create a URL-safe slug from text.
+ */
+function slugify(text: string): string {
+  return transliterate(text)
     .toLowerCase()
-    .replace(/[^\p{L}\p{N}]/gu, "-")
+    .replace(/[^a-z0-9]/g, "-")
     .replace(/-+/g, "-")
     .replace(/^-|-$/g, "");
+}
+
+/**
+ * Generate a deterministic ID from name + address (for internal merge uniqueness).
+ */
+function generateId(name: string, address: string): string {
+  return slugify(`${name} ${address}`);
+}
+
+/**
+ * Generate clean URL slugs from name + city, with numbers for duplicates.
+ */
+function generateSlugs(restaurants: PipelineRestaurant[]): void {
+  const slugCounts = new Map<string, number>();
+
+  for (const r of restaurants) {
+    const baseSlug = slugify(`${r.name} ${r.city}`);
+    const count = slugCounts.get(baseSlug) || 0;
+    slugCounts.set(baseSlug, count + 1);
+
+    // First occurrence: no suffix. Subsequent: add -2, -3, etc.
+    r.id = count === 0 ? baseSlug : `${baseSlug}-${count + 1}`;
+  }
 }
 
 // ─── Main merge function ─────────────────────────────────────────
@@ -824,6 +864,9 @@ export async function merge(): Promise<PipelineRestaurant[]> {
     if (warnings.length > 10)
       console.log(`  ... and ${warnings.length - 10} more`);
   }
+
+  // Generate clean URL slugs (name + city, with numbers for duplicates)
+  generateSlugs(restaurants);
 
   // Save merged data
   saveJson("restaurants.json", restaurants);

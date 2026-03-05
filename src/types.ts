@@ -44,7 +44,7 @@ export type SourceRatings = {
   michelin?: MichelinDistinction | null;
   whiteguide?: WhiteGuideClassification | null;
   svd?: number | null; // 1-6 scale
-  dn?: boolean | null; // true = reviewed (no numeric rating)
+  dn?: number | null; // 0-5 scale
   di?: number | null; // 15-25 scale (totalScore)
 };
 
@@ -54,13 +54,13 @@ export type Restaurant = {
   id: string;
   name: string;
   address: string;
-  postalCode: string;
+  postalCode?: string;
   city: string;
-  region: string;
-  phone: string;
-  website: string;
-  priceRange: string;
-  cuisine: string;
+  region?: string;
+  phone?: string;
+  website?: string;
+  priceRange?: string;
+  cuisine?: string;
   hours: HoursEntry[];
   lat: number | null;
   lng: number | null;

@@ -15,10 +15,8 @@ Source file: [`src/lib/score.ts`](../src/lib/score.ts)
 | SvD | Professional critic | 1–6 | 1.67–10.0 | 0.16 |
 | DI Weekend | Professional critic | 0–25 (total score) | 0–10.0 | 0.16 |
 | Krogguiden | Professional reviewers | 1–5 | 2.0–10.0 | 0.16 |
+| DN | Professional critic | 0–5 | 0–10.0 | 0.14 |
 | Google | Crowdsource | 1–5 (with review count) | 2.0–10.0 | 0.10 |
-| DN | Professional critic | Boolean (reviewed/not) | — | — |
-
-DN has no numeric rating. A DN review counts as an extra diversity source but does not contribute to the weighted average.
 
 ---
 
@@ -89,6 +87,20 @@ internal = (score / 5) * 10
 | 3.8/5 | 7.6 |
 | 5.0/5 | 10.0 |
 
+### DN (0–5 scale)
+
+```
+internal = (score / 5) * 10
+```
+
+| Rating | Internal |
+|--------|----------|
+| 1/5 | 2.0 |
+| 2/5 | 4.0 |
+| 3/5 | 6.0 |
+| 4/5 | 8.0 |
+| 5/5 | 10.0 |
+
 ### Google (1–5 scale + Bayesian dampening)
 
 Google ratings use the same score/max normalization, but an additional Bayesian dampening step prevents restaurants with few reviews from getting inflated scores.
@@ -139,6 +151,7 @@ White Guide: 0.20   (expert assessment, Swedish context)
 SvD:         0.16   (professional critic)
 DI Weekend:  0.16   (professional critic)
 Krogguiden:  0.16   (professional reviewers)
+DN:          0.14   (professional critic, 0–5 integer scale)
 Google:      0.10   (crowdsource, lowest weight)
 ```
 
@@ -168,7 +181,7 @@ Restaurants with few sources are dampened — a single source provides lower con
 | 2 sources | x 0.95 |
 | 3+ sources | x 1.00 |
 
-DN counts as an extra source for diversity calculation (even though it doesn't contribute to the weighted average).
+DN counts as a full numeric source for both diversity and the weighted average.
 
 ### 2. Visited-but-no-score ceiling
 
@@ -203,6 +216,7 @@ If any source falls below 9.5, the maximum score is 99.
 | Google | ≥ 4.75/5 (with 100+ reviews) |
 | SvD | 6/6 |
 | DI | ≥ 23.75/25 |
+| DN | 5/5 |
 
 ### 5. Conversion to Bakom Score
 

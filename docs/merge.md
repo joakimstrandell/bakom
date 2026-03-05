@@ -75,8 +75,10 @@ For White Guide restaurants not matched in steps 2-3:
 add rating (1-6 scale) and link. If no match but has an address,
 create a new restaurant.
 
-**DN** — Fuzzy-match only (DN reviews have no address). Adds a
-boolean `dn: true` to ratings. Cannot create new restaurants.
+**DN** — Fuzzy-match against all existing restaurants using name and
+address. If matched, add score (0-5 scale) and link. DN reviews with
+an address can also confirm matches. Cannot create new restaurants
+(DN data is scraped via Chrome MCP due to paywall).
 
 **DI Weekend** — Fuzzy-match against all existing restaurants. If
 matched, add total score (0-25) and link. Use DI coordinates as

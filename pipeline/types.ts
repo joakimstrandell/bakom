@@ -102,13 +102,20 @@ export type SvdRaw = {
   publishedAt: string;
 };
 
-/** Raw output from DN Krogkommissionen scraper */
+/** Raw output from DN Krogkommissionen scraper (via Chrome MCP — paywall requires login) */
 export type DnRaw = {
   source: "dn";
   slug: string;
-  name: string;
+  name: string | null;
+  heading: string;
   url: string;
   publishedAt: string;
+  score: number | null; // 0-5 scale (null for snabbtestet/list articles)
+  address: string | null;
+  priceClass: string | null; // "Budget" | "Mellan" | "Lyx"
+  website: string | null;
+  contact: string | null;
+  hours: string | null;
 };
 
 /** Raw output from DI Weekend krogguide */

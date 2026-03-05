@@ -14,6 +14,7 @@ Source file: [`pipeline/process/optimize.ts`](../pipeline/process/optimize.ts)
 |------|-----------|---------|
 | `data/restaurants.json` | Input | Full pipeline dataset (includes closed) |
 | `data/restaurants.frontend.json` | Output | All active restaurants with `metroRegion` field |
+| `data/cuisines.json` | Output | Unique cuisine types with counts for filter UI |
 
 ---
 
@@ -56,6 +57,18 @@ Restaurants in `sweden` (outside metro areas) do not have a regional rank.
 - Empty `hours`, `ratings`, and `links` objects
 
 This reduces file size by ~25-30% compared to the full dataset.
+
+### 5. Extract cuisine metadata
+
+Extracts unique cuisine values from all restaurants for the filter UI:
+
+- Splits comma-separated cuisine values (e.g., "Crossover,Frankrike")
+- Filters out non-cuisine terms (Restaurant, Hotel, Bar, etc.)
+- Maps variations to canonical names (e.g., "Japanese" → "Asien", "Seafood" → "Fokus på fisk")
+- Only includes cuisines with 3+ restaurants
+- Outputs sorted by count descending
+
+The frontend imports `cuisines.json` directly to populate the cuisine filter.
 
 ---
 

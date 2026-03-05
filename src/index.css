@@ -123,6 +123,10 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* Eliminate 300ms tap delay on mobile */
+  button, a, [role="button"] {
+    touch-action: manipulation;
+  }
 }
 
 /* Marker cluster icons */
@@ -169,17 +173,56 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.search-input-wrapper {
-  position: relative;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+/* Header ghost icon buttons */
+.header-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  color: var(--muted-foreground);
+  cursor: pointer;
+  transition: all 0.15s ease;
 }
 
-.search-input-wrapper.collapsed {
-  width: 44px;
+.header-icon-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--foreground);
+}
+
+.header-icon-btn.active {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+.dark .header-icon-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dark .header-icon-btn.active {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+/* Search input wrapper */
+.search-input-wrapper {
+  position: relative;
 }
 
 .search-input-wrapper.expanded {
-  width: min(400px, 50vw);
+  position: absolute;
+  right: 88px; /* Space for feedback + filter buttons */
+  width: min(360px, calc(100vw - 180px));
+  z-index: 20;
+}
+
+@media (max-width: 640px) {
+  .search-input-wrapper.expanded {
+    width: calc(100vw - 120px); /* Overlay logo and dropdown on mobile */
+  }
 }
 
 .search-input {
@@ -261,9 +304,43 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
-/* Mobile count badge on map */
-.count-badge.absolute {
-  z-index: 1000 !important;
+/* Mobile view toggle button */
+.mobile-view-toggle {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  z-index: 1100; /* Above mobile list (1001) and map overlays (1000) */
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--foreground);
+  color: var(--background);
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 767px) {
+  .mobile-view-toggle {
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-view-toggle {
+    display: none;
+  }
+}
+
+.mobile-view-toggle:hover {
+  transform: scale(1.05);
+}
+
+.mobile-view-toggle:active {
+  transform: scale(0.95);
 }
 
 /* ─── Filter Section Styling ──────────────────────────────────── */
@@ -349,36 +426,15 @@
   background-clip: text;
 }
 
+.logo-text.logo-mark {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
 .dark .logo-text {
   background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }
 
-/* ─── Count Badge ─────────────────────────────────────────────── */
-
-.count-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  border-radius: 20px;
-  background: rgba(0, 0, 0, 0.04);
-  font-size: 13px;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.count-badge strong {
-  color: var(--foreground);
-  font-weight: 600;
-}
-
-.dark .count-badge {
-  background: rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.dark .count-badge strong {
-  color: white;
-}

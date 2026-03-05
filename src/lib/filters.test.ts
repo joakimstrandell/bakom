@@ -38,7 +38,7 @@ const restaurants: Restaurant[] = [
     region: "Norrmalm",
     cuisine: "Japanskt, Sushi",
     priceRange: "$$$",
-    ratings: { krogguiden: 4.2, google: 4.5, michelin: "1_star", whiteguide: null, svd: 5, dn: true, di: 20 },
+    ratings: { krogguiden: 4.2, google: 4.5, michelin: "1_star", whiteguide: null, svd: 5, dn: 4, di: 20 },
     bakomScore: 85,
   }),
   makeRestaurant({
@@ -58,7 +58,7 @@ const restaurants: Restaurant[] = [
     region: "Östermalm",
     cuisine: "Nordiskt, Fine dining",
     priceRange: "$$$$",
-    ratings: { krogguiden: null, google: 4.8, michelin: "2_star", whiteguide: "master_class", svd: 6, dn: true, di: 24 },
+    ratings: { krogguiden: null, google: 4.8, michelin: "2_star", whiteguide: "master_class", svd: 6, dn: 5, di: 24 },
     bakomScore: 95,
   }),
   makeRestaurant({
@@ -347,23 +347,32 @@ describe("filterRestaurants — white guide multi-select", () => {
   });
 });
 
-// ── DN toggle ─────────────────────────────────────────────────
+// ── DN range ──────────────────────────────────────────────────
 
-describe("filterRestaurants — DN toggle", () => {
-  it("filters to only DN-reviewed when enabled", () => {
+describe("filterRestaurants — DN range", () => {
+  it("filters by dn range", () => {
     const result = filterRestaurants(
       restaurants,
-      filters({ dnRequired: true })
+      filters({ dn: { min: 4, max: 5 } })
     );
-    expect(result).toHaveLength(2); // sushi + fine-dining
+    expect(result).toHaveLength(2); // sushi (4) + fine-dining (5)
   });
 
-  it("returns all when DN filter is off", () => {
+  it("default range does not filter", () => {
     const result = filterRestaurants(
       restaurants,
-      filters({ dnRequired: false })
+      filters({ dn: { min: 0, max: 5 } })
     );
     expect(result).toHaveLength(4);
+  });
+
+  it("excludes null when range is active", () => {
+    const result = filterRestaurants(
+      restaurants,
+      filters({ dn: { min: 1, max: 5 } })
+    );
+    // pizza (null) and no-ratings (null) excluded
+    expect(result).toHaveLength(2);
   });
 });
 
@@ -407,16 +416,16 @@ describe("filterRestaurants — combined filters", () => {
     expect(result).toHaveLength(2); // sushi + fine-dining both pass
   });
 
-  it("combines range + multi-select + toggle", () => {
+  it("combines range + multi-select + dn range", () => {
     const result = filterRestaurants(
       restaurants,
       filters({
         bakomScore: { min: 80, max: 100 },
         selectedMichelin: new Set(["1_star", "2_star"]),
-        dnRequired: true,
+        dn: { min: 3, max: 5 },
       })
     );
-    expect(result).toHaveLength(2); // sushi (85, 1_star, dn) + fine-dining (95, 2_star, dn)
+    expect(result).toHaveLength(2); // sushi (85, 1_star, dn:4) + fine-dining (95, 2_star, dn:5)
   });
 
   it("excludes when one filter doesn't match", () => {

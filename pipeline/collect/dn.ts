@@ -101,8 +101,15 @@ async function scrapeArticle(url: string): Promise<DnRaw | null> {
       source: "dn",
       slug: extractSlug(url),
       name,
+      heading: title,
       url,
       publishedAt,
+      score: null,
+      address: null,
+      priceClass: null,
+      website: null,
+      contact: null,
+      hours: null,
     };
   } catch (err) {
     console.log(`  Failed to scrape ${url}: ${err}`);

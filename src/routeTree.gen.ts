@@ -9,50 +9,91 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
+import { Route as MapRouteImport } from './routes/_map'
+import { Route as MapIndexRouteImport } from './routes/_map/index'
+import { Route as MapRIdRouteImport } from './routes/_map/r.$id'
 
-const IndexRoute = IndexRouteImport.update({
+const MapRoute = MapRouteImport.update({
+  id: '/_map',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MapIndexRoute = MapIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
+  getParentRoute: () => MapRoute,
+} as any)
+const MapRIdRoute = MapRIdRouteImport.update({
+  id: '/r/$id',
+  path: '/r/$id',
+  getParentRoute: () => MapRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
+  '/': typeof MapIndexRoute
+  '/r/$id': typeof MapRIdRoute
 }
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
+  '/': typeof MapIndexRoute
+  '/r/$id': typeof MapRIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
-  '/': typeof IndexRoute
+  '/_map': typeof MapRouteWithChildren
+  '/_map/': typeof MapIndexRoute
+  '/_map/r/$id': typeof MapRIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/r/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/r/$id'
+  id: '__root__' | '/_map' | '/_map/' | '/_map/r/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
+  MapRoute: typeof MapRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
+    '/_map': {
+      id: '/_map'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof MapRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_map/': {
+      id: '/_map/'
       path: '/'
       fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
+      preLoaderRoute: typeof MapIndexRouteImport
+      parentRoute: typeof MapRoute
+    }
+    '/_map/r/$id': {
+      id: '/_map/r/$id'
+      path: '/r/$id'
+      fullPath: '/r/$id'
+      preLoaderRoute: typeof MapRIdRouteImport
+      parentRoute: typeof MapRoute
     }
   }
 }
 
+interface MapRouteChildren {
+  MapIndexRoute: typeof MapIndexRoute
+  MapRIdRoute: typeof MapRIdRoute
+}
+
+const MapRouteChildren: MapRouteChildren = {
+  MapIndexRoute: MapIndexRoute,
+  MapRIdRoute: MapRIdRoute,
+}
+
+const MapRouteWithChildren = MapRoute._addFileChildren(MapRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
-  IndexRoute: IndexRoute,
+  MapRoute: MapRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
