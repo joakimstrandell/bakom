@@ -17,9 +17,7 @@ async function fetchArticleUrls(): Promise<string[]> {
   let hasMore = true;
 
   while (hasMore) {
-    const res = await fetchWithRetry(
-      `${API_URL}?limit=${PAGE_SIZE}&offset=${offset}&variant=grid`
-    );
+    const res = await fetchWithRetry(`${API_URL}?limit=${PAGE_SIZE}&offset=${offset}&variant=grid`);
     const html = await res.text();
 
     // Extract article URLs from HTML
@@ -66,7 +64,7 @@ function cleanSvdAddress(raw: string): string {
 function parseJsonLd(html: string): Partial<SvdRaw> | null {
   const $ = cheerio.load(html);
 
-  let reviewData: any = null;
+  let reviewData: Record<string, unknown> | null = null;
 
   $('script[type="application/ld+json"]').each((_, el) => {
     try {
@@ -78,7 +76,9 @@ function parseJsonLd(html: string): Partial<SvdRaw> | null {
       if (parsed["@type"] === "Review" && parsed.itemReviewed) {
         reviewData = parsed;
       }
-    } catch {}
+    } catch {
+      // Invalid JSON-LD, skip
+    }
   });
 
   if (!reviewData || !reviewData.itemReviewed) return null;
@@ -135,9 +135,7 @@ async function scrapeArticle(url: string): Promise<SvdRaw | null> {
 
 // ─── Main scraper function ───────────────────────────────────────
 
-export async function scrapeSvd(
-  options: { force?: boolean } = {},
-): Promise<SvdRaw[]> {
+export async function scrapeSvd(options: { force?: boolean } = {}): Promise<SvdRaw[]> {
   console.log("=== SvD Krogguiden Scraper ===\n");
 
   // Load existing data to avoid re-scraping (skip when --force)

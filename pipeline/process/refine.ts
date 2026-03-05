@@ -2,7 +2,6 @@
 
 import { loadJson, saveJson } from "../utils/fetch.js";
 import { applyGoogleData } from "../collect/google.js";
-import { geocodeRestaurants } from "./geocode.js";
 import { calculateBakomScore } from "../../src/lib/score.js";
 import {
   calculateQualityMetrics,
@@ -19,9 +18,7 @@ export async function refine(): Promise<PipelineRestaurant[]> {
 
   const restaurants = loadJson<PipelineRestaurant[]>("restaurants.json");
   if (!restaurants) {
-    throw new Error(
-      "data/restaurants.json not found. Run pipeline:merge first."
-    );
+    throw new Error("data/restaurants.json not found. Run pipeline:merge first.");
   }
 
   console.log(`Loaded ${restaurants.length} restaurants\n`);
@@ -37,7 +34,9 @@ export async function refine(): Promise<PipelineRestaurant[]> {
     console.log(
       `Google Places: applied to ${googleResult.applied} restaurants` +
         (googleResult.missing > 0 ? `, ${googleResult.missing} missing` : "") +
-        (googleResult.skippedNonSweden > 0 ? `, ${googleResult.skippedNonSweden} non-Swedish skipped` : "")
+        (googleResult.skippedNonSweden > 0
+          ? `, ${googleResult.skippedNonSweden} non-Swedish skipped`
+          : "")
     );
     save();
     console.log("");
@@ -86,25 +85,17 @@ export async function refine(): Promise<PipelineRestaurant[]> {
   }
 
   if (beforeDedup !== deduped.length) {
-    console.log(
-      `Deduplicated: ${beforeDedup} → ${deduped.length}\n`
-    );
+    console.log(`Deduplicated: ${beforeDedup} → ${deduped.length}\n`);
   }
 
   // Log closed restaurants (filtered out in optimize step)
-  const permClosed = deduped.filter(
-    (r) => r.businessStatus === "CLOSED_PERMANENTLY"
-  ).length;
-  const tempClosed = deduped.filter(
-    (r) => r.businessStatus === "CLOSED_TEMPORARILY"
-  ).length;
+  const permClosed = deduped.filter((r) => r.businessStatus === "CLOSED_PERMANENTLY").length;
+  const tempClosed = deduped.filter((r) => r.businessStatus === "CLOSED_TEMPORARILY").length;
   if (permClosed + tempClosed > 0) {
     const parts: string[] = [];
     if (permClosed > 0) parts.push(`${permClosed} permanently`);
     if (tempClosed > 0) parts.push(`${tempClosed} temporarily`);
-    console.log(
-      `Closed: ${parts.join(", ")} (will be excluded from frontend JSON)\n`
-    );
+    console.log(`Closed: ${parts.join(", ")} (will be excluded from frontend JSON)\n`);
   }
 
   // ── 4. Calculate Bakom Score ─────────────────────────────────
@@ -166,16 +157,14 @@ export async function refine(): Promise<PipelineRestaurant[]> {
   if (errors.length > 0) {
     console.log(`Validation Errors (${errors.length}):`);
     errors.slice(0, 10).forEach((e) => console.log(`  ${e}`));
-    if (errors.length > 10)
-      console.log(`  ... and ${errors.length - 10} more`);
+    if (errors.length > 10) console.log(`  ... and ${errors.length - 10} more`);
     console.log("");
   }
 
   if (warnings.length > 0) {
     console.log(`Validation Warnings (${warnings.length}):`);
     warnings.slice(0, 10).forEach((w) => console.log(`  ${w}`));
-    if (warnings.length > 10)
-      console.log(`  ... and ${warnings.length - 10} more`);
+    if (warnings.length > 10) console.log(`  ... and ${warnings.length - 10} more`);
     console.log("");
   }
 

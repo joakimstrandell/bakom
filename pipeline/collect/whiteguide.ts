@@ -12,9 +12,7 @@ const SWEDEN_CHANNEL_ID = 3;
 /**
  * Map the Swedish classification label to our enum.
  */
-function mapClassification(
-  label: string
-): WhiteGuideClassification {
+function mapClassification(label: string): WhiteGuideClassification {
   const normalized = label.toUpperCase().trim();
   if (normalized.includes("GLOBAL")) return "global_master_class";
   if (normalized.includes("MÄSTAR")) return "master_class";
@@ -26,7 +24,7 @@ function mapClassification(
 // ─── Main scraper function ───────────────────────────────────────
 
 export async function scrapeWhiteGuide(
-  _options: { force?: boolean } = {},
+  _options: { force?: boolean } = {}
 ): Promise<WhiteGuideRaw[]> {
   console.log("=== White Guide Scraper (All Sweden) ===\n");
 
@@ -39,9 +37,7 @@ export async function scrapeWhiteGuide(
   params.set("search[tags_and]", "true");
 
   // URLSearchParams doesn't handle duplicate keys well, build manually
-  const releaseParams = RELEASE_IDS.map(
-    (id) => `search[release_ids][]=${id}`
-  ).join("&");
+  const releaseParams = RELEASE_IDS.map((id) => `search[release_ids][]=${id}`).join("&");
 
   const url = `${API_URL}?${params.toString()}&${releaseParams}`;
 
@@ -51,7 +47,7 @@ export async function scrapeWhiteGuide(
     headers: { Accept: "application/json" },
   });
 
-  const data: any[] = await res.json();
+  const data: Record<string, unknown>[] = await res.json();
   console.log(`  API returned ${data.length} results`);
 
   // Map to our type (no city filter - include all Swedish restaurants)
@@ -67,9 +63,7 @@ export async function scrapeWhiteGuide(
 
     const address = item.address ?? "";
     const scores = item.detailed?.scores_totals ?? {};
-    const classification = mapClassification(
-      item.classification_total_label ?? "REKOMMENDERAD"
-    );
+    const classification = mapClassification(item.classification_total_label ?? "REKOMMENDERAD");
 
     // Extract city from address (format: "Street, PostalCode City")
     const cityMatch = address.match(/\d{3}\s?\d{2}\s+(.+?)$/);

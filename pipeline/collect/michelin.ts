@@ -14,7 +14,10 @@ const SWEDEN_URL = `${MICHELIN_BASE}/se/en/selection/sweden/restaurants`;
  * Bib Gourmand has "bib-gourmand" in the src.
  * Restaurants without icons are "Selected Restaurants" (Good Cooking).
  */
-function parseDistinction($card: cheerio.Cheerio<any>, $: cheerio.CheerioAPI): MichelinDistinction {
+function parseDistinction(
+  $card: cheerio.Cheerio<cheerio.Element>,
+  $: cheerio.CheerioAPI
+): MichelinDistinction {
   const imgs = $card.find("img");
   let starCount = 0;
   let isBib = false;
@@ -89,9 +92,7 @@ async function scrapeListingPage(url: string): Promise<MichelinRaw[] | null> {
     const address = $card.attr("data-dtm-address") || "";
 
     // Build full URL
-    const fullUrl = href.startsWith("http")
-      ? href
-      : `${MICHELIN_BASE}${href}`;
+    const fullUrl = href.startsWith("http") ? href : `${MICHELIN_BASE}${href}`;
 
     restaurants.push({
       source: "michelin",
@@ -111,9 +112,7 @@ async function scrapeListingPage(url: string): Promise<MichelinRaw[] | null> {
 /**
  * Scrape detail pages to get more accurate address and cuisine data.
  */
-async function enrichFromDetailPage(
-  restaurant: MichelinRaw
-): Promise<MichelinRaw> {
+async function enrichFromDetailPage(restaurant: MichelinRaw): Promise<MichelinRaw> {
   try {
     const res = await fetchWithRetry(restaurant.url);
     const html = await res.text();
@@ -135,7 +134,7 @@ async function enrichFromDetailPage(
 
       // Price and cuisine format: "€€ · Contemporary, International"
       // Use a more flexible regex to handle different separators
-      const priceMatch = text.match(/^([€$]+)\s*[·•\-]\s*(.+)$/);
+      const priceMatch = text.match(/^([€$]+)\s*[·•-]\s*(.+)$/);
       if (priceMatch) {
         restaurant.priceRange = priceMatch[1];
         restaurant.cuisine = priceMatch[2].trim();
@@ -146,7 +145,7 @@ async function enrichFromDetailPage(
     // Format: "€€ · Contemporary, International"
     $(".restaurant-details__heading-price, .data-sheet__heading").each((_, el) => {
       const text = $(el).text().trim();
-      const match = text.match(/^([€$]+)\s*[·•\-]\s*(.+)$/);
+      const match = text.match(/^([€$]+)\s*[·•-]\s*(.+)$/);
       if (match && !restaurant.priceRange) {
         restaurant.priceRange = match[1];
         restaurant.cuisine = match[2].trim();
@@ -161,16 +160,16 @@ async function enrichFromDetailPage(
 
 // ─── Main scraper function ───────────────────────────────────────
 
-export async function scrapeMichelin(
-  options: { force?: boolean } = {},
-): Promise<MichelinRaw[]> {
+export async function scrapeMichelin(options: { force?: boolean } = {}): Promise<MichelinRaw[]> {
   console.log("=== Michelin Guide Scraper (All Sweden) ===\n");
 
   // In incremental mode, skip scraping if data already exists
   if (!options.force) {
     const existing = loadRawJson<MichelinRaw[]>("michelin.json");
     if (existing && existing.length > 0) {
-      console.log(`Loaded ${existing.length} existing restaurants from michelin.json (use --force to re-scrape)`);
+      console.log(
+        `Loaded ${existing.length} existing restaurants from michelin.json (use --force to re-scrape)`
+      );
       return existing;
     }
   }
@@ -199,7 +198,9 @@ export async function scrapeMichelin(
       }
     }
 
-    console.log(`  Page ${page}: ${pageRestaurants.length} restaurants (${restaurants.length} total)\n`);
+    console.log(
+      `  Page ${page}: ${pageRestaurants.length} restaurants (${restaurants.length} total)\n`
+    );
     page++;
     await sleep(1000);
   }
@@ -210,9 +211,7 @@ export async function scrapeMichelin(
   console.log("Enriching with detail page data...\n");
   for (let i = 0; i < restaurants.length; i++) {
     const r = restaurants[i];
-    process.stdout.write(
-      `[${i + 1}/${restaurants.length}] ${r.name} (${r.distinction})...`
-    );
+    process.stdout.write(`[${i + 1}/${restaurants.length}] ${r.name} (${r.distinction})...`);
 
     restaurants[i] = await enrichFromDetailPage(r);
     process.stdout.write(` ✓\n`);

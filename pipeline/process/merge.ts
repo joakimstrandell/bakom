@@ -8,7 +8,16 @@ import {
   validateRestaurant,
 } from "../utils/validate.js";
 import { deduplicateByGooglePlaceId } from "../utils/dedup.js";
-import type { KrogguidenRaw, MichelinRaw, WhiteGuideRaw, SvdRaw, DnRaw, DiRaw, ManualData, PipelineRestaurant } from "../types.js";
+import type {
+  KrogguidenRaw,
+  MichelinRaw,
+  WhiteGuideRaw,
+  SvdRaw,
+  DnRaw,
+  DiRaw,
+  ManualData,
+  PipelineRestaurant,
+} from "../types.js";
 
 /** Valid price ranges — anything outside this set is treated as empty */
 const VALID_PRICES = new Set(["$", "$$", "$$$", "$$$$"]);
@@ -110,10 +119,7 @@ function loadManualData(): ManualData | null {
 /**
  * Apply manual additions to the restaurant list.
  */
-function applyManualData(
-  restaurants: PipelineRestaurant[],
-  manual: ManualData
-): number {
+function applyManualData(restaurants: PipelineRestaurant[], manual: ManualData): number {
   const byId = new Map<string, PipelineRestaurant>();
   for (const r of restaurants) {
     byId.set(r.id, r);
@@ -168,15 +174,66 @@ function applyManualData(
  */
 function transliterate(str: string): string {
   const map: Record<string, string> = {
-    å: "a", ä: "a", ö: "o", Å: "A", Ä: "A", Ö: "O",
-    é: "e", è: "e", ê: "e", ë: "e", É: "E", È: "E", Ê: "E", Ë: "E",
-    á: "a", à: "a", â: "a", ã: "a", Á: "A", À: "A", Â: "A", Ã: "A",
-    í: "i", ì: "i", î: "i", ï: "i", Í: "I", Ì: "I", Î: "I", Ï: "I",
-    ó: "o", ò: "o", ô: "o", õ: "o", Ó: "O", Ò: "O", Ô: "O", Õ: "O",
-    ú: "u", ù: "u", û: "u", ü: "u", Ú: "U", Ù: "U", Û: "U", Ü: "U",
-    ý: "y", ÿ: "y", Ý: "Y", ñ: "n", Ñ: "N", ç: "c", Ç: "C",
-    ø: "o", Ø: "O", æ: "ae", Æ: "AE", ß: "ss",
+    å: "a",
+    ä: "a",
+    ö: "o",
+    Å: "A",
+    Ä: "A",
+    Ö: "O",
+    é: "e",
+    è: "e",
+    ê: "e",
+    ë: "e",
+    É: "E",
+    È: "E",
+    Ê: "E",
+    Ë: "E",
+    á: "a",
+    à: "a",
+    â: "a",
+    ã: "a",
+    Á: "A",
+    À: "A",
+    Â: "A",
+    Ã: "A",
+    í: "i",
+    ì: "i",
+    î: "i",
+    ï: "i",
+    Í: "I",
+    Ì: "I",
+    Î: "I",
+    Ï: "I",
+    ó: "o",
+    ò: "o",
+    ô: "o",
+    õ: "o",
+    Ó: "O",
+    Ò: "O",
+    Ô: "O",
+    Õ: "O",
+    ú: "u",
+    ù: "u",
+    û: "u",
+    ü: "u",
+    Ú: "U",
+    Ù: "U",
+    Û: "U",
+    Ü: "U",
+    ý: "y",
+    ÿ: "y",
+    Ý: "Y",
+    ñ: "n",
+    Ñ: "N",
+    ç: "c",
+    Ç: "C",
+    ø: "o",
+    Ø: "O",
+    æ: "ae",
+    Æ: "AE",
+    ß: "ss",
   };
+  // eslint-disable-next-line no-control-regex
   return str.replace(/[^\x00-\x7F]/g, (char) => map[char] || char);
 }
 
@@ -448,7 +505,7 @@ export async function merge(): Promise<PipelineRestaurant[]> {
       if (prev?.googlePlaceId) {
         restaurant.googlePlaceId = prev.googlePlaceId;
         restaurant.googleRatingCount = prev.googleRatingCount;
-          if (prev.businessStatus) restaurant.businessStatus = prev.businessStatus;
+        if (prev.businessStatus) restaurant.businessStatus = prev.businessStatus;
         preserved++;
       }
 
@@ -509,7 +566,7 @@ export async function merge(): Promise<PipelineRestaurant[]> {
       if (prev?.googlePlaceId) {
         restaurant.googlePlaceId = prev.googlePlaceId;
         restaurant.googleRatingCount = prev.googleRatingCount;
-          if (prev.businessStatus) restaurant.businessStatus = prev.businessStatus;
+        if (prev.businessStatus) restaurant.businessStatus = prev.businessStatus;
         preserved++;
       }
 
@@ -554,7 +611,9 @@ export async function merge(): Promise<PipelineRestaurant[]> {
         }
         svdMatches++;
         if (match.result.nameSimilarity < 1.0) {
-          console.log(`  Fuzzy: SvD "${s.name}" -> "${r.name}" (${(match.result.nameSimilarity * 100).toFixed(0)}%)`);
+          console.log(
+            `  Fuzzy: SvD "${s.name}" -> "${r.name}" (${(match.result.nameSimilarity * 100).toFixed(0)}%)`
+          );
         }
       } else if (s.address) {
         // Create new restaurant from SvD review (has address)
@@ -635,7 +694,9 @@ export async function merge(): Promise<PipelineRestaurant[]> {
         }
         dnMatches++;
         if (match.result.nameSimilarity < 1.0) {
-          console.log(`  Fuzzy: DN "${d.name}" -> "${r.name}" (${(match.result.nameSimilarity * 100).toFixed(0)}%)`);
+          console.log(
+            `  Fuzzy: DN "${d.name}" -> "${r.name}" (${(match.result.nameSimilarity * 100).toFixed(0)}%)`
+          );
         }
       }
     }
@@ -671,7 +732,9 @@ export async function merge(): Promise<PipelineRestaurant[]> {
         }
         diMatches++;
         if (match.result.nameSimilarity < 1.0) {
-          console.log(`  Fuzzy: DI "${d.name}" -> "${r.name}" (${(match.result.nameSimilarity * 100).toFixed(0)}%)`);
+          console.log(
+            `  Fuzzy: DI "${d.name}" -> "${r.name}" (${(match.result.nameSimilarity * 100).toFixed(0)}%)`
+          );
         }
       } else if (d.address) {
         // Create new restaurant from DI review (has address + coords)
@@ -763,8 +826,7 @@ export async function merge(): Promise<PipelineRestaurant[]> {
   if (warnings.length > 0) {
     console.log(`\nValidation Warnings (${warnings.length}):`);
     warnings.slice(0, 10).forEach((w) => console.log(`  ${w}`));
-    if (warnings.length > 10)
-      console.log(`  ... and ${warnings.length - 10} more`);
+    if (warnings.length > 10) console.log(`  ... and ${warnings.length - 10} more`);
   }
 
   // Generate clean URL slugs (name + city, with numbers for duplicates)
