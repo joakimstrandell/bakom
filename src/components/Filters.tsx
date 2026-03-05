@@ -1,4 +1,5 @@
 import { useCallback } from "react";
+import { useTranslation } from "react-i18next";
 import {
   X,
   UtensilsCrossed,
@@ -12,21 +13,21 @@ import {
 import type { MichelinDistinction, WhiteGuideClassification } from "../types";
 import type { FilterState, Range, FilterAction, RangeFilterKey } from "../hooks/useFilters";
 
-const CUISINES = [
-  { key: "Crossover", label: "Crossover" },
-  { key: "Frankrike", label: "Franskt" },
-  { key: "Asien", label: "Asiatiskt" },
-  { key: "Italien", label: "Italienskt" },
-  { key: "Klassiskt", label: "Klassiskt" },
-  { key: "Amerika", label: "Amerikanskt" },
-  { key: "Fokus på kött", label: "Kött" },
-  { key: "Fokus på fisk", label: "Fisk" },
-  { key: "Fokus på grönt", label: "Grönt" },
-  { key: "Spanien", label: "Spanskt" },
-  { key: "Veganskt", label: "Veganskt" },
-  { key: "Mellanöstern", label: "Mellanöstern" },
-  { key: "Latinamerika", label: "Latinamerikanskt" },
-  { key: "Mexikanskt", label: "Mexikanskt" },
+const CUISINE_KEYS = [
+  "Crossover",
+  "Frankrike",
+  "Asien",
+  "Italien",
+  "Klassiskt",
+  "Amerika",
+  "Fokus på kött",
+  "Fokus på fisk",
+  "Fokus på grönt",
+  "Spanien",
+  "Veganskt",
+  "Mellanöstern",
+  "Latinamerika",
+  "Mexikanskt",
 ] as const;
 
 const PRICES = ["$", "$$", "$$$", "$$$$"] as const;
@@ -40,13 +41,13 @@ const MICHELIN_OPTIONS: { key: MichelinDistinction; label: string }[] = [
   { key: "3_star", label: "★★★" },
 ];
 
-// White Guide classifications for multi-select
-const WG_OPTIONS: { key: WhiteGuideClassification; label: string }[] = [
-  { key: "recommended", label: "Rekommenderad" },
-  { key: "good_class", label: "God Klass" },
-  { key: "very_good_class", label: "Mycket God Klass" },
-  { key: "master_class", label: "Mästarklass" },
-  { key: "global_master_class", label: "Global Mästarklass" },
+// White Guide classification keys
+const WG_KEYS: WhiteGuideClassification[] = [
+  "recommended",
+  "good_class",
+  "very_good_class",
+  "master_class",
+  "global_master_class",
 ];
 
 // ─── Props ───────────────────────────────────────────────────────
@@ -208,6 +209,8 @@ export default function Filters({
   filtered,
   hasActiveFilters,
 }: FiltersProps) {
+  const { t } = useTranslation();
+
   return (
     <div className="h-full flex flex-col">
       {/* Header */}
@@ -217,17 +220,19 @@ export default function Filters({
             className="text-lg font-semibold"
             style={{ fontFamily: "var(--font-display)" }}
           >
-            Filter
+            {t("filters.title")}
           </h2>
-          <p className="text-sm text-muted-foreground mt-0.5">
-            Visar <strong className="text-foreground">{filtered}</strong> av{" "}
-            {total} restauranger
-          </p>
+          <p
+            className="text-sm text-muted-foreground mt-0.5"
+            dangerouslySetInnerHTML={{
+              __html: t("filters.showing", { count: filtered, total }),
+            }}
+          />
         </div>
         <button
           onPointerDown={onClose}
           className="size-10 rounded-full flex items-center justify-center hover:bg-black/5 transition-colors select-none"
-          aria-label="Stäng filter"
+          aria-label={t("filters.close_aria")}
         >
           <X className="size-5" />
         </button>
@@ -325,7 +330,7 @@ export default function Filters({
             White Guide
           </div>
           <div className="flex flex-wrap gap-2">
-            {WG_OPTIONS.map(({ key, label }) => (
+            {WG_KEYS.map((key) => (
               <button
                 key={key}
                 onClick={() =>
@@ -333,7 +338,7 @@ export default function Filters({
                 }
                 className={`filter-chip ${state.selectedWhiteGuide.has(key) ? "active" : ""}`}
               >
-                {label}
+                {t(`whiteguide.${key}`)}
               </button>
             ))}
           </div>
@@ -355,10 +360,10 @@ export default function Filters({
         <div className="filter-section">
           <div className="filter-section-title">
             <UtensilsCrossed className="size-4" />
-            Kök
+            {t("filters.cuisine")}
           </div>
           <div className="flex flex-wrap gap-2">
-            {CUISINES.map(({ key, label }) => (
+            {CUISINE_KEYS.map((key) => (
               <button
                 key={key}
                 onClick={() =>
@@ -366,7 +371,7 @@ export default function Filters({
                 }
                 className={`filter-chip ${state.selectedCuisines.has(key) ? "active" : ""}`}
               >
-                {label}
+                {t(`cuisines.${key}`)}
               </button>
             ))}
           </div>
@@ -376,7 +381,7 @@ export default function Filters({
         <div className="filter-section">
           <div className="filter-section-title">
             <DollarSign className="size-4" />
-            Prisklass
+            {t("filters.price")}
           </div>
           <div className="flex flex-wrap gap-2">
             {PRICES.map((p) => (
@@ -400,7 +405,7 @@ export default function Filters({
             className="w-full flex items-center justify-center gap-2 h-11 rounded-full border border-black/10 text-sm font-medium hover:bg-black/5 transition-colors"
           >
             <RotateCcw className="size-4" />
-            Rensa alla filter
+            {t("filters.clear")}
           </button>
         </div>
       )}

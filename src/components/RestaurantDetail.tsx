@@ -1,10 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { X, MapPin, Phone, Globe, Navigation, Clock, ExternalLink, Trophy } from "lucide-react";
-import type { Restaurant, MichelinDistinction, WhiteGuideClassification } from "../types";
+import type { Restaurant, MichelinDistinction } from "../types";
 import { isOpen } from "../lib/isOpen";
 import { ScoreBadge } from "./ScoreBadge";
 import { StarDisplay, PipDisplay, OpenStatus } from "./Ratings";
 import { Button } from "./ui/button";
-import { getMetroRegionLabel } from "../lib/regions";
 
 // ─── Labels ─────────────────────────────────────────────────────
 
@@ -16,18 +16,9 @@ const MICHELIN_LABELS: Record<MichelinDistinction, string> = {
   "3_star": "★★★",
 };
 
-const WHITEGUIDE_LABELS: Record<WhiteGuideClassification, string> = {
-  recommended: "Rekommenderad",
-  good_class: "God Klass",
-  very_good_class: "Mycket God Klass",
-  master_class: "Mästarklass",
-  global_master_class: "Global Mästarklass",
-};
-
-const DAY_NAMES = ["sön", "mån", "tis", "ons", "tor", "fre", "lör"];
 const DISPLAY_ORDER = [1, 2, 3, 4, 5, 6, 0];
 
-function formatHours(r: Restaurant): string[] | null {
+function formatHours(r: Restaurant, dayNames: string[]): string[] | null {
   if (!r.hours || r.hours.length === 0) return null;
   const dayTimeLookup: Record<number, string> = {};
   for (const entry of r.hours) {
@@ -49,8 +40,8 @@ function formatHours(r: Restaurant): string[] | null {
     }
   }
   return groups.map((g) => {
-    const first = DAY_NAMES[g.days[0]];
-    const last = DAY_NAMES[g.days[g.days.length - 1]];
+    const first = dayNames[g.days[0]];
+    const last = dayNames[g.days[g.days.length - 1]];
     const dayStr = g.days.length === 1 ? first : `${first}–${last}`;
     return `${dayStr} ${g.time}`;
   });
@@ -92,8 +83,10 @@ type RestaurantDetailProps = {
 };
 
 export default function RestaurantDetail({ restaurant, onClose }: RestaurantDetailProps) {
+  const { t } = useTranslation();
   const r = restaurant;
-  const hours = formatHours(r);
+  const dayNames = t("days_short", { returnObjects: true }) as string[];
+  const hours = formatHours(r, dayNames);
   const openStatus = isOpen(r.hours);
   const { ratings } = r;
 
@@ -137,11 +130,11 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
             {r.bakomRank != null && (
               <p className="text-xs text-muted-foreground mt-1 flex items-center gap-1">
                 <Trophy className="size-3" />
-                <span>#{r.bakomRank} i Sverige</span>
+                <span>{t("detail.rank_sweden", { rank: r.bakomRank })}</span>
                 {r.metroRegion && r.metroRegion !== "sweden" && r.bakomRankRegion != null && (
                   <>
                     <span>·</span>
-                    <span>#{r.bakomRankRegion} i {getMetroRegionLabel(r.metroRegion)}</span>
+                    <span>{t("detail.rank_region", { rank: r.bakomRankRegion, region: t(`regions.${r.metroRegion}`) })}</span>
                   </>
                 )}
               </p>
@@ -165,7 +158,7 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
         {hasRatings && (
           <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
-              Omdömen
+              {t("detail.ratings")}
             </h3>
             <div className="space-y-0">
               {ratings.michelin ? (
@@ -176,18 +169,18 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
                 </SourceRating>
               ) : links.michelin ? (
                 <SourceRating label="Michelin" href={links.michelin}>
-                  <span className="text-muted-foreground italic">Besökt</span>
+                  <span className="text-muted-foreground italic">{t("detail.visited")}</span>
                 </SourceRating>
               ) : null}
               {ratings.whiteguide ? (
                 <SourceRating label="White Guide" href={links.whiteguide}>
                   <span className="text-emerald-600 dark:text-emerald-400">
-                    {WHITEGUIDE_LABELS[ratings.whiteguide]}
+                    {t(`whiteguide.${ratings.whiteguide}`)}
                   </span>
                 </SourceRating>
               ) : links.whiteguide ? (
                 <SourceRating label="White Guide" href={links.whiteguide}>
-                  <span className="text-muted-foreground italic">Besökt</span>
+                  <span className="text-muted-foreground italic">{t("detail.visited")}</span>
                 </SourceRating>
               ) : null}
               {ratings.svd != null && ratings.svd > 0 ? (
@@ -199,16 +192,16 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
                 </SourceRating>
               ) : links.svd ? (
                 <SourceRating label="SvD" href={links.svd}>
-                  <span className="text-muted-foreground italic">Besökt</span>
+                  <span className="text-muted-foreground italic">{t("detail.visited")}</span>
                 </SourceRating>
               ) : null}
               {ratings.dn ? (
                 <SourceRating label="DN" href={links.dn}>
-                  <span className="text-orange-600 dark:text-orange-400">Recenserad</span>
+                  <span className="text-orange-600 dark:text-orange-400">{t("detail.reviewed")}</span>
                 </SourceRating>
               ) : links.dn ? (
                 <SourceRating label="DN" href={links.dn}>
-                  <span className="text-muted-foreground italic">Besökt</span>
+                  <span className="text-muted-foreground italic">{t("detail.visited")}</span>
                 </SourceRating>
               ) : null}
               {ratings.di != null && ratings.di > 0 ? (
@@ -217,7 +210,7 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
                 </SourceRating>
               ) : links.di ? (
                 <SourceRating label="DI Weekend" href={links.di}>
-                  <span className="text-muted-foreground italic">Besökt</span>
+                  <span className="text-muted-foreground italic">{t("detail.visited")}</span>
                 </SourceRating>
               ) : null}
               {ratings.krogguiden != null && ratings.krogguiden > 0 ? (
@@ -229,7 +222,7 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
                 </SourceRating>
               ) : links.krogguiden ? (
                 <SourceRating label="Krogguiden" href={links.krogguiden}>
-                  <span className="text-muted-foreground italic">Besökt</span>
+                  <span className="text-muted-foreground italic">{t("detail.visited")}</span>
                 </SourceRating>
               ) : null}
               {ratings.google != null && ratings.google > 0 ? (
@@ -246,7 +239,7 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
                 </SourceRating>
               ) : links.google ? (
                 <SourceRating label="Google" href={links.google}>
-                  <span className="text-muted-foreground italic">Besökt</span>
+                  <span className="text-muted-foreground italic">{t("detail.visited")}</span>
                 </SourceRating>
               ) : null}
             </div>
@@ -260,7 +253,7 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
             <div>
               <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground mb-2">
                 <Clock className="size-4" />
-                Öppettider
+                {t("detail.hours")}
               </div>
               <div className="text-sm space-y-0.5">
                 {hours.map((line, i) => (
@@ -274,7 +267,7 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
           <div>
             <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground mb-2">
               <MapPin className="size-4" />
-              Adress
+              {t("detail.address")}
             </div>
             <a
               href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
@@ -295,7 +288,7 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
             <div>
               <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground mb-2">
                 <Phone className="size-4" />
-                Telefon
+                {t("detail.phone")}
               </div>
               <a href={`tel:${r.phone}`} className="text-sm hover:underline">
                 {r.phone}
@@ -306,7 +299,7 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
           {/* Price */}
           {r.priceRange && (
             <div className="flex items-center justify-between py-2 border-t border-black/5 dark:border-white/5">
-              <span className="text-sm text-muted-foreground">Prisklass</span>
+              <span className="text-sm text-muted-foreground">{t("detail.price")}</span>
               <span className="text-sm font-medium">{r.priceRange}</span>
             </div>
           )}
@@ -322,7 +315,7 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
                 rel="noopener noreferrer"
               >
                 <Navigation className="size-4" />
-                Vägbeskrivning
+                {t("detail.directions")}
               </a>
             </Button>
             {r.website && (
@@ -333,7 +326,7 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
                   rel="noopener noreferrer"
                 >
                   <Globe className="size-4" />
-                  Webbplats
+                  {t("detail.website")}
                 </a>
               </Button>
             )}

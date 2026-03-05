@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Send, Loader2, MessageSquare, Check } from "lucide-react";
 import { useServerFn } from "@tanstack/react-start";
 import { submitFeedbackFn } from "../lib/feedback";
@@ -16,6 +17,7 @@ type FeedbackModalProps = {
 };
 
 export default function FeedbackModal({ isOpen, onClose }: FeedbackModalProps) {
+  const { t } = useTranslation();
   const [message, setMessage] = useState("");
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
@@ -52,7 +54,7 @@ export default function FeedbackModal({ isOpen, onClose }: FeedbackModalProps) {
       }, 2000);
     } catch (err) {
       setStatus("error");
-      setErrorMessage(err instanceof Error ? err.message : "Något gick fel");
+      setErrorMessage(err instanceof Error ? err.message : t("feedback.error"));
     }
   };
 
@@ -73,7 +75,7 @@ export default function FeedbackModal({ isOpen, onClose }: FeedbackModalProps) {
       <DialogContent className="sm:max-w-md">
         <DialogHeader className="flex-row items-center gap-2 space-y-0 pb-4 border-b border-black/5">
           <MessageSquare className="size-5 text-muted-foreground" />
-          <DialogTitle>Skicka feedback</DialogTitle>
+          <DialogTitle>{t("feedback.title")}</DialogTitle>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="px-6 pt-4 pb-6 space-y-4">
@@ -82,9 +84,9 @@ export default function FeedbackModal({ isOpen, onClose }: FeedbackModalProps) {
               <div className="size-12 rounded-full bg-green-100 flex items-center justify-center mx-auto mb-3">
                 <Check className="size-6 text-green-600" />
               </div>
-              <p className="text-lg font-medium">Tack för din feedback!</p>
+              <p className="text-lg font-medium">{t("feedback.success_title")}</p>
               <p className="text-sm text-muted-foreground mt-1">
-                Vi uppskattar att du hör av dig.
+                {t("feedback.success_message")}
               </p>
             </div>
           ) : (
@@ -94,13 +96,13 @@ export default function FeedbackModal({ isOpen, onClose }: FeedbackModalProps) {
                   htmlFor="feedback-message"
                   className="block text-sm font-medium mb-1.5"
                 >
-                  Meddelande <span className="text-red-500">*</span>
+                  {t("feedback.message")} <span className="text-red-500">*</span>
                 </label>
                 <textarea
                   id="feedback-message"
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Berätta vad du tycker, rapportera fel, eller föreslå förbättringar..."
+                  placeholder={t("feedback.message_placeholder")}
                   rows={4}
                   required
                   className="w-full px-3 py-2 border border-black/10 rounded-lg text-sm resize-none focus:outline-none focus:ring-2 focus:ring-ring"
@@ -113,15 +115,15 @@ export default function FeedbackModal({ isOpen, onClose }: FeedbackModalProps) {
                     htmlFor="feedback-name"
                     className="block text-sm font-medium mb-1.5"
                   >
-                    Namn{" "}
-                    <span className="text-muted-foreground">(valfritt)</span>
+                    {t("feedback.name")}{" "}
+                    <span className="text-muted-foreground">{t("feedback.name_optional")}</span>
                   </label>
                   <input
                     id="feedback-name"
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    placeholder="Ditt namn"
+                    placeholder={t("feedback.name_placeholder")}
                     className="w-full px-3 py-2 border border-black/10 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                   />
                 </div>
@@ -130,15 +132,15 @@ export default function FeedbackModal({ isOpen, onClose }: FeedbackModalProps) {
                     htmlFor="feedback-email"
                     className="block text-sm font-medium mb-1.5"
                   >
-                    E-post{" "}
-                    <span className="text-muted-foreground">(valfritt)</span>
+                    {t("feedback.email")}{" "}
+                    <span className="text-muted-foreground">{t("feedback.email_optional")}</span>
                   </label>
                   <input
                     id="feedback-email"
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="din@email.se"
+                    placeholder={t("feedback.email_placeholder")}
                     className="w-full px-3 py-2 border border-black/10 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                   />
                 </div>
@@ -158,12 +160,12 @@ export default function FeedbackModal({ isOpen, onClose }: FeedbackModalProps) {
                 {status === "sending" ? (
                   <>
                     <Loader2 className="size-4 animate-spin" />
-                    Skickar...
+                    {t("feedback.sending")}
                   </>
                 ) : (
                   <>
                     <Send className="size-4" />
-                    Skicka feedback
+                    {t("feedback.submit")}
                   </>
                 )}
               </Button>

@@ -1,8 +1,8 @@
 import { useState, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import { MapPin, ArrowDownAZ, TrendingUp, Trophy } from "lucide-react";
 import type { Restaurant } from "../types";
 import { ScoreBadge } from "./ScoreBadge";
-import { getMetroRegionLabel } from "../lib/regions";
 
 type SortOption = "name" | "score";
 
@@ -17,6 +17,7 @@ export default function RestaurantList({
   selectedRestaurant,
   onSelectRestaurant,
 }: RestaurantListProps) {
+  const { t } = useTranslation();
   const [sortBy, setSortBy] = useState<SortOption>("name");
 
   const sortedRestaurants = useMemo(() => {
@@ -43,7 +44,7 @@ export default function RestaurantList({
           <div className="flex items-center gap-2">
             <MapPin className="size-4 text-muted-foreground" />
             <span className="text-sm font-medium">
-              {restaurants.length} restauranger
+              {t("list.restaurants", { count: restaurants.length })}
             </span>
           </div>
 
@@ -56,7 +57,7 @@ export default function RestaurantList({
                   ? "bg-white dark:bg-zinc-800 shadow-sm text-foreground"
                   : "text-muted-foreground hover:text-foreground"
               }`}
-              title="Sortera efter namn"
+              title={t("list.sort_name")}
             >
               <ArrowDownAZ className="size-3.5" />
             </button>
@@ -67,7 +68,7 @@ export default function RestaurantList({
                   ? "bg-white dark:bg-zinc-800 shadow-sm text-foreground"
                   : "text-muted-foreground hover:text-foreground"
               }`}
-              title="Sortera efter poäng"
+              title={t("list.sort_score")}
             >
               <TrendingUp className="size-3.5" />
             </button>
@@ -79,7 +80,7 @@ export default function RestaurantList({
       <div className="flex-1 overflow-y-auto">
         {sortedRestaurants.length === 0 ? (
           <div className="px-4 py-8 text-center text-sm text-muted-foreground">
-            Inga restauranger matchar dina filter
+            {t("list.empty")}
           </div>
         ) : (
           <div className="divide-y divide-black/5 dark:divide-white/5">
@@ -124,9 +125,9 @@ export default function RestaurantList({
                       </div>
                       {r.bakomRank != null && (
                         <div className="text-[10px] text-muted-foreground mt-0.5">
-                          #{r.bakomRank} Sverige
+                          {t("list.rank_sweden", { rank: r.bakomRank })}
                           {r.metroRegion && r.metroRegion !== "sweden" && r.bakomRankRegion != null && (
-                            <> · #{r.bakomRankRegion} {getMetroRegionLabel(r.metroRegion)}</>
+                            <> · {t("list.rank_region", { rank: r.bakomRankRegion, region: t(`regions.${r.metroRegion}`) })}</>
                           )}
                         </div>
                       )}

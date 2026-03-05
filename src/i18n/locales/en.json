@@ -1,0 +1,119 @@
+{
+  "app": {
+    "title": "Bakom - Sweden's Best Restaurants"
+  },
+  "header": {
+    "search": "Search restaurant...",
+    "feedback": "Feedback",
+    "filter": "Filter",
+    "close": "Close"
+  },
+  "regions": {
+    "all": "Sweden",
+    "stockholm": "Stockholm",
+    "gothenburg": "Gothenburg",
+    "malmo": "Malmö"
+  },
+  "regions_short": {
+    "all": "Sweden",
+    "stockholm": "Sthlm",
+    "gothenburg": "Gbg",
+    "malmo": "Malmö"
+  },
+  "filters": {
+    "title": "Filter",
+    "showing": "Showing <strong>{{count}}</strong> of {{total}} restaurants",
+    "clear": "Clear all filters",
+    "close_aria": "Close filters",
+    "cuisine": "Cuisine",
+    "price": "Price range"
+  },
+  "cuisines": {
+    "Crossover": "Crossover",
+    "Frankrike": "French",
+    "Asien": "Asian",
+    "Italien": "Italian",
+    "Klassiskt": "Classic",
+    "Amerika": "American",
+    "Fokus på kött": "Meat",
+    "Fokus på fisk": "Seafood",
+    "Fokus på grönt": "Vegetarian",
+    "Spanien": "Spanish",
+    "Veganskt": "Vegan",
+    "Mellanöstern": "Middle Eastern",
+    "Latinamerika": "Latin American",
+    "Mexikanskt": "Mexican"
+  },
+  "whiteguide": {
+    "recommended": "Recommended",
+    "good_class": "Good Class",
+    "very_good_class": "Very Good Class",
+    "master_class": "Master Class",
+    "global_master_class": "Global Master Class"
+  },
+  "list": {
+    "restaurants_one": "{{count}} restaurant",
+    "restaurants_other": "{{count}} restaurants",
+    "sort_name": "Sort by name",
+    "sort_score": "Sort by score",
+    "empty": "No restaurants match your filters",
+    "rank_sweden": "#{{rank}} Sweden",
+    "rank_region": "#{{rank}} {{region}}"
+  },
+  "detail": {
+    "ratings": "Ratings",
+    "hours": "Opening hours",
+    "address": "Address",
+    "phone": "Phone",
+    "price": "Price range",
+    "directions": "Directions",
+    "website": "Website",
+    "rank_sweden": "#{{rank}} in Sweden",
+    "rank_region": "#{{rank}} in {{region}}",
+    "visited": "Visited",
+    "reviewed": "Reviewed"
+  },
+  "days": {
+    "sun": "Sun",
+    "mon": "Mon",
+    "tue": "Tue",
+    "wed": "Wed",
+    "thu": "Thu",
+    "fri": "Fri",
+    "sat": "Sat"
+  },
+  "days_short": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+  "status": {
+    "open": "Open now",
+    "closed": "Closed"
+  },
+  "feedback": {
+    "title": "Send feedback",
+    "message": "Message",
+    "message_placeholder": "Tell us what you think, report bugs, or suggest improvements...",
+    "name": "Name",
+    "name_placeholder": "Your name",
+    "name_optional": "(optional)",
+    "email": "Email",
+    "email_placeholder": "your@email.com",
+    "email_optional": "(optional)",
+    "submit": "Send feedback",
+    "sending": "Sending...",
+    "success_title": "Thank you for your feedback!",
+    "success_message": "We appreciate you reaching out.",
+    "error": "Something went wrong"
+  },
+  "location": {
+    "not_supported": "Geolocation is not supported by your browser.",
+    "denied": "Location access denied.",
+    "unavailable": "Location information unavailable.",
+    "timeout": "Location request timed out.",
+    "error": "Could not get your location.",
+    "update": "Update location",
+    "show": "Show my location"
+  },
+  "language": {
+    "en": "English",
+    "sv": "Svenska"
+  }
+}

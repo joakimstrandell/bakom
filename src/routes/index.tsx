@@ -1,11 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { lazy, Suspense, useState, useCallback, useRef, useEffect, useMemo } from "react";
+import { useTranslation } from "react-i18next";
 import Filters from "../components/Filters";
 import RestaurantDetail from "../components/RestaurantDetail";
 import RestaurantList from "../components/RestaurantList";
+import LanguageSwitcher from "../components/LanguageSwitcher";
 import type { Restaurant } from "../types";
 import { useFilters } from "../hooks/useFilters";
-import { type RegionFilter, REGIONS, DEFAULT_REGION, getRegionConfig } from "../lib/regions";
+import { type RegionFilter, REGIONS, DEFAULT_REGION } from "../lib/regions";
 import {
   Search,
   SlidersHorizontal,
@@ -40,6 +42,8 @@ export const Route = createFileRoute("/")({
 type SidebarMode = "filters" | "restaurant" | null;
 
 function HomePage() {
+  const { t } = useTranslation();
+
   // ─── Region State ─────────────────────────────────────────────────
   const [region, setRegion] = useState<RegionFilter>(DEFAULT_REGION);
   const [regionMenuOpen, setRegionMenuOpen] = useState(false);
@@ -97,7 +101,7 @@ function HomePage() {
 
   const locateUser = useCallback(() => {
     if (!navigator.geolocation) {
-      setLocationError("Geolokalisering stöds inte av din webbläsare.");
+      setLocationError(t("location.not_supported"));
       return;
     }
     setLocating(true);
@@ -114,21 +118,21 @@ function HomePage() {
         setLocating(false);
         switch (err.code) {
           case err.PERMISSION_DENIED:
-            setLocationError("Platsåtkomst nekad.");
+            setLocationError(t("location.denied"));
             break;
           case err.POSITION_UNAVAILABLE:
-            setLocationError("Platsinformation ej tillgänglig.");
+            setLocationError(t("location.unavailable"));
             break;
           case err.TIMEOUT:
-            setLocationError("Tidsgräns för platsförfrågan.");
+            setLocationError(t("location.timeout"));
             break;
           default:
-            setLocationError("Kunde inte hämta din plats.");
+            setLocationError(t("location.error"));
         }
       },
       { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
     );
-  }, []);
+  }, [t]);
 
   // Handle restaurant selection - opens sidebar with restaurant details
   const handleSelectRestaurant = useCallback((restaurant: Restaurant) => {
@@ -198,8 +202,6 @@ function HomePage() {
   const SIDEBAR_WIDTH = 360;
   const sidebarOpen = sidebarMode !== null;
 
-  const currentRegion = REGIONS.find((r) => r.id === region)!;
-
   return (
     <div className="h-screen flex flex-col overflow-hidden">
       {/* ─── Compact Header ─────────────────────────────────────── */}
@@ -214,8 +216,8 @@ function HomePage() {
               onClick={() => setRegionMenuOpen(!regionMenuOpen)}
               className="flex items-center gap-1.5 h-8 px-3 rounded-full border border-black/10 bg-white/50 hover:bg-white/80 transition-colors text-sm font-medium"
             >
-              <span className="hidden sm:inline">{currentRegion.label}</span>
-              <span className="sm:hidden">{currentRegion.shortLabel}</span>
+              <span className="hidden sm:inline">{t(`regions.${region}`)}</span>
+              <span className="sm:hidden">{t(`regions_short.${region}`)}</span>
               <ChevronDown className={`size-4 transition-transform ${regionMenuOpen ? "rotate-180" : ""}`} />
             </button>
 
@@ -229,7 +231,7 @@ function HomePage() {
                       r.id === region ? "font-semibold bg-black/5 dark:bg-white/5" : ""
                     }`}
                   >
-                    {r.label}
+                    {t(`regions.${r.id}`)}
                     <span className="text-muted-foreground ml-2">
                       ({getRegionCount(r.id)})
                     </span>
@@ -242,11 +244,15 @@ function HomePage() {
           <button
             onClick={() => setFeedbackOpen(true)}
             className="hidden sm:flex items-center gap-1.5 h-8 px-3 rounded-full border border-black/10 bg-white/50 hover:bg-white/80 transition-colors text-xs font-medium text-muted-foreground hover:text-foreground"
-            title="Skicka feedback"
+            title={t("feedback.title")}
           >
             <MessageSquare className="size-3.5" />
-            <span>Feedback</span>
+            <span>{t("header.feedback")}</span>
           </button>
+
+          <div className="hidden sm:block">
+            <LanguageSwitcher />
+          </div>
         </div>
 
         {/* Search - centered */}
@@ -258,7 +264,7 @@ function HomePage() {
             <input
               ref={searchInputRef}
               type="text"
-              placeholder="Sök restaurang..."
+              placeholder={t("header.search")}
               value={filterState.searchQuery}
               onChange={(e) =>
                 dispatch({ type: "SET_SEARCH", payload: e.target.value })
@@ -296,7 +302,7 @@ function HomePage() {
           </div>
           <button
             onPointerDown={toggleFilters}
-            aria-label={sidebarMode === "filters" ? "Stäng filter" : "Öppna filter"}
+            aria-label={sidebarMode === "filters" ? t("filters.close_aria") : t("header.filter")}
             aria-expanded={sidebarMode === "filters"}
             className={`relative flex items-center gap-2 h-10 px-4 rounded-full border transition-all text-sm font-medium select-none ${
               sidebarMode === "filters"
@@ -306,7 +312,7 @@ function HomePage() {
           >
             <SlidersHorizontal className="size-4" />
             <span className="hidden sm:inline">
-              {sidebarMode === "filters" ? "Stäng" : "Filter"}
+              {sidebarMode === "filters" ? t("header.close") : t("header.filter")}
             </span>
             {activeFilterCount > 0 && sidebarMode !== "filters" && (
               <span className="absolute -top-1 -right-1 size-5 rounded-full bg-foreground text-background text-xs font-semibold flex items-center justify-center">
@@ -352,7 +358,7 @@ function HomePage() {
             disabled={locating}
             className="map-overlay-btn bottom-6 right-4 size-12"
             title={
-              locationError || (userLocation ? "Uppdatera plats" : "Visa min plats")
+              locationError || (userLocation ? t("location.update") : t("location.show"))
             }
           >
             {locating ? (

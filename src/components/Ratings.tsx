@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useTranslation } from "react-i18next"
 import { cn } from "@/lib/utils"
 
 // ─── Star Display ────────────────────────────────────────────────
@@ -19,7 +20,7 @@ function StarDisplay({ rating, max = 5, className, ...props }: StarDisplayProps)
     <span
       data-slot="star-display"
       className={cn("inline-flex", className)}
-      aria-label={`${rating} av ${max} stjärnor`}
+      aria-label={`${rating}/${max}`}
       {...props}
     >
       {Array.from({ length: fullStars }, (_, i) => (
@@ -79,6 +80,8 @@ export interface OpenStatusProps extends React.HTMLAttributes<HTMLSpanElement> {
 }
 
 function OpenStatus({ isOpen, className, ...props }: OpenStatusProps) {
+  const { t } = useTranslation()
+
   if (isOpen === null) return null
 
   return (
@@ -91,7 +94,7 @@ function OpenStatus({ isOpen, className, ...props }: OpenStatusProps) {
       )}
       {...props}
     >
-      {isOpen ? "● Öppet nu" : "● Stängt"}
+      {isOpen ? `● ${t("status.open")}` : `● ${t("status.closed")}`}
     </span>
   )
 }

@@ -1,0 +1,119 @@
+{
+  "app": {
+    "title": "Bakom - Sveriges Bästa Restauranger"
+  },
+  "header": {
+    "search": "Sök restaurang...",
+    "feedback": "Feedback",
+    "filter": "Filter",
+    "close": "Stäng"
+  },
+  "regions": {
+    "all": "Sverige",
+    "stockholm": "Stockholm",
+    "gothenburg": "Göteborg",
+    "malmo": "Malmö"
+  },
+  "regions_short": {
+    "all": "Sverige",
+    "stockholm": "Sthlm",
+    "gothenburg": "Gbg",
+    "malmo": "Malmö"
+  },
+  "filters": {
+    "title": "Filter",
+    "showing": "Visar <strong>{{count}}</strong> av {{total}} restauranger",
+    "clear": "Rensa alla filter",
+    "close_aria": "Stäng filter",
+    "cuisine": "Kök",
+    "price": "Prisklass"
+  },
+  "cuisines": {
+    "Crossover": "Crossover",
+    "Frankrike": "Franskt",
+    "Asien": "Asiatiskt",
+    "Italien": "Italienskt",
+    "Klassiskt": "Klassiskt",
+    "Amerika": "Amerikanskt",
+    "Fokus på kött": "Kött",
+    "Fokus på fisk": "Fisk",
+    "Fokus på grönt": "Grönt",
+    "Spanien": "Spanskt",
+    "Veganskt": "Veganskt",
+    "Mellanöstern": "Mellanöstern",
+    "Latinamerika": "Latinamerikanskt",
+    "Mexikanskt": "Mexikanskt"
+  },
+  "whiteguide": {
+    "recommended": "Rekommenderad",
+    "good_class": "God Klass",
+    "very_good_class": "Mycket God Klass",
+    "master_class": "Mästarklass",
+    "global_master_class": "Global Mästarklass"
+  },
+  "list": {
+    "restaurants_one": "{{count}} restaurang",
+    "restaurants_other": "{{count}} restauranger",
+    "sort_name": "Sortera efter namn",
+    "sort_score": "Sortera efter poäng",
+    "empty": "Inga restauranger matchar dina filter",
+    "rank_sweden": "#{{rank}} Sverige",
+    "rank_region": "#{{rank}} {{region}}"
+  },
+  "detail": {
+    "ratings": "Omdömen",
+    "hours": "Öppettider",
+    "address": "Adress",
+    "phone": "Telefon",
+    "price": "Prisklass",
+    "directions": "Vägbeskrivning",
+    "website": "Webbplats",
+    "rank_sweden": "#{{rank}} i Sverige",
+    "rank_region": "#{{rank}} i {{region}}",
+    "visited": "Besökt",
+    "reviewed": "Recenserad"
+  },
+  "days": {
+    "sun": "sön",
+    "mon": "mån",
+    "tue": "tis",
+    "wed": "ons",
+    "thu": "tor",
+    "fri": "fre",
+    "sat": "lör"
+  },
+  "days_short": ["sön", "mån", "tis", "ons", "tor", "fre", "lör"],
+  "status": {
+    "open": "Öppet nu",
+    "closed": "Stängt"
+  },
+  "feedback": {
+    "title": "Skicka feedback",
+    "message": "Meddelande",
+    "message_placeholder": "Berätta vad du tycker, rapportera fel, eller föreslå förbättringar...",
+    "name": "Namn",
+    "name_placeholder": "Ditt namn",
+    "name_optional": "(valfritt)",
+    "email": "E-post",
+    "email_placeholder": "din@email.se",
+    "email_optional": "(valfritt)",
+    "submit": "Skicka feedback",
+    "sending": "Skickar...",
+    "success_title": "Tack för din feedback!",
+    "success_message": "Vi uppskattar att du hör av dig.",
+    "error": "Något gick fel"
+  },
+  "location": {
+    "not_supported": "Geolokalisering stöds inte av din webbläsare.",
+    "denied": "Platsåtkomst nekad.",
+    "unavailable": "Platsinformation ej tillgänglig.",
+    "timeout": "Tidsgräns för platsförfrågan.",
+    "error": "Kunde inte hämta din plats.",
+    "update": "Uppdatera plats",
+    "show": "Visa min plats"
+  },
+  "language": {
+    "en": "English",
+    "sv": "Svenska"
+  }
+}

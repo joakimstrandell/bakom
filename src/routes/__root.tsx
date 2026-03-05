@@ -7,6 +7,7 @@ import {
 import type { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
+import i18n from "../i18n";
 import "../index.css";
 
 export const Route = createRootRoute({
@@ -14,7 +15,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Bakom - Sveriges Bästa Restauranger" },
+      { title: "Bakom" },
     ],
     links: [
       {
@@ -43,8 +44,11 @@ function RootComponent() {
 }
 
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
+  // Use i18n instance directly to avoid hook issues during SSR
+  const lang = typeof window !== "undefined" ? i18n.language : "en";
+
   return (
-    <html lang="sv">
+    <html lang={lang}>
       <head>
         <HeadContent />
       </head>
