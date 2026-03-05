@@ -148,7 +148,6 @@ function RangeSlider({
           onChange={handleMinChange}
           onPointerUp={commitRange}
           onMouseUp={commitRange}
-          onTouchEnd={commitRange}
           style={{ zIndex: localRange.min >= localRange.max ? 20 : 10 }}
           className="absolute inset-x-0 w-full h-2 appearance-none bg-transparent cursor-pointer pointer-events-none
             [&::-webkit-slider-thumb]:appearance-none
@@ -173,7 +172,6 @@ function RangeSlider({
           onChange={handleMaxChange}
           onPointerUp={commitRange}
           onMouseUp={commitRange}
-          onTouchEnd={commitRange}
           style={{ zIndex: 10 }}
           className="absolute inset-x-0 w-full h-2 appearance-none bg-transparent cursor-pointer pointer-events-none
             [&::-webkit-slider-thumb]:appearance-none
