@@ -125,9 +125,9 @@ describe("normalizeName", () => {
     expect(normalizeName("Nordic Grill")).toBe("nordic");
   });
 
-  it("removes apostrophes and special chars", () => {
+  it("removes apostrophes and replaces special chars with space", () => {
     expect(normalizeName("Franky's")).toBe("frankys");
-    expect(normalizeName("PA&Co")).toBe("paco");
+    expect(normalizeName("PA&Co")).toBe("pa co");
   });
 
   it("normalizes whitespace", () => {
