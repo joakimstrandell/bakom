@@ -9,6 +9,36 @@ function toMinutes(time: string): number {
 }
 
 /**
+ * Get the next opening time for a restaurant.
+ * Returns { day: number, time: string } or null if no hours data.
+ */
+export function getNextOpenTime(hours: HoursEntry[]): { day: number; time: string } | null {
+  if (!hours || hours.length === 0) return null;
+
+  const now = new Date();
+  const currentDay = now.getDay();
+  const currentMinutes = now.getHours() * 60 + now.getMinutes();
+
+  // Check next 7 days
+  for (let offset = 0; offset < 7; offset++) {
+    const checkDay = (currentDay + offset) % 7;
+
+    for (const entry of hours) {
+      if (!entry.days.includes(checkDay)) continue;
+
+      const openMin = toMinutes(entry.open);
+
+      // If today, only consider times after now
+      if (offset === 0 && openMin <= currentMinutes) continue;
+
+      return { day: checkDay, time: entry.open };
+    }
+  }
+
+  return null;
+}
+
+/**
  * Check if a restaurant is currently open based on its hours entries.
  * Returns null if no hours data is available (unknown).
  */

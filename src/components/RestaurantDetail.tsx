@@ -1,9 +1,10 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { X, MapPin, Phone, Globe, Navigation, Clock, ExternalLink, Trophy } from "lucide-react";
-import type { Restaurant, MichelinDistinction } from "../types";
-import { isOpen } from "../lib/isOpen";
+import { X, MapPin, Phone, Globe, Navigation, Clock, ExternalLink, Trophy, ChevronDown } from "lucide-react";
+import type { Restaurant, MichelinDistinction, HoursEntry } from "../types";
+import { isOpen, getNextOpenTime } from "../lib/isOpen";
 import { ScoreBadge } from "./ScoreBadge";
-import { StarDisplay, PipDisplay, OpenStatus } from "./Ratings";
+import { StarDisplay, PipDisplay } from "./Ratings";
 import { Button } from "./ui/button";
 
 // ─── Labels ─────────────────────────────────────────────────────
@@ -16,35 +17,42 @@ const MICHELIN_LABELS: Record<MichelinDistinction, string> = {
   "3_star": "★★★",
 };
 
-const DISPLAY_ORDER = [1, 2, 3, 4, 5, 6, 0];
+/**
+ * Get hours for each day of the week, starting from today.
+ * Returns array of { day: number, dayName: string, hours: string }
+ */
+function getHoursByDay(
+  hours: HoursEntry[],
+  dayNames: string[],
+  closedLabel: string
+): { day: number; dayName: string; hours: string }[] {
+  if (!hours || hours.length === 0) return [];
 
-function formatHours(r: Restaurant, dayNames: string[]): string[] | null {
-  if (!r.hours || r.hours.length === 0) return null;
-  const dayTimeLookup: Record<number, string> = {};
-  for (const entry of r.hours) {
+  const today = new Date().getDay();
+  const result: { day: number; dayName: string; hours: string }[] = [];
+
+  // Build lookup of day -> times
+  const dayTimeLookup: Record<number, string[]> = {};
+  for (const entry of hours) {
     const timeStr = `${entry.open}–${entry.close}`;
     for (const day of entry.days) {
-      dayTimeLookup[day] = timeStr;
+      if (!dayTimeLookup[day]) dayTimeLookup[day] = [];
+      dayTimeLookup[day].push(timeStr);
     }
   }
-  if (Object.keys(dayTimeLookup).length === 0) return null;
-  const groups: { days: number[]; time: string }[] = [];
-  for (const day of DISPLAY_ORDER) {
-    const time = dayTimeLookup[day];
-    if (!time) continue;
-    const lastGroup = groups[groups.length - 1];
-    if (lastGroup && lastGroup.time === time) {
-      lastGroup.days.push(day);
-    } else {
-      groups.push({ days: [day], time });
-    }
+
+  // Start from today, go through 7 days
+  for (let i = 0; i < 7; i++) {
+    const day = (today + i) % 7;
+    const times = dayTimeLookup[day];
+    result.push({
+      day,
+      dayName: dayNames[day],
+      hours: times ? times.join(", ") : closedLabel,
+    });
   }
-  return groups.map((g) => {
-    const first = dayNames[g.days[0]];
-    const last = dayNames[g.days[g.days.length - 1]];
-    const dayStr = g.days.length === 1 ? first : `${first}–${last}`;
-    return `${dayStr} ${g.time}`;
-  });
+
+  return result;
 }
 
 // ─── Sub-components ─────────────────────────────────────────────
@@ -84,10 +92,12 @@ type RestaurantDetailProps = {
 
 export default function RestaurantDetail({ restaurant, onClose }: RestaurantDetailProps) {
   const { t } = useTranslation();
+  const [hoursExpanded, setHoursExpanded] = useState(false);
   const r = restaurant;
-  const dayNames = t("days_short", { returnObjects: true }) as string[];
-  const hours = formatHours(r, dayNames);
+  const dayNames = t("days", { returnObjects: true }) as string[];
+  const hoursByDay = getHoursByDay(r.hours, dayNames, t("detail.closed"));
   const openStatus = isOpen(r.hours);
+  const nextOpen = !openStatus ? getNextOpenTime(r.hours) : null;
   const { ratings } = r;
 
   const links = r.links;
@@ -113,22 +123,17 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
       <div className="px-5 py-4 border-b border-black/6">
         <div className="flex items-start justify-between gap-3">
           <div className="flex-1 min-w-0">
-            <div className="flex items-center gap-2">
-              <h2
-                className="text-lg font-semibold truncate"
-                style={{ fontFamily: "var(--font-display)" }}
-              >
-                {r.name}
-              </h2>
-              {r.bakomScore != null && (
-                <ScoreBadge score={r.bakomScore} />
-              )}
-            </div>
+            <h2
+              className="text-lg font-semibold truncate"
+              style={{ fontFamily: "var(--font-display)" }}
+            >
+              {r.name}
+            </h2>
             {r.cuisine && (
               <p className="text-sm text-muted-foreground mt-0.5 truncate">{r.cuisine}</p>
             )}
             {r.bakomRank != null && (
-              <p className="text-xs text-muted-foreground mt-1 flex items-center gap-1">
+              <div className="flex items-center gap-1 mt-1 text-xs text-muted-foreground">
                 <Trophy className="size-3" />
                 <span>{t("detail.rank_sweden", { rank: r.bakomRank })}</span>
                 {r.metroRegion && r.metroRegion !== "sweden" && r.bakomRankRegion != null && (
@@ -137,10 +142,7 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
                     <span>{t("detail.rank_region", { rank: r.bakomRankRegion, region: t(`regions.${r.metroRegion}`) })}</span>
                   </>
                 )}
-              </p>
-            )}
-            {openStatus !== null && (
-              <OpenStatus isOpen={openStatus} className="block mt-1" />
+              </div>
             )}
           </div>
           <button
@@ -157,9 +159,21 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
         {/* Ratings Section */}
         {hasRatings && (
           <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-3">
-              {t("detail.ratings")}
-            </h3>
+            <div className="flex items-center justify-between mb-3">
+              <h3 className="text-xs font-bold uppercase tracking-wider">
+                {t("detail.ratings")}
+              </h3>
+              <div className="flex items-center gap-1.5">
+                {r.bakomRank != null && r.bakomRank <= 50 && (
+                  <span className="inline-flex items-center justify-center gap-1 h-6 px-1.5 rounded bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-bold">
+                    TOP 50
+                  </span>
+                )}
+                {r.bakomScore != null && (
+                  <ScoreBadge score={r.bakomScore} size="sm" />
+                )}
+              </div>
+            </div>
             <div className="space-y-0">
               {ratings.michelin ? (
                 <SourceRating label="Michelin" href={links.michelin}>
@@ -195,9 +209,12 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
                   <span className="text-muted-foreground italic">{t("detail.visited")}</span>
                 </SourceRating>
               ) : null}
-              {ratings.dn ? (
+              {ratings.dn != null && ratings.dn > 0 ? (
                 <SourceRating label="DN" href={links.dn}>
-                  <span className="text-orange-600 dark:text-orange-400">{t("detail.reviewed")}</span>
+                  <span className="inline-flex items-center gap-2">
+                    <PipDisplay score={ratings.dn} max={5} />
+                    {ratings.dn}/5
+                  </span>
                 </SourceRating>
               ) : links.dn ? (
                 <SourceRating label="DN" href={links.dn}>
@@ -246,20 +263,58 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
           </div>
         )}
 
+        {/* Price */}
+        {r.priceRange && (
+          <div className="px-5 py-3 border-b border-black/6 dark:border-white/6 flex items-center justify-between">
+            <span className="text-sm font-medium text-muted-foreground">{t("detail.price")}</span>
+            <span className="text-sm font-medium">{r.priceRange}</span>
+          </div>
+        )}
+
         {/* Info Section */}
         <div className="px-5 py-4 space-y-4">
-          {/* Hours */}
-          {hours && (
+          {/* Hours - Collapsible Google-style */}
+          {hoursByDay.length > 0 && (
             <div>
-              <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground mb-2">
-                <Clock className="size-4" />
-                {t("detail.hours")}
-              </div>
-              <div className="text-sm space-y-0.5">
-                {hours.map((line, i) => (
-                  <div key={i}>{line}</div>
-                ))}
-              </div>
+              <button
+                onPointerDown={() => setHoursExpanded(!hoursExpanded)}
+                className="w-full flex items-center gap-3 text-left py-1 group"
+              >
+                <Clock className="size-4 text-muted-foreground shrink-0" />
+                <div className="flex-1 flex items-center gap-1.5 text-sm">
+                  {openStatus !== null && (
+                    <span className={openStatus ? "text-green-600 dark:text-green-500 font-medium" : "text-red-600 dark:text-red-500 font-medium"}>
+                      {openStatus ? t("detail.open") : t("detail.closed_now")}
+                    </span>
+                  )}
+                  {!openStatus && nextOpen && (
+                    <>
+                      <span className="text-muted-foreground">·</span>
+                      <span className="text-muted-foreground">
+                        {nextOpen.day === new Date().getDay()
+                          ? t("detail.opens_at", { time: nextOpen.time })
+                          : t("detail.opens_day", { day: dayNames[nextOpen.day], time: nextOpen.time })}
+                      </span>
+                    </>
+                  )}
+                </div>
+                <ChevronDown className={`size-4 text-muted-foreground transition-transform ${hoursExpanded ? "rotate-180" : ""}`} />
+              </button>
+
+              {hoursExpanded && (
+                <div className="ml-7 mt-2 space-y-1">
+                  {hoursByDay.map((entry, i) => (
+                    <div key={entry.day} className="flex text-sm">
+                      <span className={`w-20 ${i === 0 ? "font-medium" : "text-muted-foreground"}`}>
+                        {entry.dayName}
+                      </span>
+                      <span className={i === 0 ? "font-medium" : ""}>
+                        {entry.hours}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           )}
 
@@ -293,14 +348,6 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
               <a href={`tel:${r.phone}`} className="text-sm hover:underline">
                 {r.phone}
               </a>
-            </div>
-          )}
-
-          {/* Price */}
-          {r.priceRange && (
-            <div className="flex items-center justify-between py-2 border-t border-black/5 dark:border-white/5">
-              <span className="text-sm text-muted-foreground">{t("detail.price")}</span>
-              <span className="text-sm font-medium">{r.priceRange}</span>
             </div>
           )}
 

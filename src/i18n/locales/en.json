@@ -6,7 +6,9 @@
     "search": "Search restaurant...",
     "feedback": "Feedback",
     "filter": "Filter",
-    "close": "Close"
+    "close": "Close",
+    "list": "List",
+    "map": "Map"
   },
   "regions": {
     "all": "Sweden",
@@ -35,14 +37,13 @@
     "Italien": "Italian",
     "Klassiskt": "Classic",
     "Amerika": "American",
-    "Fokus på kött": "Meat",
-    "Fokus på fisk": "Seafood",
-    "Fokus på grönt": "Vegetarian",
     "Spanien": "Spanish",
+    "Fokus på fisk": "Seafood",
     "Veganskt": "Vegan",
     "Mellanöstern": "Middle Eastern",
     "Latinamerika": "Latin American",
-    "Mexikanskt": "Mexican"
+    "Mexikanskt": "Mexican",
+    "Fokus på kött": "Steakhouse"
   },
   "whiteguide": {
     "recommended": "Recommended",
@@ -71,17 +72,14 @@
     "rank_sweden": "#{{rank}} in Sweden",
     "rank_region": "#{{rank}} in {{region}}",
     "visited": "Visited",
-    "reviewed": "Reviewed"
+    "reviewed": "Reviewed",
+    "open": "Open",
+    "closed_now": "Closed",
+    "closed": "Closed",
+    "opens_at": "Opens at {{time}}",
+    "opens_day": "Opens {{day}} {{time}}"
   },
-  "days": {
-    "sun": "Sun",
-    "mon": "Mon",
-    "tue": "Tue",
-    "wed": "Wed",
-    "thu": "Thu",
-    "fri": "Fri",
-    "sat": "Sat"
-  },
+  "days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
   "days_short": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
   "status": {
     "open": "Open now",

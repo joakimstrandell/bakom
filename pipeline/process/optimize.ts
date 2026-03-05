@@ -94,7 +94,8 @@ function stripRestaurant(
   if (r.phone) out.phone = r.phone;
   if (r.website) out.website = r.website;
   if (r.priceRange) out.priceRange = r.priceRange;
-  if (r.cuisine) out.cuisine = r.cuisine;
+  const normalizedCuisine = normalizeCuisine(r.cuisine || "");
+  if (normalizedCuisine) out.cuisine = normalizedCuisine;
 
   // Hours — omit if empty array
   if (r.hours && r.hours.length > 0) out.hours = r.hours;
@@ -214,6 +215,161 @@ function isNonSwedishAddress(address: string): boolean {
   return NON_SWEDISH_PATTERNS.some((pattern) => pattern.test(address));
 }
 
+// ─── Cuisine extraction ───────────────────────────────────────────
+
+/** Terms that are not actual cuisines (generic types, classifications) */
+const NON_CUISINE_TERMS = new Set([
+  // Venue types
+  "Restaurant", "Hotel", "Bar", "Cafe", "Cafeteria", "Coffee Shop",
+  "Bakery", "Ice Cream Shop", "Store", "Event Venue", "Wine Bar",
+  "Pub", "Inn", "Cocktail Bar", "Night Club", "Market", "Museum",
+  "Art Museum", "Train Station", "Church", "University", "Castle",
+  "Lake", "Island", "Garden", "Garden Center", "Visitor Center",
+  "Winery", "Pastry Shop", "Coffee Roastery", "Clothing Store",
+  "Food Store", "Food Court", "Buffet", "Hair Salon",
+
+  // Services
+  "Service", "Catering Service", "Consultant", "Association Or Organization",
+
+  // Price/quality classifications
+  "Mellanklass", "Lyx", "Budget",
+
+  // Other non-cuisine terms
+  "not so white guide", "other",
+]);
+
+/** Map variations to canonical names */
+const CUISINE_CANONICAL: Record<string, string> = {
+  // Asian cuisines → "Asien"
+  "Japanese": "Asien",
+  "Sushi": "Asien",
+  "Korean": "Asien",
+  "Vietnamese": "Asien",
+  "Asian": "Asien",
+  "Asian Fusion": "Asien",
+  "Indian": "Asien",
+  "Thai": "Asien",
+  "Chinese": "Asien",
+  "Ramen": "Asien",
+  "Japanese Izakaya": "Asien",
+  "Indonesian": "Asien",
+  "Bangladeshi": "Asien",
+
+  // Italian cuisines → "Italien"
+  "Italian": "Italien",
+  "Pizza": "Italien",
+  "Italian-American": "Italien",
+
+  // French cuisines → "Frankrike"
+  "French": "Frankrike",
+  "Classic French": "Frankrike",
+  "Bistro": "Frankrike",
+
+  // Swedish/Nordic → "Klassiskt"
+  "Swedish": "Klassiskt",
+  "Scandinavian": "Klassiskt",
+  "traditionellt svenskt": "Klassiskt",
+  "traditionellt  svenskt": "Klassiskt",
+  "Farm to table": "Klassiskt",
+
+  // American cuisines → "Amerika"
+  "Hamburger": "Amerika",
+  "Barbecue": "Amerika",
+  "Hot Dog": "Amerika",
+  "Fast Food": "Amerika",
+  "Bar And Grill": "Amerika",
+  "Southwestern Us": "Amerika",
+
+  // Spanish/Mediterranean → "Spanien"
+  "Mediterranean Cuisine": "Spanien",
+  "Mediterranean": "Spanien",
+  "Tapas": "Spanien",
+
+  // Seafood → "Fokus på fisk"
+  "Seafood": "Fokus på fisk",
+
+  // Meat-focused → "Fokus på kött"
+  "Steak House": "Fokus på kött",
+  "Grills": "Fokus på kött",
+
+  // Latin American → "Latinamerika"
+  "Peruvian": "Latinamerika",
+
+  // Middle Eastern → "Mellanöstern"
+  "Lebanese": "Mellanöstern",
+  "Falafel": "Mellanöstern",
+
+  // Mexican → "Mexikanskt"
+  "Mexican": "Mexikanskt",
+
+  // Vegan/Vegetarian → "Veganskt"
+  "Vegetarian": "Veganskt",
+  "Vegan": "Veganskt",
+
+  // Modern/Creative → "Crossover"
+  "Modern Cuisine": "Crossover",
+  "Fusion": "Crossover",
+  "Creative": "Crossover",
+  "Contemporary": "Crossover",
+  "Seasonal Cuisine": "Crossover",
+  "European": "Crossover",
+  "Fine Dining": "Crossover",
+  "Gastropub": "Crossover",
+  "Brunch": "Crossover",
+  "Small eats": "Crossover",
+};
+
+/**
+ * Normalize a cuisine string to canonical Swedish names.
+ * Returns comma-separated canonical names, or empty string if all terms are filtered.
+ */
+function normalizeCuisine(cuisine: string): string {
+  if (!cuisine) return "";
+
+  const tokens = cuisine.split(",").map((s) => s.trim()).filter(Boolean);
+  const seen = new Set<string>();
+  const result: string[] = [];
+
+  for (const token of tokens) {
+    // Skip non-cuisine terms
+    if (NON_CUISINE_TERMS.has(token)) continue;
+
+    // Map to canonical name if applicable
+    const canonical = CUISINE_CANONICAL[token] || token;
+
+    if (!seen.has(canonical)) {
+      seen.add(canonical);
+      result.push(canonical);
+    }
+  }
+
+  return result.join(",");
+}
+
+/**
+ * Extract unique cuisine values from restaurants.
+ * Returns array of { key, count } sorted by count descending.
+ */
+function extractCuisines(restaurants: PipelineRestaurant[]): { key: string; count: number }[] {
+  const counts = new Map<string, number>();
+
+  for (const r of restaurants) {
+    const normalized = normalizeCuisine(r.cuisine || "");
+    if (!normalized) continue;
+
+    const tokens = normalized.split(",");
+    for (const token of tokens) {
+      counts.set(token, (counts.get(token) || 0) + 1);
+    }
+  }
+
+  // Convert to array and sort by count
+  return Array.from(counts.entries())
+    .map(([key, count]) => ({ key, count }))
+    .filter((c) => c.count >= 3) // Only include cuisines with 3+ restaurants
+    .sort((a, b) => b.count - a.count);
+}
+
 // ─── Main optimize function ───────────────────────────────────────
 
 export function optimize(): void {
@@ -283,8 +439,12 @@ export function optimize(): void {
     return stripRestaurant(r, region, regionalRanks.get(r.id));
   });
 
-  // Save single file
+  // Save restaurants file
   saveJson("restaurants.frontend.json", stripped);
+
+  // Extract and save cuisine metadata
+  const cuisines = extractCuisines(active);
+  saveJson("cuisines.json", cuisines);
 
   const size = JSON.stringify(stripped).length;
   console.log(`Generated restaurants.frontend.json (${(size / 1024).toFixed(0)}KB)`);
@@ -292,6 +452,8 @@ export function optimize(): void {
   console.log(`  Göteborg: ${regionCounts.gothenburg}`);
   console.log(`  Malmö: ${regionCounts.malmo}`);
   console.log(`  Övriga: ${regionCounts.sweden}`);
+  console.log(`\nGenerated cuisines.json (${cuisines.length} cuisines)`);
+  console.log(`  Top 5: ${cuisines.slice(0, 5).map((c) => `${c.key} (${c.count})`).join(", ")}`);
   console.log(`\nOptimize complete: ${active.length} restaurants`);
 }
 

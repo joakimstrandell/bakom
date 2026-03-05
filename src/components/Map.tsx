@@ -157,9 +157,12 @@ const DECLUSTER_ZOOM = 14; // Zoom level where clusters break apart
 function PanToSelected({
   restaurant,
   rightSidebarWidth = 360,
+  clusterGroupRef,
 }: {
   restaurant: Restaurant | null;
   rightSidebarWidth?: number;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  clusterGroupRef: React.RefObject<any>;
 }) {
   const map = useMap();
 
@@ -168,12 +171,26 @@ function PanToSelected({
 
     const latlng = L.latLng(restaurant.lat, restaurant.lng);
     const bounds = map.getBounds();
-    const currentZoom = map.getZoom();
 
-    // If zoomed out (clustered), zoom in to show individual pin
-    if (currentZoom < DECLUSTER_ZOOM) {
-      map.flyTo(latlng, DECLUSTER_ZOOM, { duration: 0.5 });
-      return;
+    // Check if pin is hidden in a cluster
+    const clusterGroup = clusterGroupRef.current;
+    if (clusterGroup) {
+      // Find the marker for this restaurant
+      const layers = clusterGroup.getLayers() as L.Marker[];
+      const marker = layers.find((layer: L.Marker) => {
+        const pos = layer.getLatLng();
+        return pos.lat === restaurant.lat && pos.lng === restaurant.lng;
+      });
+
+      if (marker) {
+        const visibleParent = clusterGroup.getVisibleParent(marker);
+        // If visible parent is different from marker, it's in a cluster
+        if (visibleParent && visibleParent !== marker) {
+          // Zoom to show the individual pin
+          map.flyTo(latlng, DECLUSTER_ZOOM, { duration: 0.5 });
+          return;
+        }
+      }
     }
 
     // Check if outside map bounds entirely
@@ -202,7 +219,7 @@ function PanToSelected({
 
       map.panTo(newCenter, { duration: 0.3 });
     }
-  }, [restaurant, map, rightSidebarWidth]);
+  }, [restaurant, map, rightSidebarWidth, clusterGroupRef]);
 
   return null;
 }
@@ -225,6 +242,8 @@ export default function Map({
   region,
 }: MapProps) {
   const regionConfig = getRegionConfig(region);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const clusterGroupRef = useRef<any>(null);
 
   return (
     <MapContainer
@@ -239,7 +258,7 @@ export default function Map({
 
       <FlyToRegion region={region} />
       <FlyToUser location={userLocation} />
-      <PanToSelected restaurant={selectedRestaurant ?? null} />
+      <PanToSelected restaurant={selectedRestaurant ?? null} clusterGroupRef={clusterGroupRef} />
 
       {/* User location indicator */}
       {userLocation && (
@@ -277,6 +296,7 @@ export default function Map({
 
       {/* Restaurant markers */}
       <MarkerClusterGroup
+        ref={clusterGroupRef}
         chunkedLoading
         maxClusterRadius={60}
         disableClusteringAtZoom={14}

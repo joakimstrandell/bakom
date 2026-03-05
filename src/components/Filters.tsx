@@ -13,22 +13,10 @@ import {
 import type { MichelinDistinction, WhiteGuideClassification } from "../types";
 import type { FilterState, Range, FilterAction, RangeFilterKey } from "../hooks/useFilters";
 
-const CUISINE_KEYS = [
-  "Crossover",
-  "Frankrike",
-  "Asien",
-  "Italien",
-  "Klassiskt",
-  "Amerika",
-  "Fokus på kött",
-  "Fokus på fisk",
-  "Fokus på grönt",
-  "Spanien",
-  "Veganskt",
-  "Mellanöstern",
-  "Latinamerika",
-  "Mexikanskt",
-] as const;
+// Dynamic cuisine list generated from data
+import cuisineData from "../../data/cuisines.json";
+
+const CUISINE_KEYS = cuisineData.map((c) => c.key);
 
 const PRICES = ["$", "$$", "$$$", "$$$$"] as const;
 
@@ -252,6 +240,84 @@ export default function Filters({
           dispatch={dispatch}
         />
 
+        {/* Michelin multi-select */}
+        <div className="filter-section">
+          <div className="filter-section-title">
+            <Award className="size-4" />
+            Michelin
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {MICHELIN_OPTIONS.map(({ key, label }) => (
+              <button
+                key={key}
+                onPointerDown={() =>
+                  dispatch({ type: "TOGGLE_MICHELIN", payload: key })
+                }
+                className={`filter-chip ${state.selectedMichelin.has(key) ? "active" : ""}`}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* White Guide multi-select */}
+        <div className="filter-section">
+          <div className="filter-section-title">
+            <Award className="size-4" />
+            White Guide
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {WG_KEYS.map((key) => (
+              <button
+                key={key}
+                onPointerDown={() =>
+                  dispatch({ type: "TOGGLE_WHITEGUIDE", payload: key })
+                }
+                className={`filter-chip ${state.selectedWhiteGuide.has(key) ? "active" : ""}`}
+              >
+                {t(`whiteguide.${key}`)}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* SvD range */}
+        <RangeSlider
+          label="SvD"
+          icon={<Newspaper className="size-4" />}
+          range={state.svd}
+          min={0}
+          max={6}
+          step={1}
+          filterKey="svd"
+          dispatch={dispatch}
+        />
+
+        {/* DN range */}
+        <RangeSlider
+          label="DN"
+          icon={<Newspaper className="size-4" />}
+          range={state.dn}
+          min={0}
+          max={5}
+          step={1}
+          filterKey="dn"
+          dispatch={dispatch}
+        />
+
+        {/* DI range */}
+        <RangeSlider
+          label="DI Weekend"
+          icon={<Newspaper className="size-4" />}
+          range={state.di}
+          min={0}
+          max={25}
+          step={1}
+          filterKey="di"
+          dispatch={dispatch}
+        />
+
         {/* Krogguiden range */}
         <RangeSlider
           label="Krogguiden"
@@ -278,84 +344,6 @@ export default function Filters({
           formatValue={(v) => v.toFixed(1)}
         />
 
-        {/* SvD range */}
-        <RangeSlider
-          label="SvD"
-          icon={<Newspaper className="size-4" />}
-          range={state.svd}
-          min={0}
-          max={6}
-          step={1}
-          filterKey="svd"
-          dispatch={dispatch}
-        />
-
-        {/* DI range */}
-        <RangeSlider
-          label="DI Weekend"
-          icon={<Newspaper className="size-4" />}
-          range={state.di}
-          min={0}
-          max={25}
-          step={1}
-          filterKey="di"
-          dispatch={dispatch}
-        />
-
-        {/* Michelin multi-select */}
-        <div className="filter-section">
-          <div className="filter-section-title">
-            <Award className="size-4" />
-            Michelin
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {MICHELIN_OPTIONS.map(({ key, label }) => (
-              <button
-                key={key}
-                onClick={() =>
-                  dispatch({ type: "TOGGLE_MICHELIN", payload: key })
-                }
-                className={`filter-chip ${state.selectedMichelin.has(key) ? "active" : ""}`}
-              >
-                {label}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* White Guide multi-select */}
-        <div className="filter-section">
-          <div className="filter-section-title">
-            <Award className="size-4" />
-            White Guide
-          </div>
-          <div className="flex flex-wrap gap-2">
-            {WG_KEYS.map((key) => (
-              <button
-                key={key}
-                onClick={() =>
-                  dispatch({ type: "TOGGLE_WHITEGUIDE", payload: key })
-                }
-                className={`filter-chip ${state.selectedWhiteGuide.has(key) ? "active" : ""}`}
-              >
-                {t(`whiteguide.${key}`)}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* DN range */}
-        <RangeSlider
-          label="DN"
-          icon={<Newspaper className="size-4" />}
-          range={state.dn}
-          min={0}
-          max={5}
-          step={1}
-          filterKey="dn"
-          dispatch={dispatch}
-        />
-
         {/* Cuisine filters */}
         <div className="filter-section">
           <div className="filter-section-title">
@@ -366,7 +354,7 @@ export default function Filters({
             {CUISINE_KEYS.map((key) => (
               <button
                 key={key}
-                onClick={() =>
+                onPointerDown={() =>
                   dispatch({ type: "TOGGLE_CUISINE", payload: key })
                 }
                 className={`filter-chip ${state.selectedCuisines.has(key) ? "active" : ""}`}
@@ -387,7 +375,7 @@ export default function Filters({
             {PRICES.map((p) => (
               <button
                 key={p}
-                onClick={() => dispatch({ type: "TOGGLE_PRICE", payload: p })}
+                onPointerDown={() => dispatch({ type: "TOGGLE_PRICE", payload: p })}
                 className={`filter-chip ${state.selectedPrices.has(p) ? "active" : ""}`}
               >
                 {p}
@@ -401,7 +389,7 @@ export default function Filters({
       {hasActiveFilters && (
         <div className="px-5 py-4 border-t border-black/6">
           <button
-            onClick={() => dispatch({ type: "CLEAR_ALL" })}
+            onPointerDown={() => dispatch({ type: "CLEAR_ALL" })}
             className="w-full flex items-center justify-center gap-2 h-11 rounded-full border border-black/10 text-sm font-medium hover:bg-black/5 transition-colors"
           >
             <RotateCcw className="size-4" />

@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { MapPin, ArrowDownAZ, TrendingUp, Trophy } from "lucide-react";
+import { MapPin, ArrowDownAZ, TrendingUp } from "lucide-react";
 import type { Restaurant } from "../types";
 import { ScoreBadge } from "./ScoreBadge";
 
@@ -18,7 +18,7 @@ export default function RestaurantList({
   onSelectRestaurant,
 }: RestaurantListProps) {
   const { t } = useTranslation();
-  const [sortBy, setSortBy] = useState<SortOption>("name");
+  const [sortBy, setSortBy] = useState<SortOption>("score");
 
   const sortedRestaurants = useMemo(() => {
     const sorted = [...restaurants];
@@ -51,7 +51,7 @@ export default function RestaurantList({
           {/* Sort toggle */}
           <div className="flex gap-1 p-0.5 bg-black/5 dark:bg-white/5 rounded-md">
             <button
-              onClick={() => setSortBy("name")}
+              onPointerDown={() => setSortBy("name")}
               className={`flex items-center gap-1 px-2 py-1 rounded text-xs font-medium transition-colors ${
                 sortBy === "name"
                   ? "bg-white dark:bg-zinc-800 shadow-sm text-foreground"
@@ -62,7 +62,7 @@ export default function RestaurantList({
               <ArrowDownAZ className="size-3.5" />
             </button>
             <button
-              onClick={() => setSortBy("score")}
+              onPointerDown={() => setSortBy("score")}
               className={`flex items-center gap-1 px-2 py-1 rounded text-xs font-medium transition-colors ${
                 sortBy === "score"
                   ? "bg-white dark:bg-zinc-800 shadow-sm text-foreground"
@@ -89,7 +89,7 @@ export default function RestaurantList({
               return (
                 <button
                   key={r.id}
-                  onClick={() => onSelectRestaurant(r)}
+                  onPointerDown={() => onSelectRestaurant(r)}
                   className={`w-full text-left px-4 py-3 transition-colors hover:bg-black/3 dark:hover:bg-white/3 ${
                     isSelected ? "bg-black/5 dark:bg-white/5" : ""
                   }`}
@@ -100,21 +100,13 @@ export default function RestaurantList({
 
                     {/* Info */}
                     <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-1.5">
-                        <span
-                          className={`text-sm font-medium truncate ${
-                            isSelected ? "text-foreground" : ""
-                          }`}
-                        >
-                          {r.name}
-                        </span>
-                        {r.bakomRank != null && r.bakomRank <= 50 && (
-                          <span className="shrink-0 inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-[10px] font-semibold">
-                            <Trophy className="size-3" />
-                            Top 50
-                          </span>
-                        )}
-                      </div>
+                      <span
+                        className={`text-sm font-medium truncate ${
+                          isSelected ? "text-foreground" : ""
+                        }`}
+                      >
+                        {r.name}
+                      </span>
                       {r.cuisine && (
                         <div className="text-xs text-muted-foreground truncate mt-0.5">
                           {r.cuisine}
