@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import {
   X,
@@ -75,39 +75,44 @@ function RangeSlider({
   formatValue,
 }: RangeSliderProps) {
   const format = formatValue || ((v: number) => v.toString());
-  const isActive = range.min > min || range.max < max;
+
+  // Local state for smooth dragging - only commit to parent on release
+  const [localRange, setLocalRange] = useState(range);
+
+  // Sync local state when parent range changes (e.g., on clear filters)
+  useEffect(() => {
+    setLocalRange(range);
+  }, [range]);
+
+  const isActive = localRange.min > min || localRange.max < max;
 
   // Calculate percentages for the track highlight
-  const minPercent = ((range.min - min) / (max - min)) * 100;
-  const maxPercent = ((range.max - min) / (max - min)) * 100;
+  const minPercent = ((localRange.min - min) / (max - min)) * 100;
+  const maxPercent = ((localRange.max - min) / (max - min)) * 100;
 
   const handleMinChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const newMin = parseFloat(e.target.value);
-      dispatch({
-        type: "SET_RANGE",
-        payload: {
-          key: filterKey,
-          range: { min: Math.min(newMin, range.max), max: range.max },
-        },
-      });
+      setLocalRange((prev) => ({ min: Math.min(newMin, prev.max), max: prev.max }));
     },
-    [dispatch, filterKey, range.max]
+    []
   );
 
   const handleMaxChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const newMax = parseFloat(e.target.value);
-      dispatch({
-        type: "SET_RANGE",
-        payload: {
-          key: filterKey,
-          range: { min: range.min, max: Math.max(newMax, range.min) },
-        },
-      });
+      setLocalRange((prev) => ({ min: prev.min, max: Math.max(newMax, prev.min) }));
     },
-    [dispatch, filterKey, range.min]
+    []
   );
+
+  // Commit to parent state on pointer/mouse up
+  const commitRange = useCallback(() => {
+    dispatch({
+      type: "SET_RANGE",
+      payload: { key: filterKey, range: localRange },
+    });
+  }, [dispatch, filterKey, localRange]);
 
   return (
     <div className="filter-section">
@@ -116,7 +121,7 @@ function RangeSlider({
         {label}
         {isActive && (
           <span className="ml-auto text-foreground font-semibold text-xs">
-            {format(range.min)} – {format(range.max)}
+            {format(localRange.min)} – {format(localRange.max)}
           </span>
         )}
       </div>
@@ -139,9 +144,12 @@ function RangeSlider({
           min={min}
           max={max}
           step={step}
-          value={range.min}
+          value={localRange.min}
           onChange={handleMinChange}
-          style={{ zIndex: range.min >= range.max ? 20 : 10 }}
+          onPointerUp={commitRange}
+          onMouseUp={commitRange}
+          onTouchEnd={commitRange}
+          style={{ zIndex: localRange.min >= localRange.max ? 20 : 10 }}
           className="absolute inset-x-0 w-full h-2 appearance-none bg-transparent cursor-pointer pointer-events-none
             [&::-webkit-slider-thumb]:appearance-none
             [&::-webkit-slider-thumb]:pointer-events-auto
@@ -161,8 +169,11 @@ function RangeSlider({
           min={min}
           max={max}
           step={step}
-          value={range.max}
+          value={localRange.max}
           onChange={handleMaxChange}
+          onPointerUp={commitRange}
+          onMouseUp={commitRange}
+          onTouchEnd={commitRange}
           style={{ zIndex: 10 }}
           className="absolute inset-x-0 w-full h-2 appearance-none bg-transparent cursor-pointer pointer-events-none
             [&::-webkit-slider-thumb]:appearance-none
