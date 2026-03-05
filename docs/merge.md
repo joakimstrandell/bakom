@@ -84,13 +84,9 @@ an address can also confirm matches. Cannot create new restaurants
 matched, add total score (0-25) and link. Use DI coordinates as
 fallback. If no match but has an address, create a new restaurant.
 
-### 6. Apply manual data
+### 6. Apply manual additions
 
-Load `data/manual.json` and apply three types of corrections:
-- **Additions** — New restaurants not in any source
-- **Merges** — Combine duplicate entries (keep + merge IDs)
-- **Overrides** — Patch specific fields on existing restaurants
-
+Load `data/manual.json` and add restaurants not found in any scraped source.
 See [Manual Data](#manual-data) below.
 
 ### 7. Sanitize cuisine
@@ -182,8 +178,6 @@ avoiding false positives.
 
 File: `data/manual.json`
 
-### Additions
-
 Add restaurants not found in any scraped source:
 
 ```json
@@ -199,41 +193,8 @@ Add restaurants not found in any scraped source:
 }
 ```
 
-### Merges
-
-Combine two entries that are the same restaurant (e.g., different
-spellings across sources that fuzzy matching didn't catch):
-
-```json
-{
-  "merges": [
-    {
-      "keep": "sushi-yama-kungsgatan-44",
-      "merge": "sushiyama-kungsgatan-44",
-      "preferFields": ["address", "phone"]
-    }
-  ]
-}
-```
-
-The `merge` entry is removed. Its ratings, links, and sources are
-folded into the `keep` entry. `preferFields` optionally overwrites
-specific fields from the merged entry.
-
-### Overrides
-
-Patch specific fields on an existing restaurant:
-
-```json
-{
-  "overrides": [
-    {
-      "id": "my-restaurant-storgatan-1",
-      "fields": { "cuisine": "Japanese", "priceRange": "$$$" }
-    }
-  ]
-}
-```
+The `id` field must be unique. Use a slug format: `name-address` in lowercase
+with special characters replaced by hyphens.
 
 ---
 

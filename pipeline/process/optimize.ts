@@ -368,8 +368,22 @@ export function optimize(): void {
     );
   }
 
+  // Filter restaurants without Google data (can't verify they exist)
+  const noGoogle = restaurants.filter((r) => !r.googlePlaceId);
+  if (noGoogle.length > 0) {
+    console.log(`Filtered ${noGoogle.length} restaurant(s) without Google data:`);
+    for (const r of noGoogle.slice(0, 10)) {
+      console.log(`  - ${r.name}`);
+    }
+    if (noGoogle.length > 10) {
+      console.log(`  ... and ${noGoogle.length - 10} more`);
+    }
+    console.log("");
+  }
+  const afterNoGoogle = restaurants.filter((r) => r.googlePlaceId);
+
   // Filter non-Swedish restaurants
-  const nonSwedish = restaurants.filter((r) => isNonSwedishAddress(r.address));
+  const nonSwedish = afterNoGoogle.filter((r) => isNonSwedishAddress(r.address));
   if (nonSwedish.length > 0) {
     console.log(`Filtered ${nonSwedish.length} non-Swedish restaurant(s):`);
     for (const r of nonSwedish) {
@@ -379,7 +393,7 @@ export function optimize(): void {
   }
 
   // Filter closed restaurants
-  const afterNonSwedish = restaurants.filter((r) => !isNonSwedishAddress(r.address));
+  const afterNonSwedish = afterNoGoogle.filter((r) => !isNonSwedishAddress(r.address));
   const permClosed = afterNonSwedish.filter(
     (r) => r.businessStatus === "CLOSED_PERMANENTLY"
   ).length;

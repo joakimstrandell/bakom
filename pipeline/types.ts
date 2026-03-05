@@ -162,30 +162,8 @@ export type ManualAddition = {
   };
 };
 
-/** Merge instruction: combine two restaurant entries into one */
-export type ManualMerge = {
-  /** ID of the restaurant to keep (primary) */
-  keep: string;
-  /** ID of the restaurant to merge into the primary (will be removed) */
-  merge: string;
-  /** Optional: which fields to prefer from the merged entry */
-  preferFields?: string[];
-};
-
-/** Override specific fields on an existing restaurant */
-export type ManualOverride = {
-  /** Restaurant ID to override */
-  id: string;
-  /** Fields to override (partial Restaurant) */
-  fields: Record<string, unknown>;
-};
-
 /** Structure of data/manual.json */
 export type ManualData = {
   /** New restaurants not in any scraped source */
   additions: ManualAddition[];
-  /** Instructions to merge duplicate entries */
-  merges: ManualMerge[];
-  /** Field overrides for existing restaurants */
-  overrides: ManualOverride[];
 };

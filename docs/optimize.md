@@ -20,7 +20,13 @@ Source file: [`pipeline/process/optimize.ts`](../pipeline/process/optimize.ts)
 
 ## Processing Steps
 
-### 1. Filter closed restaurants
+### 1. Filter restaurants without Google data
+
+Removes restaurants that don't have a `googlePlaceId`. If we couldn't
+find the restaurant in Google Places, we can't verify it exists or get
+accurate coordinates. These are excluded from the frontend.
+
+### 2. Filter closed restaurants
 
 Removes restaurants with `businessStatus` set to `CLOSED_PERMANENTLY`
 or `CLOSED_TEMPORARILY`. These are kept in `data/restaurants.json` (so
@@ -29,7 +35,7 @@ enrichment data survives merge re-runs) but excluded from the frontend.
 Business status comes from Google Places enrichment in the
 [refine step](./refine.md).
 
-### 2. Assign metro region
+### 3. Assign metro region
 
 Each restaurant gets a `metroRegion` field based on coordinates (distance from city center):
 
@@ -40,7 +46,7 @@ Each restaurant gets a `metroRegion` field based on coordinates (distance from c
 | `malmo` | 55.60°N, 13.00°E | 50 km |
 | `sweden` | Outside all metro areas | — |
 
-### 3. Calculate rankings
+### 4. Calculate rankings
 
 **Global ranking:** All restaurants get a `bakomRank` (1, 2, 3...) based on
 Bakom Score across all of Sweden.
@@ -49,7 +55,7 @@ Bakom Score across all of Sweden.
 Malmö) also get a `bakomRankRegion` — their rank within that metro area only.
 Restaurants in `sweden` (outside metro areas) do not have a regional rank.
 
-### 4. Strip pipeline-only fields
+### 5. Strip pipeline-only fields
 
 - `slug`, `image`, `sourceIds`, `sources`, `googlePlaceId`
 - All `null` and empty string values
@@ -58,7 +64,7 @@ Restaurants in `sweden` (outside metro areas) do not have a regional rank.
 
 This reduces file size by ~25-30% compared to the full dataset.
 
-### 5. Extract cuisine metadata
+### 6. Extract cuisine metadata
 
 Extracts unique cuisine values from all restaurants for the filter UI:
 

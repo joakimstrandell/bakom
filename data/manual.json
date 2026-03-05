@@ -13,13 +13,5 @@
         "krogguiden": "https://www.krogguiden.se/restauranger/view/brasserie--branneri"
       }
     }
-  ],
-  "merges": [
-    {
-      "keep": "oscars-bar-och-brasserie-narvavägen-32",
-      "merge": "oscars-bar-brasserie-narvavägen-32",
-      "reason": "Same restaurant — Krogguiden uses 'och', SvD uses '&'"
-    }
-  ],
-  "overrides": []
+  ]
 }

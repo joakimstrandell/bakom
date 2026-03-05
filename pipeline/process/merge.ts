@@ -108,22 +108,22 @@ function loadManualData(): ManualData | null {
 }
 
 /**
- * Apply manual additions, merges, and overrides to the restaurant list.
+ * Apply manual additions to the restaurant list.
  */
 function applyManualData(
   restaurants: PipelineRestaurant[],
   manual: ManualData
-): { added: number; merged: number; overridden: number } {
-  const stats = { added: 0, merged: 0, overridden: 0 };
+): number {
   const byId = new Map<string, PipelineRestaurant>();
   for (const r of restaurants) {
     byId.set(r.id, r);
   }
 
-  // 1. Apply additions (new restaurants not in any source)
+  let added = 0;
+
   for (const add of manual.additions) {
     if (byId.has(add.id)) {
-      console.log(`  Manual: Skipping addition "${add.name}" (ID already exists)`);
+      console.log(`  Manual: Skipping "${add.name}" (ID already exists)`);
       continue;
     }
 
@@ -156,88 +156,11 @@ function applyManualData(
 
     restaurants.push(restaurant);
     byId.set(add.id, restaurant);
-    stats.added++;
+    added++;
     console.log(`  Manual: Added "${add.name}"`);
   }
 
-  // 2. Apply merges (combine two entries into one)
-  for (const m of manual.merges) {
-    const keep = byId.get(m.keep);
-    const merge = byId.get(m.merge);
-
-    if (!keep) {
-      console.log(`  Manual: Merge failed - keep ID "${m.keep}" not found`);
-      continue;
-    }
-    if (!merge) {
-      console.log(`  Manual: Merge failed - merge ID "${m.merge}" not found`);
-      continue;
-    }
-
-    // Merge sources
-    for (const src of merge.sources) {
-      if (!keep.sources.includes(src)) {
-        keep.sources.push(src);
-      }
-    }
-
-    // Merge sourceIds
-    keep.sourceIds = { ...keep.sourceIds, ...merge.sourceIds };
-
-    // Merge links
-    keep.links = { ...keep.links, ...merge.links };
-
-    // Merge ratings (prefer non-null from merged)
-    if (merge.ratings.krogguiden && !keep.ratings.krogguiden) {
-      keep.ratings.krogguiden = merge.ratings.krogguiden;
-    }
-    if (merge.ratings.google && !keep.ratings.google) {
-      keep.ratings.google = merge.ratings.google;
-    }
-    if (merge.ratings.michelin && !keep.ratings.michelin) {
-      keep.ratings.michelin = merge.ratings.michelin;
-    }
-    if (merge.ratings.whiteguide && !keep.ratings.whiteguide) {
-      keep.ratings.whiteguide = merge.ratings.whiteguide;
-    }
-
-    // Optionally prefer specific fields from merged
-    if (m.preferFields) {
-      for (const field of m.preferFields) {
-        if (field in merge && (merge as any)[field]) {
-          (keep as any)[field] = (merge as any)[field];
-        }
-      }
-    }
-
-    // Remove the merged entry
-    const idx = restaurants.findIndex((r) => r.id === m.merge);
-    if (idx !== -1) {
-      restaurants.splice(idx, 1);
-      byId.delete(m.merge);
-    }
-
-    stats.merged++;
-    console.log(`  Manual: Merged "${merge.name}" into "${keep.name}"`);
-  }
-
-  // 3. Apply overrides (update specific fields)
-  for (const o of manual.overrides) {
-    const restaurant = byId.get(o.id);
-    if (!restaurant) {
-      console.log(`  Manual: Override failed - ID "${o.id}" not found`);
-      continue;
-    }
-
-    for (const [key, value] of Object.entries(o.fields)) {
-      (restaurant as any)[key] = value;
-    }
-
-    stats.overridden++;
-    console.log(`  Manual: Overrode ${Object.keys(o.fields).length} fields on "${restaurant.name}"`);
-  }
-
-  return stats;
+  return added;
 }
 
 /**
@@ -803,19 +726,12 @@ export async function merge(): Promise<PipelineRestaurant[]> {
     }
   }
 
-  // Apply manual data (additions, merges, overrides)
+  // Apply manual additions
   const manual = loadManualData();
-  let manualStats = { added: 0, merged: 0, overridden: 0 };
-  if (manual) {
-    const hasManual =
-      manual.additions.length > 0 ||
-      manual.merges.length > 0 ||
-      manual.overrides.length > 0;
-
-    if (hasManual) {
-      console.log(`\nApplying manual data...`);
-      manualStats = applyManualData(restaurants, manual);
-    }
+  let manualAdded = 0;
+  if (manual && manual.additions.length > 0) {
+    console.log(`\nApplying manual additions...`);
+    manualAdded = applyManualData(restaurants, manual);
   }
 
   // Deduplicate by Google Place ID — same physical location = same restaurant
@@ -878,8 +794,8 @@ export async function merge(): Promise<PipelineRestaurant[]> {
   if (skippedNoData > 0) {
     console.log(`  Skipped (no address): ${skippedNoData}`);
   }
-  if (manualStats.added || manualStats.merged || manualStats.overridden) {
-    console.log(`  Manual: ${manualStats.added} added, ${manualStats.merged} merged, ${manualStats.overridden} overridden`);
+  if (manualAdded > 0) {
+    console.log(`  Manual additions: ${manualAdded}`);
   }
   console.log(`  With coordinates: ${withCoords}`);
   console.log(`  With hours: ${withHours}`);

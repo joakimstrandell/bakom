@@ -9577,18 +9577,68 @@
     "source": "google",
     "restaurantId": "djurgardsbrunn-stockholm",
     "searchName": "Djurgårdsbrunn",
-    "placeId": "ChIJi7SulbyCX0YReiYDYUuz4ZQ",
+    "placeId": "ChIJMyO28q2DX0YRDC3NkIbe-bs",
     "name": "Djurgårdsbrunn",
-    "address": "Djurgårdsbrunn, 115 25 Stockholm, Sverige",
-    "phone": "",
-    "website": "",
-    "rating": null,
-    "ratingCount": 0,
-    "primaryType": "",
-    "hours": [],
-    "lat": 59.3304476,
-    "lng": 18.132551499999998,
-    "googleMapsUri": "https://maps.google.com/?cid=10728052923704747642&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "address": "Djurgårdsbrunnsvägen 68, 115 25 Stockholm, Sverige",
+    "phone": "08-654 77 00",
+    "website": "https://djurgardsbrunn.com/",
+    "rating": 4.1,
+    "ratingCount": 72,
+    "primaryType": "coffee_shop",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "08:30",
+        "close": "17:00"
+      },
+      {
+        "days": [
+          1
+        ],
+        "open": "08:00",
+        "close": "17:00"
+      },
+      {
+        "days": [
+          2
+        ],
+        "open": "08:00",
+        "close": "17:00"
+      },
+      {
+        "days": [
+          3
+        ],
+        "open": "08:00",
+        "close": "17:00"
+      },
+      {
+        "days": [
+          4
+        ],
+        "open": "08:00",
+        "close": "17:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "08:00",
+        "close": "17:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "08:30",
+        "close": "17:00"
+      }
+    ],
+    "lat": 59.330615099999996,
+    "lng": 18.1318493,
+    "googleMapsUri": "https://maps.google.com/?cid=13545102023829826828&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "businessStatus": "OPERATIONAL"
   },
   {
@@ -12313,18 +12363,96 @@
     "source": "google",
     "restaurantId": "g-a-t-stockholm",
     "searchName": "G.A.T",
-    "placeId": "ChIJ-aAeK1mdX0YRhvMbNImTahc",
-    "name": "Gustav Adolfs torg",
-    "address": "Gustav Adolfs torg, 111 52 Stockholm, Sverige",
-    "phone": "",
-    "website": "",
-    "rating": null,
-    "ratingCount": 0,
-    "primaryType": "",
-    "hours": [],
-    "lat": 59.329592,
-    "lng": 18.0688259,
-    "googleMapsUri": "https://maps.google.com/?cid=1687323227897721734&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "placeId": "ChIJkxf4DeydX0YR4KqjqBexfLM",
+    "name": "G.A.T.",
+    "address": "Gustav Adolfs torg 16, 111 52 Stockholm, Sverige",
+    "phone": "08-22 01 00",
+    "website": "https://www.gatstockholm.com/?utm_source=google",
+    "rating": 4.8,
+    "ratingCount": 53,
+    "primaryType": "bistro",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "12:00",
+        "close": "01:00"
+      },
+      {
+        "days": [
+          1
+        ],
+        "open": "11:30",
+        "close": "14:30"
+      },
+      {
+        "days": [
+          1
+        ],
+        "open": "17:00",
+        "close": "01:00"
+      },
+      {
+        "days": [
+          2
+        ],
+        "open": "11:30",
+        "close": "14:30"
+      },
+      {
+        "days": [
+          2
+        ],
+        "open": "17:00",
+        "close": "01:00"
+      },
+      {
+        "days": [
+          3
+        ],
+        "open": "11:30",
+        "close": "14:30"
+      },
+      {
+        "days": [
+          3
+        ],
+        "open": "17:00",
+        "close": "01:00"
+      },
+      {
+        "days": [
+          4
+        ],
+        "open": "11:30",
+        "close": "14:30"
+      },
+      {
+        "days": [
+          4
+        ],
+        "open": "17:00",
+        "close": "01:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "11:30",
+        "close": "01:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "12:00",
+        "close": "01:00"
+      }
+    ],
+    "lat": 59.330003899999994,
+    "lng": 18.069417299999998,
+    "googleMapsUri": "https://maps.google.com/?cid=12933406945072884448&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "businessStatus": "OPERATIONAL"
   },
   {
@@ -21729,36 +21857,136 @@
     "source": "google",
     "restaurantId": "nybrogatan-38-stockholm",
     "searchName": "Nybrogatan 38",
-    "placeId": "ChIJ41o02USdX0YRLR03c2uPoAo",
-    "name": "Nybrogatan 38",
+    "placeId": "ChIJVR-D3kSdX0YRO43XSflPlmY",
+    "name": "Nybrogatan 38 kvarterskrog och barservering",
     "address": "Nybrogatan 38, 114 40 Stockholm, Sverige",
-    "phone": "",
-    "website": "",
-    "rating": null,
-    "ratingCount": 0,
-    "primaryType": "",
-    "hours": [],
-    "lat": 59.3379499,
-    "lng": 18.080070799999998,
-    "googleMapsUri": "https://maps.google.com/?cid=765769628310248749&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "phone": "08-662 33 22",
+    "website": "https://www.nybrogatan38.com/?utm_source=google",
+    "rating": 4.3,
+    "ratingCount": 1406,
+    "primaryType": "restaurant",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "11:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          1
+        ],
+        "open": "07:30",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          2
+        ],
+        "open": "07:30",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          3
+        ],
+        "open": "07:30",
+        "close": "00:00"
+      },
+      {
+        "days": [
+          4
+        ],
+        "open": "07:30",
+        "close": "00:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "07:30",
+        "close": "00:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "11:00",
+        "close": "00:00"
+      }
+    ],
+    "lat": 59.337827399999995,
+    "lng": 18.080023699999998,
+    "googleMapsUri": "https://maps.google.com/?cid=7392183770479562043&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "businessStatus": "OPERATIONAL"
   },
   {
     "source": "google",
     "restaurantId": "nytorget-6-stockholm",
     "searchName": "Nytorget 6",
-    "placeId": "ChIJ7zq3hfd3X0YRshq0QyDXK3w",
-    "name": "Nytorget 6",
-    "address": "Nytorget 6, 116 40 Stockholm, Sverige",
-    "phone": "",
-    "website": "",
-    "rating": null,
-    "ratingCount": 0,
-    "primaryType": "",
-    "hours": [],
-    "lat": 59.311983999999995,
-    "lng": 18.0828328,
-    "googleMapsUri": "https://maps.google.com/?cid=8947481618276424370&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "placeId": "ChIJM_eXhfd3X0YRrKe1oS1PDvE",
+    "name": "Restaurang Nytorget 6",
+    "address": "Nytorget 6, 114 56 Stockholm, Sverige",
+    "phone": "08-640 96 55",
+    "website": "http://nytorget6.com/",
+    "rating": 4.2,
+    "ratingCount": 2254,
+    "primaryType": "restaurant",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "11:00",
+        "close": "00:00"
+      },
+      {
+        "days": [
+          1
+        ],
+        "open": "11:00",
+        "close": "00:00"
+      },
+      {
+        "days": [
+          2
+        ],
+        "open": "11:00",
+        "close": "00:00"
+      },
+      {
+        "days": [
+          3
+        ],
+        "open": "11:00",
+        "close": "01:00"
+      },
+      {
+        "days": [
+          4
+        ],
+        "open": "11:00",
+        "close": "01:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "11:00",
+        "close": "01:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "11:00",
+        "close": "01:00"
+      }
+    ],
+    "lat": 59.3120743,
+    "lng": 18.0828004,
+    "googleMapsUri": "https://maps.google.com/?cid=17369907870219741100&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "businessStatus": "OPERATIONAL"
   },
   {
@@ -25867,60 +26095,6 @@
   },
   {
     "source": "google",
-    "restaurantId": "restaurangskolan-stockholm",
-    "searchName": "Restaurangskolan",
-    "placeId": "ChIJo89L5H6dX0YR5YOrwD_rrTs",
-    "name": "Internationella Hotell- och Restaurangskolan",
-    "address": "Tullgårdsgatan 12, 116 68 Stockholm, Sverige",
-    "phone": "08-429 24 40",
-    "website": "https://restaurangskolan.se/?utm_source=google&utm_medium=organic-gmb",
-    "rating": 4.4,
-    "ratingCount": 30,
-    "primaryType": "",
-    "hours": [
-      {
-        "days": [
-          1
-        ],
-        "open": "11:30",
-        "close": "12:15"
-      },
-      {
-        "days": [
-          2
-        ],
-        "open": "11:30",
-        "close": "12:15"
-      },
-      {
-        "days": [
-          3
-        ],
-        "open": "11:30",
-        "close": "12:15"
-      },
-      {
-        "days": [
-          4
-        ],
-        "open": "11:30",
-        "close": "12:15"
-      },
-      {
-        "days": [
-          5
-        ],
-        "open": "11:30",
-        "close": "12:15"
-      }
-    ],
-    "lat": 59.30577410000001,
-    "lng": 18.0860384,
-    "googleMapsUri": "https://maps.google.com/?cid=4300351878256624613&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "businessStatus": "OPERATIONAL"
-  },
-  {
-    "source": "google",
     "restaurantId": "ri-cora-restaurang-bar-stockholm",
     "searchName": "Ri Cora Restaurang & Bar",
     "placeId": "ChIJF3U7v_Z3X0YRSk6WacJuphs",
@@ -29462,18 +29636,68 @@
     "source": "google",
     "restaurantId": "strandvagen-1-stockholm",
     "searchName": "Strandvägen 1",
-    "placeId": "ChIJn2kqR1qdX0YRksUjysArdjU",
+    "placeId": "ChIJKx-kSVqdX0YRHiW9sRCimR8",
     "name": "Strandvägen 1",
     "address": "Strandvägen 1, 114 51 Stockholm, Sverige",
-    "phone": "",
-    "website": "",
-    "rating": null,
-    "ratingCount": 0,
-    "primaryType": "",
-    "hours": [],
-    "lat": 59.332664699999995,
-    "lng": 18.077789799999998,
-    "googleMapsUri": "https://maps.google.com/?cid=3852314638287095186&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "phone": "08-663 80 00",
+    "website": "https://strandvagen1.se/",
+    "rating": 4.1,
+    "ratingCount": 1401,
+    "primaryType": "restaurant",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "11:30",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          1
+        ],
+        "open": "11:30",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          2
+        ],
+        "open": "11:30",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          3
+        ],
+        "open": "11:30",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          4
+        ],
+        "open": "11:30",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "11:30",
+        "close": "01:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "11:30",
+        "close": "01:00"
+      }
+    ],
+    "lat": 59.332690299999996,
+    "lng": 18.0776929,
+    "googleMapsUri": "https://maps.google.com/?cid=2277029279197635870&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "businessStatus": "OPERATIONAL"
   },
   {
@@ -30591,18 +30815,54 @@
     "source": "google",
     "restaurantId": "tegelbacken-stockholm",
     "searchName": "Tegelbacken",
-    "placeId": "ChIJH3xN7F-dX0YRZhxwQD3VAxU",
-    "name": "Tegelbacken",
-    "address": "Tegelbacken, Stockholm, Sverige",
-    "phone": "",
-    "website": "",
-    "rating": null,
-    "ratingCount": 0,
-    "primaryType": "",
-    "hours": [],
-    "lat": 59.3285544,
-    "lng": 18.0626752,
-    "googleMapsUri": "https://maps.google.com/?cid=1514288358777429094&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "placeId": "ChIJaYJOnl-dX0YRVjCRI0cbrMI",
+    "name": "Restaurang Tegelbacken",
+    "address": "Tegelbacken 2, 111 52 Stockholm, Sverige",
+    "phone": "08-25 16 55",
+    "website": "http://tegelbacken.com/",
+    "rating": 4.7,
+    "ratingCount": 693,
+    "primaryType": "restaurant",
+    "hours": [
+      {
+        "days": [
+          2
+        ],
+        "open": "17:00",
+        "close": "23:30"
+      },
+      {
+        "days": [
+          3
+        ],
+        "open": "17:00",
+        "close": "23:30"
+      },
+      {
+        "days": [
+          4
+        ],
+        "open": "17:00",
+        "close": "23:30"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "17:00",
+        "close": "23:30"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "17:00",
+        "close": "23:30"
+      }
+    ],
+    "lat": 59.3283531,
+    "lng": 18.063081999999998,
+    "googleMapsUri": "https://maps.google.com/?cid=14027616931705598038&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "businessStatus": "OPERATIONAL"
   },
   {
@@ -37909,18 +38169,68 @@
     "source": "google",
     "restaurantId": "osterlanggatan-17-stockholm",
     "searchName": "Österlånggatan 17",
-    "placeId": "ChIJcza5o-J3X0YRWojPW1LW8vY",
+    "placeId": "ChIJcza5o-J3X0YRPjlRl6aCZXI",
     "name": "Österlånggatan 17",
     "address": "Österlånggatan 17, 111 31 Stockholm, Sverige",
-    "phone": "",
-    "website": "",
-    "rating": null,
-    "ratingCount": 0,
-    "primaryType": "",
-    "hours": [],
-    "lat": 59.32515000000001,
-    "lng": 18.074017299999998,
-    "googleMapsUri": "https://maps.google.com/?cid=17794520726910240858&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "phone": "08-557 773 00",
+    "website": "https://www.osterlanggatan17.com/?utm_source=google",
+    "rating": 4.1,
+    "ratingCount": 1275,
+    "primaryType": "restaurant",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "11:00",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          1
+        ],
+        "open": "11:30",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          2
+        ],
+        "open": "11:30",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          3
+        ],
+        "open": "11:30",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          4
+        ],
+        "open": "11:30",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "11:30",
+        "close": "00:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "11:00",
+        "close": "00:00"
+      }
+    ],
+    "lat": 59.325162299999995,
+    "lng": 18.074049400000003,
+    "googleMapsUri": "https://maps.google.com/?cid=8243138344986425662&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "businessStatus": "OPERATIONAL"
   },
   {
@@ -39917,18 +40227,82 @@
     "source": "google",
     "restaurantId": "mellbygatans",
     "searchName": "Mellbygatans",
-    "placeId": "ChIJOROkseooW0YR7pNXEAFVigs",
-    "name": "Mellbygatan",
-    "address": "Mellbygatan, Lidköping, Sverige",
-    "phone": "",
-    "website": "",
-    "rating": null,
-    "ratingCount": 0,
-    "primaryType": "",
-    "hours": [],
-    "lat": 58.4977158,
-    "lng": 13.1505312,
-    "googleMapsUri": "https://maps.google.com/?cid=831570544260781038&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "placeId": "ChIJ31rubL8oW0YRkUT5_N0fUsw",
+    "name": "Mellbygatans Restaurang",
+    "address": "Mellbygatan 10, 531 31 Lidköping, Sverige",
+    "phone": "0510-280 80",
+    "website": "https://www.mellbygatans.se/",
+    "rating": 4.6,
+    "ratingCount": 585,
+    "primaryType": "scandinavian_restaurant",
+    "hours": [
+      {
+        "days": [
+          1
+        ],
+        "open": "11:00",
+        "close": "14:00"
+      },
+      {
+        "days": [
+          2
+        ],
+        "open": "11:00",
+        "close": "14:00"
+      },
+      {
+        "days": [
+          3
+        ],
+        "open": "11:00",
+        "close": "14:00"
+      },
+      {
+        "days": [
+          3
+        ],
+        "open": "17:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          4
+        ],
+        "open": "11:00",
+        "close": "14:00"
+      },
+      {
+        "days": [
+          4
+        ],
+        "open": "17:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "11:00",
+        "close": "14:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "17:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "17:00",
+        "close": "23:00"
+      }
+    ],
+    "lat": 58.50227770000001,
+    "lng": 13.1547682,
+    "googleMapsUri": "https://maps.google.com/?cid=14722865170120000657&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "businessStatus": "OPERATIONAL"
   },
   {
@@ -41763,24 +42137,6 @@
     "lng": 11.9605911,
     "googleMapsUri": "https://maps.google.com/?cid=6084796196479107359&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "businessStatus": "OPERATIONAL"
-  },
-  {
-    "source": "google",
-    "restaurantId": "kosters-tradgardar",
-    "searchName": "Kosters Trädgårdar",
-    "placeId": "ChIJb2u01wU8REYRt0WgCxkSQME",
-    "name": "Kosters Trädgårdar",
-    "address": "Kosters Trädgårdar Långegärde, 452 05 Sydkoster, Sverige",
-    "phone": "070-600 13 13",
-    "website": "http://kosterstradgardar.se/",
-    "rating": 4.4,
-    "ratingCount": 216,
-    "primaryType": "",
-    "hours": [],
-    "lat": 58.886055,
-    "lng": 11.015770199999999,
-    "googleMapsUri": "https://maps.google.com/?cid=13925149946608108983&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
-    "businessStatus": "CLOSED_TEMPORARILY"
   },
   {
     "source": "google",
@@ -49229,18 +49585,68 @@
     "source": "google",
     "restaurantId": "grano",
     "searchName": "Grano",
-    "placeId": "ChIJ84Pg-3Dze0YRV9xsk3Vb66g",
-    "name": "Granö",
-    "address": "922 95 Granö, Sverige",
-    "phone": "",
-    "website": "",
-    "rating": null,
-    "ratingCount": 0,
-    "primaryType": "",
-    "hours": [],
-    "lat": 64.2372797,
-    "lng": 19.3416489,
-    "googleMapsUri": "https://maps.google.com/?cid=12171922978441583703&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "placeId": "ChIJf1Y1ih_zT0YRZzFRPSLqB-g",
+    "name": "Grano gbg",
+    "address": "Vasagatan 32, 411 24 Göteborg, Sverige",
+    "phone": "031-69 50 69",
+    "website": "https://granorestauranger.se/",
+    "rating": 4.2,
+    "ratingCount": 413,
+    "primaryType": "restaurant",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "17:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          1
+        ],
+        "open": "17:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          2
+        ],
+        "open": "17:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          3
+        ],
+        "open": "17:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          4
+        ],
+        "open": "17:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "16:00",
+        "close": "01:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "13:00",
+        "close": "01:00"
+      }
+    ],
+    "lat": 57.698659,
+    "lng": 11.9684444,
+    "googleMapsUri": "https://maps.google.com/?cid=16719589574414774631&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "businessStatus": "OPERATIONAL"
   },
   {
@@ -50096,18 +50502,18 @@
     "source": "google",
     "restaurantId": "kukkolaforsen",
     "searchName": "Kukkolaforsen",
-    "placeId": "ChIJsf0U6Vw-1UUR_G3lcvjKxaU",
-    "name": "Kukkolaforsen",
-    "address": "953 91 Kukkolaforsen, Sverige",
-    "phone": "",
-    "website": "",
-    "rating": null,
-    "ratingCount": 0,
-    "primaryType": "",
+    "placeId": "ChIJia3ekmY-1UURpiwLrRRqEa4",
+    "name": "Kukkolaforsen Turist & Konferens",
+    "address": "Kukkolaforsen 184, 953 91 Haparanda, Sverige",
+    "phone": "0922-310 00",
+    "website": "http://www.kukkolaforsen.se/",
+    "rating": 4.3,
+    "ratingCount": 1605,
+    "primaryType": "restaurant",
     "hours": [],
-    "lat": 65.9628989,
-    "lng": 24.033313,
-    "googleMapsUri": "https://maps.google.com/?cid=11945176755098447356&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 65.9626019,
+    "lng": 24.038911799999997,
+    "googleMapsUri": "https://maps.google.com/?cid=12542923074238622886&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "businessStatus": "OPERATIONAL"
   },
   {
@@ -53456,18 +53862,54 @@
     "source": "google",
     "restaurantId": "postgatan",
     "searchName": "Postgatan",
-    "placeId": "ChIJWTreHXvRV0YRO0iOEc66ekc",
-    "name": "Postgatan",
-    "address": "Postgatan, Kalmar, Sverige",
-    "phone": "",
-    "website": "",
-    "rating": null,
-    "ratingCount": 0,
-    "primaryType": "",
-    "hours": [],
-    "lat": 56.6653286,
-    "lng": 16.3567603,
-    "googleMapsUri": "https://maps.google.com/?cid=5150634518072150075&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "placeId": "ChIJxQu6igDzT0YR5px1Uw9WKpA",
+    "name": "Gurras",
+    "address": "Postgatan 16, 411 06 Göteborg, Sverige",
+    "phone": "076-632 13 80",
+    "website": "https://gurras.se/",
+    "rating": 4.6,
+    "ratingCount": 473,
+    "primaryType": "fusion_restaurant",
+    "hours": [
+      {
+        "days": [
+          2
+        ],
+        "open": "17:00",
+        "close": "00:00"
+      },
+      {
+        "days": [
+          3
+        ],
+        "open": "17:00",
+        "close": "00:00"
+      },
+      {
+        "days": [
+          4
+        ],
+        "open": "17:00",
+        "close": "00:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "16:00",
+        "close": "00:30"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "12:00",
+        "close": "00:30"
+      }
+    ],
+    "lat": 57.707869599999995,
+    "lng": 11.9657304,
+    "googleMapsUri": "https://maps.google.com/?cid=10388210114308185318&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "businessStatus": "OPERATIONAL"
   },
   {
@@ -54059,18 +54501,54 @@
     "source": "google",
     "restaurantId": "vastergatan-malmo",
     "searchName": "Västergatan",
-    "placeId": "ChIJK_xnZGzzT0YRXEa-VhIpeyg",
+    "placeId": "ChIJwTpq9_6jU0YRwVbCYKlPXC8",
     "name": "Västergatan",
-    "address": "Västergatan, Göteborg, Sverige",
-    "phone": "",
-    "website": "",
-    "rating": null,
-    "ratingCount": 0,
-    "primaryType": "",
-    "hours": [],
-    "lat": 57.6938997,
-    "lng": 11.9596168,
-    "googleMapsUri": "https://maps.google.com/?cid=2916970342393988700&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "address": "Västergatan 16, 211 21 Malmö, Sverige",
+    "phone": "040-793 13",
+    "website": "http://www.vastergatan.se/",
+    "rating": 4.6,
+    "ratingCount": 373,
+    "primaryType": "european_restaurant",
+    "hours": [
+      {
+        "days": [
+          2
+        ],
+        "open": "17:00",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          3
+        ],
+        "open": "17:00",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          4
+        ],
+        "open": "17:00",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "17:00",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "17:00",
+        "close": "22:00"
+      }
+    ],
+    "lat": 55.606289399999994,
+    "lng": 12.995972799999999,
+    "googleMapsUri": "https://maps.google.com/?cid=3412690206531409601&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "businessStatus": "OPERATIONAL"
   },
   {
@@ -55007,18 +55485,68 @@
     "source": "google",
     "restaurantId": "myran",
     "searchName": "Myran",
-    "placeId": "ChIJwey45BT3ZkYRn4zPGAm8VEE",
-    "name": "Myra",
-    "address": "822 91 Myra, Sverige",
-    "phone": "",
-    "website": "",
-    "rating": null,
-    "ratingCount": 0,
-    "primaryType": "",
-    "hours": [],
-    "lat": 61.3512184,
-    "lng": 15.9650077,
-    "googleMapsUri": "https://maps.google.com/?cid=4707594257765993631&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "placeId": "ChIJnTehUADhbUYRrEcsMKG-Uvw",
+    "name": "Restaurang MYRA",
+    "address": "Karolinervägen 23, 837 71 Duved, Sverige",
+    "phone": "070-736 46 26",
+    "website": "http://www.restaurangmyra.se/",
+    "rating": 4.9,
+    "ratingCount": 149,
+    "primaryType": "restaurant",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "12:00",
+        "close": "21:00"
+      },
+      {
+        "days": [
+          1
+        ],
+        "open": "11:30",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          2
+        ],
+        "open": "11:30",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          3
+        ],
+        "open": "11:30",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          4
+        ],
+        "open": "11:30",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "11:30",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "12:00",
+        "close": "22:00"
+      }
+    ],
+    "lat": 63.3929246,
+    "lng": 12.9212402,
+    "googleMapsUri": "https://maps.google.com/?cid=18181804245155334060&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "businessStatus": "OPERATIONAL"
   },
   {
@@ -55579,18 +56107,18 @@
     "source": "google",
     "restaurantId": "olme-prastgard",
     "searchName": "Ölme Prästgård",
-    "placeId": "ChIJqY2S_gi-XEYRTWnW3xbiGqM",
-    "name": "Ölme Prästgård",
-    "address": "Ölme Prästgård, 681 94 Kristinehamn, Sverige",
-    "phone": "",
-    "website": "",
-    "rating": null,
-    "ratingCount": 0,
-    "primaryType": "",
+    "placeId": "ChIJSb_A2gm-XEYRu8RcR2yeQTU",
+    "name": "Ölme Prästgård Gästgiveri",
+    "address": "Ölme Prästgård 1, 681 94 Kristinehamn, Sverige",
+    "phone": "0550-333 33",
+    "website": "https://olmeprastgard.se/",
+    "rating": 4.7,
+    "ratingCount": 270,
+    "primaryType": "hotel",
     "hours": [],
-    "lat": 59.375331,
-    "lng": 13.9466511,
-    "googleMapsUri": "https://maps.google.com/?cid=11752954765449259341&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 59.37522879999999,
+    "lng": 13.9464083,
+    "googleMapsUri": "https://maps.google.com/?cid=3837522545387291835&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "businessStatus": "OPERATIONAL"
   },
   {
@@ -56533,18 +57061,54 @@
     "source": "google",
     "restaurantId": "bua",
     "searchName": "Bua",
-    "placeId": "ChIJ_bNdgazQT0YRgEtAo3qQAQo",
-    "name": "Bua",
-    "address": "432 64 Bua, Sverige",
-    "phone": "",
-    "website": "",
-    "rating": null,
-    "ratingCount": 0,
-    "primaryType": "",
-    "hours": [],
-    "lat": 57.2368326,
-    "lng": 12.122146299999999,
-    "googleMapsUri": "https://maps.google.com/?cid=721016271755299712&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "placeId": "ChIJuaMV0p65b0YRLR7_H7HDZD4",
+    "name": "Nästgårds Bua",
+    "address": "Biblioteksgatan 6C, 831 30 Östersund, Sverige",
+    "phone": "072-232 99 08",
+    "website": "http://nastgard.se/bua",
+    "rating": 4.8,
+    "ratingCount": 147,
+    "primaryType": "restaurant",
+    "hours": [
+      {
+        "days": [
+          2
+        ],
+        "open": "16:00",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          3
+        ],
+        "open": "16:00",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          4
+        ],
+        "open": "16:00",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "16:00",
+        "close": "00:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "16:00",
+        "close": "00:00"
+      }
+    ],
+    "lat": 63.17743230000001,
+    "lng": 14.634155900000001,
+    "googleMapsUri": "https://maps.google.com/?cid=4495933493536038445&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "businessStatus": "OPERATIONAL"
   },
   {
@@ -57046,18 +57610,54 @@
     "source": "google",
     "restaurantId": "brunnsgatan-41",
     "searchName": "Brunnsgatan 41",
-    "placeId": "ChIJeZEb93ItX0YR3hV8Bfz60lc",
+    "placeId": "ChIJLVn7cQAtX0YR-D5OY6YlVmw",
     "name": "Brunnsgatan 41",
     "address": "Brunnsgatan 41, 611 32 Nyköping, Sverige",
     "phone": "",
-    "website": "",
-    "rating": null,
-    "ratingCount": 0,
-    "primaryType": "",
-    "hours": [],
+    "website": "https://www.brunnsgatanfyrtioett.com/",
+    "rating": 4.6,
+    "ratingCount": 29,
+    "primaryType": "restaurant",
+    "hours": [
+      {
+        "days": [
+          2
+        ],
+        "open": "17:00",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          3
+        ],
+        "open": "17:00",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          4
+        ],
+        "open": "17:00",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "17:00",
+        "close": "23:30"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "17:00",
+        "close": "23:30"
+      }
+    ],
     "lat": 58.75393889999999,
     "lng": 17.003486199999998,
-    "googleMapsUri": "https://maps.google.com/?cid=6328396386739688926&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "googleMapsUri": "https://maps.google.com/?cid=7806468400654204664&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "businessStatus": "OPERATIONAL"
   },
   {
@@ -58557,47 +59157,61 @@
     "source": "google",
     "restaurantId": "art",
     "searchName": "Art",
-    "placeId": "ChIJDa1zk2GdX0YRbzXFKNybDvY",
-    "name": "Index - The Swedish Contemporary Art Foundation",
-    "address": "Kungsbro strand 19, 112 26 Stockholm, Sverige",
-    "phone": "08-502 198 38",
-    "website": "http://www.indexfoundation.se/",
+    "placeId": "ChIJQ8EY5midX0YRaoqzzR8v1Sc",
+    "name": "Restaurang ART",
+    "address": "Norra Stationsgatan 65, 113 43 Stockholm, Sverige",
+    "phone": "",
+    "website": "https://restaurangart.se/?utm_source=google",
     "rating": 4.4,
-    "ratingCount": 30,
-    "primaryType": "",
+    "ratingCount": 710,
+    "primaryType": "restaurant",
     "hours": [
       {
         "days": [
           0
         ],
-        "open": "12:00",
-        "close": "16:00"
+        "open": "17:00",
+        "close": "20:00"
+      },
+      {
+        "days": [
+          2
+        ],
+        "open": "11:00",
+        "close": "01:00"
+      },
+      {
+        "days": [
+          3
+        ],
+        "open": "11:00",
+        "close": "01:00"
       },
       {
         "days": [
           4
         ],
-        "open": "12:00",
-        "close": "18:00"
+        "open": "11:00",
+        "close": "01:00"
       },
       {
         "days": [
           5
         ],
-        "open": "12:00",
-        "close": "18:00"
+        "open": "11:00",
+        "close": "01:00"
       },
       {
         "days": [
           6
         ],
-        "open": "12:00",
-        "close": "16:00"
+        "open": "17:00",
+        "close": "01:00"
       }
     ],
-    "lat": 59.330566299999994,
-    "lng": 18.0510485,
-    "googleMapsUri": "https://maps.google.com/?cid=17730280152883344751&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "lat": 59.347539,
+    "lng": 18.038097999999998,
+    "googleMapsUri": "https://maps.google.com/?cid=2870252151160146538&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "businessStatus": "OPERATIONAL"
   },
   {
@@ -59089,18 +59703,33 @@
     "source": "google",
     "restaurantId": "jarden",
     "searchName": "Jarden",
-    "placeId": "ChIJ2RUzYUENbkYREBOCm0UG2FY",
-    "name": "Järpen",
-    "address": "Järpen, Sverige",
-    "phone": "",
-    "website": "",
-    "rating": null,
-    "ratingCount": 0,
-    "primaryType": "",
-    "hours": [],
-    "lat": 63.34963049999999,
-    "lng": 13.452907699999999,
-    "googleMapsUri": "https://maps.google.com/?cid=6257758578262807312&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "placeId": "ChIJy3E1agB3X0YReCyzxDuqV2A",
+    "name": "Jarden",
+    "address": "Torkel Knutssonsgatan 24, 118 49 Stockholm, Sverige",
+    "phone": "08-502 769 61",
+    "website": "https://jardenrestaurant.se/",
+    "rating": 3.5,
+    "ratingCount": 6,
+    "primaryType": "restaurant",
+    "hours": [
+      {
+        "days": [
+          5
+        ],
+        "open": "16:30",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "16:30",
+        "close": "22:00"
+      }
+    ],
+    "lat": 59.3166601,
+    "lng": 18.057036099999998,
+    "googleMapsUri": "https://maps.google.com/?cid=6942204524294777976&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "businessStatus": "OPERATIONAL"
   },
   {
@@ -61359,18 +61988,68 @@
     "source": "google",
     "restaurantId": "nagg",
     "searchName": "Nagg",
-    "placeId": "ChIJ-2ZvE2DHZUYRM-oFFrnzP84",
-    "name": "Naggen",
-    "address": "841 73 Naggen, Sverige",
-    "phone": "",
+    "placeId": "ChIJ3d73FBoLbkYRj2YqQoOZ-DQ",
+    "name": "NAGG by Raujoxa",
+    "address": "Rödkullen, 837 98 Åre, Sverige",
+    "phone": "070-602 04 51",
     "website": "",
-    "rating": null,
-    "ratingCount": 0,
-    "primaryType": "",
-    "hours": [],
-    "lat": 62.2758125,
-    "lng": 15.994542500000001,
-    "googleMapsUri": "https://maps.google.com/?cid=14861865271609911859&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+    "rating": 2.5,
+    "ratingCount": 2,
+    "primaryType": "restaurant",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "11:00",
+        "close": "15:00"
+      },
+      {
+        "days": [
+          1
+        ],
+        "open": "11:00",
+        "close": "15:00"
+      },
+      {
+        "days": [
+          2
+        ],
+        "open": "11:00",
+        "close": "15:00"
+      },
+      {
+        "days": [
+          3
+        ],
+        "open": "11:00",
+        "close": "15:00"
+      },
+      {
+        "days": [
+          4
+        ],
+        "open": "11:00",
+        "close": "15:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "11:00",
+        "close": "15:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "11:00",
+        "close": "15:00"
+      }
+    ],
+    "lat": 63.415344899999994,
+    "lng": 13.0369352,
+    "googleMapsUri": "https://maps.google.com/?cid=3816969473226335887&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
     "businessStatus": "OPERATIONAL"
   },
   {

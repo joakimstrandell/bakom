@@ -4,6 +4,11 @@ import { sleep, loadJson, saveRawJson, loadRawJson } from "../utils/fetch.js";
 import { parseGoogleHours } from "../utils/hours.js";
 import type { PipelineRestaurant, GoogleRaw } from "../types.js";
 
+/** Structure of data/google-overrides.json */
+type GoogleOverrides = {
+  overrides: Record<string, string>;
+};
+
 const API_KEY = process.env.GOOGLE_PLACES_API_KEY;
 
 const FIELD_MASK = [
@@ -63,18 +68,41 @@ function getLocationBias(city: string): { latitude: number; longitude: number } 
 }
 
 /**
+ * Load Google search overrides from data/google-overrides.json.
+ * Returns a map of restaurant name → custom search query.
+ */
+function loadGoogleOverrides(): Map<string, string> {
+  try {
+    const data = loadJson<GoogleOverrides>("google-overrides.json");
+    if (data?.overrides) {
+      return new Map(Object.entries(data.overrides));
+    }
+  } catch {
+    // File doesn't exist or is invalid — no overrides
+  }
+  return new Map();
+}
+
+
+/**
  * Search for a restaurant via Google Places Text Search API.
+ * @param name - Restaurant name
+ * @param city - City for location bias
+ * @param customQuery - Optional custom search query (from google-overrides.json)
  */
 const API_TIMEOUT = 15000; // 15s timeout for API calls
 
 async function searchPlace(
   name: string,
-  city: string
+  city: string,
+  customQuery?: string
 ): Promise<Omit<GoogleRaw, "source" | "restaurantId" | "searchName"> | null> {
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), API_TIMEOUT);
 
   const locationBias = getLocationBias(city);
+  // Use custom query if provided, otherwise default format
+  const textQuery = customQuery ?? `${name}, ${city}, Sweden`;
 
   try {
     const res = await fetch(
@@ -88,7 +116,7 @@ async function searchPlace(
           "X-Goog-FieldMask": FIELD_MASK,
         },
         body: JSON.stringify({
-          textQuery: `${name}, ${city}, Sweden`,
+          textQuery,
           locationBias: {
             circle: {
               center: locationBias,
@@ -172,13 +200,25 @@ export async function collectGoogle(
     existingById.set(g.restaurantId, g);
   }
 
+  // Load Google search overrides
+  const overrides = loadGoogleOverrides();
+  if (overrides.size > 0) {
+    console.log(`  Google overrides loaded: ${overrides.size}`);
+  }
+
   console.log(`  Total restaurants: ${restaurants.length}`);
   console.log(`  Existing Google data: ${existing.length}`);
 
   // Determine what needs fetching
+  // Include restaurants with empty primaryType (need retry with "restaurant" prefix)
   const needsFetch = force
     ? restaurants
-    : restaurants.filter((r) => !existingById.has(r.id));
+    : restaurants.filter((r) => {
+        const existing = existingById.get(r.id);
+        if (!existing) return true; // Not fetched yet
+        if (!existing.primaryType) return true; // Empty primaryType, needs retry
+        return false;
+      });
 
   console.log(`  ${force ? "Will re-fetch" : "Needs fetching"}: ${needsFetch.length}\n`);
 
@@ -193,15 +233,46 @@ export async function collectGoogle(
 
   let fetched = 0;
   let notFound = 0;
+  let ambiguous = 0;
+  const ambiguousNames: string[] = [];
 
   for (let i = 0; i < needsFetch.length; i++) {
     const r = needsFetch[i];
-    process.stdout.write(`[${i + 1}/${needsFetch.length}] ${r.name}...`);
+    const customQuery = overrides.get(r.name);
+    const usingOverride = !!customQuery;
+
+    process.stdout.write(`[${i + 1}/${needsFetch.length}] ${r.name}${usingOverride ? " (override)" : ""}...`);
 
     try {
-      const result = await searchPlace(r.name, r.city || "Sweden");
+      let result = await searchPlace(r.name, r.city || "Sweden", customQuery);
+
+      // If no primaryType, retry with "restaurant" prefix (helps with location-based names)
+      if (result && !result.primaryType && !usingOverride) {
+        process.stdout.write(` (retry with "restaurant")...`);
+        await sleep(200);
+        const retryResult = await searchPlace(r.name, r.city || "Sweden", `restaurant ${r.name}, ${r.city || "Sweden"}`);
+        if (retryResult && retryResult.primaryType) {
+          result = retryResult;
+        }
+      }
 
       if (result) {
+        // Skip results with no primaryType (not a recognized place type)
+        // These are likely street addresses or landmarks, not restaurants
+        if (!result.primaryType && !usingOverride) {
+          ambiguous++;
+          ambiguousNames.push(r.name);
+          process.stdout.write(` ⚠ skipped (no primaryType)\n`);
+          // Remove from results so we don't retry every run
+          if (resultsById.has(r.id)) {
+            const idx = results.findIndex((g) => g.restaurantId === r.id);
+            if (idx >= 0) results.splice(idx, 1);
+            resultsById.delete(r.id);
+          }
+          notFound++;
+          continue;
+        }
+
         const googleRaw: GoogleRaw = {
           source: "google",
           restaurantId: r.id,
@@ -248,6 +319,17 @@ export async function collectGoogle(
   console.log(`\nGoogle Places collection complete:`);
   console.log(`  Fetched: ${fetched}`);
   console.log(`  Not found: ${notFound}`);
+  if (ambiguous > 0) {
+    console.log(`  Skipped (no primaryType): ${ambiguous}`);
+    console.log(`\n  ⚠ Skipped restaurants (no primaryType after retry):`);
+    for (const name of ambiguousNames.slice(0, 10)) {
+      console.log(`    - ${name}`);
+    }
+    if (ambiguousNames.length > 10) {
+      console.log(`    ... and ${ambiguousNames.length - 10} more`);
+    }
+    console.log(`\n  To include these, add overrides to data/google-overrides.json`);
+  }
   console.log(`  Total in google.json: ${results.length}`);
 
   return results;

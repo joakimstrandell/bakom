@@ -158,10 +158,33 @@ the entire dataset comes from a single HTTP request in under 5 seconds.
 - **Method:** Text Search API for each restaurant name + city
 - **Data:** Address (with postal code/city), phone, website, hours, rating, review count,
   coordinates, business status, Google Maps URL, primaryType (for cuisine fallback)
-- **Incremental key:** `restaurantId` — skips restaurants already in `google.json`
+- **Incremental key:** `restaurantId` — skips restaurants already in `google.json`,
+  but re-fetches entries with empty `primaryType` (to retry with "restaurant" prefix)
 - **Rate limit:** Sequential, 200ms delay between requests
 - **Non-Swedish filtering:** Rejects matches to non-Swedish addresses (København, Danmark, etc.)
+- **Auto-retry for ambiguous names:** If a result has no `primaryType` (might be a
+  street address instead of a restaurant), the collector retries with "restaurant {name}"
+  prepended. If still no `primaryType` after retry, the result is skipped.
 - **Collector:** [`pipeline/collect/google.ts`](../pipeline/collect/google.ts)
+
+#### Google Overrides
+
+File: `data/google-overrides.json`
+
+For edge cases where the auto-retry doesn't work, you can add a custom search query:
+
+```json
+{
+  "overrides": {
+    "Nytorget 6": "Restaurant Nytorget 6 Stockholm",
+    "Tegelbacken": "Restaurang Tegelbacken Stockholm"
+  }
+}
+```
+
+When the collector runs, it checks for an override by restaurant name. If found,
+the custom query is used instead of the default `{name}, {city}, Sweden`, and
+the result is accepted even without a `primaryType`.
 
 ---
 
