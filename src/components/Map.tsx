@@ -135,14 +135,12 @@ function FlyToUser({ location }: { location: UserLocation }) {
 /** Flies to region center when region changes */
 function FlyToRegion({ region }: { region: RegionFilter }) {
   const map = useMap();
-  const isFirstRender = useRef(true);
+  const prevRegion = useRef<RegionFilter>(region);
 
   useEffect(() => {
-    // Skip initial render - MapContainer handles that
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
-    }
+    // Only fly if region actually changed (skip initial render and re-renders)
+    if (prevRegion.current === region) return;
+    prevRegion.current = region;
 
     const config = getRegionConfig(region);
     map.flyTo(config.center, config.zoom, { duration: 0.8 });
@@ -156,19 +154,51 @@ function PanToSelected({
   restaurant,
   rightSidebarWidth = 360,
   clusterGroupRef,
+  initialRestaurantId,
 }: {
   restaurant: Restaurant | null;
   rightSidebarWidth?: number;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   clusterGroupRef: React.RefObject<any>;
+  initialRestaurantId?: string;
 }) {
   const map = useMap();
+  const hasHandledFirstRestaurant = useRef(false);
 
   useEffect(() => {
     if (!restaurant || restaurant.lat == null || restaurant.lng == null) return;
 
+    // Skip the very first effect run if we loaded with this restaurant
+    // (MapContainer already positioned the map correctly)
+    if (!hasHandledFirstRestaurant.current) {
+      hasHandledFirstRestaurant.current = true;
+      if (restaurant.id === initialRestaurantId) {
+        return;
+      }
+    }
+
     const latlng = L.latLng(restaurant.lat, restaurant.lng);
     const clusterGroup = clusterGroupRef.current;
+
+    // Helper to check/fix sidebar overlap
+    const adjustForSidebar = () => {
+      const point = map.latLngToContainerPoint(latlng);
+      const mapSize = map.getSize();
+      const visibleWidth = mapSize.x - rightSidebarWidth;
+      const padding = 40;
+
+      if (point.x > visibleWidth - padding) {
+        const targetX = visibleWidth / 2;
+        const offsetX = point.x - targetX;
+        const center = map.getCenter();
+        const targetPoint = map.latLngToContainerPoint(center);
+        const newCenter = map.containerPointToLatLng([
+          targetPoint.x + offsetX,
+          targetPoint.y,
+        ]);
+        map.panTo(newCenter, { duration: 0.3 });
+      }
+    };
 
     // Find the marker for this restaurant in the cluster group
     if (clusterGroup) {
@@ -180,27 +210,9 @@ function PanToSelected({
 
       if (marker) {
         // Use zoomToShowLayer - it handles clustered markers properly
-        // and zooms just enough to show the marker outside its cluster
+        // If marker is already visible, it just calls the callback
         clusterGroup.zoomToShowLayer(marker, () => {
-          // After zoom completes, check if marker is under the sidebar
-          setTimeout(() => {
-            const point = map.latLngToContainerPoint(latlng);
-            const mapSize = map.getSize();
-            const visibleWidth = mapSize.x - rightSidebarWidth;
-            const padding = 40;
-
-            if (point.x > visibleWidth - padding) {
-              const targetX = visibleWidth / 2;
-              const offsetX = point.x - targetX;
-              const center = map.getCenter();
-              const targetPoint = map.latLngToContainerPoint(center);
-              const newCenter = map.containerPointToLatLng([
-                targetPoint.x + offsetX,
-                targetPoint.y,
-              ]);
-              map.panTo(newCenter, { duration: 0.3 });
-            }
-          }, 100);
+          setTimeout(adjustForSidebar, 100);
         });
         return;
       }
@@ -210,27 +222,12 @@ function PanToSelected({
     const bounds = map.getBounds();
     if (!bounds.contains(latlng)) {
       map.panTo(latlng, { duration: 0.3 });
+      setTimeout(adjustForSidebar, 350);
       return;
     }
 
-    // Check if hidden under the right sidebar
-    const point = map.latLngToContainerPoint(latlng);
-    const mapSize = map.getSize();
-    const visibleWidth = mapSize.x - rightSidebarWidth;
-    const padding = 40;
-
-    if (point.x > visibleWidth - padding) {
-      const targetX = visibleWidth / 2;
-      const offsetX = point.x - targetX;
-      const center = map.getCenter();
-      const targetPoint = map.latLngToContainerPoint(center);
-      const newCenter = map.containerPointToLatLng([
-        targetPoint.x + offsetX,
-        targetPoint.y,
-      ]);
-      map.panTo(newCenter, { duration: 0.3 });
-    }
-  }, [restaurant, map, rightSidebarWidth, clusterGroupRef]);
+    adjustForSidebar();
+  }, [restaurant, map, rightSidebarWidth, clusterGroupRef, initialRestaurantId]);
 
   return null;
 }
@@ -245,6 +242,9 @@ type MapProps = {
   region: RegionFilter;
 };
 
+// Zoom level for viewing a single restaurant
+const RESTAURANT_ZOOM = 16;
+
 export default function Map({
   restaurants,
   userLocation,
@@ -256,10 +256,21 @@ export default function Map({
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const clusterGroupRef = useRef<any>(null);
 
+  // Track the initial restaurant ID (captured once on mount)
+  const initialRestaurantId = useRef<string | undefined>(selectedRestaurant?.id);
+
+  // On initial load with a selected restaurant, center on it
+  const initialCenter: [number, number] =
+    initialRestaurantId.current && selectedRestaurant?.lat != null && selectedRestaurant?.lng != null
+      ? [selectedRestaurant.lat, selectedRestaurant.lng]
+      : regionConfig.center;
+  const initialZoom =
+    initialRestaurantId.current ? RESTAURANT_ZOOM : regionConfig.zoom;
+
   return (
     <MapContainer
-      center={regionConfig.center}
-      zoom={regionConfig.zoom}
+      center={initialCenter}
+      zoom={initialZoom}
       style={{ height: "100%", width: "100%" }}
     >
       <TileLayer
@@ -269,7 +280,11 @@ export default function Map({
 
       <FlyToRegion region={region} />
       <FlyToUser location={userLocation} />
-      <PanToSelected restaurant={selectedRestaurant ?? null} clusterGroupRef={clusterGroupRef} />
+      <PanToSelected
+        restaurant={selectedRestaurant ?? null}
+        clusterGroupRef={clusterGroupRef}
+        initialRestaurantId={initialRestaurantId.current}
+      />
 
       {/* User location indicator */}
       {userLocation && (
