@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 import Filters from "../components/Filters";
 import RestaurantDetail from "../components/RestaurantDetail";
 import RestaurantList from "../components/RestaurantList";
+import SearchCommand from "../components/SearchCommand";
 import type { Restaurant } from "../types";
 import { useFilters } from "../hooks/useFilters";
 import { type RegionFilter, REGIONS, DEFAULT_REGION } from "../lib/regions";
@@ -16,7 +17,6 @@ import {
   SlidersHorizontal,
   Navigation,
   Loader2,
-  X,
   MapIcon,
   List,
   MessageSquare,
@@ -82,9 +82,6 @@ function MapLayout() {
   } = useFilters(regionFiltered);
 
   // ─── UI State ──────────────────────────────────────────────────
-  const [searchExpanded, setSearchExpanded] = useState(false);
-  const searchInputRef = useRef<HTMLInputElement>(null);
-
   // Sidebar state
   const [sidebarMode, setSidebarMode] = useState<SidebarMode>(
     selectedRestaurant ? "restaurant" : null
@@ -110,6 +107,9 @@ function MapLayout() {
 
   // Feedback modal state
   const [feedbackOpen, setFeedbackOpen] = useState(false);
+
+  // Search command dialog state
+  const [searchOpen, setSearchOpen] = useState(false);
 
   // Mobile view toggle (map vs list)
   const [mobileView, setMobileView] = useState<"map" | "list">("map");
@@ -181,13 +181,6 @@ function MapLayout() {
 
   // ─── Effects ───────────────────────────────────────────────────
 
-  // Focus search input when expanded
-  useEffect(() => {
-    if (searchExpanded && searchInputRef.current) {
-      searchInputRef.current.focus();
-    }
-  }, [searchExpanded]);
-
   // Close on escape
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -195,9 +188,6 @@ function MapLayout() {
         if (regionMenuOpen) {
           setRegionMenuOpen(false);
           return;
-        }
-        if (searchExpanded && !filterState.searchQuery) {
-          setSearchExpanded(false);
         }
         if (sidebarMode === "filters") {
           setSidebarMode(selectedRestaurant ? "restaurant" : null);
@@ -208,14 +198,7 @@ function MapLayout() {
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [
-    searchExpanded,
-    filterState.searchQuery,
-    sidebarMode,
-    closeSidebar,
-    regionMenuOpen,
-    selectedRestaurant,
-  ]);
+  }, [sidebarMode, closeSidebar, regionMenuOpen, selectedRestaurant]);
 
   // Close region menu on outside click
   useEffect(() => {
@@ -237,9 +220,9 @@ function MapLayout() {
   return (
     <div className="h-screen flex flex-col overflow-hidden">
       {/* ─── Compact Header ─────────────────────────────────────── */}
-      <header className="header-bar flex items-center justify-between h-14 px-4 relative z-[1003]">
+      <header className="header-bar flex items-center h-14 px-4 relative z-[1003] gap-2">
         {/* Left side: Logo + Region Selector */}
-        <div className="flex items-center gap-3 shrink-0">
+        <div className="flex items-center gap-3 shrink-0 min-w-0">
           <button onClick={() => navigate({ to: "/" })} className="logo-text logo-mark">
             B
           </button>
@@ -276,44 +259,19 @@ function MapLayout() {
           </div>
         </div>
 
+        {/* Spacer */}
+        <div className="flex-1" />
+
         {/* Right side: Search + Feedback + Filter */}
-        <div className="flex items-center gap-1 shrink-0 relative">
-          {/* Search - icon only when collapsed, expands left on click */}
-          {searchExpanded || filterState.searchQuery ? (
-            <div className="search-input-wrapper expanded">
-              <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 size-4 text-muted-foreground pointer-events-none" />
-              <input
-                ref={searchInputRef}
-                type="text"
-                placeholder={t("header.search")}
-                value={filterState.searchQuery}
-                onChange={(e) => dispatch({ type: "SET_SEARCH", payload: e.target.value })}
-                onBlur={() => {
-                  if (!filterState.searchQuery) setSearchExpanded(false);
-                }}
-                className="search-input"
-              />
-              {filterState.searchQuery && (
-                <button
-                  onClick={() => {
-                    dispatch({ type: "SET_SEARCH", payload: "" });
-                    searchInputRef.current?.focus();
-                  }}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 p-1 rounded-full hover:bg-black/5 transition-colors"
-                >
-                  <X className="size-3.5 text-muted-foreground" />
-                </button>
-              )}
-            </div>
-          ) : (
-            <button
-              onClick={() => setSearchExpanded(true)}
-              className="header-icon-btn"
-              title={t("header.search")}
-            >
-              <Search className="size-5" />
-            </button>
-          )}
+        <div className="flex items-center gap-1 shrink-0">
+          {/* Search icon - opens search command dialog */}
+          <button
+            onClick={() => setSearchOpen(true)}
+            className="header-icon-btn"
+            title={`${t("header.search")} (${navigator.userAgent.includes("Mac") ? "Cmd" : "Ctrl"}+K)`}
+          >
+            <Search className="size-5" />
+          </button>
 
           {/* Feedback icon button */}
           <button
@@ -458,6 +416,14 @@ function MapLayout() {
           )}
         </div>
       </div>
+
+      {/* Search Command Dialog */}
+      <SearchCommand
+        restaurants={allRestaurants}
+        open={searchOpen}
+        onOpenChange={setSearchOpen}
+        onSelectRestaurant={handleSelectRestaurant}
+      />
 
       {/* Feedback Modal */}
       <FeedbackModal isOpen={feedbackOpen} onClose={() => setFeedbackOpen(false)} />

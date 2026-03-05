@@ -113,5 +113,10 @@
   "language": {
     "en": "English",
     "sv": "Svenska"
+  },
+  "search": {
+    "placeholder": "Search restaurants...",
+    "no_results": "No restaurants found.",
+    "restaurants": "Restaurants"
   }
 }
