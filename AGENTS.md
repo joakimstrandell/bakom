@@ -11,6 +11,14 @@ See `docs/` for detailed documentation:
 - `docs/optimize.md` - Frontend JSON generation
 - `docs/score.md` - Bakom Score algorithm
 
+### Conventions
+
+Run before committing:
+
+```bash
+pnpm test && pnpm lint && pnpm format
+```
+
 In code, use single-line `@see` references instead of duplicating docs:
 
 ```typescript
