@@ -11,6 +11,12 @@ See `docs/` for detailed documentation:
 - `docs/optimize.md` - Frontend JSON generation
 - `docs/score.md` - Bakom Score algorithm
 
+In code, use single-line `@see` references instead of duplicating docs:
+
+```typescript
+/** Brief description. @see docs/file.md */
+```
+
 ---
 
 # Component Guidelines
