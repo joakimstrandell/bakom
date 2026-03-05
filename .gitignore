@@ -6,3 +6,4 @@ dist/
 .nitro/
 .env
 .env.local
+.DS_store
