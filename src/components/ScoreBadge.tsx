@@ -56,4 +56,4 @@ function ScoreBadge({ score, size, fallback = "—", className, ...props }: Scor
   );
 }
 
-export { ScoreBadge, scoreBadgeVariants };
+export { ScoreBadge };

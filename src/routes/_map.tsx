@@ -95,10 +95,8 @@ function MapLayout() {
     if (selectedRestaurant) {
       setSidebarMode("restaurant");
     } else {
-      // Only close if we were showing a restaurant
-      if (sidebarMode === "restaurant") {
-        setSidebarMode(null);
-      }
+      // Only close if we were showing a restaurant (use functional update to avoid dependency)
+      setSidebarMode((prev) => (prev === "restaurant" ? null : prev));
     }
   }, [selectedRestaurant]);
 
