@@ -8,7 +8,7 @@ function fakeNow(day: number, hour: number, minute: number): Date {
   // Use a known base: 2025-01-06 is a Monday (day=1)
   // Monday=6, Tuesday=7, ..., Sunday=12
   const baseMonday = new Date(2025, 0, 6, hour, minute, 0, 0);
-  const offset = ((day - 1 + 7) % 7); // days from Monday
+  const offset = (day - 1 + 7) % 7; // days from Monday
   baseMonday.setDate(6 + offset);
   return baseMonday;
 }
@@ -39,9 +39,7 @@ describe("isOpen — null/empty handling", () => {
 
 // ── Normal (same-day) hours ─────────────────────────────────────
 describe("isOpen — normal hours", () => {
-  const weekdayLunch: HoursEntry[] = [
-    { days: [1, 2, 3, 4, 5], open: "11:00", close: "14:00" },
-  ];
+  const weekdayLunch: HoursEntry[] = [{ days: [1, 2, 3, 4, 5], open: "11:00", close: "14:00" }];
 
   it("returns true when within opening hours", () => {
     setTime(1, 12, 0); // Monday 12:00
@@ -137,18 +135,14 @@ describe("isOpen — overnight hours", () => {
 // ── Midnight edge cases ─────────────────────────────────────────
 describe("isOpen — midnight edge cases", () => {
   it("handles close at exactly midnight (00:00 = next day)", () => {
-    const hours: HoursEntry[] = [
-      { days: [1], open: "18:00", close: "00:00" },
-    ];
+    const hours: HoursEntry[] = [{ days: [1], open: "18:00", close: "00:00" }];
     // close=00:00 < open=18:00 → treated as overnight
     setTime(1, 23, 59); // Monday 23:59
     expect(isOpen(hours)).toBe(true);
   });
 
   it("handles open at midnight", () => {
-    const hours: HoursEntry[] = [
-      { days: [6], open: "00:00", close: "06:00" },
-    ];
+    const hours: HoursEntry[] = [{ days: [6], open: "00:00", close: "06:00" }];
     setTime(6, 3, 0); // Saturday 03:00
     expect(isOpen(hours)).toBe(true);
   });
@@ -156,9 +150,7 @@ describe("isOpen — midnight edge cases", () => {
 
 // ── Weekend-only restaurant ─────────────────────────────────────
 describe("isOpen — weekend-only", () => {
-  const weekend: HoursEntry[] = [
-    { days: [6, 0], open: "10:00", close: "16:00" },
-  ];
+  const weekend: HoursEntry[] = [{ days: [6, 0], open: "10:00", close: "16:00" }];
 
   it("open on Saturday", () => {
     setTime(6, 12, 0);

@@ -54,7 +54,7 @@ function MapLayout() {
 
   // Find the restaurant by ID
   const selectedRestaurant = useMemo(
-    () => (restaurantId ? ALL_RESTAURANTS.find((r) => r.id === restaurantId) ?? null : null),
+    () => (restaurantId ? (ALL_RESTAURANTS.find((r) => r.id === restaurantId) ?? null) : null),
     [restaurantId]
   );
 
@@ -73,8 +73,13 @@ function MapLayout() {
     return allRestaurants.filter((r) => r.metroRegion === region);
   }, [region, allRestaurants]);
 
-  const { state: filterState, dispatch, filtered, activeFilterCount, hasActiveFilters } =
-    useFilters(regionFiltered);
+  const {
+    state: filterState,
+    dispatch,
+    filtered,
+    activeFilterCount,
+    hasActiveFilters,
+  } = useFilters(regionFiltered);
 
   // ─── UI State ──────────────────────────────────────────────────
   const [searchExpanded, setSearchExpanded] = useState(false);
@@ -154,9 +159,12 @@ function MapLayout() {
   }, [t]);
 
   // Handle restaurant selection - navigates to restaurant URL
-  const handleSelectRestaurant = useCallback((restaurant: Restaurant) => {
-    navigate({ to: "/r/$id", params: { id: restaurant.id } });
-  }, [navigate]);
+  const handleSelectRestaurant = useCallback(
+    (restaurant: Restaurant) => {
+      navigate({ to: "/r/$id", params: { id: restaurant.id } });
+    },
+    [navigate]
+  );
 
   // Handle closing sidebar - navigates back to home
   const closeSidebar = useCallback(() => {
@@ -202,7 +210,14 @@ function MapLayout() {
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [searchExpanded, filterState.searchQuery, sidebarMode, closeSidebar, regionMenuOpen, selectedRestaurant]);
+  }, [
+    searchExpanded,
+    filterState.searchQuery,
+    sidebarMode,
+    closeSidebar,
+    regionMenuOpen,
+    selectedRestaurant,
+  ]);
 
   // Close region menu on outside click
   useEffect(() => {
@@ -227,7 +242,9 @@ function MapLayout() {
       <header className="header-bar flex items-center justify-between h-14 px-4 relative z-[1003]">
         {/* Left side: Logo + Region Selector */}
         <div className="flex items-center gap-3 shrink-0">
-          <button onClick={() => navigate({ to: "/" })} className="logo-text logo-mark">B</button>
+          <button onClick={() => navigate({ to: "/" })} className="logo-text logo-mark">
+            B
+          </button>
 
           {/* Region selector */}
           <div className="relative" ref={regionMenuRef}>
@@ -237,7 +254,9 @@ function MapLayout() {
             >
               <span className="hidden sm:inline">{t(`regions.${region}`)}</span>
               <span className="sm:hidden">{t(`regions_short.${region}`)}</span>
-              <ChevronDown className={`size-4 transition-transform ${regionMenuOpen ? "rotate-180" : ""}`} />
+              <ChevronDown
+                className={`size-4 transition-transform ${regionMenuOpen ? "rotate-180" : ""}`}
+              />
             </button>
 
             {regionMenuOpen && (
@@ -251,9 +270,7 @@ function MapLayout() {
                     }`}
                   >
                     {t(`regions.${r.id}`)}
-                    <span className="text-muted-foreground ml-2">
-                      ({getRegionCount(r.id)})
-                    </span>
+                    <span className="text-muted-foreground ml-2">({getRegionCount(r.id)})</span>
                   </button>
                 ))}
               </div>
@@ -272,9 +289,7 @@ function MapLayout() {
                 type="text"
                 placeholder={t("header.search")}
                 value={filterState.searchQuery}
-                onChange={(e) =>
-                  dispatch({ type: "SET_SEARCH", payload: e.target.value })
-                }
+                onChange={(e) => dispatch({ type: "SET_SEARCH", payload: e.target.value })}
                 onBlur={() => {
                   if (!filterState.searchQuery) setSearchExpanded(false);
                 }}
@@ -362,9 +377,7 @@ function MapLayout() {
             onPointerDown={locateUser}
             disabled={locating}
             className={`map-overlay-btn bottom-4 right-4 size-12 ${mobileView === "list" ? "md:flex hidden" : ""}`}
-            title={
-              locationError || (userLocation ? t("location.update") : t("location.show"))
-            }
+            title={locationError || (userLocation ? t("location.update") : t("location.show"))}
           >
             {locating ? (
               <Loader2 className="size-5 animate-spin text-muted-foreground" />
@@ -396,11 +409,7 @@ function MapLayout() {
         className="md:hidden mobile-view-toggle"
         aria-label={mobileView === "map" ? t("header.list") : t("header.map")}
       >
-        {mobileView === "map" ? (
-          <List className="size-5" />
-        ) : (
-          <MapIcon className="size-5" />
-        )}
+        {mobileView === "map" ? <List className="size-5" /> : <MapIcon className="size-5" />}
       </button>
 
       {/* Mobile overlay tap-to-close */}
@@ -448,10 +457,7 @@ function MapLayout() {
             />
           )}
           {sidebarMode === "restaurant" && selectedRestaurant && (
-            <RestaurantDetail
-              restaurant={selectedRestaurant}
-              onClose={closeSidebar}
-            />
+            <RestaurantDetail restaurant={selectedRestaurant} onClose={closeSidebar} />
           )}
         </div>
       </div>

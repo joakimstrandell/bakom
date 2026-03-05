@@ -15,9 +15,7 @@ export async function geocodeAddress(
   postalCode: string | undefined,
   city: string
 ): Promise<{ lat: number; lng: number } | null> {
-  const query = [address, postalCode, city, "Sweden"]
-    .filter(Boolean)
-    .join(", ");
+  const query = [address, postalCode, city, "Sweden"].filter(Boolean).join(", ");
 
   const params = new URLSearchParams({
     q: query,
@@ -29,8 +27,7 @@ export async function geocodeAddress(
   try {
     const res = await fetch(`${NOMINATIM_URL}?${params}`, {
       headers: {
-        "User-Agent":
-          "KrogguidenMap/1.0 (hobby project; Stockholm restaurants)",
+        "User-Agent": "KrogguidenMap/1.0 (hobby project; Stockholm restaurants)",
       },
     });
 
@@ -54,8 +51,7 @@ export async function geocodeAddress(
 
       const fallbackRes = await fetch(`${NOMINATIM_URL}?${fallbackParams}`, {
         headers: {
-          "User-Agent":
-            "KrogguidenMap/1.0 (hobby project; Stockholm restaurants)",
+          "User-Agent": "KrogguidenMap/1.0 (hobby project; Stockholm restaurants)",
         },
       });
       const fallbackData = await fallbackRes.json();

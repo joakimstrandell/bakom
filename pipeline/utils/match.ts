@@ -2,11 +2,7 @@
  * Restaurant name and address normalization for cross-source matching.
  */
 
-import {
-  findBestMatch,
-  type MatchCandidate,
-  type MatchResult,
-} from "./fuzzy.js";
+import { findBestMatch, type MatchCandidate, type MatchResult } from "./fuzzy.js";
 
 export type { MatchResult };
 
@@ -17,14 +13,8 @@ export type { MatchResult };
 export function normalizeName(name: string): string {
   return name
     .toLowerCase()
-    .replace(
-      /^(restaurang|restaurant|ristorante|trattoria|brasserie|bistro|café|cafe)\s+/i,
-      ""
-    )
-    .replace(
-      /\s+(restaurang|restaurant|bar|grill|kitchen|kök|& bar|& grill)$/i,
-      ""
-    )
+    .replace(/^(restaurang|restaurant|ristorante|trattoria|brasserie|bistro|café|cafe)\s+/i, "")
+    .replace(/\s+(restaurang|restaurant|bar|grill|kitchen|kök|& bar|& grill)$/i, "")
     .replace(/[''´`]/g, "")
     .replace(/[^\p{L}\p{N}\s]/gu, " ") // replace punctuation with space (so "PA&Co" → "pa co")
     .replace(/\s+/g, " ")
@@ -85,19 +75,12 @@ export function findRestaurantMatch<T>(
     candidateList.push({
       item,
       normalizedName: normName,
-      address: getAddress
-        ? normalizeAddress(getAddress(item) ?? "")
-        : undefined,
+      address: getAddress ? normalizeAddress(getAddress(item) ?? "") : undefined,
     });
   }
 
   // Find best fuzzy match
-  const result = findBestMatch(
-    normalizedName,
-    normalizedAddr,
-    candidateList,
-    threshold
-  );
+  const result = findBestMatch(normalizedName, normalizedAddr, candidateList, threshold);
 
   return result ? { item: result.item, result } : null;
 }

@@ -1,9 +1,5 @@
 import { describe, it, expect } from "vitest";
-import {
-  filterRestaurants,
-  DEFAULT_FILTERS,
-  type FilterState,
-} from "./filters";
+import { filterRestaurants, DEFAULT_FILTERS, type FilterState } from "./filters";
 import type { Restaurant } from "../types";
 
 // ── Test fixtures ───────────────────────────────────────────────
@@ -23,7 +19,15 @@ function makeRestaurant(overrides: Partial<Restaurant> = {}): Restaurant {
     hours: [],
     lat: 59.32,
     lng: 18.07,
-    ratings: { krogguiden: null, google: null, michelin: null, whiteguide: null, svd: null, dn: null, di: null },
+    ratings: {
+      krogguiden: null,
+      google: null,
+      michelin: null,
+      whiteguide: null,
+      svd: null,
+      dn: null,
+      di: null,
+    },
     links: {},
     bakomScore: null,
     ...overrides,
@@ -38,7 +42,15 @@ const restaurants: Restaurant[] = [
     region: "Norrmalm",
     cuisine: "Japanskt, Sushi",
     priceRange: "$$$",
-    ratings: { krogguiden: 4.2, google: 4.5, michelin: "1_star", whiteguide: null, svd: 5, dn: 4, di: 20 },
+    ratings: {
+      krogguiden: 4.2,
+      google: 4.5,
+      michelin: "1_star",
+      whiteguide: null,
+      svd: 5,
+      dn: 4,
+      di: 20,
+    },
     bakomScore: 85,
   }),
   makeRestaurant({
@@ -48,7 +60,15 @@ const restaurants: Restaurant[] = [
     region: "Södermalm",
     cuisine: "Italienskt, Pizza",
     priceRange: "$$",
-    ratings: { krogguiden: 3.5, google: 4.0, michelin: null, whiteguide: "recommended", svd: null, dn: null, di: 15 },
+    ratings: {
+      krogguiden: 3.5,
+      google: 4.0,
+      michelin: null,
+      whiteguide: "recommended",
+      svd: null,
+      dn: null,
+      di: 15,
+    },
     bakomScore: 60,
   }),
   makeRestaurant({
@@ -58,7 +78,15 @@ const restaurants: Restaurant[] = [
     region: "Östermalm",
     cuisine: "Nordiskt, Fine dining",
     priceRange: "$$$$",
-    ratings: { krogguiden: null, google: 4.8, michelin: "2_star", whiteguide: "master_class", svd: 6, dn: 5, di: 24 },
+    ratings: {
+      krogguiden: null,
+      google: 4.8,
+      michelin: "2_star",
+      whiteguide: "master_class",
+      svd: 6,
+      dn: 5,
+      di: 24,
+    },
     bakomScore: 95,
   }),
   makeRestaurant({
@@ -68,7 +96,15 @@ const restaurants: Restaurant[] = [
     region: "Vasastan",
     cuisine: "Svenskt",
     priceRange: "$",
-    ratings: { krogguiden: null, google: null, michelin: null, whiteguide: null, svd: null, dn: null, di: null },
+    ratings: {
+      krogguiden: null,
+      google: null,
+      michelin: null,
+      whiteguide: null,
+      svd: null,
+      dn: null,
+      di: null,
+    },
     bakomScore: null,
   }),
 ];
@@ -184,10 +220,7 @@ describe("filterRestaurants — cuisine", () => {
 
 describe("filterRestaurants — price", () => {
   it("filters by single price", () => {
-    const result = filterRestaurants(
-      restaurants,
-      filters({ selectedPrices: new Set(["$$$$"]) })
-    );
+    const result = filterRestaurants(restaurants, filters({ selectedPrices: new Set(["$$$$"]) }));
     expect(result).toHaveLength(1);
     expect(result[0].id).toBe("fine-dining");
   });
@@ -205,78 +238,51 @@ describe("filterRestaurants — price", () => {
 
 describe("filterRestaurants — range filters", () => {
   it("filters by minimum bakom score", () => {
-    const result = filterRestaurants(
-      restaurants,
-      filters({ bakomScore: { min: 70, max: 100 } })
-    );
+    const result = filterRestaurants(restaurants, filters({ bakomScore: { min: 70, max: 100 } }));
     expect(result).toHaveLength(2); // sushi (85) + fine-dining (95)
   });
 
   it("filters by maximum bakom score", () => {
-    const result = filterRestaurants(
-      restaurants,
-      filters({ bakomScore: { min: 0, max: 70 } })
-    );
+    const result = filterRestaurants(restaurants, filters({ bakomScore: { min: 0, max: 70 } }));
     expect(result).toHaveLength(1); // pizza (60)
     expect(result[0].id).toBe("pizza-place");
   });
 
   it("filters by bakom score range", () => {
-    const result = filterRestaurants(
-      restaurants,
-      filters({ bakomScore: { min: 60, max: 90 } })
-    );
+    const result = filterRestaurants(restaurants, filters({ bakomScore: { min: 60, max: 90 } }));
     expect(result).toHaveLength(2); // pizza (60) + sushi (85)
   });
 
   it("excludes null scores when range is active", () => {
-    const result = filterRestaurants(
-      restaurants,
-      filters({ bakomScore: { min: 10, max: 100 } })
-    );
+    const result = filterRestaurants(restaurants, filters({ bakomScore: { min: 10, max: 100 } }));
     // no-ratings has null bakomScore → excluded
     expect(result.find((r) => r.id === "no-ratings")).toBeUndefined();
   });
 
   it("filters by krogguiden range", () => {
-    const result = filterRestaurants(
-      restaurants,
-      filters({ krogguiden: { min: 4, max: 5 } })
-    );
+    const result = filterRestaurants(restaurants, filters({ krogguiden: { min: 4, max: 5 } }));
     expect(result).toHaveLength(1);
     expect(result[0].id).toBe("sushi-place"); // 4.2
   });
 
   it("filters by google range", () => {
-    const result = filterRestaurants(
-      restaurants,
-      filters({ google: { min: 4.5, max: 5 } })
-    );
+    const result = filterRestaurants(restaurants, filters({ google: { min: 4.5, max: 5 } }));
     expect(result).toHaveLength(2); // sushi (4.5) + fine-dining (4.8)
   });
 
   it("filters by svd range", () => {
-    const result = filterRestaurants(
-      restaurants,
-      filters({ svd: { min: 5, max: 6 } })
-    );
+    const result = filterRestaurants(restaurants, filters({ svd: { min: 5, max: 6 } }));
     expect(result).toHaveLength(2); // sushi (5) + fine-dining (6)
   });
 
   it("filters by di range", () => {
-    const result = filterRestaurants(
-      restaurants,
-      filters({ di: { min: 18, max: 22 } })
-    );
+    const result = filterRestaurants(restaurants, filters({ di: { min: 18, max: 22 } }));
     expect(result).toHaveLength(1); // sushi (20)
     expect(result[0].id).toBe("sushi-place");
   });
 
   it("default range (full bounds) does not filter", () => {
-    const result = filterRestaurants(
-      restaurants,
-      filters({ bakomScore: { min: 0, max: 100 } })
-    );
+    const result = filterRestaurants(restaurants, filters({ bakomScore: { min: 0, max: 100 } }));
     expect(result).toHaveLength(4); // All restaurants pass
   });
 });
@@ -351,26 +357,17 @@ describe("filterRestaurants — white guide multi-select", () => {
 
 describe("filterRestaurants — DN range", () => {
   it("filters by dn range", () => {
-    const result = filterRestaurants(
-      restaurants,
-      filters({ dn: { min: 4, max: 5 } })
-    );
+    const result = filterRestaurants(restaurants, filters({ dn: { min: 4, max: 5 } }));
     expect(result).toHaveLength(2); // sushi (4) + fine-dining (5)
   });
 
   it("default range does not filter", () => {
-    const result = filterRestaurants(
-      restaurants,
-      filters({ dn: { min: 0, max: 5 } })
-    );
+    const result = filterRestaurants(restaurants, filters({ dn: { min: 0, max: 5 } }));
     expect(result).toHaveLength(4);
   });
 
   it("excludes null when range is active", () => {
-    const result = filterRestaurants(
-      restaurants,
-      filters({ dn: { min: 1, max: 5 } })
-    );
+    const result = filterRestaurants(restaurants, filters({ dn: { min: 1, max: 5 } }));
     // pizza (null) and no-ratings (null) excluded
     expect(result).toHaveLength(2);
   });

@@ -81,9 +81,7 @@ export function parseHoursFromHtml(html: string): HoursEntry[] {
     if (!leftText || !rightText) continue;
 
     // Parse time "11:30 – 02:00" or "11:30 - 02:00"
-    const timeMatch = rightText.match(
-      /(\d{1,2}:\d{2})\s*[–-]\s*(\d{1,2}:\d{2})/
-    );
+    const timeMatch = rightText.match(/(\d{1,2}:\d{2})\s*[–-]\s*(\d{1,2}:\d{2})/);
     if (!timeMatch) continue;
 
     const days = expandDayRange(leftText);
@@ -123,14 +121,12 @@ function deduplicateHours(entries: HoursEntry[]): HoursEntry[] {
  * Google uses periods with { open: { day, hour, minute }, close: { day, hour, minute } }
  * where day 0=Sunday, same as JS getDay().
  */
-export function parseGoogleHours(
-  openingHours?: {
-    periods?: Array<{
-      open: { day: number; hour: number; minute: number };
-      close?: { day: number; hour: number; minute: number };
-    }>;
-  }
-): HoursEntry[] {
+export function parseGoogleHours(openingHours?: {
+  periods?: Array<{
+    open: { day: number; hour: number; minute: number };
+    close?: { day: number; hour: number; minute: number };
+  }>;
+}): HoursEntry[] {
   if (!openingHours?.periods) return [];
 
   return openingHours.periods

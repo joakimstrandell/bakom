@@ -1,8 +1,4 @@
-import type {
-  Restaurant,
-  MichelinDistinction,
-  WhiteGuideClassification,
-} from "../types";
+import type { Restaurant, MichelinDistinction, WhiteGuideClassification } from "../types";
 
 // Range type for interval filters
 export type Range = { min: number; max: number };
@@ -12,12 +8,12 @@ export type FilterState = {
   selectedCuisines: Set<string>;
   selectedPrices: Set<string>;
   // Range sliders (min-max intervals)
-  bakomScore: Range;      // 0-100
-  krogguiden: Range;      // 0-5 (0.1 step)
-  google: Range;          // 0-5 (0.1 step)
-  svd: Range;             // 0-6
-  di: Range;              // 0-25
-  dn: Range;              // 0-5
+  bakomScore: Range; // 0-100
+  krogguiden: Range; // 0-5 (0.1 step)
+  google: Range; // 0-5 (0.1 step)
+  svd: Range; // 0-6
+  di: Range; // 0-25
+  dn: Range; // 0-5
   // Multi-select (show restaurants with ANY of selected distinctions)
   selectedMichelin: Set<MichelinDistinction>;
   selectedWhiteGuide: Set<WhiteGuideClassification>;
@@ -43,7 +39,12 @@ function isRangeActive(range: Range, defaultMin: number, defaultMax: number): bo
 }
 
 /** Check if a value falls within a range */
-function inRange(value: number | null | undefined, range: Range, defaultMin: number, defaultMax: number): boolean {
+function inRange(
+  value: number | null | undefined,
+  range: Range,
+  defaultMin: number,
+  defaultMax: number
+): boolean {
   // If range is at defaults, don't filter
   if (!isRangeActive(range, defaultMin, defaultMax)) return true;
   // If value is null/undefined, exclude when filter is active
@@ -55,17 +56,13 @@ function inRange(value: number | null | undefined, range: Range, defaultMin: num
  * Filter a list of restaurants by the given filter state.
  * Pure function — no side effects, easily testable.
  */
-export function filterRestaurants(
-  restaurants: Restaurant[],
-  filters: FilterState
-): Restaurant[] {
+export function filterRestaurants(restaurants: Restaurant[], filters: FilterState): Restaurant[] {
   const query = filters.searchQuery.toLowerCase().trim();
 
   return restaurants.filter((r) => {
     // Text search
     if (query) {
-      const searchable =
-        `${r.name} ${r.address} ${r.region} ${r.cuisine}`.toLowerCase();
+      const searchable = `${r.name} ${r.address} ${r.region} ${r.cuisine}`.toLowerCase();
       if (!searchable.includes(query)) return false;
     }
 
@@ -104,8 +101,7 @@ export function filterRestaurants(
 
     // Michelin multi-select: restaurant must have one of the selected distinctions
     if (filters.selectedMichelin.size > 0) {
-      if (!r.ratings.michelin || !filters.selectedMichelin.has(r.ratings.michelin))
-        return false;
+      if (!r.ratings.michelin || !filters.selectedMichelin.has(r.ratings.michelin)) return false;
     }
 
     // White Guide multi-select: restaurant must have one of the selected classifications

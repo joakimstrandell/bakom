@@ -31,9 +31,7 @@ describe("levenshteinDistance", () => {
   });
 
   it("is symmetric", () => {
-    expect(levenshteinDistance("kitten", "sitting")).toBe(
-      levenshteinDistance("sitting", "kitten")
-    );
+    expect(levenshteinDistance("kitten", "sitting")).toBe(levenshteinDistance("sitting", "kitten"));
   });
 
   it("handles Swedish characters", () => {
@@ -54,9 +52,7 @@ describe("similarityRatio", () => {
   });
 
   it("returns high ratio for similar names", () => {
-    expect(similarityRatio("bistro bisou", "bistro bisous")).toBeGreaterThan(
-      0.9
-    );
+    expect(similarityRatio("bistro bisou", "bistro bisous")).toBeGreaterThan(0.9);
   });
 
   it("returns low ratio for different names", () => {
@@ -80,9 +76,7 @@ describe("extractStreetComponents", () => {
   });
 
   it("handles address with city suffix", () => {
-    const { street, number } = extractStreetComponents(
-      "Hornsgatan 78, Stockholm"
-    );
+    const { street, number } = extractStreetComponents("Hornsgatan 78, Stockholm");
     expect(street).toBe("hornsgatan");
     expect(number).toBe("78");
   });
@@ -196,23 +190,13 @@ describe("findRestaurantMatch", () => {
   });
 
   it("returns null when no match above threshold", () => {
-    const result = findRestaurantMatch(
-      "McDonald's",
-      undefined,
-      candidates,
-      undefined,
-      0.85
-    );
+    const result = findRestaurantMatch("McDonald's", undefined, candidates, undefined, 0.85);
     expect(result).toBeNull();
   });
 
   it("handles prefix stripping for match", () => {
     // "Restaurang Pelikan" should match "Pelikan" after normalization
-    const result = findRestaurantMatch(
-      "Restaurang Pelikan",
-      undefined,
-      candidates
-    );
+    const result = findRestaurantMatch("Restaurang Pelikan", undefined, candidates);
     expect(result).not.toBeNull();
     expect(result!.item.name).toBe("Pelikan");
   });
@@ -244,12 +228,7 @@ describe("findBestMatch", () => {
         address: "kungsgatan 25",
       },
     ];
-    const result = findBestMatch(
-      "sushi bar",
-      "kungsgatan 25",
-      candidates,
-      0.85
-    );
+    const result = findBestMatch("sushi bar", "kungsgatan 25", candidates, 0.85);
     expect(result).not.toBeNull();
     expect(result!.item).toBe("Right location");
   });

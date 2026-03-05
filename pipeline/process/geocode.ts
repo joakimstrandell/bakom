@@ -39,16 +39,12 @@ export async function geocodeRestaurants(
 
     // Skip if no address
     if (!r.address) {
-      console.log(
-        `[${i + 1}/${restaurants.length}] ${r.name} — no address, skipping`
-      );
+      console.log(`[${i + 1}/${restaurants.length}] ${r.name} — no address, skipping`);
       failed++;
       continue;
     }
 
-    console.log(
-      `[${i + 1}/${restaurants.length}] ${r.name} — ${r.address}`
-    );
+    console.log(`[${i + 1}/${restaurants.length}] ${r.name} — ${r.address}`);
     const coords = await geocodeAddress(r.address, r.postalCode, r.city);
 
     if (coords) {

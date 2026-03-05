@@ -1,11 +1,4 @@
-import {
-  MapContainer,
-  TileLayer,
-  Marker,
-  Popup,
-  CircleMarker,
-  useMap,
-} from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, CircleMarker, useMap } from "react-leaflet";
 import MarkerClusterGroup from "react-leaflet-cluster";
 import L from "leaflet";
 import "react-leaflet-cluster/dist/assets/MarkerCluster.css";
@@ -23,12 +16,8 @@ import { getRegionConfig } from "../lib/regions";
 const MARKER_PAD = 2;
 const MARKER_W = 24;
 const MARKER_H = 37;
-const MARKER_ANCHOR_X = Math.round(
-  ((12.5 + MARKER_PAD) / (25 + MARKER_PAD * 2)) * MARKER_W
-);
-const MARKER_ANCHOR_Y = Math.round(
-  ((41 + MARKER_PAD) / (41 + MARKER_PAD * 2)) * MARKER_H
-);
+const MARKER_ANCHOR_X = Math.round(((12.5 + MARKER_PAD) / (25 + MARKER_PAD * 2)) * MARKER_W);
+const MARKER_ANCHOR_Y = Math.round(((41 + MARKER_PAD) / (41 + MARKER_PAD * 2)) * MARKER_H);
 
 // Selected marker is larger with more padding for glow effect
 const SELECTED_PAD = 8;
@@ -192,10 +181,7 @@ function PanToSelected({
         const offsetX = point.x - targetX;
         const center = map.getCenter();
         const targetPoint = map.latLngToContainerPoint(center);
-        const newCenter = map.containerPointToLatLng([
-          targetPoint.x + offsetX,
-          targetPoint.y,
-        ]);
+        const newCenter = map.containerPointToLatLng([targetPoint.x + offsetX, targetPoint.y]);
         map.panTo(newCenter, { duration: 0.3 });
       }
     };
@@ -261,11 +247,12 @@ export default function Map({
 
   // On initial load with a selected restaurant, center on it
   const initialCenter: [number, number] =
-    initialRestaurantId.current && selectedRestaurant?.lat != null && selectedRestaurant?.lng != null
+    initialRestaurantId.current &&
+    selectedRestaurant?.lat != null &&
+    selectedRestaurant?.lng != null
       ? [selectedRestaurant.lat, selectedRestaurant.lng]
       : regionConfig.center;
-  const initialZoom =
-    initialRestaurantId.current ? RESTAURANT_ZOOM : regionConfig.zoom;
+  const initialZoom = initialRestaurantId.current ? RESTAURANT_ZOOM : regionConfig.zoom;
 
   return (
     <MapContainer

@@ -46,9 +46,7 @@ function parseResponse(data: { cols: string[]; rows: (string | null)[][] }): DiR
 
     // Use retest article URL if available, otherwise original
     const url =
-      row[colIndex["Länk test-artikel omtest"]] ||
-      row[colIndex["Länk test-artikel"]] ||
-      "";
+      row[colIndex["Länk test-artikel omtest"]] || row[colIndex["Länk test-artikel"]] || "";
 
     restaurants.push({
       source: "di",
@@ -72,9 +70,7 @@ function parseResponse(data: { cols: string[]; rows: (string | null)[][] }): DiR
 
 // ─── Main scraper function ───────────────────────────────────────
 
-export async function scrapeDi(
-  _options: { force?: boolean } = {},
-): Promise<DiRaw[]> {
+export async function scrapeDi(_options: { force?: boolean } = {}): Promise<DiRaw[]> {
   console.log("=== DI Weekend Krogguide Scraper ===\n");
 
   const res = await fetchWithRetry(API_URL);
@@ -93,7 +89,12 @@ export async function scrapeDi(
   }
 
   console.log(`  Total: ${restaurants.length} restaurants`);
-  console.log(`  Cities: ${Object.entries(cities).sort((a, b) => b[1] - a[1]).map(([c, n]) => `${c} (${n})`).join(", ")}`);
+  console.log(
+    `  Cities: ${Object.entries(cities)
+      .sort((a, b) => b[1] - a[1])
+      .map(([c, n]) => `${c} (${n})`)
+      .join(", ")}`
+  );
 
   const scores = restaurants.map((r) => r.totalScore);
   console.log(`  Score range: ${Math.min(...scores)}–${Math.max(...scores)} / 25`);

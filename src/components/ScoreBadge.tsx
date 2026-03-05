@@ -1,8 +1,8 @@
-import * as React from "react"
-import { cva, type VariantProps } from "class-variance-authority"
+import * as React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
 
-import { cn } from "@/lib/utils"
-import { scoreColor } from "@/lib/colors"
+import { cn } from "@/lib/utils";
+import { scoreColor } from "@/lib/colors";
 
 const scoreBadgeVariants = cva(
   "inline-flex items-center justify-center font-bold text-white shrink-0",
@@ -18,23 +18,16 @@ const scoreBadgeVariants = cva(
       size: "default",
     },
   }
-)
+);
 
 export interface ScoreBadgeProps
-  extends React.HTMLAttributes<HTMLSpanElement>,
-    VariantProps<typeof scoreBadgeVariants> {
-  score: number | null | undefined
+  extends React.HTMLAttributes<HTMLSpanElement>, VariantProps<typeof scoreBadgeVariants> {
+  score: number | null | undefined;
   /** Text to show when score is null/undefined */
-  fallback?: string
+  fallback?: string;
 }
 
-function ScoreBadge({
-  score,
-  size,
-  fallback = "—",
-  className,
-  ...props
-}: ScoreBadgeProps) {
+function ScoreBadge({ score, size, fallback = "—", className, ...props }: ScoreBadgeProps) {
   if (score == null) {
     return (
       <span
@@ -48,7 +41,7 @@ function ScoreBadge({
       >
         {fallback}
       </span>
-    )
+    );
   }
 
   return (
@@ -60,7 +53,7 @@ function ScoreBadge({
     >
       {score}
     </span>
-  )
+  );
 }
 
-export { ScoreBadge, scoreBadgeVariants }
+export { ScoreBadge, scoreBadgeVariants };

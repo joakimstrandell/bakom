@@ -83,8 +83,7 @@ async function scrapeArticle(url: string): Promise<DnRaw | null> {
 
     // Get title from og:title
     const title = $('meta[property="og:title"]').attr("content") || "";
-    const publishedAt =
-      $('meta[property="article:published_time"]').attr("content") || "";
+    const publishedAt = $('meta[property="article:published_time"]').attr("content") || "";
 
     const name = extractRestaurantName(title);
     if (!name) return null;
@@ -111,9 +110,7 @@ async function scrapeArticle(url: string): Promise<DnRaw | null> {
 
 // ─── Main scraper function ───────────────────────────────────────
 
-export async function scrapeDn(
-  options: { force?: boolean } = {},
-): Promise<DnRaw[]> {
+export async function scrapeDn(options: { force?: boolean } = {}): Promise<DnRaw[]> {
   console.log("=== DN Krogkommissionen Scraper ===\n");
 
   // Load existing data to avoid re-scraping (skip when --force)

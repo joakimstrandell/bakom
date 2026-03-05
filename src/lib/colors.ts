@@ -25,16 +25,12 @@ export const SCORE_COLOR_STOPS: [number, number, number, number][] = [
  * @param score - Bakom Score (0-100)
  * @param lightnessOffset - Optional offset to make color darker/lighter
  */
-export function interpolateScoreColor(
-  score: number,
-  lightnessOffset: number = 0
-): string {
+export function interpolateScoreColor(score: number, lightnessOffset: number = 0): string {
   const s = Math.max(0, Math.min(100, score));
 
   // Find the two stops we're between
   let i = 0;
-  while (i < SCORE_COLOR_STOPS.length - 2 && SCORE_COLOR_STOPS[i + 1][0] < s)
-    i++;
+  while (i < SCORE_COLOR_STOPS.length - 2 && SCORE_COLOR_STOPS[i + 1][0] < s) i++;
 
   const [s0, h0, sat0, l0] = SCORE_COLOR_STOPS[i];
   const [s1, h1, sat1, l1] = SCORE_COLOR_STOPS[i + 1];

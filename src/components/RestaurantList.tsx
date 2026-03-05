@@ -118,18 +118,25 @@ export default function RestaurantList({
                       {r.bakomRank != null && (
                         <div className="text-[10px] text-muted-foreground mt-0.5">
                           {t("list.rank_sweden", { rank: r.bakomRank })}
-                          {r.metroRegion && r.metroRegion !== "sweden" && r.bakomRankRegion != null && (
-                            <> · {t("list.rank_region", { rank: r.bakomRankRegion, region: t(`regions.${r.metroRegion}`) })}</>
-                          )}
+                          {r.metroRegion &&
+                            r.metroRegion !== "sweden" &&
+                            r.bakomRankRegion != null && (
+                              <>
+                                {" "}
+                                ·{" "}
+                                {t("list.rank_region", {
+                                  rank: r.bakomRankRegion,
+                                  region: t(`regions.${r.metroRegion}`),
+                                })}
+                              </>
+                            )}
                         </div>
                       )}
                     </div>
 
                     {/* Price */}
                     {r.priceRange && (
-                      <span className="shrink-0 text-xs text-muted-foreground">
-                        {r.priceRange}
-                      </span>
+                      <span className="shrink-0 text-xs text-muted-foreground">{r.priceRange}</span>
                     )}
                   </div>
                 </button>

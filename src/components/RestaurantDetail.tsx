@@ -1,6 +1,16 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { X, MapPin, Phone, Globe, Navigation, Clock, ExternalLink, Trophy, ChevronDown } from "lucide-react";
+import {
+  X,
+  MapPin,
+  Phone,
+  Globe,
+  Navigation,
+  Clock,
+  ExternalLink,
+  Trophy,
+  ChevronDown,
+} from "lucide-react";
 import type { Restaurant, MichelinDistinction, HoursEntry } from "../types";
 import { isOpen, getNextOpenTime } from "../lib/isOpen";
 import { ScoreBadge } from "./ScoreBadge";
@@ -139,7 +149,12 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
                 {r.metroRegion && r.metroRegion !== "sweden" && r.bakomRankRegion != null && (
                   <>
                     <span>·</span>
-                    <span>{t("detail.rank_region", { rank: r.bakomRankRegion, region: t(`regions.${r.metroRegion}`) })}</span>
+                    <span>
+                      {t("detail.rank_region", {
+                        rank: r.bakomRankRegion,
+                        region: t(`regions.${r.metroRegion}`),
+                      })}
+                    </span>
                   </>
                 )}
               </div>
@@ -160,18 +175,14 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
         {hasRatings && (
           <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
             <div className="flex items-center justify-between mb-3">
-              <h3 className="text-xs font-bold uppercase tracking-wider">
-                {t("detail.ratings")}
-              </h3>
+              <h3 className="text-xs font-bold uppercase tracking-wider">{t("detail.ratings")}</h3>
               <div className="flex items-center gap-1.5">
                 {r.bakomRank != null && r.bakomRank <= 50 && (
                   <span className="inline-flex items-center justify-center gap-1 h-6 px-1.5 rounded bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-bold">
                     TOP 50
                   </span>
                 )}
-                {r.bakomScore != null && (
-                  <ScoreBadge score={r.bakomScore} size="sm" />
-                )}
+                {r.bakomScore != null && <ScoreBadge score={r.bakomScore} size="sm" />}
               </div>
             </div>
             <div className="space-y-0">
@@ -248,9 +259,7 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
                     <StarDisplay rating={ratings.google} />
                     {ratings.google.toFixed(1)}
                     {r.googleRatingCount != null && r.googleRatingCount > 0 && (
-                      <span className="text-muted-foreground text-xs">
-                        ({r.googleRatingCount})
-                      </span>
+                      <span className="text-muted-foreground text-xs">({r.googleRatingCount})</span>
                     )}
                   </span>
                 </SourceRating>
@@ -283,7 +292,13 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
                 <Clock className="size-4 text-muted-foreground shrink-0" />
                 <div className="flex-1 flex items-center gap-1.5 text-sm">
                   {openStatus !== null && (
-                    <span className={openStatus ? "text-green-600 dark:text-green-500 font-medium" : "text-red-600 dark:text-red-500 font-medium"}>
+                    <span
+                      className={
+                        openStatus
+                          ? "text-green-600 dark:text-green-500 font-medium"
+                          : "text-red-600 dark:text-red-500 font-medium"
+                      }
+                    >
                       {openStatus ? t("detail.open") : t("detail.closed_now")}
                     </span>
                   )}
@@ -293,12 +308,17 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
                       <span className="text-muted-foreground">
                         {nextOpen.day === new Date().getDay()
                           ? t("detail.opens_at", { time: nextOpen.time })
-                          : t("detail.opens_day", { day: dayNames[nextOpen.day], time: nextOpen.time })}
+                          : t("detail.opens_day", {
+                              day: dayNames[nextOpen.day],
+                              time: nextOpen.time,
+                            })}
                       </span>
                     </>
                   )}
                 </div>
-                <ChevronDown className={`size-4 text-muted-foreground transition-transform ${hoursExpanded ? "rotate-180" : ""}`} />
+                <ChevronDown
+                  className={`size-4 text-muted-foreground transition-transform ${hoursExpanded ? "rotate-180" : ""}`}
+                />
               </button>
 
               {hoursExpanded && (
@@ -308,9 +328,7 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
                       <span className={`w-20 ${i === 0 ? "font-medium" : "text-muted-foreground"}`}>
                         {entry.dayName}
                       </span>
-                      <span className={i === 0 ? "font-medium" : ""}>
-                        {entry.hours}
-                      </span>
+                      <span className={i === 0 ? "font-medium" : ""}>{entry.hours}</span>
                     </div>
                   ))}
                 </div>
@@ -367,11 +385,7 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
             </Button>
             {r.website && (
               <Button asChild variant="outline" className="flex-1 h-11 rounded-full">
-                <a
-                  href={r.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a href={r.website} target="_blank" rel="noopener noreferrer">
                   <Globe className="size-4" />
                   {t("detail.website")}
                 </a>

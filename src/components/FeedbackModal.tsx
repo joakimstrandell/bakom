@@ -3,12 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Send, Loader2, MessageSquare, Check } from "lucide-react";
 import { useServerFn } from "@tanstack/react-start";
 import { submitFeedbackFn } from "../lib/feedback";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "./ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./ui/dialog";
 import { Button } from "./ui/button";
 
 type FeedbackModalProps = {
@@ -85,17 +80,12 @@ export default function FeedbackModal({ isOpen, onClose }: FeedbackModalProps) {
                 <Check className="size-6 text-green-600" />
               </div>
               <p className="text-lg font-medium">{t("feedback.success_title")}</p>
-              <p className="text-sm text-muted-foreground mt-1">
-                {t("feedback.success_message")}
-              </p>
+              <p className="text-sm text-muted-foreground mt-1">{t("feedback.success_message")}</p>
             </div>
           ) : (
             <>
               <div>
-                <label
-                  htmlFor="feedback-message"
-                  className="block text-sm font-medium mb-1.5"
-                >
+                <label htmlFor="feedback-message" className="block text-sm font-medium mb-1.5">
                   {t("feedback.message")} <span className="text-red-500">*</span>
                 </label>
                 <textarea
@@ -111,10 +101,7 @@ export default function FeedbackModal({ isOpen, onClose }: FeedbackModalProps) {
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label
-                    htmlFor="feedback-name"
-                    className="block text-sm font-medium mb-1.5"
-                  >
+                  <label htmlFor="feedback-name" className="block text-sm font-medium mb-1.5">
                     {t("feedback.name")}{" "}
                     <span className="text-muted-foreground">{t("feedback.name_optional")}</span>
                   </label>
@@ -128,10 +115,7 @@ export default function FeedbackModal({ isOpen, onClose }: FeedbackModalProps) {
                   />
                 </div>
                 <div>
-                  <label
-                    htmlFor="feedback-email"
-                    className="block text-sm font-medium mb-1.5"
-                  >
+                  <label htmlFor="feedback-email" className="block text-sm font-medium mb-1.5">
                     {t("feedback.email")}{" "}
                     <span className="text-muted-foreground">{t("feedback.email_optional")}</span>
                   </label>

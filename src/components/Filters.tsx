@@ -204,10 +204,7 @@ export default function Filters({
       {/* Header */}
       <div className="flex items-center justify-between px-5 py-4 border-b border-black/6">
         <div>
-          <h2
-            className="text-lg font-semibold"
-            style={{ fontFamily: "var(--font-display)" }}
-          >
+          <h2 className="text-lg font-semibold" style={{ fontFamily: "var(--font-display)" }}>
             {t("filters.title")}
           </h2>
           <p
@@ -250,9 +247,7 @@ export default function Filters({
             {MICHELIN_OPTIONS.map(({ key, label }) => (
               <button
                 key={key}
-                onPointerDown={() =>
-                  dispatch({ type: "TOGGLE_MICHELIN", payload: key })
-                }
+                onPointerDown={() => dispatch({ type: "TOGGLE_MICHELIN", payload: key })}
                 className={`filter-chip ${state.selectedMichelin.has(key) ? "active" : ""}`}
               >
                 {label}
@@ -271,9 +266,7 @@ export default function Filters({
             {WG_KEYS.map((key) => (
               <button
                 key={key}
-                onPointerDown={() =>
-                  dispatch({ type: "TOGGLE_WHITEGUIDE", payload: key })
-                }
+                onPointerDown={() => dispatch({ type: "TOGGLE_WHITEGUIDE", payload: key })}
                 className={`filter-chip ${state.selectedWhiteGuide.has(key) ? "active" : ""}`}
               >
                 {t(`whiteguide.${key}`)}
@@ -354,9 +347,7 @@ export default function Filters({
             {CUISINE_KEYS.map((key) => (
               <button
                 key={key}
-                onPointerDown={() =>
-                  dispatch({ type: "TOGGLE_CUISINE", payload: key })
-                }
+                onPointerDown={() => dispatch({ type: "TOGGLE_CUISINE", payload: key })}
                 className={`filter-chip ${state.selectedCuisines.has(key) ? "active" : ""}`}
               >
                 {t(`cuisines.${key}`)}

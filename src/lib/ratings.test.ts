@@ -2,9 +2,7 @@ import { describe, it, expect } from "vitest";
 import { bestNumericRating } from "./ratings";
 import type { Restaurant } from "../types";
 
-function makeRestaurant(
-  overrides: Partial<Restaurant> = {}
-): Restaurant {
+function makeRestaurant(overrides: Partial<Restaurant> = {}): Restaurant {
   return {
     id: "test",
     name: "Test",
@@ -43,7 +41,6 @@ describe("bestNumericRating", () => {
         whiteguide: null,
         svd: null,
         dn: null,
-  
       },
     });
     expect(bestNumericRating(r)).toBe(4.5);
@@ -58,7 +55,6 @@ describe("bestNumericRating", () => {
         whiteguide: null,
         svd: null,
         dn: null,
-  
       },
     });
     expect(bestNumericRating(r)).toBe(3.8);
@@ -78,7 +74,6 @@ describe("bestNumericRating", () => {
         whiteguide: null,
         svd: null,
         dn: null,
-  
       },
     });
     // ?? only skips null/undefined, so 0 is returned
@@ -94,7 +89,6 @@ describe("bestNumericRating", () => {
         whiteguide: null,
         svd: null,
         dn: null,
-  
       },
     });
     expect(bestNumericRating(r)).toBe(3.0);

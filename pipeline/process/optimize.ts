@@ -11,19 +11,14 @@ export type Region = "stockholm" | "gothenburg" | "malmo" | "sweden";
 const REGIONS: { id: Region; lat: number; lng: number; radiusKm: number }[] = [
   { id: "stockholm", lat: 59.33, lng: 18.07, radiusKm: 50 },
   { id: "gothenburg", lat: 57.71, lng: 11.97, radiusKm: 40 },
-  { id: "malmo", lat: 55.60, lng: 13.00, radiusKm: 50 },
+  { id: "malmo", lat: 55.6, lng: 13.0, radiusKm: 50 },
 ];
 
 /**
  * Calculate distance between two coordinates using Haversine formula.
  * Returns distance in kilometers.
  */
-function haversineDistance(
-  lat1: number,
-  lng1: number,
-  lat2: number,
-  lng2: number
-): number {
+function haversineDistance(lat1: number, lng1: number, lat2: number, lng2: number): number {
   const R = 6371; // Earth's radius in km
   const dLat = ((lat2 - lat1) * Math.PI) / 180;
   const dLng = ((lng2 - lng1) * Math.PI) / 180;
@@ -125,7 +120,9 @@ function stripRestaurant(
 function calculateGlobalRanks(restaurants: PipelineRestaurant[]): void {
   const withScore = restaurants
     .filter((r) => r.bakomScore != null)
-    .sort((a, b) => (b.bakomScoreRaw ?? b.bakomScore ?? 0) - (a.bakomScoreRaw ?? a.bakomScore ?? 0));
+    .sort(
+      (a, b) => (b.bakomScoreRaw ?? b.bakomScore ?? 0) - (a.bakomScoreRaw ?? a.bakomScore ?? 0)
+    );
 
   for (let i = 0; i < withScore.length; i++) {
     withScore[i].bakomRank = i + 1;
@@ -171,7 +168,9 @@ function calculateRegionalRanks(
   for (const region of CITY_REGIONS) {
     const regionRestaurants = byRegion[region]
       .filter((r) => r.bakomScore != null)
-      .sort((a, b) => (b.bakomScoreRaw ?? b.bakomScore ?? 0) - (a.bakomScoreRaw ?? a.bakomScore ?? 0));
+      .sort(
+        (a, b) => (b.bakomScoreRaw ?? b.bakomScore ?? 0) - (a.bakomScoreRaw ?? a.bakomScore ?? 0)
+      );
 
     for (let i = 0; i < regionRestaurants.length; i++) {
       rankMap.set(regionRestaurants[i].id, i + 1);
@@ -180,7 +179,6 @@ function calculateRegionalRanks(
 
   return rankMap;
 }
-
 
 // ─── Non-Swedish address detection ───────────────────────────────
 
@@ -206,61 +204,95 @@ function isNonSwedishAddress(address: string): boolean {
 /** Terms that are not actual cuisines (generic types, classifications) */
 const NON_CUISINE_TERMS = new Set([
   // Venue types
-  "Restaurant", "Hotel", "Bar", "Cafe", "Cafeteria", "Coffee Shop",
-  "Bakery", "Ice Cream Shop", "Store", "Event Venue", "Wine Bar",
-  "Pub", "Inn", "Cocktail Bar", "Night Club", "Market", "Museum",
-  "Art Museum", "Train Station", "Church", "University", "Castle",
-  "Lake", "Island", "Garden", "Garden Center", "Visitor Center",
-  "Winery", "Pastry Shop", "Coffee Roastery", "Clothing Store",
-  "Food Store", "Food Court", "Buffet", "Hair Salon",
+  "Restaurant",
+  "Hotel",
+  "Bar",
+  "Cafe",
+  "Cafeteria",
+  "Coffee Shop",
+  "Bakery",
+  "Ice Cream Shop",
+  "Store",
+  "Event Venue",
+  "Wine Bar",
+  "Pub",
+  "Inn",
+  "Cocktail Bar",
+  "Night Club",
+  "Market",
+  "Museum",
+  "Art Museum",
+  "Train Station",
+  "Church",
+  "University",
+  "Castle",
+  "Lake",
+  "Island",
+  "Garden",
+  "Garden Center",
+  "Visitor Center",
+  "Winery",
+  "Pastry Shop",
+  "Coffee Roastery",
+  "Clothing Store",
+  "Food Store",
+  "Food Court",
+  "Buffet",
+  "Hair Salon",
 
   // Services
-  "Service", "Catering Service", "Consultant", "Association Or Organization",
+  "Service",
+  "Catering Service",
+  "Consultant",
+  "Association Or Organization",
 
   // Price/quality classifications
-  "Mellanklass", "Lyx", "Budget",
+  "Mellanklass",
+  "Lyx",
+  "Budget",
 
   // Other non-cuisine terms
-  "not so white guide", "other",
+  "not so white guide",
+  "other",
 ]);
 
 /** Map variations to canonical names */
 const CUISINE_CANONICAL: Record<string, string> = {
   // Asian cuisines → "Asien"
-  "Japanese": "Asien",
-  "Sushi": "Asien",
-  "Korean": "Asien",
-  "Vietnamese": "Asien",
-  "Asian": "Asien",
+  Japanese: "Asien",
+  Sushi: "Asien",
+  Korean: "Asien",
+  Vietnamese: "Asien",
+  Asian: "Asien",
   "Asian Fusion": "Asien",
-  "Indian": "Asien",
-  "Thai": "Asien",
-  "Chinese": "Asien",
-  "Ramen": "Asien",
+  Indian: "Asien",
+  Thai: "Asien",
+  Chinese: "Asien",
+  Ramen: "Asien",
   "Japanese Izakaya": "Asien",
-  "Indonesian": "Asien",
-  "Bangladeshi": "Asien",
+  Indonesian: "Asien",
+  Bangladeshi: "Asien",
 
   // Italian cuisines → "Italien"
-  "Italian": "Italien",
-  "Pizza": "Italien",
+  Italian: "Italien",
+  Pizza: "Italien",
   "Italian-American": "Italien",
 
   // French cuisines → "Frankrike"
-  "French": "Frankrike",
+  French: "Frankrike",
   "Classic French": "Frankrike",
-  "Bistro": "Frankrike",
+  Bistro: "Frankrike",
 
   // Swedish/Nordic → "Klassiskt"
-  "Swedish": "Klassiskt",
-  "Scandinavian": "Klassiskt",
+  Swedish: "Klassiskt",
+  Scandinavian: "Klassiskt",
   "traditionellt svenskt": "Klassiskt",
   "traditionellt  svenskt": "Klassiskt",
   "Farm to table": "Klassiskt",
 
   // American cuisines → "Amerika"
-  "Hamburger": "Amerika",
-  "Barbecue": "Amerika",
+  Hamburger: "Amerika",
+  Barbecue: "Amerika",
   "Hot Dog": "Amerika",
   "Fast Food": "Amerika",
   "Bar And Grill": "Amerika",
@@ -268,40 +300,40 @@ const CUISINE_CANONICAL: Record<string, string> = {
 
   // Spanish/Mediterranean → "Spanien"
   "Mediterranean Cuisine": "Spanien",
-  "Mediterranean": "Spanien",
-  "Tapas": "Spanien",
+  Mediterranean: "Spanien",
+  Tapas: "Spanien",
 
   // Seafood → "Fokus på fisk"
-  "Seafood": "Fokus på fisk",
+  Seafood: "Fokus på fisk",
 
   // Meat-focused → "Fokus på kött"
   "Steak House": "Fokus på kött",
-  "Grills": "Fokus på kött",
+  Grills: "Fokus på kött",
 
   // Latin American → "Latinamerika"
-  "Peruvian": "Latinamerika",
+  Peruvian: "Latinamerika",
 
   // Middle Eastern → "Mellanöstern"
-  "Lebanese": "Mellanöstern",
-  "Falafel": "Mellanöstern",
+  Lebanese: "Mellanöstern",
+  Falafel: "Mellanöstern",
 
   // Mexican → "Mexikanskt"
-  "Mexican": "Mexikanskt",
+  Mexican: "Mexikanskt",
 
   // Vegan/Vegetarian → "Veganskt"
-  "Vegetarian": "Veganskt",
-  "Vegan": "Veganskt",
+  Vegetarian: "Veganskt",
+  Vegan: "Veganskt",
 
   // Modern/Creative → "Crossover"
   "Modern Cuisine": "Crossover",
-  "Fusion": "Crossover",
-  "Creative": "Crossover",
-  "Contemporary": "Crossover",
+  Fusion: "Crossover",
+  Creative: "Crossover",
+  Contemporary: "Crossover",
   "Seasonal Cuisine": "Crossover",
-  "European": "Crossover",
+  European: "Crossover",
   "Fine Dining": "Crossover",
-  "Gastropub": "Crossover",
-  "Brunch": "Crossover",
+  Gastropub: "Crossover",
+  Brunch: "Crossover",
   "Small eats": "Crossover",
 };
 
@@ -312,7 +344,10 @@ const CUISINE_CANONICAL: Record<string, string> = {
 function normalizeCuisine(cuisine: string): string {
   if (!cuisine) return "";
 
-  const tokens = cuisine.split(",").map((s) => s.trim()).filter(Boolean);
+  const tokens = cuisine
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
   const seen = new Set<string>();
   const result: string[] = [];
 
@@ -363,9 +398,7 @@ export function optimize(): void {
 
   const restaurants = loadJson<PipelineRestaurant[]>("restaurants.json");
   if (!restaurants) {
-    throw new Error(
-      "data/restaurants.json not found. Run pipeline:refine first."
-    );
+    throw new Error("data/restaurants.json not found. Run pipeline:refine first.");
   }
 
   // Filter restaurants without Google data (can't verify they exist)
@@ -403,9 +436,7 @@ export function optimize(): void {
   const closedTotal = permClosed + tempClosed;
 
   const active = afterNonSwedish.filter(
-    (r) =>
-      r.businessStatus !== "CLOSED_PERMANENTLY" &&
-      r.businessStatus !== "CLOSED_TEMPORARILY"
+    (r) => r.businessStatus !== "CLOSED_PERMANENTLY" && r.businessStatus !== "CLOSED_TEMPORARILY"
   );
 
   if (closedTotal > 0) {
@@ -453,7 +484,12 @@ export function optimize(): void {
   console.log(`  Malmö: ${regionCounts.malmo}`);
   console.log(`  Övriga: ${regionCounts.sweden}`);
   console.log(`\nGenerated cuisines.json (${cuisines.length} cuisines)`);
-  console.log(`  Top 5: ${cuisines.slice(0, 5).map((c) => `${c.key} (${c.count})`).join(", ")}`);
+  console.log(
+    `  Top 5: ${cuisines
+      .slice(0, 5)
+      .map((c) => `${c.key} (${c.count})`)
+      .join(", ")}`
+  );
   console.log(`\nOptimize complete: ${active.length} restaurants`);
 }
 

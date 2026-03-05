@@ -4,12 +4,7 @@ export type HoursEntry = {
   close: string; // "HH:MM"
 };
 
-export type MichelinDistinction =
-  | "selected"
-  | "bib_gourmand"
-  | "1_star"
-  | "2_star"
-  | "3_star";
+export type MichelinDistinction = "selected" | "bib_gourmand" | "1_star" | "2_star" | "3_star";
 
 export type WhiteGuideClassification =
   | "recommended"

@@ -1,15 +1,6 @@
 import { useReducer, useMemo } from "react";
-import type {
-  Restaurant,
-  MichelinDistinction,
-  WhiteGuideClassification,
-} from "../types";
-import {
-  filterRestaurants,
-  DEFAULT_FILTERS,
-  type FilterState,
-  type Range,
-} from "../lib/filters";
+import type { Restaurant, MichelinDistinction, WhiteGuideClassification } from "../types";
+import { filterRestaurants, DEFAULT_FILTERS, type FilterState, type Range } from "../lib/filters";
 
 // ─── Action Types ────────────────────────────────────────────────
 
@@ -71,10 +62,7 @@ function filterReducer(state: FilterState, action: FilterAction): FilterState {
     case "TOGGLE_WHITEGUIDE":
       return {
         ...state,
-        selectedWhiteGuide: toggleSetItem(
-          state.selectedWhiteGuide,
-          action.payload
-        ),
+        selectedWhiteGuide: toggleSetItem(state.selectedWhiteGuide, action.payload),
       };
 
     case "CLEAR_ALL":
@@ -121,10 +109,7 @@ export function useFilters(restaurants: Restaurant[]) {
   });
 
   // Filter restaurants based on current state
-  const filtered = useMemo(
-    () => filterRestaurants(restaurants, state),
-    [restaurants, state]
-  );
+  const filtered = useMemo(() => filterRestaurants(restaurants, state), [restaurants, state]);
 
   // Count active filters for badge display
   const activeFilterCount = useMemo(() => {

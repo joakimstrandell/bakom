@@ -43,7 +43,7 @@ function parseArgs(): { source?: string; skip: string[]; force: boolean } {
   const sourceIdx = args.indexOf("--source");
   const source = sourceIdx !== -1 ? args[sourceIdx + 1] : undefined;
   const skipIdx = args.indexOf("--skip");
-  const skip = skipIdx !== -1 ? args[skipIdx + 1]?.split(",") ?? [] : [];
+  const skip = skipIdx !== -1 ? (args[skipIdx + 1]?.split(",") ?? []) : [];
   const force = args.includes("--force");
   return { source, skip, force };
 }
@@ -74,9 +74,7 @@ async function main() {
 
   // When running all sources, only run pre-merge sources
   // (post-merge sources like "google" require restaurants.json)
-  let toRun = source
-    ? SOURCES.filter((s) => s.name === source)
-    : PRE_MERGE_SOURCES;
+  let toRun = source ? SOURCES.filter((s) => s.name === source) : PRE_MERGE_SOURCES;
 
   // Apply --skip filter
   if (skip.length > 0) {
@@ -85,16 +83,12 @@ async function main() {
 
   const modeLabel = force ? " (--force)" : "";
   const skipLabel = skip.length > 0 ? ` (skipping: ${skip.join(", ")})` : "";
-  console.log(
-    `Collecting ${toRun.length} source(s)${modeLabel}${skipLabel}...\n`,
-  );
+  console.log(`Collecting ${toRun.length} source(s)${modeLabel}${skipLabel}...\n`);
 
   // Check if user is trying to run a post-merge source
   const selectedSource = source ? SOURCES.find((s) => s.name === source) : null;
   if (selectedSource?.postMerge) {
-    console.log(
-      `Note: "${source}" requires data/restaurants.json (run after merge)\n`
-    );
+    console.log(`Note: "${source}" requires data/restaurants.json (run after merge)\n`);
   }
 
   for (const config of toRun) {

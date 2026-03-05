@@ -33,8 +33,8 @@ const CITY_COORDS: Record<string, { lat: number; lng: number }> = {
   stockholm: { lat: 59.33, lng: 18.07 },
   göteborg: { lat: 57.71, lng: 11.97 },
   gothenburg: { lat: 57.71, lng: 11.97 },
-  malmö: { lat: 55.60, lng: 13.00 },
-  malmo: { lat: 55.60, lng: 13.00 },
+  malmö: { lat: 55.6, lng: 13.0 },
+  malmo: { lat: 55.6, lng: 13.0 },
   uppsala: { lat: 59.86, lng: 17.64 },
   linköping: { lat: 58.41, lng: 15.62 },
   örebro: { lat: 59.27, lng: 15.21 },
@@ -42,15 +42,15 @@ const CITY_COORDS: Record<string, { lat: number; lng: number }> = {
   helsingborg: { lat: 56.05, lng: 12.69 },
   norrköping: { lat: 58.59, lng: 16.18 },
   jönköping: { lat: 57.78, lng: 14.16 },
-  lund: { lat: 55.70, lng: 13.19 },
+  lund: { lat: 55.7, lng: 13.19 },
   umeå: { lat: 63.83, lng: 20.26 },
   gävle: { lat: 60.67, lng: 17.14 },
   borås: { lat: 57.72, lng: 12.94 },
-  södertälje: { lat: 59.20, lng: 17.63 },
+  södertälje: { lat: 59.2, lng: 17.63 },
   eskilstuna: { lat: 59.37, lng: 16.51 },
   halmstad: { lat: 56.67, lng: 12.86 },
   växjö: { lat: 56.88, lng: 14.81 },
-  karlstad: { lat: 59.40, lng: 13.50 },
+  karlstad: { lat: 59.4, lng: 13.5 },
   sundsvall: { lat: 62.39, lng: 17.31 },
 };
 
@@ -83,7 +83,6 @@ function loadGoogleOverrides(): Map<string, string> {
   return new Map();
 }
 
-
 /**
  * Search for a restaurant via Google Places Text Search API.
  * @param name - Restaurant name
@@ -105,28 +104,25 @@ async function searchPlace(
   const textQuery = customQuery ?? `${name}, ${city}, Sweden`;
 
   try {
-    const res = await fetch(
-      "https://places.googleapis.com/v1/places:searchText",
-      {
-        method: "POST",
-        signal: controller.signal,
-        headers: {
-          "Content-Type": "application/json",
-          "X-Goog-Api-Key": API_KEY!,
-          "X-Goog-FieldMask": FIELD_MASK,
-        },
-        body: JSON.stringify({
-          textQuery,
-          locationBias: {
-            circle: {
-              center: locationBias,
-              radius: 50000.0, // 50km radius
-            },
+    const res = await fetch("https://places.googleapis.com/v1/places:searchText", {
+      method: "POST",
+      signal: controller.signal,
+      headers: {
+        "Content-Type": "application/json",
+        "X-Goog-Api-Key": API_KEY!,
+        "X-Goog-FieldMask": FIELD_MASK,
+      },
+      body: JSON.stringify({
+        textQuery,
+        locationBias: {
+          circle: {
+            center: locationBias,
+            radius: 50000.0, // 50km radius
           },
-          languageCode: "sv",
-        }),
-      }
-    );
+        },
+        languageCode: "sv",
+      }),
+    });
 
     clearTimeout(timeoutId);
 
@@ -174,9 +170,7 @@ async function searchPlace(
  *
  * @param options.force - Re-fetch all restaurants, not just missing ones
  */
-export async function collectGoogle(
-  options: { force?: boolean } = {}
-): Promise<GoogleRaw[]> {
+export async function collectGoogle(options: { force?: boolean } = {}): Promise<GoogleRaw[]> {
   if (!API_KEY) {
     throw new Error(
       "GOOGLE_PLACES_API_KEY environment variable is required.\n" +
@@ -241,7 +235,9 @@ export async function collectGoogle(
     const customQuery = overrides.get(r.name);
     const usingOverride = !!customQuery;
 
-    process.stdout.write(`[${i + 1}/${needsFetch.length}] ${r.name}${usingOverride ? " (override)" : ""}...`);
+    process.stdout.write(
+      `[${i + 1}/${needsFetch.length}] ${r.name}${usingOverride ? " (override)" : ""}...`
+    );
 
     try {
       let result = await searchPlace(r.name, r.city || "Sweden", customQuery);
@@ -250,7 +246,11 @@ export async function collectGoogle(
       if (result && !result.primaryType && !usingOverride) {
         process.stdout.write(` (retry with "restaurant")...`);
         await sleep(200);
-        const retryResult = await searchPlace(r.name, r.city || "Sweden", `restaurant ${r.name}, ${r.city || "Sweden"}`);
+        const retryResult = await searchPlace(
+          r.name,
+          r.city || "Sweden",
+          `restaurant ${r.name}, ${r.city || "Sweden"}`
+        );
         if (retryResult && retryResult.primaryType) {
           result = retryResult;
         }
@@ -290,9 +290,8 @@ export async function collectGoogle(
         resultsById.set(r.id, googleRaw);
 
         fetched++;
-        const statusTag = result.businessStatus !== "OPERATIONAL"
-          ? ` [${result.businessStatus}]`
-          : "";
+        const statusTag =
+          result.businessStatus !== "OPERATIONAL" ? ` [${result.businessStatus}]` : "";
         process.stdout.write(` ✓ (${result.rating ?? "no rating"})${statusTag}\n`);
       } else {
         notFound++;
@@ -342,9 +341,7 @@ export async function collectGoogle(
  * E.g., "italian_restaurant" → "Italian", "japanese_restaurant" → "Japanese"
  */
 function formatGoogleType(type: string): string {
-  const cleaned = type
-    .replace(/_restaurant$/, "")
-    .replace(/_/g, " ");
+  const cleaned = type.replace(/_restaurant$/, "").replace(/_/g, " ");
 
   return cleaned
     .split(" ")
@@ -373,9 +370,15 @@ function isInSweden(lat: number, lng: number, address: string): boolean {
   const addr = address.toLowerCase();
 
   // Explicitly exclude non-Swedish addresses
-  if (addr.includes("københavn") || addr.includes("copenhagen") ||
-      addr.includes("danmark") || addr.includes("denmark") ||
-      addr.includes("oslo") || addr.includes("norge") || addr.includes("norway")) {
+  if (
+    addr.includes("københavn") ||
+    addr.includes("copenhagen") ||
+    addr.includes("danmark") ||
+    addr.includes("denmark") ||
+    addr.includes("oslo") ||
+    addr.includes("norge") ||
+    addr.includes("norway")
+  ) {
     return false;
   }
 

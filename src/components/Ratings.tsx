@@ -1,20 +1,20 @@
-import * as React from "react"
-import { useTranslation } from "react-i18next"
-import { cn } from "@/lib/utils"
+import * as React from "react";
+import { useTranslation } from "react-i18next";
+import { cn } from "@/lib/utils";
 
 // ─── Star Display ────────────────────────────────────────────────
 
 export interface StarDisplayProps extends React.HTMLAttributes<HTMLSpanElement> {
   /** Rating value (0-5) */
-  rating: number
+  rating: number;
   /** Maximum stars to show */
-  max?: number
+  max?: number;
 }
 
 function StarDisplay({ rating, max = 5, className, ...props }: StarDisplayProps) {
-  const fullStars = Math.floor(rating)
-  const hasHalf = rating - fullStars >= 0.3
-  const emptyStars = max - fullStars - (hasHalf ? 1 : 0)
+  const fullStars = Math.floor(rating);
+  const hasHalf = rating - fullStars >= 0.3;
+  const emptyStars = max - fullStars - (hasHalf ? 1 : 0);
 
   return (
     <span
@@ -28,25 +28,23 @@ function StarDisplay({ rating, max = 5, className, ...props }: StarDisplayProps)
           ★
         </span>
       ))}
-      {hasHalf && (
-        <span className="text-amber-400 opacity-50">★</span>
-      )}
+      {hasHalf && <span className="text-amber-400 opacity-50">★</span>}
       {Array.from({ length: emptyStars }, (_, i) => (
         <span key={`e${i}`} className="text-black/20 dark:text-white/20">
           ★
         </span>
       ))}
     </span>
-  )
+  );
 }
 
 // ─── Pip Display (for SvD 1-6 scale) ─────────────────────────────
 
 export interface PipDisplayProps extends React.HTMLAttributes<HTMLSpanElement> {
   /** Current score */
-  score: number
+  score: number;
   /** Maximum pips to show */
-  max?: number
+  max?: number;
 }
 
 function PipDisplay({ score, max = 6, className, ...props }: PipDisplayProps) {
@@ -62,27 +60,25 @@ function PipDisplay({ score, max = 6, className, ...props }: PipDisplayProps) {
           key={i}
           className={cn(
             "inline-block w-1.5 h-1.5 rounded-full",
-            i < score
-              ? "bg-foreground"
-              : "bg-black/15 dark:bg-white/15"
+            i < score ? "bg-foreground" : "bg-black/15 dark:bg-white/15"
           )}
         />
       ))}
     </span>
-  )
+  );
 }
 
 // ─── Open Status Indicator ───────────────────────────────────────
 
 export interface OpenStatusProps extends React.HTMLAttributes<HTMLSpanElement> {
   /** Whether the place is currently open */
-  isOpen: boolean | null
+  isOpen: boolean | null;
 }
 
 function OpenStatus({ isOpen, className, ...props }: OpenStatusProps) {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
-  if (isOpen === null) return null
+  if (isOpen === null) return null;
 
   return (
     <span
@@ -96,7 +92,7 @@ function OpenStatus({ isOpen, className, ...props }: OpenStatusProps) {
     >
       {isOpen ? `● ${t("status.open")}` : `● ${t("status.closed")}`}
     </span>
-  )
+  );
 }
 
-export { StarDisplay, PipDisplay, OpenStatus }
+export { StarDisplay, PipDisplay, OpenStatus };

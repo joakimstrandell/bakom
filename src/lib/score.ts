@@ -1,10 +1,6 @@
 /** Bakom Score — aggregated restaurant rating (0–100). @see docs/score.md */
 
-import type {
-  MichelinDistinction,
-  WhiteGuideClassification,
-  SourceRatings,
-} from "../types";
+import type { MichelinDistinction, WhiteGuideClassification, SourceRatings } from "../types";
 
 // ─── Normalization to 0–10 ──────────────────────────────────────
 
@@ -85,12 +81,12 @@ function bayesianDampen(rawScore: number, reviewCount: number): number {
 
 const WEIGHTS = {
   michelin: 0.28,
-  whiteguide: 0.20,
+  whiteguide: 0.2,
   svd: 0.16,
   krogguiden: 0.16,
   di: 0.16,
   dn: 0.14,
-  google: 0.10,
+  google: 0.1,
 } as const;
 
 // ─── Score calculation ──────────────────────────────────────────
@@ -216,8 +212,7 @@ export function calculateBakomScore(input: ScoreInput): BakomScoreResult | null 
   }
 
   // Prestige ceiling — restaurants without expert sources are capped
-  const hasMichelinStars =
-    ratings.michelin && MICHELIN_STARRED.includes(ratings.michelin);
+  const hasMichelinStars = ratings.michelin && MICHELIN_STARRED.includes(ratings.michelin);
   const hasMichelin = !!ratings.michelin;
   const hasWhiteGuide = !!ratings.whiteguide;
 
@@ -238,9 +233,7 @@ export function calculateBakomScore(input: ScoreInput): BakomScoreResult | null 
   // Perfection requirement — 100 requires all sources ≥ 9.5
   // and must have Michelin 1★+
   if (finalScore >= 100) {
-    const allPerfect = allNormalizedScores.every(
-      (s) => s >= PERFECTION_THRESHOLD,
-    );
+    const allPerfect = allNormalizedScores.every((s) => s >= PERFECTION_THRESHOLD);
     if (!hasMichelinStars || !allPerfect) {
       finalScore = 99;
     }

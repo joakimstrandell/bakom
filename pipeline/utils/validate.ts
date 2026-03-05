@@ -63,16 +63,12 @@ export function validateRestaurant(
 
   // Phone validation (basic Swedish format check)
   if (record.phone && !/^[\d\s\-+()]+$/.test(record.phone)) {
-    warnings.push(
-      `[${source}] Unusual phone format for ${record.name}: ${record.phone}`
-    );
+    warnings.push(`[${source}] Unusual phone format for ${record.name}: ${record.phone}`);
   }
 
   // Website validation
   if (record.website && !record.website.startsWith("http")) {
-    warnings.push(
-      `[${source}] Invalid website for ${record.name}: ${record.website}`
-    );
+    warnings.push(`[${source}] Invalid website for ${record.name}: ${record.website}`);
   }
 
   return {
@@ -94,7 +90,7 @@ export function calculateQualityMetrics<
     phone?: string;
     website?: string;
     hours?: unknown[];
-  }
+  },
 >(records: T[]): QualityMetrics {
   const metrics: QualityMetrics = {
     total: records.length,
@@ -132,30 +128,19 @@ function pct(n: number, total: number): string {
 /**
  * Print quality metrics report to console.
  */
-export function printQualityReport(
-  metrics: QualityMetrics,
-  label: string
-): void {
+export function printQualityReport(metrics: QualityMetrics, label: string): void {
   console.log(`\n=== Quality Report: ${label} ===`);
   console.log(`  Total records: ${metrics.total}`);
-  console.log(
-    `  With name: ${metrics.withName} (${pct(metrics.withName, metrics.total)})`
-  );
+  console.log(`  With name: ${metrics.withName} (${pct(metrics.withName, metrics.total)})`);
   console.log(
     `  With address: ${metrics.withAddress} (${pct(metrics.withAddress, metrics.total)})`
   );
-  console.log(
-    `  With coords: ${metrics.withCoords} (${pct(metrics.withCoords, metrics.total)})`
-  );
-  console.log(
-    `  With phone: ${metrics.withPhone} (${pct(metrics.withPhone, metrics.total)})`
-  );
+  console.log(`  With coords: ${metrics.withCoords} (${pct(metrics.withCoords, metrics.total)})`);
+  console.log(`  With phone: ${metrics.withPhone} (${pct(metrics.withPhone, metrics.total)})`);
   console.log(
     `  With website: ${metrics.withWebsite} (${pct(metrics.withWebsite, metrics.total)})`
   );
-  console.log(
-    `  With hours: ${metrics.withHours} (${pct(metrics.withHours, metrics.total)})`
-  );
+  console.log(`  With hours: ${metrics.withHours} (${pct(metrics.withHours, metrics.total)})`);
   if (metrics.missingRequired > 0) {
     console.log(`  Missing required fields: ${metrics.missingRequired}`);
   }

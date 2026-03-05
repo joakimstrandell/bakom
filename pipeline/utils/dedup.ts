@@ -105,8 +105,7 @@ export function deduplicateByGooglePlaceId(
     }
   }
 
-  const result =
-    toRemove.size > 0 ? restaurants.filter((r) => !toRemove.has(r.id)) : restaurants;
+  const result = toRemove.size > 0 ? restaurants.filter((r) => !toRemove.has(r.id)) : restaurants;
 
   return {
     restaurants: result,

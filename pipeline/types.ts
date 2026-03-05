@@ -4,7 +4,13 @@
  * The merge step combines these into the final Restaurant type from src/types.ts.
  */
 
-import type { HoursEntry, MichelinDistinction, WhiteGuideClassification, Restaurant, SourceIds } from "../src/types.js";
+import type {
+  HoursEntry,
+  MichelinDistinction,
+  WhiteGuideClassification,
+  Restaurant,
+  SourceIds,
+} from "../src/types.js";
 
 /**
  * Pipeline-internal Restaurant type where pipeline-only fields are guaranteed present.
@@ -135,7 +141,14 @@ export type DiRaw = {
   lng: number | null;
 };
 
-export type SourceRecord = KrogguidenRaw | GoogleRaw | MichelinRaw | WhiteGuideRaw | SvdRaw | DnRaw | DiRaw;
+export type SourceRecord =
+  | KrogguidenRaw
+  | GoogleRaw
+  | MichelinRaw
+  | WhiteGuideRaw
+  | SvdRaw
+  | DnRaw
+  | DiRaw;
 
 // ─── Manual Data Types ────────────────────────────────────────────
 
