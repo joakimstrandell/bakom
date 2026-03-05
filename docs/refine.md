@@ -32,7 +32,7 @@ Applies pre-collected Google Places data from `data/raw/google.json` to
 restaurants. Google data is collected separately via:
 
 ```
-npm run pipeline:collect --source google
+pnpm pipeline:collect --source google
 ```
 
 This separation means:
@@ -117,18 +117,18 @@ merge re-runs. They are filtered out in the
 ## CLI
 
 ```
-npm run pipeline:refine
+pnpm pipeline:refine
 ```
 
 The refine step is also run as part of the full pipeline:
 
 ```
-npm run pipeline
+pnpm pipeline
 ```
 
 To update Google data, run collection with `--force` to re-fetch all:
 
 ```
-npm run pipeline:collect --source google --force
-npm run pipeline:refine
+pnpm pipeline:collect --source google --force
+pnpm pipeline:refine
 ```

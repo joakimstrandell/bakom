@@ -38,7 +38,7 @@ These sources enrich existing restaurants and require `data/restaurants.json`:
 ### Run all pre-merge sources
 
 ```
-npm run pipeline:collect
+pnpm pipeline:collect
 ```
 
 Runs all 6 pre-merge sources sequentially. Fast APIs always re-fetch. Slow
@@ -47,35 +47,24 @@ scrapers run in incremental mode (only new items).
 ### Run a single source
 
 ```
-npm run pipeline:collect --source krogguiden
-npm run pipeline:collect --source michelin
-npm run pipeline:collect --source whiteguide
-npm run pipeline:collect --source svd
-npm run pipeline:collect --source dn
-npm run pipeline:collect --source di
-npm run pipeline:collect --source google  # requires restaurants.json
+pnpm pipeline:collect --source krogguiden
+pnpm pipeline:collect --source michelin
+pnpm pipeline:collect --source whiteguide
+pnpm pipeline:collect --source svd
+pnpm pipeline:collect --source dn
+pnpm pipeline:collect --source di
+pnpm pipeline:collect --source google  # requires restaurants.json
 ```
 
 ### Force full re-fetch
 
 ```
-npm run pipeline:collect --force
-npm run pipeline:collect --source krogguiden --force
+pnpm pipeline:collect --force
+pnpm pipeline:collect --source krogguiden --force
 ```
 
 The `--force` flag overrides incremental mode for slow scrapers, causing
 a complete re-scrape from scratch.
-
-### Backward-compatible individual scripts
-
-```
-npm run pipeline:krogguiden [--force]
-npm run pipeline:michelin [--force]
-npm run pipeline:whiteguide
-npm run pipeline:svd [--force]
-npm run pipeline:dn [--force]
-npm run pipeline:di
-```
 
 ---
 

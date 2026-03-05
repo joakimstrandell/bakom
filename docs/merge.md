@@ -290,7 +290,7 @@ Types defined in [`pipeline/types.ts`](../pipeline/types.ts) and
 ## CLI
 
 ```
-npm run pipeline:merge
+pnpm pipeline:merge
 ```
 
 Reads from `data/raw/*.json`, writes to `data/restaurants.json`.
@@ -298,5 +298,5 @@ Reads from `data/raw/*.json`, writes to `data/restaurants.json`.
 The merge step is also run as part of the full pipeline:
 
 ```
-npm run pipeline
+pnpm pipeline
 ```

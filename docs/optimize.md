@@ -75,11 +75,11 @@ The frontend imports `cuisines.json` directly to populate the cuisine filter.
 ## CLI
 
 ```
-npm run pipeline:optimize
+pnpm pipeline:optimize
 ```
 
 The optimize step is also run as part of the full pipeline:
 
 ```
-npm run pipeline
+pnpm pipeline
 ```
