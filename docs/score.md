@@ -10,7 +10,7 @@ Source file: [`src/lib/score.ts`](../src/lib/score.ts)
 
 | Source | Type | Original scale | Internal (0–10) | Weight |
 |--------|------|---------------|-----------------|--------|
-| Michelin | Expert assessment | Categories (Selected → 3★) | 6.5–10.0 | 0.28 |
+| Michelin | Expert assessment | Categories (Selected → 3★) | 7.5–10.0 | 0.28 |
 | White Guide | Expert assessment | Categories (Recommended → Global Master) | 7.0–10.0 | 0.20 |
 | SvD | Professional critic | 1–6 | 1.67–10.0 | 0.16 |
 | DI Weekend | Professional critic | 0–25 (total score) | 0–10.0 | 0.16 |
@@ -30,7 +30,7 @@ Values are calibrated so that having a Michelin distinction always lifts a resta
 
 | Category | Internal value |
 |----------|---------------|
-| Selected | 6.5 |
+| Selected | 7.5 |
 | Bib Gourmand | 8.0 |
 | 1 star | 9.0 |
 | 2 stars | 9.5 |

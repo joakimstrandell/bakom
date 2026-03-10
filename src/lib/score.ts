@@ -5,7 +5,7 @@ import type { MichelinDistinction, WhiteGuideClassification, SourceRatings } fro
 // ─── Normalization to 0–10 ──────────────────────────────────────
 
 const MICHELIN_SCORES: Record<MichelinDistinction, number> = {
-  selected: 6.5,
+  selected: 7.5,
   bib_gourmand: 8,
   "1_star": 9,
   "2_star": 9.5,

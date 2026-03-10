@@ -189,8 +189,8 @@ describe("calculateBakomScore", () => {
 
     it("selected has no floor", () => {
       const s = score({ michelin: "selected" });
-      // selected = internal 6.5 * 0.88 = 5.72, *10 = 57
-      expect(s).toBe(57);
+      // selected = internal 7.5 * 0.88 = 6.6, *10 = 66
+      expect(s).toBe(66);
     });
   });
 
