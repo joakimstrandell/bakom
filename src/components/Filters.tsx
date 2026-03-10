@@ -9,10 +9,15 @@ import {
   TrendingUp,
   Newspaper,
   RotateCcw,
-  Search,
+  Clock,
+  Coffee,
+  Sun,
+  Moon,
 } from "lucide-react";
 import type { MichelinDistinction, WhiteGuideClassification } from "../types";
 import type { FilterState, Range, FilterAction, RangeFilterKey } from "../hooks/useFilters";
+import type { MealType } from "../lib/isOpen";
+import type { AvailabilityFilter } from "../lib/filters";
 
 // Dynamic cuisine list generated from data
 import cuisineData from "../../data/cuisines.json";
@@ -37,6 +42,19 @@ const WG_KEYS: WhiteGuideClassification[] = [
   "very_good_class",
   "master_class",
   "global_master_class",
+];
+
+// Meal type options
+const MEAL_OPTIONS: { key: MealType; icon: typeof Coffee }[] = [
+  { key: "breakfast", icon: Coffee },
+  { key: "lunch", icon: Sun },
+  { key: "dinner", icon: Moon },
+];
+
+// Availability options
+const AVAILABILITY_OPTIONS: { key: AvailabilityFilter }[] = [
+  { key: "openNow" },
+  { key: "opensToday" },
 ];
 
 // ─── Props ───────────────────────────────────────────────────────
@@ -235,48 +253,6 @@ export default function Filters({
 
       {/* Filter sections */}
       <div className="flex-1 overflow-y-auto">
-        {/* Search */}
-        <div className="filter-section">
-          <div className="filter-section-title">
-            <Search className="size-4" />
-            {t("header.search")}
-            {state.searchQuery && (
-              <span className="ml-auto text-foreground font-semibold text-xs truncate max-w-[120px]">
-                "{state.searchQuery}"
-              </span>
-            )}
-          </div>
-          <div className="relative">
-            <input
-              type="text"
-              placeholder={t("filters.search_placeholder")}
-              value={state.searchQuery}
-              onChange={(e) => dispatch({ type: "SET_SEARCH", payload: e.target.value })}
-              className="w-full h-10 px-3 rounded-lg border border-black/10 dark:border-white/10 bg-black/3 dark:bg-white/5 text-sm outline-none focus:border-black/20 dark:focus:border-white/20 transition-colors"
-            />
-            {state.searchQuery && (
-              <button
-                onClick={() => dispatch({ type: "SET_SEARCH", payload: "" })}
-                className="absolute right-2 top-1/2 -translate-y-1/2 p-1 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
-              >
-                <X className="size-3.5 text-muted-foreground" />
-              </button>
-            )}
-          </div>
-        </div>
-
-        {/* Bakom Score range */}
-        <RangeSlider
-          label="Bakom Score"
-          icon={<TrendingUp className="size-4" />}
-          range={state.bakomScore}
-          min={0}
-          max={100}
-          step={5}
-          filterKey="bakomScore"
-          dispatch={dispatch}
-        />
-
         {/* Michelin multi-select */}
         <div className="filter-section">
           <div className="filter-section-title">
@@ -314,6 +290,18 @@ export default function Filters({
             ))}
           </div>
         </div>
+
+        {/* Bakom Score range */}
+        <RangeSlider
+          label="Bakom Score"
+          icon={<TrendingUp className="size-4" />}
+          range={state.bakomScore}
+          min={0}
+          max={100}
+          step={5}
+          filterKey="bakomScore"
+          dispatch={dispatch}
+        />
 
         {/* SvD range */}
         <RangeSlider
@@ -410,6 +398,45 @@ export default function Filters({
                 className={`filter-chip ${state.selectedPrices.has(p) ? "active" : ""}`}
               >
                 {p}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Availability filters */}
+        <div className="filter-section">
+          <div className="filter-section-title">
+            <Clock className="size-4" />
+            {t("filters.availability")}
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {AVAILABILITY_OPTIONS.map(({ key }) => (
+              <button
+                key={key}
+                onClick={() => dispatch({ type: "TOGGLE_AVAILABILITY", payload: key })}
+                className={`filter-chip ${state.selectedAvailability.has(key) ? "active" : ""}`}
+              >
+                {t(`filters.${key}`)}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Meal type filters */}
+        <div className="filter-section">
+          <div className="filter-section-title">
+            <UtensilsCrossed className="size-4" />
+            {t("filters.mealType")}
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {MEAL_OPTIONS.map(({ key, icon: Icon }) => (
+              <button
+                key={key}
+                onClick={() => dispatch({ type: "TOGGLE_MEAL", payload: key })}
+                className={`filter-chip ${state.selectedMeals.has(key) ? "active" : ""}`}
+              >
+                <Icon className="size-3.5 mr-1" />
+                {t(`filters.${key}`)}
               </button>
             ))}
           </div>

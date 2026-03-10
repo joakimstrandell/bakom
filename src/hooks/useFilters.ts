@@ -1,6 +1,13 @@
 import { useReducer, useMemo } from "react";
 import type { Restaurant, MichelinDistinction, WhiteGuideClassification } from "../types";
-import { filterRestaurants, DEFAULT_FILTERS, type FilterState, type Range } from "../lib/filters";
+import {
+  filterRestaurants,
+  DEFAULT_FILTERS,
+  type FilterState,
+  type Range,
+  type AvailabilityFilter,
+} from "../lib/filters";
+import type { MealType } from "../lib/isOpen";
 
 // ─── Action Types ────────────────────────────────────────────────
 
@@ -13,6 +20,8 @@ export type FilterAction =
   | { type: "SET_RANGE"; payload: { key: RangeFilterKey; range: Range } }
   | { type: "TOGGLE_MICHELIN"; payload: MichelinDistinction }
   | { type: "TOGGLE_WHITEGUIDE"; payload: WhiteGuideClassification }
+  | { type: "TOGGLE_MEAL"; payload: MealType }
+  | { type: "TOGGLE_AVAILABILITY"; payload: AvailabilityFilter }
   | { type: "CLEAR_ALL" };
 
 // ─── Reducer ─────────────────────────────────────────────────────
@@ -65,6 +74,18 @@ function filterReducer(state: FilterState, action: FilterAction): FilterState {
         selectedWhiteGuide: toggleSetItem(state.selectedWhiteGuide, action.payload),
       };
 
+    case "TOGGLE_MEAL":
+      return {
+        ...state,
+        selectedMeals: toggleSetItem(state.selectedMeals, action.payload),
+      };
+
+    case "TOGGLE_AVAILABILITY":
+      return {
+        ...state,
+        selectedAvailability: toggleSetItem(state.selectedAvailability, action.payload),
+      };
+
     case "CLEAR_ALL":
       return {
         ...DEFAULT_FILTERS,
@@ -73,6 +94,8 @@ function filterReducer(state: FilterState, action: FilterAction): FilterState {
         selectedPrices: new Set<string>(),
         selectedMichelin: new Set<MichelinDistinction>(),
         selectedWhiteGuide: new Set<WhiteGuideClassification>(),
+        selectedMeals: new Set<MealType>(),
+        selectedAvailability: new Set<AvailabilityFilter>(),
       };
 
     default:
@@ -106,6 +129,8 @@ export function useFilters(restaurants: Restaurant[]) {
     selectedPrices: new Set<string>(),
     selectedMichelin: new Set<MichelinDistinction>(),
     selectedWhiteGuide: new Set<WhiteGuideClassification>(),
+    selectedMeals: new Set<MealType>(),
+    selectedAvailability: new Set<AvailabilityFilter>(),
   });
 
   // Filter restaurants based on current state
@@ -124,6 +149,8 @@ export function useFilters(restaurants: Restaurant[]) {
 
     count += state.selectedMichelin.size;
     count += state.selectedWhiteGuide.size;
+    count += state.selectedMeals.size;
+    count += state.selectedAvailability.size;
 
     return count;
   }, [state]);

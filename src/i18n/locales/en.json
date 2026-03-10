@@ -28,7 +28,14 @@
     "clear": "Clear all filters",
     "close_aria": "Close filters",
     "cuisine": "Cuisine",
-    "price": "Price range"
+    "price": "Price range",
+    "availability": "Availability",
+    "openNow": "Open now",
+    "opensToday": "Open today",
+    "mealType": "Meal",
+    "breakfast": "Breakfast",
+    "lunch": "Lunch",
+    "dinner": "Dinner"
   },
   "cuisines": {
     "Crossover": "Crossover",

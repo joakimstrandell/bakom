@@ -8,6 +8,80 @@ function toMinutes(time: string): number {
   return h * 60 + m;
 }
 
+// Meal time boundaries (in minutes from midnight)
+const BREAKFAST_END = 10 * 60; // 10:00 - must open by this time
+const LUNCH_START = 11 * 60; // 11:00
+const LUNCH_END = 14 * 60; // 14:00
+const DINNER_START = 17 * 60; // 17:00
+
+export type MealType = "breakfast" | "lunch" | "dinner";
+
+/**
+ * Check if an hours entry overlaps with a time range.
+ */
+function overlapsTimeRange(entry: HoursEntry, rangeStart: number, rangeEnd: number): boolean {
+  const openMin = toMinutes(entry.open);
+  const closeMin = toMinutes(entry.close);
+
+  // Handle overnight hours (e.g., 17:00-02:00)
+  if (closeMin <= openMin) {
+    // Opens before midnight - check if overlaps with range
+    return openMin < rangeEnd || closeMin > rangeStart;
+  }
+
+  // Normal hours - check overlap
+  return openMin < rangeEnd && closeMin > rangeStart;
+}
+
+/**
+ * Check if restaurant serves a specific meal type on any day.
+ */
+export function servesMeal(hours: HoursEntry[], meal: MealType): boolean {
+  if (!hours || hours.length === 0) return false;
+
+  for (const entry of hours) {
+    const openMin = toMinutes(entry.open);
+    const closeMin = toMinutes(entry.close);
+
+    switch (meal) {
+      case "breakfast":
+        // Opens at or before 10:00
+        if (openMin <= BREAKFAST_END) return true;
+        break;
+      case "lunch":
+        // Is open during 11:00-14:00 window
+        if (overlapsTimeRange(entry, LUNCH_START, LUNCH_END)) return true;
+        break;
+      case "dinner":
+        // Is open during/after 17:00
+        if (closeMin <= openMin) {
+          // Overnight - always serves dinner
+          return true;
+        }
+        if (closeMin > DINNER_START) return true;
+        break;
+    }
+  }
+
+  return false;
+}
+
+/**
+ * Check if restaurant is open on a specific day (0=Sunday, 6=Saturday).
+ */
+export function isOpenOnDay(hours: HoursEntry[], day: number): boolean {
+  if (!hours || hours.length === 0) return false;
+  return hours.some((entry) => entry.days.includes(day));
+}
+
+/**
+ * Check if restaurant opens today.
+ */
+export function opensToday(hours: HoursEntry[]): boolean {
+  const today = new Date().getDay();
+  return isOpenOnDay(hours, today);
+}
+
 /**
  * Get the next opening time for a restaurant.
  * Returns { day: number, time: string } or null if no hours data.

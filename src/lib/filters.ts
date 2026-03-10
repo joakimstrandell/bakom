@@ -1,7 +1,10 @@
 import type { Restaurant, MichelinDistinction, WhiteGuideClassification } from "../types";
+import { isOpen, opensToday, servesMeal, type MealType } from "./isOpen";
 
 // Range type for interval filters
 export type Range = { min: number; max: number };
+
+export type AvailabilityFilter = "openNow" | "opensToday";
 
 export type FilterState = {
   searchQuery: string;
@@ -17,6 +20,9 @@ export type FilterState = {
   // Multi-select (show restaurants with ANY of selected distinctions)
   selectedMichelin: Set<MichelinDistinction>;
   selectedWhiteGuide: Set<WhiteGuideClassification>;
+  // Meal type and availability filters
+  selectedMeals: Set<MealType>;
+  selectedAvailability: Set<AvailabilityFilter>;
 };
 
 export const DEFAULT_FILTERS: FilterState = {
@@ -31,6 +37,8 @@ export const DEFAULT_FILTERS: FilterState = {
   dn: { min: 0, max: 5 },
   selectedMichelin: new Set(),
   selectedWhiteGuide: new Set(),
+  selectedMeals: new Set(),
+  selectedAvailability: new Set(),
 };
 
 /** Check if a range filter is active (not at default bounds) */
@@ -108,6 +116,24 @@ export function filterRestaurants(restaurants: Restaurant[], filters: FilterStat
     if (filters.selectedWhiteGuide.size > 0) {
       if (!r.ratings.whiteguide || !filters.selectedWhiteGuide.has(r.ratings.whiteguide))
         return false;
+    }
+
+    // Meal type filter: restaurant must serve ALL selected meal types
+    if (filters.selectedMeals.size > 0) {
+      for (const meal of filters.selectedMeals) {
+        if (!servesMeal(r.hours, meal)) return false;
+      }
+    }
+
+    // Availability filter: must match ALL selected availability options
+    if (filters.selectedAvailability.size > 0) {
+      if (filters.selectedAvailability.has("openNow")) {
+        const open = isOpen(r.hours);
+        if (open !== true) return false;
+      }
+      if (filters.selectedAvailability.has("opensToday")) {
+        if (!opensToday(r.hours)) return false;
+      }
     }
 
     return true;

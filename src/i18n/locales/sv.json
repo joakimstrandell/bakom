@@ -28,7 +28,14 @@
     "clear": "Rensa alla filter",
     "close_aria": "Stäng filter",
     "cuisine": "Kök",
-    "price": "Prisklass"
+    "price": "Prisklass",
+    "availability": "Tillgänglighet",
+    "openNow": "Öppet nu",
+    "opensToday": "Öppet idag",
+    "mealType": "Måltid",
+    "breakfast": "Frukost",
+    "lunch": "Lunch",
+    "dinner": "Middag"
   },
   "cuisines": {
     "Crossover": "Crossover",
@@ -62,7 +69,7 @@
     "rank_region": "#{{rank}} {{region}}"
   },
   "detail": {
-    "ratings": "Omdömen",
+    "ratings": "Betyg",
     "hours": "Öppettider",
     "address": "Adress",
     "phone": "Telefon",
