@@ -115,30 +115,13 @@ export async function refine(): Promise<PipelineRestaurant[]> {
     }
   }
 
-  // ── 5. Calculate Ranks ────────────────────────────────────────
-
-  // Sort by raw score (descending) for fine-grained ranking
-  const withScore = deduped
-    .filter((r) => r.bakomScoreRaw != null)
-    .sort((a, b) => (b.bakomScoreRaw ?? 0) - (a.bakomScoreRaw ?? 0));
-
-  // Assign ranks (1-based)
-  for (let i = 0; i < withScore.length; i++) {
-    withScore[i].bakomRank = i + 1;
-  }
-
-  // Clear rank for unscored restaurants
-  for (const r of deduped) {
-    if (r.bakomScore == null) {
-      r.bakomRank = null;
-    }
-  }
-
-  if (withScore.length > 0) {
-    const scores = withScore.map((r) => r.bakomScore!);
+  // Log score stats
+  const scored = deduped.filter((r) => r.bakomScore != null);
+  if (scored.length > 0) {
+    const scores = scored.map((r) => r.bakomScore!);
     const avg = scores.reduce((a, b) => a + b, 0) / scores.length;
     console.log(
-      `Bakom Score: ${withScore.length} scored ` +
+      `Bakom Score: ${scored.length} scored ` +
         `(avg ${avg.toFixed(1)}, max ${Math.max(...scores)})\n`
     );
   }
