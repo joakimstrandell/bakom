@@ -1,16 +1,22 @@
-import { useState, useMemo, useRef } from "react";
+import { useState, useMemo, useRef, useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { useVirtualizer } from "@tanstack/react-virtual";
-import { MapPin, ArrowDownAZ, TrendingUp } from "lucide-react";
+import { MapPin, ArrowDownAZ, TrendingUp, Navigation } from "lucide-react";
 import type { Restaurant } from "../types";
 import { ScoreBadge } from "./ScoreBadge";
+import { calculateDistance, formatDistance } from "../lib/distance";
 
-type SortOption = "name" | "score";
+type SortOption = "name" | "score" | "distance";
+
+type UserLocation = { lat: number; lng: number } | null;
 
 type RestaurantListProps = {
   restaurants: Restaurant[];
   selectedRestaurant: Restaurant | null;
   onSelectRestaurant: (restaurant: Restaurant) => void;
+  userLocation?: UserLocation;
+  locationDenied?: boolean;
+  onRequestLocation?: () => Promise<boolean>;
 };
 
 const ITEM_HEIGHT = 88; // Estimated height for each restaurant item
@@ -19,10 +25,44 @@ export default function RestaurantList({
   restaurants,
   selectedRestaurant,
   onSelectRestaurant,
+  userLocation,
+  locationDenied = false,
+  onRequestLocation,
 }: RestaurantListProps) {
   const { t } = useTranslation();
   const [sortBy, setSortBy] = useState<SortOption>("score");
+  const prevSortRef = useRef<SortOption>("score");
   const parentRef = useRef<HTMLDivElement>(null);
+
+  const handleDistanceSort = useCallback(async () => {
+    // If we already have location, just switch to distance sort
+    if (userLocation) {
+      prevSortRef.current = sortBy;
+      setSortBy("distance");
+      return;
+    }
+
+    // No location yet - request it and only switch on success
+    if (onRequestLocation) {
+      const success = await onRequestLocation();
+      if (success) {
+        prevSortRef.current = sortBy;
+        setSortBy("distance");
+      }
+    }
+  }, [userLocation, sortBy, onRequestLocation]);
+
+  // Calculate distances for all restaurants (memoized)
+  const distances = useMemo(() => {
+    if (!userLocation) return new Map<string, number>();
+    const map = new Map<string, number>();
+    for (const r of restaurants) {
+      if (r.lat != null && r.lng != null) {
+        map.set(r.id, calculateDistance(userLocation.lat, userLocation.lng, r.lat, r.lng));
+      }
+    }
+    return map;
+  }, [restaurants, userLocation]);
 
   const sortedRestaurants = useMemo(() => {
     const sorted = [...restaurants];
@@ -36,9 +76,19 @@ export default function RestaurantList({
         if (b.bakomRank == null) return -1;
         return a.bakomRank - b.bakomRank; // Ascending rank (1 is best)
       });
+    } else if (sortBy === "distance") {
+      sorted.sort((a, b) => {
+        const distA = distances.get(a.id);
+        const distB = distances.get(b.id);
+        // No distance (no coords or no user location) goes last
+        if (distA == null && distB == null) return 0;
+        if (distA == null) return 1;
+        if (distB == null) return -1;
+        return distA - distB;
+      });
     }
     return sorted;
-  }, [restaurants, sortBy]);
+  }, [restaurants, sortBy, distances]);
 
   const virtualizer = useVirtualizer({
     count: sortedRestaurants.length,
@@ -83,6 +133,21 @@ export default function RestaurantList({
             >
               <TrendingUp className="size-3.5" />
             </button>
+            <button
+              onClick={handleDistanceSort}
+              disabled={locationDenied}
+              className={`flex items-center gap-1 px-2 py-1 rounded text-xs font-medium transition-colors ${
+                sortBy === "distance"
+                  ? "bg-white dark:bg-zinc-800 shadow-sm text-foreground"
+                  : locationDenied
+                    ? "text-muted-foreground/40 cursor-not-allowed"
+                    : "text-muted-foreground hover:text-foreground"
+              }`}
+              title={locationDenied ? t("location.denied") : t("list.sort_distance")}
+              aria-label={locationDenied ? t("location.denied") : t("list.sort_distance")}
+            >
+              <Navigation className="size-3.5" />
+            </button>
           </div>
         </div>
       </div>
@@ -124,15 +189,21 @@ export default function RestaurantList({
                     {/* Info */}
                     <div className="flex-1 min-w-0">
                       <span
-                        className={`text-sm font-medium truncate ${
+                        className={`text-sm font-medium truncate block ${
                           isSelected ? "text-foreground" : ""
                         }`}
                       >
                         {r.name}
                       </span>
-                      {r.cuisine && (
+                      {(r.cuisine || (sortBy === "distance" && distances.get(r.id))) && (
                         <div className="text-xs text-muted-foreground truncate mt-0.5">
                           {r.cuisine}
+                          {sortBy === "distance" && distances.get(r.id) != null && (
+                            <>
+                              {r.cuisine && " · "}
+                              {formatDistance(distances.get(r.id)!)}
+                            </>
+                          )}
                         </div>
                       )}
                       <div className="text-xs text-muted-foreground truncate mt-0.5">

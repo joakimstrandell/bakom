@@ -64,6 +64,7 @@
     "restaurants_other": "{{count}} restauranger",
     "sort_name": "Sortera efter namn",
     "sort_score": "Sortera efter poäng",
+    "sort_distance": "Sortera efter avstånd",
     "empty": "Inga restauranger matchar dina filter",
     "rank_sweden": "#{{rank}} Sverige",
     "rank_region": "#{{rank}} {{region}}"

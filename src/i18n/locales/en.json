@@ -64,6 +64,7 @@
     "restaurants_other": "{{count}} restaurants",
     "sort_name": "Sort by name",
     "sort_score": "Sort by score",
+    "sort_distance": "Sort by distance",
     "empty": "No restaurants match your filters",
     "rank_sweden": "#{{rank}} Sweden",
     "rank_region": "#{{rank}} {{region}}"

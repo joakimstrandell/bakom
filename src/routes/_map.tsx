@@ -12,6 +12,7 @@ import SearchCommand from "../components/SearchCommand";
 import type { Restaurant } from "../types";
 import { useFilters } from "../hooks/useFilters";
 import { useIsDesktop } from "../hooks/useMediaQuery";
+import { useLocation } from "../hooks/useLocation";
 import { type RegionFilter, REGIONS, DEFAULT_REGION } from "../lib/regions";
 import {
   Search,
@@ -24,6 +25,8 @@ import {
   ChevronDown,
 } from "lucide-react";
 import FeedbackModal from "../components/FeedbackModal";
+import { IconButton } from "../components/IconButton";
+import { MapOverlayButton } from "../components/MapOverlayButton";
 
 // Static import of all restaurant data
 import restaurantData from "../../data/restaurants.frontend.json";
@@ -98,13 +101,8 @@ function MapLayout() {
     }
   }, [selectedRestaurant]);
 
-  // Geolocation state
-  const [userLocation, setUserLocation] = useState<{
-    lat: number;
-    lng: number;
-  } | null>(null);
-  const [locating, setLocating] = useState(false);
-  const [locationError, setLocationError] = useState<string | null>(null);
+  // Geolocation state (managed externally)
+  const { location: userLocation, loading: locating, error: locationError, denied: locationDenied, locate: locateUser } = useLocation();
 
   // Feedback modal state
   const [feedbackOpen, setFeedbackOpen] = useState(false);
@@ -125,41 +123,6 @@ function MapLayout() {
     setRegion(newRegion);
     setRegionMenuOpen(false);
   }, []);
-
-  const locateUser = useCallback(() => {
-    if (!navigator.geolocation) {
-      setLocationError(t("location.not_supported"));
-      return;
-    }
-    setLocating(true);
-    setLocationError(null);
-    navigator.geolocation.getCurrentPosition(
-      (pos) => {
-        setUserLocation({
-          lat: pos.coords.latitude,
-          lng: pos.coords.longitude,
-        });
-        setLocating(false);
-      },
-      (err) => {
-        setLocating(false);
-        switch (err.code) {
-          case err.PERMISSION_DENIED:
-            setLocationError(t("location.denied"));
-            break;
-          case err.POSITION_UNAVAILABLE:
-            setLocationError(t("location.unavailable"));
-            break;
-          case err.TIMEOUT:
-            setLocationError(t("location.timeout"));
-            break;
-          default:
-            setLocationError(t("location.error"));
-        }
-      },
-      { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
-    );
-  }, [t]);
 
   // Handle restaurant selection - navigates to restaurant URL
   const handleSelectRestaurant = useCallback(
@@ -225,10 +188,13 @@ function MapLayout() {
   return (
     <div className="h-screen flex flex-col overflow-hidden">
       {/* ─── Compact Header ─────────────────────────────────────── */}
-      <header className="header-bar flex items-center h-14 px-4 relative z-[1003] gap-2">
+      <header className="flex items-center h-14 px-4 relative z-[1003] gap-2 backdrop-blur-xl bg-white/85 dark:bg-zinc-950/90 border-b border-black/6 dark:border-white/8">
         {/* Left side: Logo + Region Selector */}
         <div className="flex items-center gap-3 shrink-0 min-w-0">
-          <button onClick={() => navigate({ to: "/" })} className="logo-text logo-mark">
+          <button
+            onClick={() => navigate({ to: "/" })}
+            className="font-display font-bold text-[28px] tracking-tight bg-gradient-to-br from-zinc-900 to-zinc-500 dark:from-white dark:to-zinc-400 bg-clip-text text-transparent"
+          >
             B
           </button>
 
@@ -236,7 +202,7 @@ function MapLayout() {
           <div className="relative" ref={regionMenuRef}>
             <button
               onClick={() => setRegionMenuOpen(!regionMenuOpen)}
-              className="flex items-center gap-1.5 h-8 px-3 rounded-full border border-black/10 bg-white/50 hover:bg-white/80 transition-colors text-sm font-medium"
+              className="flex items-center gap-1.5 h-8 px-3 rounded-full border border-black/10 dark:border-white/10 bg-white/50 dark:bg-white/5 hover:bg-white/80 dark:hover:bg-white/10 transition-colors text-sm font-medium"
             >
               <span className="hidden sm:inline">{t(`regions.${region}`)}</span>
               <span className="sm:hidden">{t(`regions_short.${region}`)}</span>
@@ -270,29 +236,25 @@ function MapLayout() {
         {/* Right side: Search + Feedback + Filter */}
         <div className="flex items-center gap-1 shrink-0">
           {/* Search icon - opens search command dialog */}
-          <button
+          <IconButton
             onClick={() => setSearchOpen(true)}
-            className="header-icon-btn"
             title={`${t("header.search")} (${navigator.userAgent.includes("Mac") ? "Cmd" : "Ctrl"}+K)`}
           >
             <Search className="size-5" />
-          </button>
+          </IconButton>
 
           {/* Feedback icon button */}
-          <button
-            onClick={() => setFeedbackOpen(true)}
-            className="header-icon-btn"
-            title={t("feedback.title")}
-          >
+          <IconButton onClick={() => setFeedbackOpen(true)} title={t("feedback.title")}>
             <MessageSquare className="size-5" />
-          </button>
+          </IconButton>
 
           {/* Filter button */}
-          <button
+          <IconButton
             onClick={toggleFilters}
             aria-label={sidebarMode === "filters" ? t("filters.close_aria") : t("header.filter")}
             aria-expanded={sidebarMode === "filters"}
-            className={`header-icon-btn relative ${sidebarMode === "filters" ? "active" : ""}`}
+            active={sidebarMode === "filters"}
+            className="relative"
           >
             <SlidersHorizontal className="size-5" />
             {activeFilterCount > 0 && sidebarMode !== "filters" && (
@@ -300,7 +262,7 @@ function MapLayout() {
                 {activeFilterCount}
               </span>
             )}
-          </button>
+          </IconButton>
         </div>
       </header>
 
@@ -320,12 +282,15 @@ function MapLayout() {
               restaurants={filtered}
               selectedRestaurant={selectedRestaurant}
               onSelectRestaurant={handleSelectRestaurant}
+              userLocation={userLocation}
+              locationDenied={locationDenied}
+              onRequestLocation={locateUser}
             />
           )}
         </div>
 
         {/* Map container - always rendered, use z-index to layer on mobile */}
-        <div className="flex-1 relative overflow-hidden">
+        <div className={`flex-1 relative overflow-hidden ${mobileView === "list" ? "mobile-list-active" : ""}`}>
           <Suspense
             fallback={
               <div className="flex items-center justify-center h-full text-muted-foreground">
@@ -343,32 +308,36 @@ function MapLayout() {
           </Suspense>
 
           {/* Location button overlay - only show when map is visible */}
-          <button
+          <MapOverlayButton
             onClick={locateUser}
-            disabled={locating}
-            className={`map-overlay-btn bottom-4 right-4 size-12 ${mobileView === "list" ? "md:flex hidden" : ""}`}
-            title={locationError || (userLocation ? t("location.update") : t("location.show"))}
+            disabled={locating || locationDenied}
+            className={`absolute z-[1000] bottom-4 right-4 ${mobileView === "list" ? "md:flex hidden" : ""}`}
+            title={locationDenied ? t("location.denied") : locationError || (userLocation ? t("location.update") : t("location.show"))}
+            aria-label={locationDenied ? t("location.denied") : (userLocation ? t("location.update") : t("location.show"))}
           >
             {locating ? (
               <Loader2 className="size-5 animate-spin text-muted-foreground" />
             ) : (
               <Navigation
-                className={`size-5 ${userLocation ? "text-blue-500" : "text-muted-foreground"}`}
+                className={`size-5 ${locationDenied ? "text-muted-foreground/40" : userLocation ? "text-blue-500" : "text-muted-foreground"}`}
               />
             )}
-          </button>
+          </MapOverlayButton>
         </div>
-
       </div>
 
       {/* Mobile view toggle button */}
-      <button
+      <MapOverlayButton
         onClick={() => setMobileView(mobileView === "map" ? "list" : "map")}
-        className="md:hidden mobile-view-toggle"
+        className="fixed z-[1100] bottom-4 left-4 md:hidden"
         aria-label={mobileView === "map" ? t("header.list") : t("header.map")}
       >
-        {mobileView === "map" ? <List className="size-5" /> : <MapIcon className="size-5" />}
-      </button>
+        {mobileView === "map" ? (
+          <List className="size-5 text-muted-foreground" />
+        ) : (
+          <MapIcon className="size-5 text-muted-foreground" />
+        )}
+      </MapOverlayButton>
 
       {/* Mobile overlay tap-to-close */}
       {sidebarOpen && (
