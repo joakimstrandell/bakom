@@ -145,7 +145,7 @@ export default function SearchCommand({
           onKeyDown={handleKeyDown}
         >
           {/* Search Input */}
-          <div className="flex items-center border-b border-black/10 dark:border-white/10 px-3">
+          <div className="flex items-center border-b border-black/6 dark:border-white/6 px-3">
             <Search className="mr-2 size-4 shrink-0 opacity-50" />
             <input
               className="flex h-12 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground"
