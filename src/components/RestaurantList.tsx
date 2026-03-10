@@ -1,5 +1,6 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import { useVirtualizer } from "@tanstack/react-virtual";
 import { MapPin, ArrowDownAZ, TrendingUp } from "lucide-react";
 import type { Restaurant } from "../types";
 import { ScoreBadge } from "./ScoreBadge";
@@ -12,6 +13,8 @@ type RestaurantListProps = {
   onSelectRestaurant: (restaurant: Restaurant) => void;
 };
 
+const ITEM_HEIGHT = 88; // Estimated height for each restaurant item
+
 export default function RestaurantList({
   restaurants,
   selectedRestaurant,
@@ -19,6 +22,7 @@ export default function RestaurantList({
 }: RestaurantListProps) {
   const { t } = useTranslation();
   const [sortBy, setSortBy] = useState<SortOption>("score");
+  const parentRef = useRef<HTMLDivElement>(null);
 
   const sortedRestaurants = useMemo(() => {
     const sorted = [...restaurants];
@@ -35,6 +39,13 @@ export default function RestaurantList({
     }
     return sorted;
   }, [restaurants, sortBy]);
+
+  const virtualizer = useVirtualizer({
+    count: sortedRestaurants.length,
+    getScrollElement: () => parentRef.current,
+    estimateSize: () => ITEM_HEIGHT,
+    overscan: 5,
+  });
 
   return (
     <div className="h-full flex flex-col bg-white dark:bg-zinc-900">
@@ -76,23 +87,35 @@ export default function RestaurantList({
         </div>
       </div>
 
-      {/* List */}
-      <div className="flex-1 overflow-y-auto">
+      {/* Virtualized List */}
+      <div ref={parentRef} className="flex-1 overflow-y-auto">
         {sortedRestaurants.length === 0 ? (
           <div className="px-4 py-8 text-center text-sm text-muted-foreground">
             {t("list.empty")}
           </div>
         ) : (
-          <div className="divide-y divide-black/5 dark:divide-white/5">
-            {sortedRestaurants.map((r) => {
+          <div
+            style={{
+              height: `${virtualizer.getTotalSize()}px`,
+              width: "100%",
+              position: "relative",
+            }}
+          >
+            {virtualizer.getVirtualItems().map((virtualItem) => {
+              const r = sortedRestaurants[virtualItem.index];
               const isSelected = selectedRestaurant?.id === r.id;
               return (
                 <button
                   key={r.id}
+                  data-index={virtualItem.index}
+                  ref={virtualizer.measureElement}
                   onClick={() => onSelectRestaurant(r)}
-                  className={`w-full text-left px-4 py-3 transition-colors hover:bg-black/3 dark:hover:bg-white/3 ${
+                  className={`absolute top-0 left-0 w-full text-left px-4 py-3 transition-colors hover:bg-black/3 dark:hover:bg-white/3 border-b border-black/5 dark:border-white/5 ${
                     isSelected ? "bg-black/5 dark:bg-white/5" : ""
                   }`}
+                  style={{
+                    transform: `translateY(${virtualItem.start}px)`,
+                  }}
                 >
                   <div className="flex items-start gap-3">
                     {/* Score badge */}

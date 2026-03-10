@@ -11,6 +11,7 @@ import RestaurantList from "../components/RestaurantList";
 import SearchCommand from "../components/SearchCommand";
 import type { Restaurant } from "../types";
 import { useFilters } from "../hooks/useFilters";
+import { useIsDesktop } from "../hooks/useMediaQuery";
 import { type RegionFilter, REGIONS, DEFAULT_REGION } from "../lib/regions";
 import {
   Search,
@@ -113,6 +114,10 @@ function MapLayout() {
 
   // Mobile view toggle (map vs list)
   const [mobileView, setMobileView] = useState<"map" | "list">("map");
+  const isDesktop = useIsDesktop();
+
+  // Only render list items when visible (desktop always, mobile only when list view)
+  const showListItems = isDesktop || mobileView === "list";
 
   // ─── Handlers ──────────────────────────────────────────────────
 
@@ -301,13 +306,22 @@ function MapLayout() {
 
       {/* ─── Main Content: Left Sidebar + Map ─────────────────────── */}
       <div className="flex-1 flex overflow-hidden relative">
-        {/* Left sidebar - Restaurant list (desktop only) */}
-        <div className="hidden md:block w-80 border-r border-black/5 dark:border-white/5 overflow-hidden">
-          <RestaurantList
-            restaurants={filtered}
-            selectedRestaurant={selectedRestaurant}
-            onSelectRestaurant={handleSelectRestaurant}
-          />
+        {/* Restaurant list - sidebar on desktop, slide-in overlay on mobile */}
+        <div
+          className={`
+            overflow-hidden bg-background
+            absolute inset-0 z-[1000] transition-transform duration-300
+            ${mobileView === "list" ? "translate-x-0" : "-translate-x-full"}
+            md:relative md:inset-auto md:z-auto md:w-80 md:translate-x-0 md:border-r md:border-black/5 md:dark:border-white/5
+          `}
+        >
+          {showListItems && (
+            <RestaurantList
+              restaurants={filtered}
+              selectedRestaurant={selectedRestaurant}
+              onSelectRestaurant={handleSelectRestaurant}
+            />
+          )}
         </div>
 
         {/* Map container - always rendered, use z-index to layer on mobile */}
@@ -345,18 +359,6 @@ function MapLayout() {
           </button>
         </div>
 
-        {/* Mobile list view - slides in from left */}
-        <div
-          className={`md:hidden absolute inset-0 bg-background z-[1000] overflow-hidden transition-transform duration-300 ${
-            mobileView === "list" ? "translate-x-0" : "-translate-x-full"
-          }`}
-        >
-          <RestaurantList
-            restaurants={filtered}
-            selectedRestaurant={selectedRestaurant}
-            onSelectRestaurant={handleSelectRestaurant}
-          />
-        </div>
       </div>
 
       {/* Mobile view toggle button */}
