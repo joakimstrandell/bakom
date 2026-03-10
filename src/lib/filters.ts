@@ -42,7 +42,7 @@ export const DEFAULT_FILTERS: FilterState = {
 };
 
 /** Check if a range filter is active (not at default bounds) */
-function isRangeActive(range: Range, defaultMin: number, defaultMax: number): boolean {
+export function isRangeActive(range: Range, defaultMin: number, defaultMax: number): boolean {
   return range.min > defaultMin || range.max < defaultMax;
 }
 

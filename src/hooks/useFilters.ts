@@ -2,6 +2,7 @@ import { useReducer, useMemo } from "react";
 import type { Restaurant, MichelinDistinction, WhiteGuideClassification } from "../types";
 import {
   filterRestaurants,
+  isRangeActive,
   DEFAULT_FILTERS,
   type FilterState,
   type Range,
@@ -114,11 +115,6 @@ const RANGE_DEFAULTS: Record<RangeFilterKey, { min: number; max: number }> = {
   dn: { min: 0, max: 5 },
 };
 
-function isRangeActive(range: Range, key: RangeFilterKey): boolean {
-  const defaults = RANGE_DEFAULTS[key];
-  return range.min > defaults.min || range.max < defaults.max;
-}
-
 // ─── Hook ────────────────────────────────────────────────────────
 
 export function useFilters(restaurants: Restaurant[]) {
@@ -142,7 +138,8 @@ export function useFilters(restaurants: Restaurant[]) {
 
     // Check each range filter
     for (const key of Object.keys(RANGE_DEFAULTS) as RangeFilterKey[]) {
-      if (isRangeActive(state[key], key)) {
+      const defaults = RANGE_DEFAULTS[key];
+      if (isRangeActive(state[key], defaults.min, defaults.max)) {
         count++;
       }
     }

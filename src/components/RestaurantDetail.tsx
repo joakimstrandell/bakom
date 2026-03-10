@@ -16,6 +16,8 @@ import { isOpen, getNextOpenTime } from "../lib/isOpen";
 import { ScoreBadge } from "./ScoreBadge";
 import { StarDisplay, PipDisplay } from "./Ratings";
 import { Button } from "./ui/button";
+import { IconButton } from "./IconButton";
+import { SectionHeader } from "./SectionHeader";
 
 // ─── Labels ─────────────────────────────────────────────────────
 
@@ -130,15 +132,10 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
   return (
     <div className="h-full flex flex-col">
       {/* Header */}
-      <div className="px-5 py-4 border-b border-black/6">
+      <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
         <div className="flex items-start justify-between gap-3">
           <div className="flex-1 min-w-0">
-            <h2
-              className="text-lg font-semibold truncate"
-              style={{ fontFamily: "var(--font-display)" }}
-            >
-              {r.name}
-            </h2>
+            <h2 className="text-lg font-semibold font-display truncate">{r.name}</h2>
             {r.cuisine && (
               <p className="text-sm text-muted-foreground mt-0.5 truncate">{r.cuisine}</p>
             )}
@@ -160,12 +157,9 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
               </div>
             )}
           </div>
-          <button
-            onClick={onClose}
-            className="shrink-0 size-10 rounded-full flex items-center justify-center hover:bg-black/5 dark:hover:bg-white/10 transition-colors"
-          >
+          <IconButton onClick={onClose} className="shrink-0">
             <X className="size-5" />
-          </button>
+          </IconButton>
         </div>
       </div>
 
@@ -175,7 +169,7 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
         {hasRatings && (
           <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
             <div className="flex items-center justify-between mb-3">
-              <h3 className="text-xs font-bold uppercase tracking-wider">{t("detail.ratings")}</h3>
+              <SectionHeader className="mb-0">{t("detail.ratings")}</SectionHeader>
               <div className="flex items-center gap-1.5">
                 {r.bakomRank != null && r.bakomRank <= 50 && (
                   <span className="inline-flex items-center justify-center gap-1 h-6 px-1.5 rounded bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-bold">

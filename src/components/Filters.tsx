@@ -18,6 +18,9 @@ import type { MichelinDistinction, WhiteGuideClassification } from "../types";
 import type { FilterState, Range, FilterAction, RangeFilterKey } from "../hooks/useFilters";
 import type { MealType } from "../lib/isOpen";
 import type { AvailabilityFilter } from "../lib/filters";
+import { IconButton } from "./IconButton";
+import { FilterChip } from "./FilterChip";
+import { SectionHeader } from "./SectionHeader";
 
 // Dynamic cuisine list generated from data
 import cuisineData from "../../data/cuisines.json";
@@ -134,16 +137,15 @@ function RangeSlider({
   }, [dispatch, filterKey, localRange]);
 
   return (
-    <div className="filter-section">
-      <div className="filter-section-title">
-        {icon}
+    <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
+      <SectionHeader icon={icon}>
         {label}
         {isActive && (
-          <span className="ml-auto text-foreground font-semibold text-xs">
+          <span className="ml-auto text-foreground font-semibold text-xs normal-case tracking-normal">
             {format(localRange.min)} – {format(localRange.max)}
           </span>
         )}
-      </div>
+      </SectionHeader>
       <div className="relative h-6 flex items-center">
         {/* Track background */}
         <div className="absolute inset-x-0 h-2 bg-black/10 dark:bg-white/10 rounded-full" />
@@ -230,11 +232,9 @@ export default function Filters({
   return (
     <div className="h-full flex flex-col">
       {/* Header */}
-      <div className="flex items-center justify-between px-5 py-4 border-b border-black/6">
+      <div className="flex items-center justify-between px-5 py-4 border-b border-black/6 dark:border-white/6">
         <div>
-          <h2 className="text-lg font-semibold" style={{ fontFamily: "var(--font-display)" }}>
-            {t("filters.title")}
-          </h2>
+          <h2 className="text-lg font-semibold font-display">{t("filters.title")}</h2>
           <p
             className="text-sm text-muted-foreground mt-0.5"
             dangerouslySetInnerHTML={{
@@ -242,51 +242,41 @@ export default function Filters({
             }}
           />
         </div>
-        <button
-          onClick={onClose}
-          className="size-10 rounded-full flex items-center justify-center hover:bg-black/5 transition-colors select-none"
-          aria-label={t("filters.close_aria")}
-        >
+        <IconButton onClick={onClose} aria-label={t("filters.close_aria")}>
           <X className="size-5" />
-        </button>
+        </IconButton>
       </div>
 
       {/* Filter sections */}
       <div className="flex-1 overflow-y-auto">
         {/* Michelin multi-select */}
-        <div className="filter-section">
-          <div className="filter-section-title">
-            <Award className="size-4" />
-            Michelin
-          </div>
+        <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
+          <SectionHeader icon={<Award className="size-4" />}>Michelin</SectionHeader>
           <div className="flex flex-wrap gap-2">
             {MICHELIN_OPTIONS.map(({ key, label }) => (
-              <button
+              <FilterChip
                 key={key}
                 onClick={() => dispatch({ type: "TOGGLE_MICHELIN", payload: key })}
-                className={`filter-chip ${state.selectedMichelin.has(key) ? "active" : ""}`}
+                active={state.selectedMichelin.has(key)}
               >
                 {label}
-              </button>
+              </FilterChip>
             ))}
           </div>
         </div>
 
         {/* White Guide multi-select */}
-        <div className="filter-section">
-          <div className="filter-section-title">
-            <Award className="size-4" />
-            White Guide
-          </div>
+        <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
+          <SectionHeader icon={<Award className="size-4" />}>White Guide</SectionHeader>
           <div className="flex flex-wrap gap-2">
             {WG_KEYS.map((key) => (
-              <button
+              <FilterChip
                 key={key}
                 onClick={() => dispatch({ type: "TOGGLE_WHITEGUIDE", payload: key })}
-                className={`filter-chip ${state.selectedWhiteGuide.has(key) ? "active" : ""}`}
+                active={state.selectedWhiteGuide.has(key)}
               >
                 {t(`whiteguide.${key}`)}
-              </button>
+              </FilterChip>
             ))}
           </div>
         </div>
@@ -366,78 +356,74 @@ export default function Filters({
         />
 
         {/* Cuisine filters */}
-        <div className="filter-section">
-          <div className="filter-section-title">
-            <UtensilsCrossed className="size-4" />
+        <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
+          <SectionHeader icon={<UtensilsCrossed className="size-4" />}>
             {t("filters.cuisine")}
-          </div>
+          </SectionHeader>
           <div className="flex flex-wrap gap-2">
             {CUISINE_KEYS.map((key) => (
-              <button
+              <FilterChip
                 key={key}
                 onClick={() => dispatch({ type: "TOGGLE_CUISINE", payload: key })}
-                className={`filter-chip ${state.selectedCuisines.has(key) ? "active" : ""}`}
+                active={state.selectedCuisines.has(key)}
               >
                 {t(`cuisines.${key}`)}
-              </button>
+              </FilterChip>
             ))}
           </div>
         </div>
 
         {/* Price filters */}
-        <div className="filter-section">
-          <div className="filter-section-title">
-            <DollarSign className="size-4" />
+        <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
+          <SectionHeader icon={<DollarSign className="size-4" />}>
             {t("filters.price")}
-          </div>
+          </SectionHeader>
           <div className="flex flex-wrap gap-2">
             {PRICES.map((p) => (
-              <button
+              <FilterChip
                 key={p}
                 onClick={() => dispatch({ type: "TOGGLE_PRICE", payload: p })}
-                className={`filter-chip ${state.selectedPrices.has(p) ? "active" : ""}`}
+                active={state.selectedPrices.has(p)}
               >
                 {p}
-              </button>
+              </FilterChip>
             ))}
           </div>
         </div>
 
         {/* Availability filters */}
-        <div className="filter-section">
-          <div className="filter-section-title">
-            <Clock className="size-4" />
+        <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
+          <SectionHeader icon={<Clock className="size-4" />}>
             {t("filters.availability")}
-          </div>
+          </SectionHeader>
           <div className="flex flex-wrap gap-2">
             {AVAILABILITY_OPTIONS.map(({ key }) => (
-              <button
+              <FilterChip
                 key={key}
                 onClick={() => dispatch({ type: "TOGGLE_AVAILABILITY", payload: key })}
-                className={`filter-chip ${state.selectedAvailability.has(key) ? "active" : ""}`}
+                active={state.selectedAvailability.has(key)}
               >
                 {t(`filters.${key}`)}
-              </button>
+              </FilterChip>
             ))}
           </div>
         </div>
 
         {/* Meal type filters */}
-        <div className="filter-section">
-          <div className="filter-section-title">
-            <UtensilsCrossed className="size-4" />
+        <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
+          <SectionHeader icon={<UtensilsCrossed className="size-4" />}>
             {t("filters.mealType")}
-          </div>
+          </SectionHeader>
           <div className="flex flex-wrap gap-2">
             {MEAL_OPTIONS.map(({ key, icon: Icon }) => (
-              <button
+              <FilterChip
                 key={key}
                 onClick={() => dispatch({ type: "TOGGLE_MEAL", payload: key })}
-                className={`filter-chip ${state.selectedMeals.has(key) ? "active" : ""}`}
+                active={state.selectedMeals.has(key)}
               >
-                <Icon className="size-3.5 mr-1" />
+                <Icon className="size-3.5" />
                 {t(`filters.${key}`)}
-              </button>
+              </FilterChip>
             ))}
           </div>
         </div>
@@ -445,10 +431,10 @@ export default function Filters({
 
       {/* Footer */}
       {hasActiveFilters && (
-        <div className="px-5 py-4 border-t border-black/6">
+        <div className="px-5 py-4 border-t border-black/6 dark:border-white/6">
           <button
             onClick={() => dispatch({ type: "CLEAR_ALL" })}
-            className="w-full flex items-center justify-center gap-2 h-11 rounded-full border border-black/10 text-sm font-medium hover:bg-black/5 transition-colors"
+            className="w-full flex items-center justify-center gap-2 h-11 rounded-full border border-black/10 dark:border-white/10 text-sm font-medium hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
           >
             <RotateCcw className="size-4" />
             {t("filters.clear")}
