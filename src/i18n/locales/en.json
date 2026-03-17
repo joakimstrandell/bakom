@@ -27,6 +27,7 @@
   "filters": {
     "title": "Filter",
     "showing": "Showing <strong>{{count}}</strong> of {{total}} restaurants",
+    "showing_hotels": "Showing <strong>{{count}}</strong> of {{total}} hotels",
     "clear": "Clear all filters",
     "close_aria": "Close filters",
     "cuisine": "Cuisine",

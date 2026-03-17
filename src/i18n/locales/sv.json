@@ -27,6 +27,7 @@
   "filters": {
     "title": "Filter",
     "showing": "Visar <strong>{{count}}</strong> av {{total}} restauranger",
+    "showing_hotels": "Visar <strong>{{count}}</strong> av {{total}} hotell",
     "clear": "Rensa alla filter",
     "close_aria": "Stäng filter",
     "cuisine": "Kök",
