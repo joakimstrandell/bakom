@@ -25,15 +25,16 @@ export type ScoredVenue = EnrichedVenue & {
 
 // ─── Weights (from pipeline1 — proven calibration) ──────────────
 
-const WEIGHTS = {
+const WEIGHTS: Record<string, number> = {
   michelin: 0.28,
   whiteguide: 0.2,
   svd: 0.16,
   di: 0.16,
   krogguiden: 0.16,
+  falstaff: 0.14,
   dn: 0.14,
   google: 0.1,
-} as const;
+};
 
 // ─── Michelin normalization (fixed mapping to 0–10) ─────────────
 
@@ -98,6 +99,11 @@ function normalize0to5(score: number): number {
   return (score / 5) * 10;
 }
 
+/** Falstaff: 0–100 → 0–10 */
+function normalize0to100(score: number): number {
+  return (score / 100) * 10;
+}
+
 function normalizeNumericBySource(
   sourceId: string,
   r: NumericRating,
@@ -112,6 +118,8 @@ function normalizeNumericBySource(
       return normalize0to25(r.score);
     case "dn":
       return normalize0to5(r.score);
+    case "falstaff":
+      return normalize0to100(r.score);
     default:
       return null;
   }
@@ -215,7 +223,7 @@ function collectSources(venue: EnrichedVenue): {
     }
   }
 
-  for (const sourceId of ["svd", "di", "krogguiden", "dn"] as const) {
+  for (const sourceId of ["svd", "di", "krogguiden", "falstaff", "dn"] as const) {
     const r = ratings[sourceId];
     if (r) {
       const s = normalizeNumericBySource(sourceId, r);
@@ -258,26 +266,10 @@ function computeScore(venue: EnrichedVenue): {
     normalizedRatings[e.source] = Math.round(e.score * 100) / 100;
   }
 
-  // Weighted average
-  // Prestige sources (Michelin, WG) should never drag the score down —
-  // they already contribute via the prestige ceiling system. Only include
-  // them in the average if they help.
-  const prestigeSources = new Set(["michelin", "whiteguide"]);
-  const nonPrestige = entries.filter((e) => !prestigeSources.has(e.source));
-  let nonPrestigeAvg = 0;
-  if (nonPrestige.length > 0) {
-    let ws = 0, tw = 0;
-    for (const e of nonPrestige) { ws += e.weight * e.score; tw += e.weight; }
-    nonPrestigeAvg = ws / tw;
-  }
-
+  // Weighted average — all sources included
   let weightedSum = 0;
   let totalWeight = 0;
   for (const e of entries) {
-    // Skip prestige sources that would pull the average down
-    if (prestigeSources.has(e.source) && nonPrestige.length > 0 && e.score < nonPrestigeAvg) {
-      continue;
-    }
     weightedSum += e.weight * e.score;
     totalWeight += e.weight;
   }
