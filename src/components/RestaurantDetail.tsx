@@ -171,20 +171,24 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
 
       {/* Scrollable content */}
       <div className="flex-1 overflow-y-auto">
+        {/* Bakom Score Section */}
+        {r.bakomScore != null && (
+          <div className="px-5 py-3 border-b border-black/6 dark:border-white/6 flex items-center justify-between">
+            <span className="text-sm font-medium text-muted-foreground">Bakom</span>
+            <div className="flex items-center gap-1.5">
+              {r.bakomRank != null && r.bakomRank <= 50 && (
+                <span className="inline-flex items-center justify-center gap-1 h-6 px-1.5 rounded bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-bold">
+                  TOP 50
+                </span>
+              )}
+              <ScoreBadge score={r.bakomScore} size="sm" />
+            </div>
+          </div>
+        )}
+
         {/* Ratings Section */}
         {hasRatings && (
           <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
-            <div className="flex items-center justify-between mb-3">
-              <SectionHeader className="mb-0">{t("detail.ratings")}</SectionHeader>
-              <div className="flex items-center gap-1.5">
-                {r.bakomRank != null && r.bakomRank <= 50 && (
-                  <span className="inline-flex items-center justify-center gap-1 h-6 px-1.5 rounded bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-bold">
-                    TOP 50
-                  </span>
-                )}
-                {r.bakomScore != null && <ScoreBadge score={r.bakomScore} size="sm" />}
-              </div>
-            </div>
             <div className="space-y-0">
               {ratings.michelin ? (
                 <SourceRating label="Michelin" href={links.michelin}>
