@@ -68,6 +68,11 @@ function normalize0to5(rating: number): number {
   return (rating / 5) * 10;
 }
 
+/** Normalize a 0–100 rating (Falstaff scale) to 0–10 */
+function normalize0to100(rating: number): number {
+  return (rating / 100) * 10;
+}
+
 /**
  * Bayesian dampening for crowd-sourced ratings.
  * With few reviews, the score is pulled toward CROWD_PRIOR (neutral-good).
@@ -82,15 +87,16 @@ function bayesianDampen(rawScore: number, reviewCount: number): number {
 
 // ─── Weights ────────────────────────────────────────────────────
 
-const WEIGHTS = {
+const WEIGHTS: Record<string, number> = {
   michelin: 0.28,
   whiteguide: 0.2,
   svd: 0.16,
   krogguiden: 0.16,
   di: 0.16,
+  falstaff: 0.14,
   dn: 0.14,
   google: 0.1,
-} as const;
+};
 
 // ─── Score calculation ──────────────────────────────────────────
 
@@ -144,6 +150,12 @@ function collectSources(input: ScoreInput): {
   if (ratings.di != null && ratings.di > 0) {
     const score = normalize0to25(ratings.di);
     entries.push({ weight: WEIGHTS.di, score });
+    allNormalizedScores.push(score);
+  }
+
+  if (ratings.falstaff != null && ratings.falstaff > 0) {
+    const score = normalize0to100(ratings.falstaff);
+    entries.push({ weight: WEIGHTS.falstaff, score });
     allNormalizedScores.push(score);
   }
 

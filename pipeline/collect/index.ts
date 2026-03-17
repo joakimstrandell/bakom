@@ -6,6 +6,7 @@ import { collectSvdReviews } from "./svd.js";
 import { collectMichelin } from "./michelin.js";
 import { collectDi } from "./di.js";
 import { collectKrogguiden } from "./krogguiden.js";
+import { collectFalstaff } from "./falstaff.js";
 import { getSources, getSourceIds } from "../sources/registry.js";
 import { loadArticles, saveArticles } from "../utils/save.js";
 import {
@@ -29,6 +30,7 @@ const COLLECTORS: Record<string, Collector> = {
   michelin: async () => collectMichelin(),
   di: async () => collectDi(),
   krogguiden: async ({ force }) => collectKrogguiden({ force }),
+  falstaff: async () => collectFalstaff(),
 };
 
 // ─── Re-normalize existing data ─────────────────────────────────
@@ -71,6 +73,7 @@ const DATA_FILES = [
   "michelin.json",
   "di.json",
   "krogguiden.json",
+  "falstaff.json",
 ];
 
 async function runNormalize() {

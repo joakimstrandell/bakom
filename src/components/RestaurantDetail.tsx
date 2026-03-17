@@ -127,6 +127,7 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
     (ratings.svd != null && ratings.svd > 0) ||
     ratings.dn ||
     (ratings.di != null && ratings.di > 0) ||
+    (ratings.falstaff != null && ratings.falstaff > 0) ||
     links.michelin ||
     links.whiteguide ||
     links.svd ||
@@ -254,6 +255,15 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
                 </SourceRating>
               ) : links.krogguiden ? (
                 <SourceRating label="Krogguiden" href={links.krogguiden}>
+                  <span className="text-muted-foreground italic">{t("detail.visited")}</span>
+                </SourceRating>
+              ) : null}
+              {ratings.falstaff != null && ratings.falstaff > 0 ? (
+                <SourceRating label="Falstaff" href={links.falstaff}>
+                  {ratings.falstaff}/100
+                </SourceRating>
+              ) : links.falstaff ? (
+                <SourceRating label="Falstaff" href={links.falstaff}>
                   <span className="text-muted-foreground italic">{t("detail.visited")}</span>
                 </SourceRating>
               ) : null}

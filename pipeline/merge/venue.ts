@@ -45,6 +45,7 @@ export type VenueRatings = {
   dn?: NumericRating;
   di?: NumericRating;
   krogguiden?: NumericRating;
+  falstaff?: NumericRating;
 };
 
 // ─── Venue ─────────────────────────────────────────────────────

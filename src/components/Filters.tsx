@@ -341,6 +341,16 @@ export default function Filters({
               dispatch={dispatch}
             />
             <RangeSlider
+              label="Falstaff"
+              icon={<Award className="size-4" />}
+              range={state.falstaff}
+              min={0}
+              max={100}
+              step={5}
+              filterKey="falstaff"
+              dispatch={dispatch}
+            />
+            <RangeSlider
               label="Krogguiden"
               icon={<Star className="size-4" />}
               range={state.krogguiden}

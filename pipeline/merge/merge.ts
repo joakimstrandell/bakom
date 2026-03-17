@@ -485,6 +485,7 @@ export async function mergeAll(): Promise<Venue[]> {
   const diArticles = loadArticles<Article[]>("di.json") ?? [];
   const dnArticles = loadArticles<Article[]>("dn-review.json") ?? [];
   const svdArticles = loadArticles<Article[]>("svd-review.json") ?? [];
+  const falstaffArticles = loadArticles<Article[]>("falstaff.json") ?? [];
 
   console.log(`  Sources loaded:`);
   console.log(`    White Guide:  ${wgReviews.length} reviews`);
@@ -493,36 +494,37 @@ export async function mergeAll(): Promise<Venue[]> {
   console.log(`    DI Weekend:   ${diArticles.length} articles`);
   console.log(`    DN:           ${dnArticles.length} articles`);
   console.log(`    SvD:          ${svdArticles.length} articles`);
+  console.log(`    Falstaff:     ${falstaffArticles.length} articles`);
 
   const venues: WorkingVenue[] = [];
   const index = new VenueIndex();
 
   // 1. White Guide as base — best structural data
-  console.log("\n  [1/6] White Guide (base)...");
+  console.log("\n  [1/7] White Guide (base)...");
   const wgResult = processWhiteGuide(wgReviews, venues, index);
   console.log(`    Created ${wgResult.created} venues, matched ${wgResult.matched} to existing`);
 
   // 2. Krogguiden
-  console.log("  [2/6] Krogguiden...");
+  console.log("  [2/7] Krogguiden...");
   const kgResult = processSimpleSource(
     kgArticles, "krogguiden", venues, index, "krogguiden", [1, 5],
   );
   console.log(`    Matched ${kgResult.matched}, created ${kgResult.created}, fuzzy ${kgResult.fuzzy}`);
 
   // 3. Michelin
-  console.log("  [3/6] Michelin...");
+  console.log("  [3/7] Michelin...");
   const michResult = processMichelin(michelinArticles, venues, index);
   console.log(`    Matched ${michResult.matched}, created ${michResult.created}, fuzzy ${michResult.fuzzy}`);
 
   // 4. DI Weekend
-  console.log("  [4/6] DI Weekend...");
+  console.log("  [4/7] DI Weekend...");
   const diResult = processSimpleSource(
     diArticles, "di", venues, index, "di", [0, 25],
   );
   console.log(`    Matched ${diResult.matched}, created ${diResult.created}, fuzzy ${diResult.fuzzy}`);
 
   // 5. DN — reviews + sub-articles
-  console.log("  [5/6] DN...");
+  console.log("  [5/7] DN...");
   const dnResult = processSimpleSource(
     dnArticles, "dn-review", venues, index, "dn", [1, 5],
   );
@@ -531,12 +533,19 @@ export async function mergeAll(): Promise<Venue[]> {
   console.log(`    Sub-articles: matched ${dnSubResult.matched}, created ${dnSubResult.created}`);
 
   // 6. SvD — no city data, stricter matching
-  console.log("  [6/6] SvD...");
+  console.log("  [6/7] SvD...");
   const svdResult = processSimpleSource(
     svdArticles, "svd-review", venues, index, "svd", [1, 6],
     { nameThreshold: NAME_THRESHOLD_NO_ADDR },
   );
   console.log(`    Matched ${svdResult.matched}, created ${svdResult.created}, fuzzy ${svdResult.fuzzy}`);
+
+  // 7. Falstaff — 0-100 point scale
+  console.log("  [7/7] Falstaff...");
+  const falstaffResult = processSimpleSource(
+    falstaffArticles, "falstaff", venues, index, "falstaff", [0, 100],
+  );
+  console.log(`    Matched ${falstaffResult.matched}, created ${falstaffResult.created}, fuzzy ${falstaffResult.fuzzy}`);
 
   // ── Finalize venues ──
 
@@ -595,7 +604,7 @@ export async function mergeAll(): Promise<Venue[]> {
   }
 
   // Rating coverage
-  const ratingKeys: (keyof VenueRatings)[] = ["michelin", "whiteguide", "svd", "dn", "di", "krogguiden"];
+  const ratingKeys: (keyof VenueRatings)[] = ["michelin", "whiteguide", "svd", "dn", "di", "krogguiden", "falstaff"];
   console.log(`\n  Rating coverage:`);
   for (const key of ratingKeys) {
     const count = finalVenues.filter((v) => v.ratings[key]).length;

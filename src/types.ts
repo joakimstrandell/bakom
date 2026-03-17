@@ -29,6 +29,7 @@ export type SourceLinks = {
   svd?: string;
   dn?: string;
   di?: string;
+  falstaff?: string;
 };
 
 export type SourceIds = {
@@ -49,6 +50,7 @@ export type SourceRatings = {
   svd?: number | null; // 1-6 scale
   dn?: number | null; // 0-5 scale
   di?: number | null; // 15-25 scale (totalScore)
+  falstaff?: number | null; // 0-100 scale
 };
 
 export type MetroRegion = "stockholm" | "gothenburg" | "malmo" | "sweden";

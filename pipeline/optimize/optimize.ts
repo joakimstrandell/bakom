@@ -31,6 +31,7 @@ type FrontendVenue = {
     svd?: number | null;
     dn?: number | null;
     di?: number | null;
+    falstaff?: number | null;
   };
   links: Record<string, string>;
   googleRatingCount?: number;
@@ -163,6 +164,9 @@ function transformVenue(v: ScoredVenue): FrontendVenue {
   }
   if (v.ratings.di?.score != null) {
     ratings.di = v.ratings.di.score;
+  }
+  if (v.ratings.falstaff?.score != null) {
+    ratings.falstaff = v.ratings.falstaff.score;
   }
 
   // Cuisine from Google primary type
