@@ -1,4 +1,0 @@
-{
-  "$comment": "Custom Google search queries for restaurants with ambiguous names (e.g., location-based names like 'Nytorget 6'). Keys are restaurant names, values are custom search queries.",
-  "overrides": {}
-}

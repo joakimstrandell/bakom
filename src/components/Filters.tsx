@@ -23,11 +23,6 @@ import { IconButton } from "./IconButton";
 import { FilterChip } from "./FilterChip";
 import { SectionHeader } from "./SectionHeader";
 
-// Dynamic cuisine list generated from data
-import cuisineData from "../../data/cuisines.json";
-
-const CUISINE_KEYS = cuisineData.map((c) => c.key);
-
 const PRICES = ["$", "$$", "$$$", "$$$$"] as const;
 
 // Michelin distinctions for multi-select
@@ -78,6 +73,7 @@ type FiltersProps = {
   filtered: number;
   hasActiveFilters: boolean;
   dataMode?: DataMode;
+  cuisines: string[];
 };
 
 // ─── Range Slider Component ──────────────────────────────────────
@@ -236,9 +232,12 @@ export default function Filters({
   filtered,
   hasActiveFilters,
   dataMode = "restaurants",
+  cuisines,
 }: FiltersProps) {
   const { t } = useTranslation();
-  const michelinOptions = dataMode === "hotels" ? MICHELIN_HOTEL_OPTIONS : MICHELIN_RESTAURANT_OPTIONS;
+  const isHotels = dataMode === "hotels";
+  const michelinOptions = isHotels ? MICHELIN_HOTEL_OPTIONS : MICHELIN_RESTAURANT_OPTIONS;
+  const showingKey = isHotels ? "filters.showing_hotels" : "filters.showing";
 
   return (
     <div className="h-full flex flex-col">
@@ -249,7 +248,7 @@ export default function Filters({
           <p
             className="text-sm text-muted-foreground mt-0.5"
             dangerouslySetInnerHTML={{
-              __html: t("filters.showing", { count: filtered, total }),
+              __html: t(showingKey, { count: filtered, total }),
             }}
           />
         </div>
@@ -304,54 +303,52 @@ export default function Filters({
           dispatch={dispatch}
         />
 
-        {/* SvD range */}
-        <RangeSlider
-          label="SvD"
-          icon={<Newspaper className="size-4" />}
-          range={state.svd}
-          min={0}
-          max={6}
-          step={1}
-          filterKey="svd"
-          dispatch={dispatch}
-        />
-
-        {/* DN range */}
-        <RangeSlider
-          label="DN"
-          icon={<Newspaper className="size-4" />}
-          range={state.dn}
-          min={0}
-          max={5}
-          step={1}
-          filterKey="dn"
-          dispatch={dispatch}
-        />
-
-        {/* DI range */}
-        <RangeSlider
-          label="DI Weekend"
-          icon={<Newspaper className="size-4" />}
-          range={state.di}
-          min={0}
-          max={25}
-          step={1}
-          filterKey="di"
-          dispatch={dispatch}
-        />
-
-        {/* Krogguiden range */}
-        <RangeSlider
-          label="Krogguiden"
-          icon={<Star className="size-4" />}
-          range={state.krogguiden}
-          min={0}
-          max={5}
-          step={0.1}
-          filterKey="krogguiden"
-          dispatch={dispatch}
-          formatValue={(v) => v.toFixed(1)}
-        />
+        {/* Restaurant-only rating sources */}
+        {!isHotels && (
+          <>
+            <RangeSlider
+              label="SvD"
+              icon={<Newspaper className="size-4" />}
+              range={state.svd}
+              min={0}
+              max={6}
+              step={1}
+              filterKey="svd"
+              dispatch={dispatch}
+            />
+            <RangeSlider
+              label="DN"
+              icon={<Newspaper className="size-4" />}
+              range={state.dn}
+              min={0}
+              max={5}
+              step={1}
+              filterKey="dn"
+              dispatch={dispatch}
+            />
+            <RangeSlider
+              label="DI Weekend"
+              icon={<Newspaper className="size-4" />}
+              range={state.di}
+              min={0}
+              max={25}
+              step={1}
+              filterKey="di"
+              dispatch={dispatch}
+            />
+            <RangeSlider
+              label="Krogguiden"
+              icon={<Star className="size-4" />}
+              range={state.krogguiden}
+              min={0}
+              max={5}
+              step={0.1}
+              filterKey="krogguiden"
+              dispatch={dispatch}
+              formatValue={(v) => v.toFixed(1)}
+            />
+          </>
+        )}
 
         {/* Google range */}
         <RangeSlider
@@ -366,78 +363,85 @@ export default function Filters({
           formatValue={(v) => v.toFixed(1)}
         />
 
-        {/* Cuisine filters */}
-        <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
-          <SectionHeader icon={<UtensilsCrossed className="size-4" />}>
-            {t("filters.cuisine")}
-          </SectionHeader>
-          <div className="flex flex-wrap gap-2">
-            {CUISINE_KEYS.map((key) => (
-              <FilterChip
-                key={key}
-                onClick={() => dispatch({ type: "TOGGLE_CUISINE", payload: key })}
-                active={state.selectedCuisines.has(key)}
-              >
-                {t(`cuisines.${key}`)}
-              </FilterChip>
-            ))}
+        {/* Cuisine filters — restaurants only */}
+        {!isHotels && cuisines.length > 0 && (
+          <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
+            <SectionHeader icon={<UtensilsCrossed className="size-4" />}>
+              {t("filters.cuisine")}
+            </SectionHeader>
+            <div className="flex flex-wrap gap-2">
+              {cuisines.map((key) => (
+                <FilterChip
+                  key={key}
+                  onClick={() => dispatch({ type: "TOGGLE_CUISINE", payload: key })}
+                  active={state.selectedCuisines.has(key)}
+                >
+                  {key}
+                </FilterChip>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
-        {/* Price filters */}
-        <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
-          <SectionHeader icon={<DollarSign className="size-4" />}>
-            {t("filters.price")}
-          </SectionHeader>
-          <div className="flex flex-wrap gap-2">
-            {PRICES.map((p) => (
-              <FilterChip
-                key={p}
-                onClick={() => dispatch({ type: "TOGGLE_PRICE", payload: p })}
-                active={state.selectedPrices.has(p)}
-              >
-                {p}
-              </FilterChip>
-            ))}
+        {/* Price filters — restaurants only (almost no hotel price data) */}
+        {!isHotels && (
+          <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
+            <SectionHeader icon={<DollarSign className="size-4" />}>
+              {t("filters.price")}
+            </SectionHeader>
+            <div className="flex flex-wrap gap-2">
+              {PRICES.map((p) => (
+                <FilterChip
+                  key={p}
+                  onClick={() => dispatch({ type: "TOGGLE_PRICE", payload: p })}
+                  active={state.selectedPrices.has(p)}
+                >
+                  {p}
+                </FilterChip>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
-        {/* Availability filters */}
-        <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
-          <SectionHeader icon={<Clock className="size-4" />}>
-            {t("filters.availability")}
-          </SectionHeader>
-          <div className="flex flex-wrap gap-2">
-            {AVAILABILITY_OPTIONS.map(({ key }) => (
-              <FilterChip
-                key={key}
-                onClick={() => dispatch({ type: "TOGGLE_AVAILABILITY", payload: key })}
-                active={state.selectedAvailability.has(key)}
-              >
-                {t(`filters.${key}`)}
-              </FilterChip>
-            ))}
-          </div>
-        </div>
+        {/* Availability & meal filters — restaurants only */}
+        {!isHotels && (
+          <>
+            <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
+              <SectionHeader icon={<Clock className="size-4" />}>
+                {t("filters.availability")}
+              </SectionHeader>
+              <div className="flex flex-wrap gap-2">
+                {AVAILABILITY_OPTIONS.map(({ key }) => (
+                  <FilterChip
+                    key={key}
+                    onClick={() => dispatch({ type: "TOGGLE_AVAILABILITY", payload: key })}
+                    active={state.selectedAvailability.has(key)}
+                  >
+                    {t(`filters.${key}`)}
+                  </FilterChip>
+                ))}
+              </div>
+            </div>
 
-        {/* Meal type filters */}
-        <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
-          <SectionHeader icon={<UtensilsCrossed className="size-4" />}>
-            {t("filters.mealType")}
-          </SectionHeader>
-          <div className="flex flex-wrap gap-2">
-            {MEAL_OPTIONS.map(({ key, icon: Icon }) => (
-              <FilterChip
-                key={key}
-                onClick={() => dispatch({ type: "TOGGLE_MEAL", payload: key })}
-                active={state.selectedMeals.has(key)}
-              >
-                <Icon className="size-3.5" />
-                {t(`filters.${key}`)}
-              </FilterChip>
-            ))}
-          </div>
-        </div>
+            <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
+              <SectionHeader icon={<UtensilsCrossed className="size-4" />}>
+                {t("filters.mealType")}
+              </SectionHeader>
+              <div className="flex flex-wrap gap-2">
+                {MEAL_OPTIONS.map(({ key, icon: Icon }) => (
+                  <FilterChip
+                    key={key}
+                    onClick={() => dispatch({ type: "TOGGLE_MEAL", payload: key })}
+                    active={state.selectedMeals.has(key)}
+                  >
+                    <Icon className="size-3.5" />
+                    {t(`filters.${key}`)}
+                  </FilterChip>
+                ))}
+              </div>
+            </div>
+          </>
+        )}
       </div>
 
       {/* Footer */}

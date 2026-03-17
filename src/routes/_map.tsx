@@ -31,8 +31,8 @@ import { IconButton } from "../components/IconButton";
 import { MapOverlayButton } from "../components/MapOverlayButton";
 
 // Static import of all data
-import restaurantData from "../../data/restaurants.frontend.json";
-import hotelData from "../../data/hotels.frontend.json";
+import restaurantData from "../../pipeline/.data/restaurants.frontend.json";
+import hotelData from "../../pipeline/.data/hotels.frontend.json";
 
 const Map = lazy(() => import("../components/Map"));
 
@@ -41,6 +41,25 @@ export type DataMode = "restaurants" | "hotels";
 // Pre-filter valid entries (with coordinates)
 const ALL_RESTAURANTS = (restaurantData as Restaurant[]).filter((r) => r.lat && r.lng);
 const ALL_HOTELS = (hotelData as Restaurant[]).filter((r) => r.lat && r.lng);
+
+/** Derive cuisine list from data, sorted by frequency, min 3 occurrences */
+const GENERIC_TYPES = new Set(["Restaurang", "Café", "Bar", "Hotell"]);
+function deriveCuisines(data: Restaurant[]): string[] {
+  const counts: Record<string, number> = {};
+  for (const r of data) {
+    if (!r.cuisine) continue;
+    for (const c of r.cuisine.split(",").map((s) => s.trim()).filter(Boolean)) {
+      if (!GENERIC_TYPES.has(c)) counts[c] = (counts[c] || 0) + 1;
+    }
+  }
+  return Object.entries(counts)
+    .filter(([, n]) => n >= 3)
+    .sort((a, b) => b[1] - a[1])
+    .map(([k]) => k);
+}
+
+const RESTAURANT_CUISINES = deriveCuisines(ALL_RESTAURANTS);
+const HOTEL_CUISINES = deriveCuisines(ALL_HOTELS);
 
 // Count entries per region for the dropdown
 function getRegionCount(regionId: RegionFilter, data: Restaurant[]): number {
@@ -66,6 +85,7 @@ function MapLayout() {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const dataMode: DataMode = pathname.startsWith("/h") ? "hotels" : "restaurants";
   const allData = dataMode === "restaurants" ? ALL_RESTAURANTS : ALL_HOTELS;
+  const cuisines = dataMode === "restaurants" ? RESTAURANT_CUISINES : HOTEL_CUISINES;
 
   // Find the venue by ID (search current dataset, fall back to both)
   const selectedRestaurant = useMemo(
@@ -429,6 +449,7 @@ function MapLayout() {
               filtered={filtered.length}
               hasActiveFilters={hasActiveFilters}
               dataMode={dataMode}
+              cuisines={cuisines}
             />
           )}
           {sidebarMode === "restaurant" && selectedRestaurant && (
