@@ -1,17 +1,14 @@
-# Krogguiden Map
+# Bakom
+
+Interactive map of Swedish restaurants and hotels. Aggregates 6 review sources + Google Places into a **Bakom Score** (0–100).
 
 ## Documentation
 
-See `docs/` for detailed documentation:
+- `docs/pipeline.md` – Data pipeline (collect, merge, refine, score, optimize)
+- `docs/i18n.md` – Internationalization (Swedish/English)
+- `docs/ui-patterns.md` – Frontend UI conventions
 
-- `docs/architecture.md` - System overview and data flow
-- `docs/collect.md` - Data collection from sources
-- `docs/merge.md` - Fuzzy matching and deduplication
-- `docs/refine.md` - Google enrichment and geocoding
-- `docs/optimize.md` - Frontend JSON generation
-- `docs/score.md` - Bakom Score algorithm
-
-### Conventions
+## Conventions
 
 Run before committing:
 
@@ -19,66 +16,13 @@ Run before committing:
 pnpm test && pnpm lint && pnpm format
 ```
 
-In code, use single-line `@see` references instead of duplicating docs:
+In code, use `@see docs/file.md` instead of duplicating docs.
 
-```typescript
-/** Brief description. @see docs/file.md */
-```
+## Components
 
----
-
-# Component Guidelines
-
-## Folder Structure
-
-```
-src/components/
-├── ui/           # shadcn/ui components only (from https://ui.shadcn.com)
-├── *.tsx         # Custom app components
-```
-
-## shadcn/ui Components (`ui/`)
-
-- Install via: `npx shadcn@latest add <component>`
-- Uses Radix UI primitives via unified `radix-ui` package
-- Follow shadcn patterns: `cn()` utility, CVA for variants, `data-slot` attributes
-- Reference: https://ui.shadcn.com/docs/components
-
-## Custom Components
-
-- Place in `src/components/` (not in `ui/`)
-- Use PascalCase filenames matching component name
-- Extend native HTML element props when appropriate
+- `src/components/ui/` – shadcn/ui only (`npx shadcn@latest add <component>`)
+- `src/components/*.tsx` – Custom components, PascalCase filenames
 - Use `cn()` from `@/lib/utils` for class merging
-
-### Component Pattern
-
-```tsx
-import { cn } from "@/lib/utils"
-
-export interface MyComponentProps extends React.HTMLAttributes<HTMLDivElement> {
-  value: number
-}
-
-function MyComponent({ value, className, ...props }: MyComponentProps) {
-  return (
-    <div className={cn("base-classes", className)} {...props}>
-      {value}
-    </div>
-  )
-}
-
-export { MyComponent }
-```
-
-## Styling
-
-- Tailwind CSS with design tokens from `tailwind.config.ts`
-- Color utilities in `@/lib/colors` (scoreColor, scoreStrokeColor)
-- Use semantic colors: `text-foreground`, `bg-background`, `text-muted-foreground`
-- Dark mode: `dark:` prefix
-
-## State Management
-
-- Complex filter state: use `useFilters` hook from `@/hooks/useFilters`
-- Dispatch pattern for multiple related state updates
+- Tailwind CSS with semantic colors (`text-foreground`, `bg-background`)
+- Complex filter state via `useFilters` hook with dispatch pattern
+- Data mode (restaurants/hotels) derived from URL path, not local state
