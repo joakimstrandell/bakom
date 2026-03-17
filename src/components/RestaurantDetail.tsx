@@ -19,6 +19,9 @@ import { Button } from "./ui/button";
 import { IconButton } from "./IconButton";
 import { SectionHeader } from "./SectionHeader";
 
+const PRICE_LABELS: Record<string, string> = { budget: "€", mellan: "€€", lyx: "€€€" };
+function priceLabel(v?: string): string { return (v && PRICE_LABELS[v]) || v || ""; }
+
 // ─── Labels ─────────────────────────────────────────────────────
 
 const MICHELIN_LABELS: Record<MichelinDistinction, string> = {
@@ -273,7 +276,7 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
         {r.priceRange && (
           <div className="px-5 py-3 border-b border-black/6 dark:border-white/6 flex items-center justify-between">
             <span className="text-sm font-medium text-muted-foreground">{t("detail.price")}</span>
-            <span className="text-sm font-medium">{r.priceRange}</span>
+            <span className="text-sm font-medium">{priceLabel(r.priceRange)}</span>
           </div>
         )}
 

@@ -7,6 +7,8 @@ import type { DataMode } from "../routes/_map";
 import { ScoreBadge } from "./ScoreBadge";
 import { calculateDistance, formatDistance } from "../lib/distance";
 
+const PRICE_LABELS: Record<string, string> = { budget: "€", mellan: "€€", lyx: "€€€" };
+
 type SortOption = "name" | "score" | "distance";
 
 type UserLocation = { lat: number; lng: number } | null;
@@ -233,7 +235,7 @@ export default function RestaurantList({
 
                     {/* Price */}
                     {r.priceRange && (
-                      <span className="shrink-0 text-xs text-muted-foreground">{r.priceRange}</span>
+                      <span className="shrink-0 text-xs text-muted-foreground">{PRICE_LABELS[r.priceRange] || r.priceRange}</span>
                     )}
                   </div>
                 </button>

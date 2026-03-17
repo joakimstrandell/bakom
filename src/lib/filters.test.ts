@@ -14,7 +14,7 @@ function makeRestaurant(overrides: Partial<Restaurant> = {}): Restaurant {
     region: "Södermalm",
     phone: "",
     website: "",
-    priceRange: "$$",
+    priceRange: "mellan",
     cuisine: "Svenskt",
     hours: [],
     lat: 59.32,
@@ -41,7 +41,7 @@ const restaurants: Restaurant[] = [
     address: "Kungsgatan 10",
     region: "Norrmalm",
     cuisine: "Japanskt, Sushi",
-    priceRange: "$$$",
+    priceRange: "mellan",
     ratings: {
       krogguiden: 4.2,
       google: 4.5,
@@ -59,7 +59,7 @@ const restaurants: Restaurant[] = [
     address: "Hornsgatan 50",
     region: "Södermalm",
     cuisine: "Italienskt, Pizza",
-    priceRange: "$$",
+    priceRange: "mellan",
     ratings: {
       krogguiden: 3.5,
       google: 4.0,
@@ -77,7 +77,7 @@ const restaurants: Restaurant[] = [
     address: "Artillerigatan 14",
     region: "Östermalm",
     cuisine: "Nordiskt, Fine dining",
-    priceRange: "$$$$",
+    priceRange: "lyx",
     ratings: {
       krogguiden: null,
       google: 4.8,
@@ -95,7 +95,7 @@ const restaurants: Restaurant[] = [
     address: "Sveavägen 100",
     region: "Vasastan",
     cuisine: "Svenskt",
-    priceRange: "$",
+    priceRange: "budget",
     ratings: {
       krogguiden: null,
       google: null,
@@ -220,7 +220,7 @@ describe("filterRestaurants — cuisine", () => {
 
 describe("filterRestaurants — price", () => {
   it("filters by single price", () => {
-    const result = filterRestaurants(restaurants, filters({ selectedPrices: new Set(["$$$$"]) }));
+    const result = filterRestaurants(restaurants, filters({ selectedPrices: new Set(["lyx"]) }));
     expect(result).toHaveLength(1);
     expect(result[0].id).toBe("fine-dining");
   });
@@ -228,9 +228,9 @@ describe("filterRestaurants — price", () => {
   it("filters by multiple prices (OR)", () => {
     const result = filterRestaurants(
       restaurants,
-      filters({ selectedPrices: new Set(["$", "$$"]) })
+      filters({ selectedPrices: new Set(["budget", "mellan"]) })
     );
-    expect(result).toHaveLength(2); // Pizza ($$ ) + Nystartad ($)
+    expect(result).toHaveLength(3); // Sushi (mellan) + Pizza (mellan) + Nystartad (budget)
   });
 });
 
@@ -379,7 +379,7 @@ describe("filterRestaurants — combined filters", () => {
   it("combines text search + price", () => {
     const result = filterRestaurants(
       restaurants,
-      filters({ searchQuery: "pizza", selectedPrices: new Set(["$$"]) })
+      filters({ searchQuery: "pizza", selectedPrices: new Set(["mellan"]) })
     );
     expect(result).toHaveLength(1);
     expect(result[0].id).toBe("pizza-place");
@@ -388,7 +388,7 @@ describe("filterRestaurants — combined filters", () => {
   it("combining text search + wrong price returns empty", () => {
     const result = filterRestaurants(
       restaurants,
-      filters({ searchQuery: "pizza", selectedPrices: new Set(["$$$$"]) })
+      filters({ searchQuery: "pizza", selectedPrices: new Set(["lyx"]) })
     );
     expect(result).toHaveLength(0);
   });

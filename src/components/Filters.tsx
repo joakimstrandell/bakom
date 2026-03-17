@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import {
   X,
   UtensilsCrossed,
-  DollarSign,
+  Euro,
   Star,
   Award,
   TrendingUp,
@@ -23,7 +23,11 @@ import { IconButton } from "./IconButton";
 import { FilterChip } from "./FilterChip";
 import { SectionHeader } from "./SectionHeader";
 
-const PRICES = ["$", "$$", "$$$", "$$$$"] as const;
+const PRICES = [
+  { value: "budget", label: "€" },
+  { value: "mellan", label: "€€" },
+  { value: "lyx", label: "€€€" },
+] as const;
 
 // Michelin distinctions for multi-select
 const MICHELIN_RESTAURANT_OPTIONS: { key: MichelinDistinction; label: string }[] = [
@@ -386,17 +390,17 @@ export default function Filters({
         {/* Price filters — restaurants only (almost no hotel price data) */}
         {!isHotels && (
           <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
-            <SectionHeader icon={<DollarSign className="size-4" />}>
+            <SectionHeader icon={<Euro className="size-4" />}>
               {t("filters.price")}
             </SectionHeader>
             <div className="flex flex-wrap gap-2">
               {PRICES.map((p) => (
                 <FilterChip
-                  key={p}
-                  onClick={() => dispatch({ type: "TOGGLE_PRICE", payload: p })}
-                  active={state.selectedPrices.has(p)}
+                  key={p.value}
+                  onClick={() => dispatch({ type: "TOGGLE_PRICE", payload: p.value })}
+                  active={state.selectedPrices.has(p.value)}
                 >
-                  {p}
+                  {p.label}
                 </FilterChip>
               ))}
             </div>

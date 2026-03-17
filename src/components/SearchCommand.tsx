@@ -7,6 +7,8 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import type { Restaurant } from "../types";
 import { ScoreBadge } from "./ScoreBadge";
 
+const PRICE_LABELS: Record<string, string> = { budget: "€", mellan: "€€", lyx: "€€€" };
+
 type SearchCommandProps = {
   restaurants: Restaurant[];
   open: boolean;
@@ -210,7 +212,7 @@ export default function SearchCommand({
                         {/* Price */}
                         {r.priceRange && (
                           <span className="shrink-0 text-xs text-muted-foreground">
-                            {r.priceRange}
+                            {PRICE_LABELS[r.priceRange] || r.priceRange}
                           </span>
                         )}
                       </div>
