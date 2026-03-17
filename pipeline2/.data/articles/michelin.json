@@ -1,0 +1,2710 @@
+[
+  {
+    "id": "89a2221edb5c0ba1",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/koizen",
+    "title": "Koizen",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Koizen",
+    "venueAddress": "Nordenskiöldsgatan 24",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Japanese"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.844Z",
+    "enrichedAt": "2026-03-14T15:33:47.848Z"
+  },
+  {
+    "id": "9dad7eb197f1ccb9",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/tavolo",
+    "title": "Tavolo",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Tavolo",
+    "venueAddress": "Magasingatan 19",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Italian-American"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.849Z",
+    "enrichedAt": "2026-03-14T15:33:47.849Z"
+  },
+  {
+    "id": "7c73202091efb184",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/woodstockholm",
+    "title": "Woodstockholm",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Woodstockholm",
+    "venueAddress": "Mosebacke Torg 9",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Contemporary",
+      "International"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.849Z",
+    "enrichedAt": "2026-03-14T15:33:47.849Z"
+  },
+  {
+    "id": "e891d89626575953",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/rolfs-kok",
+    "title": "Rolfs Kök",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Rolfs Kök",
+    "venueAddress": "Tegnérgatan 41",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Traditional Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.849Z",
+    "enrichedAt": "2026-03-14T15:33:47.849Z"
+  },
+  {
+    "id": "be06e2ce6339fe26",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/mutantur",
+    "title": "Mutantur",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Mutantur",
+    "venueAddress": "Erik Dahlbergsgatan 12-14",
+    "venueCity": "Malmö",
+    "score": 0.5,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "bib_gourmand"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.849Z",
+    "enrichedAt": "2026-03-14T15:33:47.849Z"
+  },
+  {
+    "id": "7a0e566f5bf740bb",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/babette",
+    "title": "Babette",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Babette",
+    "venueAddress": "Roslagsgatan 6",
+    "venueCity": "Stockholm",
+    "score": 0.5,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "bib_gourmand"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.849Z",
+    "enrichedAt": "2026-03-14T15:33:47.849Z"
+  },
+  {
+    "id": "67630ded3395be40",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/28",
+    "title": "28+",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "28+",
+    "venueAddress": "Götabergsgatan 28",
+    "venueCity": "Göteborg",
+    "score": 1,
+    "cuisine": [
+      "Modern Cuisine",
+      "Classic French"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "1_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.849Z",
+    "enrichedAt": "2026-03-14T15:33:47.849Z"
+  },
+  {
+    "id": "8842fd0ee3116ef2",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/vra",
+    "title": "Restaurant vRÅ",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Restaurant vRÅ",
+    "venueAddress": "Clarion Hotel Post, Drottningtorget 10",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Fusion"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.849Z",
+    "enrichedAt": "2026-03-14T15:33:47.849Z"
+  },
+  {
+    "id": "b67ab5e2613dfecb",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/etoile",
+    "title": "Etoile",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Etoile",
+    "venueAddress": "Norra Stationsgatan 51",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "cuisine": [
+      "Creative",
+      "International"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "1_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "012050423e7868a0",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/atmosfar",
+    "title": "Restaurang Atmosfär",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Restaurang Atmosfär",
+    "venueAddress": "Fersens väg 4",
+    "venueCity": "Malmö",
+    "score": 0,
+    "cuisine": [
+      "Swedish"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "eb538bb9289868b3",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/sk-mat-manniskor",
+    "title": "SK Mat & Människor",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "SK Mat & Människor",
+    "venueAddress": "Johannebergsgatan 24",
+    "venueCity": "Göteborg",
+    "score": 1,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "1_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "b20e7e040f114053",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/brasserie-sture",
+    "title": "Brasserie Sture 1912",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Brasserie Sture 1912",
+    "venueAddress": "Adelgatan 13",
+    "venueCity": "Malmö",
+    "score": 0,
+    "cuisine": [
+      "Mediterranean Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "887a467485ea594c",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/forma-1210349",
+    "title": "Forma",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Forma",
+    "venueAddress": "Hornsbruksgatan 28",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine",
+      "Asian"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "614f2b0533cd6c6d",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/celeste-1209889",
+    "title": "Celeste",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Celeste",
+    "venueAddress": "Torkel Knutssonsgatan 24",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "1_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "f55783a9d90d6819",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/black-milk-gastro-bar",
+    "title": "Black Milk Gastro Bar",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Black Milk Gastro Bar",
+    "venueAddress": "Engelbrektsgatan 3",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Creative",
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "71a4efa978fca3d8",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/molnlycke_2675596/restaurant/signum-1205585",
+    "title": "Signum",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Signum",
+    "venueAddress": "Hällsnäs Hotell, Långenäsvägen 150",
+    "venueCity": "Mölnlycke",
+    "score": 2,
+    "cuisine": [
+      "Creative"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "2_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "6eca687d3f00b680",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/petri",
+    "title": "Petri",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Petri",
+    "venueAddress": "Kommendörsgatan 16",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "acbe4cc0795d5f0a",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/arla",
+    "title": "ÄRLA",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "ÄRLA",
+    "venueAddress": "Danderydsgatan 25",
+    "venueCity": "Stockholm",
+    "score": 0.5,
+    "cuisine": [
+      "Farm to table",
+      "Swedish"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "bib_gourmand"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "7cca1dab0e7f4216",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hallands/halmstad_2659154/restaurant/fyr",
+    "title": "Fyr",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Fyr",
+    "venueAddress": "Tjuvahålsvägen 9",
+    "venueCity": "Halmstad",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "2d4439e6742737e5",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/essence-1203656",
+    "title": "Essence",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Essence",
+    "venueAddress": "Hjalmar Södersbergs Väg 10",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine",
+      "Seasonal Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "13d1d98c7bf2fe67",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/vastergatan",
+    "title": "Västergatan",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Västergatan",
+    "venueAddress": "Västergatan 16",
+    "venueCity": "Malmö",
+    "score": 0.5,
+    "cuisine": [
+      "Swedish"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "bib_gourmand"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "5c1f0c77a180e710",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hallands/tvaaker/restaurant/ang",
+    "title": "ÄNG",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "ÄNG",
+    "venueAddress": "Ästad Vingård, Ästad 10",
+    "venueCity": "Tvååker",
+    "score": 1,
+    "cuisine": [
+      "Creative"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "1_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "09d51c53d3b5a30d",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/brasserie-astoria",
+    "title": "Brasserie Astoria",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Brasserie Astoria",
+    "venueAddress": "Nybrogatan 15",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Classic Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "64b23273fc8434d4",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/aira",
+    "title": "AIRA",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "AIRA",
+    "venueAddress": "Biskopsvägen 9",
+    "venueCity": "Stockholm",
+    "score": 2,
+    "cuisine": [
+      "Modern Cuisine",
+      "Swedish"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "2_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "e54c34b5ddb07cff",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/bar-agrikultur",
+    "title": "Bar Agrikultur",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Bar Agrikultur",
+    "venueAddress": "Skånegatan 79",
+    "venueCity": "Stockholm",
+    "score": 0.5,
+    "cuisine": [
+      "Swedish",
+      "Small eats"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "bib_gourmand"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "915ecae381b84206",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/kronoberg/vaxjo/restaurant/pm-vanner",
+    "title": "PM & Vänner Restaurant",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "PM & Vänner Restaurant",
+    "venueAddress": "Storgatan 22",
+    "venueCity": "Växjö",
+    "score": 1,
+    "cuisine": [
+      "Creative"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "1_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "9281a299be7d0f5f",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/la-cucina-italiana",
+    "title": "La Cucina Italiana",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "La Cucina Italiana",
+    "venueAddress": "Skånegatan 33",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Italian"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "d8013468c225ffa5",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/lilla-ego",
+    "title": "Lilla Ego",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Lilla Ego",
+    "venueAddress": "Västmannagatan 69",
+    "venueCity": "Stockholm",
+    "score": 0.5,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "bib_gourmand"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "dc09eaade67ed652",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/frantzen",
+    "title": "Frantzén",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Frantzén",
+    "venueAddress": "Klara Norra Kyrkogata 26",
+    "venueCity": "Stockholm",
+    "score": 3,
+    "cuisine": [
+      "Creative"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "3_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "0b3ecea5d8c48037",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/project",
+    "title": "Project",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Project",
+    "venueAddress": "Södra Vägen 45",
+    "venueCity": "Göteborg",
+    "score": 1,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "1_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "55cf6adf08744417",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/ekstedt",
+    "title": "Ekstedt",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Ekstedt",
+    "venueAddress": "Humlegårdsgatan 17",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "cuisine": [
+      "Grills"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "1_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "b6869b340da374de",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/kockeriet",
+    "title": "Kockeriet",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Kockeriet",
+    "venueAddress": "Norra Vallgatan 28",
+    "venueCity": "Malmö",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "fb51c724b0435b3f",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/bloom-in-the-park",
+    "title": "Bloom in the Park",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Bloom in the Park",
+    "venueAddress": "Pildammsvägen 17",
+    "venueCity": "Malmö",
+    "score": 0,
+    "cuisine": [
+      "Creative"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.850Z",
+    "enrichedAt": "2026-03-14T15:33:47.850Z"
+  },
+  {
+    "id": "8e8c03e02450dd05",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/hillenberg",
+    "title": "Hillenberg",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Hillenberg",
+    "venueAddress": "Humlegårdsgatan 14",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "559e9387c3a27aae",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/solen",
+    "title": "SOLEN",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "SOLEN",
+    "venueAddress": "Hallgränd 45",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "7d99f2eda7460e68",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/ergo",
+    "title": "ergo.",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "ergo",
+    "venueAddress": "Artillerigatan 14",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "1_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "c8025c36f0d2215c",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/seafood-gastro",
+    "title": "Seafood Gastro",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Seafood Gastro",
+    "venueAddress": "Södra Blasieholmshamnen 8",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "cuisine": [
+      "Seafood"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "1_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "d682780d0b49922f",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/triton",
+    "title": "Triton",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Triton",
+    "venueAddress": "Ringvägen 87",
+    "venueCity": "Stockholm",
+    "score": 0.5,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "bib_gourmand"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "423d6168972076f3",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/oxenstiernan",
+    "title": "Oxenstiernan",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Oxenstiernan",
+    "venueAddress": "Storgatan 35B",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Swedish"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "512460f6349d6376",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/ruths",
+    "title": "Ruths",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Ruths",
+    "venueAddress": "Mäster Johansgatan 11",
+    "venueCity": "Malmö",
+    "score": 0.5,
+    "cuisine": [
+      "Mediterranean Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "bib_gourmand"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "a7a8d35fc679a37d",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/freyja",
+    "title": "freyja",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "freyja",
+    "venueAddress": "Hornsgatan 18",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Swedish",
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "b02bd15472d83a1d",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/poppy",
+    "title": "Poppy",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Poppy",
+    "venueAddress": "Fjärde Långgatan 1",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Seasonal Cuisine",
+      "Farm to table"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "54a5b1762ea55551",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/leijontornet",
+    "title": "Leijontornet",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Leijontornet",
+    "venueAddress": "Lilla Nygatan 5",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "European"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "897f047698194f95",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/minh-mat",
+    "title": "Minh Mat",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Minh Mat",
+    "venueAddress": "Odengatan 94",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Vietnamese"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "f1068e10cbbf427b",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/bord",
+    "title": "BORD",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "BORD",
+    "venueAddress": "Roslagsgatan 43",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Mediterranean Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "1590e4b594af96da",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/ystad_2694134/restaurant/jh-matbar",
+    "title": "JH matbar",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "JH matbar",
+    "venueAddress": "Stora Östergatan 34",
+    "venueCity": "Ystad",
+    "score": 0.5,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "bib_gourmand"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "3f20c5dbc7fe9f07",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/prospero",
+    "title": "Prospero",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Prospero",
+    "venueAddress": "Roslagsgatan 21",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "e9edac7dc2c2e4e8",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hallands/rydobruk/restaurant/knystaforsen",
+    "title": "Knystaforsen",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Knystaforsen",
+    "venueAddress": "Rydöforsvägen 4",
+    "venueCity": "Rydöbruk",
+    "score": 1,
+    "cuisine": [
+      "Creative",
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "1_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "83708b1ef440d988",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/human",
+    "title": "Human",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Human",
+    "venueAddress": "Risåsgatan 8",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Creative"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "21857518e4d55e7c",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/hoze",
+    "title": "HOZE",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "HOZE",
+    "venueAddress": "Stigbergsliden 17",
+    "venueCity": "Göteborg",
+    "score": 1,
+    "cuisine": [
+      "Japanese"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "1_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "b91adff40894f3b0",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/oland/borgholm/restaurant/hotell-borgholm1186400",
+    "title": "Hotell Borgholm",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Hotell Borgholm",
+    "venueAddress": "Trädgårdsgatan 15",
+    "venueCity": "Borgholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "e28ac4d6c662d1b0",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/carbon",
+    "title": "Carbon",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Carbon",
+    "venueAddress": "Barnhusgatan 2",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "63e88dbc61d8d7ea",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/nour",
+    "title": "Nour",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Nour",
+    "venueAddress": "Norrlandsgatan 24",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "cuisine": [
+      "Creative"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "1_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "00935d10e2b1aa04",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/namu",
+    "title": "Namu",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Namu",
+    "venueAddress": "Landbygatan 5",
+    "venueCity": "Malmö",
+    "score": 0.5,
+    "cuisine": [
+      "Korean"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "bib_gourmand"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "35a98345e3c596c7",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/b-a-r",
+    "title": "Restaurang B.A.R.",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Restaurang B.A.R",
+    "venueAddress": "Blasieholmsgatan 4A",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Seafood"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "73d2417bb6aef432",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/lux-dag-for-dag",
+    "title": "Lux Dag för Dag",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Lux Dag för Dag",
+    "venueAddress": "Primusgatan 116",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "053cb3b9d0fb6153",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/farang",
+    "title": "Farang",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Farang",
+    "venueAddress": "Tulegatan 7",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "South East Asian"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "49f556895089a48f",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/operakallaren",
+    "title": "Operakällaren",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Operakällaren",
+    "venueAddress": "Operahuset, Karl XII's Torg",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "1_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "b884769fe1db7ba4",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/nisch",
+    "title": "NISCH",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "NISCH",
+    "venueAddress": "Dalagatan 42",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "0aa3484da6d31172",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/allegrine",
+    "title": "Allegrine",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Allegrine",
+    "venueAddress": "Kammakargatan 22",
+    "venueCity": "Stockholm",
+    "score": 0.5,
+    "cuisine": [
+      "French"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "bib_gourmand"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "2b25ed6bfbac1a94",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/ulla-winbladh",
+    "title": "Ulla Winbladh",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Ulla Winbladh",
+    "venueAddress": "Rosendalsvägen 8",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Swedish"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "5b4de54d0e9c7bb4",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/vollmers",
+    "title": "Vollmers",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Vollmers",
+    "venueAddress": "Tegelgårdsgatan 5",
+    "venueCity": "Malmö",
+    "score": 2,
+    "cuisine": [
+      "Contemporary"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "2_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "43300d131060a657",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/familjen",
+    "title": "Familjen",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Familjen",
+    "venueAddress": "Arkivgatan 7",
+    "venueCity": "Göteborg",
+    "score": 0.5,
+    "cuisine": [
+      "Scandinavian",
+      "Swedish"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "bib_gourmand"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "f44f93bdf1524a86",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/lyran",
+    "title": "Lyran Matbar",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Lyran Matbar",
+    "venueAddress": "Simrishamnsgatan 36a",
+    "venueCity": "Malmö",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine",
+      "Swedish"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "aaf6725e5094b1f7",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/matbaren",
+    "title": "Matbaren",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Matbaren",
+    "venueAddress": "Södra Blasieholmshamnen 6",
+    "venueCity": "Stockholm",
+    "score": 0.5,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "bib_gourmand"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "6084936d4f3e8e47",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/trattoria-la-strega",
+    "title": "Trattoria La Strega",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Trattoria La Strega",
+    "venueAddress": "Aschebergsgatan 23B",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Italian"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "143ba1a14cc03e6e",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/sjomagasinet",
+    "title": "Sjömagasinet",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Sjömagasinet",
+    "venueAddress": "Klippans Kulturreservat, Adolf Edelsvärds gata 5",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Seafood"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "0eda58ddf3a561e3",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/sushi-sho",
+    "title": "Sushi Sho",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Sushi Sho",
+    "venueAddress": "Upplandsgatan 45",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "cuisine": [
+      "Japanese",
+      "Sushi"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "1_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "a0bdf798bf6ed396",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/ostergotland/linkoping_2608143/restaurant/jord-1202242",
+    "title": "JORD",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "JORD",
+    "venueAddress": "Johannesborgparken 1A",
+    "venueCity": "Linkoping",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "d111e343345aa955",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/washoku-tomo",
+    "title": "Washoku TOMO",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Washoku TOMO",
+    "venueAddress": "Timmermansgatan 15",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Japanese"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "be881f7109e807e0",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/voisine",
+    "title": "Voisine",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Voisine",
+    "venueAddress": "Erstagatan 21",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "5dab480438a0db54",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/dashi",
+    "title": "Dashi",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Dashi",
+    "venueAddress": "Rådmansgatan 23",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "cuisine": [
+      "Japanese"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "1_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "511410b074ab72de",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/aster-1203662",
+    "title": "aster",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "aster",
+    "venueAddress": "Jagaregatan 6",
+    "venueCity": "Malmö",
+    "score": 0,
+    "cuisine": [
+      "Contemporary"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "312ee66c4cc52ac8",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/simrishamn_2683288/restaurant/vyn",
+    "title": "VYN",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "VYN",
+    "venueAddress": "Höga vägen 72",
+    "venueCity": "Simrishamn",
+    "score": 2,
+    "cuisine": [
+      "Creative"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "2_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "40b85803e5111a85",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/koka",
+    "title": "Koka",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Koka",
+    "venueAddress": "Viktoriagatan 12",
+    "venueCity": "Göteborg",
+    "score": 1,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "1_star"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "c3b2c9ae7da3a63e",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/persona",
+    "title": "Persona",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Persona",
+    "venueAddress": "Torstenssonsgatan 11",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "a201b8f83a00a013",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/villa-dagmar-11620",
+    "title": "Villa Dagmar",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Villa Dagmar",
+    "venueAddress": "Nybrogatan 25-27, Östermalm",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "tags": [
+      "1_key"
+    ],
+    "lat": 59.335495,
+    "lng": 18.077901,
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "f3bd70b44d258371",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-diplomat-stockholm-7834",
+    "title": "Hotel Diplomat Stockholm",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Hotel Diplomat Stockholm",
+    "venueAddress": "Strandvagen 7C",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.332065,
+    "lng": 18.080456,
+    "collectedAt": "2026-03-14T15:33:47.851Z",
+    "enrichedAt": "2026-03-14T15:33:47.851Z"
+  },
+  {
+    "id": "3486b67070f36ecf",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/gothenburg/hotel-riverton-12555",
+    "title": "Hotel Riverton",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Hotel Riverton",
+    "venueAddress": "Stora Badhusgatan 26",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 57.703877,
+    "lng": 11.95671,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "53111f1f010e7672",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/villa-dahlia-15140",
+    "title": "Villa Dahlia",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Villa Dahlia",
+    "venueAddress": "Tegnerlunden 8",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "tags": [
+      "1_key"
+    ],
+    "lat": 59.338656,
+    "lng": 18.054743,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "74ce433ee23bf744",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/ett-hem-7183",
+    "title": "Ett Hem",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Ett Hem",
+    "venueAddress": "Sköldungagatan 2",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "tags": [
+      "1_key"
+    ],
+    "lat": 59.345513,
+    "lng": 18.067702,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "64e4901bef135047",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/berns-hotel-6180",
+    "title": "Berns Hotel",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Berns Hotel",
+    "venueAddress": "Berzelii Park, Nackstromsgatan 8",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.33237,
+    "lng": 18.07365,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "3f3e71130aab03bd",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/nobis-hotel-stockholm-6391",
+    "title": "Nobis Hotel Stockholm",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Nobis Hotel Stockholm",
+    "venueAddress": "Norrmalmstorg 2-4",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "tags": [
+      "1_key"
+    ],
+    "lat": 59.333185,
+    "lng": 18.073813,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "bf33ed42b1308f1a",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/miss-clara-by-nobis-7230",
+    "title": "Miss Clara by Nobis",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Miss Clara by Nobis",
+    "venueAddress": "Sveavägen 48",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.337593,
+    "lng": 18.061904,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "ebdfa6d73b1a6787",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-j-6389",
+    "title": "Hotel J Stockholm",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Hotel J Stockholm",
+    "venueAddress": "Ellensviksvagen 1, Nacka Strand",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.3186,
+    "lng": 18.1642,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "9adead70285d33cd",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-skeppsholmen-6390",
+    "title": "Hotel Skeppsholmen",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Hotel Skeppsholmen",
+    "venueAddress": "1 Gröna gången",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.32476,
+    "lng": 18.087685,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "6110b8a05df2652f",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/nordic-light-hotel-6392",
+    "title": "Nordic Light Hotel",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Nordic Light Hotel",
+    "venueAddress": "7 Vasaplan",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.332555,
+    "lng": 18.05721,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "02ada2950aeef2cc",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/stallmastaregarden-6662",
+    "title": "Stallmästaregården",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Stallmästaregården",
+    "venueAddress": "Annerovägen 2",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.351671,
+    "lng": 18.0434,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "d7d3b13655cce33f",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/lydmar-hotel-5807",
+    "title": "Lydmar Hotel",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Lydmar Hotel",
+    "venueAddress": "Södra Blasieholmshamnen 2",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "tags": [
+      "1_key"
+    ],
+    "lat": 59.3282,
+    "lng": 18.07779,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "ab6ee87416d8a8f6",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-at-six-8825",
+    "title": "Hotel At Six",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Hotel At Six",
+    "venueAddress": "Brunkebergstorg 6",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.330841,
+    "lng": 18.067027,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "d709e990693cb312",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/bank-hotel-122824-12734",
+    "title": "Bank Hotel",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Bank Hotel",
+    "venueAddress": "Arsenalsgatan 6",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "tags": [
+      "1_key"
+    ],
+    "lat": 59.33137,
+    "lng": 18.07466,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "9780fb973b01dd65",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/stockholm-stadshotell-15159",
+    "title": "Stockholm Stadshotell",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Stockholm Stadshotell",
+    "venueAddress": "Björngårdsgatan 23",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "tags": [
+      "1_key"
+    ],
+    "lat": 59.3151814,
+    "lng": 18.0667222,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "2525089b066e9d28",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/harads/treehotel-11346",
+    "title": "Treehotel",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Treehotel",
+    "venueAddress": "Edeforsväg 2 A",
+    "venueCity": "Harads",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 66.07286,
+    "lng": 20.98175,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "9bf86f2084d85bcb",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/grand-hotel-stockholm-8262",
+    "title": "Grand Hotel Stockholm",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Grand Hotel Stockholm",
+    "venueAddress": "Stallgatan 4",
+    "venueCity": "Stockholm",
+    "score": 2,
+    "tags": [
+      "2_key"
+    ],
+    "lat": 59.32961,
+    "lng": 18.07544,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "daa19b789449d23c",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/radisson-collection-strand-hotel-stockholm-5971",
+    "title": "Radisson Collection, Strand Hotel, Stockholm",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Radisson Collection, Strand Hotel, Stockholm",
+    "venueAddress": "Nybrokajen 9",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.33094,
+    "lng": 18.07722,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "12de51a06749f199",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/story-hotel-stockholm-stureplan-8694",
+    "title": "Story Hotel Stockholm Stureplan",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Story Hotel Stockholm Stureplan",
+    "venueAddress": "Riddargatan 6",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.33473,
+    "lng": 18.0751,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "32e430cad7b0def5",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/blique-by-nobis-10266",
+    "title": "Blique by Nobis",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Blique by Nobis",
+    "venueAddress": "18 Gävlegatan",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.34602,
+    "lng": 18.03601,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "92178ce08caa625f",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/jukkasjarvi/the-ice-hotel-10778",
+    "title": "ICEHOTEL",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "ICEHOTEL",
+    "venueAddress": "Marknadsvägen 63, 981 91",
+    "venueCity": "Jukkasjärvi",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 67.8509,
+    "lng": 20.59564,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "3df84d21585b7d9f",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-frantz-12056",
+    "title": "Hotel Frantz",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Hotel Frantz",
+    "venueAddress": "Peter Myndes Backe 5",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "tags": [
+      "1_key"
+    ],
+    "lat": 59.31952,
+    "lng": 18.07095,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "ea9a3442014e3912",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/are/copperhill-mountain-lodge-8343",
+    "title": "Copperhill Mountain Lodge",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Copperhill Mountain Lodge",
+    "venueAddress": "Åre Björnen",
+    "venueCity": "Åre",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 63.382974,
+    "lng": 13.177002,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "338ea452eea14af2",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hobo-hotel-10255",
+    "title": "Hobo Hotel",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Hobo Hotel",
+    "venueAddress": "4 Brunkebergstorg",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.3307,
+    "lng": 18.06703,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "21059e23d353dfbc",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/jarfalla/gorvalns-slott-7923",
+    "title": "Görvälns Slott",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Görvälns Slott",
+    "venueAddress": "Görvälnsvägen",
+    "venueCity": "Järfälla",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.434668,
+    "lng": 17.78615,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "82edaee7539c7d45",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/downtown-camper-by-scandic-11019",
+    "title": "Downtown Camper by Scandic",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Downtown Camper by Scandic",
+    "venueAddress": "Brunkebergstorg 9",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.3313,
+    "lng": 18.06554,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "60fae4cfc1e2b358",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/sheraton-121162-10434",
+    "title": "Sheraton Stockholm Hotel",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Sheraton Stockholm Hotel",
+    "venueAddress": "Tegelbacken 6",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.32892,
+    "lng": 18.06187,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "6cb1f9b0cc811a20",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/backstage-hotel-10563",
+    "title": "Backstage Hotel",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Backstage Hotel",
+    "venueAddress": "Djurgårdsvägen 68",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.32477,
+    "lng": 18.09709,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "2ac32e34766013d3",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/malmo/story-studio-malmo-10547",
+    "title": "Story Studio Malmö",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Story Studio Malmö",
+    "venueAddress": "Tyfongatan 1",
+    "venueCity": "Malmö",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 55.61224,
+    "lng": 12.99439,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "c47459994845b191",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/gothenburg/hotel-pigalle-10406",
+    "title": "Hotel Pigalle",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Hotel Pigalle",
+    "venueAddress": "Södra Hamngatan 2",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 57.70696,
+    "lng": 11.97073,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "83c6853f63cf64bd",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/gothenburg/dorsia-10287",
+    "title": "Dorsia Hotel & Restaurant",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Dorsia Hotel & Restaurant",
+    "venueAddress": "Trädgårdsgatan 6",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 57.70462,
+    "lng": 11.97166,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "4acdd36374e2a4b4",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/vasteras/steam-hotel-11054",
+    "title": "Steam Hotel",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Steam Hotel",
+    "venueAddress": "Ångkraftsvägen 14",
+    "venueCity": "Västerås",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.6067,
+    "lng": 16.56746,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "07b6024ec9b25c38",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/malmo/hotel-mjs-9880",
+    "title": "Hotel MJ's",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Hotel MJ's",
+    "venueAddress": "Mäster Johansgatan 13",
+    "venueCity": "Malmö",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 55.60589,
+    "lng": 12.9979,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "fe6672b2de971f47",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/gothenburg/hotel-flora-9782",
+    "title": "Hotel Flora Göteborg",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Hotel Flora Göteborg",
+    "venueAddress": "Grönsakstorget 2",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 57.70279,
+    "lng": 11.96549,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "a25d02591f83df26",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/Ume%C3%A5/stora-hotellet-12701",
+    "title": "Stora Hotellet",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Stora Hotellet",
+    "venueAddress": "Storgatan 46",
+    "venueCity": "Umeå",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 63.8251,
+    "lng": 20.26109,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "f0cf9e84481cc8c3",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/malmo/best-western-plus-hotel-noble-house-10435",
+    "title": "Best Western Plus Hotel Noble House",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Best Western Plus Hotel Noble House",
+    "venueAddress": "Per Weijersgatan 6",
+    "venueCity": "Malmö",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 55.60369,
+    "lng": 12.99958,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "c0dabe457949cf11",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/M%C3%B6rbyl%C3%A5nga/eco-by-strandnara-12480",
+    "title": "Eco by StrandNara",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Eco by StrandNara",
+    "venueAddress": "Dansbanevägen 3",
+    "venueCity": "Mörbylånga",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 56.57436,
+    "lng": 16.41033,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "4d24143ad5984c65",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/huskvarna/huskvarna-stadshotell-11263",
+    "title": "Huskvarna Stadshotell",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Huskvarna Stadshotell",
+    "venueAddress": "Erik Dahlbergsgatan 20",
+    "venueCity": "Huskvarna",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 57.79123,
+    "lng": 14.27526,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "5391ad0083f6ae0d",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-kungstradgarden-16322",
+    "title": "Hotel Kungsträdgården",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Hotel Kungsträdgården",
+    "venueAddress": "Västra Trädgårdsgatan 11B, Entrence Kocksgränd 1",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.3313766222,
+    "lng": 18.0696957115,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "a1ba3c43e2c13d2e",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/Hind%C3%A5s/hjortviken-country-club-15391",
+    "title": "Hjortviken Country Club",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Hjortviken Country Club",
+    "venueAddress": "Hotellvägen 1, Box 14",
+    "venueCity": "Hindås",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 57.706661,
+    "lng": 12.465585,
+    "collectedAt": "2026-03-14T15:33:47.852Z",
+    "enrichedAt": "2026-03-14T15:33:47.852Z"
+  },
+  {
+    "id": "55579e925b0f7495",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/harads/arctic-bath-15340",
+    "title": "Arctic Bath",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Arctic Bath",
+    "venueAddress": "Ramdalsvägen 10",
+    "venueCity": "Harads",
+    "score": 1,
+    "tags": [
+      "1_key"
+    ],
+    "lat": 66.088588,
+    "lng": 20.937173,
+    "collectedAt": "2026-03-14T15:33:47.853Z",
+    "enrichedAt": "2026-03-14T15:33:47.853Z"
+  },
+  {
+    "id": "1f62732bbb3afbbd",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/Glumsl%C3%B6v/maryhill-estate-15203",
+    "title": "Maryhill Estate",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Maryhill Estate",
+    "venueAddress": "Örenäs Slott",
+    "venueCity": "Glumslöv",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 55.940293,
+    "lng": 12.781009,
+    "collectedAt": "2026-03-14T15:33:47.853Z",
+    "enrichedAt": "2026-03-14T15:33:47.853Z"
+  },
+  {
+    "id": "68dbea36cb9e2ca2",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/reisen-15142",
+    "title": "Hôtel Reisen, part of The Unbound Collection by Hyatt",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Hôtel Reisen, part of The Unbound Collection by Hyatt",
+    "venueAddress": "Skeppsbron 12",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.325437,
+    "lng": 18.075368,
+    "collectedAt": "2026-03-14T15:33:47.853Z",
+    "enrichedAt": "2026-03-14T15:33:47.853Z"
+  },
+  {
+    "id": "1d92b5d709109cb2",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/ruth-15141",
+    "title": "Ruth",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "hotel",
+    "venueName": "Ruth",
+    "venueAddress": "Dobelnsgatan 81",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "tags": [
+      "1_key"
+    ],
+    "lat": 59.345707,
+    "lng": 18.056713,
+    "collectedAt": "2026-03-14T15:33:47.853Z",
+    "enrichedAt": "2026-03-14T15:33:47.853Z"
+  }
+]

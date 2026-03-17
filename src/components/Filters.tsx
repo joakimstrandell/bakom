@@ -15,6 +15,7 @@ import {
   Moon,
 } from "lucide-react";
 import type { MichelinDistinction, WhiteGuideClassification } from "../types";
+import type { DataMode } from "../routes/_map";
 import type { FilterState, Range, FilterAction, RangeFilterKey } from "../hooks/useFilters";
 import type { MealType } from "../lib/isOpen";
 import type { AvailabilityFilter } from "../lib/filters";
@@ -30,12 +31,19 @@ const CUISINE_KEYS = cuisineData.map((c) => c.key);
 const PRICES = ["$", "$$", "$$$", "$$$$"] as const;
 
 // Michelin distinctions for multi-select
-const MICHELIN_OPTIONS: { key: MichelinDistinction; label: string }[] = [
+const MICHELIN_RESTAURANT_OPTIONS: { key: MichelinDistinction; label: string }[] = [
   { key: "selected", label: "Selected" },
   { key: "bib_gourmand", label: "Bib Gourmand" },
   { key: "1_star", label: "★" },
   { key: "2_star", label: "★★" },
   { key: "3_star", label: "★★★" },
+];
+
+const MICHELIN_HOTEL_OPTIONS: { key: MichelinDistinction; label: string }[] = [
+  { key: "selected", label: "Selected" },
+  { key: "1_key", label: "🔑" },
+  { key: "2_key", label: "🔑🔑" },
+  { key: "3_key", label: "🔑🔑🔑" },
 ];
 
 // White Guide classification keys
@@ -69,6 +77,7 @@ type FiltersProps = {
   total: number;
   filtered: number;
   hasActiveFilters: boolean;
+  dataMode?: DataMode;
 };
 
 // ─── Range Slider Component ──────────────────────────────────────
@@ -226,8 +235,10 @@ export default function Filters({
   total,
   filtered,
   hasActiveFilters,
+  dataMode = "restaurants",
 }: FiltersProps) {
   const { t } = useTranslation();
+  const michelinOptions = dataMode === "hotels" ? MICHELIN_HOTEL_OPTIONS : MICHELIN_RESTAURANT_OPTIONS;
 
   return (
     <div className="h-full flex flex-col">
@@ -253,7 +264,7 @@ export default function Filters({
         <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
           <SectionHeader icon={<Award className="size-4" />}>Michelin</SectionHeader>
           <div className="flex flex-wrap gap-2">
-            {MICHELIN_OPTIONS.map(({ key, label }) => (
+            {michelinOptions.map(({ key, label }) => (
               <FilterChip
                 key={key}
                 onClick={() => dispatch({ type: "TOGGLE_MICHELIN", payload: key })}

@@ -90,7 +90,7 @@ export function deduplicateByGooglePlaceId(
       if (!primary.website && other.website) primary.website = other.website;
       if (!primary.cuisine && other.cuisine) primary.cuisine = other.cuisine;
       if (!primary.priceRange && other.priceRange) primary.priceRange = other.priceRange;
-      if (primary.hours.length === 0 && other.hours.length > 0) primary.hours = other.hours;
+      if ((primary.hours ?? []).length === 0 && (other.hours ?? []).length > 0) primary.hours = other.hours;
       if (!primary.lat && other.lat) {
         primary.lat = other.lat;
         primary.lng = other.lng;

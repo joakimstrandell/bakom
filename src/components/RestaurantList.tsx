@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { MapPin, ArrowDownAZ, TrendingUp, Navigation } from "lucide-react";
 import type { Restaurant } from "../types";
+import type { DataMode } from "../routes/_map";
 import { ScoreBadge } from "./ScoreBadge";
 import { calculateDistance, formatDistance } from "../lib/distance";
 
@@ -17,6 +18,7 @@ type RestaurantListProps = {
   userLocation?: UserLocation;
   locationDenied?: boolean;
   onRequestLocation?: () => Promise<boolean>;
+  dataMode?: DataMode;
 };
 
 const ITEM_HEIGHT = 88; // Estimated height for each restaurant item
@@ -28,6 +30,7 @@ export default function RestaurantList({
   userLocation,
   locationDenied = false,
   onRequestLocation,
+  dataMode = "restaurants",
 }: RestaurantListProps) {
   const { t } = useTranslation();
   const [sortBy, setSortBy] = useState<SortOption>("score");
@@ -105,7 +108,7 @@ export default function RestaurantList({
           <div className="flex items-center gap-2">
             <MapPin className="size-4 text-muted-foreground" />
             <span className="text-sm font-medium">
-              {t("list.restaurants", { count: restaurants.length })}
+              {t(`list.${dataMode}`, { count: restaurants.length })}
             </span>
           </div>
 

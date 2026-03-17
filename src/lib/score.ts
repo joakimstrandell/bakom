@@ -10,6 +10,9 @@ const MICHELIN_SCORES: Record<MichelinDistinction, number> = {
   "1_star": 9,
   "2_star": 9.5,
   "3_star": 10,
+  "1_key": 9,
+  "2_key": 9.5,
+  "3_key": 10,
 };
 
 // WG scores calibrated so prestige sources always lift scores above non-prestige:

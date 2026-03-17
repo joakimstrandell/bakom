@@ -8,7 +8,9 @@
     "filter": "Filter",
     "close": "Stäng",
     "list": "Lista",
-    "map": "Karta"
+    "map": "Karta",
+    "restaurants": "Restauranger",
+    "hotels": "Hotell"
   },
   "regions": {
     "all": "Sverige",
@@ -62,6 +64,8 @@
   "list": {
     "restaurants_one": "{{count}} restaurang",
     "restaurants_other": "{{count}} restauranger",
+    "hotels_one": "{{count}} hotell",
+    "hotels_other": "{{count}} hotell",
     "sort_name": "Sortera efter namn",
     "sort_score": "Sortera efter poäng",
     "sort_distance": "Sortera efter avstånd",

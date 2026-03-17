@@ -393,7 +393,7 @@ export async function merge(): Promise<PipelineRestaurant[]> {
       priceRange: sanitizePrice(kg.priceRange),
       cuisine: sanitizeCuisine(kg.cuisine) || sanitizeCuisine(m?.cuisine),
       image: kg.image,
-      hours: prev?.googlePlaceId && prev.hours.length > 0 ? prev.hours : kg.hours,
+      hours: prev?.googlePlaceId && (prev.hours ?? []).length > 0 ? prev.hours : kg.hours,
       lat: prev?.lat ?? w?.lat ?? null,
       lng: prev?.lng ?? w?.lng ?? null,
       ratings: {
@@ -836,7 +836,7 @@ export async function merge(): Promise<PipelineRestaurant[]> {
   saveJson("restaurants.json", restaurants);
 
   const withCoords = restaurants.filter((r) => r.lat && r.lng).length;
-  const withHours = restaurants.filter((r) => r.hours.length > 0).length;
+  const withHours = restaurants.filter((r) => (r.hours ?? []).length > 0).length;
   const withMichelin = restaurants.filter((r) => r.ratings.michelin).length;
   const withWg = restaurants.filter((r) => r.ratings.whiteguide).length;
 

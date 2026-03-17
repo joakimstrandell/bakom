@@ -2,7 +2,7 @@
  * Shared layout for map-based routes.
  * The Map component lives here and is shared between / and /r/:id routes.
  */
-import { createFileRoute, Outlet, useNavigate, useParams } from "@tanstack/react-router";
+import { createFileRoute, Outlet, useNavigate, useParams, useRouterState } from "@tanstack/react-router";
 import { lazy, Suspense, useState, useCallback, useRef, useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import Filters from "../components/Filters";
@@ -23,23 +23,29 @@ import {
   List,
   MessageSquare,
   ChevronDown,
+  UtensilsCrossed,
+  Hotel,
 } from "lucide-react";
 import FeedbackModal from "../components/FeedbackModal";
 import { IconButton } from "../components/IconButton";
 import { MapOverlayButton } from "../components/MapOverlayButton";
 
-// Static import of all restaurant data
+// Static import of all data
 import restaurantData from "../../data/restaurants.frontend.json";
+import hotelData from "../../data/hotels.frontend.json";
 
 const Map = lazy(() => import("../components/Map"));
 
-// Pre-filter valid restaurants (with coordinates)
-const ALL_RESTAURANTS = (restaurantData as Restaurant[]).filter((r) => r.lat && r.lng);
+export type DataMode = "restaurants" | "hotels";
 
-// Count restaurants per region for the dropdown
-function getRegionCount(regionId: RegionFilter): number {
-  if (regionId === "all") return ALL_RESTAURANTS.length;
-  return ALL_RESTAURANTS.filter((r) => r.metroRegion === regionId).length;
+// Pre-filter valid entries (with coordinates)
+const ALL_RESTAURANTS = (restaurantData as Restaurant[]).filter((r) => r.lat && r.lng);
+const ALL_HOTELS = (hotelData as Restaurant[]).filter((r) => r.lat && r.lng);
+
+// Count entries per region for the dropdown
+function getRegionCount(regionId: RegionFilter, data: Restaurant[]): number {
+  if (regionId === "all") return data.length;
+  return data.filter((r) => r.metroRegion === regionId).length;
 }
 
 export const Route = createFileRoute("/_map")({
@@ -52,14 +58,25 @@ function MapLayout() {
   const { t } = useTranslation();
   const navigate = useNavigate();
 
-  // Get restaurant ID from child route params (if on /r/:id)
+  // Get venue ID from child route params (if on /r/:id or /h/:id)
   const params = useParams({ strict: false }) as { id?: string };
-  const restaurantId = params.id;
+  const venueId = params.id;
 
-  // Find the restaurant by ID
+  // ─── Data Mode (derived from URL path) ────────────────────────
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const dataMode: DataMode = pathname.startsWith("/h") ? "hotels" : "restaurants";
+  const allData = dataMode === "restaurants" ? ALL_RESTAURANTS : ALL_HOTELS;
+
+  // Find the venue by ID (search current dataset, fall back to both)
   const selectedRestaurant = useMemo(
-    () => (restaurantId ? (ALL_RESTAURANTS.find((r) => r.id === restaurantId) ?? null) : null),
-    [restaurantId]
+    () => {
+      if (!venueId) return null;
+      return allData.find((r) => r.id === venueId)
+        ?? ALL_RESTAURANTS.find((r) => r.id === venueId)
+        ?? ALL_HOTELS.find((r) => r.id === venueId)
+        ?? null;
+    },
+    [venueId, allData]
   );
 
   // ─── Region State ─────────────────────────────────────────────────
@@ -67,8 +84,8 @@ function MapLayout() {
   const [regionMenuOpen, setRegionMenuOpen] = useState(false);
   const regionMenuRef = useRef<HTMLDivElement>(null);
 
-  // All restaurants for the map
-  const allRestaurants = ALL_RESTAURANTS;
+  // All venues for the map
+  const allRestaurants = allData;
 
   // ─── Filter State (via useReducer hook) ────────────────────────
   // First filter by region, then apply other filters
@@ -124,19 +141,23 @@ function MapLayout() {
     setRegionMenuOpen(false);
   }, []);
 
-  // Handle restaurant selection - navigates to restaurant URL
+  // Handle venue selection - navigates to venue URL with correct prefix
   const handleSelectRestaurant = useCallback(
     (restaurant: Restaurant) => {
-      navigate({ to: "/r/$id", params: { id: restaurant.id } });
+      if (dataMode === "hotels") {
+        navigate({ to: "/h/$id", params: { id: restaurant.id } });
+      } else {
+        navigate({ to: "/r/$id", params: { id: restaurant.id } });
+      }
     },
-    [navigate]
+    [navigate, dataMode]
   );
 
-  // Handle closing sidebar - navigates back to home
+  // Handle closing sidebar - navigates back to mode root
   const closeSidebar = useCallback(() => {
     setSidebarMode(null);
-    navigate({ to: "/" });
-  }, [navigate]);
+    navigate({ to: dataMode === "hotels" ? "/h" : "/" });
+  }, [navigate, dataMode]);
 
   // Toggle filter sidebar
   const toggleFilters = useCallback(() => {
@@ -192,7 +213,7 @@ function MapLayout() {
         {/* Left side: Logo + Region Selector */}
         <div className="flex items-center gap-3 shrink-0 min-w-0">
           <button
-            onClick={() => navigate({ to: "/" })}
+            onClick={() => navigate({ to: dataMode === "hotels" ? "/h" : "/" })}
             className="font-display font-bold text-[28px] tracking-tight bg-gradient-to-br from-zinc-900 to-zinc-500 dark:from-white dark:to-zinc-400 bg-clip-text text-transparent"
           >
             B
@@ -222,12 +243,38 @@ function MapLayout() {
                     }`}
                   >
                     {t(`regions.${r.id}`)}
-                    <span className="text-muted-foreground ml-2">({getRegionCount(r.id)})</span>
+                    <span className="text-muted-foreground ml-2">({getRegionCount(r.id, allData)})</span>
                   </button>
                 ))}
               </div>
             )}
           </div>
+        </div>
+
+        {/* Data mode toggle (restaurants / hotels) */}
+        <div className="flex items-center h-8 rounded-full border border-black/10 dark:border-white/10 bg-white/50 dark:bg-white/5 p-0.5">
+          <button
+            onClick={() => navigate({ to: "/" })}
+            className={`flex items-center gap-1.5 h-7 px-3 rounded-full text-sm font-medium transition-colors ${
+              dataMode === "restaurants"
+                ? "bg-foreground text-background shadow-sm"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            <UtensilsCrossed className="size-3.5" />
+            <span className="hidden sm:inline">{t("header.restaurants")}</span>
+          </button>
+          <button
+            onClick={() => navigate({ to: "/h" })}
+            className={`flex items-center gap-1.5 h-7 px-3 rounded-full text-sm font-medium transition-colors ${
+              dataMode === "hotels"
+                ? "bg-foreground text-background shadow-sm"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            <Hotel className="size-3.5" />
+            <span className="hidden sm:inline">{t("header.hotels")}</span>
+          </button>
         </div>
 
         {/* Spacer */}
@@ -285,6 +332,7 @@ function MapLayout() {
               userLocation={userLocation}
               locationDenied={locationDenied}
               onRequestLocation={locateUser}
+              dataMode={dataMode}
             />
           )}
         </div>
@@ -380,6 +428,7 @@ function MapLayout() {
               total={regionFiltered.length}
               filtered={filtered.length}
               hasActiveFilters={hasActiveFilters}
+              dataMode={dataMode}
             />
           )}
           {sidebarMode === "restaurant" && selectedRestaurant && (

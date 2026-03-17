@@ -121,18 +121,18 @@ export function filterRestaurants(restaurants: Restaurant[], filters: FilterStat
     // Meal type filter: restaurant must serve ALL selected meal types
     if (filters.selectedMeals.size > 0) {
       for (const meal of filters.selectedMeals) {
-        if (!servesMeal(r.hours, meal)) return false;
+        if (!servesMeal(r.hours ?? [], meal)) return false;
       }
     }
 
     // Availability filter: must match ALL selected availability options
     if (filters.selectedAvailability.size > 0) {
       if (filters.selectedAvailability.has("openNow")) {
-        const open = isOpen(r.hours);
+        const open = isOpen(r.hours ?? []);
         if (open !== true) return false;
       }
       if (filters.selectedAvailability.has("opensToday")) {
-        if (!opensToday(r.hours)) return false;
+        if (!opensToday(r.hours ?? [])) return false;
       }
     }
 

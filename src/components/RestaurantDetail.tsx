@@ -27,6 +27,9 @@ const MICHELIN_LABELS: Record<MichelinDistinction, string> = {
   "1_star": "★",
   "2_star": "★★",
   "3_star": "★★★",
+  "1_key": "🔑",
+  "2_key": "🔑🔑",
+  "3_key": "🔑🔑🔑",
 };
 
 /**
@@ -107,9 +110,9 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
   const [hoursExpanded, setHoursExpanded] = useState(false);
   const r = restaurant;
   const dayNames = t("days", { returnObjects: true }) as string[];
-  const hoursByDay = getHoursByDay(r.hours, dayNames, t("detail.closed"));
-  const openStatus = isOpen(r.hours);
-  const nextOpen = !openStatus ? getNextOpenTime(r.hours) : null;
+  const hoursByDay = getHoursByDay(r.hours ?? [], dayNames, t("detail.closed"));
+  const openStatus = isOpen(r.hours ?? []);
+  const nextOpen = !openStatus ? getNextOpenTime(r.hours ?? []) : null;
   const { ratings } = r;
 
   const links = r.links;

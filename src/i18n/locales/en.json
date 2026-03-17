@@ -8,7 +8,9 @@
     "filter": "Filter",
     "close": "Close",
     "list": "List",
-    "map": "Map"
+    "map": "Map",
+    "restaurants": "Restaurants",
+    "hotels": "Hotels"
   },
   "regions": {
     "all": "Sweden",
@@ -62,6 +64,8 @@
   "list": {
     "restaurants_one": "{{count}} restaurant",
     "restaurants_other": "{{count}} restaurants",
+    "hotels_one": "{{count}} hotel",
+    "hotels_other": "{{count}} hotels",
     "sort_name": "Sort by name",
     "sort_score": "Sort by score",
     "sort_distance": "Sort by distance",

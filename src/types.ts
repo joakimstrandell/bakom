@@ -4,7 +4,15 @@ export type HoursEntry = {
   close: string; // "HH:MM"
 };
 
-export type MichelinDistinction = "selected" | "bib_gourmand" | "1_star" | "2_star" | "3_star";
+export type MichelinDistinction =
+  | "selected"
+  | "bib_gourmand"
+  | "1_star"
+  | "2_star"
+  | "3_star"
+  | "1_key"
+  | "2_key"
+  | "3_key";
 
 export type WhiteGuideClassification =
   | "recommended"
@@ -56,7 +64,7 @@ export type Restaurant = {
   website?: string;
   priceRange?: string;
   cuisine?: string;
-  hours: HoursEntry[];
+  hours?: HoursEntry[];
   lat: number | null;
   lng: number | null;
   ratings: SourceRatings;
