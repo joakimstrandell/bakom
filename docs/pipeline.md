@@ -15,6 +15,7 @@ pipeline/
     michelin.ts           Guide Michelin collector (HTML scraping, restaurants + hotels)
     di.ts                 DI Weekend collector (JSON API)
     krogguiden.ts         Krogguiden.se collector (AJAX + JSON-LD)
+    falstaff.ts           Falstaff collector (reads cached falstaff-raw.json)
   merge/
     index.ts              Merge CLI entry point
     merge.ts              Core merge logic (source processing, deduplication)
@@ -31,18 +32,19 @@ pipeline/
     optimize.ts           Frontend JSON shaping, cuisine mapping, split by category
   sources/
     registry.ts           Source registry
-    definitions/          Per-source definitions (whiteguide, dn, svd, michelin, di, krogguiden)
+    definitions/          Per-source definitions (whiteguide, dn, svd, michelin, di, krogguiden, falstaff)
   utils/
     fetch.ts              HTTP fetch with retry + rate-limit handling
     save.ts               JSON save/load for articles + data files
     normalize.ts          Shared normalizers (address, venue name, price, city)
   .data/
     articles/             Raw collected articles per source
-    venues.json           ~1,670 merged venue records
-    venues-refined.json   ~1,358 Google-enriched venues (with sourceHash for incremental)
-    venues-scored.json    ~1,358 scored + ranked venues
-    restaurants.frontend.json  ~1,152 restaurants (frontend-ready)
-    hotels.frontend.json       ~164 hotels (frontend-ready)
+    falstaff-raw.json     Cached Falstaff scrape (Chrome-based, Cloudflare-protected)
+    venues.json           ~1,954 merged venue records
+    venues-refined.json   ~1,566 Google-enriched venues (with sourceHash for incremental)
+    venues-scored.json    ~1,566 scored + ranked venues
+    restaurants.frontend.json  ~1,342 restaurants (frontend-ready)
+    hotels.frontend.json       ~179 hotels (frontend-ready)
 ```
 
 ## Usage
@@ -59,6 +61,7 @@ pnpm pipeline:collect --source svd-review
 pnpm pipeline:collect --source michelin
 pnpm pipeline:collect --source di
 pnpm pipeline:collect --source krogguiden
+pnpm pipeline:collect --source falstaff
 
 # Force re-scrape (for incremental collectors)
 pnpm pipeline:collect --source krogguiden --force
@@ -90,9 +93,9 @@ One Venue per physical place, with per-source ratings and links. Key fields:
 - `name`: Best name across sources (Michelin > WG > others)
 - `address`, `city`: Best available (WG > Michelin > DI > KG)
 - `venueType`: `restaurant` | `bar` | `cafe` | `hotel`
-- `ratings`: Per-source ratings in native scales (Michelin distinction, WG classification, DN 1-5, SvD 1-6, DI 0-25, KG 1-5)
+- `ratings`: Per-source ratings in native scales (Michelin distinction, WG classification, DN 1-5, SvD 1-6, DI 0-25, KG 1-5, Falstaff 0-100)
 - `sources`: Array of source references with article IDs, URLs, content types
-- `sourceCount`: Number of distinct sources mentioning this venue (1-6)
+- `sourceCount`: Number of distinct sources mentioning this venue (1-7)
 
 ## Normalization
 
@@ -114,12 +117,13 @@ Merge combines all collected articles into unified Venue records. Run: `pnpm pip
 
 Sources are processed in order of structural data quality (richest first):
 
-1. **White Guide** (base) — best coordinates, addresses, venue type classification. Creates ~920 initial venues.
+1. **White Guide** (base) — best coordinates, addresses, venue type classification. Creates ~919 initial venues.
 2. **Krogguiden** — large Stockholm coverage. Matches ~144, creates ~509 new.
 3. **Michelin** — prestige ratings, hotels. Matches ~93, creates ~28 new.
 4. **DI Weekend** — scores + coordinates. Matches ~76, creates ~27 new.
 5. **DN** — reviews + listing sub-articles (373 sub-venues). Matches ~478, creates ~99 new.
 6. **SvD** — reviews only, no city data → stricter name matching (0.90 threshold). Matches ~189, creates ~88 new.
+7. **Falstaff** — Austrian-origin gourmet guide, 745 Swedish restaurants. Matches ~461, creates ~284 new.
 
 ### Matching strategy
 
@@ -144,11 +148,11 @@ For sources without city data (SvD), the name threshold is raised to 0.90 to avo
 
 ### Current merge output
 
-~1670 venues:
-- By source count: 1279×1, 215×2, 100×3, 42×4, 31×5, 3×6
-- By type: 1235 restaurants, 223 cafes, 147 hotels, 65 bars
+~1954 venues:
+- By source count: 1334×1, 376×2, 123×3, 58×4, 36×5, 25×6, 2×7
+- By type: 1519 restaurants, 223 cafes, 147 hotels, 65 bars
 - With coordinates: 984
-- Top cities: Stockholm (780), Göteborg (104), Malmö (63)
+- Top cities: Stockholm (830), Göteborg (123), Malmö (83)
 
 ## Adding a New Source
 
@@ -328,13 +332,40 @@ Krogguiden uses dollar signs: $→budget, $$→mellan, $$$+→lyx
 
 ## Roadmap
 
+## Source: Falstaff
+
+**Source ID**: `falstaff`
+**Prestige**: professional
+**Rating scale**: 0–100 (with fork ratings 0–4 as fallback)
+**Method**: Cached raw data (Cloudflare-protected site requires Chrome-based scraping)
+
+Austrian-origin gourmet guide rating Swedish restaurants. ~745 restaurants with scores (0–100 scale) and fork ratings (0–4 forks).
+
+### Collection
+
+Falstaff.com is protected by Cloudflare and blocks direct HTTP requests. The collector reads from a cached `falstaff-raw.json` file that must be scraped separately via a Chrome-based browser scraper.
+
+1. **Raw data format**: Array of `{ name, url, score, address, cuisine, forks }`
+2. **Score handling**: Uses numeric score (80–100) when available, otherwise converts forks to estimated score (0 forks = 55, 4 forks = 95)
+3. **Address parsing**: Handles Falstaff format `"Street, PostalCode City, Sweden"` — strips postal codes and country
+
+### Notes
+
+- Listing page: `https://www.falstaff.com/en/listings/the-best-restaurants-in-sweden`
+- 461 matched to existing venues, 284 created as new entries
+- Score range in practice: 80–100 (top-rated) with fork-based estimates filling gaps
+
+**Output**: `falstaff.json` (~745 restaurant reviews)
+
+---
+
 ### Phase 1: Collect ✅
 
-All 6 source collectors are built and operational. ~2,565 articles collected. Normalization runs after each collection.
+All 7 source collectors are built and operational. ~3,310 articles collected. Normalization runs after each collection.
 
 ### Phase 2: Merge ✅
 
-Articles merged into ~1,670 unified Venue records. Fuzzy name + address matching with city-scoped fallback. 3 venues have ratings from all 6 sources.
+Articles merged into ~1,954 unified Venue records. Fuzzy name + address matching with city-scoped fallback. 2 venues have ratings from all 7 sources.
 
 ### Phase 3: Refine ✅
 
@@ -346,9 +377,9 @@ Enriches venues with **Google Places API** data. Run: `pnpm pipeline:refine`
 - Always overwrites coordinates — Google is the most accurate source
 - Backfills missing city from Google's formatted address
 
-**Enrichment fields added**: `googlePlaceId`, `googleRating`, `googleRatingCount`, `googleMapsUri`, `googlePrimaryType`, `businessStatus`
+**Enrichment fields added**: `googlePlaceId`, `googleRating`, `googleRatingCount`, `googleMapsUri`, `googlePrimaryType`, `businessStatus`, `hours` (opening hours), `website`, `phone`
 
-**Incremental processing**: Hash-based staleness detection. If `venues.json` hasn't changed since last run, skips already-enriched venues. Progress saved every 100 venues for crash recovery. `--force` re-fetches all. `--id {venue-id}` targets a single venue.
+**Incremental processing**: Hash-based staleness detection. If `venues.json` hasn't changed since last run, skips already-enriched venues. Progress saved every 100 venues for crash recovery. `--force` re-fetches all. `--id {venue-id}` targets a single venue. `--backfill` re-fetches only venues that have a Google Place ID but are missing hours, website, or phone.
 
 **Post-enrichment passes**:
 1. **Deduplication**: Merges venues that resolve to the same Google Place ID (sources, ratings, and metadata merged into the venue with the most sources)
@@ -356,7 +387,7 @@ Enriches venues with **Google Places API** data. Run: `pnpm pipeline:refine`
 3. **Metro region assignment**: Haversine distance to Stockholm (50 km), Göteborg (40 km), Malmö (50 km). Everything else → `"sweden"`
 4. **Venue categorization**: `restaurant` (food-related Google types), `hotel` (hotel/resort/inn/lodging/hostel), or `exclude` (non-food types that survived retry, e.g. camping, museum)
 
-**Output**: `venues-refined.json` (~1,358 venues with `sourceHash` for incremental detection)
+**Output**: `venues-refined.json` (~1,566 venues with `sourceHash` for incremental detection)
 
 ### Phase 4: Score ✅
 
@@ -372,11 +403,10 @@ Computes a composite **Bakom Score** (0–100) for each venue. Run: `pnpm pipeli
 | SvD | 1–6 → 0–10 | Linear: `score / 6 * 10` |
 | DI | 0–25 → 0–10 | Linear: `score / 25 * 10` |
 | Krogguiden | 1–5 → 0–10 | Linear: `score / 5 * 10` |
+| Falstaff | 0–100 → 0–10 | Linear: `score / 100 * 10` |
 | Google | 1–5 → 0–10 | Bayesian dampening: `confidence * raw + (1 - confidence) * prior`, where `confidence = min(1, reviewCount / 100)` and `prior = 7.0` |
 
-**Weighted average**: Michelin 28%, WG 20%, SvD 16%, DI 16%, Krogguiden 16%, DN 14%, Google 10%. Only present sources participate.
-
-**Prestige-aware averaging**: Prestige sources (Michelin, WG) are excluded from the weighted average when their normalized score is below the non-prestige average. This prevents a Michelin "selected" (7.5) from dragging down a venue with high reviews elsewhere.
+**Weighted average**: Michelin 28%, WG 20%, SvD 16%, DI 16%, Krogguiden 16%, Falstaff 14%, DN 14%, Google 10%. Only present sources participate. All sources are always included in the average.
 
 **Time decay**: Editorial reviews older than 3 years lose 15% weight per additional year (floor: 40% weight at 7+ years). No-date reviews get full weight.
 
@@ -388,7 +418,7 @@ Computes a composite **Bakom Score** (0–100) for each venue. Run: `pnpm pipeli
 
 **Ranking**: Separate ranks per category (restaurant vs hotel). National rank + metro region rank (Stockholm, Göteborg, Malmö).
 
-**Output**: `venues-scored.json` (~1,358 scored + ranked venues)
+**Output**: `venues-scored.json` (~1,566 scored + ranked venues)
 
 ### Phase 5: Optimize ✅
 
@@ -407,5 +437,5 @@ Shapes scored venues into frontend-ready JSON. Run: `pnpm pipeline:optimize`
 - Excludes non-venue categories (`exclude`)
 
 **Output**:
-- `restaurants.frontend.json` — ~1,152 restaurants sorted by rank
-- `hotels.frontend.json` — ~164 hotels sorted by rank
+- `restaurants.frontend.json` — ~1,342 restaurants sorted by rank
+- `hotels.frontend.json` — ~179 hotels sorted by rank
