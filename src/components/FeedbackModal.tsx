@@ -155,6 +155,18 @@ export default function FeedbackModal({ isOpen, onClose }: FeedbackModalProps) {
               </Button>
             </>
           )}
+
+          <div className="pt-2 border-t border-black/6 dark:border-white/6 flex items-center justify-between text-xs text-muted-foreground">
+            <span>v{__APP_VERSION__}</span>
+            <a
+              href="https://github.com/joakimstrandell/bakom/blob/master/CHANGELOG.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline"
+            >
+              Changelog
+            </a>
+          </div>
         </form>
       </DialogContent>
     </Dialog>
