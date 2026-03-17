@@ -467,7 +467,7 @@ function deduplicateByPlaceId(venues: EnrichedVenue[]): {
 // ─── Main refine function ───────────────────────────────────────
 
 export async function refineWithGoogle(
-  options: { force?: boolean; targetId?: string } = {},
+  options: { force?: boolean; targetId?: string; backfill?: boolean } = {},
 ): Promise<EnrichedVenue[]> {
   const apiKey = process.env.GOOGLE_PLACES_API_KEY;
   if (!apiKey) {
@@ -542,6 +542,10 @@ export async function refineWithGoogle(
     }
   } else if (options.force) {
     needsEnrich = venues;
+  } else if (options.backfill) {
+    needsEnrich = venues.filter(
+      (v) => v.googlePlaceId && (!v.hours || !v.website || !v.phone),
+    );
   } else {
     needsEnrich = venues.filter((v) => !v.googlePlaceId);
   }
@@ -550,7 +554,7 @@ export async function refineWithGoogle(
     `  Already enriched: ${venues.length - needsEnrich.length}`,
   );
   console.log(
-    `  ${options.force ? "Will re-fetch" : "Needs enrichment"}: ${needsEnrich.length}\n`,
+    `  ${options.force ? "Will re-fetch" : options.backfill ? "Missing hours/website/phone" : "Needs enrichment"}: ${needsEnrich.length}\n`,
   );
 
   let enriched = 0;
