@@ -5,6 +5,20 @@ All notable changes to Bakom will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.3.1] - 2026-03-17
+
+### Added
+- Falstaff as a data source with scoring, filters, and display
+
+### Fixed
+- Removed prestige-aware source skipping from scoring for more consistent results
+
+### Documentation
+- Updated pipeline docs for Falstaff and scoring changes
+
+### Maintenance
+- Regenerated pipeline data with Falstaff and scoring fix
+
 ## [0.2.0] - 2026-03-17
 
 ### Added
