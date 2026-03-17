@@ -1,20 +1,4 @@
-/** Score — compute Bakom Score (0–100) and ranks for all venues.
- *
- * Ported from src/lib/score.ts (pipeline1) with adaptations for pipeline2 types.
- *
- * Pipeline:
- *   1. Normalize each source rating to internal 0–10 scale
- *   2. Compute weighted average (only present sources)
- *   3. Apply diversity dampening (fewer sources → lower confidence)
- *   4. Apply prestige ceiling (no expert sources → capped score)
- *   5. Apply perfection requirement (100 needs Michelin 1★+ AND all sources ≥9.5)
- *   6. Convert to 0–100 scale
- *
- * Input:  .data/venues-refined.json
- * Output: .data/venues-scored.json
- *
- * @see docs/score.md for full documentation
- */
+/** Score — compute Bakom Score (0–100) and ranks. @see docs/pipeline.md */
 
 import { saveData, loadData } from "../utils/save.js";
 import type { EnrichedVenue } from "../refine/google.js";
@@ -380,7 +364,7 @@ export async function scoreAll(): Promise<ScoredVenue[]> {
   const refined = loadData<RefinedData>("venues-refined.json");
   if (!refined || refined.venues.length === 0) {
     throw new Error(
-      "pipeline2/.data/venues-refined.json not found. Run pipeline2:refine first.",
+      "pipeline/.data/venues-refined.json not found. Run pipeline:refine first.",
     );
   }
 

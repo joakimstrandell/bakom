@@ -1,6 +1,6 @@
 /**
  * Region definitions for frontend filtering.
- * Must match metroRegion values from pipeline/process/optimize.ts
+ * Must match metroRegion values from pipeline/refine/google.ts
  */
 
 // Metro regions assigned to each restaurant in the pipeline

@@ -1,7 +1,4 @@
-/** pipeline2 collect — CLI entry point.
- *
- * Usage: npx tsx pipeline2/collect/index.ts [--source <id>] [--force] [--skip-normalize]
- */
+/** Collect CLI entry point. @see docs/pipeline.md */
 
 import { collectWhiteGuideEntries, collectWhiteGuideNews } from "./whiteguide.js";
 import { collectDnReviews } from "./dn.js";
@@ -77,7 +74,7 @@ const DATA_FILES = [
 ];
 
 async function runNormalize() {
-  console.log("pipeline2: re-normalizing existing data...\n");
+  console.log("pipeline: re-normalizing existing data...\n");
 
   for (const file of DATA_FILES) {
     const articles = loadArticles<Article[]>(file);
@@ -126,7 +123,7 @@ async function main() {
 
   const toRun = source ? [source] : getSources().map((s) => s.id);
 
-  console.log(`pipeline2: collecting ${toRun.length} source(s)...\n`);
+  console.log(`pipeline: collecting ${toRun.length} source(s)...\n`);
 
   for (const id of toRun) {
     const collector = COLLECTORS[id];

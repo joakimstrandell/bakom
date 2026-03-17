@@ -1,67 +1,74 @@
-/** SvD Krogguiden scraper. @see docs/collect.md */
+/** SvD Krogguiden collector. @see docs/pipeline.md */
 
+import { createHash } from "crypto";
 import * as cheerio from "cheerio";
-import { fetchWithRetry, sleep, saveRawJson, loadRawJson } from "../utils/fetch.js";
-import type { SvdRaw } from "../types.js";
+import { fetchWithRetry, sleep } from "../utils/fetch.js";
+import { saveArticles, loadArticles } from "../utils/save.js";
+import { normalizeAddress, normalizeVenueName, normalizePriceRange } from "../utils/normalize.js";
+import type { Article } from "../types.js";
+
+// ─── Config ─────────────────────────────────────────────────────
 
 const API_URL = "https://www.svd.se/api/topic-backfill/story/krogguiden";
 const PAGE_SIZE = 50;
 
-/**
- * Fetch all article URLs via the backfill API (paginated)
- */
-async function fetchArticleUrls(): Promise<string[]> {
-  console.log("Fetching SvD Krogguiden articles via API...");
+// ─── Helpers ────────────────────────────────────────────────────
+
+function articleId(url: string): string {
+  return createHash("sha256")
+    .update(`svd-review:${url}`)
+    .digest("hex")
+    .slice(0, 16);
+}
+
+function now(): string {
+  return new Date().toISOString();
+}
+
+
+// ─── Discovery ──────────────────────────────────────────────────
+
+async function discoverArticleUrls(): Promise<string[]> {
+  console.log("  Discovering articles via API...");
   const urls: string[] = [];
   let offset = 0;
-  let hasMore = true;
 
-  while (hasMore) {
-    const res = await fetchWithRetry(`${API_URL}?limit=${PAGE_SIZE}&offset=${offset}&variant=grid`);
+  while (true) {
+    const res = await fetchWithRetry(
+      `${API_URL}?limit=${PAGE_SIZE}&offset=${offset}&variant=grid`,
+    );
     const html = await res.text();
 
-    // Extract article URLs from HTML
     const matches = html.match(/svd\.se\/a\/[^"<>\s]+/g) || [];
     const pageUrls = matches
       .map((m) => `https://www.${m}`)
       .filter((url) => url.includes("recension") || url.includes("krog"));
 
-    if (pageUrls.length === 0) {
-      hasMore = false;
-    } else {
-      // Deduplicate within page
-      const uniqueUrls = [...new Set(pageUrls)];
-      urls.push(...uniqueUrls);
-      offset += PAGE_SIZE;
-      process.stdout.write(`  Page ${offset / PAGE_SIZE}: ${urls.length} articles total\r`);
-      await sleep(500);
-    }
+    if (pageUrls.length === 0) break;
+
+    const unique = [...new Set(pageUrls)];
+    urls.push(...unique);
+    offset += PAGE_SIZE;
+    console.log(`    Page ${offset / PAGE_SIZE}: ${urls.length} URLs so far`);
+    await sleep(500);
   }
 
-  console.log(`\n  Found ${urls.length} review articles`);
-  return [...new Set(urls)]; // Final dedup
+  const deduped = [...new Set(urls)];
+  console.log(`  Discovered ${deduped.length} review URLs`);
+  return deduped;
 }
 
-/**
- * Clean up messy SvD addresses.
- * Raw data often contains prefixes ("Adress:"), embedded phone numbers
- * ("tel: 08-..."), and trailing punctuation.
- */
-function cleanSvdAddress(raw: string): string {
-  let addr = raw.trim();
-  // Strip leading "Adress:" / "Address:" prefix
-  addr = addr.replace(/^Adress:\s*/i, "");
-  // Strip embedded phone numbers: ", tel: 08-32 34 40" or "tel: 08-665 62 09."
-  addr = addr.replace(/,?\s*tel:?\s*[\d\s()+-]+\.?$/i, "");
-  // Strip trailing dots and whitespace
-  addr = addr.replace(/\.\s*$/, "").trim();
-  return addr;
+// ─── JSON-LD Parsing ────────────────────────────────────────────
+
+interface ParsedReview {
+  name: string;
+  address: string;
+  priceRange: string;
+  score: number | null;
+  publishedAt: string;
 }
 
-/**
- * Parse JSON-LD from article page to extract restaurant data
- */
-function parseJsonLd(html: string): Partial<SvdRaw> | null {
+function parseJsonLd(html: string): ParsedReview | null {
   const $ = cheerio.load(html);
 
   let reviewData: Record<string, unknown> | null = null;
@@ -71,148 +78,133 @@ function parseJsonLd(html: string): Partial<SvdRaw> | null {
       const json = $(el).html();
       if (!json) return;
       const parsed = JSON.parse(json);
-
-      // Look for Review type with itemReviewed
       if (parsed["@type"] === "Review" && parsed.itemReviewed) {
         reviewData = parsed;
       }
     } catch {
-      // Invalid JSON-LD, skip
+      // Invalid JSON-LD
     }
   });
 
-  if (!reviewData || !reviewData.itemReviewed) return null;
+  if (!reviewData) return null;
 
-  const restaurant = reviewData.itemReviewed;
-  const rating = reviewData.reviewRating;
+  const restaurant = (reviewData as Record<string, unknown>)
+    .itemReviewed as Record<string, unknown>;
+  const rating = (reviewData as Record<string, unknown>)
+    .reviewRating as Record<string, unknown>;
 
-  // Only include Restaurant type
-  if (restaurant["@type"] !== "Restaurant") return null;
+  if (!restaurant || restaurant["@type"] !== "Restaurant") return null;
 
   return {
-    name: restaurant.name || "",
-    address: cleanSvdAddress(restaurant.address || ""),
-    cuisine: restaurant.servesCuisine || "",
-    rating: rating?.ratingValue ?? null,
-    publishedAt: reviewData.datePublished || "",
+    name: normalizeVenueName((restaurant.name as string) || ""),
+    address: normalizeAddress((restaurant.address as string) || ""),
+    priceRange: normalizePriceRange((restaurant.servesCuisine as string) || ""),
+    score: (rating?.ratingValue as number) ?? null,
+    publishedAt:
+      ((reviewData as Record<string, unknown>).datePublished as string) || "",
   };
 }
 
-/**
- * Extract article ID from URL
- */
-function extractArticleId(url: string): string {
-  const match = url.match(/\/a\/([^/]+)\//);
-  return match ? match[1] : "";
-}
+// ─── Main Collector ─────────────────────────────────────────────
 
-/**
- * Scrape a single review article
- */
-async function scrapeArticle(url: string): Promise<SvdRaw | null> {
-  try {
-    const res = await fetchWithRetry(url);
-    const html = await res.text();
-    const parsed = parseJsonLd(html);
+export async function collectSvdReviews(): Promise<Article[]> {
+  console.log("\n=== SvD Krogguiden ===\n");
 
-    if (!parsed?.name) return null;
-
-    return {
-      source: "svd",
-      articleId: extractArticleId(url),
-      name: parsed.name,
-      address: parsed.address || "",
-      cuisine: parsed.cuisine || "",
-      rating: parsed.rating ?? 0,
-      url,
-      publishedAt: parsed.publishedAt || "",
-    };
-  } catch (err) {
-    console.log(`  Failed to scrape ${url}: ${err}`);
-    return null;
-  }
-}
-
-// ─── Main scraper function ───────────────────────────────────────
-
-export async function scrapeSvd(options: { force?: boolean } = {}): Promise<SvdRaw[]> {
-  console.log("=== SvD Krogguiden Scraper ===\n");
-
-  // Load existing data to avoid re-scraping (skip when --force)
-  const existing = options.force ? [] : (loadRawJson<SvdRaw[]>("svd.json") ?? []);
-  const existingIds = new Set(existing.map((r) => r.articleId));
+  // Load existing to avoid re-scraping
+  const existing = loadArticles<Article[]>("svd-review.json") ?? [];
+  const existingUrls = new Set(existing.map((a) => a.url));
 
   if (existing.length > 0) {
-    console.log(`Loaded ${existing.length} existing reviews from svd.json`);
+    console.log(`  Existing: ${existing.length} articles`);
   }
 
-  // Fetch article URLs from RSS
-  const urls = await fetchArticleUrls();
+  // Discover all article URLs
+  const allUrls = await discoverArticleUrls();
 
-  // Filter to new articles
-  const newUrls = urls.filter((url) => !existingIds.has(extractArticleId(url)));
-  console.log(`\nNew articles to scrape: ${newUrls.length}`);
-  console.log(`Already scraped: ${existingIds.size}\n`);
+  // Filter to new articles only
+  const newUrls = allUrls.filter((url) => !existingUrls.has(url));
+  console.log(`  New articles to scrape: ${newUrls.length}`);
 
   if (newUrls.length === 0) {
-    console.log("All articles already scraped. Nothing to do.");
+    console.log("  Nothing new to scrape.");
     return existing;
   }
 
-  const reviews: SvdRaw[] = [...existing];
+  const articles: Article[] = [...existing];
+  let scraped = 0;
+  let skipped = 0;
+  let failed = 0;
 
   for (let i = 0; i < newUrls.length; i++) {
     const url = newUrls[i];
-    process.stdout.write(`[${i + 1}/${newUrls.length}] `);
+    console.log(`  [${i + 1}/${newUrls.length}] ${url.split("/").pop()?.slice(0, 50)}`);
 
-    const review = await scrapeArticle(url);
-    if (review) {
-      reviews.push(review);
-      console.log(`${review.name} (${review.rating}/6)`);
-    } else {
-      console.log(`FAILED: ${url}`);
+    try {
+      const res = await fetchWithRetry(url);
+      const html = await res.text();
+      const parsed = parseJsonLd(html);
+
+      if (parsed?.name) {
+        articles.push({
+          id: articleId(url),
+          sourceId: "svd-review",
+          url,
+          title: parsed.name,
+          publishedAt: parsed.publishedAt,
+          contentType: "review",
+          bodyText: "",
+          venueName: parsed.name,
+          venueAddress: parsed.address || undefined,
+          score: parsed.score ?? undefined,
+          priceRange: parsed.priceRange || undefined,
+          collectedAt: now(),
+          enrichedAt: now(),
+        });
+        scraped++;
+      } else {
+        // Save non-review articles too so they aren't re-scraped on next run.
+        // Extract title from og:title meta tag.
+        const $ = cheerio.load(html);
+        const ogTitle =
+          $('meta[property="og:title"]').attr("content") || "";
+        const publishedAt =
+          $('meta[property="article:published_time"]').attr("content") || "";
+        const isReview = url.includes("recension");
+
+        articles.push({
+          id: articleId(url),
+          sourceId: "svd-review",
+          url,
+          title: ogTitle || url.split("/").pop()?.replace(/-/g, " ") || "",
+          publishedAt,
+          contentType: isReview ? "review" : "listing",
+          bodyText: "",
+          venueName: "",
+          collectedAt: now(),
+          // No enrichedAt — these may benefit from Chrome MCP enrichment later
+        });
+        skipped++;
+        console.log(`    → No JSON-LD (saved as ${isReview ? "review" : "listing"})`);
+      }
+    } catch (err) {
+      console.log(`    → Error: ${err}`);
+      failed++;
     }
 
-    // Rate limit
-    await sleep(2000);
+    await sleep(1500);
 
-    // Save progress every 20 articles
-    if (i % 20 === 19) {
-      saveRawJson("svd.json", reviews);
-      console.log(`  [saved progress: ${reviews.length} reviews]`);
+    // Save progress every 25 articles
+    if ((i + 1) % 25 === 0) {
+      saveArticles("svd-review.json", articles);
+      console.log(`    [saved progress: ${articles.length} articles]`);
     }
   }
 
-  // Final save
-  saveRawJson("svd.json", reviews);
+  saveArticles("svd-review.json", articles);
+  console.log(`\n  Total SvD articles: ${articles.length}`);
+  console.log(`    New with JSON-LD: ${scraped}`);
+  console.log(`    New without JSON-LD: ${skipped}`);
+  console.log(`    Failed: ${failed}`);
 
-  console.log(`\nSvD scrape complete: ${reviews.length} reviews`);
-  console.log(`  New: ${newUrls.length}`);
-  console.log(`  Previously scraped: ${existing.length}`);
-
-  // Stats by rating
-  const byRating = new Map<number, number>();
-  for (const r of reviews) {
-    if (r.rating) {
-      byRating.set(r.rating, (byRating.get(r.rating) ?? 0) + 1);
-    }
-  }
-  console.log("\nRating distribution:");
-  for (const rating of [1, 2, 3, 4, 5, 6]) {
-    const count = byRating.get(rating) ?? 0;
-    if (count > 0) {
-      console.log(`  ${rating}/6: ${count}`);
-    }
-  }
-
-  return reviews;
-}
-
-// ─── CLI entry point ─────────────────────────────────────────────
-
-if (process.argv[1]?.includes("svd")) {
-  scrapeSvd({ force: process.argv.includes("--force") }).catch((err) => {
-    console.error("Fatal error:", err);
-    process.exit(1);
-  });
+  return articles;
 }

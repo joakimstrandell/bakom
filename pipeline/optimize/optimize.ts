@@ -1,19 +1,4 @@
-/** Optimize — shape scored venues into frontend-ready JSON.
- *
- * Produces two files:
- *   - restaurants.frontend.json  (restaurants, bars, cafes)
- *   - hotels.frontend.json       (hotels, inns, resorts)
- *
- * Transforms:
- *   - Maps pipeline2 internal types → frontend Restaurant type
- *   - Extracts source links from SourceReference[]
- *   - Maps ratings to frontend display format
- *   - Maps googlePrimaryType → human-readable cuisine
- *   - Strips internal fields (articleIds, mergedAt, normalizedRatings, etc.)
- *
- * Input:  .data/venues-scored.json
- * Output: .data/restaurants.frontend.json, .data/hotels.frontend.json
- */
+/** Optimize — shape scored venues into frontend-ready JSON. @see docs/pipeline.md */
 
 import { saveData, loadData } from "../utils/save.js";
 import type { ScoredVenue } from "../score/score.js";
@@ -210,7 +195,7 @@ export async function optimizeAll(): Promise<{
   const scored = loadData<ScoredVenue[]>("venues-scored.json");
   if (!scored || scored.length === 0) {
     throw new Error(
-      "pipeline2/.data/venues-scored.json not found. Run pipeline2:score first.",
+      "pipeline/.data/venues-scored.json not found. Run pipeline:score first.",
     );
   }
 

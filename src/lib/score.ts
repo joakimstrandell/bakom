@@ -1,4 +1,4 @@
-/** Bakom Score — aggregated restaurant rating (0–100). @see docs/score.md */
+/** Bakom Score — aggregated restaurant rating (0–100). @see docs/pipeline.md */
 
 import type { MichelinDistinction, WhiteGuideClassification, SourceRatings } from "../types";
 

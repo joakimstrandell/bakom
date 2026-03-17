@@ -1,13 +1,4 @@
-/** Core merge logic — combines articles from all sources into unified Venues.
- *
- * Merge order (richest structural source first):
- *   1. White Guide  — best coords, addresses, venue type
- *   2. Krogguiden   — large Stockholm coverage, scores
- *   3. Michelin     — prestige ratings, hotels
- *   4. DI Weekend   — scores + coords
- *   5. DN           — reviews + listing sub-articles
- *   6. SvD          — reviews (no city data, name-only matching)
- */
+/** Merge — combines articles from all sources into unified Venues. @see docs/pipeline.md */
 
 import { loadArticles, saveData } from "../utils/save.js";
 import type { Article, SubArticle, VenueType } from "../types.js";

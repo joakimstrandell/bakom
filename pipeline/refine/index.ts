@@ -1,10 +1,4 @@
-/** pipeline2 refine — CLI entry point.
- *
- * Usage:
- *   npx tsx pipeline2/refine/index.ts            # incremental
- *   npx tsx pipeline2/refine/index.ts --force     # re-fetch all
- *   npx tsx pipeline2/refine/index.ts --id <id>   # re-fetch specific venue
- */
+/** Refine CLI entry point. @see docs/pipeline.md */
 
 import { refineWithGoogle } from "./google.js";
 

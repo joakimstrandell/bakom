@@ -1,182 +1,207 @@
-/** DN Krogkommissionen scraper. @see docs/collect.md */
+/** DN Krogkommissionen collector. @see docs/pipeline.md */
 
+import { createHash } from "crypto";
 import * as cheerio from "cheerio";
-import { fetchWithRetry, sleep, saveRawJson, loadRawJson } from "../utils/fetch.js";
-import type { DnRaw } from "../types.js";
+import { fetchWithRetry, sleep } from "../utils/fetch.js";
+import { saveArticles, loadArticles } from "../utils/save.js";
+import { normalizeVenueName, normalizePriceRange } from "../utils/normalize.js";
+import type { Article } from "../types.js";
+
+// ─── Config ─────────────────────────────────────────────────────
 
 const RSS_URL = "https://www.dn.se/rss/om/krogkommissionen/";
+const CUTOFF_DATE = "2025-01-01T00:00:00.000Z";
 
-/**
- * Parse RSS feed to get article URLs
- */
-async function fetchArticleUrls(): Promise<string[]> {
-  console.log("Fetching DN Krogkommissionen RSS feed...");
+// ─── Helpers ────────────────────────────────────────────────────
+
+function articleId(url: string): string {
+  return createHash("sha256")
+    .update(`dn-review:${url}`)
+    .digest("hex")
+    .slice(0, 16);
+}
+
+function now(): string {
+  return new Date().toISOString();
+}
+
+/** Try to extract a single restaurant name from DN title.
+ *  Pattern: "Restaurangnamn: Rubriktext" → "Restaurangnamn"
+ *  Returns null for multi-venue, editorial, or news titles. */
+function extractRestaurantName(title: string): string | null {
+  // These colon-prefixes are NOT restaurant names
+  const falseNamePatterns = [
+    /^krogkommissionen/i,
+    /^elin\s+peters/i,
+    /^studio\s+dn/i,
+    /^kk\s+tipsar/i,
+    /^veckans/i,
+  ];
+
+  // Extract name before colon
+  const colonMatch = title.match(/^([^:]+):/);
+  if (!colonMatch) return null;
+
+  const name = colonMatch[1].trim();
+
+  // Validate: must be reasonable length
+  if (name.length <= 2 || name.length >= 50) return null;
+
+  // Check against false-name patterns
+  for (const pattern of falseNamePatterns) {
+    if (pattern.test(name)) return null;
+  }
+
+  return name;
+}
+
+/** Strip HTML and decode entities */
+function stripHtml(html: string): string {
+  return html
+    .replace(/<[^>]*>/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&auml;/g, "ä")
+    .replace(/&ouml;/g, "ö")
+    .replace(/&aring;/g, "å")
+    .replace(/&Auml;/g, "Ä")
+    .replace(/&Ouml;/g, "Ö")
+    .replace(/&Aring;/g, "Å")
+    .replace(/&ndash;/g, "–")
+    .replace(/&nbsp;/g, " ")
+    .replace(/\r\n/g, "\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
+// ─── RSS Discovery ──────────────────────────────────────────────
+
+interface RssItem {
+  url: string;
+  title: string;
+  pubDate: string;
+  description: string;
+}
+
+async function fetchRssArticles(): Promise<RssItem[]> {
+  console.log("  Fetching RSS feed...");
   const res = await fetchWithRetry(RSS_URL);
   const xml = await res.text();
   const $ = cheerio.load(xml, { xmlMode: true });
 
-  const urls: string[] = [];
-  $("item link").each((_, el) => {
-    const url = $(el).text().trim();
-    // Only include kultur section articles (individual reviews)
-    if (url.includes("/kultur/") && !url.includes("?page=")) {
-      urls.push(url);
+  const items: RssItem[] = [];
+
+  $("item").each((_, el) => {
+    const url = $(el).find("link").text().trim();
+    const title = $(el).find("title").text().trim();
+    const pubDate = $(el).find("pubDate").text().trim();
+    const description = $(el).find("description").text().trim();
+
+    if (url && url.includes("/kultur/")) {
+      items.push({ url, title, pubDate, description });
     }
   });
 
-  console.log(`  Found ${urls.length} articles`);
-  return urls;
+  console.log(`  RSS: ${items.length} articles`);
+  return items;
 }
 
-/**
- * Extract restaurant name from title.
- * Patterns:
- * - "Agrikultur: Nyöppnad krog visar..." → "Agrikultur"
- * - "Bistro Tartine: Mer målgruppstänk..." → "Bistro Tartine"
- * - "Tre nya krogar på Söder" → null (list article, not single review)
- */
-function extractRestaurantName(title: string): string | null {
-  // Skip list/summary articles
-  const skipPatterns = [
-    /^tre\s/i,
-    /^hostens/i,
-    /^så\s(bra|var)/i,
-    /^från\s/i,
-    /tips\s+för/i,
-    /lyxiga\s+krogupplevelser/i,
-    /heta\s+krognyheter/i,
-  ];
+// ─── Public Metadata Scraping ───────────────────────────────────
 
-  for (const pattern of skipPatterns) {
-    if (pattern.test(title)) return null;
-  }
+async function scrapePublicMetadata(url: string): Promise<Partial<Article>> {
+  const res = await fetchWithRetry(url);
+  const html = await res.text();
+  const $ = cheerio.load(html);
 
-  // Extract name before colon
-  const colonMatch = title.match(/^([^:]+):/);
-  if (colonMatch) {
-    const name = colonMatch[1].trim();
-    // Validate it's a restaurant name (not a generic phrase)
-    if (name.length > 2 && name.length < 50 && !name.toLowerCase().startsWith("krog")) {
-      return name;
-    }
-  }
+  const ogTitle =
+    $('meta[property="og:title"]').attr("content") || "";
+  const publishedAt =
+    $('meta[property="article:published_time"]').attr("content") || "";
+  const description =
+    $('meta[property="og:description"]').attr("content") || "";
 
-  return null;
+  return {
+    title: ogTitle,
+    publishedAt,
+    bodyText: stripHtml(description), // Just the ingress without login
+  };
 }
 
-/**
- * Extract slug from URL
- */
-function extractSlug(url: string): string {
-  const match = url.match(/\/kultur\/([^/]+)\/?$/);
-  return match ? match[1] : "";
-}
+// ─── Main Collector ─────────────────────────────────────────────
 
-/**
- * Scrape a single article page for metadata
- */
-async function scrapeArticle(url: string): Promise<DnRaw | null> {
-  try {
-    const res = await fetchWithRetry(url);
-    const html = await res.text();
-    const $ = cheerio.load(html);
+export async function collectDnReviews(): Promise<Article[]> {
+  console.log("\n=== DN Krogkommissionen ===\n");
 
-    // Get title from og:title
-    const title = $('meta[property="og:title"]').attr("content") || "";
-    const publishedAt = $('meta[property="article:published_time"]').attr("content") || "";
-
-    const name = extractRestaurantName(title);
-    if (!name) return null;
-
-    return {
-      source: "dn",
-      slug: extractSlug(url),
-      name,
-      heading: title,
-      url,
-      publishedAt,
-      score: null,
-      address: null,
-      priceClass: null,
-      website: null,
-      contact: null,
-      hours: null,
-    };
-  } catch (err) {
-    console.log(`  Failed to scrape ${url}: ${err}`);
-    return null;
-  }
-}
-
-// ─── Main scraper function ───────────────────────────────────────
-
-export async function scrapeDn(options: { force?: boolean } = {}): Promise<DnRaw[]> {
-  console.log("=== DN Krogkommissionen Scraper ===\n");
-
-  // Load existing data to avoid re-scraping (skip when --force)
-  const existing = options.force ? [] : (loadRawJson<DnRaw[]>("dn.json") ?? []);
-  const existingSlugs = new Set(existing.map((r) => r.slug));
+  // Load existing to avoid re-scraping
+  const existing = loadArticles<Article[]>("dn-review.json") ?? [];
+  const existingUrls = new Set(existing.map((a) => a.url));
 
   if (existing.length > 0) {
-    console.log(`Loaded ${existing.length} existing reviews from dn.json`);
+    console.log(`  Existing: ${existing.length} articles`);
   }
 
-  // Fetch article URLs from RSS
-  const urls = await fetchArticleUrls();
+  // Discover articles via RSS
+  const rssItems = await fetchRssArticles();
 
-  // Filter to new articles
-  const newUrls = urls.filter((url) => !existingSlugs.has(extractSlug(url)));
-  console.log(`\nNew articles to scrape: ${newUrls.length}`);
-  console.log(`Already scraped: ${existingSlugs.size}\n`);
+  // Filter to new articles within date range
+  const newItems = rssItems.filter((item) => {
+    if (existingUrls.has(item.url)) return false;
+    // Parse RSS date format: "Fri, 13 Mar 2026 15:15:17 +0100"
+    const date = new Date(item.pubDate);
+    if (date.toISOString() < CUTOFF_DATE) return false;
+    return true;
+  });
 
-  if (newUrls.length === 0) {
-    console.log("All articles already scraped. Nothing to do.");
+  console.log(`  New articles: ${newItems.length}`);
+
+  if (newItems.length === 0) {
+    console.log("  Nothing new to scrape.");
     return existing;
   }
 
-  const reviews: DnRaw[] = [...existing];
-  let skipped = 0;
+  const articles: Article[] = [...existing];
+  let reviewCount = 0;
+  let listingCount = 0;
 
-  for (let i = 0; i < newUrls.length; i++) {
-    const url = newUrls[i];
-    process.stdout.write(`[${i + 1}/${newUrls.length}] `);
+  for (let i = 0; i < newItems.length; i++) {
+    const item = newItems[i];
+    const restaurantName = extractRestaurantName(item.title);
+    const isReview = restaurantName !== null;
+    const contentType = isReview ? "review" : "listing";
 
-    const review = await scrapeArticle(url);
-    if (review) {
-      reviews.push(review);
-      console.log(`${review.name}`);
-    } else {
-      // Skipped (list article or parse failure)
-      skipped++;
-      console.log(`SKIPPED: ${extractSlug(url)}`);
-    }
+    console.log(
+      `  [${i + 1}/${newItems.length}] ${item.title.slice(0, 60)}`,
+    );
+    if (!isReview) console.log(`    → listing (multi-venue / editorial)`);
 
-    // Rate limit
+    // Scrape public metadata
+    const meta = await scrapePublicMetadata(item.url);
+
+    articles.push({
+      id: articleId(item.url),
+      sourceId: "dn-review",
+      url: item.url,
+      title: meta.title || item.title,
+      publishedAt: meta.publishedAt || new Date(item.pubDate).toISOString(),
+      contentType,
+      bodyText: meta.bodyText || stripHtml(item.description),
+      venueName: restaurantName ? normalizeVenueName(restaurantName) : "",
+      // These fields require Chrome MCP enrichment (paywall content):
+      // score, venueAddress, venueCity, priceRange, subArticles
+      collectedAt: now(),
+    });
+
+    if (isReview) reviewCount++;
+    else listingCount++;
+
     await sleep(1500);
-
-    // Save progress every 20 articles
-    if (i % 20 === 19) {
-      saveRawJson("dn.json", reviews);
-      console.log(`  [saved progress: ${reviews.length} reviews]`);
-    }
   }
 
-  // Final save
-  saveRawJson("dn.json", reviews);
+  saveArticles("dn-review.json", articles);
+  console.log(`\n  Total DN articles: ${articles.length}`);
+  console.log(`    Reviews: ${reviewCount} new (${articles.filter((a) => a.contentType === "review").length} total)`);
+  console.log(`    Listings: ${listingCount} new (${articles.filter((a) => a.contentType === "listing").length} total)`);
 
-  console.log(`\nDN scrape complete: ${reviews.length} reviews`);
-  console.log(`  New: ${newUrls.length - skipped}`);
-  console.log(`  Skipped (list articles): ${skipped}`);
-  console.log(`  Previously scraped: ${existing.length}`);
-
-  return reviews;
-}
-
-// ─── CLI entry point ─────────────────────────────────────────────
-
-if (process.argv[1]?.includes("dn")) {
-  scrapeDn({ force: process.argv.includes("--force") }).catch((err) => {
-    console.error("Fatal error:", err);
-    process.exit(1);
-  });
+  return articles;
 }

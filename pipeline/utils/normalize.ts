@@ -1,7 +1,4 @@
-/** Shared normalizers for cleaning collected data across all sources.
- *
- * Applied at collection time so downstream merging/geocoding sees consistent data.
- */
+/** Shared normalizers for cleaning collected data. @see docs/pipeline.md */
 
 // ─── Address ────────────────────────────────────────────────────
 

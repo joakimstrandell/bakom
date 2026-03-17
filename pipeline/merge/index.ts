@@ -1,7 +1,4 @@
-/** pipeline2 merge — CLI entry point.
- *
- * Usage: npx tsx pipeline2/merge/index.ts
- */
+/** Merge CLI entry point. @see docs/pipeline.md */
 
 import { mergeAll } from "./merge.js";
 

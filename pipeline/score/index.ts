@@ -1,7 +1,4 @@
-/** pipeline2 score — CLI entry point.
- *
- * Usage: npx tsx pipeline2/score/index.ts
- */
+/** Score CLI entry point. @see docs/pipeline.md */
 
 import { scoreAll } from "./score.js";
 

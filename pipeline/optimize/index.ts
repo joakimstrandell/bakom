@@ -1,7 +1,4 @@
-/** pipeline2 optimize — CLI entry point.
- *
- * Usage: npx tsx pipeline2/optimize/index.ts
- */
+/** Optimize CLI entry point. @see docs/pipeline.md */
 
 import { optimizeAll } from "./optimize.js";
 

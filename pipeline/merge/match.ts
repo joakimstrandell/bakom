@@ -1,9 +1,4 @@
-/** Fuzzy name/address matching for cross-source venue deduplication.
- *
- * Ported from pipeline1/utils/fuzzy.ts + match.ts with improvements:
- *   - City-scoped matching for entries without addresses
- *   - Batch matching interface for merge pipeline
- */
+/** Fuzzy name/address matching for venue deduplication. @see docs/pipeline.md */
 
 // ─── Levenshtein Distance ──────────────────────────────────────
 

@@ -1,33 +1,58 @@
-/** Krogguiden.se collector. @see docs/collect.md */
+/** Krogguiden.se collector. @see docs/pipeline.md */
 
+import { createHash } from "crypto";
 import * as cheerio from "cheerio";
+import { fetchWithRetry, sleep } from "../utils/fetch.js";
+import { saveArticles, loadArticles } from "../utils/save.js";
 import {
-  fetchWithRetry,
-  sleep,
-  KROGGUIDEN_BASE_URL,
-  saveRawJson,
-  loadRawJson,
-} from "../utils/fetch.js";
-import { batchProcess } from "../utils/concurrency.js";
-import { parseHoursFromHtml } from "../utils/hours.js";
-import type { KrogguidenRaw } from "../types.js";
+  normalizeVenueName,
+  normalizeAddress,
+  normalizeCity,
+  normalizePriceRange,
+} from "../utils/normalize.js";
+import type { Article } from "../types.js";
 
-// ─── Slug fetching ───────────────────────────────────────────────
+// ─── Config ─────────────────────────────────────────────────────
+
+const BASE_URL = "https://www.krogguiden.se";
+const SOURCE_ID = "krogguiden";
+const CONCURRENCY = 3;
+const MIN_DELAY_MS = 2000;
+const MAX_PAGES = 60;
+const SAVE_INTERVAL = 50;
+
+// ─── Types ──────────────────────────────────────────────────────
+
+interface KrogguidenEntry {
+  slug: string;
+  name: string;
+  address: string;
+  postalCode: string;
+  city: string;
+  region: string;
+  priceRange: string;
+  cuisine: string;
+  image: string;
+  rating: number | null;
+  url: string;
+}
+
+// ─── Phase 1: Discover slugs via AJAX pagination ────────────────
 
 async function fetchAllSlugs(): Promise<string[]> {
   const slugs = new Set<string>();
 
-  // Primary: AJAX pagination (most reliable, gets all 598+ restaurants)
-  console.log("Fetching slugs via AJAX pagination...");
-  for (let page = 1; page <= 55; page++) {
+  console.log("  Fetching slugs via AJAX pagination...");
+  for (let page = 1; page <= MAX_PAGES; page++) {
     try {
-      const res = await fetchWithRetry(`${KROGGUIDEN_BASE_URL}/ajax/getMoreListRestaurants`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
+      const res = await fetchWithRetry(
+        `${BASE_URL}/ajax/getMoreListRestaurants`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: `page=${page}&sortOption=2`,
         },
-        body: `page=${page}&sortOption=2`,
-      });
+      );
       const html = await res.text();
       if (html.includes("Hoppsan") || !html.trim()) break;
 
@@ -42,28 +67,31 @@ async function fetchAllSlugs(): Promise<string[]> {
 
       const numPages = $("[data-numpages]").attr("data-numpages");
       if (page % 10 === 0 || page === 1) {
-        console.log(`  Page ${page}/${numPages || "?"} — ${slugs.size} slugs so far`);
+        console.log(
+          `    Page ${page}/${numPages || "?"} — ${slugs.size} slugs`,
+        );
       }
       if (numPages && page >= parseInt(numPages)) break;
 
       await sleep(500);
     } catch (err) {
-      console.log(`  AJAX page ${page} error:`, err);
+      console.log(`    AJAX page ${page} error: ${err}`);
       break;
     }
   }
-  console.log(`Found ${slugs.size} slugs from AJAX pagination`);
 
   // Secondary: search endpoint for any we missed
-  console.log("Checking search endpoint for additional slugs...");
+  console.log("  Checking search endpoint...");
   await sleep(2000);
   try {
-    const searchRes = await fetchWithRetry(`${KROGGUIDEN_BASE_URL}/p/search/search?freeText=`);
-    const searchHtml = await searchRes.text();
-    const $search = cheerio.load(searchHtml);
+    const searchRes = await fetchWithRetry(
+      `${BASE_URL}/p/search/search?freeText=`,
+    );
+    const html = await searchRes.text();
+    const $ = cheerio.load(html);
     let added = 0;
-    $search('a[href*="/restauranger/view/"]').each((_, el) => {
-      const href = $search(el).attr("href");
+    $('a[href*="/restauranger/view/"]').each((_, el) => {
+      const href = $(el).attr("href");
       if (href) {
         const match = href.match(/\/restauranger\/view\/(.+)/);
         if (match && !slugs.has(match[1])) {
@@ -72,20 +100,23 @@ async function fetchAllSlugs(): Promise<string[]> {
         }
       }
     });
-    if (added > 0) console.log(`  Added ${added} new slugs from search`);
+    if (added > 0) console.log(`    Added ${added} slugs from search`);
   } catch {
-    console.log("  Search endpoint unavailable, skipping");
+    console.log("    Search endpoint unavailable, skipping");
   }
 
-  console.log(`Total unique slugs: ${slugs.size}`);
+  console.log(`  Found ${slugs.size} total slugs`);
   return [...slugs];
 }
 
-// ─── JSON-LD parsing ─────────────────────────────────────────────
+// ─── Phase 2: Scrape detail pages via JSON-LD ───────────────────
 
-function parseJsonLd(html: string): Partial<KrogguidenRaw> | null {
+function parseJsonLd(
+  html: string,
+): Partial<KrogguidenEntry> | null {
   const $ = cheerio.load(html);
-  let restaurantData: Record<string, unknown> | null = null;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let restaurantData: Record<string, any> | null = null;
   let ratingValue: string | null = null;
 
   $('script[type="application/ld+json"]').each((_, el) => {
@@ -94,15 +125,22 @@ function parseJsonLd(html: string): Partial<KrogguidenRaw> | null {
       if (!json) return;
       const parsed = JSON.parse(json);
 
-      const items = Array.isArray(parsed) ? parsed : parsed["@graph"] ? parsed["@graph"] : [parsed];
+      const items = Array.isArray(parsed)
+        ? parsed
+        : parsed["@graph"]
+          ? parsed["@graph"]
+          : [parsed];
 
       for (const item of items) {
         if (item["@type"] === "Review" && item.itemReviewed) {
           const reviewed = item.itemReviewed;
           if (
-            ["Restaurant", "FoodEstablishment", "LocalBusiness", "BarOrPub"].includes(
-              reviewed["@type"]
-            )
+            [
+              "Restaurant",
+              "FoodEstablishment",
+              "LocalBusiness",
+              "BarOrPub",
+            ].includes(reviewed["@type"])
           ) {
             restaurantData = reviewed;
           }
@@ -111,180 +149,292 @@ function parseJsonLd(html: string): Partial<KrogguidenRaw> | null {
           ratingValue = item.ratingValue;
         }
         if (
-          ["Restaurant", "FoodEstablishment", "LocalBusiness", "BarOrPub"].includes(item["@type"])
+          [
+            "Restaurant",
+            "FoodEstablishment",
+            "LocalBusiness",
+            "BarOrPub",
+          ].includes(item["@type"])
         ) {
           restaurantData = item;
         }
       }
     } catch {
-      // Invalid JSON-LD, skip
+      // Invalid JSON-LD
     }
   });
 
   if (!restaurantData) return null;
 
-  const address = restaurantData.address || {};
-  const image = restaurantData.image;
-  const imageUrl = typeof image === "string" ? image : image?.url || "";
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const rd = restaurantData as Record<string, any>;
+  const address = rd.address || {};
+  const image = rd.image;
+  const imageUrl =
+    typeof image === "string" ? image : image?.url || "";
 
   return {
-    name: restaurantData.name || "",
+    name: rd.name || "",
     address: address.streetAddress || "",
     postalCode: (address.postalCode || "").replace(/\s/g, "").trim(),
     city: address.addressLocality || "",
     region: address.addressRegion || "",
-    phone: restaurantData.telephone || "",
-    website: restaurantData.url || "",
-    priceRange: restaurantData.priceRange || "",
-    cuisine: (restaurantData.servesCuisine || "").replace(/,\s*$/, ""),
+    priceRange: rd.priceRange || "",
+    cuisine: (rd.servesCuisine || "").replace(/,\s*$/, ""),
     image: imageUrl,
     rating: ratingValue ? parseFloat(ratingValue) : null,
   };
 }
 
-// ─── Detail scraping (JSON-LD + HTML hours in one pass) ──────────
-
-async function scrapeRestaurantDetail(slug: string): Promise<KrogguidenRaw | null> {
+async function scrapeDetail(
+  slug: string,
+): Promise<KrogguidenEntry | null> {
   try {
-    const res = await fetchWithRetry(`${KROGGUIDEN_BASE_URL}/restauranger/view/${slug}`);
+    const url = `${BASE_URL}/restauranger/view/${slug}`;
+    const res = await fetchWithRetry(url);
     const html = await res.text();
     const parsed = parseJsonLd(html);
 
-    // Parse hours from HTML in the same pass (avoids a second HTTP request)
-    const hours = parseHoursFromHtml(html);
+    if (!parsed?.name) return null;
 
-    if (parsed?.name) {
-      // Skip entries without a real address — these are usually
-      // non-restaurant pages (wines, events, hotels without detail)
-      const addr = (parsed.address || "").trim();
-      if (!addr) {
-        console.log(`  Skipping "${parsed.name}" (no address)`);
-        return null;
-      }
+    // Skip entries without address (non-restaurant pages)
+    const addr = (parsed.address || "").trim();
+    if (!addr) return null;
 
-      return {
-        source: "krogguiden",
-        slug,
-        name: parsed.name,
-        address: addr,
-        postalCode: parsed.postalCode || "",
-        city: parsed.city || "",
-        region: parsed.region || "",
-        phone: parsed.phone || "",
-        website: parsed.website || "",
-        priceRange: parsed.priceRange || "",
-        cuisine: parsed.cuisine || "",
-        image: parsed.image || "",
-        rating: parsed.rating ?? null,
-        hours,
-        url: `${KROGGUIDEN_BASE_URL}/restauranger/view/${slug}`,
-      };
-    }
-
-    // No JSON-LD found — skip (fallback without structured data
-    // produces low-quality entries with no address or metadata)
-    return null;
+    return {
+      slug,
+      name: parsed.name,
+      address: addr,
+      postalCode: parsed.postalCode || "",
+      city: parsed.city || "",
+      region: parsed.region || "",
+      priceRange: parsed.priceRange || "",
+      cuisine: parsed.cuisine || "",
+      image: parsed.image || "",
+      rating: parsed.rating ?? null,
+      url,
+    };
   } catch (err) {
-    console.log(`  Failed to scrape ${slug}: ${err}`);
+    console.log(`    Failed to scrape ${slug}: ${err}`);
     return null;
   }
 }
 
-// ─── Main scraper function ───────────────────────────────────────
+// ─── Concurrency-limited parallel processing ───────────────────
 
-export async function scrapeKrogguiden(
-  options: { force?: boolean } = {}
-): Promise<KrogguidenRaw[]> {
-  const force = options.force ?? false;
-  console.log("=== Krogguiden Scraper ===\n");
+async function parallelScrape(
+  slugs: string[],
+  onEntry: (entry: KrogguidenEntry) => void,
+): Promise<void> {
+  let nextIndex = 0;
+  let lastStartTime = 0;
+  let completed = 0;
 
-  // Load existing raw data (already scraped restaurants)
-  const existing = loadRawJson<KrogguidenRaw[]>("krogguiden.json") ?? [];
-  const existingSlugs = new Set(existing.map((r) => r.slug));
+  async function worker(): Promise<void> {
+    while (nextIndex < slugs.length) {
+      const index = nextIndex++;
 
-  if (existing.length > 0 && !force) {
-    console.log(`Loaded ${existing.length} existing restaurants from krogguiden.json`);
+      // Enforce minimum delay between starts
+      const now = Date.now();
+      const elapsed = now - lastStartTime;
+      if (elapsed < MIN_DELAY_MS) {
+        await sleep(MIN_DELAY_MS - elapsed);
+      }
+      lastStartTime = Date.now();
+
+      const slug = slugs[index];
+      const entry = await scrapeDetail(slug);
+      completed++;
+
+      if (entry) {
+        onEntry(entry);
+        if (completed % 25 === 0 || completed === slugs.length) {
+          console.log(
+            `    [${completed}/${slugs.length}] ${entry.name}`,
+          );
+        }
+      } else {
+        if (completed % 25 === 0) {
+          console.log(
+            `    [${completed}/${slugs.length}] ${slug} — skipped`,
+          );
+        }
+      }
+    }
   }
 
-  // Check for cached slugs
-  const cachedSlugs = loadRawJson<string[]>("krogguiden-slugs.json");
-  let slugs: string[];
+  const workers: Promise<void>[] = [];
+  for (let i = 0; i < Math.min(CONCURRENCY, slugs.length); i++) {
+    workers.push(worker());
+  }
+  await Promise.all(workers);
+}
 
-  if (cachedSlugs) {
-    slugs = cachedSlugs;
-    console.log(`Loaded ${slugs.length} slugs from cache`);
-  } else {
-    slugs = await fetchAllSlugs();
-    saveRawJson("krogguiden-slugs.json", slugs);
-    console.log(`Saved ${slugs.length} slugs`);
+// ─── Convert to Article ────────────────────────────────────────
+
+function makeId(slug: string): string {
+  return createHash("sha256")
+    .update(`${SOURCE_ID}:${slug}`)
+    .digest("hex")
+    .slice(0, 12);
+}
+
+function entryToArticle(entry: KrogguidenEntry): Article {
+  const cuisine = entry.cuisine
+    ? entry.cuisine
+        .split(",")
+        .map((c) => c.trim())
+        .filter(Boolean)
+    : undefined;
+
+  return {
+    id: makeId(entry.slug),
+    sourceId: SOURCE_ID,
+    url: entry.url,
+    title: entry.name,
+    publishedAt: "",
+    contentType: "review",
+    bodyText: "",
+
+    venueType: "restaurant",
+    venueName: normalizeVenueName(entry.name),
+    venueAddress: normalizeAddress(entry.address),
+    venueCity: normalizeCity(entry.city),
+
+    score: entry.rating && entry.rating > 0 ? entry.rating : undefined,
+    priceRange: normalizePriceRange(entry.priceRange),
+    cuisine,
+    tags: entry.region ? [entry.region] : undefined,
+
+    collectedAt: new Date().toISOString(),
+  };
+}
+
+// ─── Import from pipeline1 ─────────────────────────────────────
+
+/** Import existing Krogguiden data from pipeline1's data/raw/krogguiden.json. */
+export async function importFromPipeline1(): Promise<Article[]> {
+  const { readFileSync } = await import("fs");
+  const { join, dirname } = await import("path");
+  const { fileURLToPath } = await import("url");
+
+  const __dirname = dirname(fileURLToPath(import.meta.url));
+  const rawPath = join(__dirname, "..", "..", "data", "raw", "krogguiden.json");
+
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const raw: any[] = JSON.parse(readFileSync(rawPath, "utf-8"));
+
+  console.log(`  Importing ${raw.length} restaurants from pipeline 1...`);
+
+  const articles: Article[] = [];
+  for (const r of raw) {
+    if (!r.name || !r.address) continue;
+
+    const entry: KrogguidenEntry = {
+      slug: r.slug,
+      name: r.name,
+      address: r.address,
+      postalCode: r.postalCode || "",
+      city: r.city || "",
+      region: r.region || "",
+      priceRange: r.priceRange || "",
+      cuisine: r.cuisine || "",
+      image: r.image || "",
+      rating: r.rating,
+      url: r.url || `${BASE_URL}/restauranger/view/${r.slug}`,
+    };
+
+    articles.push(entryToArticle(entry));
   }
 
-  // Determine which slugs need scraping
+  saveArticles("krogguiden.json", articles);
+  console.log(`  Saved ${articles.length} Krogguiden articles`);
+  return articles;
+}
+
+// ─── Main collector ────────────────────────────────────────────
+
+export async function collectKrogguiden(
+  options: { force?: boolean } = {},
+): Promise<Article[]> {
+  console.log("=== Krogguiden.se ===\n");
+
+  // Load existing articles for incremental mode
+  const existing = loadArticles<Article[]>("krogguiden.json") ?? [];
+  const existingSlugs = new Set(
+    existing.map((a) => {
+      const match = a.url.match(/\/restauranger\/view\/(.+)/);
+      return match ? match[1] : "";
+    }),
+  );
+
+  if (existing.length > 0 && !options.force) {
+    console.log(`  Loaded ${existing.length} existing articles`);
+  }
+
+  // Phase 1: Discover slugs
+  const slugs = await fetchAllSlugs();
+
+  // Determine which to scrape
   let toScrape: string[];
-  if (force) {
+  if (options.force) {
     toScrape = slugs;
-    console.log(`\n--force: Scraping ALL ${toScrape.length} restaurants\n`);
+    console.log(`\n  --force: scraping ALL ${toScrape.length} restaurants\n`);
   } else {
     toScrape = slugs.filter((s) => !existingSlugs.has(s));
-    console.log(`\nNew slugs to scrape: ${toScrape.length}`);
-    console.log(`Already scraped: ${existingSlugs.size}`);
-    console.log(`Total slugs: ${slugs.length}\n`);
+    console.log(`\n  New: ${toScrape.length}, existing: ${existingSlugs.size}`);
   }
 
   if (toScrape.length === 0) {
-    console.log("All restaurants already scraped. Nothing to do.");
-    console.log("Use --force to re-scrape everything.\n");
+    console.log("  All restaurants already scraped. Use --force to re-scrape.");
     return existing;
   }
 
-  // Start with existing data (unless force, then start fresh)
-  const restaurants: KrogguidenRaw[] = force ? [] : [...existing];
+  // Phase 2: Scrape detail pages
+  console.log(`\n  Scraping ${toScrape.length} detail pages...`);
+  const articles = options.force ? [] : [...existing];
+  let scraped = 0;
 
-  // Process in parallel with concurrency limits
-  // 3 concurrent requests with 2s minimum delay = ~1.5 req/s (respectful rate)
-  await batchProcess(
-    toScrape,
-    async (slug, index) => {
-      const restaurant = await scrapeRestaurantDetail(slug);
-      if (restaurant) {
-        restaurants.push(restaurant);
-        const hoursInfo = restaurant.hours.length > 0 ? ` (${restaurant.hours.length} hours)` : "";
-        console.log(`[${index + 1}/${toScrape.length}] ${restaurant.name}${hoursInfo}`);
-      } else {
-        console.log(`[${index + 1}/${toScrape.length}] ${slug} FAILED`);
-      }
-      return restaurant;
-    },
-    {
-      concurrency: 3,
-      minDelay: 2000, // 2s between request starts
-      saveInterval: 50,
-      onSave: () => {
-        saveRawJson("krogguiden.json", restaurants);
-        console.log(`  [saved progress: ${restaurants.length} restaurants]`);
-      },
+  await parallelScrape(toScrape, (entry) => {
+    articles.push(entryToArticle(entry));
+    scraped++;
+
+    // Periodic save
+    if (scraped % SAVE_INTERVAL === 0) {
+      saveArticles("krogguiden.json", articles);
     }
-  );
+  });
 
   // Final save
-  saveRawJson("krogguiden.json", restaurants);
+  saveArticles("krogguiden.json", articles);
 
-  const newCount = force ? restaurants.length : toScrape.length;
-  console.log(`\nKrogguiden scrape complete:`);
-  console.log(`  New: ${newCount}`);
-  console.log(`  Total: ${restaurants.length}`);
-  const withHours = restaurants.filter((r) => r.hours.length > 0).length;
-  console.log(`  With hours: ${withHours}`);
-  console.log(`  Without hours: ${restaurants.length - withHours}`);
+  // Stats
+  const withScore = articles.filter((a) => a.score && a.score > 0).length;
+  const cities: Record<string, number> = {};
+  for (const a of articles) {
+    const c = a.venueCity || "(none)";
+    cities[c] = (cities[c] || 0) + 1;
+  }
+  const prices: Record<string, number> = {};
+  for (const a of articles) {
+    const p = a.priceRange || "(none)";
+    prices[p] = (prices[p] || 0) + 1;
+  }
 
-  return restaurants;
-}
+  console.log(`\n  Total: ${articles.length} restaurants (${scraped} new)`);
+  console.log(`  With score: ${withScore}`);
+  console.log(
+    `  Cities: ${Object.entries(cities)
+      .sort((a, b) => b[1] - a[1])
+      .map(([c, n]) => `${c} (${n})`)
+      .join(", ")}`,
+  );
+  console.log(
+    `  Prices: ${Object.entries(prices)
+      .sort((a, b) => b[1] - a[1])
+      .map(([p, n]) => `${p} (${n})`)
+      .join(", ")}`,
+  );
 
-// ─── CLI entry point ─────────────────────────────────────────────
-
-if (process.argv[1]?.includes("krogguiden")) {
-  scrapeKrogguiden({ force: process.argv.includes("--force") }).catch((err) => {
-    console.error("Fatal error:", err);
-    process.exit(1);
-  });
+  return articles;
 }

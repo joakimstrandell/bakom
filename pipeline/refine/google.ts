@@ -1,18 +1,4 @@
-/** Google Places API enrichment for pipeline2 venues.
- *
- * For each venue, searches Google Places Text Search API to get:
- *   - Canonical coordinates (always overwrites — Google is most accurate)
- *   - Google Place ID (stable identifier for dedup)
- *   - Google rating + review count
- *   - Business status (OPERATIONAL / CLOSED_TEMPORARILY / CLOSED_PERMANENTLY)
- *   - Primary type (e.g. "italian_restaurant" — used as cuisine category)
- *   - Backfills missing city from Google's formatted address
- *
- * Incremental: skips venues that already have a googlePlaceId.
- * Progress saved every 100 venues.
- *
- * Cost: ~$0.05 per request → ~$85 for 1,670 venues full run.
- */
+/** Refine — Google Places API enrichment. @see docs/pipeline.md */
 
 import { createHash } from "crypto";
 import { saveData, loadData } from "../utils/save.js";
@@ -416,7 +402,7 @@ export async function refineWithGoogle(
   // Load merge output and compute its hash
   const mergeRaw = loadData<Venue[]>("venues.json");
   if (!mergeRaw || mergeRaw.length === 0) {
-    throw new Error("pipeline2/.data/venues.json not found. Run pipeline2:merge first.");
+    throw new Error("pipeline/.data/venues.json not found. Run pipeline:merge first.");
   }
   const sourceHash = createHash("sha256")
     .update(JSON.stringify(mergeRaw))
