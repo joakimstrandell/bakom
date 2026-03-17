@@ -5,6 +5,12 @@ import type { ScoredVenue } from "../score/score.js";
 
 // ─── Frontend output type ───────────────────────────────────────
 
+type FrontendHoursEntry = {
+  days: number[];
+  open: string;
+  close: string;
+};
+
 type FrontendVenue = {
   id: string;
   name: string;
@@ -12,6 +18,9 @@ type FrontendVenue = {
   city: string;
   priceRange?: string;
   cuisine?: string;
+  hours?: FrontendHoursEntry[];
+  website?: string;
+  phone?: string;
   lat: number | null;
   lng: number | null;
   ratings: {
@@ -178,6 +187,9 @@ function transformVenue(v: ScoredVenue): FrontendVenue {
 
   if (v.priceRange) result.priceRange = v.priceRange;
   if (cuisine) result.cuisine = cuisine;
+  if (v.hours && v.hours.length > 0) result.hours = v.hours;
+  if (v.website) result.website = v.website;
+  if (v.phone) result.phone = v.phone;
   if (v.googleRatingCount) result.googleRatingCount = v.googleRatingCount;
   if (v.rankRegion != null) result.bakomRankRegion = v.rankRegion;
 

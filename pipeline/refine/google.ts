@@ -22,12 +22,20 @@ const FIELD_MASK = [
   "places.googleMapsUri",
   "places.location",
   "places.businessStatus",
+  "places.regularOpeningHours",
 ].join(",");
 
 // ─── Google enrichment fields added to Venue ────────────────────
 
 export type MetroRegion = "stockholm" | "gothenburg" | "malmo" | "sweden";
 export type VenueCategory = "restaurant" | "hotel" | "exclude";
+
+/** Opening hours entry — same shape as frontend HoursEntry */
+export type PipelineHoursEntry = {
+  days: number[]; // 0=Sunday, 1=Monday, ..., 6=Saturday
+  open: string;   // "HH:MM"
+  close: string;  // "HH:MM"
+};
 
 export type GoogleEnrichment = {
   googlePlaceId?: string;
@@ -36,6 +44,9 @@ export type GoogleEnrichment = {
   googleMapsUri?: string;
   googlePrimaryType?: string;
   businessStatus?: string;
+  hours?: PipelineHoursEntry[];
+  website?: string;
+  phone?: string;
   metroRegion?: MetroRegion;
   category?: VenueCategory;
 };
@@ -254,6 +265,67 @@ function categorizeVenue(venue: EnrichedVenue): VenueCategory {
   return "restaurant";
 }
 
+// ─── Parse Google opening hours ─────────────────────────────────
+
+function pad2(n: number): string {
+  return n.toString().padStart(2, "0");
+}
+
+/**
+ * Convert Google Places regularOpeningHours.periods into HoursEntry[].
+ * Google format: { open: { day, hour, minute }, close: { day, hour, minute } }
+ * where day 0=Sunday matching JS getDay().
+ *
+ * We group periods with the same open/close times into a single entry
+ * with multiple days, producing a compact representation.
+ */
+function parseGoogleHours(openingHours: PlaceResult | undefined): PipelineHoursEntry[] {
+  if (!openingHours?.periods) return [];
+
+  const periods = openingHours.periods as Array<{
+    open?: { day?: number; hour?: number; minute?: number };
+    close?: { day?: number; hour?: number; minute?: number };
+  }>;
+
+  // Group by open-close time pair
+  const byTime = new Map<string, number[]>();
+
+  for (const period of periods) {
+    if (period.open?.day == null || period.open?.hour == null) continue;
+
+    const openTime = `${pad2(period.open.hour)}:${pad2(period.open.minute ?? 0)}`;
+
+    // If no close, it's 24 hours — use 23:59
+    let closeTime: string;
+    if (!period.close || period.close.hour == null) {
+      closeTime = "23:59";
+    } else {
+      closeTime = `${pad2(period.close.hour)}:${pad2(period.close.minute ?? 0)}`;
+    }
+
+    // Skip entries where open == close (24h marker from some APIs)
+    if (openTime === closeTime && openTime === "00:00") {
+      closeTime = "23:59";
+    }
+
+    const key = `${openTime}-${closeTime}`;
+    const existing = byTime.get(key);
+    if (existing) {
+      existing.push(period.open.day);
+    } else {
+      byTime.set(key, [period.open.day]);
+    }
+  }
+
+  const entries: PipelineHoursEntry[] = [];
+  for (const [key, days] of byTime) {
+    const [open, close] = key.split("-");
+    entries.push({ days: days.sort((a, b) => a - b), open, close });
+  }
+
+  return entries;
+}
+
 // ─── Enrich a single venue ──────────────────────────────────────
 
 async function enrichVenue(
@@ -293,6 +365,14 @@ async function enrichVenue(
   venue.googleMapsUri = place.googleMapsUri ?? "";
   venue.googlePrimaryType = place.primaryType ?? "";
   venue.businessStatus = place.businessStatus ?? "OPERATIONAL";
+
+  // Parse opening hours
+  const hours = parseGoogleHours(place.regularOpeningHours);
+  if (hours.length > 0) venue.hours = hours;
+
+  // Website and phone
+  if (place.websiteUri) venue.website = place.websiteUri;
+  if (place.nationalPhoneNumber) venue.phone = place.nationalPhoneNumber;
 
   // Always overwrite coordinates — Google is most accurate
   venue.lat = lat;
@@ -435,6 +515,9 @@ export async function refineWithGoogle(
             googleMapsUri: prev.googleMapsUri,
             googlePrimaryType: prev.googlePrimaryType,
             businessStatus: prev.businessStatus,
+            hours: prev.hours,
+            website: prev.website,
+            phone: prev.phone,
             lat: prev.lat,
             lng: prev.lng,
           });
