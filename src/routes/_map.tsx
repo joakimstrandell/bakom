@@ -11,7 +11,6 @@ import RestaurantList from "../components/RestaurantList";
 import SearchCommand from "../components/SearchCommand";
 import type { Restaurant } from "../types";
 import { useFilters } from "../hooks/useFilters";
-import { useIsDesktop } from "../hooks/useMediaQuery";
 import { useLocation } from "../hooks/useLocation";
 import { type RegionFilter, REGIONS, DEFAULT_REGION } from "../lib/regions";
 import {
@@ -34,7 +33,15 @@ import { MapOverlayButton } from "../components/MapOverlayButton";
 import restaurantData from "../../pipeline/.data/restaurants.frontend.json";
 import hotelData from "../../pipeline/.data/hotels.frontend.json";
 
-const Map = lazy(() => import("../components/Map"));
+// Leaflet accesses `window` at module scope — return a placeholder during SSR
+const Map = lazy(() => {
+  if (import.meta.env.SSR) {
+    return Promise.resolve({
+      default: (() => null) as unknown as typeof import("../components/Map")["default"],
+    });
+  }
+  return import("../components/Map");
+});
 
 export type DataMode = "restaurants" | "hotels";
 
@@ -149,10 +156,7 @@ function MapLayout() {
 
   // Mobile view toggle (map vs list)
   const [mobileView, setMobileView] = useState<"map" | "list">("map");
-  const isDesktop = useIsDesktop();
 
-  // Only render list items when visible (desktop always, mobile only when list view)
-  const showListItems = isDesktop || mobileView === "list";
 
   // ─── Handlers ──────────────────────────────────────────────────
 
@@ -305,7 +309,7 @@ function MapLayout() {
           {/* Search icon - opens search command dialog */}
           <IconButton
             onClick={() => setSearchOpen(true)}
-            title={`${t("header.search")} (${navigator.userAgent.includes("Mac") ? "Cmd" : "Ctrl"}+K)`}
+            title={`${t("header.search")} (⌘K)`}
           >
             <Search className="size-5" />
           </IconButton>
@@ -344,17 +348,15 @@ function MapLayout() {
             md:relative md:inset-auto md:z-auto md:w-80 md:translate-x-0 md:border-r md:border-black/5 md:dark:border-white/5
           `}
         >
-          {showListItems && (
-            <RestaurantList
-              restaurants={filtered}
-              selectedRestaurant={selectedRestaurant}
-              onSelectRestaurant={handleSelectRestaurant}
-              userLocation={userLocation}
-              locationDenied={locationDenied}
-              onRequestLocation={locateUser}
-              dataMode={dataMode}
-            />
-          )}
+          <RestaurantList
+            restaurants={filtered}
+            selectedRestaurant={selectedRestaurant}
+            onSelectRestaurant={handleSelectRestaurant}
+            userLocation={userLocation}
+            locationDenied={locationDenied}
+            onRequestLocation={locateUser}
+            dataMode={dataMode}
+          />
         </div>
 
         {/* Map container - always rendered, use z-index to layer on mobile */}

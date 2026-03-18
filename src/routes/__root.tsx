@@ -39,11 +39,10 @@ function RootComponent() {
 }
 
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
-  // Use i18n instance directly to avoid hook issues during SSR
-  const lang = typeof window !== "undefined" ? i18n.language : "en";
+  const lang = i18n.language || "en";
 
   return (
-    <html lang={lang}>
+    <html lang={lang} suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>
