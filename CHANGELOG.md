@@ -5,6 +5,21 @@ All notable changes to Bakom will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0] - 2026-03-18
+
+### Added
+- Thatsup as data source: 3,312 venues scraped via JSON-LD from thatsup.se (17 cities, 4 categories)
+- Thatsup rating display in detail panel with star rating and review count
+- Thatsup range filter (0-5 scale) in filter panel
+- Incremental Google Places enrichment with `--limit` flag for cost control
+- Pipeline data: 1,956 restaurants, 391 bars, 699 fika, 270 hotels (3,316 total)
+
+### Changed
+- Score color gradient: linear red(0) → yellow(50) → green(100) scale
+- Proportional prestige ceiling: crowd-only venues spread across 0-75 instead of clustering at 75
+- Renamed `venues.json` → `venues-merged.json` for clarity
+- Moved frontend JSON files to `optimized/` folder
+
 ## [0.4.0] - 2026-03-18
 
 ### Added
