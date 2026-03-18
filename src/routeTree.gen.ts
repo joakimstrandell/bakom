@@ -12,8 +12,12 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as MapRouteImport } from './routes/_map'
 import { Route as MapIndexRouteImport } from './routes/_map/index'
 import { Route as MapHRouteImport } from './routes/_map/h'
+import { Route as MapFRouteImport } from './routes/_map/f'
+import { Route as MapBRouteImport } from './routes/_map/b'
 import { Route as MapRIdRouteImport } from './routes/_map/r.$id'
 import { Route as MapHIdRouteImport } from './routes/_map/h.$id'
+import { Route as MapFIdRouteImport } from './routes/_map/f.$id'
+import { Route as MapBIdRouteImport } from './routes/_map/b.$id'
 
 const MapRoute = MapRouteImport.update({
   id: '/_map',
@@ -29,6 +33,16 @@ const MapHRoute = MapHRouteImport.update({
   path: '/h',
   getParentRoute: () => MapRoute,
 } as any)
+const MapFRoute = MapFRouteImport.update({
+  id: '/f',
+  path: '/f',
+  getParentRoute: () => MapRoute,
+} as any)
+const MapBRoute = MapBRouteImport.update({
+  id: '/b',
+  path: '/b',
+  getParentRoute: () => MapRoute,
+} as any)
 const MapRIdRoute = MapRIdRouteImport.update({
   id: '/r/$id',
   path: '/r/$id',
@@ -39,37 +53,71 @@ const MapHIdRoute = MapHIdRouteImport.update({
   path: '/$id',
   getParentRoute: () => MapHRoute,
 } as any)
+const MapFIdRoute = MapFIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => MapFRoute,
+} as any)
+const MapBIdRoute = MapBIdRouteImport.update({
+  id: '/$id',
+  path: '/$id',
+  getParentRoute: () => MapBRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof MapIndexRoute
+  '/b': typeof MapBRouteWithChildren
+  '/f': typeof MapFRouteWithChildren
   '/h': typeof MapHRouteWithChildren
+  '/b/$id': typeof MapBIdRoute
+  '/f/$id': typeof MapFIdRoute
   '/h/$id': typeof MapHIdRoute
   '/r/$id': typeof MapRIdRoute
 }
 export interface FileRoutesByTo {
+  '/b': typeof MapBRouteWithChildren
+  '/f': typeof MapFRouteWithChildren
   '/h': typeof MapHRouteWithChildren
   '/': typeof MapIndexRoute
+  '/b/$id': typeof MapBIdRoute
+  '/f/$id': typeof MapFIdRoute
   '/h/$id': typeof MapHIdRoute
   '/r/$id': typeof MapRIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/_map': typeof MapRouteWithChildren
+  '/_map/b': typeof MapBRouteWithChildren
+  '/_map/f': typeof MapFRouteWithChildren
   '/_map/h': typeof MapHRouteWithChildren
   '/_map/': typeof MapIndexRoute
+  '/_map/b/$id': typeof MapBIdRoute
+  '/_map/f/$id': typeof MapFIdRoute
   '/_map/h/$id': typeof MapHIdRoute
   '/_map/r/$id': typeof MapRIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/h' | '/h/$id' | '/r/$id'
+  fullPaths:
+    | '/'
+    | '/b'
+    | '/f'
+    | '/h'
+    | '/b/$id'
+    | '/f/$id'
+    | '/h/$id'
+    | '/r/$id'
   fileRoutesByTo: FileRoutesByTo
-  to: '/h' | '/' | '/h/$id' | '/r/$id'
+  to: '/b' | '/f' | '/h' | '/' | '/b/$id' | '/f/$id' | '/h/$id' | '/r/$id'
   id:
     | '__root__'
     | '/_map'
+    | '/_map/b'
+    | '/_map/f'
     | '/_map/h'
     | '/_map/'
+    | '/_map/b/$id'
+    | '/_map/f/$id'
     | '/_map/h/$id'
     | '/_map/r/$id'
   fileRoutesById: FileRoutesById
@@ -101,6 +149,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MapHRouteImport
       parentRoute: typeof MapRoute
     }
+    '/_map/f': {
+      id: '/_map/f'
+      path: '/f'
+      fullPath: '/f'
+      preLoaderRoute: typeof MapFRouteImport
+      parentRoute: typeof MapRoute
+    }
+    '/_map/b': {
+      id: '/_map/b'
+      path: '/b'
+      fullPath: '/b'
+      preLoaderRoute: typeof MapBRouteImport
+      parentRoute: typeof MapRoute
+    }
     '/_map/r/$id': {
       id: '/_map/r/$id'
       path: '/r/$id'
@@ -115,8 +177,42 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof MapHIdRouteImport
       parentRoute: typeof MapHRoute
     }
+    '/_map/f/$id': {
+      id: '/_map/f/$id'
+      path: '/$id'
+      fullPath: '/f/$id'
+      preLoaderRoute: typeof MapFIdRouteImport
+      parentRoute: typeof MapFRoute
+    }
+    '/_map/b/$id': {
+      id: '/_map/b/$id'
+      path: '/$id'
+      fullPath: '/b/$id'
+      preLoaderRoute: typeof MapBIdRouteImport
+      parentRoute: typeof MapBRoute
+    }
   }
 }
+
+interface MapBRouteChildren {
+  MapBIdRoute: typeof MapBIdRoute
+}
+
+const MapBRouteChildren: MapBRouteChildren = {
+  MapBIdRoute: MapBIdRoute,
+}
+
+const MapBRouteWithChildren = MapBRoute._addFileChildren(MapBRouteChildren)
+
+interface MapFRouteChildren {
+  MapFIdRoute: typeof MapFIdRoute
+}
+
+const MapFRouteChildren: MapFRouteChildren = {
+  MapFIdRoute: MapFIdRoute,
+}
+
+const MapFRouteWithChildren = MapFRoute._addFileChildren(MapFRouteChildren)
 
 interface MapHRouteChildren {
   MapHIdRoute: typeof MapHIdRoute
@@ -129,12 +225,16 @@ const MapHRouteChildren: MapHRouteChildren = {
 const MapHRouteWithChildren = MapHRoute._addFileChildren(MapHRouteChildren)
 
 interface MapRouteChildren {
+  MapBRoute: typeof MapBRouteWithChildren
+  MapFRoute: typeof MapFRouteWithChildren
   MapHRoute: typeof MapHRouteWithChildren
   MapIndexRoute: typeof MapIndexRoute
   MapRIdRoute: typeof MapRIdRoute
 }
 
 const MapRouteChildren: MapRouteChildren = {
+  MapBRoute: MapBRouteWithChildren,
+  MapFRoute: MapFRouteWithChildren,
   MapHRoute: MapHRouteWithChildren,
   MapIndexRoute: MapIndexRoute,
   MapRIdRoute: MapRIdRoute,

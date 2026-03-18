@@ -9,6 +9,15 @@ type HeadConfig = {
   links: Array<Record<string, string>>;
 };
 
+type VenueType = "restaurant" | "bar" | "fika" | "hotel";
+
+const PREFIX_MAP: Record<VenueType, string> = {
+  restaurant: "r",
+  bar: "b",
+  fika: "f",
+  hotel: "h",
+};
+
 /** Generate SEO head config for the homepage */
 export function homeHead(): HeadConfig {
   const t = i18n.t.bind(i18n);
@@ -31,13 +40,26 @@ export function homeHead(): HeadConfig {
   };
 }
 
-/** Generate SEO head config for the hotels listing page */
-export function hotelsHead(): HeadConfig {
-  const t = i18n.t.bind(i18n);
-  const title = `${t("seo.hotels_title", { defaultValue: "Hotell" })} | ${SITE_NAME}`;
-  const description = t("seo.hotels_description", {
-    defaultValue: "Upptäck och jämför Sveriges bästa hotell — betyg från Michelin, White Guide och mer.",
-  });
+const LISTING_DEFAULTS: Record<string, { title: string; description: string }> = {
+  bars: {
+    title: "Barer",
+    description: "Upptäck och jämför Sveriges bästa barer — betyg från Michelin, White Guide, Google och mer.",
+  },
+  fika: {
+    title: "Fika",
+    description: "Upptäck och jämför Sveriges bästa caféer, bagerier och konditorier — betyg samlade på ett ställe.",
+  },
+  hotels: {
+    title: "Hotell",
+    description: "Upptäck och jämför Sveriges bästa hotell — betyg från Michelin, White Guide och mer.",
+  },
+};
+
+/** Generate SEO head config for a listing page (bars, fika, hotels) */
+export function listingHead(type: "bars" | "fika" | "hotels"): HeadConfig {
+  const defaults = LISTING_DEFAULTS[type];
+  const title = `${defaults.title} | ${SITE_NAME}`;
+  const description = defaults.description;
 
   return {
     meta: [
@@ -48,18 +70,18 @@ export function hotelsHead(): HeadConfig {
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: SITE_NAME },
     ],
-    // No canonical/og:url here — /h is also a layout for /h/:id child routes
+    // No canonical/og:url — listing routes are also layouts for /:id child routes
     links: [],
   };
 }
 
 /** Generate SEO head config for a venue detail page */
-export function venueHead(venue: Restaurant | undefined, type: "restaurant" | "hotel"): HeadConfig {
+export function venueHead(venue: Restaurant | undefined, type: VenueType): HeadConfig {
   if (!venue) {
     return { meta: [{ title: SITE_NAME }], links: [] };
   }
 
-  const prefix = type === "hotel" ? "h" : "r";
+  const prefix = PREFIX_MAP[type];
   const url = `${BASE_URL}/${prefix}/${venue.id}`;
 
   const title = `${venue.name} | ${SITE_NAME}`;
