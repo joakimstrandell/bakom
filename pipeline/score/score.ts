@@ -23,17 +23,17 @@ export type ScoredVenue = EnrichedVenue & {
   rankRegion: number | null;
 };
 
-// ─── Weights (from pipeline1 — proven calibration) ──────────────
+// ─── Weights (priority: Michelin > WG/Falstaff > DI > SvD/DN > Krogguiden > Google)
 
 const WEIGHTS: Record<string, number> = {
-  michelin: 0.28,
-  whiteguide: 0.2,
-  svd: 0.16,
-  di: 0.16,
-  krogguiden: 0.16,
-  falstaff: 0.14,
-  dn: 0.14,
-  google: 0.1,
+  michelin: 0.30,
+  whiteguide: 0.22,
+  falstaff: 0.22,
+  di: 0.14,
+  svd: 0.12,
+  dn: 0.12,
+  krogguiden: 0.10,
+  google: 0.08,
 };
 
 // ─── Michelin normalization (fixed mapping to 0–10) ─────────────
@@ -59,15 +59,15 @@ function normalizeMichelin(r: MichelinRating): number | null {
 // ─── White Guide normalization (fixed mapping to 0–10) ──────────
 
 const WG_SCORES: Record<string, number> = {
-  "GOD NIVÅ": 6.5,
-  "REKOMMENDERAD": 7.0,
-  "REKOMMENDERAT": 7.0,
-  "GOD KLASS": 7.5,
-  "MYCKET GOD KLASS": 8.0,
-  "MYCKET GOD NIVÅ": 8.5,
-  "MÄSTARKLASS": 9.0,
-  "EXCEPTIONELL NIVÅ": 9.5,
-  "GLOBAL MÄSTARKLASS": 9.5,
+  "GOD NIVÅ": 7.0,
+  "REKOMMENDERAD": 7.5,
+  "REKOMMENDERAT": 7.5,
+  "GOD KLASS": 8.0,
+  "MYCKET GOD KLASS": 8.5,
+  "MYCKET GOD NIVÅ": 9.0,
+  "MÄSTARKLASS": 9.5,
+  "EXCEPTIONELL NIVÅ": 10.0,
+  "GLOBAL MÄSTARKLASS": 10.0,
   "GLOBAL EXCEPTIONELL NIVÅ": 10.0,
   "Not So White Guide": 5.0,
 };
@@ -176,20 +176,17 @@ function normalizeGoogle(venue: EnrichedVenue): number | null {
 // ─── Prestige & perfection thresholds ───────────────────────────
 
 const PRESTIGE_CEILINGS = {
-  none: 8.0, // No Michelin AND no White Guide → max 80
-  basic: 9.5, // Has WG OR Michelin selected/bib → max 95
+  none: 7.5, // No Michelin, no WG, no Falstaff → max 75
+  basic: 9.5, // Has WG OR Falstaff OR Michelin selected/bib → max 95
   // Michelin 1★+ → no ceiling
 } as const;
 
 const PERFECTION_THRESHOLD = 9.5;
 
-// ─── Diversity dampening ────────────────────────────────────────
-
-function diversityFactor(sourceCount: number): number {
-  if (sourceCount === 1) return 0.88;
-  if (sourceCount === 2) return 0.95;
-  return 1.0;
-}
+// ─── Diversity dampening (removed) ──────────────────────────────
+// Previously penalized venues with few sources (×0.88 for 1, ×0.95 for 2).
+// Removed because it punished niche venues with one authoritative review.
+// The prestige ceiling now handles the "only Google" problem instead.
 
 // ─── Score calculation ──────────────────────────────────────────
 
@@ -275,17 +272,15 @@ function computeScore(venue: EnrichedVenue): {
   }
   let score = weightedSum / totalWeight;
 
-  // Diversity dampening
-  score *= diversityFactor(entries.length);
-
   // Prestige ceiling
   const hasMichelinStars =
     ratings.michelin && MICHELIN_STARRED.includes(ratings.michelin.distinction);
   const hasMichelin = !!ratings.michelin;
   const hasWhiteGuide = !!ratings.whiteguide;
+  const hasFalstaff = !!ratings.falstaff?.score;
 
   if (!hasMichelinStars) {
-    if (!hasMichelin && !hasWhiteGuide) {
+    if (!hasMichelin && !hasWhiteGuide && !hasFalstaff) {
       score = Math.min(score, PRESTIGE_CEILINGS.none);
     } else {
       score = Math.min(score, PRESTIGE_CEILINGS.basic);
