@@ -118,7 +118,7 @@ async function fetchVenueType(venueType: VenueType): Promise<Article[]> {
     const rawName = (item.place_title as string) ?? (item.title as string) ?? "";
     const name = normalizeVenueName(rawName);
     const classification = (item.classification_total_label as string) ?? "";
-    const articleUrl = `https://whiteguide.com/se/sv/restaurants/${placeId}`;
+    const articleUrl = `https://whiteguide.com/se/sv/${venueType}s/${placeId}`;
     const cleanAddr = normalizeAddress(address);
 
     articles.push({
