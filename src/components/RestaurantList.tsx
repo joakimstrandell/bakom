@@ -1,4 +1,4 @@
-import { useState, useMemo, useRef, useCallback } from "react";
+import { useState, useMemo, useRef, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useVirtualizer } from "@tanstack/react-virtual";
 import { MapPin, ArrowDownAZ, TrendingUp, Navigation } from "lucide-react";
@@ -95,12 +95,66 @@ export default function RestaurantList({
     return sorted;
   }, [restaurants, sortBy, distances]);
 
+  // Track hydration — render static list during SSR for search engines
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   const virtualizer = useVirtualizer({
     count: sortedRestaurants.length,
     getScrollElement: () => parentRef.current,
     estimateSize: () => ITEM_HEIGHT,
     overscan: 5,
+    enabled: mounted,
   });
+
+  const renderItem = (r: Restaurant, isSelected: boolean) => (
+    <div className="flex items-start gap-3">
+      <ScoreBadge score={r.bakomScore} size="sm" className="mt-0.5" />
+      <div className="flex-1 min-w-0">
+        <span
+          className={`text-sm font-medium truncate block ${
+            isSelected ? "text-foreground" : ""
+          }`}
+        >
+          {r.name}
+        </span>
+        {(r.cuisine || (sortBy === "distance" && distances.get(r.id))) && (
+          <div className="text-xs text-muted-foreground truncate mt-0.5">
+            {r.cuisine}
+            {sortBy === "distance" && distances.get(r.id) != null && (
+              <>
+                {r.cuisine && " · "}
+                {formatDistance(distances.get(r.id)!)}
+              </>
+            )}
+          </div>
+        )}
+        <div className="text-xs text-muted-foreground truncate mt-0.5">
+          {r.address}
+        </div>
+        {r.bakomRank != null && (
+          <div className="text-[10px] text-muted-foreground mt-0.5">
+            {t("list.rank_sweden", { rank: r.bakomRank })}
+            {r.metroRegion &&
+              r.metroRegion !== "sweden" &&
+              r.bakomRankRegion != null && (
+                <>
+                  {" "}
+                  ·{" "}
+                  {t("list.rank_region", {
+                    rank: r.bakomRankRegion,
+                    region: t(`regions.${r.metroRegion}`),
+                  })}
+                </>
+              )}
+          </div>
+        )}
+      </div>
+      {r.priceRange && (
+        <span className="shrink-0 text-xs text-muted-foreground">{PRICE_LABELS[r.priceRange] || r.priceRange}</span>
+      )}
+    </div>
+  );
 
   return (
     <div className="h-full flex flex-col bg-white dark:bg-zinc-900">
@@ -157,11 +211,23 @@ export default function RestaurantList({
         </div>
       </div>
 
-      {/* Virtualized List */}
+      {/* List — static during SSR for SEO, virtualized on client */}
       <div ref={parentRef} className="flex-1 overflow-y-auto">
         {sortedRestaurants.length === 0 ? (
           <div className="px-4 py-8 text-center text-sm text-muted-foreground">
             {t("list.empty")}
+          </div>
+        ) : !mounted ? (
+          // SSR: render all items as plain list for search engine indexing
+          <div>
+            {sortedRestaurants.map((r) => (
+              <div
+                key={r.id}
+                className="w-full text-left px-4 py-3 border-b border-black/5 dark:border-white/5"
+              >
+                {renderItem(r, selectedRestaurant?.id === r.id)}
+              </div>
+            ))}
           </div>
         ) : (
           <div
@@ -187,57 +253,7 @@ export default function RestaurantList({
                     transform: `translateY(${virtualItem.start}px)`,
                   }}
                 >
-                  <div className="flex items-start gap-3">
-                    {/* Score badge */}
-                    <ScoreBadge score={r.bakomScore} size="sm" className="mt-0.5" />
-
-                    {/* Info */}
-                    <div className="flex-1 min-w-0">
-                      <span
-                        className={`text-sm font-medium truncate block ${
-                          isSelected ? "text-foreground" : ""
-                        }`}
-                      >
-                        {r.name}
-                      </span>
-                      {(r.cuisine || (sortBy === "distance" && distances.get(r.id))) && (
-                        <div className="text-xs text-muted-foreground truncate mt-0.5">
-                          {r.cuisine}
-                          {sortBy === "distance" && distances.get(r.id) != null && (
-                            <>
-                              {r.cuisine && " · "}
-                              {formatDistance(distances.get(r.id)!)}
-                            </>
-                          )}
-                        </div>
-                      )}
-                      <div className="text-xs text-muted-foreground truncate mt-0.5">
-                        {r.address}
-                      </div>
-                      {r.bakomRank != null && (
-                        <div className="text-[10px] text-muted-foreground mt-0.5">
-                          {t("list.rank_sweden", { rank: r.bakomRank })}
-                          {r.metroRegion &&
-                            r.metroRegion !== "sweden" &&
-                            r.bakomRankRegion != null && (
-                              <>
-                                {" "}
-                                ·{" "}
-                                {t("list.rank_region", {
-                                  rank: r.bakomRankRegion,
-                                  region: t(`regions.${r.metroRegion}`),
-                                })}
-                              </>
-                            )}
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Price */}
-                    {r.priceRange && (
-                      <span className="shrink-0 text-xs text-muted-foreground">{PRICE_LABELS[r.priceRange] || r.priceRange}</span>
-                    )}
-                  </div>
+                  {renderItem(r, isSelected)}
                 </button>
               );
             })}
