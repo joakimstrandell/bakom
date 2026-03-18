@@ -218,9 +218,9 @@ export default function RestaurantList({
             {t("list.empty")}
           </div>
         ) : !mounted ? (
-          // SSR: render all items as plain list for search engine indexing
+          // SSR: render top items for SEO, virtualizer takes over on client
           <div>
-            {sortedRestaurants.map((r) => (
+            {sortedRestaurants.slice(0, 50).map((r) => (
               <div
                 key={r.id}
                 className="w-full text-left px-4 py-3 border-b border-black/5 dark:border-white/5"
