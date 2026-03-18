@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { venueHead } from "../../lib/seo";
-import hotelData from "../../../pipeline/.data/hotels.frontend.json";
+import hotelData from "../../../pipeline/.data/optimized/hotels.frontend.json";
 import type { Restaurant } from "../../types";
 
 const hotels = hotelData as Restaurant[];

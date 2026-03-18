@@ -11,6 +11,7 @@ import { michelinSource } from "./definitions/michelin.js";
 import { diSource } from "./definitions/di.js";
 import { krogguidenSource } from "./definitions/krogguiden.js";
 import { falstaffSource } from "./definitions/falstaff.js";
+import { thatsupSource } from "./definitions/thatsup.js";
 
 const ALL_SOURCES: SourceDefinition[] = [
   whiteguideReviewSource,
@@ -22,6 +23,7 @@ const ALL_SOURCES: SourceDefinition[] = [
   diSource,
   krogguidenSource,
   falstaffSource,
+  thatsupSource,
 ];
 
 /** Get all enabled source definitions */

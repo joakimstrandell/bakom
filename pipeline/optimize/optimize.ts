@@ -3,7 +3,7 @@
 import { writeFileSync, mkdirSync } from "fs";
 import { resolve, dirname } from "path";
 import { fileURLToPath } from "url";
-import { saveData, loadData } from "../utils/save.js";
+import { loadData, saveOptimized } from "../utils/save.js";
 import type { ScoredVenue } from "../score/score.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -37,7 +37,9 @@ type FrontendVenue = {
     dn?: number | null;
     di?: number | null;
     falstaff?: number | null;
+    thatsup?: number | null;
   };
+  thatsupReviewCount?: number;
   links: Record<string, string>;
   googleRatingCount?: number;
   bakomScore: number;
@@ -173,6 +175,9 @@ function transformVenue(v: ScoredVenue): FrontendVenue {
   if (v.ratings.falstaff?.score != null) {
     ratings.falstaff = v.ratings.falstaff.score;
   }
+  if (v.ratings.thatsup?.score != null) {
+    ratings.thatsup = v.ratings.thatsup.score;
+  }
 
   // Cuisine from Google primary type
   const cuisine = v.googlePrimaryType
@@ -200,6 +205,7 @@ function transformVenue(v: ScoredVenue): FrontendVenue {
   if (v.website) result.website = v.website;
   if (v.phone) result.phone = v.phone;
   if (v.googleRatingCount) result.googleRatingCount = v.googleRatingCount;
+  if (v.ratings.thatsup?.reviewCount) result.thatsupReviewCount = v.ratings.thatsup.reviewCount;
   if (v.rankRegion != null) result.bakomRankRegion = v.rankRegion;
 
   return result;
@@ -271,10 +277,10 @@ export async function optimizeAll(): Promise<{
   const hotelsFrontend = hotels.map(transformVenue).sort((a, b) => a.bakomRank - b.bakomRank);
 
   // Save
-  saveData("restaurants.frontend.json", restaurantsFrontend);
-  saveData("bars.frontend.json", barsFrontend);
-  saveData("fika.frontend.json", fikaFrontend);
-  saveData("hotels.frontend.json", hotelsFrontend);
+  saveOptimized("restaurants.frontend.json", restaurantsFrontend);
+  saveOptimized("bars.frontend.json", barsFrontend);
+  saveOptimized("fika.frontend.json", fikaFrontend);
+  saveOptimized("hotels.frontend.json", hotelsFrontend);
 
   // Stats
   console.log(`\n  === Optimize Results ===`);

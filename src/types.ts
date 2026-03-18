@@ -30,6 +30,7 @@ export type SourceLinks = {
   dn?: string;
   di?: string;
   falstaff?: string;
+  thatsup?: string;
 };
 
 export type SourceIds = {
@@ -51,6 +52,7 @@ export type SourceRatings = {
   dn?: number | null; // 0-5 scale
   di?: number | null; // 15-25 scale (totalScore)
   falstaff?: number | null; // 0-100 scale
+  thatsup?: number | null; // 0-5 scale
 };
 
 export type MetroRegion = "stockholm" | "gothenburg" | "malmo" | "sweden";
@@ -72,6 +74,7 @@ export type Restaurant = {
   ratings: SourceRatings;
   links: SourceLinks;
   googleRatingCount?: number;
+  thatsupReviewCount?: number;
   bakomScore?: number | null; // 0–100 (integer for display)
   bakomScoreRaw?: number | null; // 0–100 (decimal for ranking)
   bakomRank?: number | null; // 1-based global rank among all scored restaurants

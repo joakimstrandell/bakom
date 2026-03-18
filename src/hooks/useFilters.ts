@@ -12,7 +12,7 @@ import type { MealType } from "../lib/isOpen";
 
 // ─── Action Types ────────────────────────────────────────────────
 
-export type RangeFilterKey = "bakomScore" | "krogguiden" | "google" | "svd" | "di" | "falstaff" | "dn";
+export type RangeFilterKey = "bakomScore" | "krogguiden" | "google" | "svd" | "di" | "falstaff" | "thatsup" | "dn";
 
 export type FilterAction =
   | { type: "TOGGLE_CUISINE"; payload: string }
@@ -113,6 +113,7 @@ const RANGE_DEFAULTS: Record<RangeFilterKey, { min: number; max: number }> = {
   svd: { min: 0, max: 6 },
   di: { min: 0, max: 25 },
   falstaff: { min: 0, max: 100 },
+  thatsup: { min: 0, max: 5 },
   dn: { min: 0, max: 5 },
 };
 

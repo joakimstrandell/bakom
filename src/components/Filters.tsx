@@ -370,6 +370,19 @@ export default function Filters({
           </>
         )}
 
+        {/* Thatsup range */}
+        <RangeSlider
+          label="Thatsup"
+          icon={<Star className="size-4" />}
+          range={state.thatsup}
+          min={0}
+          max={5}
+          step={0.1}
+          filterKey="thatsup"
+          dispatch={dispatch}
+          formatValue={(v) => v.toFixed(1)}
+        />
+
         {/* Google range */}
         <RangeSlider
           label="Google"

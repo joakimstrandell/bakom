@@ -8,6 +8,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export const DATA_DIR = join(__dirname, "..", ".data");
 export const ARTICLES_DIR = join(DATA_DIR, "articles");
+export const OPTIMIZED_DIR = join(DATA_DIR, "optimized");
 
 function ensureDir(dir: string): void {
   if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
@@ -41,4 +42,12 @@ export function loadData<T>(filename: string): T | null {
   const path = join(DATA_DIR, filename);
   if (!existsSync(path)) return null;
   return JSON.parse(readFileSync(path, "utf-8"));
+}
+
+/** Save optimized frontend data to pipeline/.data/optimized/{filename} */
+export function saveOptimized(filename: string, data: unknown): void {
+  ensureDir(OPTIMIZED_DIR);
+  const path = join(OPTIMIZED_DIR, filename);
+  writeFileSync(path, JSON.stringify(data));
+  console.log(`  Saved ${path}`);
 }

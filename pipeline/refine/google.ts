@@ -482,7 +482,7 @@ function deduplicateByPlaceId(venues: EnrichedVenue[]): {
 // ─── Main refine function ───────────────────────────────────────
 
 export async function refineWithGoogle(
-  options: { force?: boolean; targetId?: string; backfill?: boolean } = {},
+  options: { force?: boolean; targetId?: string; backfill?: boolean; limit?: number } = {},
 ): Promise<EnrichedVenue[]> {
   const apiKey = process.env.GOOGLE_PLACES_API_KEY;
   if (!apiKey) {
@@ -495,9 +495,9 @@ export async function refineWithGoogle(
   console.log("=== Refine (Google Places) ===\n");
 
   // Load merge output and compute its hash
-  const mergeRaw = loadData<Venue[]>("venues.json");
+  const mergeRaw = loadData<Venue[]>("venues-merged.json");
   if (!mergeRaw || mergeRaw.length === 0) {
-    throw new Error("pipeline/.data/venues.json not found. Run pipeline:merge first.");
+    throw new Error("pipeline/.data/venues-merged.json not found. Run pipeline:merge first.");
   }
   const sourceHash = createHash("sha256")
     .update(JSON.stringify(mergeRaw))
@@ -565,12 +565,22 @@ export async function refineWithGoogle(
     needsEnrich = venues.filter((v) => !v.googlePlaceId);
   }
 
+  const totalNeeding = needsEnrich.length;
+  if (options.limit && options.limit < needsEnrich.length) {
+    needsEnrich = needsEnrich.slice(0, options.limit);
+  }
+
   console.log(
-    `  Already enriched: ${venues.length - needsEnrich.length}`,
+    `  Already enriched: ${venues.length - totalNeeding}`,
   );
   console.log(
-    `  ${options.force ? "Will re-fetch" : options.backfill ? "Missing hours/website/phone" : "Needs enrichment"}: ${needsEnrich.length}\n`,
+    `  ${options.force ? "Will re-fetch" : options.backfill ? "Missing hours/website/phone" : "Needs enrichment"}: ${totalNeeding}${options.limit ? ` (limited to ${needsEnrich.length})` : ""}\n`,
   );
+
+  // Cost estimate: Text Search = $32/1000 requests, some venues retry = ~1.3x
+  const estimatedCalls = Math.ceil(needsEnrich.length * 1.3);
+  const estimatedCost = (estimatedCalls * 0.032).toFixed(2);
+  console.log(`  Estimated API cost: ~$${estimatedCost} (${estimatedCalls} calls at $0.032/call)\n`);
 
   let enriched = 0;
   let notFound = 0;
@@ -623,9 +633,14 @@ export async function refineWithGoogle(
   const beforeCleanup = deduped.length;
   const removed: { name: string; reason: string }[] = [];
 
+  // When using --limit, keep unenriched venues for future runs
+  const hasLimit = !!options.limit;
+
   const cleaned = deduped.filter((v) => {
     // Remove venues without Google data (can't verify existence)
+    // But keep them if we're running with --limit (they'll be enriched in future batches)
     if (!v.googlePlaceId) {
+      if (hasLimit) return true; // keep for next batch
       removed.push({ name: v.name, reason: "no Google data" });
       return false;
     }

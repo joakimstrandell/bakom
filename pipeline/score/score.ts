@@ -33,6 +33,7 @@ const WEIGHTS: Record<string, number> = {
   svd: 0.12,
   dn: 0.12,
   krogguiden: 0.10,
+  thatsup: 0.08,
   google: 0.08,
 };
 
@@ -120,10 +121,16 @@ function normalizeNumericBySource(
       return normalize0to5(r.score);
     case "falstaff":
       return normalize0to100(r.score);
+    case "thatsup":
+      return normalize0to5(r.score);
     default:
       return null;
   }
 }
+
+/** Thatsup: 0-5 → 0-10 (same as DN).
+ *  No Bayesian dampening — the proportional prestige ceiling already
+ *  handles spread, and dampening over-compresses the distribution. */
 
 // ─── Time decay for editorial scores ────────────────────────────
 
@@ -220,7 +227,7 @@ function collectSources(venue: EnrichedVenue): {
     }
   }
 
-  for (const sourceId of ["svd", "di", "krogguiden", "falstaff", "dn"] as const) {
+  for (const sourceId of ["svd", "di", "krogguiden", "falstaff", "dn", "thatsup"] as const) {
     const r = ratings[sourceId];
     if (r) {
       const s = normalizeNumericBySource(sourceId, r);
@@ -272,7 +279,10 @@ function computeScore(venue: EnrichedVenue): {
   }
   let score = weightedSum / totalWeight;
 
-  // Prestige ceiling
+  // Prestige ceiling — proportional scaling instead of hard clamp.
+  // A 10/10 venue with no prestige maps to 75, a 5/10 maps to 37.5.
+  // This spreads crowd-only venues across the full 0-ceiling range
+  // instead of clustering them all at the ceiling.
   const hasMichelinStars =
     ratings.michelin && MICHELIN_STARRED.includes(ratings.michelin.distinction);
   const hasMichelin = !!ratings.michelin;
@@ -281,7 +291,8 @@ function computeScore(venue: EnrichedVenue): {
 
   if (!hasMichelinStars) {
     if (!hasMichelin && !hasWhiteGuide && !hasFalstaff) {
-      score = Math.min(score, PRESTIGE_CEILINGS.none);
+      // No prestige: scale proportionally to ceiling (e.g. 7.5 → 75)
+      score = (score / 10) * PRESTIGE_CEILINGS.none;
     } else {
       score = Math.min(score, PRESTIGE_CEILINGS.basic);
     }

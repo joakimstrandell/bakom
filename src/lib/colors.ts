@@ -12,12 +12,11 @@
  */
 export const SCORE_COLOR_STOPS: [number, number, number, number][] = [
   //  score  hue   sat%  light%
-  [0, 0, 70, 45], // Red — basic
-  [50, 25, 85, 50], // Orange — good
-  [70, 45, 85, 48], // Yellow-orange — very good
-  [85, 75, 65, 42], // Yellow-green — excellent
-  [94, 120, 55, 36], // Green — elite
-  [100, 140, 50, 30], // Deep green — perfect (gradient endpoint)
+  [0, 0, 70, 45], // Red
+  [25, 15, 80, 48], // Red-orange
+  [50, 45, 90, 50], // Yellow
+  [75, 90, 60, 42], // Yellow-green
+  [100, 140, 50, 32], // Green
 ];
 
 /**

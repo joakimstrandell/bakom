@@ -128,6 +128,7 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
     ratings.dn ||
     (ratings.di != null && ratings.di > 0) ||
     (ratings.falstaff != null && ratings.falstaff > 0) ||
+    (ratings.thatsup != null && ratings.thatsup > 0) ||
     links.michelin ||
     links.whiteguide ||
     links.svd ||
@@ -264,6 +265,21 @@ export default function RestaurantDetail({ restaurant, onClose }: RestaurantDeta
                 </SourceRating>
               ) : links.falstaff ? (
                 <SourceRating label="Falstaff" href={links.falstaff}>
+                  <span className="text-muted-foreground italic">{t("detail.visited")}</span>
+                </SourceRating>
+              ) : null}
+              {ratings.thatsup != null && ratings.thatsup > 0 ? (
+                <SourceRating label="Thatsup" href={links.thatsup}>
+                  <span className="inline-flex items-center gap-1.5">
+                    <StarDisplay rating={ratings.thatsup} />
+                    {ratings.thatsup.toFixed(1)}
+                    {r.thatsupReviewCount != null && r.thatsupReviewCount > 0 && (
+                      <span className="text-muted-foreground text-xs">({r.thatsupReviewCount})</span>
+                    )}
+                  </span>
+                </SourceRating>
+              ) : links.thatsup ? (
+                <SourceRating label="Thatsup" href={links.thatsup}>
                   <span className="text-muted-foreground italic">{t("detail.visited")}</span>
                 </SourceRating>
               ) : null}

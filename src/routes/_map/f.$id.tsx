@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { venueHead } from "../../lib/seo";
-import fikaData from "../../../pipeline/.data/fika.frontend.json";
+import fikaData from "../../../pipeline/.data/optimized/fika.frontend.json";
 import type { Restaurant } from "../../types";
 
 const fika = fikaData as Restaurant[];

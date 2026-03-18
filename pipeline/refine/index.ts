@@ -14,6 +14,9 @@ async function main() {
   const idIndex = args.indexOf("--id");
   const targetId = idIndex !== -1 ? args[idIndex + 1] : undefined;
 
+  const limitIndex = args.indexOf("--limit");
+  const limit = limitIndex !== -1 ? parseInt(args[limitIndex + 1], 10) : undefined;
+
   if (recategorize) {
     // Re-run categorization only — no Google API calls
     const refined = loadData<RefinedData>("venues-refined.json");
@@ -36,7 +39,7 @@ async function main() {
   }
 
   const start = Date.now();
-  const venues = await refineWithGoogle({ force, targetId, backfill });
+  const venues = await refineWithGoogle({ force, targetId, backfill, limit });
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
   console.log(`\n  Done in ${elapsed}s — ${venues.length} venues`);
 }

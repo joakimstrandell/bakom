@@ -32,10 +32,10 @@ import { IconButton } from "../components/IconButton";
 import { MapOverlayButton } from "../components/MapOverlayButton";
 
 // Static import of all data
-import restaurantData from "../../pipeline/.data/restaurants.frontend.json";
-import barData from "../../pipeline/.data/bars.frontend.json";
-import fikaData from "../../pipeline/.data/fika.frontend.json";
-import hotelData from "../../pipeline/.data/hotels.frontend.json";
+import restaurantData from "../../pipeline/.data/optimized/restaurants.frontend.json";
+import barData from "../../pipeline/.data/optimized/bars.frontend.json";
+import fikaData from "../../pipeline/.data/optimized/fika.frontend.json";
+import hotelData from "../../pipeline/.data/optimized/hotels.frontend.json";
 
 // Leaflet accesses `window` at module scope — return a placeholder during SSR
 const Map = lazy(() => {

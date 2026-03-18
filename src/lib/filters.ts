@@ -17,6 +17,7 @@ export type FilterState = {
   svd: Range; // 0-6
   di: Range; // 0-25
   falstaff: Range; // 0-100
+  thatsup: Range; // 0-5
   dn: Range; // 0-5
   // Multi-select (show restaurants with ANY of selected distinctions)
   selectedMichelin: Set<MichelinDistinction>;
@@ -36,6 +37,7 @@ export const DEFAULT_FILTERS: FilterState = {
   svd: { min: 0, max: 6 },
   di: { min: 0, max: 25 },
   falstaff: { min: 0, max: 100 },
+  thatsup: { min: 0, max: 5 },
   dn: { min: 0, max: 5 },
   selectedMichelin: new Set(),
   selectedWhiteGuide: new Set(),
@@ -108,6 +110,9 @@ export function filterRestaurants(restaurants: Restaurant[], filters: FilterStat
 
     // Falstaff range (0-100)
     if (!inRange(r.ratings.falstaff, filters.falstaff, 0, 100)) return false;
+
+    // Thatsup range (0-5)
+    if (!inRange(r.ratings.thatsup, filters.thatsup, 0, 5)) return false;
 
     // DN range (0-5)
     if (!inRange(r.ratings.dn, filters.dn, 0, 5)) return false;

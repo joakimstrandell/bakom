@@ -94,6 +94,10 @@ export type Article = {
   lat?: number | null;
   lng?: number | null;
 
+  // ── Crowd data ──
+  /** Number of user reviews (Thatsup, Google, etc.) */
+  reviewCount?: number;
+
   // ── Metadata ──
   collectedAt: string;
   enrichedAt?: string;

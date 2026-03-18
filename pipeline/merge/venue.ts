@@ -36,6 +36,8 @@ export type NumericRating = {
   subScores?: DimensionalScores;
   /** ISO date string of the review/article */
   publishedAt?: string;
+  /** Number of user reviews (crowd-sourced sources) */
+  reviewCount?: number;
 };
 
 export type VenueRatings = {
@@ -46,6 +48,7 @@ export type VenueRatings = {
   di?: NumericRating;
   krogguiden?: NumericRating;
   falstaff?: NumericRating;
+  thatsup?: NumericRating;
 };
 
 // ─── Venue ─────────────────────────────────────────────────────
