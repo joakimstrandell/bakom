@@ -41,7 +41,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
   const lang = i18n.language || "en";
 
   return (
-    <html lang={lang} suppressHydrationWarning>
+    <html lang={lang} suppressHydrationWarning className="light">
       <head>
         <HeadContent />
       </head>
