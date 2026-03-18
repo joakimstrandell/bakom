@@ -31,6 +31,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/vyn-simrishamn</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/aira-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -49,12 +55,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/vyn-simrishamn</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/adam-albin-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -62,12 +62,6 @@
   </url>
   <url>
     <loc>https://bakom.se/r/ang-tvaaker</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/pm-vanner-restaurant-vaxjo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -85,13 +79,25 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/koka-goteborg</loc>
+    <loc>https://bakom.se/r/hoze-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/la-tour-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bakom.se/r/28-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/koka-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -115,13 +121,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/celeste-stockholm</loc>
+    <loc>https://bakom.se/r/pm-vanner-restaurant-vaxjo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/hoze-goteborg</loc>
+    <loc>https://bakom.se/r/celeste-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -139,13 +145,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/sushi-sho-stockholm</loc>
+    <loc>https://bakom.se/r/persona-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/persona-stockholm</loc>
+    <loc>https://bakom.se/r/sushi-sho-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -157,7 +163,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/la-tour-stockholm</loc>
+    <loc>https://bakom.se/r/bhoga-restaurang-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -181,13 +187,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/ergo-stockholm</loc>
+    <loc>https://bakom.se/r/lyran-malmo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/bhoga-restaurang-goteborg</loc>
+    <loc>https://bakom.se/r/ergo-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -211,37 +217,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/bistro-grodlar-timjan-bastad</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/fejan-graddo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/operakallaren-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/las-brasas-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bryggvingen-nosund</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/publik-mat-bar-lysekil</loc>
+    <loc>https://bakom.se/r/smortaxen-landskrona</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -265,19 +241,37 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/gaia-matbar-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/fyr-halmstad</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/animo-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/restaurang-nationalmuseum-stockholm</loc>
+    <loc>https://bakom.se/r/human-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/spiseriet-varberg</loc>
+    <loc>https://bakom.se/r/bobergs-matsal-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/wedholms-fisk-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -325,19 +319,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/bastardo-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/operakallaren-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/bobergs-pa-hamngarden-brantevik</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/human-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/fyr-halmstad</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -349,31 +343,25 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/hantverket-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/johan-p-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/essence-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/bobergs-matsal-stockholm</loc>
+    <loc>https://bakom.se/r/mutantur-malmo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/lyran-malmo</loc>
+    <loc>https://bakom.se/r/bang-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/copine-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -391,37 +379,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/ransvik-havsveranda-molle</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/norra-hamnen-5-lysekil</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bord-27-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/han-i-hornet-mariefred</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/nabo-matbar-helsingborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/woodstockholm-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -433,37 +391,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/bastardo-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/wedholms-fisk-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/gaia-matbar-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/restaurang-natur-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/coco-carmen-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/myran-malmo</loc>
+    <loc>https://bakom.se/r/las-brasas-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -475,31 +409,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/koizen-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/cissi-clara-norrtalje</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/mutantur-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/chez-jolie-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/copine-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -517,19 +433,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/svartengrens-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/rolfs-hav-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/la-cucina-italiana-goteborg</loc>
+    <loc>https://bakom.se/r/nisch-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -541,49 +451,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/surfers-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bar-la-lune-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/fina-fisken-trosa</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/smaca-kristianstad</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/skrea-matbruk-falkenberg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/postgatan-kalmar</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/dahlboms-mat-bar-linkoping</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/nisch-stockholm</loc>
+    <loc>https://bakom.se/r/matateljen-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -601,13 +469,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/bar-agrikultur-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/voisine-stockholm</loc>
+    <loc>https://bakom.se/r/allegrine-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -619,25 +481,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/bang-goteborg</loc>
+    <loc>https://bakom.se/r/black-milk-gastro-bar-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/toso-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/vinci-boras</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/tonka-strandgatan-umea</loc>
+    <loc>https://bakom.se/r/punk-royale-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -661,6 +511,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/bar-agrikultur-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/arla-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -668,6 +524,18 @@
   </url>
   <url>
     <loc>https://bakom.se/r/matildas-kvarterskrog-gavle</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/bathuset-krog-bar-sigtuna</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/restaurang-hornet-vadstena</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -697,13 +565,37 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/woodstockholm-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/svartengrens-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/stadshuskallaren-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/trattoria-la-strega-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/bistron-torekov-hotell-torekov</loc>
+    <loc>https://bakom.se/r/leijontornet-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/ag-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -715,31 +607,19 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/smortaxen-landskrona</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/poppy-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/riket-malmo</loc>
+    <loc>https://bakom.se/r/myran-malmo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/strandkaj-kok-bar-ornskoldsvik</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/balthazar-boras</loc>
+    <loc>https://bakom.se/r/aster-malmo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -751,7 +631,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/ai-ramen-stockholm</loc>
+    <loc>https://bakom.se/r/surfers-visby-visby</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/bar-la-lune-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -782,12 +668,6 @@
   </url>
   <url>
     <loc>https://bakom.se/r/bar-oas-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bistro-arsenalen-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -824,12 +704,6 @@
   </url>
   <url>
     <loc>https://bakom.se/r/deglabbet-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/deli-di-luca-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -907,12 +781,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/hosoi-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/kryp-in-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -943,13 +811,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/matrosen-smorrebrod-stockholm</loc>
+    <loc>https://bakom.se/r/mamma-o-jag-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/meatballs-for-the-people-stockholm</loc>
+    <loc>https://bakom.se/r/matrosen-smorrebrod-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -962,24 +830,6 @@
   </url>
   <url>
     <loc>https://bakom.se/r/nana-omakase-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/noi-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/nook-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/nybrogatan-38-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1003,13 +853,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/restaurang-moldau-stockholm</loc>
+    <loc>https://bakom.se/r/hantverket-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/ricordi-stockholm</loc>
+    <loc>https://bakom.se/r/restaurang-moldau-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1022,12 +872,6 @@
   </url>
   <url>
     <loc>https://bakom.se/r/sessanta-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/smak-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1051,13 +895,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/sushi-oi-stockholm</loc>
+    <loc>https://bakom.se/r/surfers-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/tradition-stockholm</loc>
+    <loc>https://bakom.se/r/sushi-oi-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1069,19 +913,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/palmers-stockholm</loc>
+    <loc>https://bakom.se/r/vineriet-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bakom.se/r/yono-sabo-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/capannone-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1105,7 +943,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/krog-agrikultur-stockholm</loc>
+    <loc>https://bakom.se/r/atelje-vita-duken-umea</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1177,211 +1015,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/19-hundra-bar-angelholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/ahus-restaurang-bar-kristianstad</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bara-vin-bistro-kristianstad</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/basta-falun</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bonda-bar-kak-ostersund</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/brasserie-greta-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/brasserie-vidbynas-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bryggcafet-sotenas</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bykrogen-kristianstad</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/chako-hoganas</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/chicca-belloni-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/elie-s-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/elviras-skargardskrog-myggenas</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/fjallkallans-kok-sweden</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/fjallpuben-are</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/fridas-restaurang-varberg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/garage-bar-hoganas</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/gujju-boras</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/heaven-23-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/kappa-bar-skovde</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/kitchenette-orebro</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/luna-vingard-restaurang-lysekil</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/maritime-hoganas</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/mocca-deli-skovde</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/pescadores-jonkoping</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/prastgatan-varberg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/restaurang-logen-varberg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/sand-bastad</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/sandhamns-vardshus-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/sibbjans-burgsvik</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/telegrafen-pub-restaurang-angelholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/view-skybar-restaurang-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/viskan-vinbar-boras</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/wine-dine-norrtalje-norrtalje</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/gretes-korvbar-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/babette-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1399,25 +1039,25 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/skrea-matbruk-falkenberg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/vita-amandi-nassjo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/john-s-place-varberg</loc>
+    <loc>https://bakom.se/r/postgatan-kalmar</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/melanders-dalagatan-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/karnelund-krog-rum-simrishamn</loc>
+    <loc>https://bakom.se/r/dahlboms-mat-bar-linkoping</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1430,12 +1070,6 @@
   </url>
   <url>
     <loc>https://bakom.se/r/restaurant-vra-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/aster-malmo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1459,31 +1093,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/brasserie-lavette-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/vineriet-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/flammans-skafferi-are</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/restaurang-fabel-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/noema-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/dryck-mat-uppsala</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1501,13 +1117,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/villa-skartofta-saltsjobaden</loc>
+    <loc>https://bakom.se/r/sperling-co-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/bikt-goteborg</loc>
+    <loc>https://bakom.se/r/villa-skartofta-saltsjobaden</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1549,19 +1165,19 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/city-sweden</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/norra-sverige-sweden</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/mr-falafel-sweden</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bar-social-eskilstuna</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/kattilakoski-overtornea</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1585,7 +1201,25 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/bryggargatan-restaurant-skelleftea</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/restaurang-tage-pitea</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/bryggerikrogen-nora</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/spiseriet-varberg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1597,13 +1231,19 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/matbaren-stockholm</loc>
+    <loc>https://bakom.se/r/triton-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/triton-stockholm</loc>
+    <loc>https://bakom.se/r/farang-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/minh-mat-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1615,13 +1255,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/diket-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/kopmangatan-6-borrby</loc>
+    <loc>https://bakom.se/r/namu-malmo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1639,13 +1273,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/brasserie-maison-stockholm</loc>
+    <loc>https://bakom.se/r/nook-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/el-clasico-boras</loc>
+    <loc>https://bakom.se/r/sensum-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1657,13 +1291,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/asbogatan-1-boras</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/matateljen-stockholm</loc>
+    <loc>https://bakom.se/r/bloom-in-the-park-malmo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1675,7 +1303,19 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/ag-stockholm</loc>
+    <loc>https://bakom.se/r/hemmagastronomi-lulea</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/riket-malmo</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/strandkaj-kok-bar-ornskoldsvik</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1687,49 +1327,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/bathuset-krog-bar-sigtuna</loc>
+    <loc>https://bakom.se/r/restaurang-b-a-r-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/restaurang-hornet-vadstena</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/mr-p-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/kin-long-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/brasserie-godot-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/farang-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/restaurang-rot-larbro</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/babette-stockholm</loc>
+    <loc>https://bakom.se/r/voisine-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1741,25 +1345,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/namu-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/ruths-malmo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/dryck-mat-uppsala</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/matbaren-i-parken-borgholm</loc>
+    <loc>https://bakom.se/r/bergamott-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1783,67 +1375,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/allegrine-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/atelje-vita-duken-umea</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bakfickan-the-hip-pocket-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/storgatan-11-kalmar</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/vastervik-vastervik</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/grano-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/mestiza-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bloom-in-the-park-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/doma-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/brasserie-bardot-gavle</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/sensum-stockholm</loc>
+    <loc>https://bakom.se/r/matbaren-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1855,13 +1387,37 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/bistron-lulea</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/wanas-restaurant-knislinge</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/brasserie-balzac-stockholm</loc>
+    <loc>https://bakom.se/r/karnelund-krog-rum-simrishamn</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/a-ts-restaurang-lulea</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/melanders-dalagatan-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/johan-p-malmo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1879,43 +1435,25 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/bonnie-s-stockholm</loc>
+    <loc>https://bakom.se/r/fotografiskas-restaurang-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/restaurang-b-a-r-stockholm</loc>
+    <loc>https://bakom.se/r/barbro-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/la-fonderie-malmo</loc>
+    <loc>https://bakom.se/r/cafe-cuvee-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/sjomagasinet-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bryggargatan-restaurant-skelleftea</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/kaifo-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/restaurang-tage-pitea</loc>
+    <loc>https://bakom.se/r/pat-s-place-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1934,6 +1472,12 @@
   </url>
   <url>
     <loc>https://bakom.se/r/herrangens-gard-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/hosoi-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -1993,49 +1537,19 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/brezza-uppsala</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/butlers-bistro-winebar-norrkoping</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/enoteket-norrkoping</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/hemma-jonkoping</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/spanjoren-orebro</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bergamott-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/punk-royale-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/450-gradi-lidingo</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/mancini-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/smak-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2047,7 +1561,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/bleck-stockholm</loc>
+    <loc>https://bakom.se/r/sofiero-slottsrestaurang-helsingborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/far-i-hatten-malmo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2071,13 +1591,37 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/dg11-boden</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/klostergatan-5-uppsala</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/bord-27-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/brasserie-fjallkoket-pa-abisko-mountain-lodge-abisko</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/spanjorskan-stockholm</loc>
+    <loc>https://bakom.se/r/bikt-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/han-i-hornet-mariefred</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2095,85 +1639,25 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/norra-sverige-sweden</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/astrids-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/balkan-wine-meze-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bullen-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/tumult-ystad</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/nomad-swedish-food-bar-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/hemmagastronomi-lulea</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/botanico-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bjork-topprestaurang-fjallbar-hemavan</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/madam-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/barbro-stockholm</loc>
+    <loc>https://bakom.se/r/miss-voon-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/sperling-co-stockholm</loc>
+    <loc>https://bakom.se/r/nybrogatan-38-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/luna-cocktailbar-varberg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/minh-mat-stockholm</loc>
+    <loc>https://bakom.se/r/brasserie-godot-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2185,13 +1669,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/jessens-saluhall-bar-sweden</loc>
+    <loc>https://bakom.se/r/tradition-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/boqueria-stockholm</loc>
+    <loc>https://bakom.se/r/jessens-saluhall-bar-sweden</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2215,12 +1699,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/stadshuskallaren-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/weinbergs-hotell-trelleborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -2228,6 +1706,12 @@
   </url>
   <url>
     <loc>https://bakom.se/r/lindas-mat-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/bar-montan-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2263,13 +1747,49 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/knarrholmens-restaurang-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/bistro-apan-vikarbyn</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/bistro-grodlar-timjan-bastad</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/prostens-pizza-falkenberg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/uppstroms-fisk-skaldjur-uppsala</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/hunger-och-torst-umea</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/diket-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/collage-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2293,43 +1813,31 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/fejan-graddo</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/hambergs-fisk-uppsala</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/restaurang-natur-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/kopmangatan-6-borrby</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/bistro-zissou-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/skanshof-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bistron-lulea</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/enoteca-maglia-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/epoque-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/norda-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/a-ts-restaurang-lulea</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2353,7 +1861,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/nom-vasteras</loc>
+    <loc>https://bakom.se/r/doma-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2365,7 +1873,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/surfers-visby-visby</loc>
+    <loc>https://bakom.se/r/koizen-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2377,67 +1885,25 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/800-grader-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/indio-kitchen-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/luzette-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/brasserie-1742-kosta</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/hattmakaren-kalmar</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/barrique-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bjerreds-saltsjobad-kallbadhus-restaurang-rimbo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/brasseri-kanalparken-motala</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/erlandssons-restaurang-bar-gavle</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/galleriet-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/grona-stugan-kalmar</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/guldkant-vimmerby-vimmerby</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/marie-antoinette-malmo</loc>
+    <loc>https://bakom.se/r/koksbaren-umea</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2461,7 +1927,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/leijontornet-stockholm</loc>
+    <loc>https://bakom.se/r/tavolo-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/sardin-solna</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2497,37 +1969,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/sofiero-slottsrestaurang-helsingborg</loc>
+    <loc>https://bakom.se/r/tripletta-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/far-i-hatten-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/spill-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/dg11-boden</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/klostergatan-5-uppsala</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/elsa-malmo</loc>
+    <loc>https://bakom.se/r/krog-agrikultur-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2539,13 +1987,55 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/la-cucina-italiana-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/kin-long-malmo</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/bryggvingen-nosund</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/sillen-makrillen-helsingborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/bistrot-bombance-enkoping</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/lilla-styrbjorn-sodertalje</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/izakaya-moshi-vaxjo-vaxjo</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/bodegan-umea</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/publik-mat-bar-lysekil</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2569,6 +2059,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/restaurang-creo-helsingborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/rakstugan-mariefred</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -2587,12 +2083,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/tavolo-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/ok-ok-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -2605,13 +2095,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/shanti-ultimat-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/sardin-solna</loc>
+    <loc>https://bakom.se/r/blue-light-yokohama-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2623,7 +2107,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/brasserie-makalos-stockholm</loc>
+    <loc>https://bakom.se/r/bord-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2636,42 +2120,6 @@
   </url>
   <url>
     <loc>https://bakom.se/r/bar-nombre-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/knarrholmens-restaurang-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/uppstroms-fisk-skaldjur-uppsala</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/hunger-och-torst-umea</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/pink-bistro-vastervik</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/collage-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/hambergs-fisk-uppsala</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2725,6 +2173,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/pom-friterie-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/stella-pizza-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -2755,67 +2209,19 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/biobaren-bar-karlskrona</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/matilda-fjallbacka</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/mancini-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/berns-asiatiska-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/pom-friterie-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/noun-nora-gavle</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/pio-restaurang-bar-halmstad</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/upp-eller-ner-ystad</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/k-markt-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/vikens-food-friends-vastervik</loc>
+    <loc>https://bakom.se/r/matbaren-i-parken-borgholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/miss-voon-stockholm</loc>
+    <loc>https://bakom.se/r/bonnie-s-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2833,6 +2239,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/villa-tradgard-de-luxe-vaxjo</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/fina-fisken-trosa</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/lundgrens-garage-borgholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -2840,6 +2258,30 @@
   </url>
   <url>
     <loc>https://bakom.se/r/jernberghska-eskilstuna</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/mestiza-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/smaca-kristianstad</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/harlequin-by-hunger-och-torst-umea</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/stangs-magasin-linkoping</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2893,55 +2335,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/krogen-soldaten-svejk-stockholm</loc>
+    <loc>https://bakom.se/r/brasserie-bardot-gavle</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/stangs-magasin-linkoping</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/sillen-makrillen-helsingborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/lilla-styrbjorn-sodertalje</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/brasseriet-tack-o-bock-borgholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/izakaya-moshi-vaxjo-vaxjo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/restaurang-apa-sundsvall</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/restaurang-creo-helsingborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bar-montan-stockholm</loc>
+    <loc>https://bakom.se/r/bleck-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -2965,6 +2365,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/pastis-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/hawaii-poke-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -2977,13 +2383,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/hommage-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/fotografiskas-restaurang-stockholm</loc>
+    <loc>https://bakom.se/r/bistrot-paname-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3013,13 +2413,19 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/la-fonderie-malmo</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/matsalen-stockholm-stadshotell-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/napolyon-stockholm</loc>
+    <loc>https://bakom.se/r/bistro-sud-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3043,61 +2449,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/jarlen-halmstad</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/kalmar-kott-bar-kalmar</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/marten-trotzig-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/restaurang-store-thor-ystad</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/zushi-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/villa-tradgard-de-luxe-vaxjo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/harlequin-by-hunger-och-torst-umea</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/brasserie-grand-italian-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/nous-bistro-norrkoping</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/tengu-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3116,6 +2468,24 @@
   </url>
   <url>
     <loc>https://bakom.se/r/erikstorps-kungsgard-landskrona</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/toso-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/vinci-boras</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/restaurang-nationalmuseum-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3151,13 +2521,31 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/cafe-cuvee-stockholm</loc>
+    <loc>https://bakom.se/r/nom-vasteras</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/tonka-strandgatan-umea</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/tengu-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bakom.se/r/barrels-burgers-beer-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/bistro-arsenalen-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3187,25 +2575,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/blue-light-yokohama-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/gasemora-gardskrog-faro</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/pat-s-place-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/master-anders-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3224,6 +2594,18 @@
   </url>
   <url>
     <loc>https://bakom.se/r/cafe-facile-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/master-anders-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/sjomagasinet-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3265,30 +2647,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/ponti-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/pastis-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/wolfgang-vincafe-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/tripletta-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/demi-matbar-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -3301,7 +2659,19 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/deli-di-luca-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/linguini-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/nomad-swedish-food-bar-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3313,7 +2683,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/bar-juno-linkoping</loc>
+    <loc>https://bakom.se/r/savoca-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/boqueria-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3343,13 +2719,49 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/shanti-ultimat-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/kronet-by-visby-visby</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/restaurang-atelier-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/balthazar-boras</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/botanico-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/bjork-topprestaurang-fjallbar-hemavan</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/mastio-limhamn</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/angbryggeriet-pitea</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3367,19 +2779,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/fiore-narvavagen-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/the-bulls-halmstad</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/le-bon-canon-stockholm</loc>
+    <loc>https://bakom.se/r/ai-ramen-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3398,6 +2798,12 @@
   </url>
   <url>
     <loc>https://bakom.se/r/ling-long-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/meatballs-for-the-people-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3439,12 +2845,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/bord-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/pa-co-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -3464,6 +2864,12 @@
   </url>
   <url>
     <loc>https://bakom.se/r/glupsk-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/goma-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3499,54 +2905,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/lagerqvist-restaurant-bar-norrkoping</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/nk-bar-kok-katrineholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/vin-o-deli-karlstad-karlstad</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/wersens-are</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/riche-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/kronet-by-visby-visby</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/angbryggeriet-pitea</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/black-milk-gastro-bar-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/restaurang-esperanza-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -3565,13 +2923,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/800-grader-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/misshumasshu-stockholm</loc>
+    <loc>https://bakom.se/r/paraden-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3583,25 +2935,25 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/the-sparrow-bistro-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/restaurang-cirkeln-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/koksbaren-umea</loc>
+    <loc>https://bakom.se/r/riche-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bakom.se/r/muskot-kok-bar-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/aubergine-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3643,7 +2995,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/byn-ronneby-ronneby</loc>
+    <loc>https://bakom.se/r/misshumasshu-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3673,7 +3025,19 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/bakfickan-visby</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/oliveriet-kristinehamn</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/john-s-place-varberg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3691,7 +3055,19 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/epoque-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/jarvso-lanthandel-jarvso</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/en-liten-krog-sundsvall</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3709,19 +3085,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/boqueria-are-are</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/radhustorget-no-1a-falkenberg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bakfickan-visby</loc>
+    <loc>https://bakom.se/r/skanshof-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3733,7 +3097,19 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/en-liten-krog-sundsvall</loc>
+    <loc>https://bakom.se/r/boqueria-are-are</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/enoteca-maglia-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/radhustorget-no-1a-falkenberg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3745,13 +3121,19 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/freyja-stockholm</loc>
+    <loc>https://bakom.se/r/norda-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/den-gyldene-freden-stockholm</loc>
+    <loc>https://bakom.se/r/hornsgatan-kvarterskrog-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/g-a-t-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3775,30 +3157,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/la-brace-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/duo-uppsala</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/edvalls-guld-sundsvall</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/la-ruelle-uppsala</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/flippin-burgers-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -3817,13 +3175,25 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/ulla-winbladh-stockholm</loc>
+    <loc>https://bakom.se/r/hattmakaren-kalmar</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/aubergine-stockholm</loc>
+    <loc>https://bakom.se/r/brasserie-1742-kosta</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/restaurang-fabel-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/berns-asiatiska-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3835,7 +3205,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/klostergatans-vin-delikatess-lund</loc>
+    <loc>https://bakom.se/r/gaijin-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3847,19 +3217,31 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/bise-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/monrads-djursholm</loc>
+    <loc>https://bakom.se/r/den-gyldene-freden-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bakom.se/r/antonios-karlskrona</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/ransvik-havsveranda-molle</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/spill-malmo</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/norra-hamnen-5-lysekil</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3872,6 +3254,12 @@
   </url>
   <url>
     <loc>https://bakom.se/r/buustamons-fjallgard-are</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/klostergatans-vin-delikatess-lund</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3895,7 +3283,19 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/ulla-winbladh-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/perssons-pa-kajen-hunnebostrand</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/elsa-malmo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3908,12 +3308,6 @@
   </url>
   <url>
     <loc>https://bakom.se/r/china-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/dersch-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3937,49 +3331,31 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/bistrot-paname-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/veto-orebro</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/citat-vin-mat-linkoping</loc>
+    <loc>https://bakom.se/r/gondolen-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/kanon-stockholm</loc>
+    <loc>https://bakom.se/r/brasserie-balzac-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/freyja-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bakom.se/r/chelas-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/palsjo-krog-helsingborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/restaurang-strandpiren-hudiksvall</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/daawat-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -3997,67 +3373,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/wasahof-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/indio-kitchen-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/brasserie-le-coq-rouge-helsingborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/cardells-landskrona</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/dolcetto-sundsvall</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/enoclub-osteria-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/fir-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/franz-bistro-bar-halmstad</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/kakel-kok-bar-halmstad</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/quan-grossraum-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/soderport-kalmar</loc>
+    <loc>https://bakom.se/r/brasserie-makalos-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4070,6 +3386,18 @@
   </url>
   <url>
     <loc>https://bakom.se/r/holy-cow-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/noi-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/ricordi-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4111,12 +3439,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/la-petite-soeur-sweden</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/trattoria-giorgio-s-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -4153,6 +3475,24 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/palsjo-krog-helsingborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/restaurang-strandpiren-hudiksvall</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/pink-bistro-vastervik</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/mugwort-s-bbq-shack-sweden</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -4166,6 +3506,18 @@
   </url>
   <url>
     <loc>https://bakom.se/r/lennart-bror-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/daawat-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/krogen-soldaten-svejk-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4190,6 +3542,12 @@
   </url>
   <url>
     <loc>https://bakom.se/r/cucina-povera-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/fiore-narvavagen-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4261,60 +3619,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/bazar-bar-restaurang-karlstad</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/brasserie-park-jonkoping</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/husaren-skovde</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/makeriet-orebro</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/niva-bar-karlskrona</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/riva-restaurang-strangnas</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/vila-kok-bar-norrkoping</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/vimmerby-stadshotell-restaurang-vimmerby</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bistro-sud-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/brunkebergs-bageri-och-bistro-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -4345,43 +3649,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/bolaget-visby</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/torpedverkstan-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/chingu-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/prinsen-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/combo-vinbaren-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/barbros-kok-bar-bollnas</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/dining-room-hotel-at-six-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4399,19 +3673,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/acaza-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/dubbel-dubbel-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/gustawas-kok-bar-vastervik</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4423,37 +3685,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/the-hills-stockholm</loc>
+    <loc>https://bakom.se/r/bar-nimes-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bakom.se/r/brunnsgatan-41-nykoping</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/gaijin-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bistro-le-garage-umea</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/skai-vaxjo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/urban-smak-vaxjo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4507,6 +3745,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/brasseriet-tack-o-bock-borgholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/the-lamp-restaurant-norrkoping</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -4531,6 +3775,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/mr-p-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/restaurang-apa-sundsvall</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/oizo-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -4543,25 +3799,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/broms-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/solidar-malmo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/gondolen-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/kasten-stockholm</loc>
+    <loc>https://bakom.se/r/prinsen-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4573,13 +3817,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/munkklostret-vadstena</loc>
+    <loc>https://bakom.se/r/beirut-cafe-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/beirut-cafe-stockholm</loc>
+    <loc>https://bakom.se/r/broms-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4609,13 +3853,19 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/aleks-y-filip-stockholm</loc>
+    <loc>https://bakom.se/r/hommage-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bakom.se/r/our-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/aleks-y-filip-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4645,13 +3895,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/waan-thai-stockholm</loc>
+    <loc>https://bakom.se/r/napolyon-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/ai-ramen-sofia-stockholm</loc>
+    <loc>https://bakom.se/r/waan-thai-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4681,18 +3931,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/paraden-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/coup-d-etat-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/grodan-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -4717,7 +3955,25 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/grano-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/saluhallen-slakteriet-vasteras</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/brasserie-grand-italian-malmo</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/dersch-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4741,43 +3997,19 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/d8-ristorante-bar-varnamo</loc>
+    <loc>https://bakom.se/r/acaza-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/domtrappkallaren-uppsala</loc>
+    <loc>https://bakom.se/r/kanon-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/guilty-pleasure-umea</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/jay-fu-s-uppsala</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/madame-mustache-helsingborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/matscenen-landskrona</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/stockholms-glass-pastahus-stockholm</loc>
+    <loc>https://bakom.se/r/ponti-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4795,13 +4027,19 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/umarell-goteborg</loc>
+    <loc>https://bakom.se/r/koketsu-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/v-bar-norrkoping</loc>
+    <loc>https://bakom.se/r/kasten-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/la-brace-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4819,6 +4057,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/dining-room-hotel-at-six-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/ostgotakallaren-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -4831,31 +4075,19 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/papa-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/strand-stockholm-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/midan-sweden</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/boca-restaurang-bar-vasteras</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/lochness-bar-karlskrona</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/pw-kok-bar-alvdalen</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/goma-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4873,13 +4105,19 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/mommas-bar-och-kok-kiruna</loc>
+    <loc>https://bakom.se/r/ai-ramen-sofia-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/perspektiv-falsterbo</loc>
+    <loc>https://bakom.se/r/wolfgang-vincafe-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/mommas-bar-och-kok-kiruna</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4891,55 +4129,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/usine-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/bistro-tartine-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/inez-ernst-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bara-vara-helsingborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/farbror-bla-sigtuna</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/gali-vaxsjo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/gambrinus-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/lola-maria-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/pasion-tapas-wines-trollhattan</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/yoko-helsingborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4951,13 +4147,25 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/juliet-creperie-bistro-goteborg</loc>
+    <loc>https://bakom.se/r/restaurang-art-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/nabo-stockholm</loc>
+    <loc>https://bakom.se/r/restaurang-cg-lulea</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/milles-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/bistron-torekov-hotell-torekov</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -4987,7 +4195,19 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/nektar-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/essinge-tapas-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/capannone-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5005,25 +4225,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/restaurang-atmosfar-malmo</loc>
+    <loc>https://bakom.se/r/coup-d-etat-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/konstnarsbaren-kb-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/are-nature-studio-are</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/restaurang-art-stockholm</loc>
+    <loc>https://bakom.se/r/spanjorskan-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5041,96 +4249,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/arstiderna-i-kockska-huset-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/brasseriet-helsingborg-helsingborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/brogatan-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bryggeriet-angkvarn-uppsala</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/hos-talevski-stadsparken-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/house-of-ven-landskrona</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/kol-cocktails-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/m-e-a-t-lund</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/pumphuset-borstahusen-landskrona</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/ra-sundsvall</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/restaurang-bar-avalon-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/speaker-s-corner-i-landskrona-landskrona</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/tapas-bar-deli-umea</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/tycho-brahe-landskrona</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/umami-monkey-vaxjo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/melanders-sodermalm-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -5138,30 +4256,6 @@
   </url>
   <url>
     <loc>https://bakom.se/r/flor-matbar-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/stockholm-stadshotell-bistro-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/cane-rum-society-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bar-nimes-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/blanks-bar-bistro-varberg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5179,7 +4273,19 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/hornsgatan-kvarterskrog-stockholm</loc>
+    <loc>https://bakom.se/r/monrads-djursholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/umarell-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/perspektiv-falsterbo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5215,12 +4321,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/milles-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/que-malmo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -5234,12 +4334,6 @@
   </url>
   <url>
     <loc>https://bakom.se/r/xulo-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/territory-54-pitea</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5263,13 +4357,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/restaurang-cg-lulea</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/forma-stockholm</loc>
+    <loc>https://bakom.se/r/bistro-bisous-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5305,24 +4393,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/il-forno-italiano-uppsala</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/invito-sundsvall</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/stars-stripes-kalmar</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/sin-ramen-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -5335,13 +4405,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/nektar-stockholm</loc>
+    <loc>https://bakom.se/r/gyllenborgens-mat-sweden</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/gyllenborgens-mat-sweden</loc>
+    <loc>https://bakom.se/r/konstnarsbaren-kb-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5359,19 +4429,25 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/bise-malmo</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/bistro-renard-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/hard-rock-cafe-stockholm</loc>
+    <loc>https://bakom.se/r/restaurang-atmosfar-malmo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/ai-ramen-kita-stockholm</loc>
+    <loc>https://bakom.se/r/hard-rock-cafe-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5389,7 +4465,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/bockholmen-hav-restaurang-solna</loc>
+    <loc>https://bakom.se/r/stockholm-stadshotell-bistro-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5401,25 +4477,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/grand-malmo-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/lion-bar-helsingborg-helsingborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/paddy-s-restaurang-pub-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bistro-bisous-stockholm</loc>
+    <loc>https://bakom.se/r/bambi-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5437,25 +4495,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/forma-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/texas-longhorn-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bistro-grand-falkenberg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/prins-carl-norrkoping</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/bambi-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5479,25 +4525,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/bistro-borgen-sweden</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/munkkallaren-sweden</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/hermans-restaurang-noje-falkenberg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/mister-french-are-are</loc>
+    <loc>https://bakom.se/r/bibliotek-live-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5521,19 +4549,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/tako-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/paltzerian-pitea</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/oscars-bar-och-brasserie-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5563,6 +4579,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/bockholmen-hav-restaurang-solna</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/lu-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -5575,7 +4597,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/vinager-sweden</loc>
+    <loc>https://bakom.se/r/oscars-bar-och-brasserie-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5587,7 +4609,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/tosto-stockholm</loc>
+    <loc>https://bakom.se/r/munkklostret-vadstena</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5599,25 +4621,19 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/usine-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/cucolo-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/mister-french-stockholm</loc>
+    <loc>https://bakom.se/r/palmers-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/cafe-klotet-stockholm</loc>
+    <loc>https://bakom.se/r/mister-french-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5665,13 +4681,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/india-s-stockholm</loc>
+    <loc>https://bakom.se/r/tako-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/olli-stockholm</loc>
+    <loc>https://bakom.se/r/india-s-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5683,19 +4699,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/hestraviken-restaurang-gislaved</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/tete-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/sandy-s-falkenberg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5713,6 +4717,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/chingu-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/panza-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -5725,19 +4735,25 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/r/tosto-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/r/bar-abrovinsch-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/brasserie-famille-falkenberg</loc>
+    <loc>https://bakom.se/r/ocra-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/ocra-stockholm</loc>
+    <loc>https://bakom.se/r/olli-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5767,19 +4783,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/pelikan-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/city-sweden</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/krog-co-ljungby</loc>
+    <loc>https://bakom.se/r/la-petite-soeur-sweden</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5797,19 +4801,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/verandan-kiruna</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/cafe-vastbacken-tanumshede</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/shibumi-stockholm</loc>
+    <loc>https://bakom.se/r/the-hills-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5822,6 +4820,12 @@
   </url>
   <url>
     <loc>https://bakom.se/r/palett-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/r/pelikan-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5863,19 +4867,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/savoca-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/masen-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/vinager-by-plaza-eskilstuna</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5941,25 +4933,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/mamma-o-jag-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/babusia-malmo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/koketsu-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/papa-stockholm</loc>
+    <loc>https://bakom.se/r/shibumi-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -5971,19 +4951,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/grand-soleil-sweden</loc>
+    <loc>https://bakom.se/r/cafe-klotet-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/bibliotek-live-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/tb-grill-room-malung-salen</loc>
+    <loc>https://bakom.se/r/cane-rum-society-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -6013,12 +4987,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/r/g-a-t-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/r/konsthallen-sweden</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -6032,12 +5000,6 @@
   </url>
   <url>
     <loc>https://bakom.se/r/mgl-sushi-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/r/strand-stockholm-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -6103,7 +5065,31 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/b/cadierbaren-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/b/lucy-s-flower-shop-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/b/tweed-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/b/a-bar-called-gemma-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/b/bar-bruno-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -6115,7 +5101,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/lucy-s-flower-shop-stockholm</loc>
+    <loc>https://bakom.se/b/folii-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/b/20hundra5-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -6133,6 +5125,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://bakom.se/b/apropos-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/b/stranger-gothenburg-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -6145,25 +5143,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/barabicu-bar-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/b/cadierbaren-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/b/omnipollos-hatt-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/b/puta-madre-bar-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -6175,7 +5155,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/apropos-stockholm</loc>
+    <loc>https://bakom.se/b/puta-madre-bar-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/b/tjoget-bar-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/b/pharmarium-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -6187,13 +5179,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/a-bar-called-gemma-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/b/folii-stockholm</loc>
+    <loc>https://bakom.se/b/familjen-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -6202,25 +5188,13 @@
     <loc>https://bakom.se/b/portal-bar-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bakom.se/b/haktet-vanster-pa-haktet-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/b/bar-bruno-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/b/20hundra5-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bakom.se/b/care-of-malmo</loc>
@@ -6241,12 +5215,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/tak-bar-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/b/barski-helsingborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -6254,12 +5222,6 @@
   </url>
   <url>
     <loc>https://bakom.se/b/e-g-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/b/roda-huset-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -6277,13 +5239,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/familjen-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/b/pharmarium-stockholm</loc>
+    <loc>https://bakom.se/b/asian-post-office-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -6307,19 +5263,25 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/boulebar-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/b/corvina-enoteca-stockholm</loc>
+    <loc>https://bakom.se/b/tak-bar-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bakom.se/b/herno-gin-bar-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/b/paradiso-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/b/stjartilleriet-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -6349,13 +5311,25 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/bar-talea-stockholm</loc>
+    <loc>https://bakom.se/b/bar-afterglow-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/juan-font-vinbar-goteborg</loc>
+    <loc>https://bakom.se/b/zigges-garage-halmstad</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/b/guilty-pleasure-umea</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/b/barabicu-bar-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -6367,7 +5341,19 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/b/bar-kusinen-linkoping</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/b/miss-voon-uppsala-bar-uppsala</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/b/roda-huset-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -6379,7 +5365,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/bread-on-wine-halmstad</loc>
+    <loc>https://bakom.se/b/corvina-enoteca-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -6409,30 +5395,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/asian-post-office-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/b/bar-arsenalen-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/b/vina-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/b/zigges-garage-halmstad</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/b/rost-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -6451,18 +5413,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/lion-bar-boras</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/b/lilla-italy-kristianstad</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/b/tapasbaren-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -6475,31 +5425,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/verovin-gavle</loc>
+    <loc>https://bakom.se/b/kung-carls-cocktailbar-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/tjoget-bar-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/b/paradiso-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/b/boulebar-drottningtorget-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/b/ring-katarina-stockholm</loc>
+    <loc>https://bakom.se/b/sju-flaskor-uppsala</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -6511,7 +5443,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/proseccobaren-stockholm</loc>
+    <loc>https://bakom.se/b/boulebar-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -6541,12 +5473,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/bar-kusinen-linkoping</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/b/raspberrry-bar-jonkoping</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -6565,7 +5491,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/batard-stockholm</loc>
+    <loc>https://bakom.se/b/verovin-gavle</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -6583,7 +5509,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/chapter-house-vaxjo</loc>
+    <loc>https://bakom.se/b/ring-katarina-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -6595,19 +5521,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/vada-mat-vinbar-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/b/stjartilleriet-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/b/benchwarmers-brewing-taproom-helsingborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/b/batard-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -6643,13 +5563,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/kung-carls-cocktailbar-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/b/motel-l-lund-skybar-malmo</loc>
+    <loc>https://bakom.se/b/vina-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -6661,19 +5575,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/b/bar-europa-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/b/pet-sounds-bar-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/b/black-bird-uppsala</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -6698,18 +5600,6 @@
   </url>
   <url>
     <loc>https://bakom.se/b/riche-fenix-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/b/sju-flaskor-uppsala</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/b/plan2-uppsala</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -6859,12 +5749,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bakom.se/f/lundbergs-konditori-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/f/gast-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -6874,7 +5758,7 @@
     <loc>https://bakom.se/f/bonan-mustaschen-vaxjo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bakom.se/f/bergstrands-bageri-stockholm</loc>
@@ -7159,6 +6043,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/f/rosendals-tradgardskafe-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/f/konditori-kampanilen-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -7250,12 +6140,6 @@
   </url>
   <url>
     <loc>https://bakom.se/f/rosteriet-nykoping-nykoping</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/f/rosendals-tradgardskafe-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -7400,6 +6284,12 @@
   </url>
   <url>
     <loc>https://bakom.se/f/nygrens-cafe-alingsas</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/f/lundbergs-konditori-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -7963,12 +6853,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/f/uppsala-gelateria-uppsala</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/f/gardby-kafe-och-lanthandel-gardby</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -8059,6 +6943,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/f/djurgardsbrunn-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/f/cafe-safari-kiruna</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -8089,22 +6979,10 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/f/djurgardsbrunn-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/f/ollis-deli-sweden</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/grand-hotel-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://bakom.se/h/ett-hem-stockholm</loc>
@@ -8113,7 +6991,19 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://bakom.se/h/lydmar-hotel-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/h/upper-house-gothia-towers-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/h/grand-hotel-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -8132,18 +7022,6 @@
   </url>
   <url>
     <loc>https://bakom.se/h/nobis-hotel-stockholm-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/wanas-restaurant-hotel-knislinge</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/bomans-trosa</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -8191,7 +7069,37 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://bakom.se/h/bomans-trosa</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/h/var-gard-saltsjobaden</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/h/hotel-draken-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/h/arctic-bath-harads</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/h/radisson-collection-strand-hotel-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/h/hotel-diplomat-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -8200,25 +7108,25 @@
     <loc>https://bakom.se/h/smadalaro-gard-smadalaro</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bakom.se/h/quality-hotel-the-box-linkoping</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bakom.se/h/avalon-hotell-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bakom.se/h/haymarket-by-scandic-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bakom.se/h/treehotel-harads</loc>
@@ -8228,18 +7136,6 @@
   </url>
   <url>
     <loc>https://bakom.se/h/hotel-at-six-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/rusthallargarden-arild</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/trosa-stadshotell-trosa</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8257,25 +7153,31 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/h/hotel-draken-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/h/talldungen-gardshotell-brosarp</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/h/furusund-vardshus-furusund</loc>
+    <loc>https://bakom.se/h/wanas-restaurant-hotel-knislinge</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/h/dorsia-bar-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bakom.se/h/icehotel-jukkasjarvi</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/h/hotel-pigalle-goteborg</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8288,30 +7190,6 @@
   </url>
   <url>
     <loc>https://bakom.se/h/downtown-camper-by-scandic-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/hotel-diplomat-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/salt-sill-kladesholmen</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/villa-sjotorp-ljungskile</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/radisson-collection-strand-hotel-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8335,25 +7213,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/h/restaurang-grand-tenan-marstrand</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/arctic-bath-harads</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/h/clarion-hotel-the-pier-sweden</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/brosarp-gastgifveri-spa-brosarp</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8365,25 +7225,19 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/h/kastanjelunds-wardshus-yngsjo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/the-winery-hotel-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/hotel-pigalle-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/h/katrinelund-gastgiveri-sjokrog-stora-mellosa</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/h/the-steam-hotel-vasteras</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/h/brosarp-gastgifveri-spa-brosarp</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8401,6 +7255,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/h/hotel-kungstradgarden-the-king-s-garden-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/h/hotel-skansen-bastad</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -8413,7 +7273,25 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/h/story-hotel-studio-malmo-malmo</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/h/hotel-with-urban-deli-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/h/the-winery-hotel-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/h/trosa-stadshotell-trosa</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8449,13 +7327,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/h/backstage-hotel-stockholm</loc>
+    <loc>https://bakom.se/h/hotell-borgholm-borgholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/h/naas-fabriker-tollered</loc>
+    <loc>https://bakom.se/h/backstage-hotel-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8515,31 +7393,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/h/the-steam-hotel-vasteras</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/h/copperhill-mountain-lodge-are</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/hotel-kungstradgarden-the-king-s-garden-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/dorsia-bar-goteborg</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/story-hotel-studio-malmo-malmo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8605,25 +7459,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/h/lydmar-hotel-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/h/stockholm-stadshotell-stockholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/nergarden-trosa</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/smakrike-krog-ljugarn</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8641,19 +7477,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/h/eksgarden-krog-rum-farjestaden</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/hotell-borgholm-borgholm</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/h/eco-by-strandnara-morbylanga</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/h/villa-dagmar-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8665,13 +7495,19 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/h/fryksas-hotell-gestgifveri-orsa</loc>
+    <loc>https://bakom.se/h/hotel-villa-anna-uppsala</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://bakom.se/h/thoresta-herrgard-bro</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/h/vardshuset-lindgarden-visby</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8684,12 +7520,6 @@
   </url>
   <url>
     <loc>https://bakom.se/h/gra-gasen-burgsvik</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/villa-dagmar-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8719,37 +7549,25 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/h/eksgarden-krog-rum-farjestaden</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/h/rusthallargarden-arild</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/h/season-hotel-ekero</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/h/kiviks-hotell-konferens-och-spa-kivik</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/hotel-villa-anna-uppsala</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/vardshuset-lindgarden-visby</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/hotel-fratelli-karlstad</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/hotel-flora-goteborg</loc>
+    <loc>https://bakom.se/h/kastanjelunds-wardshus-yngsjo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8761,7 +7579,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/h/hotell-mossbylund-malmo</loc>
+    <loc>https://bakom.se/h/hotel-mj-s-malmo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8779,24 +7597,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/h/skivarps-gastgivaregard-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/stufvenas-gastgifveri-torsas</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/gorvalns-slott-jarfalla</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/h/hooks-herrgard-hok</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -8804,6 +7604,12 @@
   </url>
   <url>
     <loc>https://bakom.se/h/ulvo-hotell-ulvohamn</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/h/furusund-vardshus-furusund</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8822,6 +7628,12 @@
   </url>
   <url>
     <loc>https://bakom.se/h/hestraviken-hotell-restaurang-hestra</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/h/naas-fabriker-tollered</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8851,13 +7663,13 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/h/hotel-mj-s-malmo</loc>
+    <loc>https://bakom.se/h/kiviks-hotell-konferens-och-spa-kivik</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/h/hotel-skansen-farjestaden-morbylanga</loc>
+    <loc>https://bakom.se/h/salt-sill-kladesholmen</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8870,6 +7682,12 @@
   </url>
   <url>
     <loc>https://bakom.se/h/ocean-restaurang-falkenberg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bakom.se/h/villa-sjotorp-ljungskile</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8893,19 +7711,25 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/h/restaurang-grand-tenan-marstrand</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/h/camp-ripan-restaurang-kiruna</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/h/hotel-reisen-part-of-the-unbound-collection-by-hyatt-stockholm</loc>
+    <loc>https://bakom.se/h/gorvalns-slott-jarfalla</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/h/soderkopings-brunn-soderkoping</loc>
+    <loc>https://bakom.se/h/hotel-reisen-part-of-the-unbound-collection-by-hyatt-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8923,19 +7747,7 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/h/restaurang-slottsvillan-jonkoping</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/h/grenna-hotell-restaurang-granna</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/story-hotel-riddargatan-stockholm</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -8954,18 +7766,6 @@
   </url>
   <url>
     <loc>https://bakom.se/h/maryhill-estate-glumslov</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/herno-gin-hotell-harnosand</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/naya-retreat-hotel-morbylanga</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -9049,18 +7849,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bakom.se/h/gimo-herrgard-restaurang-osthammar</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/skanors-gastgifvaregard-skanor</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://bakom.se/h/grand-hotel-saltsjobaden-sweden</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -9115,6 +7903,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/h/story-hotel-riddargatan-stockholm</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/h/clarion-hotel-wisby-visby</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -9133,6 +7927,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://bakom.se/h/hotel-flora-goteborg</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bakom.se/h/u-me-hotel-umea</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -9146,12 +7946,6 @@
   </url>
   <url>
     <loc>https://bakom.se/h/hotel-ohboy-malmo</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://bakom.se/h/hallfjallet-ottsjo</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

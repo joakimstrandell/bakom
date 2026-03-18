@@ -1,357 +1,5 @@
 [
   {
-    "id": "tweed-stockholm",
-    "name": "Tweed",
-    "address": "Lilla Nygatan 5",
-    "city": "Stockholm",
-    "lat": 59.32441360000001,
-    "lng": 18.0681942,
-    "ratings": {
-      "google": 4.4,
-      "whiteguide": "global_master_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/bars/10665",
-      "google": "https://maps.google.com/?cid=13465128983293350633&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 91,
-    "bakomScoreRaw": 91.2,
-    "bakomRank": 1,
-    "metroRegion": "stockholm",
-    "cuisine": "Vinbar",
-    "hours": [
-      {
-        "days": [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "open": "17:00",
-        "close": "00:00"
-      }
-    ],
-    "website": "https://bar.leijontornet.se/?welcome=true",
-    "phone": "08-506 400 83",
-    "googleRatingCount": 555,
-    "bakomRankRegion": 1
-  },
-  {
-    "id": "bjorns-bar-goteborg",
-    "name": "Björns Bar",
-    "address": "Viktoriagatan 12",
-    "city": "Göteborg",
-    "lat": 57.69862019999999,
-    "lng": 11.965592,
-    "ratings": {
-      "google": 4.7,
-      "whiteguide": "master_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/bars/10620",
-      "google": "https://maps.google.com/?cid=2533272566536723664&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 90,
-    "bakomScoreRaw": 89.9,
-    "bakomRank": 2,
-    "metroRegion": "gothenburg",
-    "cuisine": "Vinbar",
-    "hours": [
-      {
-        "days": [
-          2,
-          3,
-          4
-        ],
-        "open": "18:00",
-        "close": "01:00"
-      },
-      {
-        "days": [
-          5,
-          6
-        ],
-        "open": "17:00",
-        "close": "03:00"
-      }
-    ],
-    "website": "http://www.bjornsbar.se/",
-    "phone": "031-701 79 79",
-    "googleRatingCount": 298,
-    "bakomRankRegion": 1
-  },
-  {
-    "id": "lucy-s-flower-shop-stockholm",
-    "name": "Lucy's Flower Shop",
-    "address": "Birger Jarlsgatan 20",
-    "city": "Stockholm",
-    "lat": 59.336615599999995,
-    "lng": 18.0720358,
-    "ratings": {
-      "google": 4.6,
-      "whiteguide": "master_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/bars/11520",
-      "dn": "https://www.dn.se/sthlm/nominerade-gulddraken-2020-basta-bar/",
-      "google": "https://maps.google.com/?cid=15507100129372111296&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 89,
-    "bakomScoreRaw": 89.3,
-    "bakomRank": 3,
-    "metroRegion": "stockholm",
-    "cuisine": "Cocktailbar",
-    "hours": [
-      {
-        "days": [
-          0,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "open": "17:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "http://lucysstockholm.se/",
-    "googleRatingCount": 565,
-    "bakomRankRegion": 2
-  },
-  {
-    "id": "corner-club-stockholm",
-    "name": "Corner Club",
-    "address": "Lilla Nygatan 16",
-    "city": "Stockholm",
-    "lat": 59.3233216,
-    "lng": 18.069340099999998,
-    "ratings": {
-      "google": 4.5,
-      "whiteguide": "master_class",
-      "dn": 4
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/bars/10625",
-      "dn": "https://www.dn.se/kultur/sovel-antligen-ett-arligt-etablissemang-dar-man-far-vad-man-betalar-for/",
-      "google": "https://maps.google.com/?cid=2009531981537866103&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 89,
-    "bakomScoreRaw": 89.1,
-    "bakomRank": 4,
-    "metroRegion": "stockholm",
-    "priceRange": "mellan",
-    "cuisine": "Cocktailbar",
-    "hours": [
-      {
-        "days": [
-          0,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "open": "15:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "https://sovel.se/",
-    "phone": "08-641 81 50",
-    "googleRatingCount": 305,
-    "bakomRankRegion": 3
-  },
-  {
-    "id": "julie-malmo",
-    "name": "Julie",
-    "address": "Tegelegårdsgatan 9",
-    "city": "Malmö",
-    "lat": 55.604574400000004,
-    "lng": 12.9963483,
-    "ratings": {
-      "google": 4.5,
-      "whiteguide": "master_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/bars/10639",
-      "google": "https://maps.google.com/?cid=7898520975762973703&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 89,
-    "bakomScoreRaw": 88.7,
-    "bakomRank": 5,
-    "metroRegion": "malmo",
-    "cuisine": "Vinbar",
-    "hours": [
-      {
-        "days": [
-          2,
-          3,
-          4,
-          5
-        ],
-        "open": "16:00",
-        "close": "22:00"
-      },
-      {
-        "days": [
-          6
-        ],
-        "open": "12:00",
-        "close": "22:00"
-      }
-    ],
-    "website": "http://www.juliemalmo.se/",
-    "googleRatingCount": 507,
-    "bakomRankRegion": 1
-  },
-  {
-    "id": "stranger-gothenburg-goteborg",
-    "name": "Stranger Gothenburg",
-    "address": "Kungstorget 14",
-    "city": "Göteborg",
-    "lat": 57.7036058,
-    "lng": 11.9688799,
-    "ratings": {
-      "google": 4.4,
-      "whiteguide": "master_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/bars/10659",
-      "google": "https://maps.google.com/?cid=955134906715415900&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 88,
-    "bakomScoreRaw": 88,
-    "bakomRank": 6,
-    "metroRegion": "gothenburg",
-    "cuisine": "Cocktailbar",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "21:00",
-        "close": "03:00"
-      },
-      {
-        "days": [
-          3,
-          4,
-          5,
-          6
-        ],
-        "open": "18:00",
-        "close": "03:00"
-      }
-    ],
-    "website": "http://www.strangergbg.com/",
-    "phone": "031-13 45 55",
-    "googleRatingCount": 689,
-    "bakomRankRegion": 2
-  },
-  {
-    "id": "tyge-sessil-stockholm",
-    "name": "Tyge & Sessil",
-    "address": "Brahegatan 4",
-    "city": "Stockholm",
-    "lat": 59.337106600000006,
-    "lng": 18.0757515,
-    "ratings": {
-      "krogguiden": 3.9,
-      "google": 4.5,
-      "whiteguide": "master_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/bars/10666",
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/tyge--sessil",
-      "google": "https://maps.google.com/?cid=6932673011440111622&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 88,
-    "bakomScoreRaw": 88,
-    "bakomRank": 7,
-    "metroRegion": "stockholm",
-    "priceRange": "mellan",
-    "cuisine": "Vinbar",
-    "hours": [
-      {
-        "days": [
-          0,
-          1
-        ],
-        "open": "16:00",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "open": "16:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "http://tygesessil.se/",
-    "phone": "08-519 422 77",
-    "googleRatingCount": 438,
-    "bakomRankRegion": 4
-  },
-  {
-    "id": "barabicu-bar-goteborg",
-    "name": "Barabicu Bar",
-    "address": "Rosenlundsgatan 4",
-    "city": "Göteborg",
-    "lat": 57.70190110000001,
-    "lng": 11.9559038,
-    "ratings": {
-      "google": 4.1,
-      "whiteguide": "very_good_class",
-      "falstaff": 95
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/bars/10616",
-      "falstaff": "https://www.falstaff.com/en/restaurants/barabicu",
-      "google": "https://maps.google.com/?cid=11819658086267218741&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 87,
-    "bakomScoreRaw": 87.5,
-    "bakomRank": 8,
-    "metroRegion": "gothenburg",
-    "cuisine": "Medelhav",
-    "hours": [
-      {
-        "days": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "open": "11:30",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          5
-        ],
-        "open": "11:30",
-        "close": "01:00"
-      },
-      {
-        "days": [
-          6
-        ],
-        "open": "15:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "http://www.barabicu.se/",
-    "phone": "031-13 58 00",
-    "googleRatingCount": 1403,
-    "bakomRankRegion": 3
-  },
-  {
     "id": "cadierbaren-stockholm",
     "name": "Cadierbaren",
     "address": "Södra Blasieholmshamnen 8",
@@ -359,20 +7,19 @@
     "lat": 59.3296306,
     "lng": 18.075480000000002,
     "ratings": {
-      "krogguiden": 3.7,
       "google": 4.6,
-      "whiteguide": "master_class"
+      "whiteguide": "master_class",
+      "falstaff": 100
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/bars/10623",
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/cadierbaren-grand-hotel",
+      "falstaff": "https://www.falstaff.com/en/bars/cadierbaren",
       "google": "https://maps.google.com/?cid=4923296415779373815&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
-    "bakomScore": 87,
-    "bakomScoreRaw": 87,
-    "bakomRank": 9,
+    "bakomScore": 95,
+    "bakomScoreRaw": 95,
+    "bakomRank": 1,
     "metroRegion": "stockholm",
-    "priceRange": "lyx",
     "cuisine": "Cocktailbar",
     "hours": [
       {
@@ -410,36 +57,115 @@
     "website": "http://www.grandhotel.se/upplev/mat-och-dryck/cadierbaren",
     "phone": "08-679 35 85",
     "googleRatingCount": 719,
-    "bakomRankRegion": 5
+    "bakomRankRegion": 1
   },
   {
-    "id": "omnipollos-hatt-stockholm",
-    "name": "Omnipollos Hatt",
-    "address": "Hökens gata 1A",
+    "id": "lucy-s-flower-shop-stockholm",
+    "name": "Lucy's Flower Shop",
+    "address": "Birger Jarlsgatan 20",
     "city": "Stockholm",
-    "lat": 59.3180636,
-    "lng": 18.0722704,
+    "lat": 59.336615599999995,
+    "lng": 18.0720358,
     "ratings": {
-      "krogguiden": 3.7,
-      "google": 4.5,
-      "whiteguide": "master_class"
+      "google": 4.6,
+      "whiteguide": "master_class",
+      "falstaff": 92
     },
     "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/bars/10649",
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/omnipollos-hatt",
-      "dn": "https://www.dn.se/kultur/krogkommissionen-valjer-pizza/",
-      "google": "https://maps.google.com/?cid=7556142449894458253&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+      "whiteguide": "https://whiteguide.com/se/sv/bars/11520",
+      "dn": "https://www.dn.se/sthlm/nominerade-gulddraken-2020-basta-bar/",
+      "falstaff": "https://www.falstaff.com/en/bars/lucys-flower-shop-1",
+      "google": "https://maps.google.com/?cid=15507100129372111296&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
-    "bakomScore": 87,
-    "bakomScoreRaw": 86.6,
-    "bakomRank": 10,
+    "bakomScore": 93,
+    "bakomScoreRaw": 93.4,
+    "bakomRank": 2,
     "metroRegion": "stockholm",
-    "priceRange": "budget",
-    "cuisine": "Bar",
+    "cuisine": "Cocktailbar",
     "hours": [
       {
         "days": [
           0,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "17:00",
+        "close": "01:00"
+      }
+    ],
+    "website": "http://lucysstockholm.se/",
+    "googleRatingCount": 565,
+    "bakomRankRegion": 2
+  },
+  {
+    "id": "tweed-stockholm",
+    "name": "Tweed",
+    "address": "Lilla Nygatan 5",
+    "city": "Stockholm",
+    "lat": 59.32441360000001,
+    "lng": 18.0681942,
+    "ratings": {
+      "google": 4.4,
+      "whiteguide": "global_master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/bars/10665",
+      "google": "https://maps.google.com/?cid=13465128983293350633&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 91,
+    "bakomScoreRaw": 91.2,
+    "bakomRank": 3,
+    "metroRegion": "stockholm",
+    "cuisine": "Vinbar",
+    "hours": [
+      {
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "17:00",
+        "close": "00:00"
+      }
+    ],
+    "website": "https://bar.leijontornet.se/?welcome=true",
+    "phone": "08-506 400 83",
+    "googleRatingCount": 555,
+    "bakomRankRegion": 3
+  },
+  {
+    "id": "a-bar-called-gemma-stockholm",
+    "name": "A bar called Gemma",
+    "address": "Grev Turegatan 30",
+    "city": "Stockholm",
+    "lat": 59.337024,
+    "lng": 18.0770937,
+    "ratings": {
+      "google": 4.7,
+      "whiteguide": "very_good_class",
+      "falstaff": 96
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/bars/11521",
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/a-bar-called-gemma",
+      "dn": "https://www.dn.se/sthlm/nominerade-gulddraken-2020-basta-bar/",
+      "falstaff": "https://www.falstaff.com/en/bars/a-bar-called-gemma-1",
+      "google": "https://maps.google.com/?cid=5258320995104800106&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 91,
+    "bakomScoreRaw": 90.5,
+    "bakomRank": 4,
+    "metroRegion": "stockholm",
+    "priceRange": "budget",
+    "cuisine": "Cocktailbar",
+    "hours": [
+      {
+        "days": [
           1,
           2,
           3,
@@ -447,36 +173,45 @@
           5,
           6
         ],
-        "open": "12:00",
-        "close": "01:00"
+        "open": "15:00",
+        "close": "00:30"
       }
     ],
-    "website": "http://www.omnipolloshatt.com/",
-    "phone": "076-119 48 44",
-    "googleRatingCount": 3965,
-    "bakomRankRegion": 6
+    "website": "https://abarcalledgemma.se/",
+    "phone": "079-353 83 37",
+    "googleRatingCount": 899,
+    "bakomRankRegion": 4
   },
   {
-    "id": "puta-madre-bar-goteborg",
-    "name": "Puta Madre Bar",
-    "address": "Magasinsgatan 3",
+    "id": "bar-bruno-goteborg",
+    "name": "Bar Bruno",
+    "address": "Kyrkogatan 13",
     "city": "Göteborg",
-    "lat": 57.704614400000004,
-    "lng": 11.9618006,
+    "lat": 57.7043986,
+    "lng": 11.9628255,
     "ratings": {
-      "google": 4,
-      "whiteguide": "master_class"
+      "google": 4.6,
+      "whiteguide": "very_good_class",
+      "falstaff": 96
     },
     "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/bars/10657",
-      "google": "https://maps.google.com/?cid=13588163408577727871&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+      "whiteguide": "https://whiteguide.com/se/sv/bars/11516",
+      "falstaff": "https://www.falstaff.com/en/bars/bar-bruno",
+      "google": "https://maps.google.com/?cid=13862436075577058259&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
-    "bakomScore": 85,
-    "bakomScoreRaw": 85.5,
-    "bakomRank": 11,
+    "bakomScore": 90,
+    "bakomScoreRaw": 90.1,
+    "bakomRank": 5,
     "metroRegion": "gothenburg",
-    "cuisine": "Mexikanskt",
+    "cuisine": "Cocktailbar",
     "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "20:00",
+        "close": "02:00"
+      },
       {
         "days": [
           2,
@@ -484,53 +219,93 @@
           4
         ],
         "open": "17:00",
-        "close": "23:00"
+        "close": "02:00"
       },
       {
         "days": [
-          5
-        ],
-        "open": "16:00",
-        "close": "00:00"
-      },
-      {
-        "days": [
+          5,
           6
         ],
-        "open": "14:00",
-        "close": "00:00"
+        "open": "16:00",
+        "close": "02:00"
       }
     ],
-    "website": "https://www.putamadre.se/?utm_source=google",
-    "googleRatingCount": 1459,
-    "bakomRankRegion": 4
+    "website": "http://www.barbruno.se/",
+    "phone": "031-309 99 69",
+    "googleRatingCount": 278,
+    "bakomRankRegion": 1
   },
   {
-    "id": "grus-grus-vinbar-stockholm",
-    "name": "Grus Grus Vinbar",
-    "address": "Karlbergsvägen 14",
-    "city": "Stockholm",
-    "lat": 59.34321379999999,
-    "lng": 18.049160200000003,
+    "id": "bjorns-bar-goteborg",
+    "name": "Björns Bar",
+    "address": "Viktoriagatan 12",
+    "city": "Göteborg",
+    "lat": 57.69862019999999,
+    "lng": 11.965592,
     "ratings": {
-      "krogguiden": 3.7,
-      "google": 4,
+      "google": 4.7,
       "whiteguide": "master_class"
     },
     "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/bars/10635",
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/grus-grus",
-      "google": "https://maps.google.com/?cid=12129650059483522793&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+      "whiteguide": "https://whiteguide.com/se/sv/bars/10620",
+      "google": "https://maps.google.com/?cid=2533272566536723664&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
-    "bakomScore": 84,
-    "bakomScoreRaw": 84.4,
-    "bakomRank": 12,
+    "bakomScore": 90,
+    "bakomScoreRaw": 89.9,
+    "bakomRank": 6,
+    "metroRegion": "gothenburg",
+    "cuisine": "Vinbar",
+    "hours": [
+      {
+        "days": [
+          2,
+          3,
+          4
+        ],
+        "open": "18:00",
+        "close": "01:00"
+      },
+      {
+        "days": [
+          5,
+          6
+        ],
+        "open": "17:00",
+        "close": "03:00"
+      }
+    ],
+    "website": "http://www.bjornsbar.se/",
+    "phone": "031-701 79 79",
+    "googleRatingCount": 298,
+    "bakomRankRegion": 2
+  },
+  {
+    "id": "folii-stockholm",
+    "name": "Folii",
+    "address": "Erstagatan 21",
+    "city": "Stockholm",
+    "lat": 59.3140364,
+    "lng": 18.090429699999998,
+    "ratings": {
+      "krogguiden": 3.7,
+      "google": 4.6,
+      "whiteguide": "global_master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/bars/10634",
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/folii",
+      "google": "https://maps.google.com/?cid=18115151510427784120&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 89,
+    "bakomScoreRaw": 89.2,
+    "bakomRank": 7,
     "metroRegion": "stockholm",
     "priceRange": "mellan",
     "cuisine": "Vinbar",
     "hours": [
       {
         "days": [
+          0,
           1,
           2,
           3,
@@ -548,10 +323,137 @@
         "close": "00:00"
       }
     ],
-    "website": "http://grusgrusvinbaren.se/",
-    "phone": "08-610 66 00",
-    "googleRatingCount": 338,
+    "website": "http://folii.se/",
+    "googleRatingCount": 254,
+    "bakomRankRegion": 5
+  },
+  {
+    "id": "20hundra5-stockholm",
+    "name": "20hundra5",
+    "address": "Sankt Eriksgatan 102",
+    "city": "Stockholm",
+    "lat": 59.344061,
+    "lng": 18.039616199999998,
+    "ratings": {
+      "google": 4.6,
+      "whiteguide": "very_good_class",
+      "falstaff": 93
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/bars/10610",
+      "falstaff": "https://www.falstaff.com/en/bars/20hundra5",
+      "google": "https://maps.google.com/?cid=1341682425421728691&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 89,
+    "bakomScoreRaw": 89.1,
+    "bakomRank": 8,
+    "metroRegion": "stockholm",
+    "cuisine": "Cocktailbar",
+    "hours": [
+      {
+        "days": [
+          0,
+          3,
+          4,
+          6
+        ],
+        "open": "18:00",
+        "close": "01:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "17:00",
+        "close": "01:00"
+      }
+    ],
+    "website": "http://www.noll5.se/",
+    "phone": "08-34 05 05",
+    "googleRatingCount": 470,
+    "bakomRankRegion": 6
+  },
+  {
+    "id": "corner-club-stockholm",
+    "name": "Corner Club",
+    "address": "Lilla Nygatan 16",
+    "city": "Stockholm",
+    "lat": 59.3233216,
+    "lng": 18.069340099999998,
+    "ratings": {
+      "google": 4.5,
+      "whiteguide": "master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/bars/10625",
+      "google": "https://maps.google.com/?cid=2009531981537866103&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 89,
+    "bakomScoreRaw": 88.7,
+    "bakomRank": 9,
+    "metroRegion": "stockholm",
+    "cuisine": "Cocktailbar",
+    "hours": [
+      {
+        "days": [
+          0,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "15:00",
+        "close": "01:00"
+      }
+    ],
+    "website": "https://sovel.se/",
+    "phone": "08-641 81 50",
+    "googleRatingCount": 305,
     "bakomRankRegion": 7
+  },
+  {
+    "id": "julie-malmo",
+    "name": "Julie",
+    "address": "Tegelegårdsgatan 9",
+    "city": "Malmö",
+    "lat": 55.604574400000004,
+    "lng": 12.9963483,
+    "ratings": {
+      "google": 4.5,
+      "whiteguide": "master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/bars/10639",
+      "google": "https://maps.google.com/?cid=7898520975762973703&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 89,
+    "bakomScoreRaw": 88.7,
+    "bakomRank": 10,
+    "metroRegion": "malmo",
+    "cuisine": "Vinbar",
+    "hours": [
+      {
+        "days": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "open": "16:00",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "12:00",
+        "close": "22:00"
+      }
+    ],
+    "website": "http://www.juliemalmo.se/",
+    "googleRatingCount": 507,
+    "bakomRankRegion": 1
   },
   {
     "id": "apropos-stockholm",
@@ -562,16 +464,18 @@
     "lng": 18.0386249,
     "ratings": {
       "google": 4.7,
-      "whiteguide": "very_good_class"
+      "whiteguide": "very_good_class",
+      "falstaff": 90
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/bars/10612",
       "krogguiden": "https://www.krogguiden.se/restauranger/view/apropos",
+      "falstaff": "https://www.falstaff.com/en/bars/apropos",
       "google": "https://maps.google.com/?cid=17016518256943398180&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
-    "bakomScore": 84,
-    "bakomScoreRaw": 83.6,
-    "bakomRank": 13,
+    "bakomScore": 89,
+    "bakomScoreRaw": 88.6,
+    "bakomRank": 11,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Cocktailbar",
@@ -605,6 +509,350 @@
     "bakomRankRegion": 8
   },
   {
+    "id": "stranger-gothenburg-goteborg",
+    "name": "Stranger Gothenburg",
+    "address": "Kungstorget 14",
+    "city": "Göteborg",
+    "lat": 57.7036058,
+    "lng": 11.9688799,
+    "ratings": {
+      "google": 4.4,
+      "whiteguide": "master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/bars/10659",
+      "google": "https://maps.google.com/?cid=955134906715415900&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 88,
+    "bakomScoreRaw": 88,
+    "bakomRank": 12,
+    "metroRegion": "gothenburg",
+    "cuisine": "Cocktailbar",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "21:00",
+        "close": "03:00"
+      },
+      {
+        "days": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "18:00",
+        "close": "03:00"
+      }
+    ],
+    "website": "http://www.strangergbg.com/",
+    "phone": "031-13 45 55",
+    "googleRatingCount": 689,
+    "bakomRankRegion": 3
+  },
+  {
+    "id": "tyge-sessil-stockholm",
+    "name": "Tyge & Sessil",
+    "address": "Brahegatan 4",
+    "city": "Stockholm",
+    "lat": 59.337106600000006,
+    "lng": 18.0757515,
+    "ratings": {
+      "krogguiden": 3.9,
+      "google": 4.5,
+      "whiteguide": "master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/bars/10666",
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/tyge--sessil",
+      "google": "https://maps.google.com/?cid=6932673011440111622&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 88,
+    "bakomScoreRaw": 88,
+    "bakomRank": 13,
+    "metroRegion": "stockholm",
+    "priceRange": "mellan",
+    "cuisine": "Vinbar",
+    "hours": [
+      {
+        "days": [
+          0,
+          1
+        ],
+        "open": "16:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "16:00",
+        "close": "01:00"
+      }
+    ],
+    "website": "http://tygesessil.se/",
+    "phone": "08-519 422 77",
+    "googleRatingCount": 438,
+    "bakomRankRegion": 9
+  },
+  {
+    "id": "omnipollos-hatt-stockholm",
+    "name": "Omnipollos Hatt",
+    "address": "Hökens gata 1A",
+    "city": "Stockholm",
+    "lat": 59.3180636,
+    "lng": 18.0722704,
+    "ratings": {
+      "krogguiden": 3.7,
+      "google": 4.5,
+      "whiteguide": "master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/bars/10649",
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/omnipollos-hatt",
+      "dn": "https://www.dn.se/kultur/krogkommissionen-valjer-pizza/",
+      "google": "https://maps.google.com/?cid=7556142449894458253&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 87,
+    "bakomScoreRaw": 86.6,
+    "bakomRank": 14,
+    "metroRegion": "stockholm",
+    "priceRange": "budget",
+    "cuisine": "Bar",
+    "hours": [
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "12:00",
+        "close": "01:00"
+      }
+    ],
+    "website": "http://www.omnipolloshatt.com/",
+    "phone": "076-119 48 44",
+    "googleRatingCount": 3965,
+    "bakomRankRegion": 10
+  },
+  {
+    "id": "grus-grus-vinbar-stockholm",
+    "name": "Grus Grus Vinbar",
+    "address": "Karlbergsvägen 14",
+    "city": "Stockholm",
+    "lat": 59.34321379999999,
+    "lng": 18.049160200000003,
+    "ratings": {
+      "google": 4,
+      "whiteguide": "master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/bars/10635",
+      "google": "https://maps.google.com/?cid=12129650059483522793&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 85,
+    "bakomScoreRaw": 85.5,
+    "bakomRank": 15,
+    "metroRegion": "stockholm",
+    "cuisine": "Vinbar",
+    "hours": [
+      {
+        "days": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "open": "16:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          5,
+          6
+        ],
+        "open": "16:00",
+        "close": "00:00"
+      }
+    ],
+    "website": "http://grusgrusvinbaren.se/",
+    "phone": "08-610 66 00",
+    "googleRatingCount": 338,
+    "bakomRankRegion": 11
+  },
+  {
+    "id": "puta-madre-bar-goteborg",
+    "name": "Puta Madre Bar",
+    "address": "Magasinsgatan 3",
+    "city": "Göteborg",
+    "lat": 57.704614400000004,
+    "lng": 11.9618006,
+    "ratings": {
+      "google": 4,
+      "whiteguide": "master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/bars/10657",
+      "google": "https://maps.google.com/?cid=13588163408577727871&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 85,
+    "bakomScoreRaw": 85.5,
+    "bakomRank": 16,
+    "metroRegion": "gothenburg",
+    "cuisine": "Mexikanskt",
+    "hours": [
+      {
+        "days": [
+          2,
+          3,
+          4
+        ],
+        "open": "17:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "16:00",
+        "close": "00:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "14:00",
+        "close": "00:00"
+      }
+    ],
+    "website": "https://www.putamadre.se/?utm_source=google",
+    "googleRatingCount": 1459,
+    "bakomRankRegion": 4
+  },
+  {
+    "id": "tjoget-bar-stockholm",
+    "name": "Tjoget Bar",
+    "address": "Hornsbruksgatan 24",
+    "city": "Stockholm",
+    "lat": 59.3162112,
+    "lng": 18.0347985,
+    "ratings": {
+      "google": 4.2,
+      "whiteguide": "good_class",
+      "falstaff": 96
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/11022",
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/tjoget",
+      "falstaff": "https://www.falstaff.com/en/bars/tjoget",
+      "google": "https://maps.google.com/?cid=12378437113624571640&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 84,
+    "bakomScoreRaw": 83.7,
+    "bakomRank": 17,
+    "metroRegion": "stockholm",
+    "priceRange": "budget",
+    "cuisine": "Restaurang",
+    "hours": [
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "open": "17:00",
+        "close": "01:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "16:00",
+        "close": "03:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "13:00",
+        "close": "03:00"
+      }
+    ],
+    "website": "https://tjoget.com/?utm_source=google",
+    "phone": "08-22 00 21",
+    "googleRatingCount": 1078,
+    "bakomRankRegion": 12
+  },
+  {
+    "id": "pharmarium-stockholm",
+    "name": "Pharmarium",
+    "address": "Stortorget 7",
+    "city": "Stockholm",
+    "lat": 59.3248049,
+    "lng": 18.0708525,
+    "ratings": {
+      "krogguiden": 3.6,
+      "google": 4.4,
+      "whiteguide": "very_good_class",
+      "falstaff": 92
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/bars/10653",
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/pharmarium",
+      "falstaff": "https://www.falstaff.com/en/bars/pharmarium",
+      "google": "https://maps.google.com/?cid=12908380437699328185&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 84,
+    "bakomScoreRaw": 83.7,
+    "bakomRank": 18,
+    "metroRegion": "stockholm",
+    "priceRange": "lyx",
+    "cuisine": "Bar",
+    "hours": [
+      {
+        "days": [
+          0,
+          1,
+          2
+        ],
+        "open": "17:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          3,
+          4
+        ],
+        "open": "16:00",
+        "close": "00:00"
+      },
+      {
+        "days": [
+          5,
+          6
+        ],
+        "open": "15:00",
+        "close": "01:00"
+      }
+    ],
+    "website": "https://pharmarium.se/",
+    "phone": "08-20 08 10",
+    "googleRatingCount": 1591,
+    "bakomRankRegion": 13
+  },
+  {
     "id": "ambar-vinbar-stockholm",
     "name": "Ambar Vinbar",
     "address": "Tomtebogatan 22",
@@ -617,14 +865,12 @@
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/bars/10611",
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/ambar",
       "google": "https://maps.google.com/?cid=17960635594858929792&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 84,
     "bakomScoreRaw": 83.6,
-    "bakomRank": 14,
+    "bakomRank": 19,
     "metroRegion": "stockholm",
-    "priceRange": "mellan",
     "cuisine": "Vinbar",
     "hours": [
       {
@@ -648,85 +894,42 @@
     "website": "http://www.ambarvinbar.se/",
     "phone": "073-158 51 53",
     "googleRatingCount": 249,
-    "bakomRankRegion": 9
+    "bakomRankRegion": 14
   },
   {
-    "id": "a-bar-called-gemma-stockholm",
-    "name": "A bar called Gemma",
-    "address": "Grev Turegatan 30",
-    "city": "Stockholm",
-    "lat": 59.337024,
-    "lng": 18.0770937,
+    "id": "familjen-goteborg",
+    "name": "Familjen",
+    "address": "Arkivgatan 7",
+    "city": "Göteborg",
+    "lat": 57.69756369999999,
+    "lng": 11.976390499999999,
     "ratings": {
-      "google": 4.7,
-      "whiteguide": "very_good_class"
+      "google": 4.4,
+      "michelin": "bib_gourmand",
+      "whiteguide": "very_good_class",
+      "falstaff": 91
     },
     "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/bars/11521",
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/a-bar-called-gemma",
-      "dn": "https://www.dn.se/sthlm/nominerade-gulddraken-2020-basta-bar/",
-      "google": "https://maps.google.com/?cid=5258320995104800106&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/6184",
+      "michelin": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/familjen",
+      "falstaff": "https://www.falstaff.com/en/restaurants/familjen-goeteburg",
+      "google": "https://maps.google.com/?cid=16233605812523811394&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
-    "bakomScore": 84,
-    "bakomScoreRaw": 83.6,
-    "bakomRank": 15,
-    "metroRegion": "stockholm",
+    "bakomScore": 83,
+    "bakomScoreRaw": 83.3,
+    "bakomRank": 20,
+    "metroRegion": "gothenburg",
     "priceRange": "budget",
-    "cuisine": "Cocktailbar",
+    "cuisine": "Restaurang",
     "hours": [
       {
         "days": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "open": "15:00",
-        "close": "00:30"
-      }
-    ],
-    "website": "https://abarcalledgemma.se/",
-    "phone": "079-353 83 37",
-    "googleRatingCount": 899,
-    "bakomRankRegion": 10
-  },
-  {
-    "id": "folii-stockholm",
-    "name": "Folii",
-    "address": "Erstagatan 21",
-    "city": "Stockholm",
-    "lat": 59.3140364,
-    "lng": 18.090429699999998,
-    "ratings": {
-      "krogguiden": 3.7,
-      "google": 4.6,
-      "whiteguide": "global_master_class",
-      "falstaff": 65
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/bars/10634",
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/folii",
-      "falstaff": "https://www.falstaff.com/en/restaurants/folii-grossraum-stockholm",
-      "google": "https://maps.google.com/?cid=18115151510427784120&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 84,
-    "bakomScoreRaw": 83.6,
-    "bakomRank": 16,
-    "metroRegion": "stockholm",
-    "priceRange": "mellan",
-    "cuisine": "Vinbar",
-    "hours": [
-      {
-        "days": [
-          0,
           1,
           2,
           3,
           4
         ],
-        "open": "16:00",
+        "open": "17:00",
         "close": "23:00"
       },
       {
@@ -734,13 +937,14 @@
           5,
           6
         ],
-        "open": "16:00",
-        "close": "00:00"
+        "open": "17:00",
+        "close": "01:00"
       }
     ],
-    "website": "http://folii.se/",
-    "googleRatingCount": 254,
-    "bakomRankRegion": 11
+    "website": "https://www.restaurangfamiljen.se/?utm_source=google",
+    "phone": "031-20 79 79",
+    "googleRatingCount": 1690,
+    "bakomRankRegion": 5
   },
   {
     "id": "portal-bar-stockholm",
@@ -766,7 +970,7 @@
     },
     "bakomScore": 83,
     "bakomScoreRaw": 83.2,
-    "bakomRank": 17,
+    "bakomRank": 21,
     "metroRegion": "stockholm",
     "priceRange": "lyx",
     "cuisine": "Restaurang",
@@ -799,7 +1003,7 @@
     "website": "https://www.portalrestaurant.se/?utm_source=google",
     "phone": "08-30 11 01",
     "googleRatingCount": 1036,
-    "bakomRankRegion": 12
+    "bakomRankRegion": 15
   },
   {
     "id": "haktet-vanster-pa-haktet-stockholm",
@@ -818,7 +1022,7 @@
     },
     "bakomScore": 83,
     "bakomScoreRaw": 83.1,
-    "bakomRank": 18,
+    "bakomRank": 22,
     "metroRegion": "stockholm",
     "cuisine": "Cocktailbar",
     "hours": [
@@ -847,102 +1051,7 @@
     ],
     "website": "https://www.haktet.se/vanster",
     "googleRatingCount": 21,
-    "bakomRankRegion": 13
-  },
-  {
-    "id": "bar-bruno-goteborg",
-    "name": "Bar Bruno",
-    "address": "Kyrkogatan 13",
-    "city": "Göteborg",
-    "lat": 57.7043986,
-    "lng": 11.9628255,
-    "ratings": {
-      "google": 4.6,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/bars/11516",
-      "google": "https://maps.google.com/?cid=13862436075577058259&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 83,
-    "bakomScoreRaw": 83,
-    "bakomRank": 19,
-    "metroRegion": "gothenburg",
-    "cuisine": "Cocktailbar",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "20:00",
-        "close": "02:00"
-      },
-      {
-        "days": [
-          2,
-          3,
-          4
-        ],
-        "open": "17:00",
-        "close": "02:00"
-      },
-      {
-        "days": [
-          5,
-          6
-        ],
-        "open": "16:00",
-        "close": "02:00"
-      }
-    ],
-    "website": "http://www.barbruno.se/",
-    "phone": "031-309 99 69",
-    "googleRatingCount": 278,
-    "bakomRankRegion": 5
-  },
-  {
-    "id": "20hundra5-stockholm",
-    "name": "20hundra5",
-    "address": "Sankt Eriksgatan 102",
-    "city": "Stockholm",
-    "lat": 59.344061,
-    "lng": 18.039616199999998,
-    "ratings": {
-      "google": 4.6,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/bars/10610",
-      "google": "https://maps.google.com/?cid=1341682425421728691&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 83,
-    "bakomScoreRaw": 83,
-    "bakomRank": 20,
-    "metroRegion": "stockholm",
-    "cuisine": "Cocktailbar",
-    "hours": [
-      {
-        "days": [
-          0,
-          3,
-          4,
-          6
-        ],
-        "open": "18:00",
-        "close": "01:00"
-      },
-      {
-        "days": [
-          5
-        ],
-        "open": "17:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "http://www.noll5.se/",
-    "phone": "08-34 05 05",
-    "googleRatingCount": 470,
-    "bakomRankRegion": 14
+    "bakomRankRegion": 16
   },
   {
     "id": "care-of-malmo",
@@ -961,7 +1070,7 @@
     },
     "bakomScore": 83,
     "bakomScoreRaw": 83,
-    "bakomRank": 21,
+    "bakomRank": 23,
     "metroRegion": "malmo",
     "cuisine": "Cocktailbar",
     "hours": [
@@ -1013,7 +1122,7 @@
     },
     "bakomScore": 83,
     "bakomScoreRaw": 83,
-    "bakomRank": 22,
+    "bakomRank": 24,
     "metroRegion": "stockholm",
     "priceRange": "lyx",
     "cuisine": "Vinbar",
@@ -1053,7 +1162,7 @@
     "website": "http://www.savantbar.se/",
     "phone": "076-021 26 30",
     "googleRatingCount": 380,
-    "bakomRankRegion": 15
+    "bakomRankRegion": 17
   },
   {
     "id": "mat-destillat-bar-lund",
@@ -1072,7 +1181,7 @@
     },
     "bakomScore": 83,
     "bakomScoreRaw": 83,
-    "bakomRank": 23,
+    "bakomRank": 25,
     "metroRegion": "malmo",
     "cuisine": "Restaurang",
     "hours": [
@@ -1112,73 +1221,6 @@
     "bakomRankRegion": 3
   },
   {
-    "id": "tak-bar-stockholm",
-    "name": "Tak Bar",
-    "address": "Brunkebergstorg 2-4",
-    "city": "Stockholm",
-    "lat": 59.33051940000001,
-    "lng": 18.067149999999998,
-    "ratings": {
-      "krogguiden": 3.7,
-      "google": 4.2,
-      "whiteguide": "very_good_class",
-      "falstaff": 95
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/9687",
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/tak",
-      "falstaff": "https://www.falstaff.com/en/restaurants/tak",
-      "google": "https://maps.google.com/?cid=61140946753835839&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 83,
-    "bakomScoreRaw": 82.6,
-    "bakomRank": 24,
-    "metroRegion": "stockholm",
-    "priceRange": "mellan",
-    "cuisine": "Fusion",
-    "hours": [
-      {
-        "days": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "open": "11:30",
-        "close": "14:00"
-      },
-      {
-        "days": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "open": "17:00",
-        "close": "00:00"
-      },
-      {
-        "days": [
-          5
-        ],
-        "open": "17:00",
-        "close": "01:00"
-      },
-      {
-        "days": [
-          6
-        ],
-        "open": "12:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "http://www.tak.se/",
-    "phone": "08-587 220 80",
-    "googleRatingCount": 3576,
-    "bakomRankRegion": 16
-  },
-  {
     "id": "barski-helsingborg",
     "name": "Barski",
     "address": "Norra Storgatan 16",
@@ -1195,7 +1237,7 @@
     },
     "bakomScore": 82,
     "bakomScoreRaw": 82.3,
-    "bakomRank": 25,
+    "bakomRank": 26,
     "metroRegion": "sweden",
     "cuisine": "Bar",
     "hours": [
@@ -1253,7 +1295,7 @@
     },
     "bakomScore": 82,
     "bakomScoreRaw": 82.3,
-    "bakomRank": 26,
+    "bakomRank": 27,
     "metroRegion": "stockholm",
     "priceRange": "lyx",
     "cuisine": "Bistro",
@@ -1285,57 +1327,6 @@
     "website": "http://www.eochg.se/",
     "phone": "076-082 39 92",
     "googleRatingCount": 124,
-    "bakomRankRegion": 17
-  },
-  {
-    "id": "roda-huset-stockholm",
-    "name": "Röda Huset",
-    "address": "Malmskillnadsgatan 9",
-    "city": "Stockholm",
-    "lat": 59.3327586,
-    "lng": 18.0661482,
-    "ratings": {
-      "google": 4.2,
-      "whiteguide": "master_class",
-      "svd": 3,
-      "falstaff": 95
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/bars/12033",
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/roda-huset",
-      "svd": "https://www.svd.se/a/v57Egm/krogguiden-om-roda-huset-servicen-sanker-betyget",
-      "falstaff": "https://www.falstaff.com/en/restaurants/roeda-huset",
-      "google": "https://maps.google.com/?cid=501599793946765704&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 82,
-    "bakomScoreRaw": 82.3,
-    "bakomRank": 27,
-    "metroRegion": "stockholm",
-    "priceRange": "lyx",
-    "cuisine": "Restaurang",
-    "hours": [
-      {
-        "days": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "open": "17:00",
-        "close": "00:00"
-      },
-      {
-        "days": [
-          5,
-          6
-        ],
-        "open": "15:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "https://rodahuset.nu/",
-    "phone": "08-480 043 97",
-    "googleRatingCount": 541,
     "bakomRankRegion": 18
   },
   {
@@ -1444,31 +1435,42 @@
     "googleRatingCount": 428
   },
   {
-    "id": "familjen-goteborg",
-    "name": "Familjen",
-    "address": "Arkivgatan 7",
-    "city": "Göteborg",
-    "lat": 57.69756369999999,
-    "lng": 11.976390499999999,
+    "id": "asian-post-office-stockholm",
+    "name": "Asian Post Office",
+    "address": "Regeringsgatan 66",
+    "city": "Stockholm",
+    "lat": 59.3361749,
+    "lng": 18.067752499999997,
     "ratings": {
+      "krogguiden": 3.6,
       "google": 4.4,
-      "michelin": "bib_gourmand",
       "whiteguide": "very_good_class",
-      "falstaff": 81
+      "falstaff": 83
     },
     "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/6184",
-      "michelin": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/familjen",
-      "falstaff": "https://www.falstaff.com/en/restaurants/familjen-goeteburg",
-      "google": "https://maps.google.com/?cid=16233605812523811394&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+      "whiteguide": "https://whiteguide.com/se/sv/bars/10613",
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/asian-post-office",
+      "falstaff": "https://www.falstaff.com/en/restaurants/apo",
+      "google": "https://maps.google.com/?cid=18427228572707729744&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
-    "bakomScore": 81,
-    "bakomScoreRaw": 81.3,
+    "bakomScore": 82,
+    "bakomScoreRaw": 81.6,
     "bakomRank": 30,
-    "metroRegion": "gothenburg",
-    "priceRange": "budget",
+    "metroRegion": "stockholm",
+    "priceRange": "lyx",
     "cuisine": "Restaurang",
     "hours": [
+      {
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "open": "11:30",
+        "close": "14:00"
+      },
       {
         "days": [
           1,
@@ -1477,75 +1479,25 @@
           4
         ],
         "open": "17:00",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          5,
-          6
-        ],
-        "open": "17:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "https://www.restaurangfamiljen.se/?utm_source=google",
-    "phone": "031-20 79 79",
-    "googleRatingCount": 1690,
-    "bakomRankRegion": 6
-  },
-  {
-    "id": "pharmarium-stockholm",
-    "name": "Pharmarium",
-    "address": "Stortorget 7",
-    "city": "Stockholm",
-    "lat": 59.3248049,
-    "lng": 18.0708525,
-    "ratings": {
-      "krogguiden": 3.6,
-      "google": 4.4,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/bars/10653",
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/pharmarium",
-      "google": "https://maps.google.com/?cid=12908380437699328185&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 81,
-    "bakomScoreRaw": 81.1,
-    "bakomRank": 31,
-    "metroRegion": "stockholm",
-    "priceRange": "lyx",
-    "cuisine": "Bar",
-    "hours": [
-      {
-        "days": [
-          0,
-          1,
-          2
-        ],
-        "open": "17:00",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          3,
-          4
-        ],
-        "open": "16:00",
         "close": "00:00"
       },
       {
         "days": [
-          5,
+          5
+        ],
+        "open": "16:30",
+        "close": "01:00"
+      },
+      {
+        "days": [
           6
         ],
-        "open": "15:00",
+        "open": "16:00",
         "close": "01:00"
       }
     ],
-    "website": "https://pharmarium.se/",
-    "phone": "08-20 08 10",
-    "googleRatingCount": 1591,
+    "website": "https://www.asianpostoffice.se/",
+    "googleRatingCount": 1697,
     "bakomRankRegion": 19
   },
   {
@@ -1566,7 +1518,7 @@
     },
     "bakomScore": 81,
     "bakomScoreRaw": 81.1,
-    "bakomRank": 32,
+    "bakomRank": 31,
     "metroRegion": "stockholm",
     "priceRange": "mellan",
     "cuisine": "Vinbar",
@@ -1611,7 +1563,7 @@
     },
     "bakomScore": 81,
     "bakomScoreRaw": 81.1,
-    "bakomRank": 33,
+    "bakomRank": 32,
     "metroRegion": "gothenburg",
     "cuisine": "Bar",
     "hours": [
@@ -1643,7 +1595,7 @@
     "website": "https://magasinsgatan.brewersbeerbar.se/?utm_source=google",
     "phone": "031-388 77 66",
     "googleRatingCount": 1292,
-    "bakomRankRegion": 7
+    "bakomRankRegion": 6
   },
   {
     "id": "malmo-brewing-co-taproom-malmo",
@@ -1662,7 +1614,7 @@
     },
     "bakomScore": 81,
     "bakomScoreRaw": 81.1,
-    "bakomRank": 34,
+    "bakomRank": 33,
     "metroRegion": "malmo",
     "cuisine": "Bryggpub",
     "hours": [
@@ -1698,34 +1650,41 @@
     "bakomRankRegion": 5
   },
   {
-    "id": "boulebar-stockholm",
-    "name": "Boulebar",
-    "address": "Tantogatan 85",
+    "id": "tak-bar-stockholm",
+    "name": "Tak Bar",
+    "address": "Brunkebergstorg 2-4",
     "city": "Stockholm",
-    "lat": 59.328554499999996,
-    "lng": 18.0471921,
+    "lat": 59.33051940000001,
+    "lng": 18.067149999999998,
     "ratings": {
+      "krogguiden": 3.7,
       "google": 4.2,
-      "falstaff": 95
+      "whiteguide": "very_good_class",
+      "falstaff": 85
     },
     "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/boulebar",
-      "falstaff": "https://www.falstaff.com/en/bars/boulebar",
-      "google": "https://maps.google.com/?cid=17910249130159124712&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/9687",
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/tak",
+      "falstaff": "https://www.falstaff.com/en/bars/tak",
+      "google": "https://maps.google.com/?cid=61140946753835839&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 80,
-    "bakomScoreRaw": 80,
-    "bakomRank": 35,
+    "bakomScoreRaw": 80.2,
+    "bakomRank": 34,
     "metroRegion": "stockholm",
     "priceRange": "mellan",
-    "cuisine": "Bar",
+    "cuisine": "Fusion",
     "hours": [
       {
         "days": [
-          0
+          1,
+          2,
+          3,
+          4,
+          5
         ],
-        "open": "12:00",
-        "close": "17:00"
+        "open": "11:30",
+        "close": "14:00"
       },
       {
         "days": [
@@ -1734,81 +1693,28 @@
           3,
           4
         ],
-        "open": "15:00",
-        "close": "23:00"
+        "open": "17:00",
+        "close": "00:00"
       },
       {
         "days": [
           5
         ],
-        "open": "15:00",
-        "close": "00:01"
+        "open": "17:00",
+        "close": "01:00"
       },
       {
         "days": [
           6
         ],
         "open": "12:00",
-        "close": "00:01"
+        "close": "01:00"
       }
     ],
-    "website": "https://www.boulebar.se/sthlm-radhuset",
-    "phone": "010-162 92 00",
-    "googleRatingCount": 460,
+    "website": "http://www.tak.se/",
+    "phone": "08-587 220 80",
+    "googleRatingCount": 3576,
     "bakomRankRegion": 21
-  },
-  {
-    "id": "corvina-enoteca-stockholm",
-    "name": "Corvina Enoteca",
-    "address": "Kornhamnstorg 47",
-    "city": "Stockholm",
-    "lat": 59.3231092,
-    "lng": 18.0711744,
-    "ratings": {
-      "krogguiden": 3.8,
-      "google": 4.6,
-      "falstaff": 85
-    },
-    "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/corvina-enoteca",
-      "falstaff": "https://www.falstaff.com/en/restaurants/enoteca-stockholm",
-      "google": "https://maps.google.com/?cid=10637917413894553860&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 80,
-    "bakomScoreRaw": 80,
-    "bakomRank": 36,
-    "metroRegion": "stockholm",
-    "priceRange": "lyx",
-    "cuisine": "Vinbar",
-    "hours": [
-      {
-        "days": [
-          2,
-          3,
-          4
-        ],
-        "open": "16:00",
-        "close": "22:00"
-      },
-      {
-        "days": [
-          5
-        ],
-        "open": "16:00",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          6
-        ],
-        "open": "14:00",
-        "close": "23:00"
-      }
-    ],
-    "website": "http://www.corvina.nu/",
-    "phone": "08-660 59 97",
-    "googleRatingCount": 517,
-    "bakomRankRegion": 22
   },
   {
     "id": "herno-gin-bar-stockholm",
@@ -1819,7 +1725,7 @@
     "lng": 18.0703939,
     "ratings": {
       "google": 4.6,
-      "falstaff": 85
+      "falstaff": 90
     },
     "links": {
       "krogguiden": "https://www.krogguiden.se/restauranger/view/herno-gin-bar",
@@ -1828,7 +1734,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80,
-    "bakomRank": 37,
+    "bakomRank": 35,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Cocktailbar",
@@ -1868,7 +1774,102 @@
     "website": "https://hernoginbar.com/",
     "phone": "073-095 90 00",
     "googleRatingCount": 619,
+    "bakomRankRegion": 22
+  },
+  {
+    "id": "paradiso-stockholm",
+    "name": "Paradiso",
+    "address": "Timmermangatan 24",
+    "city": "Stockholm",
+    "lat": 59.317479000000006,
+    "lng": 18.0601934,
+    "ratings": {
+      "krogguiden": 3.8,
+      "google": 4.2,
+      "falstaff": 87
+    },
+    "links": {
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/Paradiso",
+      "falstaff": "https://www.falstaff.com/en/bars/paradiso-1",
+      "google": "https://maps.google.com/?cid=4245672487333834266&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 80,
+    "bakomScoreRaw": 80,
+    "bakomRank": 36,
+    "metroRegion": "stockholm",
+    "priceRange": "mellan",
+    "cuisine": "Bar",
+    "hours": [
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "open": "17:00",
+        "close": "01:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "16:00",
+        "close": "01:00"
+      }
+    ],
+    "website": "https://www.paradisostockholm.se/?utm_source=google",
+    "phone": "08-720 61 51",
+    "googleRatingCount": 424,
     "bakomRankRegion": 23
+  },
+  {
+    "id": "stjartilleriet-stockholm",
+    "name": "Stjärtilleriet",
+    "address": "Artillerigatan 13",
+    "city": "Stockholm",
+    "lat": 59.3346992,
+    "lng": 18.0811509,
+    "ratings": {
+      "google": 4.5,
+      "falstaff": 96
+    },
+    "links": {
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/stjartilleriet",
+      "falstaff": "https://www.falstaff.com/en/bars/stjaertilleriet",
+      "google": "https://maps.google.com/?cid=9911002093492977268&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 80,
+    "bakomScoreRaw": 80,
+    "bakomRank": 37,
+    "metroRegion": "stockholm",
+    "priceRange": "budget",
+    "cuisine": "Bar",
+    "hours": [
+      {
+        "days": [
+          2,
+          3,
+          4
+        ],
+        "open": "17:00",
+        "close": "00:00"
+      },
+      {
+        "days": [
+          5,
+          6
+        ],
+        "open": "17:00",
+        "close": "01:00"
+      }
+    ],
+    "website": "http://www.restaurangartilleriet.se/",
+    "phone": "08-664 34 30",
+    "googleRatingCount": 48,
+    "bakomRankRegion": 24
   },
   {
     "id": "svarta-hasten-stockholm",
@@ -1911,7 +1912,7 @@
     ],
     "website": "https://svartahasten.se/stockholm/",
     "googleRatingCount": 83,
-    "bakomRankRegion": 24
+    "bakomRankRegion": 25
   },
   {
     "id": "vinverket-stockholm",
@@ -1961,7 +1962,7 @@
     "website": "http://vinverket.se/",
     "phone": "08-33 04 00",
     "googleRatingCount": 162,
-    "bakomRankRegion": 25
+    "bakomRankRegion": 26
   },
   {
     "id": "bar-ninja-stockholm",
@@ -2004,7 +2005,7 @@
     ],
     "website": "https://www.winetrade.se/17/196/bar-ninja/",
     "googleRatingCount": 113,
-    "bakomRankRegion": 26
+    "bakomRankRegion": 27
   },
   {
     "id": "ma-petite-maison-map-stockholm",
@@ -2014,12 +2015,10 @@
     "lat": 59.332824200000005,
     "lng": 18.057581199999998,
     "ratings": {
-      "google": 4.7,
-      "falstaff": 85
+      "google": 4.7
     },
     "links": {
       "dn": "https://www.dn.se/kultur/tapas-och-cocktails-pa-hemliga-ma-petite-maison/",
-      "falstaff": "https://www.falstaff.com/en/bars/map-petite-maison",
       "google": "https://maps.google.com/?cid=10148341438955868847&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 80,
@@ -2063,84 +2062,31 @@
     "website": "http://www.mapetitemaison.se/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=14877688896329122542",
     "phone": "073-956 38 41",
     "googleRatingCount": 281,
-    "bakomRankRegion": 27
+    "bakomRankRegion": 28
   },
   {
-    "id": "bar-talea-stockholm",
-    "name": "Bar Talea",
-    "address": "Österlånggatan 18",
+    "id": "bar-afterglow-stockholm",
+    "name": "Bar Afterglow",
+    "address": "Erstagatan 17",
     "city": "Stockholm",
-    "lat": 59.3243714,
-    "lng": 18.0737634,
+    "lat": 59.3143684,
+    "lng": 18.0904091,
     "ratings": {
-      "google": 4.9,
-      "falstaff": 75
+      "google": 4.5,
+      "falstaff": 94
     },
     "links": {
-      "falstaff": "https://www.falstaff.com/en/winebars/bar-talea",
-      "google": "https://maps.google.com/?cid=10673124556470010152&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+      "falstaff": "https://www.falstaff.com/en/bars/bar-afterglow",
+      "google": "https://maps.google.com/?cid=12897491111563658822&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80,
     "bakomRank": 42,
     "metroRegion": "stockholm",
-    "cuisine": "Vinbar",
+    "cuisine": "Cocktailbar",
     "hours": [
       {
         "days": [
-          0
-        ],
-        "open": "12:00",
-        "close": "21:00"
-      },
-      {
-        "days": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "open": "15:00",
-        "close": "22:00"
-      },
-      {
-        "days": [
-          5,
-          6
-        ],
-        "open": "12:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "https://bartalea.se/?utm_source=google",
-    "phone": "08-32 33 34",
-    "googleRatingCount": 133,
-    "bakomRankRegion": 28
-  },
-  {
-    "id": "juan-font-vinbar-goteborg",
-    "name": "Juan Font Vinbar",
-    "address": "Teatergatan 36",
-    "city": "Göteborg",
-    "lat": 57.698714499999994,
-    "lng": 11.9761437,
-    "ratings": {
-      "google": 4.4,
-      "falstaff": 85
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/winebars/juan-font-vinbar",
-      "google": "https://maps.google.com/?cid=6047681876449548171&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 80,
-    "bakomScoreRaw": 80,
-    "bakomRank": 43,
-    "metroRegion": "gothenburg",
-    "cuisine": "Vinbar",
-    "hours": [
-      {
-        "days": [
-          2,
           3,
           4
         ],
@@ -2156,10 +2102,153 @@
         "close": "01:00"
       }
     ],
-    "website": "http://juanfont.se/",
-    "phone": "031-20 00 66",
-    "googleRatingCount": 350,
-    "bakomRankRegion": 8
+    "website": "https://www.instagram.com/bar.afterglow",
+    "phone": "076-168 82 76",
+    "googleRatingCount": 108,
+    "bakomRankRegion": 29
+  },
+  {
+    "id": "zigges-garage-halmstad",
+    "name": "Zigges Garage",
+    "address": "Hamngatan 45",
+    "city": "Halmstad",
+    "lat": 56.6764489,
+    "lng": 12.8600098,
+    "ratings": {
+      "google": 4.4,
+      "falstaff": 86
+    },
+    "links": {
+      "falstaff": "https://www.falstaff.com/en/bars/zigges-garage",
+      "google": "https://maps.google.com/?cid=10737062052004994036&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 80,
+    "bakomScoreRaw": 80,
+    "bakomRank": 43,
+    "metroRegion": "sweden",
+    "cuisine": "Bar",
+    "hours": [
+      {
+        "days": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "17:00",
+        "close": "01:00"
+      }
+    ],
+    "website": "http://www.ziggesgarage.se/",
+    "phone": "076-341 33 78",
+    "googleRatingCount": 513
+  },
+  {
+    "id": "guilty-pleasure-umea",
+    "name": "Guilty Pleasure",
+    "address": "Skolgatan 62",
+    "city": "Umea",
+    "lat": 63.826467699999995,
+    "lng": 20.2642703,
+    "ratings": {
+      "google": 4.4,
+      "falstaff": 84
+    },
+    "links": {
+      "falstaff": "https://www.falstaff.com/en/bars/guilty-pleasure",
+      "google": "https://maps.google.com/?cid=12012349455571417168&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 80,
+    "bakomScoreRaw": 80,
+    "bakomRank": 44,
+    "metroRegion": "sweden",
+    "cuisine": "Restaurang",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "11:30",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          1
+        ],
+        "open": "11:00",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          2,
+          3,
+          4
+        ],
+        "open": "11:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          5,
+          6
+        ],
+        "open": "11:30",
+        "close": "00:00"
+      }
+    ],
+    "website": "http://www.guiltypleasure.se/",
+    "googleRatingCount": 1073
+  },
+  {
+    "id": "barabicu-bar-goteborg",
+    "name": "Barabicu Bar",
+    "address": "Rosenlundsgatan 4",
+    "city": "Göteborg",
+    "lat": 57.70190110000001,
+    "lng": 11.9559038,
+    "ratings": {
+      "google": 4.1,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/bars/10616",
+      "google": "https://maps.google.com/?cid=11819658086267218741&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 80,
+    "bakomScoreRaw": 79.8,
+    "bakomRank": 45,
+    "metroRegion": "gothenburg",
+    "cuisine": "Medelhav",
+    "hours": [
+      {
+        "days": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "open": "11:30",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "11:30",
+        "close": "01:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "15:00",
+        "close": "01:00"
+      }
+    ],
+    "website": "http://www.barabicu.se/",
+    "phone": "031-13 58 00",
+    "googleRatingCount": 1403,
+    "bakomRankRegion": 7
   },
   {
     "id": "enoteca-la-mela-stockholm",
@@ -2177,7 +2266,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 79.6,
-    "bakomRank": 44,
+    "bakomRank": 46,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Vinbar",
@@ -2203,7 +2292,49 @@
     "website": "http://enotecalamela.com/",
     "phone": "070-774 57 32",
     "googleRatingCount": 73,
-    "bakomRankRegion": 29
+    "bakomRankRegion": 30
+  },
+  {
+    "id": "bar-kusinen-linkoping",
+    "name": "Bar Kusinen",
+    "address": "Nygatan 29",
+    "city": "Linköping",
+    "lat": 58.409824699999994,
+    "lng": 15.6229467,
+    "ratings": {
+      "google": 4.5,
+      "falstaff": 87
+    },
+    "links": {
+      "falstaff": "https://www.falstaff.com/en/bars/bar-kusinen",
+      "google": "https://maps.google.com/?cid=16870510107641115476&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 79,
+    "bakomScoreRaw": 79.3,
+    "bakomRank": 47,
+    "metroRegion": "sweden",
+    "cuisine": "Bar",
+    "hours": [
+      {
+        "days": [
+          3,
+          4
+        ],
+        "open": "17:00",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          5,
+          6
+        ],
+        "open": "17:00",
+        "close": "01:00"
+      }
+    ],
+    "website": "https://dahlbomsmat.com/bar-kusinen",
+    "phone": "013-800 08",
+    "googleRatingCount": 43
   },
   {
     "id": "miss-voon-uppsala-bar-uppsala",
@@ -2222,7 +2353,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 78.5,
-    "bakomRank": 45,
+    "bakomRank": 48,
     "metroRegion": "sweden",
     "cuisine": "Asiatiskt",
     "hours": [
@@ -2250,6 +2381,55 @@
     "googleRatingCount": 1129
   },
   {
+    "id": "roda-huset-stockholm",
+    "name": "Röda Huset",
+    "address": "Malmskillnadsgatan 9",
+    "city": "Stockholm",
+    "lat": 59.3327586,
+    "lng": 18.0661482,
+    "ratings": {
+      "google": 4.2,
+      "whiteguide": "master_class",
+      "svd": 3
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/bars/12033",
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/roda-huset",
+      "svd": "https://www.svd.se/a/v57Egm/krogguiden-om-roda-huset-servicen-sanker-betyget",
+      "google": "https://maps.google.com/?cid=501599793946765704&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 78,
+    "bakomScoreRaw": 78.3,
+    "bakomRank": 49,
+    "metroRegion": "stockholm",
+    "priceRange": "lyx",
+    "cuisine": "Restaurang",
+    "hours": [
+      {
+        "days": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "open": "17:00",
+        "close": "00:00"
+      },
+      {
+        "days": [
+          5,
+          6
+        ],
+        "open": "15:00",
+        "close": "01:00"
+      }
+    ],
+    "website": "https://rodahuset.nu/",
+    "phone": "08-480 043 97",
+    "googleRatingCount": 541,
+    "bakomRankRegion": 31
+  },
+  {
     "id": "papillon-bank-hotel-stockholm",
     "name": "Papillon – Bank Hotel",
     "address": "Arsenalsgatan 6",
@@ -2266,7 +2446,7 @@
     },
     "bakomScore": 78,
     "bakomScoreRaw": 78.2,
-    "bakomRank": 46,
+    "bakomRank": 50,
     "metroRegion": "stockholm",
     "cuisine": "Cocktailbar",
     "hours": [
@@ -2293,45 +2473,58 @@
     "website": "https://bankhotel.se/restaurants/papillon/",
     "phone": "08-598 580 50",
     "googleRatingCount": 38,
-    "bakomRankRegion": 30
+    "bakomRankRegion": 32
   },
   {
-    "id": "bread-on-wine-halmstad",
-    "name": "Bread On Wine",
-    "address": "Torntorget 6A",
-    "city": "Halmstad",
-    "lat": 56.67735,
-    "lng": 12.8622695,
+    "id": "corvina-enoteca-stockholm",
+    "name": "Corvina Enoteca",
+    "address": "Kornhamnstorg 47",
+    "city": "Stockholm",
+    "lat": 59.3231092,
+    "lng": 18.0711744,
     "ratings": {
-      "google": 4.7,
-      "falstaff": 75
+      "krogguiden": 3.8,
+      "google": 4.6
     },
     "links": {
-      "falstaff": "https://www.falstaff.com/en/winebars/bread-on-wine",
-      "google": "https://maps.google.com/?cid=2148695086484030446&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/corvina-enoteca",
+      "google": "https://maps.google.com/?cid=10637917413894553860&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 78,
-    "bakomScoreRaw": 77.9,
-    "bakomRank": 47,
-    "metroRegion": "sweden",
+    "bakomScoreRaw": 78,
+    "bakomRank": 51,
+    "metroRegion": "stockholm",
+    "priceRange": "lyx",
     "cuisine": "Vinbar",
     "hours": [
       {
         "days": [
-          1,
           2,
           3,
-          4,
-          5,
+          4
+        ],
+        "open": "16:00",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "16:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
           6
         ],
-        "open": "17:00",
+        "open": "14:00",
         "close": "23:00"
       }
     ],
-    "website": "http://www.breadonwine.com/",
-    "phone": "035-431 00",
-    "googleRatingCount": 91
+    "website": "http://www.corvina.nu/",
+    "phone": "08-660 59 97",
+    "googleRatingCount": 517,
+    "bakomRankRegion": 33
   },
   {
     "id": "guldbaren-stockholm",
@@ -2350,7 +2543,7 @@
     },
     "bakomScore": 78,
     "bakomScoreRaw": 77.5,
-    "bakomRank": 48,
+    "bakomRank": 52,
     "metroRegion": "stockholm",
     "cuisine": "Cocktailbar",
     "hours": [
@@ -2383,7 +2576,7 @@
     "website": "https://www.nobishotel.se/guldbaren?utm_source=google",
     "phone": "08-614 10 00",
     "googleRatingCount": 20,
-    "bakomRankRegion": 31
+    "bakomRankRegion": 34
   },
   {
     "id": "stigbergets-fot-stockholm",
@@ -2401,7 +2594,7 @@
     },
     "bakomScore": 77,
     "bakomScoreRaw": 77.4,
-    "bakomRank": 49,
+    "bakomRank": 53,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Bar",
@@ -2447,7 +2640,7 @@
     "website": "http://stigbergetsfot.se/",
     "phone": "08-20 00 02",
     "googleRatingCount": 1127,
-    "bakomRankRegion": 32
+    "bakomRankRegion": 35
   },
   {
     "id": "xarcuteria-stockholm",
@@ -2465,7 +2658,7 @@
     },
     "bakomScore": 77,
     "bakomScoreRaw": 77.4,
-    "bakomRank": 50,
+    "bakomRank": 54,
     "metroRegion": "stockholm",
     "priceRange": "lyx",
     "cuisine": "Bar",
@@ -2491,7 +2684,7 @@
     "website": "http://www.xarcuteria.se/",
     "phone": "08-410 490 02",
     "googleRatingCount": 278,
-    "bakomRankRegion": 33
+    "bakomRankRegion": 36
   },
   {
     "id": "unity-jazz-goteborg",
@@ -2509,7 +2702,7 @@
     },
     "bakomScore": 77,
     "bakomScoreRaw": 77.4,
-    "bakomRank": 51,
+    "bakomRank": 55,
     "metroRegion": "gothenburg",
     "priceRange": "mellan",
     "cuisine": "Bar",
@@ -2535,210 +2728,7 @@
     "website": "http://www.unityjazz.se/",
     "phone": "031-25 12 44",
     "googleRatingCount": 521,
-    "bakomRankRegion": 9
-  },
-  {
-    "id": "asian-post-office-stockholm",
-    "name": "Asian Post Office",
-    "address": "Regeringsgatan 66",
-    "city": "Stockholm",
-    "lat": 59.3361749,
-    "lng": 18.067752499999997,
-    "ratings": {
-      "krogguiden": 3.6,
-      "google": 4.4,
-      "whiteguide": "very_good_class",
-      "falstaff": 65
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/bars/10613",
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/asian-post-office",
-      "falstaff": "https://www.falstaff.com/en/restaurants/apo",
-      "google": "https://maps.google.com/?cid=18427228572707729744&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 77,
-    "bakomScoreRaw": 77.4,
-    "bakomRank": 52,
-    "metroRegion": "stockholm",
-    "priceRange": "lyx",
-    "cuisine": "Restaurang",
-    "hours": [
-      {
-        "days": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "open": "11:30",
-        "close": "14:00"
-      },
-      {
-        "days": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "open": "17:00",
-        "close": "00:00"
-      },
-      {
-        "days": [
-          5
-        ],
-        "open": "16:30",
-        "close": "01:00"
-      },
-      {
-        "days": [
-          6
-        ],
-        "open": "16:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "https://www.asianpostoffice.se/",
-    "googleRatingCount": 1697,
-    "bakomRankRegion": 34
-  },
-  {
-    "id": "bar-arsenalen-stockholm",
-    "name": "Bar Arsenalen",
-    "address": "Arsenalsgatan 1c",
-    "city": "Stockholm",
-    "lat": 59.33177440000001,
-    "lng": 18.0752196,
-    "ratings": {
-      "google": 4.8,
-      "falstaff": 85
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/winebars/bar-arsenalen",
-      "google": "https://maps.google.com/?cid=10531072508729923784&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 77,
-    "bakomScoreRaw": 77.3,
-    "bakomRank": 53,
-    "metroRegion": "stockholm",
-    "cuisine": "Vinbar",
-    "hours": [
-      {
-        "days": [
-          3,
-          4
-        ],
-        "open": "16:00",
-        "close": "22:00"
-      },
-      {
-        "days": [
-          5
-        ],
-        "open": "16:00",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          6
-        ],
-        "open": "13:00",
-        "close": "23:00"
-      }
-    ],
-    "website": "https://www.bararsenalen.se/?utm_source=google",
-    "phone": "08-96 24 50",
-    "googleRatingCount": 24,
-    "bakomRankRegion": 35
-  },
-  {
-    "id": "vina-stockholm",
-    "name": "Vina",
-    "address": "Sofiagatan 1",
-    "city": "Stockholm",
-    "lat": 59.311578100000006,
-    "lng": 18.0820901,
-    "ratings": {
-      "google": 4.4,
-      "whiteguide": "recommended",
-      "falstaff": 85
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/bars/10667",
-      "falstaff": "https://www.falstaff.com/en/restaurants/vina",
-      "google": "https://maps.google.com/?cid=6976103880000503457&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 77,
-    "bakomScoreRaw": 76.6,
-    "bakomRank": 54,
-    "metroRegion": "stockholm",
-    "cuisine": "Europeiskt",
-    "hours": [
-      {
-        "days": [
-          2,
-          3,
-          4
-        ],
-        "open": "16:00",
-        "close": "22:00"
-      },
-      {
-        "days": [
-          5
-        ],
-        "open": "16:00",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          6
-        ],
-        "open": "14:00",
-        "close": "23:00"
-      }
-    ],
-    "website": "https://vinaaa.squarespace.com/",
-    "phone": "070-406 66 26",
-    "googleRatingCount": 280,
-    "bakomRankRegion": 36
-  },
-  {
-    "id": "zigges-garage-halmstad",
-    "name": "Zigges Garage",
-    "address": "Hamngatan 45",
-    "city": "Halmstad",
-    "lat": 56.6764489,
-    "lng": 12.8600098,
-    "ratings": {
-      "google": 4.4,
-      "falstaff": 75
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/bars/zigges-garage",
-      "google": "https://maps.google.com/?cid=10737062052004994036&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 76,
-    "bakomScoreRaw": 76.4,
-    "bakomRank": 55,
-    "metroRegion": "sweden",
-    "cuisine": "Bar",
-    "hours": [
-      {
-        "days": [
-          3,
-          4,
-          5,
-          6
-        ],
-        "open": "17:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "http://www.ziggesgarage.se/",
-    "phone": "076-341 33 78",
-    "googleRatingCount": 513
+    "bakomRankRegion": 8
   },
   {
     "id": "rost-stockholm",
@@ -2877,86 +2867,6 @@
     "bakomRankRegion": 38
   },
   {
-    "id": "lion-bar-boras",
-    "name": "Lion Bar",
-    "address": "Stora Brogatan 3",
-    "city": "Boras",
-    "lat": 57.720178399999995,
-    "lng": 12.9364846,
-    "ratings": {
-      "google": 3.6,
-      "falstaff": 85
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/bars/lion-bar-3",
-      "google": "https://maps.google.com/?cid=277417076406111910&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 76,
-    "bakomScoreRaw": 75.6,
-    "bakomRank": 59,
-    "metroRegion": "sweden",
-    "cuisine": "Bar",
-    "hours": [
-      {
-        "days": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "open": "15:00",
-        "close": "02:00"
-      }
-    ],
-    "website": "http://www.lionbar.se/",
-    "googleRatingCount": 143
-  },
-  {
-    "id": "lilla-italy-kristianstad",
-    "name": "Lilla Italy",
-    "address": "Östra Storgatan 46",
-    "city": "Kristianstad",
-    "lat": 56.028364499999995,
-    "lng": 14.158010099999998,
-    "ratings": {
-      "google": 5,
-      "falstaff": 85
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/restaurants/lilla-italy",
-      "google": "https://maps.google.com/?cid=4546279725120118547&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 76,
-    "bakomScoreRaw": 75.5,
-    "bakomRank": 60,
-    "metroRegion": "sweden",
-    "cuisine": "Vinbar",
-    "hours": [
-      {
-        "days": [
-          2,
-          3,
-          4,
-          5
-        ],
-        "open": "16:00",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          6
-        ],
-        "open": "12:00",
-        "close": "01:00"
-      }
-    ],
-    "phone": "044-10 01 15",
-    "googleRatingCount": 6
-  },
-  {
     "id": "tapasbaren-goteborg",
     "name": "Tapasbaren",
     "address": "Mariagatan 17",
@@ -2973,7 +2883,7 @@
     },
     "bakomScore": 75,
     "bakomScoreRaw": 75.4,
-    "bakomRank": 61,
+    "bakomRank": 59,
     "metroRegion": "gothenburg",
     "cuisine": "Bar",
     "hours": [
@@ -3006,7 +2916,7 @@
     "website": "http://tapasbaren.se/",
     "phone": "031-42 42 11",
     "googleRatingCount": 517,
-    "bakomRankRegion": 10
+    "bakomRankRegion": 9
   },
   {
     "id": "vinbaren-are-are",
@@ -3025,7 +2935,7 @@
     },
     "bakomScore": 75,
     "bakomScoreRaw": 75.4,
-    "bakomRank": 62,
+    "bakomRank": 60,
     "metroRegion": "sweden",
     "cuisine": "Vinbar",
     "hours": [
@@ -3047,6 +2957,500 @@
     "googleRatingCount": 217
   },
   {
+    "id": "kung-carls-cocktailbar-stockholm",
+    "name": "Kung Carls Cocktailbar",
+    "address": "Birger Jarlsgatan 21A",
+    "city": "Stockholm",
+    "lat": 59.33644099999999,
+    "lng": 18.0715435,
+    "ratings": {
+      "google": 3.4,
+      "falstaff": 86
+    },
+    "links": {
+      "falstaff": "https://www.falstaff.com/en/bars/kung-carls-cocktailbar",
+      "google": "https://maps.google.com/?cid=8341157329802898240&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 75,
+    "bakomScoreRaw": 75.1,
+    "bakomRank": 61,
+    "metroRegion": "stockholm",
+    "cuisine": "Bar",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "07:30",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "open": "07:30",
+        "close": "00:00"
+      },
+      {
+        "days": [
+          5,
+          6
+        ],
+        "open": "07:30",
+        "close": "01:00"
+      }
+    ],
+    "website": "http://www.kungcarl.se/cocktailbaren",
+    "phone": "08-463 50 80",
+    "googleRatingCount": 32,
+    "bakomRankRegion": 39
+  },
+  {
+    "id": "sju-flaskor-uppsala",
+    "name": "Sju Flaskor",
+    "address": "Olof Palmes plats 2",
+    "city": "Uppsala",
+    "lat": 59.8588238,
+    "lng": 17.6456654,
+    "ratings": {
+      "google": 5,
+      "falstaff": 83
+    },
+    "links": {
+      "falstaff": "https://www.falstaff.com/en/bars/sju-flaskor",
+      "google": "https://maps.google.com/?cid=739432948285445397&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 75,
+    "bakomScoreRaw": 74.5,
+    "bakomRank": 62,
+    "metroRegion": "sweden",
+    "cuisine": "Bar",
+    "hours": [
+      {
+        "days": [
+          3,
+          4
+        ],
+        "open": "17:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          5,
+          6
+        ],
+        "open": "15:00",
+        "close": "00:00"
+      }
+    ],
+    "website": "http://7flaskor.se/",
+    "phone": "070-312 35 56",
+    "googleRatingCount": 7
+  },
+  {
+    "id": "suggan-vinbar-goteborg",
+    "name": "Suggan Vinbar",
+    "address": "Karl Johansgatan 58",
+    "city": "Göteborg",
+    "lat": 57.6957157,
+    "lng": 11.9231029,
+    "ratings": {
+      "google": 4.4,
+      "whiteguide": "good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/12815",
+      "google": "https://maps.google.com/?cid=8314535466578701601&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 74,
+    "bakomScoreRaw": 74.2,
+    "bakomRank": 63,
+    "metroRegion": "gothenburg",
+    "cuisine": "Vinbar",
+    "hours": [
+      {
+        "days": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "17:00",
+        "close": "23:00"
+      }
+    ],
+    "website": "http://www.sugganvinbar.se/",
+    "googleRatingCount": 80,
+    "bakomRankRegion": 10
+  },
+  {
+    "id": "boulebar-stockholm",
+    "name": "Boulebar",
+    "address": "Tantogatan 85",
+    "city": "Stockholm",
+    "lat": 59.328554499999996,
+    "lng": 18.0471921,
+    "ratings": {
+      "google": 4.2
+    },
+    "links": {
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/boulebar",
+      "google": "https://maps.google.com/?cid=17910249130159124712&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 74,
+    "bakomScoreRaw": 73.9,
+    "bakomRank": 64,
+    "metroRegion": "stockholm",
+    "priceRange": "mellan",
+    "cuisine": "Bar",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "12:00",
+        "close": "17:00"
+      },
+      {
+        "days": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "open": "15:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "15:00",
+        "close": "00:01"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "12:00",
+        "close": "00:01"
+      }
+    ],
+    "website": "https://www.boulebar.se/sthlm-radhuset",
+    "phone": "010-162 92 00",
+    "googleRatingCount": 460,
+    "bakomRankRegion": 40
+  },
+  {
+    "id": "the-sparrow-wine-bar-bistro-stockholm",
+    "name": "The Sparrow Wine Bar & Bistro",
+    "address": "Birger Jarlsgatan 24",
+    "city": "Stockholm",
+    "lat": 59.3369715,
+    "lng": 18.0716698,
+    "ratings": {
+      "krogguiden": 3.8,
+      "google": 4.6
+    },
+    "links": {
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/the-sparrow-wine-bar--bistro",
+      "google": "https://maps.google.com/?cid=9952363771206266095&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 74,
+    "bakomScoreRaw": 73.6,
+    "bakomRank": 65,
+    "metroRegion": "stockholm",
+    "priceRange": "lyx",
+    "cuisine": "Vinbar",
+    "hours": [
+      {
+        "days": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "17:00",
+        "close": "23:00"
+      }
+    ],
+    "website": "https://www.thesparrow.se/restauranger-och-barer",
+    "phone": "08-122 173 00",
+    "googleRatingCount": 45,
+    "bakomRankRegion": 41
+  },
+  {
+    "id": "aqui-tapas-bar-stockholm",
+    "name": "Aqui Tapas & Bar",
+    "address": "Kammakargatan 9",
+    "city": "Stockholm",
+    "lat": 59.3388858,
+    "lng": 18.061442600000003,
+    "ratings": {
+      "krogguiden": 3.6,
+      "google": 4.3
+    },
+    "links": {
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/aqui-tapas-bar",
+      "google": "https://maps.google.com/?cid=7052254982537767478&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 74,
+    "bakomScoreRaw": 73.5,
+    "bakomRank": 66,
+    "metroRegion": "stockholm",
+    "priceRange": "mellan",
+    "cuisine": "Bar",
+    "hours": [
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "open": "16:00",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          4
+        ],
+        "open": "16:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          5,
+          6
+        ],
+        "open": "16:00",
+        "close": "01:00"
+      }
+    ],
+    "website": "http://www.aquitapas.se/",
+    "phone": "08-411 40 29",
+    "googleRatingCount": 2034,
+    "bakomRankRegion": 42
+  },
+  {
+    "id": "utopia-jazz-goteborg",
+    "name": "Utopia Jazz",
+    "address": "Karl Johansgatan 6",
+    "city": "Göteborg",
+    "lat": 57.69838300000001,
+    "lng": 11.9323728,
+    "ratings": {
+      "google": 4.6,
+      "whiteguide": "recommended"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/12139",
+      "google": "https://maps.google.com/?cid=11032118912137912395&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 73,
+    "bakomScoreRaw": 73.5,
+    "bakomRank": 67,
+    "metroRegion": "gothenburg",
+    "cuisine": "Bar",
+    "hours": [
+      {
+        "days": [
+          2,
+          3,
+          4
+        ],
+        "open": "17:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          5,
+          6
+        ],
+        "open": "16:00",
+        "close": "01:00"
+      }
+    ],
+    "website": "http://utopiajazz.com/",
+    "googleRatingCount": 256,
+    "bakomRankRegion": 11
+  },
+  {
+    "id": "katarina-olkafe-stockholm",
+    "name": "Katarina Ölkafé",
+    "address": "Katarina bangata 27",
+    "city": "Stockholm",
+    "lat": 59.311655599999995,
+    "lng": 18.0793741,
+    "ratings": {
+      "krogguiden": 3.7,
+      "google": 4.4,
+      "whiteguide": "recommended"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/bars/10641",
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/katarina-olcafe",
+      "google": "https://maps.google.com/?cid=15430493491440979787&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 73,
+    "bakomScoreRaw": 73.1,
+    "bakomRank": 68,
+    "metroRegion": "stockholm",
+    "priceRange": "budget",
+    "cuisine": "Bar",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "14:00",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "16:00",
+        "close": "00:00"
+      }
+    ],
+    "website": "http://www.katarinaolkafe.se/",
+    "googleRatingCount": 651,
+    "bakomRankRegion": 43
+  },
+  {
+    "id": "raspberrry-bar-jonkoping",
+    "name": "Raspberrry Bar",
+    "address": "Barnarpsgatan 35 B",
+    "city": "Jönköping",
+    "lat": 57.779973299999995,
+    "lng": 14.161781099999999,
+    "ratings": {
+      "google": 4.5,
+      "whiteguide": "good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/12591",
+      "google": "https://maps.google.com/?cid=5128811805897311621&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 72,
+    "bakomScoreRaw": 72.3,
+    "bakomRank": 69,
+    "metroRegion": "sweden",
+    "cuisine": "Cocktailbar",
+    "hours": [
+      {
+        "days": [
+          3,
+          4
+        ],
+        "open": "17:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          5,
+          6
+        ],
+        "open": "16:00",
+        "close": "01:00"
+      }
+    ],
+    "website": "http://www.raspberrybar.se/",
+    "phone": "073-506 48 96",
+    "googleRatingCount": 42
+  },
+  {
+    "id": "alba-vinbar-stockholm",
+    "name": "Alba vinbar",
+    "address": "Skånegatan 88",
+    "city": "Stockholm",
+    "lat": 59.31240739999999,
+    "lng": 18.081432,
+    "ratings": {
+      "google": 4.1
+    },
+    "links": {
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/alba-vinbar",
+      "google": "https://maps.google.com/?cid=13012355058712637661&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 72,
+    "bakomScoreRaw": 72.2,
+    "bakomRank": 70,
+    "metroRegion": "stockholm",
+    "priceRange": "budget",
+    "cuisine": "Vinbar",
+    "hours": [
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "open": "16:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          5,
+          6
+        ],
+        "open": "16:00",
+        "close": "01:00"
+      }
+    ],
+    "website": "http://www.albavinbar.se/",
+    "phone": "08-36 96 50",
+    "googleRatingCount": 112,
+    "bakomRankRegion": 44
+  },
+  {
+    "id": "avec-mat-och-vinbar-stockholm",
+    "name": "Avec Mat- och Vinbar",
+    "address": "Sankt Eriksagatan 100",
+    "city": "Stockholm",
+    "lat": 59.343425100000005,
+    "lng": 18.039319499999998,
+    "ratings": {
+      "google": 4.9
+    },
+    "links": {
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/avec-mat-och-vinbar",
+      "google": "https://maps.google.com/?cid=4042528254380390595&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 72,
+    "bakomScoreRaw": 71.7,
+    "bakomRank": 71,
+    "metroRegion": "stockholm",
+    "priceRange": "mellan",
+    "cuisine": "Vinbar",
+    "hours": [
+      {
+        "days": [
+          3,
+          4,
+          5
+        ],
+        "open": "16:00",
+        "close": "22:00"
+      }
+    ],
+    "website": "https://avecstockholm.com/",
+    "phone": "076-028 61 60",
+    "googleRatingCount": 41,
+    "bakomRankRegion": 45
+  },
+  {
     "id": "verovin-gavle",
     "name": "Verovin",
     "address": "Norra Kungsgatan 11",
@@ -3055,17 +3459,15 @@
     "lng": 17.1426576,
     "ratings": {
       "google": 4.8,
-      "whiteguide": "recommended",
-      "falstaff": 75
+      "whiteguide": "recommended"
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/bars/11654",
-      "falstaff": "https://www.falstaff.com/en/winebars/verovin",
       "google": "https://maps.google.com/?cid=11477631204053947996&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
-    "bakomScore": 75,
-    "bakomScoreRaw": 75.2,
-    "bakomRank": 63,
+    "bakomScore": 72,
+    "bakomScoreRaw": 71.6,
+    "bakomRank": 72,
     "metroRegion": "sweden",
     "cuisine": "Restaurang",
     "hours": [
@@ -3108,706 +3510,6 @@
     "googleRatingCount": 298
   },
   {
-    "id": "tjoget-bar-stockholm",
-    "name": "Tjoget Bar",
-    "address": "Hornsbruksgatan 24",
-    "city": "Stockholm",
-    "lat": 59.3162112,
-    "lng": 18.0347985,
-    "ratings": {
-      "krogguiden": 3.5,
-      "google": 4.2,
-      "whiteguide": "good_class",
-      "falstaff": 75
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/11022",
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/tjoget",
-      "falstaff": "https://www.falstaff.com/en/restaurants/tjoget",
-      "google": "https://maps.google.com/?cid=12378437113624571640&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 75,
-    "bakomScoreRaw": 75.2,
-    "bakomRank": 64,
-    "metroRegion": "stockholm",
-    "priceRange": "budget",
-    "cuisine": "Restaurang",
-    "hours": [
-      {
-        "days": [
-          0,
-          1,
-          2,
-          3,
-          4
-        ],
-        "open": "17:00",
-        "close": "01:00"
-      },
-      {
-        "days": [
-          5
-        ],
-        "open": "16:00",
-        "close": "03:00"
-      },
-      {
-        "days": [
-          6
-        ],
-        "open": "13:00",
-        "close": "03:00"
-      }
-    ],
-    "website": "https://tjoget.com/?utm_source=google",
-    "phone": "08-22 00 21",
-    "googleRatingCount": 1078,
-    "bakomRankRegion": 39
-  },
-  {
-    "id": "paradiso-stockholm",
-    "name": "Paradiso",
-    "address": "Timmermangatan 24",
-    "city": "Stockholm",
-    "lat": 59.317479000000006,
-    "lng": 18.0601934,
-    "ratings": {
-      "krogguiden": 3.8,
-      "google": 4.2
-    },
-    "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/Paradiso",
-      "google": "https://maps.google.com/?cid=4245672487333834266&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 75,
-    "bakomScoreRaw": 75.1,
-    "bakomRank": 65,
-    "metroRegion": "stockholm",
-    "priceRange": "mellan",
-    "cuisine": "Bar",
-    "hours": [
-      {
-        "days": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          6
-        ],
-        "open": "17:00",
-        "close": "01:00"
-      },
-      {
-        "days": [
-          5
-        ],
-        "open": "16:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "https://www.paradisostockholm.se/?utm_source=google",
-    "phone": "08-720 61 51",
-    "googleRatingCount": 424,
-    "bakomRankRegion": 40
-  },
-  {
-    "id": "boulebar-drottningtorget-malmo",
-    "name": "Boulebar-Drottningtorget",
-    "address": "Drottningtorget 8",
-    "city": "Malmö",
-    "lat": 55.608514199999995,
-    "lng": 13.0098892,
-    "ratings": {
-      "google": 4.2,
-      "falstaff": 75
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/restaurants/boulebar-drottningtorget",
-      "google": "https://maps.google.com/?cid=11785954752835675508&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 75,
-    "bakomScoreRaw": 74.8,
-    "bakomRank": 66,
-    "metroRegion": "malmo",
-    "cuisine": "Bar",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "11:00",
-        "close": "17:00"
-      },
-      {
-        "days": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "open": "15:00",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          5
-        ],
-        "open": "15:00",
-        "close": "00:00"
-      },
-      {
-        "days": [
-          6
-        ],
-        "open": "11:00",
-        "close": "00:00"
-      }
-    ],
-    "website": "https://www.boulebar.se/drottningtorget",
-    "phone": "010-162 92 00",
-    "googleRatingCount": 2604,
-    "bakomRankRegion": 6
-  },
-  {
-    "id": "ring-katarina-stockholm",
-    "name": "Ring Katarina",
-    "address": "Katarina Bangata 66",
-    "city": "Stockholm",
-    "lat": 59.309901499999995,
-    "lng": 18.0849557,
-    "ratings": {
-      "google": 4.8,
-      "svd": 4,
-      "dn": 3,
-      "falstaff": 85
-    },
-    "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/ring-katarina",
-      "dn": "https://www.dn.se/kultur/ring-katarina-slink-in-vanlig-mat-och-vinbar-med-mycket-mackor-pa-menyn/",
-      "svd": "https://www.svd.se/a/q1d5B1/krogguiden-om-ring-katarina-inte-framst-maten-som-imponerar",
-      "falstaff": "https://www.falstaff.com/en/restaurants/ring-katarina-grossraum-stockholm",
-      "google": "https://maps.google.com/?cid=255481272734625208&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 75,
-    "bakomScoreRaw": 74.5,
-    "bakomRank": 67,
-    "metroRegion": "stockholm",
-    "priceRange": "lyx",
-    "cuisine": "Vinbar",
-    "hours": [
-      {
-        "days": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "open": "17:00",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          5,
-          6
-        ],
-        "open": "17:00",
-        "close": "00:00"
-      }
-    ],
-    "website": "https://ringkatarina.se/?utm_source=google",
-    "googleRatingCount": 88,
-    "bakomRankRegion": 41
-  },
-  {
-    "id": "suggan-vinbar-goteborg",
-    "name": "Suggan Vinbar",
-    "address": "Karl Johansgatan 58",
-    "city": "Göteborg",
-    "lat": 57.6957157,
-    "lng": 11.9231029,
-    "ratings": {
-      "google": 4.4,
-      "whiteguide": "good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/12815",
-      "google": "https://maps.google.com/?cid=8314535466578701601&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 74,
-    "bakomScoreRaw": 74.2,
-    "bakomRank": 68,
-    "metroRegion": "gothenburg",
-    "cuisine": "Vinbar",
-    "hours": [
-      {
-        "days": [
-          3,
-          4,
-          5,
-          6
-        ],
-        "open": "17:00",
-        "close": "23:00"
-      }
-    ],
-    "website": "http://www.sugganvinbar.se/",
-    "googleRatingCount": 80,
-    "bakomRankRegion": 11
-  },
-  {
-    "id": "proseccobaren-stockholm",
-    "name": "Proseccobaren",
-    "address": "Malmskillnadsgatan 21",
-    "city": "Stockholm",
-    "lat": 59.333495500000005,
-    "lng": 18.0660024,
-    "ratings": {
-      "google": 4.1,
-      "falstaff": 75
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/winebars/proseccobaren",
-      "google": "https://maps.google.com/?cid=9293978127329215804&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 74,
-    "bakomScoreRaw": 74,
-    "bakomRank": 69,
-    "metroRegion": "stockholm",
-    "cuisine": "Vinbar",
-    "hours": [
-      {
-        "days": [
-          2
-        ],
-        "open": "16:00",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          3,
-          4
-        ],
-        "open": "16:00",
-        "close": "00:00"
-      },
-      {
-        "days": [
-          5,
-          6
-        ],
-        "open": "16:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "http://www.proseccobaren.se/",
-    "googleRatingCount": 109,
-    "bakomRankRegion": 42
-  },
-  {
-    "id": "the-sparrow-wine-bar-bistro-stockholm",
-    "name": "The Sparrow Wine Bar & Bistro",
-    "address": "Birger Jarlsgatan 24",
-    "city": "Stockholm",
-    "lat": 59.3369715,
-    "lng": 18.0716698,
-    "ratings": {
-      "krogguiden": 3.8,
-      "google": 4.6
-    },
-    "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/the-sparrow-wine-bar--bistro",
-      "google": "https://maps.google.com/?cid=9952363771206266095&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 74,
-    "bakomScoreRaw": 73.6,
-    "bakomRank": 70,
-    "metroRegion": "stockholm",
-    "priceRange": "lyx",
-    "cuisine": "Vinbar",
-    "hours": [
-      {
-        "days": [
-          3,
-          4,
-          5,
-          6
-        ],
-        "open": "17:00",
-        "close": "23:00"
-      }
-    ],
-    "website": "https://www.thesparrow.se/restauranger-och-barer",
-    "phone": "08-122 173 00",
-    "googleRatingCount": 45,
-    "bakomRankRegion": 43
-  },
-  {
-    "id": "aqui-tapas-bar-stockholm",
-    "name": "Aqui Tapas & Bar",
-    "address": "Kammakargatan 9",
-    "city": "Stockholm",
-    "lat": 59.3388858,
-    "lng": 18.061442600000003,
-    "ratings": {
-      "krogguiden": 3.6,
-      "google": 4.3
-    },
-    "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/aqui-tapas-bar",
-      "google": "https://maps.google.com/?cid=7052254982537767478&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 74,
-    "bakomScoreRaw": 73.5,
-    "bakomRank": 71,
-    "metroRegion": "stockholm",
-    "priceRange": "mellan",
-    "cuisine": "Bar",
-    "hours": [
-      {
-        "days": [
-          0,
-          1,
-          2,
-          3
-        ],
-        "open": "16:00",
-        "close": "22:00"
-      },
-      {
-        "days": [
-          4
-        ],
-        "open": "16:00",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          5,
-          6
-        ],
-        "open": "16:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "http://www.aquitapas.se/",
-    "phone": "08-411 40 29",
-    "googleRatingCount": 2034,
-    "bakomRankRegion": 44
-  },
-  {
-    "id": "utopia-jazz-goteborg",
-    "name": "Utopia Jazz",
-    "address": "Karl Johansgatan 6",
-    "city": "Göteborg",
-    "lat": 57.69838300000001,
-    "lng": 11.9323728,
-    "ratings": {
-      "google": 4.6,
-      "whiteguide": "recommended"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/12139",
-      "google": "https://maps.google.com/?cid=11032118912137912395&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 73,
-    "bakomScoreRaw": 73.5,
-    "bakomRank": 72,
-    "metroRegion": "gothenburg",
-    "cuisine": "Bar",
-    "hours": [
-      {
-        "days": [
-          2,
-          3,
-          4
-        ],
-        "open": "17:00",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          5,
-          6
-        ],
-        "open": "16:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "http://utopiajazz.com/",
-    "googleRatingCount": 256,
-    "bakomRankRegion": 12
-  },
-  {
-    "id": "katarina-olkafe-stockholm",
-    "name": "Katarina Ölkafé",
-    "address": "Katarina bangata 27",
-    "city": "Stockholm",
-    "lat": 59.311655599999995,
-    "lng": 18.0793741,
-    "ratings": {
-      "krogguiden": 3.7,
-      "google": 4.4,
-      "whiteguide": "recommended"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/bars/10641",
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/katarina-olcafe",
-      "google": "https://maps.google.com/?cid=15430493491440979787&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 73,
-    "bakomScoreRaw": 73.1,
-    "bakomRank": 73,
-    "metroRegion": "stockholm",
-    "priceRange": "budget",
-    "cuisine": "Bar",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "14:00",
-        "close": "22:00"
-      },
-      {
-        "days": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "open": "16:00",
-        "close": "00:00"
-      }
-    ],
-    "website": "http://www.katarinaolkafe.se/",
-    "googleRatingCount": 651,
-    "bakomRankRegion": 45
-  },
-  {
-    "id": "bar-kusinen-linkoping",
-    "name": "Bar Kusinen",
-    "address": "Nygatan 29",
-    "city": "Linköping",
-    "lat": 58.409824699999994,
-    "lng": 15.6229467,
-    "ratings": {
-      "google": 4.5,
-      "falstaff": 75
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/bars/bar-kusinen",
-      "google": "https://maps.google.com/?cid=16870510107641115476&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 73,
-    "bakomScoreRaw": 72.7,
-    "bakomRank": 74,
-    "metroRegion": "sweden",
-    "cuisine": "Bar",
-    "hours": [
-      {
-        "days": [
-          3,
-          4
-        ],
-        "open": "17:00",
-        "close": "22:00"
-      },
-      {
-        "days": [
-          5,
-          6
-        ],
-        "open": "17:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "https://dahlbomsmat.com/bar-kusinen",
-    "phone": "013-800 08",
-    "googleRatingCount": 43
-  },
-  {
-    "id": "raspberrry-bar-jonkoping",
-    "name": "Raspberrry Bar",
-    "address": "Barnarpsgatan 35 B",
-    "city": "Jönköping",
-    "lat": 57.779973299999995,
-    "lng": 14.161781099999999,
-    "ratings": {
-      "google": 4.5,
-      "whiteguide": "good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/12591",
-      "google": "https://maps.google.com/?cid=5128811805897311621&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 72,
-    "bakomScoreRaw": 72.3,
-    "bakomRank": 75,
-    "metroRegion": "sweden",
-    "cuisine": "Cocktailbar",
-    "hours": [
-      {
-        "days": [
-          3,
-          4
-        ],
-        "open": "17:00",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          5,
-          6
-        ],
-        "open": "16:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "http://www.raspberrybar.se/",
-    "phone": "073-506 48 96",
-    "googleRatingCount": 42
-  },
-  {
-    "id": "alba-vinbar-stockholm",
-    "name": "Alba vinbar",
-    "address": "Skånegatan 88",
-    "city": "Stockholm",
-    "lat": 59.31240739999999,
-    "lng": 18.081432,
-    "ratings": {
-      "google": 4.1
-    },
-    "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/alba-vinbar",
-      "google": "https://maps.google.com/?cid=13012355058712637661&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 72,
-    "bakomScoreRaw": 72.2,
-    "bakomRank": 76,
-    "metroRegion": "stockholm",
-    "priceRange": "budget",
-    "cuisine": "Vinbar",
-    "hours": [
-      {
-        "days": [
-          0,
-          1,
-          2,
-          3,
-          4
-        ],
-        "open": "16:00",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          5,
-          6
-        ],
-        "open": "16:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "http://www.albavinbar.se/",
-    "phone": "08-36 96 50",
-    "googleRatingCount": 112,
-    "bakomRankRegion": 46
-  },
-  {
-    "id": "avec-mat-och-vinbar-stockholm",
-    "name": "Avec Mat- och Vinbar",
-    "address": "Sankt Eriksagatan 100",
-    "city": "Stockholm",
-    "lat": 59.343425100000005,
-    "lng": 18.039319499999998,
-    "ratings": {
-      "google": 4.9
-    },
-    "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/avec-mat-och-vinbar",
-      "google": "https://maps.google.com/?cid=4042528254380390595&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 72,
-    "bakomScoreRaw": 71.7,
-    "bakomRank": 77,
-    "metroRegion": "stockholm",
-    "priceRange": "mellan",
-    "cuisine": "Vinbar",
-    "hours": [
-      {
-        "days": [
-          3,
-          4,
-          5
-        ],
-        "open": "16:00",
-        "close": "22:00"
-      }
-    ],
-    "website": "https://avecstockholm.com/",
-    "phone": "076-028 61 60",
-    "googleRatingCount": 41,
-    "bakomRankRegion": 47
-  },
-  {
-    "id": "batard-stockholm",
-    "name": "Bâtard",
-    "address": "Nybrogatan 5",
-    "city": "Stockholm",
-    "lat": 59.333926500000004,
-    "lng": 18.0766562,
-    "ratings": {
-      "krogguiden": 3.5,
-      "google": 4.1,
-      "svd": 4,
-      "di": 19
-    },
-    "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/batard",
-      "svd": "https://www.svd.se/a/Avw7Ox/krogguiden-recenserar-vinbaren-batard",
-      "di": "https://www.di.se/nyheter/hogljutt-nordigt-och-djarvt-hit-gar-vi-garna-igen/",
-      "google": "https://maps.google.com/?cid=485151766214072985&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 71,
-    "bakomScoreRaw": 71.4,
-    "bakomRank": 78,
-    "metroRegion": "stockholm",
-    "priceRange": "mellan",
-    "cuisine": "Vinbar",
-    "hours": [
-      {
-        "days": [
-          2,
-          3
-        ],
-        "open": "16:00",
-        "close": "00:00"
-      },
-      {
-        "days": [
-          4,
-          5
-        ],
-        "open": "16:00",
-        "close": "01:00"
-      },
-      {
-        "days": [
-          6
-        ],
-        "open": "12:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "https://batardsthlm.se/",
-    "phone": "08-527 757 93",
-    "googleRatingCount": 32,
-    "bakomRankRegion": 48
-  },
-  {
     "id": "cave-nizza-stockholm",
     "name": "Cave Nizza",
     "address": "Borgmästargatan 7",
@@ -3826,7 +3528,7 @@
     },
     "bakomScore": 71,
     "bakomScoreRaw": 71.2,
-    "bakomRank": 79,
+    "bakomRank": 73,
     "metroRegion": "stockholm",
     "priceRange": "mellan",
     "cuisine": "Bar",
@@ -3851,7 +3553,7 @@
     "website": "http://www.cafenizza.se/",
     "phone": "08-640 99 50",
     "googleRatingCount": 32,
-    "bakomRankRegion": 49
+    "bakomRankRegion": 46
   },
   {
     "id": "volare-visby",
@@ -3870,7 +3572,7 @@
     },
     "bakomScore": 71,
     "bakomScoreRaw": 70.9,
-    "bakomRank": 80,
+    "bakomRank": 74,
     "metroRegion": "sweden",
     "cuisine": "Vinbar",
     "hours": [
@@ -3897,59 +3599,52 @@
     "googleRatingCount": 220
   },
   {
-    "id": "chapter-house-vaxjo",
-    "name": "Chapter House",
-    "address": "Klostergatan 7",
-    "city": "Växjö",
-    "lat": 56.878557699999995,
-    "lng": 14.8070571,
+    "id": "ring-katarina-stockholm",
+    "name": "Ring Katarina",
+    "address": "Katarina Bangata 66",
+    "city": "Stockholm",
+    "lat": 59.309901499999995,
+    "lng": 18.0849557,
     "ratings": {
-      "google": 4.4,
-      "falstaff": 65
+      "google": 4.8,
+      "svd": 4,
+      "dn": 3
     },
     "links": {
-      "falstaff": "https://www.falstaff.com/en/bars/chapter-house",
-      "google": "https://maps.google.com/?cid=560116674635069093&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/ring-katarina",
+      "dn": "https://www.dn.se/kultur/ring-katarina-slink-in-vanlig-mat-och-vinbar-med-mycket-mackor-pa-menyn/",
+      "svd": "https://www.svd.se/a/q1d5B1/krogguiden-om-ring-katarina-inte-framst-maten-som-imponerar",
+      "google": "https://maps.google.com/?cid=255481272734625208&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 71,
     "bakomScoreRaw": 70.9,
-    "bakomRank": 81,
-    "metroRegion": "sweden",
-    "cuisine": "Bar",
+    "bakomRank": 75,
+    "metroRegion": "stockholm",
+    "priceRange": "lyx",
+    "cuisine": "Vinbar",
     "hours": [
       {
         "days": [
-          2
+          1,
+          2,
+          3,
+          4
         ],
-        "open": "16:00",
+        "open": "17:00",
         "close": "23:00"
       },
       {
         "days": [
-          3,
-          4
-        ],
-        "open": "16:00",
-        "close": "00:00"
-      },
-      {
-        "days": [
-          5
-        ],
-        "open": "15:00",
-        "close": "01:00"
-      },
-      {
-        "days": [
+          5,
           6
         ],
-        "open": "12:00",
-        "close": "01:00"
+        "open": "17:00",
+        "close": "00:00"
       }
     ],
-    "website": "http://www.chapterhouse.se/",
-    "phone": "0470-399 91",
-    "googleRatingCount": 718
+    "website": "https://ringkatarina.se/?utm_source=google",
+    "googleRatingCount": 88,
+    "bakomRankRegion": 47
   },
   {
     "id": "tiki-room-stockholm",
@@ -3967,7 +3662,7 @@
     },
     "bakomScore": 70,
     "bakomScoreRaw": 70.4,
-    "bakomRank": 82,
+    "bakomRank": 76,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Cocktailbar",
@@ -3992,107 +3687,7 @@
     "website": "http://tikiroomstockholm.com/",
     "phone": "08-33 15 55",
     "googleRatingCount": 511,
-    "bakomRankRegion": 50
-  },
-  {
-    "id": "vada-mat-vinbar-stockholm",
-    "name": "Vadå Mat & Vinbar",
-    "address": "Sankt Eriksplan 5",
-    "city": "Stockholm",
-    "lat": 59.3390444,
-    "lng": 18.038501699999998,
-    "ratings": {
-      "google": 4.5,
-      "falstaff": 65
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/winebars/vadaa-mat-vinbar",
-      "google": "https://maps.google.com/?cid=4881600294590981503&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 70,
-    "bakomScoreRaw": 70.1,
-    "bakomRank": 83,
-    "metroRegion": "stockholm",
-    "cuisine": "Vinbar",
-    "hours": [
-      {
-        "days": [
-          1,
-          2
-        ],
-        "open": "16:00",
-        "close": "22:00"
-      },
-      {
-        "days": [
-          3,
-          4
-        ],
-        "open": "16:00",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          5
-        ],
-        "open": "16:00",
-        "close": "00:00"
-      },
-      {
-        "days": [
-          6
-        ],
-        "open": "14:00",
-        "close": "00:00"
-      }
-    ],
-    "website": "https://vadasthlm.se/?utm_source=google",
-    "googleRatingCount": 80,
-    "bakomRankRegion": 51
-  },
-  {
-    "id": "stjartilleriet-stockholm",
-    "name": "Stjärtilleriet",
-    "address": "Artillerigatan 13",
-    "city": "Stockholm",
-    "lat": 59.3346992,
-    "lng": 18.0811509,
-    "ratings": {
-      "google": 4.5
-    },
-    "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/stjartilleriet",
-      "google": "https://maps.google.com/?cid=9911002093492977268&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 70,
-    "bakomScoreRaw": 70,
-    "bakomRank": 84,
-    "metroRegion": "stockholm",
-    "priceRange": "budget",
-    "cuisine": "Bar",
-    "hours": [
-      {
-        "days": [
-          2,
-          3,
-          4
-        ],
-        "open": "17:00",
-        "close": "00:00"
-      },
-      {
-        "days": [
-          5,
-          6
-        ],
-        "open": "17:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "http://www.restaurangartilleriet.se/",
-    "phone": "08-664 34 30",
-    "googleRatingCount": 48,
-    "bakomRankRegion": 52
+    "bakomRankRegion": 48
   },
   {
     "id": "benchwarmers-brewing-taproom-helsingborg",
@@ -4111,7 +3706,7 @@
     },
     "bakomScore": 70,
     "bakomScoreRaw": 69.7,
-    "bakomRank": 85,
+    "bakomRank": 77,
     "metroRegion": "sweden",
     "cuisine": "Bar",
     "hours": [
@@ -4144,6 +3739,59 @@
     "googleRatingCount": 490
   },
   {
+    "id": "batard-stockholm",
+    "name": "Bâtard",
+    "address": "Nybrogatan 5",
+    "city": "Stockholm",
+    "lat": 59.333926500000004,
+    "lng": 18.0766562,
+    "ratings": {
+      "krogguiden": 3.5,
+      "google": 4.1,
+      "svd": 4
+    },
+    "links": {
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/batard",
+      "svd": "https://www.svd.se/a/Avw7Ox/krogguiden-recenserar-vinbaren-batard",
+      "google": "https://maps.google.com/?cid=485151766214072985&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 70,
+    "bakomScoreRaw": 69.6,
+    "bakomRank": 78,
+    "metroRegion": "stockholm",
+    "priceRange": "mellan",
+    "cuisine": "Vinbar",
+    "hours": [
+      {
+        "days": [
+          2,
+          3
+        ],
+        "open": "16:00",
+        "close": "00:00"
+      },
+      {
+        "days": [
+          4,
+          5
+        ],
+        "open": "16:00",
+        "close": "01:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "12:00",
+        "close": "01:00"
+      }
+    ],
+    "website": "https://batardsthlm.se/",
+    "phone": "08-527 757 93",
+    "googleRatingCount": 32,
+    "bakomRankRegion": 49
+  },
+  {
     "id": "basque-goteborg",
     "name": "Basque",
     "address": "Magasinsgatan 3",
@@ -4160,7 +3808,7 @@
     },
     "bakomScore": 69,
     "bakomScoreRaw": 69,
-    "bakomRank": 86,
+    "bakomRank": 79,
     "metroRegion": "gothenburg",
     "hours": [
       {
@@ -4190,7 +3838,7 @@
     "website": "https://basque.se/?utm_source=google",
     "phone": "031-711 88 38",
     "googleRatingCount": 488,
-    "bakomRankRegion": 13
+    "bakomRankRegion": 12
   },
   {
     "id": "kungsholmens-vinbar-stockholm",
@@ -4209,7 +3857,7 @@
     },
     "bakomScore": 69,
     "bakomScoreRaw": 69,
-    "bakomRank": 87,
+    "bakomRank": 80,
     "metroRegion": "stockholm",
     "cuisine": "Vinbar",
     "hours": [
@@ -4234,7 +3882,7 @@
     "website": "http://www.kungsholmensvinbar.se/",
     "phone": "070-531 52 86",
     "googleRatingCount": 177,
-    "bakomRankRegion": 53
+    "bakomRankRegion": 50
   },
   {
     "id": "de-klomp-linkoping",
@@ -4253,7 +3901,7 @@
     },
     "bakomScore": 69,
     "bakomScoreRaw": 69,
-    "bakomRank": 88,
+    "bakomRank": 81,
     "metroRegion": "sweden",
     "cuisine": "Gastropub",
     "hours": [
@@ -4303,7 +3951,7 @@
     },
     "bakomScore": 69,
     "bakomScoreRaw": 69,
-    "bakomRank": 89,
+    "bakomRank": 82,
     "metroRegion": "malmo",
     "cuisine": "Vinbar",
     "hours": [
@@ -4329,7 +3977,7 @@
     "website": "https://www.kyrkogatanfem.se/",
     "phone": "046-14 14 63",
     "googleRatingCount": 132,
-    "bakomRankRegion": 7
+    "bakomRankRegion": 6
   },
   {
     "id": "drinks-20-goteborg",
@@ -4348,7 +3996,7 @@
     },
     "bakomScore": 69,
     "bakomScoreRaw": 69,
-    "bakomRank": 90,
+    "bakomRank": 83,
     "metroRegion": "gothenburg",
     "cuisine": "Bar",
     "hours": [
@@ -4381,104 +4029,57 @@
     "website": "http://drinks20.se/",
     "phone": "031-81 10 55",
     "googleRatingCount": 331,
-    "bakomRankRegion": 14
+    "bakomRankRegion": 13
   },
   {
-    "id": "kung-carls-cocktailbar-stockholm",
-    "name": "Kung Carls Cocktailbar",
-    "address": "Birger Jarlsgatan 21A",
+    "id": "vina-stockholm",
+    "name": "Vina",
+    "address": "Sofiagatan 1",
     "city": "Stockholm",
-    "lat": 59.33644099999999,
-    "lng": 18.0715435,
+    "lat": 59.311578100000006,
+    "lng": 18.0820901,
     "ratings": {
-      "google": 3.4,
-      "falstaff": 75
+      "google": 4.4,
+      "whiteguide": "recommended"
     },
     "links": {
-      "falstaff": "https://www.falstaff.com/en/bars/kung-carls-cocktailbar",
-      "google": "https://maps.google.com/?cid=8341157329802898240&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+      "whiteguide": "https://whiteguide.com/se/sv/bars/10667",
+      "google": "https://maps.google.com/?cid=6976103880000503457&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 69,
     "bakomScoreRaw": 69,
-    "bakomRank": 91,
+    "bakomRank": 84,
     "metroRegion": "stockholm",
-    "cuisine": "Bar",
+    "cuisine": "Europeiskt",
     "hours": [
       {
         "days": [
-          0
-        ],
-        "open": "07:30",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          1,
           2,
           3,
           4
         ],
-        "open": "07:30",
-        "close": "00:00"
-      },
-      {
-        "days": [
-          5,
-          6
-        ],
-        "open": "07:30",
-        "close": "01:00"
-      }
-    ],
-    "website": "http://www.kungcarl.se/cocktailbaren",
-    "phone": "08-463 50 80",
-    "googleRatingCount": 32,
-    "bakomRankRegion": 54
-  },
-  {
-    "id": "motel-l-lund-skybar-malmo",
-    "name": "Motel L Lund Skybar",
-    "address": "Telefongatan 14",
-    "city": "Malmö",
-    "lat": 55.7174207,
-    "lng": 13.2294099,
-    "ratings": {
-      "google": 4.1,
-      "falstaff": 65
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/restaurants/motel-l-lund-skybar",
-      "google": "https://maps.google.com/?cid=16780292415808576115&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 68,
-    "bakomScoreRaw": 68.5,
-    "bakomRank": 92,
-    "metroRegion": "malmo",
-    "cuisine": "Bar",
-    "hours": [
-      {
-        "days": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "open": "17:00",
+        "open": "16:00",
         "close": "22:00"
       },
       {
         "days": [
-          5,
-          6
+          5
         ],
         "open": "16:00",
         "close": "23:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "14:00",
+        "close": "23:00"
       }
     ],
-    "website": "https://ligula.se/motel-l/motel-l-lund/mat-dryck/",
-    "phone": "046-440 03 00",
-    "googleRatingCount": 183,
-    "bakomRankRegion": 8
+    "website": "https://vinaaa.squarespace.com/",
+    "phone": "070-406 66 26",
+    "googleRatingCount": 280,
+    "bakomRankRegion": 51
   },
   {
     "id": "riggan-stockholm",
@@ -4497,7 +4098,7 @@
     },
     "bakomScore": 68,
     "bakomScoreRaw": 67.5,
-    "bakomRank": 93,
+    "bakomRank": 85,
     "metroRegion": "stockholm",
     "priceRange": "mellan",
     "cuisine": "Bar",
@@ -4527,60 +4128,7 @@
     ],
     "website": "https://riggansthlm.se/",
     "googleRatingCount": 549,
-    "bakomRankRegion": 55
-  },
-  {
-    "id": "bar-europa-stockholm",
-    "name": "Bar Europa",
-    "address": "Bysistorget 6",
-    "city": "Stockholm",
-    "lat": 59.318388,
-    "lng": 18.0557436,
-    "ratings": {
-      "google": 4.7,
-      "svd": 3,
-      "falstaff": 75
-    },
-    "links": {
-      "svd": "https://www.svd.se/a/qPVV1O/krogrecension-av-bar-europa-bitvis-gott-pa-ironisk-hipstersylta",
-      "falstaff": "https://www.falstaff.com/en/restaurants/bar-europa",
-      "google": "https://maps.google.com/?cid=8330988782714662645&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 67,
-    "bakomScoreRaw": 67.2,
-    "bakomRank": 94,
-    "metroRegion": "stockholm",
-    "priceRange": "mellan",
-    "cuisine": "Bar",
-    "hours": [
-      {
-        "days": [
-          2,
-          3,
-          4
-        ],
-        "open": "16:00",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          5
-        ],
-        "open": "16:00",
-        "close": "01:00"
-      },
-      {
-        "days": [
-          6
-        ],
-        "open": "14:00",
-        "close": "01:00"
-      }
-    ],
-    "website": "https://www.bareuropa.eu/",
-    "phone": "08-22 65 40",
-    "googleRatingCount": 57,
-    "bakomRankRegion": 56
+    "bakomRankRegion": 52
   },
   {
     "id": "pet-sounds-bar-stockholm",
@@ -4603,7 +4151,7 @@
     },
     "bakomScore": 67,
     "bakomScoreRaw": 66.7,
-    "bakomRank": 95,
+    "bakomRank": 86,
     "metroRegion": "stockholm",
     "priceRange": "lyx",
     "cuisine": "Bar",
@@ -4623,63 +4171,7 @@
     "website": "https://petsounds.se/bar",
     "phone": "08-35 11 80",
     "googleRatingCount": 32,
-    "bakomRankRegion": 57
-  },
-  {
-    "id": "black-bird-uppsala",
-    "name": "Black Bird",
-    "address": "Roslagsgatan 1",
-    "city": "Uppsala",
-    "lat": 59.85962999999999,
-    "lng": 17.6459927,
-    "ratings": {
-      "google": 4.3,
-      "falstaff": 65
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/bars/black-bird",
-      "google": "https://maps.google.com/?cid=470054244338135160&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 67,
-    "bakomScoreRaw": 66.6,
-    "bakomRank": 96,
-    "metroRegion": "sweden",
-    "cuisine": "Bar",
-    "hours": [
-      {
-        "days": [
-          1
-        ],
-        "open": "11:00",
-        "close": "14:00"
-      },
-      {
-        "days": [
-          2,
-          3
-        ],
-        "open": "11:00",
-        "close": "18:00"
-      },
-      {
-        "days": [
-          4
-        ],
-        "open": "11:00",
-        "close": "21:00"
-      },
-      {
-        "days": [
-          5,
-          6
-        ],
-        "open": "11:00",
-        "close": "22:00"
-      }
-    ],
-    "website": "https://www.blackbirduppsala.se/",
-    "phone": "018-10 73 30",
-    "googleRatingCount": 46
+    "bakomRankRegion": 53
   },
   {
     "id": "spesso-tetto-sweden",
@@ -4697,7 +4189,7 @@
     },
     "bakomScore": 66,
     "bakomScoreRaw": 66.1,
-    "bakomRank": 97,
+    "bakomRank": 87,
     "metroRegion": "stockholm",
     "cuisine": "Bar",
     "hours": [
@@ -4741,7 +4233,7 @@
     ],
     "website": "https://spesso.se/terrass/",
     "googleRatingCount": 64,
-    "bakomRankRegion": 58
+    "bakomRankRegion": 54
   },
   {
     "id": "the-bar-pa-the-barn-goteborg",
@@ -4760,7 +4252,7 @@
     },
     "bakomScore": 66,
     "bakomScoreRaw": 65.5,
-    "bakomRank": 98,
+    "bakomRank": 88,
     "metroRegion": "gothenburg",
     "cuisine": "Bar",
     "hours": [
@@ -4785,7 +4277,7 @@
     "website": "http://www.thebarn.se/",
     "phone": "031-352 49 49",
     "googleRatingCount": 23,
-    "bakomRankRegion": 15
+    "bakomRankRegion": 14
   },
   {
     "id": "pelago-stockholm",
@@ -4804,7 +4296,7 @@
     },
     "bakomScore": 65,
     "bakomScoreRaw": 65.1,
-    "bakomRank": 99,
+    "bakomRank": 89,
     "metroRegion": "stockholm",
     "priceRange": "mellan",
     "cuisine": "Bar",
@@ -4831,7 +4323,7 @@
     ],
     "website": "https://pelagosthlm.se/",
     "googleRatingCount": 176,
-    "bakomRankRegion": 59
+    "bakomRankRegion": 55
   },
   {
     "id": "riche-fenix-stockholm",
@@ -4854,7 +4346,7 @@
     },
     "bakomScore": 65,
     "bakomScoreRaw": 64.6,
-    "bakomRank": 100,
+    "bakomRank": 90,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Bar",
@@ -4892,91 +4384,7 @@
     ],
     "website": "http://richefenix.se/",
     "googleRatingCount": 164,
-    "bakomRankRegion": 60
-  },
-  {
-    "id": "sju-flaskor-uppsala",
-    "name": "Sju Flaskor",
-    "address": "Olof Palmes plats 2",
-    "city": "Uppsala",
-    "lat": 59.8588238,
-    "lng": 17.6456654,
-    "ratings": {
-      "google": 5,
-      "falstaff": 65
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/bars/sju-flaskor",
-      "google": "https://maps.google.com/?cid=739432948285445397&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 65,
-    "bakomScoreRaw": 64.6,
-    "bakomRank": 101,
-    "metroRegion": "sweden",
-    "cuisine": "Bar",
-    "hours": [
-      {
-        "days": [
-          3,
-          4
-        ],
-        "open": "17:00",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          5,
-          6
-        ],
-        "open": "15:00",
-        "close": "00:00"
-      }
-    ],
-    "website": "http://7flaskor.se/",
-    "phone": "070-312 35 56",
-    "googleRatingCount": 7
-  },
-  {
-    "id": "plan2-uppsala",
-    "name": "Plan2",
-    "address": "Fyristorg 8",
-    "city": "Uppsala",
-    "lat": 59.85794099999999,
-    "lng": 17.6362239,
-    "ratings": {
-      "google": 3.7,
-      "falstaff": 65
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/bars/plan2",
-      "google": "https://maps.google.com/?cid=15759658659870873411&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 64,
-    "bakomScoreRaw": 64.2,
-    "bakomRank": 102,
-    "metroRegion": "sweden",
-    "cuisine": "Bar",
-    "hours": [
-      {
-        "days": [
-          3,
-          4
-        ],
-        "open": "16:00",
-        "close": "22:00"
-      },
-      {
-        "days": [
-          5,
-          6
-        ],
-        "open": "16:00",
-        "close": "02:00"
-      }
-    ],
-    "website": "https://ibericoplan2.se/?utm_source=google&utm_medium=organic&utm_campaign=gbp-listing",
-    "phone": "018-15 05 31",
-    "googleRatingCount": 29
+    "bakomRankRegion": 56
   },
   {
     "id": "ama-rooftoop-bar-helsingborg",
@@ -4995,7 +4403,7 @@
     },
     "bakomScore": 64,
     "bakomScoreRaw": 63.9,
-    "bakomRank": 103,
+    "bakomRank": 91,
     "metroRegion": "sweden",
     "cuisine": "Restaurang",
     "hours": [
@@ -5051,7 +4459,7 @@
     },
     "bakomScore": 64,
     "bakomScoreRaw": 63.6,
-    "bakomRank": 104,
+    "bakomRank": 92,
     "metroRegion": "stockholm",
     "priceRange": "mellan",
     "cuisine": "Vinbar",
@@ -5077,7 +4485,7 @@
     "website": "http://baringrid.se/",
     "phone": "08-562 973 73",
     "googleRatingCount": 188,
-    "bakomRankRegion": 61
+    "bakomRankRegion": 57
   },
   {
     "id": "origo-bar-stockholm",
@@ -5096,7 +4504,7 @@
     },
     "bakomScore": 63,
     "bakomScoreRaw": 63.3,
-    "bakomRank": 105,
+    "bakomRank": 93,
     "metroRegion": "stockholm",
     "cuisine": "Bar",
     "hours": [
@@ -5128,7 +4536,7 @@
     ],
     "website": "https://www.bliquebynobis.se/origo",
     "googleRatingCount": 2,
-    "bakomRankRegion": 62
+    "bakomRankRegion": 58
   },
   {
     "id": "kouthoofd-familie-winkel-sweden",
@@ -5147,7 +4555,7 @@
     },
     "bakomScore": 61,
     "bakomScoreRaw": 61,
-    "bakomRank": 106,
+    "bakomRank": 94,
     "metroRegion": "stockholm",
     "priceRange": "mellan",
     "cuisine": "Bar",
@@ -5178,7 +4586,7 @@
     ],
     "website": "https://www.kouthoofdfamiliewinkel.se/",
     "googleRatingCount": 71,
-    "bakomRankRegion": 63
+    "bakomRankRegion": 59
   },
   {
     "id": "kollektivet-sweden",
@@ -5197,12 +4605,12 @@
     },
     "bakomScore": 60,
     "bakomScoreRaw": 59.9,
-    "bakomRank": 107,
+    "bakomRank": 95,
     "metroRegion": "stockholm",
     "cuisine": "Bar",
     "website": "https://stadsgardsterminalen.com/kollektivet-livet-bar-och-scen/",
     "googleRatingCount": 242,
-    "bakomRankRegion": 64
+    "bakomRankRegion": 60
   },
   {
     "id": "orangeriet-sweden",
@@ -5221,7 +4629,7 @@
     },
     "bakomScore": 49,
     "bakomScoreRaw": 48.7,
-    "bakomRank": 108,
+    "bakomRank": 96,
     "metroRegion": "stockholm",
     "priceRange": "mellan",
     "cuisine": "Bar",
@@ -5267,6 +4675,6 @@
     "website": "https://trattorian.se/orangeriet/",
     "phone": "08-684 238 70",
     "googleRatingCount": 2159,
-    "bakomRankRegion": 65
+    "bakomRankRegion": 61
   }
 ]

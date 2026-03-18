@@ -1,32 +1,5 @@
 [
   {
-    "id": "grand-hotel-stockholm",
-    "name": "Grand Hotel",
-    "address": "Södra Blasieholmshamnen 8",
-    "city": "Stockholm",
-    "lat": 59.3297258,
-    "lng": 18.075713399999998,
-    "ratings": {
-      "google": 4.6,
-      "michelin": "2_key",
-      "whiteguide": "global_master_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10599",
-      "dn": "https://www.dn.se/kultur/grand-hotel-hotellets-uteserveringar-har-ett-av-stans-basta-lagen/",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/stockholm/grand-hotel-stockholm-8262",
-      "google": "https://maps.google.com/?cid=10149802834641878119&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 96,
-    "bakomScoreRaw": 96.2,
-    "bakomRank": 1,
-    "metroRegion": "stockholm",
-    "website": "http://www.grandhotel.se/",
-    "phone": "08-679 35 00",
-    "googleRatingCount": 4225,
-    "bakomRankRegion": 1
-  },
-  {
     "id": "ett-hem-stockholm",
     "name": "Ett Hem",
     "address": "Sköldungagatan 2",
@@ -49,12 +22,38 @@
     },
     "bakomScore": 95,
     "bakomScoreRaw": 94.9,
-    "bakomRank": 2,
+    "bakomRank": 1,
     "metroRegion": "stockholm",
     "priceRange": "lyx",
     "website": "http://etthem.se/",
     "phone": "08-20 05 90",
     "googleRatingCount": 430,
+    "bakomRankRegion": 1
+  },
+  {
+    "id": "lydmar-hotel-stockholm",
+    "name": "Lydmar Hotel",
+    "address": "Södra Blasieholmshamnen 2",
+    "city": "Stockholm",
+    "lat": 59.329018,
+    "lng": 18.077101799999998,
+    "ratings": {
+      "google": 4.4,
+      "michelin": "1_key",
+      "whiteguide": "global_master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10595",
+      "michelin": "https://guide.michelin.com/se/en/hotels-stays/stockholm/lydmar-hotel-5807",
+      "google": "https://maps.google.com/?cid=18342209435558570350&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 93,
+    "bakomScoreRaw": 93.1,
+    "bakomRank": 2,
+    "metroRegion": "stockholm",
+    "website": "http://www.lydmar.com/",
+    "phone": "08-22 31 60",
+    "googleRatingCount": 929,
     "bakomRankRegion": 2
   },
   {
@@ -66,16 +65,14 @@
     "lng": 11.9890381,
     "ratings": {
       "google": 4.7,
-      "whiteguide": "global_master_class",
-      "falstaff": 85
+      "whiteguide": "global_master_class"
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/hotels/10573",
-      "falstaff": "https://www.falstaff.com/en/restaurants/upper-house-upper-house-hotel-goeteborg",
       "google": "https://maps.google.com/?cid=438548912094925604&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
-    "bakomScore": 94,
-    "bakomScoreRaw": 93.9,
+    "bakomScore": 93,
+    "bakomScoreRaw": 93.1,
     "bakomRank": 3,
     "metroRegion": "gothenburg",
     "hours": [
@@ -91,6 +88,31 @@
     "phone": "031-708 82 00",
     "googleRatingCount": 911,
     "bakomRankRegion": 1
+  },
+  {
+    "id": "grand-hotel-stockholm",
+    "name": "Grand Hotel",
+    "address": "Södra Blasieholmshamnen 8",
+    "city": "Stockholm",
+    "lat": 59.3297258,
+    "lng": 18.075713399999998,
+    "ratings": {
+      "google": 4.6,
+      "whiteguide": "global_master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10599",
+      "dn": "https://www.dn.se/kultur/grand-hotel-hotellets-uteserveringar-har-ett-av-stans-basta-lagen/",
+      "google": "https://maps.google.com/?cid=10149802834641878119&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 92,
+    "bakomScoreRaw": 92.5,
+    "bakomRank": 4,
+    "metroRegion": "stockholm",
+    "website": "http://www.grandhotel.se/",
+    "phone": "08-679 35 00",
+    "googleRatingCount": 4225,
+    "bakomRankRegion": 3
   },
   {
     "id": "bank-hotel-stockholm",
@@ -111,7 +133,7 @@
     },
     "bakomScore": 92,
     "bakomScoreRaw": 91.7,
-    "bakomRank": 4,
+    "bakomRank": 5,
     "metroRegion": "stockholm",
     "hours": [
       {
@@ -125,7 +147,7 @@
     "website": "http://bankhotel.se/",
     "phone": "08-598 580 00",
     "googleRatingCount": 754,
-    "bakomRankRegion": 3
+    "bakomRankRegion": 4
   },
   {
     "id": "hotel-frantz-stockholm",
@@ -146,7 +168,7 @@
     },
     "bakomScore": 92,
     "bakomScoreRaw": 91.7,
-    "bakomRank": 5,
+    "bakomRank": 6,
     "metroRegion": "stockholm",
     "hours": [
       {
@@ -160,7 +182,7 @@
     "website": "http://hotelfrantz.se/",
     "phone": "08-442 16 80",
     "googleRatingCount": 847,
-    "bakomRankRegion": 4
+    "bakomRankRegion": 5
   },
   {
     "id": "nobis-hotel-stockholm-stockholm",
@@ -181,7 +203,7 @@
     },
     "bakomScore": 91,
     "bakomScoreRaw": 91.4,
-    "bakomRank": 6,
+    "bakomRank": 7,
     "metroRegion": "stockholm",
     "hours": [
       {
@@ -195,66 +217,7 @@
     "website": "http://www.nobishotel.se/",
     "phone": "08-614 10 00",
     "googleRatingCount": 1314,
-    "bakomRankRegion": 5
-  },
-  {
-    "id": "wanas-restaurant-hotel-knislinge",
-    "name": "Wanås Restaurant Hotel",
-    "address": "Vanås",
-    "city": "Knislinge",
-    "lat": 56.1867678,
-    "lng": 14.046846599999999,
-    "ratings": {
-      "google": 4.8,
-      "whiteguide": "master_class",
-      "falstaff": 95
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10554",
-      "falstaff": "https://www.falstaff.com/en/hotels/wanaas-restaurant-hotel",
-      "google": "https://maps.google.com/?cid=4727504351893930499&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 91,
-    "bakomScoreRaw": 91,
-    "bakomRank": 7,
-    "metroRegion": "sweden",
-    "website": "http://www.wanasrh.se/",
-    "phone": "044-253 15 81",
-    "googleRatingCount": 28
-  },
-  {
-    "id": "bomans-trosa",
-    "name": "Bomans",
-    "address": "Östra Hamnplan",
-    "city": "Trosa",
-    "lat": 58.893919999999994,
-    "lng": 17.552549,
-    "ratings": {
-      "google": 4.4,
-      "whiteguide": "master_class",
-      "falstaff": 85
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/12488",
-      "falstaff": "https://www.falstaff.com/en/restaurants/bomans-restaurang",
-      "google": "https://maps.google.com/?cid=14443540345097587711&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 90,
-    "bakomScoreRaw": 90.2,
-    "bakomRank": 8,
-    "metroRegion": "sweden",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "https://www.bomans.se/",
-    "phone": "0156-525 00",
-    "googleRatingCount": 883
+    "bakomRankRegion": 6
   },
   {
     "id": "kalk-hotel-visby",
@@ -273,7 +236,7 @@
     },
     "bakomScore": 90,
     "bakomScoreRaw": 89.9,
-    "bakomRank": 9,
+    "bakomRank": 8,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -307,12 +270,11 @@
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/hotels/10551",
-      "falstaff": "https://www.falstaff.com/en/hotels/eriksberg-visenten",
       "google": "https://maps.google.com/?cid=11896574470865229600&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 89,
     "bakomScoreRaw": 89.3,
-    "bakomRank": 10,
+    "bakomRank": 9,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -352,12 +314,12 @@
     },
     "bakomScore": 89,
     "bakomScoreRaw": 89,
-    "bakomRank": 11,
+    "bakomRank": 10,
     "metroRegion": "stockholm",
     "website": "http://www.hotelruth.se/",
     "phone": "08-15 04 20",
     "googleRatingCount": 369,
-    "bakomRankRegion": 6
+    "bakomRankRegion": 7
   },
   {
     "id": "the-sparrow-hotel-stockholm",
@@ -376,12 +338,12 @@
     },
     "bakomScore": 89,
     "bakomScoreRaw": 88.7,
-    "bakomRank": 12,
+    "bakomRank": 11,
     "metroRegion": "stockholm",
     "website": "http://www.thesparrow.se/",
     "phone": "08-122 173 00",
     "googleRatingCount": 385,
-    "bakomRankRegion": 7
+    "bakomRankRegion": 8
   },
   {
     "id": "villa-alma-visby",
@@ -400,7 +362,7 @@
     },
     "bakomScore": 89,
     "bakomScoreRaw": 88.7,
-    "bakomRank": 13,
+    "bakomRank": 12,
     "metroRegion": "sweden",
     "website": "http://www.villaalma.se/",
     "phone": "0498-20 61 00",
@@ -423,7 +385,7 @@
     },
     "bakomScore": 88,
     "bakomScoreRaw": 88,
-    "bakomRank": 14,
+    "bakomRank": 13,
     "metroRegion": "stockholm",
     "hours": [
       {
@@ -444,7 +406,7 @@
     "website": "http://www.sigtunastadshotell.se/",
     "phone": "08-592 501 00",
     "googleRatingCount": 638,
-    "bakomRankRegion": 8
+    "bakomRankRegion": 9
   },
   {
     "id": "hotel-tylosand-halmstad",
@@ -463,7 +425,7 @@
     },
     "bakomScore": 88,
     "bakomScoreRaw": 88,
-    "bakomRank": 15,
+    "bakomRank": 14,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -477,6 +439,38 @@
     "website": "https://www.tylosand.se/",
     "phone": "035-305 00",
     "googleRatingCount": 3305
+  },
+  {
+    "id": "bomans-trosa",
+    "name": "Bomans",
+    "address": "Östra Hamnplan",
+    "city": "Trosa",
+    "lat": 58.893919999999994,
+    "lng": 17.552549,
+    "ratings": {
+      "google": 4.4,
+      "whiteguide": "master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/12488",
+      "google": "https://maps.google.com/?cid=14443540345097587711&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 88,
+    "bakomScoreRaw": 88,
+    "bakomRank": 15,
+    "metroRegion": "sweden",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "https://www.bomans.se/",
+    "phone": "0156-525 00",
+    "googleRatingCount": 883
   },
   {
     "id": "var-gard-saltsjobaden",
@@ -515,7 +509,128 @@
     "website": "http://www.vargard.se/",
     "phone": "08-748 77 00",
     "googleRatingCount": 750,
-    "bakomRankRegion": 9
+    "bakomRankRegion": 10
+  },
+  {
+    "id": "hotel-draken-goteborg",
+    "name": "Hotel Draken",
+    "address": "Olof Palmes plats 2",
+    "city": "Göteborg",
+    "lat": 57.700793999999995,
+    "lng": 11.9530982,
+    "ratings": {
+      "google": 4.3,
+      "whiteguide": "master_class",
+      "di": 20
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/12627",
+      "di": "https://www.di.se/nyheter/svindlande-priser-pa-stordalens-brasserie/",
+      "google": "https://maps.google.com/?cid=9668907662037019779&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 88,
+    "bakomScoreRaw": 87.8,
+    "bakomRank": 17,
+    "metroRegion": "gothenburg",
+    "priceRange": "lyx",
+    "website": "https://www.strawberry.se/hotell/sverige/goteborg/clarion-hotel-draken/?utm_campaign=gmb-listing&utm_medium=organic&utm_source=google",
+    "phone": "031-305 01 60",
+    "googleRatingCount": 956,
+    "bakomRankRegion": 2
+  },
+  {
+    "id": "arctic-bath-harads",
+    "name": "Arctic Bath",
+    "address": "Ramdalsvägen 10",
+    "city": "Harads",
+    "lat": 66.0886927,
+    "lng": 20.9381611,
+    "ratings": {
+      "google": 4.8,
+      "michelin": "1_key",
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/12034",
+      "michelin": "https://guide.michelin.com/se/en/hotels-stays/harads/arctic-bath-15340",
+      "google": "https://maps.google.com/?cid=8876658739539816895&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 88,
+    "bakomScoreRaw": 87.6,
+    "bakomRank": 18,
+    "metroRegion": "sweden",
+    "website": "http://www.arcticbath.se/",
+    "phone": "0928-70 30 40",
+    "googleRatingCount": 167
+  },
+  {
+    "id": "radisson-collection-strand-hotel-stockholm",
+    "name": "Radisson Collection Strand Hotel",
+    "address": "Nybrokajen 9",
+    "city": "Stockholm",
+    "lat": 59.33093,
+    "lng": 18.07705,
+    "ratings": {
+      "google": 4.3,
+      "whiteguide": "master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10591",
+      "google": "https://maps.google.com/?cid=18248162776908311081&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 87,
+    "bakomScoreRaw": 87.4,
+    "bakomRank": 19,
+    "metroRegion": "stockholm",
+    "website": "https://www.radissonhotels.com/en-us/hotels/radisson-collection-stockholm-strand?cid=a:se+b:gmb+c:emea+i:local+e:rco+d:nob+h:SESTOSTR",
+    "phone": "08-506 640 00",
+    "googleRatingCount": 1290,
+    "bakomRankRegion": 11
+  },
+  {
+    "id": "hotel-diplomat-stockholm",
+    "name": "Hotel Diplomat",
+    "address": "Strandvägen 7C",
+    "city": "Stockholm",
+    "lat": 59.331988900000006,
+    "lng": 18.080275,
+    "ratings": {
+      "google": 4.3,
+      "whiteguide": "master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10604",
+      "google": "https://maps.google.com/?cid=7687571761136722215&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 87,
+    "bakomScoreRaw": 87.4,
+    "bakomRank": 20,
+    "metroRegion": "stockholm",
+    "hours": [
+      {
+        "days": [
+          0,
+          6
+        ],
+        "open": "07:30",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "open": "06:30",
+        "close": "22:30"
+      }
+    ],
+    "website": "http://www.diplomathotel.com/",
+    "phone": "08-459 68 00",
+    "googleRatingCount": 1226,
+    "bakomRankRegion": 12
   },
   {
     "id": "smadalaro-gard-smadalaro",
@@ -534,12 +649,12 @@
     },
     "bakomScore": 87,
     "bakomScoreRaw": 87.4,
-    "bakomRank": 17,
+    "bakomRank": 21,
     "metroRegion": "stockholm",
     "website": "https://www.smadalarogard.se/",
     "phone": "08-501 551 00",
     "googleRatingCount": 1068,
-    "bakomRankRegion": 10
+    "bakomRankRegion": 13
   },
   {
     "id": "quality-hotel-the-box-linkoping",
@@ -558,7 +673,7 @@
     },
     "bakomScore": 87,
     "bakomScoreRaw": 87.4,
-    "bakomRank": 18,
+    "bakomRank": 22,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -590,7 +705,7 @@
     },
     "bakomScore": 87,
     "bakomScoreRaw": 87.4,
-    "bakomRank": 19,
+    "bakomRank": 23,
     "metroRegion": "gothenburg",
     "hours": [
       {
@@ -604,7 +719,7 @@
     "website": "http://avalonhotel.se/",
     "phone": "031-751 02 00",
     "googleRatingCount": 1945,
-    "bakomRankRegion": 2
+    "bakomRankRegion": 3
   },
   {
     "id": "haymarket-by-scandic-stockholm",
@@ -623,7 +738,7 @@
     },
     "bakomScore": 87,
     "bakomScoreRaw": 86.8,
-    "bakomRank": 20,
+    "bakomRank": 24,
     "metroRegion": "stockholm",
     "hours": [
       {
@@ -637,7 +752,7 @@
     "website": "https://www.scandichotels.com/en/hotels/haymarket-by-scandic?utm_source=google&utm_medium=organic&utm_campaign=gmb&utm_content=haymarket",
     "phone": "08-517 267 00",
     "googleRatingCount": 5371,
-    "bakomRankRegion": 11
+    "bakomRankRegion": 14
   },
   {
     "id": "treehotel-harads",
@@ -658,7 +773,7 @@
     },
     "bakomScore": 87,
     "bakomScoreRaw": 86.6,
-    "bakomRank": 21,
+    "bakomRank": 25,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -689,16 +804,18 @@
     "ratings": {
       "google": 4.5,
       "michelin": "selected",
-      "whiteguide": "global_master_class"
+      "whiteguide": "global_master_class",
+      "falstaff": 85
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/hotels/12522",
       "michelin": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-at-six-8825",
+      "falstaff": "https://www.falstaff.com/en/bars/at-six",
       "google": "https://maps.google.com/?cid=15594522939333720495&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 86,
-    "bakomScoreRaw": 86.2,
-    "bakomRank": 22,
+    "bakomScoreRaw": 86,
+    "bakomRank": 26,
     "metroRegion": "stockholm",
     "hours": [
       {
@@ -712,84 +829,7 @@
     "website": "http://www.hotelatsix.com/",
     "phone": "08-578 828 00",
     "googleRatingCount": 2373,
-    "bakomRankRegion": 12
-  },
-  {
-    "id": "rusthallargarden-arild",
-    "name": "Rusthållargården",
-    "address": "Stora Vägen 26",
-    "city": "Arild",
-    "lat": 56.274493400000004,
-    "lng": 12.5711266,
-    "ratings": {
-      "google": 4.3,
-      "whiteguide": "very_good_class",
-      "falstaff": 95
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/6284",
-      "falstaff": "https://www.falstaff.com/en/hotels/rusthaallargaarden",
-      "google": "https://maps.google.com/?cid=14635581411830310765&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 86,
-    "bakomScoreRaw": 86.1,
-    "bakomRank": 23,
-    "metroRegion": "sweden",
-    "website": "http://www.rusthallargarden.se/",
-    "phone": "042-34 65 30",
-    "googleRatingCount": 465
-  },
-  {
-    "id": "trosa-stadshotell-trosa",
-    "name": "Trosa Stadshotell",
-    "address": "Västra Långgatan 19",
-    "city": "Trosa",
-    "lat": 58.8958436,
-    "lng": 17.54653,
-    "ratings": {
-      "google": 4.4,
-      "whiteguide": "very_good_class",
-      "falstaff": 85
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/11720",
-      "falstaff": "https://www.falstaff.com/en/hotels/trosa-stadshotell-spa",
-      "google": "https://maps.google.com/?cid=16394736271467659039&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 86,
-    "bakomScoreRaw": 85.7,
-    "bakomRank": 24,
-    "metroRegion": "sweden",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "08:00",
-        "close": "13:00"
-      },
-      {
-        "days": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "open": "07:00",
-        "close": "20:00"
-      },
-      {
-        "days": [
-          6
-        ],
-        "open": "08:00",
-        "close": "20:00"
-      }
-    ],
-    "website": "https://www.trosastadshotell.se/",
-    "phone": "0156-170 70",
-    "googleRatingCount": 1038
+    "bakomRankRegion": 15
   },
   {
     "id": "villa-strandvagen-ystad",
@@ -810,7 +850,7 @@
     },
     "bakomScore": 85,
     "bakomScoreRaw": 85.4,
-    "bakomRank": 25,
+    "bakomRank": 27,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -846,41 +886,12 @@
     },
     "bakomScore": 85,
     "bakomScoreRaw": 84.9,
-    "bakomRank": 26,
+    "bakomRank": 28,
     "metroRegion": "stockholm",
     "website": "https://www.marriott.com/en-us/hotels/storp-hagastrand-autograph-collection/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0",
     "phone": "08-503 577 00",
     "googleRatingCount": 59,
-    "bakomRankRegion": 13
-  },
-  {
-    "id": "hotel-draken-goteborg",
-    "name": "Hotel Draken",
-    "address": "Olof Palmes plats 2",
-    "city": "Göteborg",
-    "lat": 57.700793999999995,
-    "lng": 11.9530982,
-    "ratings": {
-      "google": 4.3,
-      "whiteguide": "master_class",
-      "di": 20,
-      "falstaff": 75
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/12627",
-      "di": "https://www.di.se/nyheter/svindlande-priser-pa-stordalens-brasserie/",
-      "falstaff": "https://www.falstaff.com/en/restaurants/brasserie-draken",
-      "google": "https://maps.google.com/?cid=9668907662037019779&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 85,
-    "bakomScoreRaw": 84.8,
-    "bakomRank": 27,
-    "metroRegion": "gothenburg",
-    "priceRange": "lyx",
-    "website": "https://www.strawberry.se/hotell/sverige/goteborg/clarion-hotel-draken/?utm_campaign=gmb-listing&utm_medium=organic&utm_source=google",
-    "phone": "031-305 01 60",
-    "googleRatingCount": 956,
-    "bakomRankRegion": 3
+    "bakomRankRegion": 16
   },
   {
     "id": "talldungen-gardshotell-brosarp",
@@ -901,7 +912,7 @@
     },
     "bakomScore": 85,
     "bakomScoreRaw": 84.8,
-    "bakomRank": 28,
+    "bakomRank": 29,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -921,1363 +932,27 @@
     "googleRatingCount": 437
   },
   {
-    "id": "furusund-vardshus-furusund",
-    "name": "Furusund Värdshus",
-    "address": "Strandvägen 2",
-    "city": "Furusund",
-    "lat": 59.659032100000005,
-    "lng": 18.9160885,
-    "ratings": {
-      "google": 4.5,
-      "whiteguide": "good_class",
-      "falstaff": 95
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/6005",
-      "falstaff": "https://www.falstaff.com/en/hotels/hotell-furusund",
-      "google": "https://maps.google.com/?cid=17196936093411661963&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 85,
-    "bakomScoreRaw": 84.8,
-    "bakomRank": 29,
-    "metroRegion": "sweden",
-    "website": "https://www.hotellfurusund.se/",
-    "phone": "0176-803 44",
-    "googleRatingCount": 754
-  },
-  {
-    "id": "icehotel-jukkasjarvi",
-    "name": "ICEHOTEL",
-    "address": "Marknadsvägen 63, Jukkasjärvi",
-    "city": "Jukkasjärvi",
-    "lat": 67.8498842,
-    "lng": 20.5970011,
-    "ratings": {
-      "google": 4.5,
-      "michelin": "selected",
-      "whiteguide": "master_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10521",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/jukkasjarvi/the-ice-hotel-10778",
-      "google": "https://maps.google.com/?cid=5864675138544279228&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 84,
-    "bakomScoreRaw": 84.5,
-    "bakomRank": 30,
-    "metroRegion": "sweden",
-    "website": "https://www.icehotel.com/",
-    "phone": "0980-668 00",
-    "googleRatingCount": 5048
-  },
-  {
-    "id": "hotel-skeppsholmen-stockholm",
-    "name": "Hotel Skeppsholmen",
-    "address": "Gröna gången 1",
-    "city": "Stockholm",
-    "lat": 59.3247597,
-    "lng": 18.087685,
-    "ratings": {
-      "google": 4.4,
-      "michelin": "selected",
-      "whiteguide": "master_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10589",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-skeppsholmen-6390",
-      "google": "https://maps.google.com/?cid=17937401485829875366&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 84,
-    "bakomScoreRaw": 84.1,
-    "bakomRank": 31,
-    "metroRegion": "stockholm",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "http://www.hotelskeppsholmen.se/",
-    "phone": "08-407 23 00",
-    "googleRatingCount": 1010,
-    "bakomRankRegion": 14
-  },
-  {
-    "id": "downtown-camper-by-scandic-stockholm",
-    "name": "Downtown Camper by Scandic",
-    "address": "Brunkebergstorg 9",
-    "city": "Stockholm",
-    "lat": 59.3313007,
-    "lng": 18.0655429,
-    "ratings": {
-      "google": 4.4,
-      "michelin": "selected",
-      "whiteguide": "master_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10603",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/stockholm/downtown-camper-by-scandic-11019",
-      "google": "https://maps.google.com/?cid=2023889448944254434&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 84,
-    "bakomScoreRaw": 84.1,
-    "bakomRank": 32,
-    "metroRegion": "stockholm",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "https://www.scandichotels.com/en/hotels/downtown-camper-by-scandic?utm_source=google&utm_medium=organic&utm_campaign=gmb&utm_content=downtowncamper",
-    "phone": "08-517 263 00",
-    "googleRatingCount": 5321,
-    "bakomRankRegion": 15
-  },
-  {
-    "id": "hotel-diplomat-stockholm",
-    "name": "Hotel Diplomat",
-    "address": "Strandvägen 7C",
-    "city": "Stockholm",
-    "lat": 59.331988900000006,
-    "lng": 18.080275,
-    "ratings": {
-      "google": 4.3,
-      "michelin": "selected",
-      "whiteguide": "master_class",
-      "falstaff": 85
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10604",
-      "falstaff": "https://www.falstaff.com/en/hotels/hotel-diplomat-1",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-diplomat-stockholm-7834",
-      "google": "https://maps.google.com/?cid=7687571761136722215&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 84,
-    "bakomScoreRaw": 84,
-    "bakomRank": 33,
-    "metroRegion": "stockholm",
-    "hours": [
-      {
-        "days": [
-          0,
-          6
-        ],
-        "open": "07:30",
-        "close": "22:00"
-      },
-      {
-        "days": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "open": "06:30",
-        "close": "22:30"
-      }
-    ],
-    "website": "http://www.diplomathotel.com/",
-    "phone": "08-459 68 00",
-    "googleRatingCount": 1226,
-    "bakomRankRegion": 16
-  },
-  {
-    "id": "salt-sill-kladesholmen",
-    "name": "Salt & Sill",
-    "address": "Rytterholmen 1",
-    "city": "Klädesholmen",
-    "lat": 57.949933699999995,
-    "lng": 11.549558099999999,
-    "ratings": {
-      "google": 4.3,
-      "whiteguide": "good_class",
-      "falstaff": 95
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/5887",
-      "falstaff": "https://www.falstaff.com/en/restaurants/salt-sill",
-      "google": "https://maps.google.com/?cid=11969158968351615366&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 84,
-    "bakomScoreRaw": 83.9,
-    "bakomRank": 34,
-    "metroRegion": "gothenburg",
-    "hours": [
-      {
-        "days": [
-          3,
-          4,
-          5,
-          6
-        ],
-        "open": "12:00",
-        "close": "22:00"
-      }
-    ],
-    "website": "http://www.saltosill.se/",
-    "phone": "0304-67 34 80",
-    "googleRatingCount": 1022,
-    "bakomRankRegion": 4
-  },
-  {
-    "id": "villa-sjotorp-ljungskile",
-    "name": "Villa Sjötorp",
-    "address": "Lyckorna",
-    "city": "Ljungskile",
-    "lat": 58.206279300000006,
-    "lng": 11.899054399999999,
-    "ratings": {
-      "google": 4.3,
-      "whiteguide": "good_class",
-      "falstaff": 95
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/5934",
-      "falstaff": "https://www.falstaff.com/en/restaurants/villa-sjoetorp-ljungskile",
-      "google": "https://maps.google.com/?cid=8812157761734861734&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 84,
-    "bakomScoreRaw": 83.9,
-    "bakomRank": 35,
-    "metroRegion": "sweden",
-    "website": "https://villasjotorp.se/",
-    "phone": "0522-201 74",
-    "googleRatingCount": 194
-  },
-  {
-    "id": "radisson-collection-strand-hotel-stockholm",
-    "name": "Radisson Collection Strand Hotel",
-    "address": "Nybrokajen 9",
-    "city": "Stockholm",
-    "lat": 59.33093,
-    "lng": 18.07705,
-    "ratings": {
-      "google": 4.3,
-      "michelin": "selected",
-      "whiteguide": "master_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10591",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/stockholm/radisson-collection-strand-hotel-stockholm-5971",
-      "google": "https://maps.google.com/?cid=18248162776908311081&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 84,
-    "bakomScoreRaw": 83.8,
-    "bakomRank": 36,
-    "metroRegion": "stockholm",
-    "website": "https://www.radissonhotels.com/en-us/hotels/radisson-collection-stockholm-strand?cid=a:se+b:gmb+c:emea+i:local+e:rco+d:nob+h:SESTOSTR",
-    "phone": "08-506 640 00",
-    "googleRatingCount": 1290,
-    "bakomRankRegion": 17
-  },
-  {
-    "id": "fjallnas-tanndalen",
-    "name": "Fjällnäs",
-    "address": "Malmagen",
-    "city": "Tänndalen",
-    "lat": 62.5983809,
-    "lng": 12.176663399999999,
-    "ratings": {
-      "google": 4.7,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/11717",
-      "falstaff": "https://www.falstaff.com/en/restaurants/fjaellnaes-est-1882",
-      "google": "https://maps.google.com/?cid=6845017770204585139&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 84,
-    "bakomScoreRaw": 83.6,
-    "bakomRank": 37,
-    "metroRegion": "sweden",
-    "website": "http://www.fjallnas.se/",
-    "phone": "0684-230 30",
-    "googleRatingCount": 236
-  },
-  {
-    "id": "hjortviken-country-club-hindas",
-    "name": "Hjortviken Country Club",
-    "address": "Hotellvägen 1",
-    "city": "Hindås",
-    "lat": 57.7063709,
-    "lng": 12.4670194,
-    "ratings": {
-      "google": 4.2,
-      "michelin": "selected",
-      "whiteguide": "master_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/12750",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/Hind%C3%A5s/hjortviken-country-club-15391",
-      "google": "https://maps.google.com/?cid=9765790107269076150&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 83,
-    "bakomScoreRaw": 83.4,
-    "bakomRank": 38,
-    "metroRegion": "gothenburg",
-    "website": "https://hjortviken.se/",
-    "phone": "0301-223 00",
-    "googleRatingCount": 599,
-    "bakomRankRegion": 5
-  },
-  {
-    "id": "berns-hotel-stockholm",
-    "name": "Berns Hotel",
-    "address": "Näckströmsgatan 8",
-    "city": "Stockholm",
-    "lat": 59.3322318,
-    "lng": 18.0733061,
-    "ratings": {
-      "google": 4.2,
-      "michelin": "selected",
-      "whiteguide": "master_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10606",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/stockholm/berns-hotel-6180",
-      "google": "https://maps.google.com/?cid=18140457711463346661&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 83,
-    "bakomScoreRaw": 83.4,
-    "bakomRank": 39,
-    "metroRegion": "stockholm",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "https://berns.se/berns-hotel/",
-    "phone": "08-566 320 00",
-    "googleRatingCount": 2281,
-    "bakomRankRegion": 18
-  },
-  {
-    "id": "restaurang-grand-tenan-marstrand",
-    "name": "Restaurang Grand Tenan",
-    "address": "Grand Hotell Marstrand, Rådhusgatan 2",
-    "city": "Marstrand",
-    "lat": 57.8873265,
-    "lng": 11.5830828,
-    "ratings": {
-      "google": 4.2,
-      "whiteguide": "good_class",
-      "falstaff": 95
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/5886",
-      "falstaff": "https://www.falstaff.com/en/restaurants/grand-tenan",
-      "google": "https://maps.google.com/?cid=12085385995291186339&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 83,
-    "bakomScoreRaw": 83.4,
-    "bakomRank": 40,
-    "metroRegion": "gothenburg",
-    "hours": [
-      {
-        "days": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "open": "08:00",
-        "close": "21:00"
-      }
-    ],
-    "website": "http://www.grandmarstrand.se/",
-    "phone": "0303-603 22",
-    "googleRatingCount": 271,
-    "bakomRankRegion": 6
-  },
-  {
-    "id": "arctic-bath-harads",
-    "name": "Arctic Bath",
-    "address": "Ramdalsvägen 10",
-    "city": "Harads",
-    "lat": 66.0886927,
-    "lng": 20.9381611,
+    "id": "wanas-restaurant-hotel-knislinge",
+    "name": "Wanås Restaurant Hotel",
+    "address": "Vanås",
+    "city": "Knislinge",
+    "lat": 56.1867678,
+    "lng": 14.046846599999999,
     "ratings": {
       "google": 4.8,
-      "michelin": "1_key",
-      "whiteguide": "very_good_class",
-      "falstaff": 65
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/12034",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/harads/arctic-bath-15340",
-      "falstaff": "https://www.falstaff.com/en/restaurants/arctic-bath-boden",
-      "google": "https://maps.google.com/?cid=8876658739539816895&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 83,
-    "bakomScoreRaw": 83.2,
-    "bakomRank": 41,
-    "metroRegion": "sweden",
-    "website": "http://www.arcticbath.se/",
-    "phone": "0928-70 30 40",
-    "googleRatingCount": 167
-  },
-  {
-    "id": "clarion-hotel-the-pier-sweden",
-    "name": "Clarion Hotel The Pier",
-    "address": "Pumpgatan 5,",
-    "city": "Göteborg",
-    "lat": 57.7106387,
-    "lng": 11.948621399999999,
-    "ratings": {
-      "google": 4.6,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/12444",
-      "google": "https://maps.google.com/?cid=16938941999652553953&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 83,
-    "bakomScoreRaw": 83,
-    "bakomRank": 42,
-    "metroRegion": "gothenburg",
-    "website": "https://www.strawberry.se/hotell/sverige/goteborg/clarion-hotel-the-pier/?utm_campaign=gmb-listing&utm_medium=organic&utm_source=google",
-    "googleRatingCount": 710,
-    "bakomRankRegion": 7
-  },
-  {
-    "id": "brosarp-gastgifveri-spa-brosarp",
-    "name": "Brösarp Gästgifveri & Spa",
-    "address": "Albovägen 21, Brösarp",
-    "city": "Brösarp",
-    "lat": 55.725318099999996,
-    "lng": 14.103713599999999,
-    "ratings": {
-      "google": 4.5,
-      "whiteguide": "very_good_class",
-      "falstaff": 75
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10560",
-      "falstaff": "https://www.falstaff.com/en/hotels/broesarps-gaestgifveri-spa",
-      "google": "https://maps.google.com/?cid=13546359848827599117&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 83,
-    "bakomScoreRaw": 83,
-    "bakomRank": 43,
-    "metroRegion": "sweden",
-    "website": "http://www.gastis.se/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=6074951931245267112",
-    "phone": "0414-736 80",
-    "googleRatingCount": 2329
-  },
-  {
-    "id": "hotel-rival-stockholm",
-    "name": "Hotel Rival",
-    "address": "Mariatorget 3",
-    "city": "Stockholm",
-    "lat": 59.3181838,
-    "lng": 18.0637996,
-    "ratings": {
-      "krogguiden": 3.2,
-      "google": 4.4,
       "whiteguide": "master_class"
     },
     "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10590",
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/hotel-rival",
-      "google": "https://maps.google.com/?cid=2603373524979748990&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10554",
+      "google": "https://maps.google.com/?cid=4727504351893930499&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
-    "bakomScore": 83,
-    "bakomScoreRaw": 82.7,
-    "bakomRank": 44,
-    "metroRegion": "stockholm",
-    "priceRange": "mellan",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "https://www.rival.se/",
-    "phone": "08-545 789 00",
-    "googleRatingCount": 3299,
-    "bakomRankRegion": 19
-  },
-  {
-    "id": "kastanjelunds-wardshus-yngsjo",
-    "name": "Kastanjelunds Wärdshus",
-    "address": "Kastanjelundsvägen 2",
-    "city": "Yngsjö",
-    "lat": 55.882338,
-    "lng": 14.2296497,
-    "ratings": {
-      "google": 4.7,
-      "whiteguide": "good_class",
-      "falstaff": 85
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/5973",
-      "falstaff": "https://www.falstaff.com/en/hotels/kastanjelund-hotel-restaurang",
-      "google": "https://maps.google.com/?cid=13306158345046245025&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 83,
-    "bakomScoreRaw": 82.5,
-    "bakomRank": 45,
+    "bakomScore": 85,
+    "bakomScoreRaw": 84.6,
+    "bakomRank": 30,
     "metroRegion": "sweden",
-    "website": "http://www.kastanjelund.se/",
-    "phone": "044-23 25 33",
-    "googleRatingCount": 334
-  },
-  {
-    "id": "the-winery-hotel-stockholm",
-    "name": "The Winery Hotel",
-    "address": "Rosenborgsgatan 20",
-    "city": "Stockholm",
-    "lat": 59.3775128,
-    "lng": 18.0123131,
-    "ratings": {
-      "google": 4.4,
-      "whiteguide": "very_good_class",
-      "falstaff": 75
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10585",
-      "falstaff": "https://www.falstaff.com/en/hotels/the-winery-hotel",
-      "google": "https://maps.google.com/?cid=10705678390520047215&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 82,
-    "bakomScoreRaw": 82.5,
-    "bakomRank": 46,
-    "metroRegion": "stockholm",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "https://www.thewineryhotel.se/",
-    "phone": "08-14 60 00",
-    "googleRatingCount": 2828,
-    "bakomRankRegion": 20
-  },
-  {
-    "id": "hotel-pigalle-goteborg",
-    "name": "Hotel Pigalle",
-    "address": "Södra Hamngatan 2, Göteborg",
-    "city": "Göteborg",
-    "lat": 57.707057299999995,
-    "lng": 11.9707318,
-    "ratings": {
-      "google": 4.4,
-      "michelin": "selected",
-      "whiteguide": "master_class",
-      "falstaff": 75
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10575",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/gothenburg/hotel-pigalle-10406",
-      "falstaff": "https://www.falstaff.com/en/restaurants/restaurang-pigalle",
-      "google": "https://maps.google.com/?cid=11735621116253426678&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 82,
-    "bakomScoreRaw": 82.4,
-    "bakomRank": 47,
-    "metroRegion": "gothenburg",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "https://www.hotelpigalle.se/",
-    "phone": "031-80 25 21",
-    "googleRatingCount": 2016,
-    "bakomRankRegion": 8
-  },
-  {
-    "id": "katrinelund-gastgiveri-sjokrog-stora-mellosa",
-    "name": "Katrinelund Gästgiveri & Sjökrog",
-    "address": "Katrinelund 470, Stora Mellösa",
-    "city": "Stora mellösa",
-    "lat": 59.235131,
-    "lng": 15.570395999999999,
-    "ratings": {
-      "google": 4.5,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10540",
-      "falstaff": "https://www.falstaff.com/en/hotels/katrinelund-gaestgiveri-och-sjoekrog",
-      "google": "https://maps.google.com/?cid=11343042160617134128&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 82,
-    "bakomScoreRaw": 82.3,
-    "bakomRank": 48,
-    "metroRegion": "sweden",
-    "website": "http://www.katrinelund.se/",
-    "phone": "019-44 90 60",
-    "googleRatingCount": 871
-  },
-  {
-    "id": "kust-hotell-spa-pitea",
-    "name": "KUST Hotell & Spa",
-    "address": "Hamngatan 60, Piteå",
-    "city": "Piteå",
-    "lat": 65.3172287,
-    "lng": 21.4765631,
-    "ratings": {
-      "google": 4.5,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10520",
-      "google": "https://maps.google.com/?cid=5346726812892028122&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 82,
-    "bakomScoreRaw": 82.3,
-    "bakomRank": 49,
-    "metroRegion": "sweden",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "https://www.hotellkust.se/",
-    "phone": "0911-300 00",
-    "googleRatingCount": 1199
-  },
-  {
-    "id": "victory-hotel-stockholm",
-    "name": "Victory Hotel",
-    "address": "Lilla Nygatan 5",
-    "city": "Stockholm",
-    "lat": 59.3243952,
-    "lng": 18.0678829,
-    "ratings": {
-      "google": 4.5,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10586",
-      "google": "https://maps.google.com/?cid=16228821932879382838&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 82,
-    "bakomScoreRaw": 82.3,
-    "bakomRank": 50,
-    "metroRegion": "stockholm",
-    "website": "https://victoryhotel.se/victory-hotel/",
-    "phone": "08-506 400 00",
-    "googleRatingCount": 624,
-    "bakomRankRegion": 21
-  },
-  {
-    "id": "hotel-skansen-bastad",
-    "name": "Hotel Skansen",
-    "address": "Kyrkogatan 2",
-    "city": "Båstad",
-    "lat": 56.4350649,
-    "lng": 12.838422999999999,
-    "ratings": {
-      "google": 4.5,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10512",
-      "google": "https://maps.google.com/?cid=1000769997915843880&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 82,
-    "bakomScoreRaw": 82.3,
-    "bakomRank": 51,
-    "metroRegion": "sweden",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "http://www.hotelskansen.se/",
-    "phone": "0431-55 81 00",
-    "googleRatingCount": 1739
-  },
-  {
-    "id": "akerblads-hotell-gastgiveri-spa-tallberg",
-    "name": "Åkerblads Hotell Gästgiveri & SPA",
-    "address": "Sjögattu 2, Tällberg",
-    "city": "Tällberg",
-    "lat": 60.82629769999999,
-    "lng": 14.992094699999997,
-    "ratings": {
-      "google": 4.4,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10518",
-      "google": "https://maps.google.com/?cid=8693229570278934209&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 82,
-    "bakomScoreRaw": 81.7,
-    "bakomRank": 52,
-    "metroRegion": "sweden",
-    "website": "http://www.akerblads.se/",
-    "phone": "0247-508 00",
-    "googleRatingCount": 1549
-  },
-  {
-    "id": "hotel-with-urban-deli-stockholm",
-    "name": "Hotel With Urban Deli",
-    "address": "Sveavägen 44",
-    "city": "Stockholm",
-    "lat": 59.3372672,
-    "lng": 18.062746999999998,
-    "ratings": {
-      "google": 4.4,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10584",
-      "google": "https://maps.google.com/?cid=17292694056967547846&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 82,
-    "bakomScoreRaw": 81.7,
-    "bakomRank": 53,
-    "metroRegion": "stockholm",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "https://urbandeli.se/hotell/?utm_source=google",
-    "phone": "08-30 30 50",
-    "googleRatingCount": 1083,
-    "bakomRankRegion": 22
-  },
-  {
-    "id": "sankt-jorgen-park-goteborg",
-    "name": "Sankt Jörgen Park",
-    "address": "Knipplekullen 8-10",
-    "city": "Göteborg",
-    "lat": 57.7432782,
-    "lng": 11.9448107,
-    "ratings": {
-      "google": 4.4,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/12687",
-      "google": "https://maps.google.com/?cid=17897300391301231950&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 82,
-    "bakomScoreRaw": 81.7,
-    "bakomRank": 54,
-    "metroRegion": "gothenburg",
-    "website": "https://www.sanktjorgenpark.se/?utm_source=google&utm_medium=organic&utm_term=&utm_content=&utm_campaign=google_my_business",
-    "phone": "031-348 40 00",
-    "googleRatingCount": 1163,
-    "bakomRankRegion": 9
-  },
-  {
-    "id": "best-western-plus-hus-57-angelholm",
-    "name": "Best Western Plus HUS 57",
-    "address": "Östergatan 57, Ängelholm",
-    "city": "Ängelholm",
-    "lat": 56.2465659,
-    "lng": 12.8660541,
-    "ratings": {
-      "google": 4.4,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10515",
-      "google": "https://maps.google.com/?cid=17928077845464280427&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 82,
-    "bakomScoreRaw": 81.7,
-    "bakomRank": 55,
-    "metroRegion": "sweden",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "http://www.hus57.se/",
-    "phone": "0431-57 57 00",
-    "googleRatingCount": 1099
-  },
-  {
-    "id": "clarion-hotel-congress-malmo-live-malmo",
-    "name": "Clarion Hotel & Congress Malmö Live",
-    "address": "Dag Hammarskjölds Torg 2, Malmö",
-    "city": "Malmö",
-    "lat": 55.607661,
-    "lng": 12.9941535,
-    "ratings": {
-      "google": 4.4,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10570",
-      "google": "https://maps.google.com/?cid=4651478818732981913&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 82,
-    "bakomScoreRaw": 81.7,
-    "bakomRank": 56,
-    "metroRegion": "malmo",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "https://www.strawberry.se/hotell/sverige/malmo/clarion-hotel-malmo-live/?utm_campaign=gmb-listing&utm_medium=organic&utm_source=google",
-    "phone": "040-20 75 00",
-    "googleRatingCount": 4276,
-    "bakomRankRegion": 1
-  },
-  {
-    "id": "elite-hotel-marina-tower-stockholm",
-    "name": "Elite Hotel Marina Tower",
-    "address": "Saltsjöqvarns Kaj 25",
-    "city": "Stockholm",
-    "lat": 59.3146051,
-    "lng": 18.109971899999998,
-    "ratings": {
-      "google": 4.4,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10602",
-      "google": "https://maps.google.com/?cid=3295535018179421087&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 82,
-    "bakomScoreRaw": 81.7,
-    "bakomRank": 57,
-    "metroRegion": "stockholm",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "https://www.elite.se/hotell/stockholm/elite-hotel-marina-tower-stockholm/?utm_source=google&utm_medium=organic&utm_campaign=google-local&utm_content=elite-hotel-marina-tower-stockholm",
-    "phone": "08-555 702 00",
-    "googleRatingCount": 2456,
-    "bakomRankRegion": 23
-  },
-  {
-    "id": "hotel-aregarden-are",
-    "name": "Hotel Åregården",
-    "address": "Årevägen 81",
-    "city": "Åre",
-    "lat": 63.399586600000006,
-    "lng": 13.079286199999999,
-    "ratings": {
-      "google": 4.4,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/11533",
-      "google": "https://maps.google.com/?cid=6780506784296717919&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 82,
-    "bakomScoreRaw": 81.7,
-    "bakomRank": 58,
-    "metroRegion": "sweden",
-    "hours": [
-      {
-        "days": [
-          4
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "http://aregarden.com/",
-    "phone": "0647-178 00",
-    "googleRatingCount": 354
-  },
-  {
-    "id": "backstage-hotel-stockholm",
-    "name": "Backstage Hotel",
-    "address": "Djurgårdsvägen 68",
-    "city": "Stockholm",
-    "lat": 59.3249486,
-    "lng": 18.096491399999998,
-    "ratings": {
-      "google": 4.6,
-      "michelin": "selected",
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10592",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/stockholm/backstage-hotel-10563",
-      "google": "https://maps.google.com/?cid=11548972148158701088&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 81,
-    "bakomScoreRaw": 81.4,
-    "bakomRank": 59,
-    "metroRegion": "stockholm",
-    "website": "https://backstagehotelsthlm.com/",
-    "phone": "08-502 541 40",
-    "googleRatingCount": 161,
-    "bakomRankRegion": 24
-  },
-  {
-    "id": "naas-fabriker-tollered",
-    "name": "Nääs Fabriker",
-    "address": "Spinnerivägen 1",
-    "city": "Tollered",
-    "lat": 57.8199547,
-    "lng": 12.416620799999999,
-    "ratings": {
-      "google": 4.4,
-      "whiteguide": "good_class",
-      "falstaff": 85
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/6167",
-      "falstaff": "https://www.falstaff.com/en/restaurants/fabrikskoeket",
-      "google": "https://maps.google.com/?cid=11289183660997876116&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 81,
-    "bakomScoreRaw": 81.1,
-    "bakomRank": 60,
-    "metroRegion": "gothenburg",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "06:30",
-        "close": "15:00"
-      },
-      {
-        "days": [
-          1
-        ],
-        "open": "00:00",
-        "close": "00:00"
-      }
-    ],
-    "website": "https://www.naasfabriker.se/",
-    "phone": "031-799 63 00",
-    "googleRatingCount": 2793,
-    "bakomRankRegion": 10
-  },
-  {
-    "id": "naturum-vanerskargarden-victoriahuset-lidkoping",
-    "name": "Naturum Vänerskärgården-Victoriahuset",
-    "address": "Läckö Slott, Lidköping",
-    "city": "Lidköping",
-    "lat": 58.6722786,
-    "lng": 13.216828,
-    "ratings": {
-      "google": 4.3,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10536",
-      "google": "https://maps.google.com/?cid=11820500584489369740&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 81,
-    "bakomScoreRaw": 81.1,
-    "bakomRank": 61,
-    "metroRegion": "sweden",
-    "hours": [
-      {
-        "days": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "open": "10:00",
-        "close": "17:00"
-      }
-    ],
-    "website": "http://naturum.lackoslott.se/",
-    "phone": "0510-48 46 60",
-    "googleRatingCount": 178
-  },
-  {
-    "id": "elite-hotel-esplanade-malmo",
-    "name": "Elite Hotel Esplanade",
-    "address": "Mäster Johansgatan 15, Malmö",
-    "city": "Malmö",
-    "lat": 55.6057245,
-    "lng": 12.9979582,
-    "ratings": {
-      "google": 4.3,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10565",
-      "google": "https://maps.google.com/?cid=14742434451815757690&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 81,
-    "bakomScoreRaw": 81.1,
-    "bakomRank": 62,
-    "metroRegion": "malmo",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "https://www.elite.se/hotell/malmo/elite-hotel-esplanade-malmo/?utm_source=google&utm_medium=organic&utm_campaign=google-local&utm_content=elite-hotel-esplanade-malmo",
-    "phone": "040-24 85 00",
-    "googleRatingCount": 1119,
-    "bakomRankRegion": 2
-  },
-  {
-    "id": "john-bauer-hotel-jonkoping",
-    "name": "John Bauer Hotel",
-    "address": "Södra Strandgatan 15",
-    "city": "Jönköping",
-    "lat": 57.781515999999996,
-    "lng": 14.171469,
-    "ratings": {
-      "google": 4.3,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/12636",
-      "google": "https://maps.google.com/?cid=11879150352656191611&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 81,
-    "bakomScoreRaw": 81.1,
-    "bakomRank": 63,
-    "metroRegion": "sweden",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "https://www.johnbauer.se/",
-    "phone": "036-34 90 00",
-    "googleRatingCount": 1303
-  },
-  {
-    "id": "kosta-boda-art-hotel-kosta",
-    "name": "Kosta Boda Art Hotel",
-    "address": "Stora vägen 75",
-    "city": "Kosta",
-    "lat": 56.849221799999995,
-    "lng": 15.3945153,
-    "ratings": {
-      "google": 4.3,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10514",
-      "google": "https://maps.google.com/?cid=3315294136093125826&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 81,
-    "bakomScoreRaw": 81.1,
-    "bakomRank": 64,
-    "metroRegion": "sweden",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "https://www.kostabodaarthotel.se/",
-    "phone": "0478-348 30",
-    "googleRatingCount": 3103
-  },
-  {
-    "id": "elite-plaza-hotel-goteborg",
-    "name": "Elite Plaza Hotel",
-    "address": "Västra Hamngatan 3, Göteborg",
-    "city": "Göteborg",
-    "lat": 57.7051878,
-    "lng": 11.9628853,
-    "ratings": {
-      "google": 4.3,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10577",
-      "google": "https://maps.google.com/?cid=7846462754404457873&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 81,
-    "bakomScoreRaw": 81.1,
-    "bakomRank": 65,
-    "metroRegion": "gothenburg",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "https://www.elite.se/hotell/goteborg/elite-plaza-hotel-goteborg/?utm_source=google&utm_medium=organic&utm_campaign=google-local&utm_content=elite-plaza-hotel-goteborg",
-    "phone": "031-720 40 00",
-    "googleRatingCount": 1400,
-    "bakomRankRegion": 11
-  },
-  {
-    "id": "hotel-eggers-goteborg",
-    "name": "Hotel Eggers",
-    "address": "Drottningtorget 2-4, Göteborg",
-    "city": "Göteborg",
-    "lat": 57.70821900000001,
-    "lng": 11.972473599999999,
-    "ratings": {
-      "google": 4.3,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10579",
-      "google": "https://maps.google.com/?cid=12280849207029912538&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 81,
-    "bakomScoreRaw": 81.1,
-    "bakomRank": 66,
-    "metroRegion": "gothenburg",
-    "website": "http://www.hoteleggers.se/?utm_source=google&utm_medium=organic&utm_campaign=googleMyBusiness",
-    "phone": "031-333 44 40",
-    "googleRatingCount": 1879,
-    "bakomRankRegion": 12
-  },
-  {
-    "id": "courtyard-by-marriott-hotel-stockholm-stockholm",
-    "name": "Courtyard by Marriott Hotel Stockholm",
-    "address": "Rålambshovsleden 50",
-    "city": "Stockholm",
-    "lat": 59.33149029999999,
-    "lng": 18.0216662,
-    "ratings": {
-      "google": 4.3,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10605",
-      "google": "https://maps.google.com/?cid=16087755137269807866&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 81,
-    "bakomScoreRaw": 81.1,
-    "bakomRank": 67,
-    "metroRegion": "stockholm",
-    "website": "https://www.marriott.com/en-us/hotels/stocy-courtyard-stockholm-kungsholmen/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0",
-    "phone": "08-441 31 00",
-    "googleRatingCount": 2315,
-    "bakomRankRegion": 25
-  },
-  {
-    "id": "grand-hotel-i-lund-lund",
-    "name": "Grand Hotel i Lund",
-    "address": "Bantorget 1",
-    "city": "Lund",
-    "lat": 55.7038523,
-    "lng": 13.1890138,
-    "ratings": {
-      "google": 4.3,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10558",
-      "google": "https://maps.google.com/?cid=2652948712650883857&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 81,
-    "bakomScoreRaw": 81.1,
-    "bakomRank": 68,
-    "metroRegion": "malmo",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "http://www.grandilund.se/",
-    "phone": "046-280 61 00",
-    "googleRatingCount": 2570,
-    "bakomRankRegion": 3
-  },
-  {
-    "id": "ellery-beach-house-stockholm",
-    "name": "Ellery Beach House",
-    "address": "Elfviks Udde",
-    "city": "Stockholm",
-    "lat": 59.3642368,
-    "lng": 18.2539369,
-    "ratings": {
-      "google": 4.3,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/12810",
-      "google": "https://maps.google.com/?cid=1633512873907815719&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 81,
-    "bakomScoreRaw": 81.1,
-    "bakomRank": 69,
-    "metroRegion": "stockholm",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "https://ellerybeachhouse.com/",
-    "phone": "08-505 637 00",
-    "googleRatingCount": 1433,
-    "bakomRankRegion": 26
-  },
-  {
-    "id": "the-steam-hotel-vasteras",
-    "name": "The Steam Hotel",
-    "address": "Ångkraftsvägen 14",
-    "city": "Västerås",
-    "lat": 59.6069711,
-    "lng": 16.5678677,
-    "ratings": {
-      "google": 4.5,
-      "michelin": "selected",
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10545",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/vasteras/steam-hotel-11054",
-      "google": "https://maps.google.com/?cid=7073368411322933019&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 81,
-    "bakomScoreRaw": 81,
-    "bakomRank": 70,
-    "metroRegion": "sweden",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "http://steamhotel.se/",
-    "phone": "021-475 99 00",
-    "googleRatingCount": 6406
-  },
-  {
-    "id": "copperhill-mountain-lodge-are",
-    "name": "Copperhill Mountain Lodge",
-    "address": "Åre Björnen, Åre",
-    "city": "Åre",
-    "lat": 63.3832939,
-    "lng": 13.177311099999999,
-    "ratings": {
-      "google": 4.5,
-      "michelin": "selected",
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10524",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/are/copperhill-mountain-lodge-8343",
-      "falstaff": "https://www.falstaff.com/en/restaurants/niesti",
-      "google": "https://maps.google.com/?cid=12662214710591910592&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 81,
-    "bakomScoreRaw": 81,
-    "bakomRank": 71,
-    "metroRegion": "sweden",
-    "website": "https://www.copperhill.se/",
-    "phone": "0647-143 00",
-    "googleRatingCount": 1708
-  },
-  {
-    "id": "hotel-kungstradgarden-the-king-s-garden-stockholm",
-    "name": "Hotel Kungsträdgården - The King´s Garden",
-    "address": "Västra Trädgårdsgatan 11B",
-    "city": "Stockholm",
-    "lat": 59.3313232,
-    "lng": 18.0696825,
-    "ratings": {
-      "google": 4.5,
-      "michelin": "selected",
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10596",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-kungstradgarden-16322",
-      "google": "https://maps.google.com/?cid=15946066571790649997&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 81,
-    "bakomScoreRaw": 81,
-    "bakomRank": 72,
-    "metroRegion": "stockholm",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "https://www.hotelkungstradgarden.se/",
-    "phone": "08-440 66 50",
-    "googleRatingCount": 797,
-    "bakomRankRegion": 27
+    "website": "http://www.wanasrh.se/",
+    "phone": "044-253 15 81",
+    "googleRatingCount": 28
   },
   {
     "id": "dorsia-bar-goteborg",
@@ -2288,19 +963,17 @@
     "lng": 11.9716785,
     "ratings": {
       "google": 4.5,
-      "michelin": "selected",
       "whiteguide": "very_good_class",
       "falstaff": 87
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/restaurants/7571",
       "falstaff": "https://www.falstaff.com/en/restaurants/dorsia-gothenburg",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/gothenburg/dorsia-10287",
       "google": "https://maps.google.com/?cid=1330063304297999361&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
-    "bakomScore": 81,
-    "bakomScoreRaw": 80.8,
-    "bakomRank": 73,
+    "bakomScore": 85,
+    "bakomScoreRaw": 84.5,
+    "bakomRank": 31,
     "metroRegion": "gothenburg",
     "hours": [
       {
@@ -2338,7 +1011,502 @@
     "website": "http://www.dorsia.se/",
     "phone": "031-790 10 00",
     "googleRatingCount": 1861,
-    "bakomRankRegion": 13
+    "bakomRankRegion": 4
+  },
+  {
+    "id": "icehotel-jukkasjarvi",
+    "name": "ICEHOTEL",
+    "address": "Marknadsvägen 63, Jukkasjärvi",
+    "city": "Jukkasjärvi",
+    "lat": 67.8498842,
+    "lng": 20.5970011,
+    "ratings": {
+      "google": 4.5,
+      "michelin": "selected",
+      "whiteguide": "master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10521",
+      "michelin": "https://guide.michelin.com/se/en/hotels-stays/jukkasjarvi/the-ice-hotel-10778",
+      "google": "https://maps.google.com/?cid=5864675138544279228&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 84,
+    "bakomScoreRaw": 84.5,
+    "bakomRank": 32,
+    "metroRegion": "sweden",
+    "website": "https://www.icehotel.com/",
+    "phone": "0980-668 00",
+    "googleRatingCount": 5048
+  },
+  {
+    "id": "hotel-pigalle-goteborg",
+    "name": "Hotel Pigalle",
+    "address": "Södra Hamngatan 2, Göteborg",
+    "city": "Göteborg",
+    "lat": 57.707057299999995,
+    "lng": 11.9707318,
+    "ratings": {
+      "google": 4.4,
+      "michelin": "selected",
+      "whiteguide": "master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10575",
+      "michelin": "https://guide.michelin.com/se/en/hotels-stays/gothenburg/hotel-pigalle-10406",
+      "google": "https://maps.google.com/?cid=11735621116253426678&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 84,
+    "bakomScoreRaw": 84.1,
+    "bakomRank": 33,
+    "metroRegion": "gothenburg",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "https://www.hotelpigalle.se/",
+    "phone": "031-80 25 21",
+    "googleRatingCount": 2016,
+    "bakomRankRegion": 5
+  },
+  {
+    "id": "hotel-skeppsholmen-stockholm",
+    "name": "Hotel Skeppsholmen",
+    "address": "Gröna gången 1",
+    "city": "Stockholm",
+    "lat": 59.3247597,
+    "lng": 18.087685,
+    "ratings": {
+      "google": 4.4,
+      "michelin": "selected",
+      "whiteguide": "master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10589",
+      "michelin": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-skeppsholmen-6390",
+      "google": "https://maps.google.com/?cid=17937401485829875366&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 84,
+    "bakomScoreRaw": 84.1,
+    "bakomRank": 34,
+    "metroRegion": "stockholm",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "http://www.hotelskeppsholmen.se/",
+    "phone": "08-407 23 00",
+    "googleRatingCount": 1010,
+    "bakomRankRegion": 17
+  },
+  {
+    "id": "downtown-camper-by-scandic-stockholm",
+    "name": "Downtown Camper by Scandic",
+    "address": "Brunkebergstorg 9",
+    "city": "Stockholm",
+    "lat": 59.3313007,
+    "lng": 18.0655429,
+    "ratings": {
+      "google": 4.4,
+      "michelin": "selected",
+      "whiteguide": "master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10603",
+      "michelin": "https://guide.michelin.com/se/en/hotels-stays/stockholm/downtown-camper-by-scandic-11019",
+      "google": "https://maps.google.com/?cid=2023889448944254434&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 84,
+    "bakomScoreRaw": 84.1,
+    "bakomRank": 35,
+    "metroRegion": "stockholm",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "https://www.scandichotels.com/en/hotels/downtown-camper-by-scandic?utm_source=google&utm_medium=organic&utm_campaign=gmb&utm_content=downtowncamper",
+    "phone": "08-517 263 00",
+    "googleRatingCount": 5321,
+    "bakomRankRegion": 18
+  },
+  {
+    "id": "fjallnas-tanndalen",
+    "name": "Fjällnäs",
+    "address": "Malmagen",
+    "city": "Tänndalen",
+    "lat": 62.5983809,
+    "lng": 12.176663399999999,
+    "ratings": {
+      "google": 4.7,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/11717",
+      "google": "https://maps.google.com/?cid=6845017770204585139&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 84,
+    "bakomScoreRaw": 83.6,
+    "bakomRank": 36,
+    "metroRegion": "sweden",
+    "website": "http://www.fjallnas.se/",
+    "phone": "0684-230 30",
+    "googleRatingCount": 236
+  },
+  {
+    "id": "hjortviken-country-club-hindas",
+    "name": "Hjortviken Country Club",
+    "address": "Hotellvägen 1",
+    "city": "Hindås",
+    "lat": 57.7063709,
+    "lng": 12.4670194,
+    "ratings": {
+      "google": 4.2,
+      "michelin": "selected",
+      "whiteguide": "master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/12750",
+      "michelin": "https://guide.michelin.com/se/en/hotels-stays/Hind%C3%A5s/hjortviken-country-club-15391",
+      "google": "https://maps.google.com/?cid=9765790107269076150&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 83,
+    "bakomScoreRaw": 83.4,
+    "bakomRank": 37,
+    "metroRegion": "gothenburg",
+    "website": "https://hjortviken.se/",
+    "phone": "0301-223 00",
+    "googleRatingCount": 599,
+    "bakomRankRegion": 6
+  },
+  {
+    "id": "berns-hotel-stockholm",
+    "name": "Berns Hotel",
+    "address": "Näckströmsgatan 8",
+    "city": "Stockholm",
+    "lat": 59.3322318,
+    "lng": 18.0733061,
+    "ratings": {
+      "google": 4.2,
+      "michelin": "selected",
+      "whiteguide": "master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10606",
+      "michelin": "https://guide.michelin.com/se/en/hotels-stays/stockholm/berns-hotel-6180",
+      "google": "https://maps.google.com/?cid=18140457711463346661&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 83,
+    "bakomScoreRaw": 83.4,
+    "bakomRank": 38,
+    "metroRegion": "stockholm",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "https://berns.se/berns-hotel/",
+    "phone": "08-566 320 00",
+    "googleRatingCount": 2281,
+    "bakomRankRegion": 19
+  },
+  {
+    "id": "clarion-hotel-the-pier-sweden",
+    "name": "Clarion Hotel The Pier",
+    "address": "Pumpgatan 5,",
+    "city": "Göteborg",
+    "lat": 57.7106387,
+    "lng": 11.948621399999999,
+    "ratings": {
+      "google": 4.6,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/12444",
+      "google": "https://maps.google.com/?cid=16938941999652553953&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 83,
+    "bakomScoreRaw": 83,
+    "bakomRank": 39,
+    "metroRegion": "gothenburg",
+    "website": "https://www.strawberry.se/hotell/sverige/goteborg/clarion-hotel-the-pier/?utm_campaign=gmb-listing&utm_medium=organic&utm_source=google",
+    "googleRatingCount": 710,
+    "bakomRankRegion": 7
+  },
+  {
+    "id": "hotel-rival-stockholm",
+    "name": "Hotel Rival",
+    "address": "Mariatorget 3",
+    "city": "Stockholm",
+    "lat": 59.3181838,
+    "lng": 18.0637996,
+    "ratings": {
+      "krogguiden": 3.2,
+      "google": 4.4,
+      "whiteguide": "master_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10590",
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/hotel-rival",
+      "google": "https://maps.google.com/?cid=2603373524979748990&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 83,
+    "bakomScoreRaw": 82.7,
+    "bakomRank": 40,
+    "metroRegion": "stockholm",
+    "priceRange": "mellan",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "https://www.rival.se/",
+    "phone": "08-545 789 00",
+    "googleRatingCount": 3299,
+    "bakomRankRegion": 20
+  },
+  {
+    "id": "katrinelund-gastgiveri-sjokrog-stora-mellosa",
+    "name": "Katrinelund Gästgiveri & Sjökrog",
+    "address": "Katrinelund 470, Stora Mellösa",
+    "city": "Stora mellösa",
+    "lat": 59.235131,
+    "lng": 15.570395999999999,
+    "ratings": {
+      "google": 4.5,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10540",
+      "google": "https://maps.google.com/?cid=11343042160617134128&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 82,
+    "bakomScoreRaw": 82.3,
+    "bakomRank": 41,
+    "metroRegion": "sweden",
+    "website": "http://www.katrinelund.se/",
+    "phone": "019-44 90 60",
+    "googleRatingCount": 871
+  },
+  {
+    "id": "the-steam-hotel-vasteras",
+    "name": "The Steam Hotel",
+    "address": "Ångkraftsvägen 14",
+    "city": "Västerås",
+    "lat": 59.6069711,
+    "lng": 16.5678677,
+    "ratings": {
+      "google": 4.5,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10545",
+      "google": "https://maps.google.com/?cid=7073368411322933019&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 82,
+    "bakomScoreRaw": 82.3,
+    "bakomRank": 42,
+    "metroRegion": "sweden",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "http://steamhotel.se/",
+    "phone": "021-475 99 00",
+    "googleRatingCount": 6406
+  },
+  {
+    "id": "brosarp-gastgifveri-spa-brosarp",
+    "name": "Brösarp Gästgifveri & Spa",
+    "address": "Albovägen 21, Brösarp",
+    "city": "Brösarp",
+    "lat": 55.725318099999996,
+    "lng": 14.103713599999999,
+    "ratings": {
+      "google": 4.5,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10560",
+      "google": "https://maps.google.com/?cid=13546359848827599117&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 82,
+    "bakomScoreRaw": 82.3,
+    "bakomRank": 43,
+    "metroRegion": "sweden",
+    "website": "http://www.gastis.se/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=6074951931245267112",
+    "phone": "0414-736 80",
+    "googleRatingCount": 2329
+  },
+  {
+    "id": "kust-hotell-spa-pitea",
+    "name": "KUST Hotell & Spa",
+    "address": "Hamngatan 60, Piteå",
+    "city": "Piteå",
+    "lat": 65.3172287,
+    "lng": 21.4765631,
+    "ratings": {
+      "google": 4.5,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10520",
+      "google": "https://maps.google.com/?cid=5346726812892028122&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 82,
+    "bakomScoreRaw": 82.3,
+    "bakomRank": 44,
+    "metroRegion": "sweden",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "https://www.hotellkust.se/",
+    "phone": "0911-300 00",
+    "googleRatingCount": 1199
+  },
+  {
+    "id": "victory-hotel-stockholm",
+    "name": "Victory Hotel",
+    "address": "Lilla Nygatan 5",
+    "city": "Stockholm",
+    "lat": 59.3243952,
+    "lng": 18.0678829,
+    "ratings": {
+      "google": 4.5,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10586",
+      "google": "https://maps.google.com/?cid=16228821932879382838&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 82,
+    "bakomScoreRaw": 82.3,
+    "bakomRank": 45,
+    "metroRegion": "stockholm",
+    "website": "https://victoryhotel.se/victory-hotel/",
+    "phone": "08-506 400 00",
+    "googleRatingCount": 624,
+    "bakomRankRegion": 21
+  },
+  {
+    "id": "hotel-kungstradgarden-the-king-s-garden-stockholm",
+    "name": "Hotel Kungsträdgården - The King´s Garden",
+    "address": "Västra Trädgårdsgatan 11B",
+    "city": "Stockholm",
+    "lat": 59.3313232,
+    "lng": 18.0696825,
+    "ratings": {
+      "google": 4.5,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10596",
+      "google": "https://maps.google.com/?cid=15946066571790649997&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 82,
+    "bakomScoreRaw": 82.3,
+    "bakomRank": 46,
+    "metroRegion": "stockholm",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "https://www.hotelkungstradgarden.se/",
+    "phone": "08-440 66 50",
+    "googleRatingCount": 797,
+    "bakomRankRegion": 22
+  },
+  {
+    "id": "hotel-skansen-bastad",
+    "name": "Hotel Skansen",
+    "address": "Kyrkogatan 2",
+    "city": "Båstad",
+    "lat": 56.4350649,
+    "lng": 12.838422999999999,
+    "ratings": {
+      "google": 4.5,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10512",
+      "google": "https://maps.google.com/?cid=1000769997915843880&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 82,
+    "bakomScoreRaw": 82.3,
+    "bakomRank": 47,
+    "metroRegion": "sweden",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "http://www.hotelskansen.se/",
+    "phone": "0431-55 81 00",
+    "googleRatingCount": 1739
+  },
+  {
+    "id": "akerblads-hotell-gastgiveri-spa-tallberg",
+    "name": "Åkerblads Hotell Gästgiveri & SPA",
+    "address": "Sjögattu 2, Tällberg",
+    "city": "Tällberg",
+    "lat": 60.82629769999999,
+    "lng": 14.992094699999997,
+    "ratings": {
+      "google": 4.4,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10518",
+      "google": "https://maps.google.com/?cid=8693229570278934209&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 82,
+    "bakomScoreRaw": 81.7,
+    "bakomRank": 48,
+    "metroRegion": "sweden",
+    "website": "http://www.akerblads.se/",
+    "phone": "0247-508 00",
+    "googleRatingCount": 1549
   },
   {
     "id": "story-hotel-studio-malmo-malmo",
@@ -2349,22 +1517,652 @@
     "lng": 12.9951657,
     "ratings": {
       "google": 4.4,
-      "michelin": "selected",
       "whiteguide": "very_good_class"
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/hotels/10564",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/malmo/story-studio-malmo-10547",
       "google": "https://maps.google.com/?cid=16166863174772373757&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
-    "bakomScore": 81,
-    "bakomScoreRaw": 80.7,
-    "bakomRank": 74,
+    "bakomScore": 82,
+    "bakomScoreRaw": 81.7,
+    "bakomRank": 49,
     "metroRegion": "malmo",
     "website": "https://www.hyatt.com/story-hotels/en-US/mmxjd-story-hotel-malmo?src=corp_lclb_google_seo_mmxjd&utm_source=google&utm_medium=organic&utm_campaign=lmr",
     "phone": "040-616 52 00",
     "googleRatingCount": 805,
+    "bakomRankRegion": 1
+  },
+  {
+    "id": "hotel-with-urban-deli-stockholm",
+    "name": "Hotel With Urban Deli",
+    "address": "Sveavägen 44",
+    "city": "Stockholm",
+    "lat": 59.3372672,
+    "lng": 18.062746999999998,
+    "ratings": {
+      "google": 4.4,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10584",
+      "google": "https://maps.google.com/?cid=17292694056967547846&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 82,
+    "bakomScoreRaw": 81.7,
+    "bakomRank": 50,
+    "metroRegion": "stockholm",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "https://urbandeli.se/hotell/?utm_source=google",
+    "phone": "08-30 30 50",
+    "googleRatingCount": 1083,
+    "bakomRankRegion": 23
+  },
+  {
+    "id": "the-winery-hotel-stockholm",
+    "name": "The Winery Hotel",
+    "address": "Rosenborgsgatan 20",
+    "city": "Stockholm",
+    "lat": 59.3775128,
+    "lng": 18.0123131,
+    "ratings": {
+      "google": 4.4,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10585",
+      "google": "https://maps.google.com/?cid=10705678390520047215&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 82,
+    "bakomScoreRaw": 81.7,
+    "bakomRank": 51,
+    "metroRegion": "stockholm",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "https://www.thewineryhotel.se/",
+    "phone": "08-14 60 00",
+    "googleRatingCount": 2828,
+    "bakomRankRegion": 24
+  },
+  {
+    "id": "trosa-stadshotell-trosa",
+    "name": "Trosa Stadshotell",
+    "address": "Västra Långgatan 19",
+    "city": "Trosa",
+    "lat": 58.8958436,
+    "lng": 17.54653,
+    "ratings": {
+      "google": 4.4,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/11720",
+      "google": "https://maps.google.com/?cid=16394736271467659039&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 82,
+    "bakomScoreRaw": 81.7,
+    "bakomRank": 52,
+    "metroRegion": "sweden",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "08:00",
+        "close": "13:00"
+      },
+      {
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "open": "07:00",
+        "close": "20:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "08:00",
+        "close": "20:00"
+      }
+    ],
+    "website": "https://www.trosastadshotell.se/",
+    "phone": "0156-170 70",
+    "googleRatingCount": 1038
+  },
+  {
+    "id": "sankt-jorgen-park-goteborg",
+    "name": "Sankt Jörgen Park",
+    "address": "Knipplekullen 8-10",
+    "city": "Göteborg",
+    "lat": 57.7432782,
+    "lng": 11.9448107,
+    "ratings": {
+      "google": 4.4,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/12687",
+      "google": "https://maps.google.com/?cid=17897300391301231950&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 82,
+    "bakomScoreRaw": 81.7,
+    "bakomRank": 53,
+    "metroRegion": "gothenburg",
+    "website": "https://www.sanktjorgenpark.se/?utm_source=google&utm_medium=organic&utm_term=&utm_content=&utm_campaign=google_my_business",
+    "phone": "031-348 40 00",
+    "googleRatingCount": 1163,
+    "bakomRankRegion": 8
+  },
+  {
+    "id": "best-western-plus-hus-57-angelholm",
+    "name": "Best Western Plus HUS 57",
+    "address": "Östergatan 57, Ängelholm",
+    "city": "Ängelholm",
+    "lat": 56.2465659,
+    "lng": 12.8660541,
+    "ratings": {
+      "google": 4.4,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10515",
+      "google": "https://maps.google.com/?cid=17928077845464280427&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 82,
+    "bakomScoreRaw": 81.7,
+    "bakomRank": 54,
+    "metroRegion": "sweden",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "http://www.hus57.se/",
+    "phone": "0431-57 57 00",
+    "googleRatingCount": 1099
+  },
+  {
+    "id": "clarion-hotel-congress-malmo-live-malmo",
+    "name": "Clarion Hotel & Congress Malmö Live",
+    "address": "Dag Hammarskjölds Torg 2, Malmö",
+    "city": "Malmö",
+    "lat": 55.607661,
+    "lng": 12.9941535,
+    "ratings": {
+      "google": 4.4,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10570",
+      "google": "https://maps.google.com/?cid=4651478818732981913&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 82,
+    "bakomScoreRaw": 81.7,
+    "bakomRank": 55,
+    "metroRegion": "malmo",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "https://www.strawberry.se/hotell/sverige/malmo/clarion-hotel-malmo-live/?utm_campaign=gmb-listing&utm_medium=organic&utm_source=google",
+    "phone": "040-20 75 00",
+    "googleRatingCount": 4276,
+    "bakomRankRegion": 2
+  },
+  {
+    "id": "elite-hotel-marina-tower-stockholm",
+    "name": "Elite Hotel Marina Tower",
+    "address": "Saltsjöqvarns Kaj 25",
+    "city": "Stockholm",
+    "lat": 59.3146051,
+    "lng": 18.109971899999998,
+    "ratings": {
+      "google": 4.4,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10602",
+      "google": "https://maps.google.com/?cid=3295535018179421087&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 82,
+    "bakomScoreRaw": 81.7,
+    "bakomRank": 56,
+    "metroRegion": "stockholm",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "https://www.elite.se/hotell/stockholm/elite-hotel-marina-tower-stockholm/?utm_source=google&utm_medium=organic&utm_campaign=google-local&utm_content=elite-hotel-marina-tower-stockholm",
+    "phone": "08-555 702 00",
+    "googleRatingCount": 2456,
+    "bakomRankRegion": 25
+  },
+  {
+    "id": "hotel-aregarden-are",
+    "name": "Hotel Åregården",
+    "address": "Årevägen 81",
+    "city": "Åre",
+    "lat": 63.399586600000006,
+    "lng": 13.079286199999999,
+    "ratings": {
+      "google": 4.4,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/11533",
+      "google": "https://maps.google.com/?cid=6780506784296717919&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 82,
+    "bakomScoreRaw": 81.7,
+    "bakomRank": 57,
+    "metroRegion": "sweden",
+    "hours": [
+      {
+        "days": [
+          4
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "http://aregarden.com/",
+    "phone": "0647-178 00",
+    "googleRatingCount": 354
+  },
+  {
+    "id": "hotell-borgholm-borgholm",
+    "name": "Hotell Borgholm",
+    "address": "Trädgårdsgatan 15-19",
+    "city": "Borgholm",
+    "lat": 56.878880099999996,
+    "lng": 16.657667999999997,
+    "ratings": {
+      "google": 4.6,
+      "michelin": "selected",
+      "whiteguide": "very_good_class",
+      "falstaff": 89
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/5828",
+      "michelin": "https://guide.michelin.com/se/en/oland/borgholm/restaurant/hotell-borgholm1186400",
+      "dn": "https://www.dn.se/kultur/hotell-borgholm-lika-delar-kreativitet-och-alvar-pa-stjarnprydda-krogen/",
+      "falstaff": "https://www.falstaff.com/en/restaurants/hotell-borgholm-borgholm",
+      "google": "https://maps.google.com/?cid=13744924569226211116&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 81,
+    "bakomScoreRaw": 81.5,
+    "bakomRank": 58,
+    "metroRegion": "sweden",
+    "priceRange": "lyx",
+    "website": "http://www.hotellborgholm.com/",
+    "phone": "0485-770 60",
+    "googleRatingCount": 427
+  },
+  {
+    "id": "backstage-hotel-stockholm",
+    "name": "Backstage Hotel",
+    "address": "Djurgårdsvägen 68",
+    "city": "Stockholm",
+    "lat": 59.3249486,
+    "lng": 18.096491399999998,
+    "ratings": {
+      "google": 4.6,
+      "michelin": "selected",
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10592",
+      "michelin": "https://guide.michelin.com/se/en/hotels-stays/stockholm/backstage-hotel-10563",
+      "google": "https://maps.google.com/?cid=11548972148158701088&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 81,
+    "bakomScoreRaw": 81.4,
+    "bakomRank": 59,
+    "metroRegion": "stockholm",
+    "website": "https://backstagehotelsthlm.com/",
+    "phone": "08-502 541 40",
+    "googleRatingCount": 161,
+    "bakomRankRegion": 26
+  },
+  {
+    "id": "naturum-vanerskargarden-victoriahuset-lidkoping",
+    "name": "Naturum Vänerskärgården-Victoriahuset",
+    "address": "Läckö Slott, Lidköping",
+    "city": "Lidköping",
+    "lat": 58.6722786,
+    "lng": 13.216828,
+    "ratings": {
+      "google": 4.3,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10536",
+      "google": "https://maps.google.com/?cid=11820500584489369740&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 81,
+    "bakomScoreRaw": 81.1,
+    "bakomRank": 60,
+    "metroRegion": "sweden",
+    "hours": [
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "10:00",
+        "close": "17:00"
+      }
+    ],
+    "website": "http://naturum.lackoslott.se/",
+    "phone": "0510-48 46 60",
+    "googleRatingCount": 178
+  },
+  {
+    "id": "elite-hotel-esplanade-malmo",
+    "name": "Elite Hotel Esplanade",
+    "address": "Mäster Johansgatan 15, Malmö",
+    "city": "Malmö",
+    "lat": 55.6057245,
+    "lng": 12.9979582,
+    "ratings": {
+      "google": 4.3,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10565",
+      "google": "https://maps.google.com/?cid=14742434451815757690&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 81,
+    "bakomScoreRaw": 81.1,
+    "bakomRank": 61,
+    "metroRegion": "malmo",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "https://www.elite.se/hotell/malmo/elite-hotel-esplanade-malmo/?utm_source=google&utm_medium=organic&utm_campaign=google-local&utm_content=elite-hotel-esplanade-malmo",
+    "phone": "040-24 85 00",
+    "googleRatingCount": 1119,
+    "bakomRankRegion": 3
+  },
+  {
+    "id": "john-bauer-hotel-jonkoping",
+    "name": "John Bauer Hotel",
+    "address": "Södra Strandgatan 15",
+    "city": "Jönköping",
+    "lat": 57.781515999999996,
+    "lng": 14.171469,
+    "ratings": {
+      "google": 4.3,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/12636",
+      "google": "https://maps.google.com/?cid=11879150352656191611&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 81,
+    "bakomScoreRaw": 81.1,
+    "bakomRank": 62,
+    "metroRegion": "sweden",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "https://www.johnbauer.se/",
+    "phone": "036-34 90 00",
+    "googleRatingCount": 1303
+  },
+  {
+    "id": "kosta-boda-art-hotel-kosta",
+    "name": "Kosta Boda Art Hotel",
+    "address": "Stora vägen 75",
+    "city": "Kosta",
+    "lat": 56.849221799999995,
+    "lng": 15.3945153,
+    "ratings": {
+      "google": 4.3,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10514",
+      "google": "https://maps.google.com/?cid=3315294136093125826&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 81,
+    "bakomScoreRaw": 81.1,
+    "bakomRank": 63,
+    "metroRegion": "sweden",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "https://www.kostabodaarthotel.se/",
+    "phone": "0478-348 30",
+    "googleRatingCount": 3103
+  },
+  {
+    "id": "elite-plaza-hotel-goteborg",
+    "name": "Elite Plaza Hotel",
+    "address": "Västra Hamngatan 3, Göteborg",
+    "city": "Göteborg",
+    "lat": 57.7051878,
+    "lng": 11.9628853,
+    "ratings": {
+      "google": 4.3,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10577",
+      "google": "https://maps.google.com/?cid=7846462754404457873&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 81,
+    "bakomScoreRaw": 81.1,
+    "bakomRank": 64,
+    "metroRegion": "gothenburg",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "https://www.elite.se/hotell/goteborg/elite-plaza-hotel-goteborg/?utm_source=google&utm_medium=organic&utm_campaign=google-local&utm_content=elite-plaza-hotel-goteborg",
+    "phone": "031-720 40 00",
+    "googleRatingCount": 1400,
+    "bakomRankRegion": 9
+  },
+  {
+    "id": "hotel-eggers-goteborg",
+    "name": "Hotel Eggers",
+    "address": "Drottningtorget 2-4, Göteborg",
+    "city": "Göteborg",
+    "lat": 57.70821900000001,
+    "lng": 11.972473599999999,
+    "ratings": {
+      "google": 4.3,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10579",
+      "google": "https://maps.google.com/?cid=12280849207029912538&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 81,
+    "bakomScoreRaw": 81.1,
+    "bakomRank": 65,
+    "metroRegion": "gothenburg",
+    "website": "http://www.hoteleggers.se/?utm_source=google&utm_medium=organic&utm_campaign=googleMyBusiness",
+    "phone": "031-333 44 40",
+    "googleRatingCount": 1879,
+    "bakomRankRegion": 10
+  },
+  {
+    "id": "courtyard-by-marriott-hotel-stockholm-stockholm",
+    "name": "Courtyard by Marriott Hotel Stockholm",
+    "address": "Rålambshovsleden 50",
+    "city": "Stockholm",
+    "lat": 59.33149029999999,
+    "lng": 18.0216662,
+    "ratings": {
+      "google": 4.3,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10605",
+      "google": "https://maps.google.com/?cid=16087755137269807866&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 81,
+    "bakomScoreRaw": 81.1,
+    "bakomRank": 66,
+    "metroRegion": "stockholm",
+    "website": "https://www.marriott.com/en-us/hotels/stocy-courtyard-stockholm-kungsholmen/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0",
+    "phone": "08-441 31 00",
+    "googleRatingCount": 2315,
+    "bakomRankRegion": 27
+  },
+  {
+    "id": "grand-hotel-i-lund-lund",
+    "name": "Grand Hotel i Lund",
+    "address": "Bantorget 1",
+    "city": "Lund",
+    "lat": 55.7038523,
+    "lng": 13.1890138,
+    "ratings": {
+      "google": 4.3,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10558",
+      "google": "https://maps.google.com/?cid=2652948712650883857&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 81,
+    "bakomScoreRaw": 81.1,
+    "bakomRank": 67,
+    "metroRegion": "malmo",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "http://www.grandilund.se/",
+    "phone": "046-280 61 00",
+    "googleRatingCount": 2570,
     "bakomRankRegion": 4
+  },
+  {
+    "id": "ellery-beach-house-stockholm",
+    "name": "Ellery Beach House",
+    "address": "Elfviks Udde",
+    "city": "Stockholm",
+    "lat": 59.3642368,
+    "lng": 18.2539369,
+    "ratings": {
+      "google": 4.3,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/12810",
+      "google": "https://maps.google.com/?cid=1633512873907815719&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 81,
+    "bakomScoreRaw": 81.1,
+    "bakomRank": 68,
+    "metroRegion": "stockholm",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "https://ellerybeachhouse.com/",
+    "phone": "08-505 637 00",
+    "googleRatingCount": 1433,
+    "bakomRankRegion": 28
+  },
+  {
+    "id": "copperhill-mountain-lodge-are",
+    "name": "Copperhill Mountain Lodge",
+    "address": "Åre Björnen, Åre",
+    "city": "Åre",
+    "lat": 63.3832939,
+    "lng": 13.177311099999999,
+    "ratings": {
+      "google": 4.5,
+      "michelin": "selected",
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10524",
+      "michelin": "https://guide.michelin.com/se/en/hotels-stays/are/copperhill-mountain-lodge-8343",
+      "google": "https://maps.google.com/?cid=12662214710591910592&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 81,
+    "bakomScoreRaw": 81,
+    "bakomRank": 69,
+    "metroRegion": "sweden",
+    "website": "https://www.copperhill.se/",
+    "phone": "0647-143 00",
+    "googleRatingCount": 1708
   },
   {
     "id": "stora-hotellet-umea",
@@ -2385,7 +2183,7 @@
     },
     "bakomScore": 81,
     "bakomScoreRaw": 80.7,
-    "bakomRank": 75,
+    "bakomRank": 70,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -2417,7 +2215,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.4,
-    "bakomRank": 76,
+    "bakomRank": 71,
     "metroRegion": "sweden",
     "website": "https://niehku.com/",
     "phone": "0980-430 50",
@@ -2440,7 +2238,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.4,
-    "bakomRank": 77,
+    "bakomRank": 72,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -2472,7 +2270,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.4,
-    "bakomRank": 78,
+    "bakomRank": 73,
     "metroRegion": "sweden",
     "website": "http://www.furillen.com/",
     "phone": "0498-22 30 40",
@@ -2495,7 +2293,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.4,
-    "bakomRank": 79,
+    "bakomRank": 74,
     "metroRegion": "gothenburg",
     "hours": [
       {
@@ -2509,7 +2307,7 @@
     "website": "https://www.elite.se/hotell/goteborg/elite-park-avenue-hotel-goteborg/?utm_source=google&utm_medium=organic&utm_campaign=google-local&utm_content=elite-park-avenue-hotel-goteborg",
     "phone": "031-727 10 00",
     "googleRatingCount": 3240,
-    "bakomRankRegion": 14
+    "bakomRankRegion": 11
   },
   {
     "id": "clarion-hotel-post-goteborg",
@@ -2528,7 +2326,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.4,
-    "bakomRank": 80,
+    "bakomRank": 75,
     "metroRegion": "gothenburg",
     "hours": [
       {
@@ -2542,7 +2340,7 @@
     "website": "https://www.strawberry.se/hotell/sverige/goteborg/clarion-hotel-post/?utm_campaign=gmb-listing&utm_medium=organic&utm_source=google",
     "phone": "031-61 90 00",
     "googleRatingCount": 6413,
-    "bakomRankRegion": 15
+    "bakomRankRegion": 12
   },
   {
     "id": "marstrands-havshotell-sweden",
@@ -2561,7 +2359,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.4,
-    "bakomRank": 81,
+    "bakomRank": 76,
     "metroRegion": "gothenburg",
     "hours": [
       {
@@ -2575,7 +2373,7 @@
     "website": "http://marstrands.se/",
     "phone": "0303-24 02 00",
     "googleRatingCount": 2540,
-    "bakomRankRegion": 16
+    "bakomRankRegion": 13
   },
   {
     "id": "miss-clara-by-nobis-stockholm",
@@ -2596,12 +2394,12 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.3,
-    "bakomRank": 82,
+    "bakomRank": 77,
     "metroRegion": "stockholm",
     "website": "http://www.missclarahotel.com/",
     "phone": "08-440 67 00",
     "googleRatingCount": 1200,
-    "bakomRankRegion": 28
+    "bakomRankRegion": 29
   },
   {
     "id": "stallmastaregarden-stockholm",
@@ -2622,12 +2420,12 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.3,
-    "bakomRank": 83,
+    "bakomRank": 78,
     "metroRegion": "stockholm",
     "website": "http://www.stallmastaregarden.se/",
     "phone": "08-610 13 00",
     "googleRatingCount": 1369,
-    "bakomRankRegion": 29
+    "bakomRankRegion": 30
   },
   {
     "id": "hobo-hotel-stockholm",
@@ -2648,42 +2446,11 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.3,
-    "bakomRank": 84,
+    "bakomRank": 79,
     "metroRegion": "stockholm",
     "website": "http://hobo.se/",
     "phone": "08-578 827 00",
     "googleRatingCount": 1838,
-    "bakomRankRegion": 30
-  },
-  {
-    "id": "lydmar-hotel-stockholm",
-    "name": "Lydmar Hotel",
-    "address": "Södra Blasieholmshamnen 2",
-    "city": "Stockholm",
-    "lat": 59.329018,
-    "lng": 18.077101799999998,
-    "ratings": {
-      "google": 4.4,
-      "michelin": "1_key",
-      "whiteguide": "global_master_class",
-      "svd": 3,
-      "di": 16
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10595",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/stockholm/lydmar-hotel-5807",
-      "di": "https://www.di.se/nyheter/hanget-battre-an-maten-pa-wallenbergs-oas/",
-      "svd": "https://www.svd.se/a/25przB/krogrecension-lydmar-skaver-i-det-vackra-folkets-vardagsrum",
-      "google": "https://maps.google.com/?cid=18342209435558570350&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 80,
-    "bakomScoreRaw": 80.3,
-    "bakomRank": 85,
-    "metroRegion": "stockholm",
-    "priceRange": "mellan",
-    "website": "http://www.lydmar.com/",
-    "phone": "08-22 31 60",
-    "googleRatingCount": 929,
     "bakomRankRegion": 31
   },
   {
@@ -2709,59 +2476,13 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.1,
-    "bakomRank": 86,
+    "bakomRank": 80,
     "metroRegion": "stockholm",
     "priceRange": "lyx",
     "website": "https://stockholmstadshotell.com/",
     "phone": "08-16 50 30",
     "googleRatingCount": 92,
     "bakomRankRegion": 32
-  },
-  {
-    "id": "nergarden-trosa",
-    "name": "Nergården",
-    "address": "Sund Nergården",
-    "city": "Trosa",
-    "lat": 58.9555144,
-    "lng": 17.411554799999998,
-    "ratings": {
-      "google": 4.8,
-      "falstaff": 85
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/restaurants/nergaarden",
-      "google": "https://maps.google.com/?cid=10270725777801082114&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 80,
-    "bakomScoreRaw": 80,
-    "bakomRank": 87,
-    "metroRegion": "sweden",
-    "website": "http://sundnergarden.se/",
-    "phone": "0156-70 00 70",
-    "googleRatingCount": 347
-  },
-  {
-    "id": "smakrike-krog-ljugarn",
-    "name": "Smakrike Krog",
-    "address": "Claudelins väg 1",
-    "city": "Ljugarn",
-    "lat": 57.330118999999996,
-    "lng": 18.708811,
-    "ratings": {
-      "google": 4.4,
-      "falstaff": 85
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/restaurants/smakrike-krog",
-      "google": "https://maps.google.com/?cid=390190542960910302&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 80,
-    "bakomScoreRaw": 80,
-    "bakomRank": 88,
-    "metroRegion": "sweden",
-    "website": "http://www.smakrike.se/",
-    "phone": "0498-49 33 71",
-    "googleRatingCount": 220
   },
   {
     "id": "hogbo-brukshotell-sandviken",
@@ -2776,12 +2497,11 @@
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/restaurants/5885",
-      "falstaff": "https://www.falstaff.com/en/hotels/hoegbo-brukshotell",
       "google": "https://maps.google.com/?cid=1230772059209265636&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 80,
     "bakomScoreRaw": 79.8,
-    "bakomRank": 89,
+    "bakomRank": 81,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -2809,68 +2529,15 @@
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/restaurants/6306",
-      "falstaff": "https://www.falstaff.com/en/hotels/ombergs-turisthotell",
       "google": "https://maps.google.com/?cid=2350893200090045373&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 80,
     "bakomScoreRaw": 79.8,
-    "bakomRank": 90,
+    "bakomRank": 82,
     "metroRegion": "sweden",
     "website": "http://ombergsturisthotell.com/",
     "phone": "0144-330 02",
     "googleRatingCount": 466
-  },
-  {
-    "id": "eksgarden-krog-rum-farjestaden",
-    "name": "Eksgården Krog & Rum",
-    "address": "Gårdby 149",
-    "city": "Färjestaden",
-    "lat": 56.600896,
-    "lng": 16.6412928,
-    "ratings": {
-      "google": 4.3,
-      "whiteguide": "very_good_class",
-      "falstaff": 75
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/8640",
-      "falstaff": "https://www.falstaff.com/en/hotels/eksgaarden-gaardshotell",
-      "google": "https://maps.google.com/?cid=9626054599094716424&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 80,
-    "bakomScoreRaw": 79.8,
-    "bakomRank": 91,
-    "metroRegion": "sweden",
-    "website": "http://www.eksgarden.com/",
-    "phone": "070-746 06 70",
-    "googleRatingCount": 347
-  },
-  {
-    "id": "hotell-borgholm-borgholm",
-    "name": "Hotell Borgholm",
-    "address": "Trädgårdsgatan 15-19",
-    "city": "Borgholm",
-    "lat": 56.878880099999996,
-    "lng": 16.657667999999997,
-    "ratings": {
-      "google": 4.6,
-      "michelin": "selected",
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/5828",
-      "michelin": "https://guide.michelin.com/se/en/oland/borgholm/restaurant/hotell-borgholm1186400",
-      "dn": "https://www.dn.se/kultur/hotell-borgholm-lika-delar-kreativitet-och-alvar-pa-stjarnprydda-krogen/",
-      "google": "https://maps.google.com/?cid=13744924569226211116&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 80,
-    "bakomScoreRaw": 79.7,
-    "bakomRank": 92,
-    "metroRegion": "sweden",
-    "priceRange": "lyx",
-    "website": "http://www.hotellborgholm.com/",
-    "phone": "0485-770 60",
-    "googleRatingCount": 427
   },
   {
     "id": "eco-by-strandnara-morbylanga",
@@ -2891,11 +2558,49 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 79.3,
-    "bakomRank": 93,
+    "bakomRank": 83,
     "metroRegion": "sweden",
     "website": "http://www.strandnara.com/",
     "phone": "0485-366 00",
     "googleRatingCount": 231
+  },
+  {
+    "id": "villa-dagmar-stockholm",
+    "name": "Villa Dagmar",
+    "address": "Nybrogatan 25-27",
+    "city": "Stockholm",
+    "lat": 59.335540599999995,
+    "lng": 18.077833,
+    "ratings": {
+      "google": 4.3,
+      "michelin": "1_key",
+      "whiteguide": "very_good_class",
+      "svd": 3
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/11893",
+      "michelin": "https://guide.michelin.com/se/en/hotels-stays/stockholm/villa-dagmar-11620",
+      "svd": "https://www.svd.se/a/pW4M9w/vid-risotton-undrar-vi-var-ar-stjarnkrogarna",
+      "google": "https://maps.google.com/?cid=4989996139335120878&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 79,
+    "bakomScoreRaw": 79.3,
+    "bakomRank": 84,
+    "metroRegion": "stockholm",
+    "priceRange": "lyx",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "00:00",
+        "close": "23:59"
+      }
+    ],
+    "website": "http://www.hotelvilladagmar.com/",
+    "phone": "08-122 135 50",
+    "googleRatingCount": 340,
+    "bakomRankRegion": 33
   },
   {
     "id": "nofo-stockholm",
@@ -2913,7 +2618,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 79.2,
-    "bakomRank": 94,
+    "bakomRank": 85,
     "metroRegion": "stockholm",
     "priceRange": "mellan",
     "hours": [
@@ -2928,29 +2633,30 @@
     "website": "https://www.nofohotel.se/",
     "phone": "08-503 112 00",
     "googleRatingCount": 1226,
-    "bakomRankRegion": 33
+    "bakomRankRegion": 34
   },
   {
-    "id": "fryksas-hotell-gestgifveri-orsa",
-    "name": "Fryksås Hotell & Gestgifveri",
-    "address": "Fryksås 136",
-    "city": "Orsa",
-    "lat": 61.1932162,
-    "lng": 14.5313375,
+    "id": "hotel-villa-anna-uppsala",
+    "name": "Hotel Villa Anna",
+    "address": "Odinslund 3",
+    "city": "Uppsala",
+    "lat": 59.856862299999996,
+    "lng": 17.631294699999998,
     "ratings": {
-      "google": 4.5
+      "google": 4.5,
+      "whiteguide": "very_good_class"
     },
     "links": {
-      "falstaff": "https://www.falstaff.com/en/hotels/fryksaas-hotell-gestgifveri",
-      "google": "https://maps.google.com/?cid=15773819650920424071&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/6194",
+      "google": "https://maps.google.com/?cid=15402089766411360330&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 79,
     "bakomScoreRaw": 79.2,
-    "bakomRank": 95,
+    "bakomRank": 86,
     "metroRegion": "sweden",
-    "website": "http://www.fryksashotell.se/",
-    "phone": "0250-460 20",
-    "googleRatingCount": 475
+    "website": "https://www.villaanna.se/",
+    "phone": "018-580 20 00",
+    "googleRatingCount": 540
   },
   {
     "id": "thoresta-herrgard-bro",
@@ -2969,7 +2675,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 79.2,
-    "bakomRank": 96,
+    "bakomRank": 87,
     "metroRegion": "stockholm",
     "hours": [
       {
@@ -3000,7 +2706,61 @@
     "website": "https://www.thoresta.se/",
     "phone": "08-582 426 00",
     "googleRatingCount": 223,
-    "bakomRankRegion": 34
+    "bakomRankRegion": 35
+  },
+  {
+    "id": "vardshuset-lindgarden-visby",
+    "name": "Värdshuset Lindgården",
+    "address": "Strandgatan 26",
+    "city": "Visby",
+    "lat": 57.64094000000001,
+    "lng": 18.2931564,
+    "ratings": {
+      "google": 4.5,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/6492",
+      "google": "https://maps.google.com/?cid=299434725217063156&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 79,
+    "bakomScoreRaw": 79.2,
+    "bakomRank": 88,
+    "metroRegion": "sweden",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "12:00",
+        "close": "18:00"
+      },
+      {
+        "days": [
+          3,
+          4
+        ],
+        "open": "17:00",
+        "close": "23:00"
+      },
+      {
+        "days": [
+          5
+        ],
+        "open": "17:00",
+        "close": "00:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "12:00",
+        "close": "00:00"
+      }
+    ],
+    "website": "http://www.lindgarden.com/",
+    "phone": "0498-21 87 00",
+    "googleRatingCount": 707
   },
   {
     "id": "stelor-koket-gotlands-tofta",
@@ -3019,7 +2779,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 79.2,
-    "bakomRank": 97,
+    "bakomRank": 89,
     "metroRegion": "sweden",
     "website": "http://www.stelor.se/",
     "phone": "073-515 70 80",
@@ -3042,51 +2802,11 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 79.2,
-    "bakomRank": 98,
+    "bakomRank": 90,
     "metroRegion": "sweden",
     "website": "http://www.gragasen.se/",
     "phone": "0498-49 70 00",
     "googleRatingCount": 459
-  },
-  {
-    "id": "villa-dagmar-stockholm",
-    "name": "Villa Dagmar",
-    "address": "Nybrogatan 25-27",
-    "city": "Stockholm",
-    "lat": 59.335540599999995,
-    "lng": 18.077833,
-    "ratings": {
-      "google": 4.3,
-      "michelin": "1_key",
-      "whiteguide": "very_good_class",
-      "svd": 3,
-      "falstaff": 75
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/11893",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/stockholm/villa-dagmar-11620",
-      "svd": "https://www.svd.se/a/pW4M9w/vid-risotton-undrar-vi-var-ar-stjarnkrogarna",
-      "falstaff": "https://www.falstaff.com/en/restaurants/villa-dagmar-stockholm",
-      "google": "https://maps.google.com/?cid=4989996139335120878&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 79,
-    "bakomScoreRaw": 78.6,
-    "bakomRank": 99,
-    "metroRegion": "stockholm",
-    "priceRange": "lyx",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "00:00",
-        "close": "23:59"
-      }
-    ],
-    "website": "http://www.hotelvilladagmar.com/",
-    "phone": "08-122 135 50",
-    "googleRatingCount": 340,
-    "bakomRankRegion": 35
   },
   {
     "id": "bjertorp-slott-kvanum",
@@ -3101,12 +2821,11 @@
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/restaurants/5841",
-      "falstaff": "https://www.falstaff.com/en/restaurants/bjertorp-slott-restaurang",
       "google": "https://maps.google.com/?cid=3593257142020896652&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 79,
     "bakomScoreRaw": 78.5,
-    "bakomRank": 100,
+    "bakomRank": 91,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -3150,7 +2869,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 78.5,
-    "bakomRank": 101,
+    "bakomRank": 92,
     "metroRegion": "malmo",
     "hours": [
       {
@@ -3187,7 +2906,7 @@
     },
     "bakomScore": 78,
     "bakomScoreRaw": 78.3,
-    "bakomRank": 102,
+    "bakomRank": 93,
     "metroRegion": "stockholm",
     "priceRange": "mellan",
     "hours": [
@@ -3221,13 +2940,59 @@
     },
     "bakomScore": 78,
     "bakomScoreRaw": 78,
-    "bakomRank": 103,
+    "bakomRank": 94,
     "metroRegion": "gothenburg",
     "priceRange": "mellan",
     "website": "http://www.liseberg.se/grandcuriosa",
     "phone": "031-40 01 00",
     "googleRatingCount": 1380,
-    "bakomRankRegion": 17
+    "bakomRankRegion": 14
+  },
+  {
+    "id": "eksgarden-krog-rum-farjestaden",
+    "name": "Eksgården Krog & Rum",
+    "address": "Gårdby 149",
+    "city": "Färjestaden",
+    "lat": 56.600896,
+    "lng": 16.6412928,
+    "ratings": {
+      "google": 4.3,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/8640",
+      "google": "https://maps.google.com/?cid=9626054599094716424&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 78,
+    "bakomScoreRaw": 77.9,
+    "bakomRank": 95,
+    "metroRegion": "sweden",
+    "website": "http://www.eksgarden.com/",
+    "phone": "070-746 06 70",
+    "googleRatingCount": 347
+  },
+  {
+    "id": "rusthallargarden-arild",
+    "name": "Rusthållargården",
+    "address": "Stora Vägen 26",
+    "city": "Arild",
+    "lat": 56.274493400000004,
+    "lng": 12.5711266,
+    "ratings": {
+      "google": 4.3,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/6284",
+      "google": "https://maps.google.com/?cid=14635581411830310765&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 78,
+    "bakomScoreRaw": 77.9,
+    "bakomRank": 96,
+    "metroRegion": "sweden",
+    "website": "http://www.rusthallargarden.se/",
+    "phone": "042-34 65 30",
+    "googleRatingCount": 465
   },
   {
     "id": "season-hotel-ekero",
@@ -3246,7 +3011,7 @@
     },
     "bakomScore": 78,
     "bakomScoreRaw": 77.6,
-    "bakomRank": 104,
+    "bakomRank": 97,
     "metroRegion": "stockholm",
     "website": "https://seasonhotel.se/",
     "phone": "08-648 58 50",
@@ -3254,175 +3019,27 @@
     "bakomRankRegion": 37
   },
   {
-    "id": "kiviks-hotell-konferens-och-spa-kivik",
-    "name": "Kiviks Hotell Konferens och Spa",
-    "address": "Moriabacken",
-    "city": "Kivik",
-    "lat": 55.688175199999996,
-    "lng": 14.2189216,
+    "id": "kastanjelunds-wardshus-yngsjo",
+    "name": "Kastanjelunds Wärdshus",
+    "address": "Kastanjelundsvägen 2",
+    "city": "Yngsjö",
+    "lat": 55.882338,
+    "lng": 14.2296497,
     "ratings": {
-      "google": 4.3,
-      "whiteguide": "good_class",
-      "falstaff": 75
+      "google": 4.7,
+      "whiteguide": "good_class"
     },
     "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/7970",
-      "falstaff": "https://www.falstaff.com/en/hotels/kiviks-hotel-restaurant",
-      "google": "https://maps.google.com/?cid=9920973370591281981&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/5973",
+      "google": "https://maps.google.com/?cid=13306158345046245025&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 77,
-    "bakomScoreRaw": 77.5,
-    "bakomRank": 105,
+    "bakomScoreRaw": 77.3,
+    "bakomRank": 98,
     "metroRegion": "sweden",
-    "hours": [
-      {
-        "days": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "open": "09:00",
-        "close": "18:00"
-      }
-    ],
-    "website": "http://www.kivikshotell.se/",
-    "phone": "0414-700 75",
-    "googleRatingCount": 356
-  },
-  {
-    "id": "hotel-villa-anna-uppsala",
-    "name": "Hotel Villa Anna",
-    "address": "Odinslund 3",
-    "city": "Uppsala",
-    "lat": 59.856862299999996,
-    "lng": 17.631294699999998,
-    "ratings": {
-      "google": 4.5,
-      "whiteguide": "very_good_class",
-      "falstaff": 65
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/6194",
-      "falstaff": "https://www.falstaff.com/en/restaurants/villa-anna-uppsala",
-      "google": "https://maps.google.com/?cid=15402089766411360330&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 77,
-    "bakomScoreRaw": 77.5,
-    "bakomRank": 106,
-    "metroRegion": "sweden",
-    "website": "https://www.villaanna.se/",
-    "phone": "018-580 20 00",
-    "googleRatingCount": 540
-  },
-  {
-    "id": "vardshuset-lindgarden-visby",
-    "name": "Värdshuset Lindgården",
-    "address": "Strandgatan 26",
-    "city": "Visby",
-    "lat": 57.64094000000001,
-    "lng": 18.2931564,
-    "ratings": {
-      "google": 4.5,
-      "whiteguide": "very_good_class",
-      "falstaff": 65
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/6492",
-      "falstaff": "https://www.falstaff.com/en/restaurants/vaerdshuset-lindgaarden",
-      "google": "https://maps.google.com/?cid=299434725217063156&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 77,
-    "bakomScoreRaw": 77.5,
-    "bakomRank": 107,
-    "metroRegion": "sweden",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "12:00",
-        "close": "18:00"
-      },
-      {
-        "days": [
-          3,
-          4
-        ],
-        "open": "17:00",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          5
-        ],
-        "open": "17:00",
-        "close": "00:00"
-      },
-      {
-        "days": [
-          6
-        ],
-        "open": "12:00",
-        "close": "00:00"
-      }
-    ],
-    "website": "http://www.lindgarden.com/",
-    "phone": "0498-21 87 00",
-    "googleRatingCount": 707
-  },
-  {
-    "id": "hotel-fratelli-karlstad",
-    "name": "Hotel Fratelli",
-    "address": "Drottninggatan 17",
-    "city": "Karlstad",
-    "lat": 59.379067,
-    "lng": 13.501254,
-    "ratings": {
-      "google": 4.4
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/hotels/hotel-fratelli",
-      "google": "https://maps.google.com/?cid=4598553520614548829&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 77,
-    "bakomScoreRaw": 77.4,
-    "bakomRank": 108,
-    "metroRegion": "sweden",
-    "website": "https://hotelfratelli.se/",
-    "phone": "054-88 55 00",
-    "googleRatingCount": 221
-  },
-  {
-    "id": "hotel-flora-goteborg",
-    "name": "Hotel Flora",
-    "address": "Grönsakstorget 2, Göteborg",
-    "city": "Göteborg",
-    "lat": 57.7027678,
-    "lng": 11.965492999999999,
-    "ratings": {
-      "google": 4.2,
-      "michelin": "selected",
-      "whiteguide": "recommended",
-      "falstaff": 95
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10576",
-      "falstaff": "https://www.falstaff.com/en/restaurants/flora",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/gothenburg/hotel-flora-9782",
-      "google": "https://maps.google.com/?cid=6970137250200890707&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 77,
-    "bakomScoreRaw": 77.4,
-    "bakomRank": 109,
-    "metroRegion": "gothenburg",
-    "website": "http://www.hotelflora.se/",
-    "phone": "031-13 86 16",
-    "googleRatingCount": 846,
-    "bakomRankRegion": 18
+    "website": "http://www.kastanjelund.se/",
+    "phone": "044-23 25 33",
+    "googleRatingCount": 334
   },
   {
     "id": "olme-prastgard-kristinehamn",
@@ -3437,48 +3054,74 @@
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/restaurants/8048",
-      "falstaff": "https://www.falstaff.com/en/restaurants/oelme-praestgaard-gaestgiveri",
       "google": "https://maps.google.com/?cid=3837522545387291835&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 77,
     "bakomScoreRaw": 77.3,
-    "bakomRank": 110,
+    "bakomRank": 99,
     "metroRegion": "sweden",
     "website": "https://olmeprastgard.se/",
     "phone": "0550-333 33",
     "googleRatingCount": 270
   },
   {
-    "id": "hotell-mossbylund-malmo",
-    "name": "Hotell Mossbylund",
-    "address": "Skivarp",
+    "id": "hotel-mj-s-malmo",
+    "name": "Hotel MJ's",
+    "address": "Mäster Johansgatan 13",
     "city": "Malmö",
-    "lat": 55.414727899999995,
-    "lng": 13.6238794,
+    "lat": 55.605829899999996,
+    "lng": 12.9979419,
     "ratings": {
-      "google": 4.5,
-      "falstaff": 75
+      "google": 4.4,
+      "michelin": "selected",
+      "whiteguide": "good_class"
     },
     "links": {
-      "falstaff": "https://www.falstaff.com/en/hotels/hotell-mossbylund",
-      "google": "https://maps.google.com/?cid=7538167337075388591&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/8824",
+      "michelin": "https://guide.michelin.com/se/en/hotels-stays/malmo/hotel-mjs-9880",
+      "google": "https://maps.google.com/?cid=14381097562105252551&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 77,
     "bakomScoreRaw": 77.2,
-    "bakomRank": 111,
+    "bakomRank": 100,
     "metroRegion": "malmo",
     "hours": [
       {
         "days": [
-          0
+          0,
+          6
         ],
-        "open": "00:00",
-        "close": "23:59"
+        "open": "12:00",
+        "close": "14:30"
+      },
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "18:00",
+        "close": "22:00"
+      },
+      {
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "open": "11:30",
+        "close": "14:00"
       }
     ],
-    "website": "https://mossbylund.se/",
-    "phone": "0411-300 36",
-    "googleRatingCount": 1915,
+    "website": "https://www.mjs.life/",
+    "phone": "040-664 64 00",
+    "googleRatingCount": 1739,
     "bakomRankRegion": 6
   },
   {
@@ -3498,7 +3141,7 @@
     },
     "bakomScore": 77,
     "bakomScoreRaw": 76.6,
-    "bakomRank": 112,
+    "bakomRank": 101,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -3537,111 +3180,15 @@
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/restaurants/11530",
-      "falstaff": "https://www.falstaff.com/en/hotels/granen-hotel-restaurant",
       "google": "https://maps.google.com/?cid=10735992128941728663&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 77,
     "bakomScoreRaw": 76.6,
-    "bakomRank": 113,
+    "bakomRank": 102,
     "metroRegion": "sweden",
     "website": "https://aregranen.se/en/",
     "phone": "0647-515 60",
     "googleRatingCount": 404
-  },
-  {
-    "id": "skivarps-gastgivaregard-malmo",
-    "name": "Skivarps Gästgivaregård",
-    "address": "Landsvägen 32",
-    "city": "Malmö",
-    "lat": 55.4232848,
-    "lng": 13.567482799999999,
-    "ratings": {
-      "google": 4.4,
-      "falstaff": 75
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/restaurants/skivarps-gaestgivaregaard",
-      "google": "https://maps.google.com/?cid=13010403938019568842&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 76,
-    "bakomScoreRaw": 76.4,
-    "bakomRank": 114,
-    "metroRegion": "malmo",
-    "website": "https://www.skivarp.com/",
-    "phone": "0411-305 51",
-    "googleRatingCount": 254,
-    "bakomRankRegion": 7
-  },
-  {
-    "id": "stufvenas-gastgifveri-torsas",
-    "name": "Stufvenäs Gästgifveri",
-    "address": "Stuvenäsvägen 1",
-    "city": "Torsås",
-    "lat": 56.4661903,
-    "lng": 16.128436999999998,
-    "ratings": {
-      "google": 4.4,
-      "falstaff": 75
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/restaurants/stufvenaes-gaestgifveri",
-      "google": "https://maps.google.com/?cid=3308727123705877641&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 76,
-    "bakomScoreRaw": 76.4,
-    "bakomRank": 115,
-    "metroRegion": "sweden",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "07:00",
-        "close": "16:00"
-      },
-      {
-        "days": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "open": "07:00",
-        "close": "23:00"
-      }
-    ],
-    "website": "http://www.stufvenas.se/",
-    "phone": "0486-219 00",
-    "googleRatingCount": 1121
-  },
-  {
-    "id": "gorvalns-slott-jarfalla",
-    "name": "Görvälns Slott",
-    "address": "Görvälnsvägen",
-    "city": "Järfälla",
-    "lat": 59.43487679999999,
-    "lng": 17.7872818,
-    "ratings": {
-      "google": 4.3,
-      "michelin": "selected",
-      "di": 18
-    },
-    "links": {
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/jarfalla/gorvalns-slott-7923",
-      "di": "https://www.di.se/nyheter/stjarnorna-pa-slottet-ar-langt-borta/",
-      "google": "https://maps.google.com/?cid=7543324936126043400&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 76,
-    "bakomScoreRaw": 76.1,
-    "bakomRank": 116,
-    "metroRegion": "stockholm",
-    "priceRange": "lyx",
-    "website": "https://www.gorvalnsslott.se/",
-    "phone": "08-120 002 00",
-    "googleRatingCount": 1347,
-    "bakomRankRegion": 38
   },
   {
     "id": "hooks-herrgard-hok",
@@ -3656,12 +3203,11 @@
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/restaurants/5815",
-      "falstaff": "https://www.falstaff.com/en/hotels/hooks-herrgaard",
       "google": "https://maps.google.com/?cid=2404327972981715688&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 76,
     "bakomScoreRaw": 76,
-    "bakomRank": 117,
+    "bakomRank": 103,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -3699,7 +3245,7 @@
     },
     "bakomScore": 76,
     "bakomScoreRaw": 76,
-    "bakomRank": 118,
+    "bakomRank": 104,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -3729,6 +3275,29 @@
     "googleRatingCount": 512
   },
   {
+    "id": "furusund-vardshus-furusund",
+    "name": "Furusund Värdshus",
+    "address": "Strandvägen 2",
+    "city": "Furusund",
+    "lat": 59.659032100000005,
+    "lng": 18.9160885,
+    "ratings": {
+      "google": 4.5,
+      "whiteguide": "good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/6005",
+      "google": "https://maps.google.com/?cid=17196936093411661963&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 76,
+    "bakomScoreRaw": 76,
+    "bakomRank": 105,
+    "metroRegion": "sweden",
+    "website": "https://www.hotellfurusund.se/",
+    "phone": "0176-803 44",
+    "googleRatingCount": 754
+  },
+  {
     "id": "orum-119-loderup",
     "name": "Örum 119",
     "address": "Örumsvägen 119",
@@ -3745,7 +3314,7 @@
     },
     "bakomScore": 76,
     "bakomScoreRaw": 76,
-    "bakomRank": 119,
+    "bakomRank": 106,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -3783,7 +3352,7 @@
     },
     "bakomScore": 75,
     "bakomScoreRaw": 75.4,
-    "bakomRank": 120,
+    "bakomRank": 107,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -3833,11 +3402,51 @@
     },
     "bakomScore": 75,
     "bakomScoreRaw": 75.4,
-    "bakomRank": 121,
+    "bakomRank": 108,
     "metroRegion": "sweden",
     "website": "http://www.hestraviken.se/",
     "phone": "0370-33 68 00",
     "googleRatingCount": 868
+  },
+  {
+    "id": "naas-fabriker-tollered",
+    "name": "Nääs Fabriker",
+    "address": "Spinnerivägen 1",
+    "city": "Tollered",
+    "lat": 57.8199547,
+    "lng": 12.416620799999999,
+    "ratings": {
+      "google": 4.4,
+      "whiteguide": "good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/6167",
+      "google": "https://maps.google.com/?cid=11289183660997876116&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 75,
+    "bakomScoreRaw": 75.4,
+    "bakomRank": 109,
+    "metroRegion": "gothenburg",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "06:30",
+        "close": "15:00"
+      },
+      {
+        "days": [
+          1
+        ],
+        "open": "00:00",
+        "close": "00:00"
+      }
+    ],
+    "website": "https://www.naasfabriker.se/",
+    "phone": "031-799 63 00",
+    "googleRatingCount": 2793,
+    "bakomRankRegion": 15
   },
   {
     "id": "toftaholm-herrgard-vittaryd",
@@ -3856,7 +3465,7 @@
     },
     "bakomScore": 75,
     "bakomScoreRaw": 75.4,
-    "bakomRank": 122,
+    "bakomRank": 110,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -3906,7 +3515,7 @@
     },
     "bakomScore": 75,
     "bakomScoreRaw": 75.4,
-    "bakomRank": 123,
+    "bakomRank": 111,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -3940,12 +3549,11 @@
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/restaurants/6449",
-      "falstaff": "https://www.falstaff.com/en/hotels/faerna-herrgaard",
       "google": "https://maps.google.com/?cid=8787999897101092557&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 75,
     "bakomScoreRaw": 75.4,
-    "bakomRank": 124,
+    "bakomRank": 112,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -3995,93 +3603,31 @@
     },
     "bakomScore": 75,
     "bakomScoreRaw": 75,
-    "bakomRank": 125,
+    "bakomRank": 113,
     "metroRegion": "stockholm",
     "website": "https://www.hotelj.com/",
     "phone": "08-601 30 00",
     "googleRatingCount": 1170,
-    "bakomRankRegion": 39
+    "bakomRankRegion": 38
   },
   {
-    "id": "hotel-mj-s-malmo",
-    "name": "Hotel MJ's",
-    "address": "Mäster Johansgatan 13",
-    "city": "Malmö",
-    "lat": 55.605829899999996,
-    "lng": 12.9979419,
+    "id": "kiviks-hotell-konferens-och-spa-kivik",
+    "name": "Kiviks Hotell Konferens och Spa",
+    "address": "Moriabacken",
+    "city": "Kivik",
+    "lat": 55.688175199999996,
+    "lng": 14.2189216,
     "ratings": {
-      "google": 4.4,
-      "michelin": "selected",
-      "whiteguide": "good_class",
-      "falstaff": 65
+      "google": 4.3,
+      "whiteguide": "good_class"
     },
     "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/8824",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/malmo/hotel-mjs-9880",
-      "falstaff": "https://www.falstaff.com/en/hotels/mjs-hotel",
-      "google": "https://maps.google.com/?cid=14381097562105252551&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/7970",
+      "google": "https://maps.google.com/?cid=9920973370591281981&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 75,
-    "bakomScoreRaw": 74.9,
-    "bakomRank": 126,
-    "metroRegion": "malmo",
-    "hours": [
-      {
-        "days": [
-          0,
-          6
-        ],
-        "open": "12:00",
-        "close": "14:30"
-      },
-      {
-        "days": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "open": "18:00",
-        "close": "22:00"
-      },
-      {
-        "days": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "open": "11:30",
-        "close": "14:00"
-      }
-    ],
-    "website": "https://www.mjs.life/",
-    "phone": "040-664 64 00",
-    "googleRatingCount": 1739,
-    "bakomRankRegion": 8
-  },
-  {
-    "id": "hotel-skansen-farjestaden-morbylanga",
-    "name": "Hotel Skansen Färjestaden",
-    "address": "Tingshusgatan 1",
-    "city": "Mörbylånga",
-    "lat": 56.648888799999995,
-    "lng": 16.467718400000003,
-    "ratings": {
-      "google": 4.2,
-      "falstaff": 75
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/hotels/hotel-skansen-faerjestaden",
-      "google": "https://maps.google.com/?cid=9384169267373256913&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 75,
-    "bakomScoreRaw": 74.8,
-    "bakomRank": 127,
+    "bakomScoreRaw": 74.7,
+    "bakomRank": 114,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -4094,13 +3640,49 @@
           5,
           6
         ],
-        "open": "06:30",
-        "close": "00:00"
+        "open": "09:00",
+        "close": "18:00"
       }
     ],
-    "website": "http://www.hotelskansen.com/",
-    "phone": "0485-305 30",
-    "googleRatingCount": 1473
+    "website": "http://www.kivikshotell.se/",
+    "phone": "0414-700 75",
+    "googleRatingCount": 356
+  },
+  {
+    "id": "salt-sill-kladesholmen",
+    "name": "Salt & Sill",
+    "address": "Rytterholmen 1",
+    "city": "Klädesholmen",
+    "lat": 57.949933699999995,
+    "lng": 11.549558099999999,
+    "ratings": {
+      "google": 4.3,
+      "whiteguide": "good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/5887",
+      "google": "https://maps.google.com/?cid=11969158968351615366&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 75,
+    "bakomScoreRaw": 74.7,
+    "bakomRank": 115,
+    "metroRegion": "gothenburg",
+    "hours": [
+      {
+        "days": [
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "12:00",
+        "close": "22:00"
+      }
+    ],
+    "website": "http://www.saltosill.se/",
+    "phone": "0304-67 34 80",
+    "googleRatingCount": 1022,
+    "bakomRankRegion": 16
   },
   {
     "id": "baldersnas-herrgard-dals-langed",
@@ -4115,12 +3697,11 @@
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/restaurants/6859",
-      "falstaff": "https://www.falstaff.com/en/restaurants/baldersnaes-koek",
       "google": "https://maps.google.com/?cid=14800582862112088139&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 75,
     "bakomScoreRaw": 74.7,
-    "bakomRank": 128,
+    "bakomRank": 116,
     "metroRegion": "sweden",
     "website": "http://www.baldersnas.eu/",
     "phone": "0531-412 13",
@@ -4143,7 +3724,7 @@
     },
     "bakomScore": 75,
     "bakomScoreRaw": 74.7,
-    "bakomRank": 129,
+    "bakomRank": 117,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -4165,6 +3746,29 @@
     "googleRatingCount": 951
   },
   {
+    "id": "villa-sjotorp-ljungskile",
+    "name": "Villa Sjötorp",
+    "address": "Lyckorna",
+    "city": "Ljungskile",
+    "lat": 58.206279300000006,
+    "lng": 11.899054399999999,
+    "ratings": {
+      "google": 4.3,
+      "whiteguide": "good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/5934",
+      "google": "https://maps.google.com/?cid=8812157761734861734&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 75,
+    "bakomScoreRaw": 74.7,
+    "bakomRank": 118,
+    "metroRegion": "sweden",
+    "website": "https://villasjotorp.se/",
+    "phone": "0522-201 74",
+    "googleRatingCount": 194
+  },
+  {
     "id": "slottsholmen-vastervik",
     "name": "Slottsholmen",
     "address": "Slottsholmsvägen 10",
@@ -4181,7 +3785,7 @@
     },
     "bakomScore": 75,
     "bakomScoreRaw": 74.7,
-    "bakomRank": 130,
+    "bakomRank": 119,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -4219,7 +3823,7 @@
     },
     "bakomScore": 75,
     "bakomScoreRaw": 74.5,
-    "bakomRank": 131,
+    "bakomRank": 120,
     "metroRegion": "stockholm",
     "hours": [
       {
@@ -4233,7 +3837,7 @@
     "website": "https://nordiclighthotel.com/",
     "phone": "08-505 632 00",
     "googleRatingCount": 1894,
-    "bakomRankRegion": 40
+    "bakomRankRegion": 39
   },
   {
     "id": "maritime-grand-hotel-i-molle-molle",
@@ -4252,7 +3856,7 @@
     },
     "bakomScore": 74,
     "bakomScoreRaw": 74.1,
-    "bakomRank": 132,
+    "bakomRank": 121,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -4274,6 +3878,45 @@
     "googleRatingCount": 632
   },
   {
+    "id": "restaurang-grand-tenan-marstrand",
+    "name": "Restaurang Grand Tenan",
+    "address": "Grand Hotell Marstrand, Rådhusgatan 2",
+    "city": "Marstrand",
+    "lat": 57.8873265,
+    "lng": 11.5830828,
+    "ratings": {
+      "google": 4.2,
+      "whiteguide": "good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/restaurants/5886",
+      "google": "https://maps.google.com/?cid=12085385995291186339&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 74,
+    "bakomScoreRaw": 74.1,
+    "bakomRank": 122,
+    "metroRegion": "gothenburg",
+    "hours": [
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "08:00",
+        "close": "21:00"
+      }
+    ],
+    "website": "http://www.grandmarstrand.se/",
+    "phone": "0303-603 22",
+    "googleRatingCount": 271,
+    "bakomRankRegion": 17
+  },
+  {
     "id": "camp-ripan-restaurang-kiruna",
     "name": "Camp Ripan Restaurang",
     "address": "Campingvägen 5",
@@ -4286,12 +3929,11 @@
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/restaurants/6318",
-      "falstaff": "https://www.falstaff.com/en/restaurants/camp-ripan-kiruna",
       "google": "https://maps.google.com/?cid=10180368718510647181&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 74,
     "bakomScoreRaw": 74.1,
-    "bakomRank": 133,
+    "bakomRank": 123,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -4313,6 +3955,30 @@
     "googleRatingCount": 2800
   },
   {
+    "id": "gorvalns-slott-jarfalla",
+    "name": "Görvälns Slott",
+    "address": "Görvälnsvägen",
+    "city": "Järfälla",
+    "lat": 59.43487679999999,
+    "lng": 17.7872818,
+    "ratings": {
+      "google": 4.3,
+      "michelin": "selected"
+    },
+    "links": {
+      "michelin": "https://guide.michelin.com/se/en/hotels-stays/jarfalla/gorvalns-slott-7923",
+      "google": "https://maps.google.com/?cid=7543324936126043400&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 74,
+    "bakomScoreRaw": 74,
+    "bakomRank": 124,
+    "metroRegion": "stockholm",
+    "website": "https://www.gorvalnsslott.se/",
+    "phone": "08-120 002 00",
+    "googleRatingCount": 1347,
+    "bakomRankRegion": 40
+  },
+  {
     "id": "hotel-reisen-part-of-the-unbound-collection-by-hyatt-stockholm",
     "name": "Hôtel Reisen, part of The Unbound Collection by Hyatt",
     "address": "Skeppsbron 12",
@@ -4329,54 +3995,12 @@
     },
     "bakomScore": 74,
     "bakomScoreRaw": 74,
-    "bakomRank": 134,
+    "bakomRank": 125,
     "metroRegion": "stockholm",
     "website": "https://www.hyatt.com/unbound-collection/en-US/arnub-hotel-reisen?src=corp_lclb_google_seo_arnub&utm_source=google&utm_medium=organic&utm_campaign=lmr",
     "phone": "08-128 812 34",
     "googleRatingCount": 1546,
     "bakomRankRegion": 41
-  },
-  {
-    "id": "soderkopings-brunn-soderkoping",
-    "name": "Söderköpings Brunn",
-    "address": "Skönbergagatan 35",
-    "city": "Söderköping",
-    "lat": 58.47917109999999,
-    "lng": 16.330662500000003,
-    "ratings": {
-      "google": 4.2
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/restaurants/soederkoepings-brunn",
-      "google": "https://maps.google.com/?cid=12308564657429639629&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 74,
-    "bakomScoreRaw": 73.9,
-    "bakomRank": 135,
-    "metroRegion": "sweden",
-    "hours": [
-      {
-        "days": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "open": "11:30",
-        "close": "21:00"
-      },
-      {
-        "days": [
-          6
-        ],
-        "open": "13:00",
-        "close": "21:00"
-      }
-    ],
-    "website": "http://sbrunn.se/",
-    "phone": "0121-109 00",
-    "googleRatingCount": 1282
   },
   {
     "id": "sheraton-stockholm-hotel-stockholm",
@@ -4395,7 +4019,7 @@
     },
     "bakomScore": 74,
     "bakomScoreRaw": 73.5,
-    "bakomRank": 136,
+    "bakomRank": 126,
     "metroRegion": "stockholm",
     "website": "https://www.marriott.com/en-us/hotels/stosi-sheraton-stockholm-hotel/overview/?scid=f2ae0541-1279-4f24-b197-a979c79310b0",
     "phone": "08-412 34 00",
@@ -4419,7 +4043,7 @@
     },
     "bakomScore": 74,
     "bakomScoreRaw": 73.5,
-    "bakomRank": 137,
+    "bakomRank": 127,
     "metroRegion": "malmo",
     "hours": [
       {
@@ -4433,51 +4057,7 @@
     "website": "http://www.hotelnoblehouse.se/",
     "phone": "040-664 30 00",
     "googleRatingCount": 1628,
-    "bakomRankRegion": 9
-  },
-  {
-    "id": "restaurang-slottsvillan-jonkoping",
-    "name": "Restaurang Slottsvillan",
-    "address": "Hakarpsvägen 3A,",
-    "city": "Jönköping",
-    "lat": 57.785990399999996,
-    "lng": 14.2862814,
-    "ratings": {
-      "google": 4.6,
-      "whiteguide": "recommended"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/restaurants/12581",
-      "falstaff": "https://www.falstaff.com/en/hotels/slottsvillan",
-      "google": "https://maps.google.com/?cid=14663262974029940201&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 73,
-    "bakomScoreRaw": 73.5,
-    "bakomRank": 138,
-    "metroRegion": "sweden",
-    "hours": [
-      {
-        "days": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "open": "07:30",
-        "close": "23:00"
-      },
-      {
-        "days": [
-          6
-        ],
-        "open": "08:00",
-        "close": "23:00"
-      }
-    ],
-    "website": "https://www.slottsvillan.se/",
-    "phone": "036-14 20 90",
-    "googleRatingCount": 359
+    "bakomRankRegion": 7
   },
   {
     "id": "grenna-hotell-restaurang-granna",
@@ -4492,42 +4072,15 @@
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/restaurants/11671",
-      "falstaff": "https://www.falstaff.com/en/hotels/grenna-hotel-restaurang",
       "google": "https://maps.google.com/?cid=16444950183519961001&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 73,
     "bakomScoreRaw": 73.5,
-    "bakomRank": 139,
+    "bakomRank": 128,
     "metroRegion": "sweden",
     "website": "http://www.grennahotell.se/",
     "phone": "0390-108 20",
     "googleRatingCount": 390
-  },
-  {
-    "id": "story-hotel-riddargatan-stockholm",
-    "name": "Story Hotel Riddargatan",
-    "address": "Riddargatan 6",
-    "city": "Stockholm",
-    "lat": 59.334708299999996,
-    "lng": 18.0750964,
-    "ratings": {
-      "google": 4.2,
-      "michelin": "selected",
-      "whiteguide": "recommended"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/hotels/10587",
-      "michelin": "https://guide.michelin.com/se/en/hotels-stays/stockholm/story-hotel-stockholm-stureplan-8694",
-      "google": "https://maps.google.com/?cid=16213687276295797141&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 73,
-    "bakomScoreRaw": 73.1,
-    "bakomRank": 140,
-    "metroRegion": "stockholm",
-    "website": "https://www.hyatt.com/story-hotels/en-US/arnjd-story-hotel-stockholm-stureplan?src=corp_lclb_google_seo_arnjd&utm_source=google&utm_medium=organic&utm_campaign=lmr",
-    "phone": "08-545 039 40",
-    "googleRatingCount": 595,
-    "bakomRankRegion": 43
   },
   {
     "id": "hotel-riverton-goteborg",
@@ -4546,7 +4099,7 @@
     },
     "bakomScore": 73,
     "bakomScoreRaw": 73,
-    "bakomRank": 141,
+    "bakomRank": 129,
     "metroRegion": "gothenburg",
     "hours": [
       {
@@ -4560,7 +4113,7 @@
     "website": "http://www.riverton.se/",
     "phone": "031-750 10 00",
     "googleRatingCount": 2240,
-    "bakomRankRegion": 19
+    "bakomRankRegion": 18
   },
   {
     "id": "huskvarna-stadshotell-huskvarna",
@@ -4579,7 +4132,7 @@
     },
     "bakomScore": 73,
     "bakomScoreRaw": 73,
-    "bakomRank": 142,
+    "bakomRank": 130,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -4635,58 +4188,12 @@
     },
     "bakomScore": 73,
     "bakomScoreRaw": 73,
-    "bakomRank": 143,
+    "bakomRank": 131,
     "metroRegion": "malmo",
     "website": "https://maryhillestate.com/",
     "phone": "0418-45 11 00",
     "googleRatingCount": 452,
-    "bakomRankRegion": 10
-  },
-  {
-    "id": "herno-gin-hotell-harnosand",
-    "name": "Hernö Gin Hotell",
-    "address": "Kanaludden 2",
-    "city": "Härnösand",
-    "lat": 62.628497499999995,
-    "lng": 17.9394675,
-    "ratings": {
-      "google": 4.5,
-      "falstaff": 65
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/hotels/hernoe-gin-hotell",
-      "google": "https://maps.google.com/?cid=6640043847731355141&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 72,
-    "bakomScoreRaw": 71.6,
-    "bakomRank": 144,
-    "metroRegion": "sweden",
-    "website": "https://www.hernoginhotell.se/",
-    "phone": "0611-43 41 30",
-    "googleRatingCount": 180
-  },
-  {
-    "id": "naya-retreat-hotel-morbylanga",
-    "name": "Naya Retreat & Hotel",
-    "address": "Dansbanevägen 3",
-    "city": "Mörbylånga",
-    "lat": 56.574399,
-    "lng": 16.41045,
-    "ratings": {
-      "google": 4.7,
-      "falstaff": 75
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/hotels/naya-retreat-hotel",
-      "google": "https://maps.google.com/?cid=13698575055332260577&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 72,
-    "bakomScoreRaw": 71.6,
-    "bakomRank": 145,
-    "metroRegion": "sweden",
-    "website": "https://www.nayaretreat.se/",
-    "phone": "073-972 40 70",
-    "googleRatingCount": 25
+    "bakomRankRegion": 8
   },
   {
     "id": "hotell-fjallet-bjorkliden",
@@ -4705,7 +4212,7 @@
     },
     "bakomScore": 71,
     "bakomScoreRaw": 70.9,
-    "bakomRank": 146,
+    "bakomRank": 132,
     "metroRegion": "sweden",
     "website": "http://bjorkliden.com/resa-bo/hotell-fjallet/",
     "phone": "0980-641 00",
@@ -4728,7 +4235,7 @@
     },
     "bakomScore": 71,
     "bakomScoreRaw": 70.9,
-    "bakomRank": 147,
+    "bakomRank": 133,
     "metroRegion": "sweden",
     "website": "http://www.annashotell.se/",
     "phone": "044-21 22 12",
@@ -4751,7 +4258,7 @@
     },
     "bakomScore": 70,
     "bakomScoreRaw": 70.3,
-    "bakomRank": 148,
+    "bakomRank": 134,
     "metroRegion": "sweden",
     "website": "http://www.surflogiet.se/",
     "phone": "0498-29 79 55",
@@ -4774,7 +4281,7 @@
     },
     "bakomScore": 70,
     "bakomScoreRaw": 70.3,
-    "bakomRank": 149,
+    "bakomRank": 135,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -4825,13 +4332,13 @@
     },
     "bakomScore": 70,
     "bakomScoreRaw": 70.1,
-    "bakomRank": 150,
+    "bakomRank": 136,
     "metroRegion": "stockholm",
     "priceRange": "mellan",
     "website": "https://hotelvilladahlia.com/",
     "phone": "08-572 126 00",
     "googleRatingCount": 141,
-    "bakomRankRegion": 44
+    "bakomRankRegion": 43
   },
   {
     "id": "waxholms-hotell-vaxholm",
@@ -4850,7 +4357,7 @@
     },
     "bakomScore": 70,
     "bakomScoreRaw": 69.7,
-    "bakomRank": 151,
+    "bakomRank": 137,
     "metroRegion": "stockholm",
     "priceRange": "mellan",
     "hours": [
@@ -4865,7 +4372,7 @@
     "website": "http://www.waxholmshotell.se/",
     "phone": "08-541 301 50",
     "googleRatingCount": 1076,
-    "bakomRankRegion": 45
+    "bakomRankRegion": 44
   },
   {
     "id": "strandflickornas-havshotell-lysekil",
@@ -4884,7 +4391,7 @@
     },
     "bakomScore": 70,
     "bakomScoreRaw": 69.7,
-    "bakomRank": 152,
+    "bakomRank": 138,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -4922,7 +4429,7 @@
     },
     "bakomScore": 70,
     "bakomScoreRaw": 69.7,
-    "bakomRank": 153,
+    "bakomRank": 139,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -4960,7 +4467,7 @@
     },
     "bakomScore": 70,
     "bakomScoreRaw": 69.7,
-    "bakomRank": 154,
+    "bakomRank": 140,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -4992,7 +4499,7 @@
     },
     "bakomScore": 70,
     "bakomScoreRaw": 69.7,
-    "bakomRank": 155,
+    "bakomRank": 141,
     "metroRegion": "sweden",
     "website": "http://www.strand-arild.se/",
     "phone": "042-34 61 00",
@@ -5015,7 +4522,7 @@
     },
     "bakomScore": 70,
     "bakomScoreRaw": 69.7,
-    "bakomRank": 156,
+    "bakomRank": 142,
     "metroRegion": "malmo",
     "hours": [
       {
@@ -5029,7 +4536,7 @@
     "website": "http://www.mayfairtunneln.com/",
     "phone": "040-10 16 20",
     "googleRatingCount": 1471,
-    "bakomRankRegion": 11
+    "bakomRankRegion": 9
   },
   {
     "id": "lapland-view-lodge-overtornea",
@@ -5048,7 +4555,7 @@
     },
     "bakomScore": 70,
     "bakomScoreRaw": 69.7,
-    "bakomRank": 157,
+    "bakomRank": 143,
     "metroRegion": "sweden",
     "website": "https://explorethenorth.se/our-lodges/lapland-view-lodge",
     "phone": "0978-69 08 00",
@@ -5071,58 +4578,11 @@
     },
     "bakomScore": 70,
     "bakomScoreRaw": 69.7,
-    "bakomRank": 158,
+    "bakomRank": 144,
     "metroRegion": "sweden",
     "website": "https://www.elite.se/hotell/sundsvall/elite-hotel-knaust-sundsvall/?utm_source=google&utm_medium=organic&utm_campaign=google-local&utm_content=elite-hotel-knaust-sundsvall",
     "phone": "060-608 00 00",
     "googleRatingCount": 1825
-  },
-  {
-    "id": "gimo-herrgard-restaurang-osthammar",
-    "name": "Gimo Herrgård Restaurang",
-    "address": "Bruksgatan 24",
-    "city": "Östhammar",
-    "lat": 60.178311199999996,
-    "lng": 18.173201499999998,
-    "ratings": {
-      "google": 4.2,
-      "falstaff": 65
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/restaurants/gimo-herrgaard-restaurang",
-      "google": "https://maps.google.com/?cid=7944341015124115637&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 69,
-    "bakomScoreRaw": 69.3,
-    "bakomRank": 159,
-    "metroRegion": "sweden",
-    "website": "http://www.gimoherrgard.se/",
-    "phone": "0173-889 00",
-    "googleRatingCount": 764
-  },
-  {
-    "id": "skanors-gastgifvaregard-skanor",
-    "name": "Skanörs Gästgifvaregård",
-    "address": "Mellangatan 13",
-    "city": "Skanör",
-    "lat": 55.4181694,
-    "lng": 12.847483299999999,
-    "ratings": {
-      "google": 4.2,
-      "falstaff": 65
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/restaurants/skanoers-gaestgifvaregaard-skanoer",
-      "google": "https://maps.google.com/?cid=7026097563566174896&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 69,
-    "bakomScoreRaw": 69.3,
-    "bakomRank": 160,
-    "metroRegion": "malmo",
-    "website": "http://www.skanorsgastis.com/",
-    "phone": "040-47 56 90",
-    "googleRatingCount": 472,
-    "bakomRankRegion": 12
   },
   {
     "id": "grand-hotel-saltsjobaden-sweden",
@@ -5141,7 +4601,7 @@
     },
     "bakomScore": 69,
     "bakomScoreRaw": 69.1,
-    "bakomRank": 161,
+    "bakomRank": 145,
     "metroRegion": "stockholm",
     "priceRange": "mellan",
     "hours": [
@@ -5156,7 +4616,7 @@
     "website": "https://grandsaltsjobaden.se/",
     "phone": "08-506 170 00",
     "googleRatingCount": 1589,
-    "bakomRankRegion": 46
+    "bakomRankRegion": 45
   },
   {
     "id": "bergshotellet-i-jarvso-jarvso",
@@ -5175,7 +4635,7 @@
     },
     "bakomScore": 69,
     "bakomScoreRaw": 69,
-    "bakomRank": 162,
+    "bakomRank": 146,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -5213,7 +4673,7 @@
     },
     "bakomScore": 69,
     "bakomScoreRaw": 69,
-    "bakomRank": 163,
+    "bakomRank": 147,
     "metroRegion": "stockholm",
     "hours": [
       {
@@ -5227,7 +4687,7 @@
     "website": "https://staygenerator.com/hostels/stockholm?utm_source=google-my-business&utm_medium=organic&utm_campaign=hostel-Stockholm",
     "phone": "08-505 323 70",
     "googleRatingCount": 7490,
-    "bakomRankRegion": 47
+    "bakomRankRegion": 46
   },
   {
     "id": "clarion-hotel-sense-lulea",
@@ -5246,7 +4706,7 @@
     },
     "bakomScore": 69,
     "bakomScoreRaw": 69,
-    "bakomRank": 164,
+    "bakomRank": 148,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -5278,7 +4738,7 @@
     },
     "bakomScore": 68,
     "bakomScoreRaw": 68.4,
-    "bakomRank": 165,
+    "bakomRank": 149,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -5310,7 +4770,7 @@
     },
     "bakomScore": 68,
     "bakomScoreRaw": 68.4,
-    "bakomRank": 166,
+    "bakomRank": 150,
     "metroRegion": "gothenburg",
     "hours": [
       {
@@ -5336,7 +4796,7 @@
     "website": "http://www.hotelvanilla.se/",
     "phone": "031-711 62 20",
     "googleRatingCount": 435,
-    "bakomRankRegion": 20
+    "bakomRankRegion": 19
   },
   {
     "id": "yasuragi-saltsjo-boo",
@@ -5355,7 +4815,7 @@
     },
     "bakomScore": 68,
     "bakomScoreRaw": 68.4,
-    "bakomRank": 167,
+    "bakomRank": 151,
     "metroRegion": "stockholm",
     "hours": [
       {
@@ -5369,7 +4829,7 @@
     "website": "https://www.yasuragi.se/",
     "phone": "08-747 61 00",
     "googleRatingCount": 5443,
-    "bakomRankRegion": 48
+    "bakomRankRegion": 47
   },
   {
     "id": "haparanda-stadshotell-haparanda",
@@ -5384,12 +4844,11 @@
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/hotels/12804",
-      "falstaff": "https://www.falstaff.com/en/hotels/haparanda-stadshotell",
       "google": "https://maps.google.com/?cid=14680601238342138448&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 68,
     "bakomScoreRaw": 68.4,
-    "bakomRank": 168,
+    "bakomRank": 152,
     "metroRegion": "sweden",
     "website": "http://www.haparandastadshotell.se/",
     "phone": "0922-614 90",
@@ -5412,7 +4871,7 @@
     },
     "bakomScore": 68,
     "bakomScoreRaw": 67.8,
-    "bakomRank": 169,
+    "bakomRank": 153,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -5426,6 +4885,30 @@
     "website": "https://voxhotel.se/",
     "phone": "036-770 00 00",
     "googleRatingCount": 2022
+  },
+  {
+    "id": "story-hotel-riddargatan-stockholm",
+    "name": "Story Hotel Riddargatan",
+    "address": "Riddargatan 6",
+    "city": "Stockholm",
+    "lat": 59.334708299999996,
+    "lng": 18.0750964,
+    "ratings": {
+      "google": 4.2,
+      "whiteguide": "recommended"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10587",
+      "google": "https://maps.google.com/?cid=16213687276295797141&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 68,
+    "bakomScoreRaw": 67.8,
+    "bakomRank": 154,
+    "metroRegion": "stockholm",
+    "website": "https://www.hyatt.com/story-hotels/en-US/arnjd-story-hotel-stockholm-stureplan?src=corp_lclb_google_seo_arnjd&utm_source=google&utm_medium=organic&utm_campaign=lmr",
+    "phone": "08-545 039 40",
+    "googleRatingCount": 595,
+    "bakomRankRegion": 48
   },
   {
     "id": "clarion-hotel-wisby-visby",
@@ -5444,7 +4927,7 @@
     },
     "bakomScore": 68,
     "bakomScoreRaw": 67.8,
-    "bakomRank": 170,
+    "bakomRank": 155,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -5476,7 +4959,7 @@
     },
     "bakomScore": 68,
     "bakomScoreRaw": 67.8,
-    "bakomRank": 171,
+    "bakomRank": 156,
     "metroRegion": "sweden",
     "website": "https://www.skistar.com/sv/boka-online/boende/vemdalen/vemdalsskalet/hovde-hotell/",
     "phone": "077-184 00 00",
@@ -5499,7 +4982,7 @@
     },
     "bakomScore": 68,
     "bakomScoreRaw": 67.8,
-    "bakomRank": 172,
+    "bakomRank": 157,
     "metroRegion": "sweden",
     "hours": [
       {
@@ -5521,6 +5004,30 @@
     "googleRatingCount": 1072
   },
   {
+    "id": "hotel-flora-goteborg",
+    "name": "Hotel Flora",
+    "address": "Grönsakstorget 2, Göteborg",
+    "city": "Göteborg",
+    "lat": 57.7027678,
+    "lng": 11.965492999999999,
+    "ratings": {
+      "google": 4.2,
+      "whiteguide": "recommended"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/hotels/10576",
+      "google": "https://maps.google.com/?cid=6970137250200890707&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 68,
+    "bakomScoreRaw": 67.8,
+    "bakomRank": 158,
+    "metroRegion": "gothenburg",
+    "website": "http://www.hotelflora.se/",
+    "phone": "031-13 86 16",
+    "googleRatingCount": 846,
+    "bakomRankRegion": 20
+  },
+  {
     "id": "u-me-hotel-umea",
     "name": "U&Me Hotel",
     "address": "Storgatan 46, Umeå",
@@ -5537,7 +5044,7 @@
     },
     "bakomScore": 67,
     "bakomScoreRaw": 67.1,
-    "bakomRank": 173,
+    "bakomRank": 159,
     "metroRegion": "sweden",
     "website": "http://www.umehotel.se/",
     "phone": "090-349 30 20",
@@ -5560,7 +5067,7 @@
     },
     "bakomScore": 67,
     "bakomScoreRaw": 67.1,
-    "bakomRank": 174,
+    "bakomRank": 160,
     "metroRegion": "gothenburg",
     "website": "https://www.hotelbellora.se/",
     "phone": "031-767 34 00",
@@ -5584,47 +5091,12 @@
     },
     "bakomScore": 66,
     "bakomScoreRaw": 65.9,
-    "bakomRank": 175,
+    "bakomRank": 161,
     "metroRegion": "malmo",
     "website": "http://ohboy.se/",
     "phone": "040-856 06",
     "googleRatingCount": 216,
-    "bakomRankRegion": 13
-  },
-  {
-    "id": "hallfjallet-ottsjo",
-    "name": "Hållfjället",
-    "address": "Ottsjö Hållfjället",
-    "city": "Ottsjö",
-    "lat": 63.25079719999999,
-    "lng": 12.9512292,
-    "ratings": {
-      "google": 4.6
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/restaurants/haallfjaellet",
-      "google": "https://maps.google.com/?cid=7293498151776716680&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 64,
-    "bakomScoreRaw": 64.3,
-    "bakomRank": 176,
-    "metroRegion": "sweden",
-    "hours": [
-      {
-        "days": [
-          0,
-          3,
-          4,
-          5,
-          6
-        ],
-        "open": "11:00",
-        "close": "15:00"
-      }
-    ],
-    "website": "http://www.hallfjallet.se/",
-    "phone": "0647-69 04 66",
-    "googleRatingCount": 14
+    "bakomRankRegion": 10
   },
   {
     "id": "kornhmanstorg-no-53-sweden",
@@ -5643,7 +5115,7 @@
     },
     "bakomScore": 64,
     "bakomScoreRaw": 63.7,
-    "bakomRank": 177,
+    "bakomRank": 162,
     "metroRegion": "stockholm",
     "priceRange": "mellan",
     "hours": [
@@ -5677,7 +5149,7 @@
     },
     "bakomScore": 62,
     "bakomScoreRaw": 62.1,
-    "bakomRank": 178,
+    "bakomRank": 163,
     "metroRegion": "gothenburg",
     "hours": [
       {
@@ -5716,7 +5188,7 @@
     },
     "bakomScore": 49,
     "bakomScoreRaw": 49.4,
-    "bakomRank": 179,
+    "bakomRank": 164,
     "metroRegion": "stockholm",
     "priceRange": "lyx",
     "hours": [

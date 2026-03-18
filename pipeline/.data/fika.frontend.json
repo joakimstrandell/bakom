@@ -451,7 +451,6 @@
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/cafes/8179",
-      "dn": "https://www.dn.se/kultur/krogkommissionen-valjer-tre-stallen-att-dricka-kaffe-i-skuggan/",
       "google": "https://maps.google.com/?cid=719496903471652898&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 85,
@@ -603,14 +602,12 @@
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/cafes/7830",
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/drop-coffee",
       "google": "https://maps.google.com/?cid=4387105855536430620&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 85,
     "bakomScoreRaw": 84.9,
     "bakomRank": 13,
     "metroRegion": "stockholm",
-    "priceRange": "budget",
     "cuisine": "Café",
     "hours": [
       {
@@ -847,61 +844,6 @@
     "googleRatingCount": 349
   },
   {
-    "id": "lundbergs-konditori-stockholm",
-    "name": "Lundbergs konditori",
-    "address": "Sjöbjörnsvägen 2",
-    "city": "Stockholm",
-    "lat": 59.316011,
-    "lng": 18.010313399999998,
-    "ratings": {
-      "krogguiden": 4.3,
-      "google": 4.3,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/cafes/8079",
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/lundbergs-konditori-glassbar",
-      "google": "https://maps.google.com/?cid=4655724853519941267&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 83,
-    "bakomScoreRaw": 83.4,
-    "bakomRank": 19,
-    "metroRegion": "stockholm",
-    "priceRange": "budget",
-    "cuisine": "Konditori",
-    "hours": [
-      {
-        "days": [
-          0
-        ],
-        "open": "09:00",
-        "close": "16:00"
-      },
-      {
-        "days": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "open": "07:00",
-        "close": "18:00"
-      },
-      {
-        "days": [
-          6
-        ],
-        "open": "08:00",
-        "close": "16:00"
-      }
-    ],
-    "website": "http://www.lundbergskonditori.se/",
-    "phone": "08-645 20 34",
-    "googleRatingCount": 525,
-    "bakomRankRegion": 6
-  },
-  {
     "id": "gast-stockholm",
     "name": "Gast",
     "address": "Rådmansgatan 57",
@@ -920,7 +862,7 @@
     },
     "bakomScore": 81,
     "bakomScoreRaw": 81.3,
-    "bakomRank": 20,
+    "bakomRank": 19,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Café",
@@ -948,7 +890,7 @@
     "website": "https://gastcafe.se/",
     "phone": "08-27 02 22",
     "googleRatingCount": 1288,
-    "bakomRankRegion": 7
+    "bakomRankRegion": 6
   },
   {
     "id": "bonan-mustaschen-vaxjo",
@@ -967,7 +909,7 @@
     },
     "bakomScore": 81,
     "bakomScoreRaw": 81.1,
-    "bakomRank": 21,
+    "bakomRank": 20,
     "metroRegion": "sweden",
     "cuisine": "Café",
     "hours": [
@@ -1010,7 +952,7 @@
     },
     "bakomScore": 81,
     "bakomScoreRaw": 81.1,
-    "bakomRank": 22,
+    "bakomRank": 21,
     "metroRegion": "stockholm",
     "cuisine": "Bageri",
     "hours": [
@@ -1043,7 +985,7 @@
     "website": "http://bergstrandsbageri.se/",
     "phone": "070-888 27 42",
     "googleRatingCount": 499,
-    "bakomRankRegion": 8
+    "bakomRankRegion": 7
   },
   {
     "id": "komet-stockholm-stockholm",
@@ -1059,12 +1001,11 @@
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/cafes/12681",
       "krogguiden": "https://www.krogguiden.se/restauranger/view/komet-stockholm",
-      "dn": "https://www.dn.se/kultur/krogkommissionen-tipsar-om-frukost-pa-lokal/",
       "google": "https://maps.google.com/?cid=13122943251497353&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 81,
     "bakomScoreRaw": 81.1,
-    "bakomRank": 23,
+    "bakomRank": 22,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Café",
@@ -1092,7 +1033,7 @@
     "website": "http://www.kometstockholm.com/",
     "phone": "070-975 67 47",
     "googleRatingCount": 1227,
-    "bakomRankRegion": 9
+    "bakomRankRegion": 8
   },
   {
     "id": "cafe-st-clair-alvesta",
@@ -1111,7 +1052,7 @@
     },
     "bakomScore": 81,
     "bakomScoreRaw": 81.1,
-    "bakomRank": 24,
+    "bakomRank": 23,
     "metroRegion": "sweden",
     "cuisine": "Café",
     "hours": [
@@ -1159,7 +1100,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.4,
-    "bakomRank": 25,
+    "bakomRank": 24,
     "metroRegion": "malmo",
     "cuisine": "Veganskt",
     "hours": [
@@ -1205,7 +1146,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.4,
-    "bakomRank": 26,
+    "bakomRank": 25,
     "metroRegion": "malmo",
     "cuisine": "Bageri",
     "hours": [
@@ -1250,7 +1191,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.4,
-    "bakomRank": 27,
+    "bakomRank": 26,
     "metroRegion": "sweden",
     "cuisine": "Bageri",
     "hours": [
@@ -1293,7 +1234,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.4,
-    "bakomRank": 28,
+    "bakomRank": 27,
     "metroRegion": "malmo",
     "cuisine": "Bageri",
     "hours": [
@@ -1345,7 +1286,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.4,
-    "bakomRank": 29,
+    "bakomRank": 28,
     "metroRegion": "sweden",
     "cuisine": "Bageri",
     "hours": [
@@ -1387,7 +1328,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.4,
-    "bakomRank": 30,
+    "bakomRank": 29,
     "metroRegion": "sweden",
     "cuisine": "Café",
     "hours": [
@@ -1430,7 +1371,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.4,
-    "bakomRank": 31,
+    "bakomRank": 30,
     "metroRegion": "gothenburg",
     "cuisine": "Bageri",
     "hours": [
@@ -1473,7 +1414,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.4,
-    "bakomRank": 32,
+    "bakomRank": 31,
     "metroRegion": "gothenburg",
     "cuisine": "Bagels",
     "hours": [
@@ -1520,7 +1461,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.4,
-    "bakomRank": 33,
+    "bakomRank": 32,
     "metroRegion": "gothenburg",
     "cuisine": "Café",
     "hours": [
@@ -1566,7 +1507,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.4,
-    "bakomRank": 34,
+    "bakomRank": 33,
     "metroRegion": "sweden",
     "cuisine": "Bageri",
     "hours": [
@@ -1611,7 +1552,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.1,
-    "bakomRank": 35,
+    "bakomRank": 34,
     "metroRegion": "sweden",
     "cuisine": "Café",
     "website": "https://www.presteles.se/",
@@ -1637,7 +1578,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80.1,
-    "bakomRank": 36,
+    "bakomRank": 35,
     "metroRegion": "sweden",
     "priceRange": "budget",
     "cuisine": "Bageri",
@@ -1671,7 +1612,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80,
-    "bakomRank": 37,
+    "bakomRank": 36,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Bageri",
@@ -1699,7 +1640,7 @@
     "website": "https://granerobakery.se/",
     "phone": "08-28 30 18",
     "googleRatingCount": 138,
-    "bakomRankRegion": 10
+    "bakomRankRegion": 9
   },
   {
     "id": "stockholm-roast-stockholm",
@@ -1717,7 +1658,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80,
-    "bakomRank": 38,
+    "bakomRank": 37,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Café",
@@ -1737,7 +1678,7 @@
     "website": "http://www.stockholmroast.se/",
     "phone": "08-500 200 50",
     "googleRatingCount": 97,
-    "bakomRankRegion": 11
+    "bakomRankRegion": 10
   },
   {
     "id": "alma-s-sweden",
@@ -1755,7 +1696,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80,
-    "bakomRank": 39,
+    "bakomRank": 38,
     "metroRegion": "sweden",
     "priceRange": "mellan",
     "cuisine": "Café",
@@ -1799,7 +1740,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80,
-    "bakomRank": 40,
+    "bakomRank": 39,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Café",
@@ -1827,7 +1768,7 @@
     "website": "http://www.beckkaffebar.se/",
     "phone": "070-653 47 02",
     "googleRatingCount": 453,
-    "bakomRankRegion": 12
+    "bakomRankRegion": 11
   },
   {
     "id": "caffe-ugo-stockholm",
@@ -1845,7 +1786,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80,
-    "bakomRank": 41,
+    "bakomRank": 40,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Café",
@@ -1873,7 +1814,7 @@
     "website": "http://www.caffeugo.se/",
     "phone": "070-523 42 33",
     "googleRatingCount": 184,
-    "bakomRankRegion": 13
+    "bakomRankRegion": 12
   },
   {
     "id": "gelatovnova-glassbar-stockholm",
@@ -1892,7 +1833,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80,
-    "bakomRank": 42,
+    "bakomRank": 41,
     "metroRegion": "stockholm",
     "priceRange": "mellan",
     "cuisine": "Glass",
@@ -1913,7 +1854,7 @@
     ],
     "website": "http://instagram.com/gelatonova",
     "googleRatingCount": 120,
-    "bakomRankRegion": 14
+    "bakomRankRegion": 13
   },
   {
     "id": "kennys-gelato-glassbar-stockholm",
@@ -1928,12 +1869,11 @@
     },
     "links": {
       "krogguiden": "https://www.krogguiden.se/restauranger/view/kennys-gelato",
-      "dn": "https://www.dn.se/kultur/krogkommissionen-valjer-tre-glassbarer-i-stockholm/",
       "google": "https://maps.google.com/?cid=15038263469021628073&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80,
-    "bakomRank": 43,
+    "bakomRank": 42,
     "metroRegion": "stockholm",
     "priceRange": "mellan",
     "cuisine": "Glass",
@@ -1961,7 +1901,7 @@
     "website": "https://www.kennysgelato.se/",
     "phone": "070-969 02 05",
     "googleRatingCount": 84,
-    "bakomRankRegion": 15
+    "bakomRankRegion": 14
   },
   {
     "id": "le-violon-dingue-stockholm",
@@ -1980,7 +1920,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80,
-    "bakomRank": 44,
+    "bakomRank": 43,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Bageri",
@@ -2007,7 +1947,7 @@
     "website": "http://www.leviolondingue.se/",
     "phone": "08-562 973 73",
     "googleRatingCount": 244,
-    "bakomRankRegion": 16
+    "bakomRankRegion": 15
   },
   {
     "id": "poli-caffe-stockholm",
@@ -2025,7 +1965,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80,
-    "bakomRank": 45,
+    "bakomRank": 44,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Café",
@@ -2052,7 +1992,7 @@
     "website": "http://www.caffepoli.se/",
     "phone": "08-440 23 74",
     "googleRatingCount": 467,
-    "bakomRankRegion": 17
+    "bakomRankRegion": 16
   },
   {
     "id": "sno-glassbar-stockholm",
@@ -2071,7 +2011,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80,
-    "bakomRank": 46,
+    "bakomRank": 45,
     "metroRegion": "stockholm",
     "priceRange": "lyx",
     "cuisine": "Café",
@@ -2098,7 +2038,7 @@
     "website": "http://www.snogelateria.se/",
     "phone": "08-32 30 10",
     "googleRatingCount": 1842,
-    "bakomRankRegion": 18
+    "bakomRankRegion": 17
   },
   {
     "id": "stikkinikki-gotgatan-glassbar-stockholm",
@@ -2117,13 +2057,13 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80,
-    "bakomRank": 47,
+    "bakomRank": 46,
     "metroRegion": "stockholm",
     "priceRange": "lyx",
     "cuisine": "Glass",
     "website": "https://stikkinikki.com/sv/?utm_source=google",
     "googleRatingCount": 539,
-    "bakomRankRegion": 19
+    "bakomRankRegion": 18
   },
   {
     "id": "svedjan-bageri-stockholm",
@@ -2141,7 +2081,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80,
-    "bakomRank": 48,
+    "bakomRank": 47,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Café",
@@ -2168,7 +2108,7 @@
     ],
     "website": "https://www.instagram.com/svedjanbagerisoder/",
     "googleRatingCount": 836,
-    "bakomRankRegion": 20
+    "bakomRankRegion": 19
   },
   {
     "id": "skroten-cafe-och-skeppshandel-sweden",
@@ -2186,7 +2126,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80,
-    "bakomRank": 49,
+    "bakomRank": 48,
     "metroRegion": "stockholm",
     "cuisine": "Café",
     "hours": [
@@ -2219,7 +2159,7 @@
     "website": "http://www.skrotens.se/",
     "phone": "070-380 80 80",
     "googleRatingCount": 545,
-    "bakomRankRegion": 21
+    "bakomRankRegion": 20
   },
   {
     "id": "mahogny-sweden",
@@ -2237,7 +2177,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80,
-    "bakomRank": 50,
+    "bakomRank": 49,
     "metroRegion": "gothenburg",
     "cuisine": "Café",
     "hours": [
@@ -2282,7 +2222,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 80,
-    "bakomRank": 51,
+    "bakomRank": 50,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Café",
@@ -2310,7 +2250,7 @@
     "website": "https://cafevolta.se/",
     "phone": "08-27 83 83",
     "googleRatingCount": 95,
-    "bakomRankRegion": 22
+    "bakomRankRegion": 21
   },
   {
     "id": "solde-kaffebar-malmo",
@@ -2329,7 +2269,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 79.8,
-    "bakomRank": 52,
+    "bakomRank": 51,
     "metroRegion": "malmo",
     "cuisine": "Café",
     "hours": [
@@ -2381,7 +2321,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 79.8,
-    "bakomRank": 53,
+    "bakomRank": 52,
     "metroRegion": "sweden",
     "cuisine": "Café",
     "hours": [
@@ -2424,7 +2364,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 79.8,
-    "bakomRank": 54,
+    "bakomRank": 53,
     "metroRegion": "sweden",
     "cuisine": "Café",
     "website": "http://www.lillaro.nu/",
@@ -2447,7 +2387,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 79.8,
-    "bakomRank": 55,
+    "bakomRank": 54,
     "metroRegion": "sweden",
     "cuisine": "Café",
     "hours": [
@@ -2490,7 +2430,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 79.8,
-    "bakomRank": 56,
+    "bakomRank": 55,
     "metroRegion": "sweden",
     "cuisine": "Café",
     "hours": [
@@ -2534,7 +2474,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 79.8,
-    "bakomRank": 57,
+    "bakomRank": 56,
     "metroRegion": "sweden",
     "cuisine": "Café",
     "hours": [
@@ -2584,7 +2524,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 79.8,
-    "bakomRank": 58,
+    "bakomRank": 57,
     "metroRegion": "sweden",
     "cuisine": "Bageri",
     "hours": [
@@ -2635,7 +2575,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 79.8,
-    "bakomRank": 59,
+    "bakomRank": 58,
     "metroRegion": "sweden",
     "cuisine": "Bageri",
     "hours": [
@@ -2677,7 +2617,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 79.8,
-    "bakomRank": 60,
+    "bakomRank": 59,
     "metroRegion": "malmo",
     "cuisine": "Café",
     "hours": [
@@ -2716,7 +2656,7 @@
     },
     "bakomScore": 80,
     "bakomScoreRaw": 79.8,
-    "bakomRank": 61,
+    "bakomRank": 60,
     "metroRegion": "sweden",
     "cuisine": "Restaurang",
     "hours": [
@@ -2753,7 +2693,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 79.2,
-    "bakomRank": 62,
+    "bakomRank": 61,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Café",
@@ -2793,7 +2733,7 @@
     "website": "http://www.cykelcafe.se/",
     "phone": "08-437 485 41",
     "googleRatingCount": 1092,
-    "bakomRankRegion": 23
+    "bakomRankRegion": 22
   },
   {
     "id": "ulriksdal-tradgardscafe-stockholm",
@@ -2811,7 +2751,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 79.2,
-    "bakomRank": 63,
+    "bakomRank": 62,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Café",
@@ -2839,7 +2779,7 @@
     "website": "http://www.rappne.se/",
     "phone": "08-514 822 30",
     "googleRatingCount": 2018,
-    "bakomRankRegion": 24
+    "bakomRankRegion": 23
   },
   {
     "id": "ritz-conditori-solvesborg",
@@ -2858,7 +2798,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 79.2,
-    "bakomRank": 64,
+    "bakomRank": 63,
     "metroRegion": "sweden",
     "cuisine": "Bageri",
     "hours": [
@@ -2902,7 +2842,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 79.2,
-    "bakomRank": 65,
+    "bakomRank": 64,
     "metroRegion": "malmo",
     "cuisine": "Café",
     "hours": [
@@ -2947,7 +2887,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 79.2,
-    "bakomRank": 66,
+    "bakomRank": 65,
     "metroRegion": "stockholm",
     "cuisine": "Bageri",
     "hours": [
@@ -2974,7 +2914,7 @@
     "website": "http://vsbageri.se/",
     "phone": "08-511 705 70",
     "googleRatingCount": 861,
-    "bakomRankRegion": 25
+    "bakomRankRegion": 24
   },
   {
     "id": "green-rabbit-ragbrodsbageriet-stockholm",
@@ -2994,7 +2934,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 79.2,
-    "bakomRank": 67,
+    "bakomRank": 66,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Bageri",
@@ -3027,7 +2967,7 @@
     "website": "https://mdghs.se/green-rabbit/",
     "phone": "08-20 46 26",
     "googleRatingCount": 222,
-    "bakomRankRegion": 26
+    "bakomRankRegion": 25
   },
   {
     "id": "vattenverket-lidingo",
@@ -3047,7 +2987,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 79.2,
-    "bakomRank": 68,
+    "bakomRank": 67,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Café",
@@ -3069,6 +3009,45 @@
     "website": "http://www.vattenverket.se/",
     "phone": "08-766 09 29",
     "googleRatingCount": 660,
+    "bakomRankRegion": 26
+  },
+  {
+    "id": "rosendals-tradgardskafe-stockholm",
+    "name": "Rosendals Trädgårdskafé",
+    "address": "Rosendalsterrassen 12",
+    "city": "Stockholm",
+    "lat": 59.327551799999995,
+    "lng": 18.1152516,
+    "ratings": {
+      "google": 4.5,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/cafes/7813",
+      "google": "https://maps.google.com/?cid=10842525295114693597&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 79,
+    "bakomScoreRaw": 79.2,
+    "bakomRank": 68,
+    "metroRegion": "stockholm",
+    "cuisine": "Café",
+    "hours": [
+      {
+        "days": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "open": "11:00",
+        "close": "16:00"
+      }
+    ],
+    "website": "https://www.rosendalstradgard.se/",
+    "googleRatingCount": 1216,
     "bakomRankRegion": 27
   },
   {
@@ -3721,14 +3700,12 @@
     },
     "links": {
       "whiteguide": "https://whiteguide.com/se/sv/cafes/8154",
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/cafe-pascal",
       "google": "https://maps.google.com/?cid=13938391527759659086&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 79,
     "bakomScoreRaw": 79.2,
     "bakomRank": 83,
     "metroRegion": "stockholm",
-    "priceRange": "budget",
     "cuisine": "Café",
     "hours": [
       {
@@ -3813,48 +3790,6 @@
     "googleRatingCount": 79
   },
   {
-    "id": "rosendals-tradgardskafe-stockholm",
-    "name": "Rosendals Trädgårdskafé",
-    "address": "Rosendalsterrassen 12",
-    "city": "Stockholm",
-    "lat": 59.327551799999995,
-    "lng": 18.1152516,
-    "ratings": {
-      "krogguiden": 3.5,
-      "google": 4.5,
-      "whiteguide": "very_good_class"
-    },
-    "links": {
-      "whiteguide": "https://whiteguide.com/se/sv/cafes/7813",
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/rosendals-tradgard-lunch",
-      "google": "https://maps.google.com/?cid=10842525295114693597&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 79,
-    "bakomScoreRaw": 78.7,
-    "bakomRank": 85,
-    "metroRegion": "stockholm",
-    "priceRange": "budget",
-    "cuisine": "Café",
-    "hours": [
-      {
-        "days": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ],
-        "open": "11:00",
-        "close": "16:00"
-      }
-    ],
-    "website": "https://www.rosendalstradgard.se/",
-    "googleRatingCount": 1216,
-    "bakomRankRegion": 31
-  },
-  {
     "id": "swenstromskas-stenugnsbageri-karlstad",
     "name": "Swenströmskas Stenugnsbageri",
     "address": "Östra Torggatan 16",
@@ -3871,7 +3806,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 78.5,
-    "bakomRank": 86,
+    "bakomRank": 85,
     "metroRegion": "sweden",
     "cuisine": "Bageri",
     "hours": [
@@ -3915,7 +3850,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 78.5,
-    "bakomRank": 87,
+    "bakomRank": 86,
     "metroRegion": "malmo",
     "cuisine": "Café",
     "hours": [
@@ -3959,7 +3894,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 78.5,
-    "bakomRank": 88,
+    "bakomRank": 87,
     "metroRegion": "stockholm",
     "cuisine": "Bageri",
     "hours": [
@@ -3985,7 +3920,7 @@
     "website": "http://www.hagabageri.se/",
     "phone": "08-19 34 34",
     "googleRatingCount": 367,
-    "bakomRankRegion": 32
+    "bakomRankRegion": 31
   },
   {
     "id": "park-bageri-konditori-stockholm",
@@ -4004,7 +3939,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 78.5,
-    "bakomRank": 89,
+    "bakomRank": 88,
     "metroRegion": "stockholm",
     "cuisine": "Bageri",
     "hours": [
@@ -4031,7 +3966,7 @@
     "website": "http://www.parkkonditori.se/",
     "phone": "08-25 15 80",
     "googleRatingCount": 464,
-    "bakomRankRegion": 33
+    "bakomRankRegion": 32
   },
   {
     "id": "byvagen-35-sankt-olof",
@@ -4050,7 +3985,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 78.5,
-    "bakomRank": 90,
+    "bakomRank": 89,
     "metroRegion": "sweden",
     "cuisine": "Restaurang",
     "hours": [
@@ -4086,7 +4021,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 78.5,
-    "bakomRank": 91,
+    "bakomRank": 90,
     "metroRegion": "stockholm",
     "cuisine": "Café",
     "hours": [
@@ -4113,7 +4048,7 @@
     "website": "https://www.cafepascal.se/?utm_source=google",
     "phone": "08-525 047 01",
     "googleRatingCount": 769,
-    "bakomRankRegion": 34
+    "bakomRankRegion": 33
   },
   {
     "id": "vete-katten-stockholm",
@@ -4133,7 +4068,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 78.5,
-    "bakomRank": 92,
+    "bakomRank": 91,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Café",
@@ -4161,7 +4096,7 @@
     "website": "http://www.vetekatten.se/",
     "phone": "08-20 84 05",
     "googleRatingCount": 7760,
-    "bakomRankRegion": 35
+    "bakomRankRegion": 34
   },
   {
     "id": "cafe-pa-klostret-kallby",
@@ -4180,7 +4115,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 78.5,
-    "bakomRank": 93,
+    "bakomRank": 92,
     "metroRegion": "sweden",
     "cuisine": "Café",
     "hours": [
@@ -4216,7 +4151,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 78.5,
-    "bakomRank": 94,
+    "bakomRank": 93,
     "metroRegion": "stockholm",
     "cuisine": "Bageri",
     "hours": [
@@ -4249,7 +4184,7 @@
     "website": "http://www.lidingobrod.se/",
     "phone": "08-446 00 80",
     "googleRatingCount": 365,
-    "bakomRankRegion": 36
+    "bakomRankRegion": 35
   },
   {
     "id": "lindeberg-bageri-och-konditori-saltsjo-boo",
@@ -4268,7 +4203,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 78.5,
-    "bakomRank": 95,
+    "bakomRank": 94,
     "metroRegion": "stockholm",
     "cuisine": "Bageri",
     "hours": [
@@ -4301,7 +4236,7 @@
     "website": "http://lindebergbageriochkonditori.se/",
     "phone": "08-715 04 48",
     "googleRatingCount": 458,
-    "bakomRankRegion": 37
+    "bakomRankRegion": 36
   },
   {
     "id": "mandeltartan-ronneby",
@@ -4320,7 +4255,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 78.5,
-    "bakomRank": 96,
+    "bakomRank": 95,
     "metroRegion": "sweden",
     "cuisine": "Café",
     "hours": [
@@ -4364,7 +4299,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 78.5,
-    "bakomRank": 97,
+    "bakomRank": 96,
     "metroRegion": "sweden",
     "cuisine": "Café",
     "hours": [
@@ -4409,7 +4344,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 78.5,
-    "bakomRank": 98,
+    "bakomRank": 97,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Café",
@@ -4436,7 +4371,7 @@
     "website": "https://enskedeparken.se/",
     "phone": "070-333 09 35",
     "googleRatingCount": 733,
-    "bakomRankRegion": 38
+    "bakomRankRegion": 37
   },
   {
     "id": "carli-karlstad",
@@ -4455,7 +4390,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 78.5,
-    "bakomRank": 99,
+    "bakomRank": 98,
     "metroRegion": "sweden",
     "cuisine": "Café",
     "hours": [
@@ -4506,7 +4441,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 78.5,
-    "bakomRank": 100,
+    "bakomRank": 99,
     "metroRegion": "sweden",
     "cuisine": "Konditori",
     "hours": [
@@ -4557,7 +4492,7 @@
     },
     "bakomScore": 79,
     "bakomScoreRaw": 78.5,
-    "bakomRank": 101,
+    "bakomRank": 100,
     "metroRegion": "gothenburg",
     "cuisine": "Café",
     "hours": [
@@ -4603,7 +4538,7 @@
     },
     "bakomScore": 78,
     "bakomScoreRaw": 77.9,
-    "bakomRank": 102,
+    "bakomRank": 101,
     "metroRegion": "stockholm",
     "cuisine": "Bageri",
     "hours": [
@@ -4630,7 +4565,7 @@
     "website": "http://www.tosse.se/",
     "phone": "08-662 24 30",
     "googleRatingCount": 921,
-    "bakomRankRegion": 39
+    "bakomRankRegion": 38
   },
   {
     "id": "robin-delselius-bageri-stockholm",
@@ -4651,7 +4586,7 @@
     },
     "bakomScore": 78,
     "bakomScoreRaw": 77.9,
-    "bakomRank": 103,
+    "bakomRank": 102,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Bageri",
@@ -4679,7 +4614,7 @@
     "website": "https://robindelseliusbageri.se/",
     "phone": "08-408 016 15",
     "googleRatingCount": 532,
-    "bakomRankRegion": 40
+    "bakomRankRegion": 39
   },
   {
     "id": "nya-konditoriet-umea",
@@ -4698,7 +4633,7 @@
     },
     "bakomScore": 78,
     "bakomScoreRaw": 77.9,
-    "bakomRank": 104,
+    "bakomRank": 103,
     "metroRegion": "sweden",
     "cuisine": "Konditori",
     "hours": [
@@ -4743,7 +4678,7 @@
     },
     "bakomScore": 78,
     "bakomScoreRaw": 77.9,
-    "bakomRank": 105,
+    "bakomRank": 104,
     "metroRegion": "stockholm",
     "cuisine": "Café",
     "hours": [
@@ -4770,7 +4705,7 @@
     "website": "http://www.viggbyholmsstationskafe.se/",
     "phone": "08-756 85 02",
     "googleRatingCount": 735,
-    "bakomRankRegion": 41
+    "bakomRankRegion": 40
   },
   {
     "id": "vansbro-konditori-vansbro",
@@ -4789,7 +4724,7 @@
     },
     "bakomScore": 78,
     "bakomScoreRaw": 77.9,
-    "bakomRank": 106,
+    "bakomRank": 105,
     "metroRegion": "sweden",
     "cuisine": "Café",
     "hours": [
@@ -4834,7 +4769,7 @@
     },
     "bakomScore": 78,
     "bakomScoreRaw": 77.9,
-    "bakomRank": 107,
+    "bakomRank": 106,
     "metroRegion": "malmo",
     "cuisine": "Café",
     "hours": [
@@ -4880,7 +4815,7 @@
     },
     "bakomScore": 78,
     "bakomScoreRaw": 77.9,
-    "bakomRank": 108,
+    "bakomRank": 107,
     "metroRegion": "gothenburg",
     "cuisine": "Restaurang",
     "hours": [
@@ -4920,7 +4855,7 @@
     },
     "bakomScore": 78,
     "bakomScoreRaw": 77.9,
-    "bakomRank": 109,
+    "bakomRank": 108,
     "metroRegion": "sweden",
     "cuisine": "Café",
     "hours": [
@@ -4953,6 +4888,58 @@
     "website": "https://www.nygrenscafe.se/",
     "phone": "0322-100 79",
     "googleRatingCount": 1031
+  },
+  {
+    "id": "lundbergs-konditori-stockholm",
+    "name": "Lundbergs konditori",
+    "address": "Sjöbjörnsvägen 2",
+    "city": "Stockholm",
+    "lat": 59.316011,
+    "lng": 18.010313399999998,
+    "ratings": {
+      "google": 4.3,
+      "whiteguide": "very_good_class"
+    },
+    "links": {
+      "whiteguide": "https://whiteguide.com/se/sv/cafes/8079",
+      "google": "https://maps.google.com/?cid=4655724853519941267&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 78,
+    "bakomScoreRaw": 77.9,
+    "bakomRank": 109,
+    "metroRegion": "stockholm",
+    "cuisine": "Konditori",
+    "hours": [
+      {
+        "days": [
+          0
+        ],
+        "open": "09:00",
+        "close": "16:00"
+      },
+      {
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "open": "07:00",
+        "close": "18:00"
+      },
+      {
+        "days": [
+          6
+        ],
+        "open": "08:00",
+        "close": "16:00"
+      }
+    ],
+    "website": "http://www.lundbergskonditori.se/",
+    "phone": "08-645 20 34",
+    "googleRatingCount": 525,
+    "bakomRankRegion": 41
   },
   {
     "id": "tivolikiosken-halmstad",
@@ -7464,7 +7451,6 @@
     },
     "links": {
       "krogguiden": "https://www.krogguiden.se/restauranger/view/flickorna_helin_voltaire",
-      "dn": "https://www.dn.se/kultur/krogkommissionen-valjer-tre-bra-fik-pa-djurgarden/",
       "google": "https://maps.google.com/?cid=2729846670698287576&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
     },
     "bakomScore": 75,
@@ -9213,41 +9199,6 @@
     "googleRatingCount": 602
   },
   {
-    "id": "uppsala-gelateria-uppsala",
-    "name": "Uppsala Gelateria",
-    "address": "Sparrisgatan 3A",
-    "city": "Uppsala",
-    "lat": 59.8661084,
-    "lng": 17.684231,
-    "ratings": {
-      "google": 4.7,
-      "falstaff": 65
-    },
-    "links": {
-      "falstaff": "https://www.falstaff.com/en/ice-cream-parlors/uppsala-gelateria",
-      "google": "https://maps.google.com/?cid=5635753969207199792&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 73,
-    "bakomScoreRaw": 73.2,
-    "bakomRank": 203,
-    "metroRegion": "sweden",
-    "cuisine": "Glass",
-    "hours": [
-      {
-        "days": [
-          0,
-          5,
-          6
-        ],
-        "open": "10:00",
-        "close": "18:00"
-      }
-    ],
-    "website": "https://uppsalagelateria.se/",
-    "phone": "076-945 08 17",
-    "googleRatingCount": 148
-  },
-  {
     "id": "gardby-kafe-och-lanthandel-gardby",
     "name": "Gårdby kafé och lanthandel",
     "address": "Gårdby 115",
@@ -9264,7 +9215,7 @@
     },
     "bakomScore": 73,
     "bakomScoreRaw": 72.8,
-    "bakomRank": 204,
+    "bakomRank": 203,
     "metroRegion": "sweden",
     "cuisine": "Café",
     "hours": [
@@ -9306,7 +9257,7 @@
     },
     "bakomScore": 73,
     "bakomScoreRaw": 72.8,
-    "bakomRank": 205,
+    "bakomRank": 204,
     "metroRegion": "sweden",
     "cuisine": "Café",
     "hours": [
@@ -9356,7 +9307,7 @@
     },
     "bakomScore": 72,
     "bakomScoreRaw": 72.2,
-    "bakomRank": 206,
+    "bakomRank": 205,
     "metroRegion": "sweden",
     "cuisine": "Café",
     "hours": [
@@ -9400,7 +9351,7 @@
     },
     "bakomScore": 72,
     "bakomScoreRaw": 72.2,
-    "bakomRank": 207,
+    "bakomRank": 206,
     "metroRegion": "sweden",
     "cuisine": "Café",
     "hours": [
@@ -9443,7 +9394,7 @@
     },
     "bakomScore": 72,
     "bakomScoreRaw": 72.2,
-    "bakomRank": 208,
+    "bakomRank": 207,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Café",
@@ -9489,7 +9440,7 @@
     },
     "bakomScore": 72,
     "bakomScoreRaw": 72.2,
-    "bakomRank": 209,
+    "bakomRank": 208,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Bageri",
@@ -9542,7 +9493,7 @@
     },
     "bakomScore": 72,
     "bakomScoreRaw": 71.6,
-    "bakomRank": 210,
+    "bakomRank": 209,
     "metroRegion": "stockholm",
     "cuisine": "Restaurang",
     "hours": [
@@ -9581,7 +9532,7 @@
     },
     "bakomScore": 71,
     "bakomScoreRaw": 71.1,
-    "bakomRank": 211,
+    "bakomRank": 210,
     "metroRegion": "sweden",
     "cuisine": "Restaurang",
     "hours": [
@@ -9620,7 +9571,7 @@
     },
     "bakomScore": 71,
     "bakomScoreRaw": 70.9,
-    "bakomRank": 212,
+    "bakomRank": 211,
     "metroRegion": "sweden",
     "cuisine": "Konditori",
     "hours": [
@@ -9659,7 +9610,7 @@
     },
     "bakomScore": 71,
     "bakomScoreRaw": 70.9,
-    "bakomRank": 213,
+    "bakomRank": 212,
     "metroRegion": "sweden",
     "cuisine": "Restaurang",
     "hours": [
@@ -9696,7 +9647,7 @@
     },
     "bakomScore": 71,
     "bakomScoreRaw": 70.9,
-    "bakomRank": 214,
+    "bakomRank": 213,
     "metroRegion": "gothenburg",
     "cuisine": "Café",
     "hours": [
@@ -9739,7 +9690,7 @@
     },
     "bakomScore": 70,
     "bakomScoreRaw": 70.5,
-    "bakomRank": 215,
+    "bakomRank": 214,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Café",
@@ -9790,7 +9741,7 @@
     },
     "bakomScore": 70,
     "bakomScoreRaw": 70.4,
-    "bakomRank": 216,
+    "bakomRank": 215,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Café",
@@ -9836,7 +9787,7 @@
     },
     "bakomScore": 70,
     "bakomScoreRaw": 70.4,
-    "bakomRank": 217,
+    "bakomRank": 216,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Café",
@@ -9882,7 +9833,7 @@
     },
     "bakomScore": 70,
     "bakomScoreRaw": 69.6,
-    "bakomRank": 218,
+    "bakomRank": 217,
     "metroRegion": "stockholm",
     "priceRange": "budget",
     "cuisine": "Bageri",
@@ -9910,6 +9861,52 @@
     "website": "https://www.instagram.com/storaskuggansfonster?igsh=MXhlamdjOHdybTF4OA==",
     "googleRatingCount": 35,
     "bakomRankRegion": 83
+  },
+  {
+    "id": "djurgardsbrunn-stockholm",
+    "name": "Djurgårdsbrunn",
+    "address": "Djurgårdsbrunnsvägen 68",
+    "city": "Stockholm",
+    "lat": 59.330615099999996,
+    "lng": 18.1318493,
+    "ratings": {
+      "google": 4.1
+    },
+    "links": {
+      "krogguiden": "https://www.krogguiden.se/restauranger/view/djurgardsbrunn",
+      "google": "https://maps.google.com/?cid=13545102023829826828&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+    },
+    "bakomScore": 69,
+    "bakomScoreRaw": 69.4,
+    "bakomRank": 218,
+    "metroRegion": "stockholm",
+    "priceRange": "budget",
+    "cuisine": "Café",
+    "hours": [
+      {
+        "days": [
+          0,
+          6
+        ],
+        "open": "08:30",
+        "close": "17:00"
+      },
+      {
+        "days": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "open": "08:00",
+        "close": "17:00"
+      }
+    ],
+    "website": "https://djurgardsbrunn.com/",
+    "phone": "08-654 77 00",
+    "googleRatingCount": 74,
+    "bakomRankRegion": 84
   },
   {
     "id": "cafe-safari-kiruna",
@@ -10038,7 +10035,7 @@
     ],
     "website": "https://www.instagram.com/baggio_kaffebar",
     "googleRatingCount": 20,
-    "bakomRankRegion": 84
+    "bakomRankRegion": 85
   },
   {
     "id": "eken-bageri-kokscafe-stockholm",
@@ -10083,7 +10080,7 @@
     "website": "https://www.ekencafe.se/",
     "phone": "08-121 321 20",
     "googleRatingCount": 16,
-    "bakomRankRegion": 85
+    "bakomRankRegion": 86
   },
   {
     "id": "hearts-sweden",
@@ -10111,54 +10108,6 @@
     "googleRatingCount": 13
   },
   {
-    "id": "djurgardsbrunn-stockholm",
-    "name": "Djurgårdsbrunn",
-    "address": "Djurgårdsbrunnsvägen 68",
-    "city": "Stockholm",
-    "lat": 59.330615099999996,
-    "lng": 18.1318493,
-    "ratings": {
-      "google": 4.1,
-      "svd": 2
-    },
-    "links": {
-      "krogguiden": "https://www.krogguiden.se/restauranger/view/djurgardsbrunn",
-      "svd": "https://www.svd.se/a/W0p3Xa/krogrecension-djurgardsbrunns-vardshus-for-en-dryckespaus-pa-promenaden",
-      "google": "https://maps.google.com/?cid=13545102023829826828&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
-    },
-    "bakomScore": 48,
-    "bakomScoreRaw": 48.3,
-    "bakomRank": 224,
-    "metroRegion": "stockholm",
-    "priceRange": "budget",
-    "cuisine": "Café",
-    "hours": [
-      {
-        "days": [
-          0,
-          6
-        ],
-        "open": "08:30",
-        "close": "17:00"
-      },
-      {
-        "days": [
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "open": "08:00",
-        "close": "17:00"
-      }
-    ],
-    "website": "https://djurgardsbrunn.com/",
-    "phone": "08-654 77 00",
-    "googleRatingCount": 74,
-    "bakomRankRegion": 86
-  },
-  {
     "id": "ollis-deli-sweden",
     "name": "Ollis deli",
     "address": "Humlegårdsgatan 24",
@@ -10175,7 +10124,7 @@
     },
     "bakomScore": 47,
     "bakomScoreRaw": 46.6,
-    "bakomRank": 225,
+    "bakomRank": 224,
     "metroRegion": "stockholm",
     "priceRange": "mellan",
     "cuisine": "Café",
