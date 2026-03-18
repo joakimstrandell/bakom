@@ -1,12 +1,14 @@
 /**
  * Falstaff collector — Swedish restaurant ratings.
  *
- * Falstaff.com is protected by Cloudflare and blocks direct HTTP requests (403).
- * This collector reads from a cached `falstaff-raw.json` file that is scraped
- * separately via a Chrome-based browser scraper.
+ * Falstaff.com is protected by Cloudflare and blocks direct HTTP requests.
+ * This collector reads from a scraped `falstaff-raw.json` file produced by
+ * the /scrape-falstaff skill (Chrome MCP-based).
  *
- * Raw data format: array of { name, url, score, address, cuisine, forks }
+ * Raw data format: array of { name, url, score, forks, address, cuisine }
+ * Only rated venues (with Falstaff review) are included in the raw file.
  *
+ * @see .claude/skills/scrape-falstaff/SKILL.md
  * @see docs/pipeline.md
  */
 
@@ -23,6 +25,11 @@ const OUT_FILE = "falstaff.json";
 
 // ─── Types ──────────────────────────────────────────────────────
 
+interface FalstaffSubScore {
+  score: number;
+  max: number;
+}
+
 interface FalstaffRaw {
   name: string;
   url: string;
@@ -30,6 +37,7 @@ interface FalstaffRaw {
   address: string;
   cuisine: string[];
   forks?: number;
+  subScores?: Record<string, FalstaffSubScore>;
 }
 
 // ─── Helpers ────────────────────────────────────────────────────
@@ -46,50 +54,48 @@ function now(): string {
 }
 
 /**
- * Convert fork rating (0-4) to an estimated score (55-95).
- * 4 forks = 95, 3 forks = 85, 2 forks = 75, 1 fork = 65, 0 forks = 55
- */
-function forksToScore(forks: number): number {
-  return 55 + forks * 10;
-}
-
-/**
- * Parse Falstaff address format: "Street Address, PostalCode City, Sweden"
+ * Parse Falstaff address format.
+ * Formats: "Street, PostalCode, City" or "Street, PostalCode City, Sweden"
  * Returns { street, city } where city has postal code digits removed.
  */
 function parseAddress(address: string): { street: string; city: string } {
   if (!address) return { street: "", city: "" };
 
-  const parts = address.split(",").map((p) => p.trim());
+  // Strip trailing ", Sweden" or ", Schweden"
+  const cleaned = address.replace(/,\s*(Sweden|Schweden)\s*$/i, "");
+  const parts = cleaned.split(",").map((p) => p.trim());
 
   const street = parts[0] || "";
-  let city = "";
-
-  // City is the last part before "Sweden" (or the last part if no country)
-  if (parts.length >= 3) {
-    // "Street, PostalCode City, Sweden"
-    const cityPart = parts[parts.length - 2];
-    // Remove leading postal code digits (e.g. "114 46 Stockholm" -> "Stockholm")
-    city = cityPart.replace(/^\d[\d\s]*/, "").trim();
-  } else if (parts.length === 2) {
-    // "Street, PostalCode City" or "Street, City"
-    const cityPart = parts[1];
-    city = cityPart.replace(/^\d[\d\s]*/, "").trim();
-  }
+  // City is the last non-postal-code part
+  const lastPart = parts[parts.length - 1] || "";
+  // Remove leading postal code digits (e.g. "11122" or "114 46 Stockholm")
+  const city = lastPart.replace(/^\d[\d\s]*/, "").trim();
 
   return { street, city };
+}
+
+/** Normalize Falstaff sub-scores to 0-10 DimensionalScores.
+ *  Restaurants: food(/50), service(/20), wine(/20), style(/10)
+ *  Bars: drinks(/50), service(/20), range(/10), style(/20)
+ *  Maps to: food, service, drinks, ambiance */
+function normalizeSubScores(subs: Record<string, FalstaffSubScore>): import("../types.js").DimensionalScores {
+  const result: import("../types.js").DimensionalScores = {};
+  if (subs.food) result.food = Math.round((subs.food.score / subs.food.max) * 10 * 10) / 10;
+  if (subs.drinks) result.drinks = Math.round((subs.drinks.score / subs.drinks.max) * 10 * 10) / 10;
+  if (subs.service) result.service = Math.round((subs.service.score / subs.service.max) * 10 * 10) / 10;
+  if (subs.style) result.ambiance = Math.round((subs.style.score / subs.style.max) * 10 * 10) / 10;
+  if (subs.wine) result.drinks = Math.round((subs.wine.score / subs.wine.max) * 10 * 10) / 10;
+  return result;
 }
 
 // ─── Convert to Article ────────────────────────────────────────
 
 function rawToArticle(entry: FalstaffRaw): Article {
-  // Determine score: use numeric score if available, otherwise convert forks
-  let score: number | undefined;
-  if (entry.score != null && entry.score >= 80 && entry.score <= 100) {
-    score = entry.score;
-  } else if (entry.forks != null) {
-    score = forksToScore(entry.forks);
-  }
+  // Use numeric score directly — no fork-to-score conversion
+  // (the scraper only includes rated venues, so score should be present)
+  const score = entry.score != null && entry.score >= 80 && entry.score <= 100
+    ? entry.score
+    : undefined;
 
   const { street, city } = parseAddress(entry.address);
 
@@ -102,12 +108,13 @@ function rawToArticle(entry: FalstaffRaw): Article {
     contentType: "review",
     bodyText: "",
 
-    venueType: "restaurant",
+    venueType: entry.url.includes("/bars/") ? "bar" as const : "restaurant" as const,
     venueName: normalizeVenueName(entry.name),
     venueAddress: street || undefined,
     venueCity: city ? normalizeCity(city) : undefined,
 
     score,
+    explicitSubScores: entry.subScores ? normalizeSubScores(entry.subScores) : undefined,
     cuisine: entry.cuisine.length > 0 ? entry.cuisine : undefined,
 
     collectedAt: now(),
@@ -123,12 +130,8 @@ export async function collectFalstaff(): Promise<Article[]> {
   const rawData = loadData<FalstaffRaw[]>(RAW_FILE);
 
   if (!rawData) {
-    console.log(
-      "  No falstaff-raw.json found in .data/ directory.",
-    );
-    console.log(
-      "  Run the Chrome-based scraper to populate this file first.",
-    );
+    console.log("  No falstaff-raw.json found in .data/ directory.");
+    console.log("  Run /scrape-falstaff to scrape data via Chrome MCP first.");
     return [];
   }
 

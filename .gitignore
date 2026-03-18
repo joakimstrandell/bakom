@@ -8,3 +8,6 @@ dist/
 .env.local
 .DS_store
 .tanstack
+
+# Scraped raw data (regenerated via /scrape-falstaff skill)
+pipeline/.data/falstaff-raw.json
