@@ -5812,7 +5812,7 @@
       "website": "http://tapasbaren.se/",
       "phone": "031-42 42 11",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "hotel-mj-s-malmo",
@@ -8137,7 +8137,7 @@
       "website": "https://missvoon.se/?utm_source=google",
       "phone": "018-472 25 00",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "brajks-matbar-vemdalen",
@@ -12461,7 +12461,7 @@
       "website": "http://www.aliorient.se/",
       "phone": "076-213 33 81",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "pa-co-stockholm",
@@ -13347,7 +13347,7 @@
       "website": "http://www.restaurangjord.se/",
       "phone": "013-13 13 37",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "creperie-logi-visby",
@@ -13422,7 +13422,7 @@
       "website": "http://www.creperielogi.se/",
       "phone": "073-087 05 06",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "kronet-by-visby-visby",
@@ -14563,7 +14563,7 @@
       "website": "http://www.raspberrybar.se/",
       "phone": "073-506 48 96",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "mutantur-malmo",
@@ -20684,7 +20684,7 @@
       "website": "https://www.restaurangfamiljen.se/?utm_source=google",
       "phone": "031-20 79 79",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "wine-mechanics-goteborg",
@@ -21769,7 +21769,7 @@
       "website": "https://tjoget.com/?utm_source=google",
       "phone": "08-22 00 21",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "bergamott-stockholm",
@@ -23930,7 +23930,7 @@
       "website": "http://www.tak.se/",
       "phone": "08-587 220 80",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "bang-goteborg",
@@ -26886,7 +26886,7 @@
       ],
       "website": "http://vinbaren-are.com/",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "namu-malmo",
@@ -29049,7 +29049,7 @@
       "website": "https://www.portalrestaurant.se/?utm_source=google",
       "phone": "08-30 11 01",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "postgatan-kalmar",
@@ -30200,7 +30200,7 @@
       ],
       "website": "http://utopiajazz.com/",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "mommas-bar-och-kok-kiruna",
@@ -38499,7 +38499,7 @@
       ],
       "website": "http://www.sugganvinbar.se/",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "frank-vasteras",
@@ -38705,7 +38705,7 @@
       "website": "https://basque.se/?utm_source=google",
       "phone": "031-711 88 38",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "kungsholmens-vinbar-stockholm",
@@ -38769,7 +38769,7 @@
       "website": "http://www.kungsholmensvinbar.se/",
       "phone": "070-531 52 86",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "e-g-stockholm",
@@ -38871,7 +38871,7 @@
       "website": "http://www.eochg.se/",
       "phone": "076-082 39 92",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "bar-bruno-goteborg",
@@ -38942,7 +38942,7 @@
       "website": "http://www.barbruno.se/",
       "phone": "031-309 99 69",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "corner-club-stockholm",
@@ -39018,7 +39018,7 @@
       "website": "https://sovel.se/",
       "phone": "08-641 81 50",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "grus-grus-vinbar-stockholm",
@@ -39098,7 +39098,7 @@
       "website": "http://grusgrusvinbaren.se/",
       "phone": "08-610 66 00",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "julie-malmo",
@@ -39161,7 +39161,7 @@
       ],
       "website": "http://www.juliemalmo.se/",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "l-enoteca-malmo",
@@ -39238,7 +39238,7 @@
       "website": "http://www.lenoteca.se/",
       "phone": "040-43 81 81",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "tweed-stockholm",
@@ -39296,7 +39296,7 @@
       "website": "https://bar.leijontornet.se/?welcome=true",
       "phone": "08-506 400 83",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "dryck-vinbar-stockholm",
@@ -39368,7 +39368,7 @@
       "website": "http://www.dryckvinbar.se/",
       "phone": "076-128 91 87",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "verovin-gavle",
@@ -39463,7 +39463,7 @@
       "website": "https://verovin.se/",
       "phone": "026-12 20 60",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "de-klomp-linkoping",
@@ -39534,7 +39534,7 @@
       "website": "http://www.deklomp.se/",
       "phone": "013-14 50 60",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "volare-visby",
@@ -39598,7 +39598,7 @@
       "website": "http://www.volarevisby.se/",
       "phone": "0498-21 01 19",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "kyrkogatan-fem-lund",
@@ -39663,7 +39663,7 @@
       "website": "https://www.kyrkogatanfem.se/",
       "phone": "046-14 14 63",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "roda-huset-stockholm",
@@ -39769,7 +39769,7 @@
       "website": "https://rodahuset.nu/",
       "phone": "08-480 043 97",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "20hundra5-stockholm",
@@ -39833,7 +39833,7 @@
       "website": "http://www.noll5.se/",
       "phone": "08-34 05 05",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "asian-post-office-stockholm",
@@ -39944,7 +39944,7 @@
       ],
       "website": "https://www.asianpostoffice.se/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "brewers-beer-bar-magasinsgatan-goteborg",
@@ -40015,7 +40015,7 @@
       "website": "https://magasinsgatan.brewersbeerbar.se/?utm_source=google",
       "phone": "031-388 77 66",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "care-of-malmo",
@@ -40086,7 +40086,7 @@
       "website": "http://www.careof.bar/",
       "phone": "040-13 22 23",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "drinks-20-goteborg",
@@ -40158,7 +40158,7 @@
       "website": "http://drinks20.se/",
       "phone": "031-81 10 55",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "haktet-vanster-pa-haktet-stockholm",
@@ -40226,7 +40226,7 @@
       ],
       "website": "https://www.haktet.se/vanster",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "katarina-olkafe-stockholm",
@@ -40306,7 +40306,7 @@
       ],
       "website": "http://www.katarinaolkafe.se/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "papillon-bank-hotel-stockholm",
@@ -40372,7 +40372,7 @@
       "website": "https://bankhotel.se/restaurants/papillon/",
       "phone": "08-598 580 50",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "pharmarium-stockholm",
@@ -40459,7 +40459,7 @@
       "website": "https://pharmarium.se/",
       "phone": "08-20 08 10",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "stranger-gothenburg-goteborg",
@@ -40523,7 +40523,7 @@
       "website": "http://www.strangergbg.com/",
       "phone": "031-13 45 55",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "vina-stockholm",
@@ -40608,7 +40608,7 @@
       "website": "https://vinaaa.squarespace.com/",
       "phone": "070-406 66 26",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "cave-nizza-stockholm",
@@ -40688,7 +40688,7 @@
       "website": "http://www.cafenizza.se/",
       "phone": "08-640 99 50",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "guldbaren-stockholm",
@@ -40760,7 +40760,7 @@
       "website": "https://www.nobishotel.se/guldbaren?utm_source=google",
       "phone": "08-614 10 00",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "apropos-stockholm",
@@ -40837,7 +40837,7 @@
       ],
       "website": "https://aproposbar.se/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "barabicu-bar-goteborg",
@@ -40923,7 +40923,7 @@
       "website": "http://www.barabicu.se/",
       "phone": "031-13 58 00",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "bjorns-bar-goteborg",
@@ -40987,7 +40987,7 @@
       "website": "http://www.bjornsbar.se/",
       "phone": "031-701 79 79",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "cadierbaren-stockholm",
@@ -41080,7 +41080,7 @@
       "website": "http://www.grandhotel.se/upplev/mat-och-dryck/cadierbaren",
       "phone": "08-679 35 85",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "folii-stockholm",
@@ -41175,7 +41175,7 @@
       ],
       "website": "http://folii.se/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "juliette-umea",
@@ -41235,7 +41235,7 @@
       ],
       "website": "https://www.rexumea.com/juliette/",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "malmo-brewing-co-taproom-malmo",
@@ -41307,7 +41307,7 @@
       "website": "http://www.malmobrewing.com/",
       "phone": "073-392 19 66",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "omnipollos-hatt-stockholm",
@@ -41391,7 +41391,7 @@
       "website": "http://www.omnipolloshatt.com/",
       "phone": "076-119 48 44",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "puta-madre-bar-goteborg",
@@ -41460,7 +41460,7 @@
       ],
       "website": "https://www.putamadre.se/?utm_source=google",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "the-bar-pa-the-barn-goteborg",
@@ -41524,7 +41524,7 @@
       "website": "http://www.thebarn.se/",
       "phone": "031-352 49 49",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "ambar-vinbar-stockholm",
@@ -41596,7 +41596,7 @@
       "website": "http://www.ambarvinbar.se/",
       "phone": "073-158 51 53",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "tyge-sessil-stockholm",
@@ -41677,7 +41677,7 @@
       "website": "http://tygesessil.se/",
       "phone": "08-519 422 77",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "savant-bar-stockholm",
@@ -41763,7 +41763,7 @@
       "website": "http://www.savantbar.se/",
       "phone": "076-021 26 30",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "el-duderino-jonkoping",
@@ -41832,7 +41832,7 @@
       "website": "https://duderino.nu/",
       "phone": "036-221 61",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "barski-helsingborg",
@@ -41907,7 +41907,7 @@
       ],
       "website": "https://www.brewski.se/barski",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "benchwarmers-brewing-taproom-helsingborg",
@@ -41977,7 +41977,7 @@
       "website": "http://benchwarmers.se/taproom",
       "phone": "042-28 10 52",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "nykoping-brewing-co-nykoping",
@@ -42122,7 +42122,7 @@
       "website": "http://www.amarestaurant.se/",
       "phone": "042-405 26 00",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "mat-destillat-bar-lund",
@@ -42198,7 +42198,7 @@
       ],
       "website": "http://www.matochdestillat.se/",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "lucy-s-flower-shop-stockholm",
@@ -42265,7 +42265,7 @@
       ],
       "website": "http://lucysstockholm.se/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "a-bar-called-gemma-stockholm",
@@ -42341,7 +42341,7 @@
       "website": "https://abarcalledgemma.se/",
       "phone": "079-353 83 37",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "origo-bar-stockholm",
@@ -42412,7 +42412,7 @@
       ],
       "website": "https://www.bliquebynobis.se/origo",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "ritz-conditori-solvesborg",
@@ -42477,7 +42477,7 @@
       "website": "http://www.ritzsbg.se/",
       "phone": "0456-103 33",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "gardsbageriet-i-idala-frillesas",
@@ -42545,7 +42545,7 @@
       "website": "http://www.gardsbagerietidala.se/",
       "phone": "070-681 58 99",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "swenstromskas-stenugnsbageri-karlstad",
@@ -42610,7 +42610,7 @@
       "website": "http://www.swenstromskas.se/",
       "phone": "054-18 44 53",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "berzelii-choklad-goteborg",
@@ -42675,7 +42675,7 @@
       "website": "https://www.berzelii.com/",
       "phone": "031-778 16 60",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "gunthers-cafe-brodstuga-ulricehamn",
@@ -42740,7 +42740,7 @@
       "website": "http://www.gunthers.nu/",
       "phone": "0321-102 24",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "solde-kaffebar-malmo",
@@ -42812,7 +42812,7 @@
       "website": "https://www.solde.se/pages/kaffebaren",
       "phone": "073-935 77 70",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "noir-kaffekultur-malmo",
@@ -42876,7 +42876,7 @@
       ],
       "website": "https://www.facebook.com/Noir-Kaffekultur-136811053534/",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "tva-goda-ting-mariefred",
@@ -42947,7 +42947,7 @@
       ],
       "website": "http://www.tvagodating.com/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "cum-pane-goteborg",
@@ -43011,7 +43011,7 @@
       "website": "http://www.cumpane.nu/",
       "phone": "031-19 99 96",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "tossebageriet-stockholm",
@@ -43077,7 +43077,7 @@
       "website": "http://www.tosse.se/",
       "phone": "08-662 24 30",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "robin-delselius-bageri-stockholm",
@@ -43160,7 +43160,7 @@
       "website": "https://robindelseliusbageri.se/",
       "phone": "08-408 016 15",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "fosch-artisan-patisserie-stockholm",
@@ -43243,7 +43243,7 @@
       "website": "http://www.fosch.se/",
       "phone": "08-651 61 78",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "brioche-stockholm",
@@ -43321,7 +43321,7 @@
       "website": "https://mymenuweb.com/int/restaurants/2081009/?utm_source=google_profile&utm_medium=google_profile&utm_campaign=admin",
       "phone": "08-21 88 42",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "presteles-tradgardscafe-hornsjo",
@@ -43366,7 +43366,7 @@
       "website": "https://www.presteles.se/",
       "phone": "070-675 00 26",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "st-jakobs-stenugnsbageri-malmo",
@@ -43431,7 +43431,7 @@
       ],
       "phone": "072-339 30 20",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "bergs-konditori-pitea",
@@ -43502,7 +43502,7 @@
       ],
       "phone": "0911-21 12 90",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "da-matteo-magasinsgatan-goteborg",
@@ -43589,7 +43589,7 @@
       "website": "http://www.damatteo.se/",
       "phone": "031-380 33 10",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "bagaren-bonden-malmo",
@@ -43655,7 +43655,7 @@
       "website": "http://bagarenochbonden.se/",
       "phone": "040-93 00 11",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "bageri-brantingstorg-uppsala",
@@ -43720,7 +43720,7 @@
       "website": "http://www.bageribrantingstorg.com/",
       "phone": "018-25 54 64",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "leijon-stenugnsbageri-konditori-uppsala",
@@ -43792,7 +43792,7 @@
       "website": "http://www.leijonbageri.se/",
       "phone": "018-20 55 20",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "spanga-konditori-spanga",
@@ -43864,7 +43864,7 @@
       "website": "http://www.spangakonditori.se/",
       "phone": "08-36 53 54",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "graddhyllan-lantcafe-markaryd",
@@ -43922,7 +43922,7 @@
       "website": "http://www.graddhyllan.net/",
       "phone": "0433-140 40",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "nya-konditoriet-umea",
@@ -43988,7 +43988,7 @@
       "website": "https://nyakonditoriet.se/",
       "phone": "090-77 14 04",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "brogyllen-goteborg",
@@ -44054,7 +44054,7 @@
       "website": "https://brogyllen.se/",
       "phone": "031-13 87 13",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "viggbyholms-stationskafe-taby",
@@ -44120,7 +44120,7 @@
       "website": "http://www.viggbyholmsstationskafe.se/",
       "phone": "08-756 85 02",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "vallentuna-stenugnsbageri-vallentuna",
@@ -44186,7 +44186,7 @@
       "website": "http://vsbageri.se/",
       "phone": "08-511 705 70",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "guntherska-hovkonditori-schweizeri-uppsala",
@@ -44252,7 +44252,7 @@
       "website": "http://guntherska.se/",
       "phone": "018-13 07 57",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "haga-tartcompani-och-bageri-stockholm",
@@ -44317,7 +44317,7 @@
       "website": "http://www.hagabageri.se/",
       "phone": "08-19 34 34",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "nockeby-bageri-stockholm",
@@ -44383,7 +44383,7 @@
       "website": "https://www.instagram.com/nockeby_bageri/",
       "phone": "08-25 54 75",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "vansbro-konditori-vansbro",
@@ -44449,7 +44449,7 @@
       "website": "https://www.vansbrokonditori.se/",
       "phone": "0281-105 07",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "flax-malmo",
@@ -44515,7 +44515,7 @@
       "website": "http://www.flaxmalmo.com/",
       "phone": "076-964 52 59",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "uggla-kaffebar-cafe-malmo",
@@ -44580,7 +44580,7 @@
       ],
       "website": "http://www.ugglakaffebar.se/",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "nostra-cafe-malmo",
@@ -44651,7 +44651,7 @@
       ],
       "website": "https://www.instagram.com/nostramalmo/",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "green-rabbit-ragbrodsbageriet-stockholm",
@@ -44730,7 +44730,7 @@
       "website": "https://mdghs.se/green-rabbit/",
       "phone": "08-20 46 26",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "kaka-pa-kaka-malmo",
@@ -44796,7 +44796,7 @@
       "website": "http://www.kakapakaka.se/",
       "phone": "073-511 45 27",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "nya-jonssons-konditori-bageri-funasdalen",
@@ -44860,7 +44860,7 @@
       "website": "http://nyajonssons.se/",
       "phone": "072-703 46 72",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "bak-stockholm",
@@ -44926,7 +44926,7 @@
       "website": "http://www.bak.se/",
       "phone": "08-656 20 20",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "bonan-mustaschen-vaxjo",
@@ -44990,7 +44990,7 @@
       ],
       "website": "http://bönan.nu/",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "cafe-tva-skator-arboga",
@@ -45062,7 +45062,7 @@
       "website": "http://www.cafetvaskator.se/",
       "phone": "073-052 85 75",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "magnus-johanssons-bageri-konditori-stockholm",
@@ -45136,7 +45136,7 @@
       "website": "http://magnus-johansson.com/",
       "phone": "08-791 90 21",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "ekstedts-bageri-cafe-alingsas",
@@ -45200,7 +45200,7 @@
       "website": "http://www.ekstedtsbageri.se/",
       "phone": "0322-125 72",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "nolbygards-ekobageri-kafe-alingsas",
@@ -45264,7 +45264,7 @@
       "website": "http://nolbygards.se/",
       "phone": "0322-123 23",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "pm-brod-sovel-vaxjo",
@@ -45329,7 +45329,7 @@
       "website": "http://www.pmrestauranger.se/sv/brod-sovel/",
       "phone": "0470-75 97 30",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "bageri-leve-malmo",
@@ -45394,7 +45394,7 @@
       "website": "http://www.bagerileve.se/",
       "phone": "040-97 93 31",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "park-bageri-konditori-stockholm",
@@ -45460,7 +45460,7 @@
       "website": "http://www.parkkonditori.se/",
       "phone": "08-25 15 80",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "fredriks-brod-och-bakverk-farjestaden",
@@ -45531,7 +45531,7 @@
       "website": "http://www.fredriksbrodochbakverk.se/",
       "phone": "0485-300 90",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "vattenverket-lidingo",
@@ -45599,7 +45599,7 @@
       "website": "http://www.vattenverket.se/",
       "phone": "08-766 09 29",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "solhaga-stenugnsbageri-sloinge",
@@ -45663,7 +45663,7 @@
       "website": "http://www.solhagastenugnsbageri.se/",
       "phone": "0346-815 00",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "flattinge-gardscafe-huskvarna",
@@ -45779,7 +45779,7 @@
       ],
       "phone": "0498-24 96 90",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "rosendals-tradgardskafe-stockholm",
@@ -45853,7 +45853,7 @@
       ],
       "website": "https://www.rosendalstradgard.se/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "tant-gron-och-hela-harligheten-vintrosa",
@@ -45918,7 +45918,7 @@
       "website": "http://www.tant-gron.nu/",
       "phone": "019-29 48 48",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "are-kafferosteri-are",
@@ -45978,7 +45978,7 @@
       "website": "http://arekafferosteri.se/",
       "phone": "070-647 57 27",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "byvagen-35-sankt-olof",
@@ -46035,7 +46035,7 @@
       ],
       "website": "http://www.facebook.com/byvagen35",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "kanaans-tradgardscafe-stockholm",
@@ -46094,7 +46094,7 @@
       ],
       "website": "https://kanaans.se/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "stromma-farmlodge-tvaaker",
@@ -46204,7 +46204,7 @@
       "website": "http://www.kampanilen.se/",
       "phone": "031-14 48 11",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "gerd-goteborg",
@@ -46269,7 +46269,7 @@
       "website": "https://www.instagram.com/gerd_gbg/",
       "phone": "072-158 89 43",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "drop-coffee-roasters-stockholm",
@@ -46343,7 +46343,7 @@
       "website": "http://www.dropcoffee.com/",
       "phone": "070-777 94 88",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "pascal-sodermalm-stockholm",
@@ -46409,7 +46409,7 @@
       "website": "https://www.cafepascal.se/?utm_source=google",
       "phone": "08-525 047 01",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "mormors-stenugnsbageri-kaffestuga-stora-ror",
@@ -46475,7 +46475,7 @@
       "website": "http://www.mormorsihamnen.se/",
       "phone": "072-552 68 86",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "borgmastargarden-falkenberg",
@@ -46541,7 +46541,7 @@
       "website": "https://borgmastargarden.com/",
       "phone": "070-932 20 20",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "stalboms-konditori-falkenberg",
@@ -46607,7 +46607,7 @@
       "website": "http://www.stalboms.se/",
       "phone": "0346-130 92",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "broder-jakobs-lund",
@@ -46679,7 +46679,7 @@
       "website": "http://www.broderjakobs.se/",
       "phone": "046-13 70 60",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "love-coffee-roasters-lund",
@@ -46745,7 +46745,7 @@
       "website": "http://lovecoffee.se/",
       "phone": "046-25 24 26",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "vete-katten-stockholm",
@@ -46819,7 +46819,7 @@
       "website": "http://www.vetekatten.se/",
       "phone": "08-20 84 05",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "landhs-kroatorpet-huskvarna",
@@ -46879,7 +46879,7 @@
       "website": "http://landhs.se/kroatorpet",
       "phone": "036-13 22 86",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "hamnbageriet-kungshamn",
@@ -46944,7 +46944,7 @@
       "website": "http://www.hamnbageriet.se/",
       "phone": "0523-309 99",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "vilhelmsro-gardscafe-falkoping",
@@ -46989,7 +46989,7 @@
       "website": "https://vilhelmsro.nu/",
       "phone": "010-264 10 20",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "lillaro-cafe-musik-forslov",
@@ -47033,7 +47033,7 @@
       "businessStatus": "OPERATIONAL",
       "website": "http://www.lillaro.nu/",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "fricks-spettkaksbageri-tradgardscafe-billinge",
@@ -47138,7 +47138,7 @@
       "website": "https://gunneboslott.se/inlagg/kaffehusochkrog/",
       "phone": "031-334 16 14",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "vismarlovs-cafe-och-bagarstuga-klagerup",
@@ -47197,7 +47197,7 @@
       "website": "https://www.vismarlovscafe.se/",
       "phone": "040-44 01 13",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "appelfabriken-svartsjo",
@@ -47305,7 +47305,7 @@
       "website": "https://www.taxingeslott.se/",
       "phone": "0159-701 14",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "cafe-pa-klostret-kallby",
@@ -47362,7 +47362,7 @@
       "website": "http://www.paklostret.se/",
       "phone": "0510-54 21 20",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "lottas-bak-form-surdegsbageri-bleket",
@@ -47432,7 +47432,7 @@
       "website": "http://lottasbakoform.se/",
       "phone": "070-219 47 33",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "nygrens-cafe-alingsas",
@@ -47504,7 +47504,7 @@
       "website": "https://www.nygrenscafe.se/",
       "phone": "0322-100 79",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "babettes-kafferi-bageri-linkoping",
@@ -47568,7 +47568,7 @@
       "website": "http://www.babettes.se/",
       "phone": "013-12 55 00",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "hellmanska-garden-nykoping",
@@ -47712,7 +47712,7 @@
       "website": "http://www.asokonditori.se/",
       "phone": "08-640 56 06",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "mellqvist-kaffebar-stockholm",
@@ -47786,7 +47786,7 @@
       "website": "https://www.mellqvistkaffebar.se/",
       "phone": "08-770 70 10",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "lundbergs-konditori-stockholm",
@@ -47873,7 +47873,7 @@
       "website": "http://www.lundbergskonditori.se/",
       "phone": "08-645 20 34",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "gauffin-boulangerie-borlange",
@@ -47936,7 +47936,7 @@
       "website": "https://gauffinboulangerie.se/",
       "phone": "076-021 30 72",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "kaffebaren-pa-mollan-malmo",
@@ -48007,7 +48007,7 @@
       ],
       "website": "https://www.instagram.com/kaffebarenmollan/",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "hemma-hos-edith-funasdalen",
@@ -48072,7 +48072,7 @@
       "website": "http://www.hemmahosedith.se/",
       "phone": "072-214 60 74",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "budhas-kafferosteri-lycksele",
@@ -48136,7 +48136,7 @@
       "website": "https://budhaskafferosteri.se/",
       "phone": "070-608 46 37",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "gardby-kafe-och-lanthandel-gardby",
@@ -48199,7 +48199,7 @@
       ],
       "phone": "0485-330 06",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "radhuskonditoriet-lidkoping",
@@ -48271,7 +48271,7 @@
       "website": "https://m.facebook.com/R%C3%A5dhuskonditoriet-Lidk%C3%B6ping-237977556404791/?locale2=sv_SE",
       "phone": "0510-240 50",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "skramtrask-kvarn-skelleftea",
@@ -48325,7 +48325,7 @@
       "website": "http://www.kvarn.skramtrask.se/",
       "phone": "073-055 91 93",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "stuk-jonkoping",
@@ -48390,7 +48390,7 @@
       "website": "https://www.stukjonkoping.se/",
       "phone": "036-10 05 55",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "bergstrands-bageri-stockholm",
@@ -48462,7 +48462,7 @@
       "website": "http://bergstrandsbageri.se/",
       "phone": "070-888 27 42",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "olov-viktors-glemmingebro",
@@ -48526,7 +48526,7 @@
       "website": "http://www.olofviktors.se/",
       "phone": "0411-52 20 20",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "kopparlundens-bageri-vasteras",
@@ -48591,7 +48591,7 @@
       "website": "http://www.kopparlundensbageri.se/",
       "phone": "021-41 47 09",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "gast-stockholm",
@@ -48672,7 +48672,7 @@
       "website": "https://gastcafe.se/",
       "phone": "08-27 02 22",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "kafe-magasinet-goteborg",
@@ -48749,7 +48749,7 @@
       ],
       "website": "http://kafemagasinet.se/",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "brodfabriken-jonsered",
@@ -48812,7 +48812,7 @@
       ],
       "website": "https://www.facebook.com/share/NwMrBXh5pMAHxsKU/",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "gamla-bageriet-borrby",
@@ -48876,7 +48876,7 @@
       "website": "http://www.gamlabageriet.se/",
       "phone": "079-354 00 78",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "soderberg-sara-stenugnsbageri-ystad",
@@ -48948,7 +48948,7 @@
       "website": "http://www.soderbergsara.se/",
       "phone": "0411-125 80",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "soderberg-sara-pa-s-t-knut-malmo",
@@ -49014,7 +49014,7 @@
       "website": "http://www.soderbergsara.se/",
       "phone": "040-12 58 10",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "rudenstams-gardsbutik-kafe-huskvarna",
@@ -49150,7 +49150,7 @@
       ],
       "website": "https://www.rosterietnykoping.se/",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "komet-stockholm-stockholm",
@@ -49233,7 +49233,7 @@
       "website": "http://www.kometstockholm.com/",
       "phone": "070-975 67 47",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "skeppshandeln-cafe-bistro-koping",
@@ -49303,7 +49303,7 @@
       "website": "http://www.skeppshandeln.net/",
       "phone": "0221-46 07 95",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "hjalmeskulla-tradgardscafe-kungsbacka",
@@ -49444,7 +49444,7 @@
       "website": "http://www.bostallets.se/",
       "phone": "076-127 30 22",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "tavlebords-honungsgard-henan",
@@ -49556,7 +49556,7 @@
       "website": "https://cafebistro.se/",
       "phone": "0411-52 72 20",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "langangens-gard-lidingo",
@@ -49614,7 +49614,7 @@
       "website": "http://www.langangensgard.se/",
       "phone": "08-20 30 08",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "pom-och-flora-stockholm",
@@ -49680,7 +49680,7 @@
       "website": "https://www.pomochflora.se/?utm_source=google",
       "phone": "076-020 32 80",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "cafe-st-clair-alvesta",
@@ -49749,7 +49749,7 @@
       "website": "http://www.saintclair.se/",
       "phone": "0472-107 05",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "mr-cake-gbg-goteborg",
@@ -49821,7 +49821,7 @@
       "website": "http://www.mrcake.se/",
       "phone": "031-363 61 00",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "portens-bageri-goteborg",
@@ -49886,7 +49886,7 @@
       "website": "http://portensbageri.se/",
       "phone": "031-21 11 20",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "roots-cafe-goteborg",
@@ -49952,7 +49952,7 @@
       "website": "http://www.rootscafe.se/",
       "phone": "031-320 45 68",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "lidingo-brod-patisserie-lidingo",
@@ -50024,7 +50024,7 @@
       "website": "http://www.lidingobrod.se/",
       "phone": "08-446 00 80",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "konditorn-och-bagarn-farsta",
@@ -50090,7 +50090,7 @@
       "website": "http://www.konditornochbagarn.se/",
       "phone": "08-420 600 60",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "jimmy-joans-new-york-goteborg",
@@ -50156,7 +50156,7 @@
       "website": "http://www.jimmyandjoansnewyork.se/",
       "phone": "072-229 66 74",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "alkemisten-kaffebar-kafe-goteborg",
@@ -50221,7 +50221,7 @@
       ],
       "website": "http://www.alkemistenkaffebar.se/",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "alskade-traditioner-stockholm",
@@ -50280,7 +50280,7 @@
       ],
       "website": "https://www.alskadetraditioner.se/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "det-goda-bruket-matfors",
@@ -50325,7 +50325,7 @@
       "website": "http://www.detgodabruket.se/",
       "phone": "070-286 00 91",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "ett-bageri-stockholm",
@@ -50390,7 +50390,7 @@
       "website": "http://www.ettbageri.se/",
       "phone": "08-663 73 18",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "borje-olsson-konditori-lulea",
@@ -50462,7 +50462,7 @@
       "website": "http://www.borjeolssons.se/",
       "phone": "0920-155 56",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "cafe-koya-stockholm",
@@ -50527,7 +50527,7 @@
       "website": "https://cafekoya.se/",
       "phone": "072-222 65 56",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "en-liten-smula-pa-landet-norrtalje",
@@ -50587,7 +50587,7 @@
       "website": "https://sundstasateri.gastrogate.com/",
       "phone": "0175-910 54",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "botaniska-paviljongen-tradgardscafe-goteborg",
@@ -50651,7 +50651,7 @@
       "website": "http://www.botaniskapaviljongen.se/",
       "phone": "072-172 77 72",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "bullar-brod-stenugnsbageri-stockholm",
@@ -50723,7 +50723,7 @@
       "website": "https://www.bullarochbrod.se/",
       "phone": "08-121 561 10",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "epi-bageri-cafe-gavle",
@@ -50788,7 +50788,7 @@
       "website": "https://epigavle.se/",
       "phone": "026-12 88 00",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "cafe-madrix-choklad-te-kaffebod-hassleholm",
@@ -50859,7 +50859,7 @@
       "website": "http://www.madrix.se/",
       "phone": "0451-414 11",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "tant-anci-froken-sara-sundsvall",
@@ -50924,7 +50924,7 @@
       "website": "https://tantanci.eu/",
       "phone": "060-785 57 00",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "lilla-kafferosteriet-malmo",
@@ -50990,7 +50990,7 @@
       "website": "http://www.lillakafferosteriet.se/",
       "phone": "040-48 20 00",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "klovsjo-stenugnsbageri-klovsjo",
@@ -51055,7 +51055,7 @@
       "website": "https://klovsjostenugnsbageri.se/",
       "phone": "0682-214 00",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "cafe-cineast-sveg",
@@ -51127,7 +51127,7 @@
       "website": "https://www.facebook.com/cafecineast",
       "phone": "0680-105 86",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "artisan-bread-karlstad",
@@ -51199,7 +51199,7 @@
       "website": "http://www.artisanbread.se/",
       "phone": "054-15 32 00",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "ryggasstugan-dala-jarna",
@@ -51257,7 +51257,7 @@
       "website": "https://www.ryggasstugan.com/",
       "phone": "070-261 66 93",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "tivolikiosken-halmstad",
@@ -51321,7 +51321,7 @@
       "website": "https://www.feldtspaskolberget.se/",
       "phone": "035-12 16 81",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "sjalso-bageri-visby",
@@ -51391,7 +51391,7 @@
       "website": "http://www.sjalsobageri.se/",
       "phone": "0498-27 09 09",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "molle-krukmakeri-molle",
@@ -51609,7 +51609,7 @@
       "website": "http://lindebergbageriochkonditori.se/",
       "phone": "08-715 04 48",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "vanga-kvarn-sweden",
@@ -51672,7 +51672,7 @@
       "website": "http://www.vangakvarn.se/",
       "phone": "070-922 62 26",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "olands-soderbonor-morbylanga",
@@ -51743,7 +51743,7 @@
       "website": "https://www.soderbonor.se/",
       "phone": "070-914 00 22",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "gradda-are-are",
@@ -51803,7 +51803,7 @@
       "website": "http://grädda.se/",
       "phone": "0647-515 15",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "ecocafeet-ostersund",
@@ -51866,7 +51866,7 @@
       ],
       "phone": "063-77 90 77",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "jarvso-gardsbageri-jarvso",
@@ -51930,7 +51930,7 @@
       "website": "http://jarvsogardsbageri.nu/",
       "phone": "073-035 56 64",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "ostroo-farfarm-tvaaker",
@@ -52063,7 +52063,7 @@
       "website": "https://www.sannascafe.se/",
       "phone": "072-500 70 57",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "cafe-zorn-mora",
@@ -52128,7 +52128,7 @@
       "website": "http://cafezorn.se/",
       "phone": "072-142 45 11",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "mandeltartan-ronneby",
@@ -52193,7 +52193,7 @@
       "website": "http://www.mandeltartan.se/",
       "phone": "0457-109 99",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "snitths-hantverksbageri-sweden",
@@ -52249,7 +52249,7 @@
       "website": "https://www.snitths.se/",
       "phone": "070-979 65 08",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "bar-centro-goteborg",
@@ -52324,7 +52324,7 @@
       "website": "http://www.barcentro.se/",
       "phone": "031-711 00 27",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "alice-kattens-tesalong-lund",
@@ -52383,7 +52383,7 @@
       "website": "http://www.aliceochkattenstesalong.se/",
       "phone": "046-211 83 28",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "bruket-kaffebar-helsingborg",
@@ -52454,7 +52454,7 @@
       ],
       "website": "http://www.bruketkaffebar.se/",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "patisserie-david-malmo",
@@ -52519,7 +52519,7 @@
       "website": "http://www.patisseriedavid.se/",
       "phone": "040-630 80 80",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "elins-bakgard-arvika",
@@ -52589,7 +52589,7 @@
       "website": "http://www.elinsbakgard.se/",
       "phone": "076-819 75 83",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "systrarna-lindqvist-cafe-surdegsbageri-karlskrona",
@@ -52654,7 +52654,7 @@
       "website": "https://www.facebook.com/systrarnalindqvist/",
       "phone": "0455-156 00",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "cafe-bella-mi-lidkoping",
@@ -52719,7 +52719,7 @@
       "website": "https://www.fifflers.se/",
       "phone": "0510-668 66",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "sjogrens-i-backen-grebbestad",
@@ -52791,7 +52791,7 @@
       "website": "http://www.sjogrensibacken.se/",
       "phone": "0525-140 40",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "slottstradgardens-kafe-malmo",
@@ -52835,7 +52835,7 @@
       "businessStatus": "OPERATIONAL",
       "website": "http://www.slottstradgardenskafe.se/",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "winterviken-cafe-stockholm",
@@ -52940,7 +52940,7 @@
       "website": "http://www.hornudden.net/",
       "phone": "0152-326 18",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "esters-langserud",
@@ -52996,7 +52996,7 @@
       "website": "http://www.esterscafe.se/",
       "phone": "0533-502 45",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "simons-rosteri-bageri-linkoping",
@@ -53074,7 +53074,7 @@
       "website": "http://simonsrosteribageri.se/",
       "phone": "013-329 26 20",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "brodkultur-2-0-helsingborg",
@@ -53139,7 +53139,7 @@
       "website": "http://brodkultur.se/",
       "phone": "070-938 49 03",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "a-b-cafe-stockholm",
@@ -53211,7 +53211,7 @@
       "website": "https://www.abcafe.se/",
       "phone": "08-18 31 38",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "bergstugan-froa-gruva-are",
@@ -53270,7 +53270,7 @@
       "website": "http://www.bergstuganfroa.se/",
       "phone": "072-521 05 44",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "mr-cake-stockholm",
@@ -53344,7 +53344,7 @@
       "website": "http://mrcake.se/",
       "phone": "08-400 171 90",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "lillebrors-bageri-stockholm",
@@ -53408,7 +53408,7 @@
       ],
       "website": "http://lillebrors.se/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "bryggan-cafe-bistro-jonkoping",
@@ -53486,7 +53486,7 @@
       "website": "https://bryggancafebistro.se/",
       "phone": "036-12 30 60",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "pascal-odenplan-stockholm",
@@ -53566,7 +53566,7 @@
       "website": "https://www.cafepascal.se/?utm_source=google",
       "phone": "08-31 61 10",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "atrium-malmo",
@@ -53632,7 +53632,7 @@
       "website": "https://www.atriumcafe.se/",
       "phone": "040-30 66 00",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "kulturbageriet-umea",
@@ -53710,7 +53710,7 @@
       "website": "http://www.kulturbageriet.se/",
       "phone": "090-690 33 33",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "lilla-k-s-tradgardskok-bollnas",
@@ -53770,7 +53770,7 @@
       "website": "http://www.lillak.com/",
       "phone": "0278-120 12",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "asgatan-2-kaffebar-jarna",
@@ -53842,7 +53842,7 @@
       "website": "http://www.asg2.se/",
       "phone": "070-939 49 99",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "bageriet-i-tranas-tranas",
@@ -53907,7 +53907,7 @@
       "website": "http://www.bagerietitranas.se/",
       "phone": "0140-192 52",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "enskedeparkens-bageri-enskede-gard",
@@ -53980,7 +53980,7 @@
       "website": "https://enskedeparken.se/",
       "phone": "070-333 09 35",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "carli-karlstad",
@@ -54052,7 +54052,7 @@
       "website": "http://www.carlicafe.se/",
       "phone": "070-980 81 01",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "conditori-nordpolen-vara",
@@ -54124,7 +54124,7 @@
       "website": "http://nordpolen.se/",
       "phone": "0512-100 56",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "socker-sucker-stockholm",
@@ -54203,7 +54203,7 @@
       "website": "http://www.sockersucker.se/",
       "phone": "08-93 11 02",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "bageri-april-vasteras",
@@ -54267,7 +54267,7 @@
       "website": "http://bageriapril.se/",
       "phone": "021-250 35",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "nilssons-konditori-bageri-oskarshamn",
@@ -54339,7 +54339,7 @@
       "website": "http://www.nilssonskonditori.se/",
       "phone": "0491-101 67",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "kullzenska-cafeet-kalmar",
@@ -54411,7 +54411,7 @@
       "website": "http://kullzenska.se/",
       "phone": "0480-288 82",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "l-a-manilla-kalmar",
@@ -54487,7 +54487,7 @@
       ],
       "website": "https://www.lillamanilla.se/",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "gunnarsons-stockholm",
@@ -54559,7 +54559,7 @@
       "website": "http://www.gunnarsons.se/",
       "phone": "08-641 91 11",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "conditori-cecil-vetlanda",
@@ -54624,7 +54624,7 @@
       "website": "http://www.konditoricecil.se/",
       "phone": "0383-103 45",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "viktors-kaffe-goteborg",
@@ -54690,7 +54690,7 @@
       "website": "https://viktorskaffe.se/",
       "phone": "072-232 85 34",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "thimons-konditori-nassjo",
@@ -54768,7 +54768,7 @@
       "website": "https://www.thimons.se/",
       "phone": "0380-133 39",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "vaderstad-centralkonditori-vaderstad",
@@ -54834,7 +54834,7 @@
       "website": "http://www.centralkonditori.se/",
       "phone": "0142-700 25",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "weinbergs-hotell-trelleborg",
@@ -61202,7 +61202,7 @@
       "website": "http://alalo.se/",
       "phone": "070-713 87 87",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "adria-stockholm",
@@ -61456,7 +61456,7 @@
       "website": "http://www.albavinbar.se/",
       "phone": "08-36 96 50",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "amida-kolgrill-stockholm",
@@ -61789,7 +61789,7 @@
       "website": "http://www.aquitapas.se/",
       "phone": "08-411 40 29",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "aubergine-stockholm",
@@ -61927,7 +61927,7 @@
       "website": "https://avecstockholm.com/",
       "phone": "076-028 61 60",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "bacchanale-stockholm",
@@ -62121,7 +62121,7 @@
       ],
       "website": "https://www.instagram.com/baggio_kaffebar",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "baladi-grill-stockholm",
@@ -62297,7 +62297,7 @@
       "website": "http://banacado.com/",
       "phone": "08-474 86 04",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "bap-burgers-and-pastrami-stockholm",
@@ -62740,7 +62740,7 @@
       "website": "http://baringrid.se/",
       "phone": "08-562 973 73",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "bar-nimes-stockholm",
@@ -63273,7 +63273,7 @@
       "website": "https://batardsthlm.se/",
       "phone": "08-527 757 93",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "beirut-cafe-stockholm",
@@ -64872,7 +64872,7 @@
       "website": "https://www.cafeblalotus.nu/",
       "phone": "08-644 50 43",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "bla-porten-stockholm",
@@ -65290,7 +65290,7 @@
       "website": "https://www.boulebar.se/sthlm-radhuset",
       "phone": "010-162 92 00",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "brasserie-elverket-stockholm",
@@ -67466,7 +67466,7 @@
       "website": "http://www.corvina.nu/",
       "phone": "08-660 59 97",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "coup-d-etat-stockholm",
@@ -67736,7 +67736,7 @@
       "website": "https://www.instagram.com/fyraknop/",
       "phone": "08-640 77 27",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "crispy-pizza-bistro-stockholm",
@@ -68041,7 +68041,7 @@
       "website": "http://www.cykelcafe.se/",
       "phone": "08-437 485 41",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "davidathome-stockholm",
@@ -68603,7 +68603,7 @@
       "website": "https://djurgardsbrunn.com/",
       "phone": "08-654 77 00",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "dotter-voltaire-stockholm",
@@ -69026,7 +69026,7 @@
       "website": "https://www.ekencafe.se/",
       "phone": "08-121 321 20",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "enoteca-la-mela-stockholm",
@@ -69078,7 +69078,7 @@
       "website": "http://enotecalamela.com/",
       "phone": "070-774 57 32",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "erssons-delibistro-stockholm",
@@ -69670,7 +69670,7 @@
       "website": "http://www.flickornahelin.se/",
       "phone": "08-664 51 08",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "flippin-burgers-stockholm",
@@ -70362,7 +70362,7 @@
         }
       ],
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "funkalistic-bistro-bar-stockholm",
@@ -71201,7 +71201,7 @@
       "website": "https://granerobakery.se/",
       "phone": "08-28 30 18",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "greasy-spoon-stockholm",
@@ -71660,7 +71660,7 @@
       "website": "https://www.storabageriet.com/",
       "phone": "08-27 72 72",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "haga-bottega-solna",
@@ -72320,7 +72320,7 @@
       "website": "https://hernoginbar.com/",
       "phone": "073-095 90 00",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "herrangens-gard-stockholm",
@@ -72812,7 +72812,7 @@
       "website": "https://www.hornstullsbodega.com/?utm_source=google",
       "phone": "08-22 00 21",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "hosoi-stockholm",
@@ -73840,7 +73840,7 @@
       "website": "http://www.kaferang.se/",
       "phone": "08-665 30 10",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "kale-crave-stockholm",
@@ -76605,7 +76605,7 @@
       ],
       "website": "https://www.lykkenytorget.se/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "m-o-a-s-meat-on-a-stick-stockholm",
@@ -76742,7 +76742,7 @@
       "website": "http://www.mahalosthlm.se/",
       "phone": "073-961 82 17",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "malmo-stockholm",
@@ -80280,7 +80280,7 @@
       "website": "https://www.paradisostockholm.se/?utm_source=google",
       "phone": "08-720 61 51",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "pastis-stockholm",
@@ -80630,7 +80630,7 @@
       ],
       "website": "https://pelagosthlm.se/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "pelikan-stockholm",
@@ -80933,7 +80933,7 @@
       "website": "https://petsounds.se/bar",
       "phone": "08-35 11 80",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "petite-france-stockholm",
@@ -80987,7 +80987,7 @@
       "website": "http://www.petitefrance.se/",
       "phone": "08-618 28 00",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "phil-s-burger-stockholm",
@@ -83513,7 +83513,7 @@
       ],
       "website": "http://richefenix.se/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "ricordi-stockholm",
@@ -83672,7 +83672,7 @@
       ],
       "website": "https://riggansthlm.se/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "ring-katarina-stockholm",
@@ -83776,7 +83776,7 @@
       ],
       "website": "https://ringkatarina.se/?utm_source=google",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "rockin-grill-stockholm",
@@ -83942,7 +83942,7 @@
       "website": "http://www.roststockholm.se/",
       "phone": "072-303 32 98",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "restaurang-ruben-stockholm",
@@ -85863,7 +85863,7 @@
       "website": "http://stigbergetsfot.se/",
       "phone": "08-20 00 02",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "stjartilleriet-stockholm",
@@ -85915,7 +85915,7 @@
       "website": "http://www.restaurangartilleriet.se/",
       "phone": "08-664 34 30",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "stockholm-1897-stockholm",
@@ -86015,7 +86015,7 @@
       "website": "http://www.stockholmroast.se/",
       "phone": "08-500 200 50",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "stockholm-stadshotell-bistro-stockholm",
@@ -86145,7 +86145,7 @@
       ],
       "website": "https://www.instagram.com/storaskuggansfonster?igsh=MXhlamdjOHdybTF4OA==",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "storgatans-cafe-stockholm",
@@ -86205,7 +86205,7 @@
       "website": "http://www.storgatanscafe.se/",
       "phone": "08-662 12 66",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "strand-stockholm-stockholm",
@@ -86836,7 +86836,7 @@
       ],
       "website": "https://svartahasten.se/stockholm/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "svenska-hamburgerkoket-stockholm",
@@ -86963,7 +86963,7 @@
       "website": "https://www.sweetsbycamilla.com/",
       "phone": "08-88 50 85",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "tapir-stockholm",
@@ -87784,7 +87784,7 @@
       "website": "http://www.theitaliancousins.se/",
       "phone": "076-307 24 36",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "the-social-bar-bistro-stockholm",
@@ -87913,7 +87913,7 @@
       "website": "https://www.thesparrow.se/restauranger-och-barer",
       "phone": "08-122 173 00",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "thongwiset-stockholm",
@@ -88037,7 +88037,7 @@
       "website": "http://tikiroomstockholm.com/",
       "phone": "08-33 15 55",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "totemo-ramen-stockholm",
@@ -89631,7 +89631,7 @@
       "website": "http://vinverket.se/",
       "phone": "08-33 04 00",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "waan-thai-stockholm",
@@ -89908,7 +89908,7 @@
       "website": "https://www.facebook.com/pages/Ahs-Glassbar/306403866097871",
       "phone": "072-350 31 49",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "alma-s-sweden",
@@ -89960,7 +89960,7 @@
       ],
       "phone": "0243-102 02",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "beck-kaffebar-stockholm",
@@ -90023,7 +90023,7 @@
       "website": "http://www.beckkaffebar.se/",
       "phone": "070-653 47 02",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "bersa-gotland-sweden",
@@ -90256,7 +90256,7 @@
       "website": "https://cafevolta.se/",
       "phone": "08-27 83 83",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "caffe-ugo-stockholm",
@@ -90310,7 +90310,7 @@
       "website": "http://www.caffeugo.se/",
       "phone": "070-523 42 33",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "dirty-coco-stockholm",
@@ -90605,7 +90605,7 @@
       ],
       "website": "http://instagram.com/gelatonova",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "gildas-rum-stockholm",
@@ -90659,7 +90659,7 @@
       "website": "https://gildasrum.se/",
       "phone": "072-025 17 30",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "gretas-stockholm",
@@ -90727,7 +90727,7 @@
       "website": "https://www.scandichotels.se/hotell/sverige/stockholm/haymarket-by-scandic/restaurang-bar/gretas",
       "phone": "08-517 267 00",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "hawaii-poke-stockholm",
@@ -90843,7 +90843,7 @@
       "website": "http://www.ilcaffe.se/",
       "phone": "08-652 30 04",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "italienaren-sweden",
@@ -90900,7 +90900,7 @@
       "website": "https://www.italienarenigubbangen.se/",
       "phone": "070-787 82 52",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "jessens-saluhall-bar-sweden",
@@ -91027,7 +91027,7 @@
       "website": "https://johanochnystrom.se/om-oss/butiker/swedenborgsgatan",
       "phone": "070-790 48 35",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "kennys-gelato-glassbar-stockholm",
@@ -91098,7 +91098,7 @@
       "website": "https://www.kennysgelato.se/",
       "phone": "070-969 02 05",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "le-violon-dingue-stockholm",
@@ -91159,7 +91159,7 @@
       "website": "http://www.leviolondingue.se/",
       "phone": "08-562 973 73",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "louie-louie-stockholm",
@@ -91475,7 +91475,7 @@
       "website": "http://www.caffepoli.se/",
       "phone": "08-440 23 74",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "restaurang-rot-larbro",
@@ -91601,7 +91601,7 @@
       "website": "https://www.ritorno.se/?utm_source=google",
       "phone": "08-32 01 06",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "sno-glassbar-stockholm",
@@ -91662,7 +91662,7 @@
       "website": "http://www.snogelateria.se/",
       "phone": "08-32 30 10",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "steninge-bruk-stockholm",
@@ -91756,7 +91756,7 @@
       "businessStatus": "OPERATIONAL",
       "website": "https://stikkinikki.com/sv/?utm_source=google",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "svedjan-bageri-stockholm",
@@ -91809,7 +91809,7 @@
       ],
       "website": "https://www.instagram.com/svedjanbagerisoder/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "syrran-jag-stockholm",
@@ -91989,7 +91989,7 @@
       "website": "http://www.rappne.se/",
       "phone": "08-514 822 30",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "xarcuteria-stockholm",
@@ -92041,7 +92041,7 @@
       "website": "http://www.xarcuteria.se/",
       "phone": "08-410 490 02",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "xiang-yue-stockholm",
@@ -93021,7 +93021,7 @@
       "website": "http://www.systrarnaandersson.se/",
       "phone": "08-33 18 82",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "soders-hjarta-stockholm",
@@ -93363,7 +93363,7 @@
       ],
       "website": "https://www.winetrade.se/17/196/bar-ninja/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "monello-stockholm",
@@ -97452,7 +97452,7 @@
       "website": "http://www.mapetitemaison.se/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=14877688896329122542",
       "phone": "073-956 38 41",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "five-guys-stockholm",
@@ -98465,7 +98465,7 @@
       "website": "http://www.unityjazz.se/",
       "phone": "031-25 12 44",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "tizne-goteborg",
@@ -100086,7 +100086,7 @@
       ],
       "website": "https://spesso.se/terrass/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "snack-bar-sweden",
@@ -100307,7 +100307,7 @@
       "website": "http://www.skrotens.se/",
       "phone": "070-380 80 80",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "mahogny-sweden",
@@ -100362,7 +100362,7 @@
       "website": "https://www.facebook.com/profile.php?id=100090357049318",
       "phone": "073-743 97 85",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "delselius-sweden",
@@ -100423,7 +100423,7 @@
       "website": "http://www.delselius.se/",
       "phone": "08-570 320 30",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "two-forks-sweden",
@@ -100813,7 +100813,7 @@
       "website": "https://www.ollisdeli.se/?utm_source=google",
       "phone": "08-770 70 00",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "orangeriet-sweden",
@@ -100895,7 +100895,7 @@
       "website": "https://trattorian.se/orangeriet/",
       "phone": "08-684 238 70",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "bar-europa-stockholm",
@@ -100978,7 +100978,7 @@
       "website": "https://www.bareuropa.eu/",
       "phone": "08-22 65 40",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "ho-s-tapas-sweden",
@@ -101578,7 +101578,7 @@
       ],
       "website": "https://www.kouthoofdfamiliewinkel.se/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "kollektivet-sweden",
@@ -101620,7 +101620,7 @@
       "businessStatus": "OPERATIONAL",
       "website": "https://stadsgardsterminalen.com/kollektivet-livet-bar-och-scen/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "konsthallen-sweden",
@@ -103137,7 +103137,7 @@
       "website": "https://www.heartofsweden.se/sv",
       "phone": "0498-47 10 35",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "matsalen-stockholm-stadshotell-stockholm",
@@ -103993,7 +103993,7 @@
       "website": "https://www.bararsenalen.se/?utm_source=google",
       "phone": "08-96 24 50",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "bar-juno-linkoping",
@@ -104112,7 +104112,7 @@
       "website": "https://dahlbomsmat.com/bar-kusinen",
       "phone": "013-800 08",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "bar-social-eskilstuna",
@@ -104232,7 +104232,7 @@
       "website": "https://bartalea.se/?utm_source=google",
       "phone": "08-32 33 34",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "bara-vara-helsingborg",
@@ -105126,7 +105126,7 @@
       "website": "https://www.blackbirduppsala.se/",
       "phone": "018-10 73 30",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "blanks-bar-bistro-varberg",
@@ -105370,7 +105370,7 @@
       "website": "https://www.boulebar.se/drottningtorget",
       "phone": "010-162 92 00",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "brasseri-kanalparken-motala",
@@ -106019,7 +106019,7 @@
       "website": "http://www.breadonwine.com/",
       "phone": "035-431 00",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "brezza-uppsala",
@@ -106690,7 +106690,7 @@
       "website": "http://www.chapterhouse.se/",
       "phone": "0470-399 91",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "chicca-belloni-goteborg",
@@ -109883,7 +109883,7 @@
       "website": "http://juanfont.se/",
       "phone": "031-20 00 66",
       "metroRegion": "gothenburg",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "juliet-creperie-bistro-goteborg",
@@ -110466,7 +110466,7 @@
       "website": "http://www.kungcarl.se/cocktailbaren",
       "phone": "08-463 50 80",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "la-ruelle-uppsala",
@@ -110709,7 +110709,7 @@
       ],
       "phone": "044-10 01 15",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "lion-bar-boras",
@@ -110770,7 +110770,7 @@
       ],
       "website": "http://www.lionbar.se/",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "lion-bar-helsingborg-helsingborg",
@@ -111810,7 +111810,7 @@
       "website": "https://ligula.se/motel-l/motel-l-lund/mat-dryck/",
       "phone": "046-440 03 00",
       "metroRegion": "malmo",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "munkkallaren-sweden",
@@ -112527,7 +112527,7 @@
       "website": "https://ibericoplan2.se/?utm_source=google&utm_medium=organic&utm_campaign=gbp-listing",
       "phone": "018-15 05 31",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "prastgatan-varberg",
@@ -112705,7 +112705,7 @@
       ],
       "website": "http://www.proseccobaren.se/",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "pumphuset-borstahusen-landskrona",
@@ -113555,7 +113555,7 @@
       "website": "http://7flaskor.se/",
       "phone": "070-312 35 56",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "skai-vaxjo",
@@ -114940,7 +114940,7 @@
       "website": "https://uppsalagelateria.se/",
       "phone": "076-945 08 17",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "fika"
     },
     {
       "id": "urban-smak-vaxjo",
@@ -115111,7 +115111,7 @@
       ],
       "website": "https://vadasthlm.se/?utm_source=google",
       "metroRegion": "stockholm",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "vastervik-vastervik",
@@ -115944,7 +115944,7 @@
       "website": "http://www.ziggesgarage.se/",
       "phone": "076-341 33 78",
       "metroRegion": "sweden",
-      "category": "restaurant"
+      "category": "bar"
     },
     {
       "id": "zushi-malmo",
