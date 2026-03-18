@@ -5,6 +5,30 @@ All notable changes to Bakom will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0] - 2026-03-18
+
+### Added
+- Split venues into 4 categories: Restauranger, Barer, Fika, Hotell with dedicated routes (`/b`, `/f`, `/h`)
+- Icon-only category toggle buttons centered in header
+- SEO meta tags (title, description, OG, canonical) for all venue pages
+- SSR restaurant list for search engine indexing (top 50 venues)
+- Sitemap.xml with 1,328 venue URLs and robots.txt
+- Falstaff Chrome MCP scraper skill (`/scrape-falstaff`) with sub-score extraction
+- Per-category filter visibility (restaurants get all filters, bars/fika/hotels get relevant subset)
+
+### Fixed
+- SSR hydration mismatches (leaflet, i18n language, platform detection, RestaurantList)
+- WhiteGuide URL paths for bars, cafes, and hotels (were all linking to `/restaurants/`)
+- Falstaff data quality: only rated venues included, fake fork-to-score conversion removed
+- Scoring: rebalanced weights (Michelin > WG/Falstaff > DI > SvD/DN > Krogguiden > Google)
+- Scoring: removed diversity dampening, lowered no-prestige ceiling to 75, raised WG classification scores
+- Dark mode flash on dark OS (force light color scheme)
+
+### Maintenance
+- Enable strict mode in tsconfig
+- Add puppeteer dependency
+- Untrack falstaff-raw.json from git
+
 ## [0.3.1] - 2026-03-17
 
 ### Added
