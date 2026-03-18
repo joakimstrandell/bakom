@@ -1,7 +1,12 @@
 /** Optimize — shape scored venues into frontend-ready JSON. @see docs/pipeline.md */
 
+import { writeFileSync, mkdirSync } from "fs";
+import { resolve, dirname } from "path";
+import { fileURLToPath } from "url";
 import { saveData, loadData } from "../utils/save.js";
 import type { ScoredVenue } from "../score/score.js";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // ─── Frontend output type ───────────────────────────────────────
 
@@ -296,5 +301,52 @@ export async function optimizeAll(): Promise<{
   console.log(`    restaurants.frontend.json: ${(restJson.length / 1024).toFixed(0)} KB`);
   console.log(`    hotels.frontend.json:      ${(hotelJson.length / 1024).toFixed(0)} KB`);
 
+  // Generate sitemap.xml
+  generateSitemap(restaurantsFrontend, hotelsFrontend);
+
   return { restaurants: restaurantsFrontend, hotels: hotelsFrontend };
+}
+
+// ─── Sitemap generation ──────────────────────────────────────────
+
+const BASE_URL = "https://bakom.se";
+
+function generateSitemap(restaurants: FrontendVenue[], hotels: FrontendVenue[]): void {
+  const today = new Date().toISOString().split("T")[0];
+
+  const urls: { loc: string; priority: string; changefreq: string }[] = [
+    { loc: BASE_URL, priority: "1.0", changefreq: "weekly" },
+    { loc: `${BASE_URL}/h`, priority: "0.8", changefreq: "weekly" },
+  ];
+
+  for (const r of restaurants) {
+    urls.push({
+      loc: `${BASE_URL}/r/${r.id}`,
+      priority: r.bakomRank <= 50 ? "0.8" : "0.6",
+      changefreq: "monthly",
+    });
+  }
+
+  for (const h of hotels) {
+    urls.push({
+      loc: `${BASE_URL}/h/${h.id}`,
+      priority: h.bakomRank <= 20 ? "0.8" : "0.6",
+      changefreq: "monthly",
+    });
+  }
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urls.map((u) => `  <url>
+    <loc>${u.loc}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${u.changefreq}</changefreq>
+    <priority>${u.priority}</priority>
+  </url>`).join("\n")}
+</urlset>`;
+
+  const publicDir = resolve(__dirname, "../../public");
+  mkdirSync(publicDir, { recursive: true });
+  writeFileSync(resolve(publicDir, "sitemap.xml"), xml, "utf-8");
+  console.log(`\n  Sitemap: ${urls.length} URLs → public/sitemap.xml`);
 }
