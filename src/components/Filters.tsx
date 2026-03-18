@@ -240,8 +240,14 @@ export default function Filters({
 }: FiltersProps) {
   const { t } = useTranslation();
   const isHotels = dataMode === "hotels";
+  const isBars = dataMode === "bars";
+  const isFika = dataMode === "fika";
+  const isRestaurants = dataMode === "restaurants";
   const michelinOptions = isHotels ? MICHELIN_HOTEL_OPTIONS : MICHELIN_RESTAURANT_OPTIONS;
-  const showingKey = isHotels ? "filters.showing_hotels" : "filters.showing";
+  const showingKey = isHotels ? "filters.showing_hotels"
+    : isBars ? "filters.showing_bars"
+    : isFika ? "filters.showing_fika"
+    : "filters.showing";
 
   return (
     <div className="h-full flex flex-col">
@@ -263,8 +269,8 @@ export default function Filters({
 
       {/* Filter sections */}
       <div className="flex-1 overflow-y-auto">
-        {/* Michelin multi-select */}
-        <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
+        {/* Michelin multi-select — not for fika */}
+        {!isFika && <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
           <SectionHeader icon={<Award className="size-4" />}>Michelin</SectionHeader>
           <div className="flex flex-wrap gap-2">
             {michelinOptions.map(({ key, label }) => (
@@ -277,10 +283,10 @@ export default function Filters({
               </FilterChip>
             ))}
           </div>
-        </div>
+        </div>}
 
-        {/* White Guide multi-select */}
-        <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
+        {/* White Guide multi-select — not for fika */}
+        {!isFika && <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
           <SectionHeader icon={<Award className="size-4" />}>White Guide</SectionHeader>
           <div className="flex flex-wrap gap-2">
             {WG_KEYS.map((key) => (
@@ -293,7 +299,7 @@ export default function Filters({
               </FilterChip>
             ))}
           </div>
-        </div>
+        </div>}
 
         {/* Bakom Score range */}
         <RangeSlider
@@ -307,8 +313,8 @@ export default function Filters({
           dispatch={dispatch}
         />
 
-        {/* Restaurant-only rating sources */}
-        {!isHotels && (
+        {/* Restaurant-only rating sources (newspaper reviews) */}
+        {isRestaurants && (
           <>
             <RangeSlider
               label="SvD"
@@ -377,8 +383,8 @@ export default function Filters({
           formatValue={(v) => v.toFixed(1)}
         />
 
-        {/* Cuisine filters — restaurants only */}
-        {!isHotels && cuisines.length > 0 && (
+        {/* Cuisine filters — restaurants and bars */}
+        {(isRestaurants || isBars) && cuisines.length > 0 && (
           <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
             <SectionHeader icon={<UtensilsCrossed className="size-4" />}>
               {t("filters.cuisine")}
@@ -397,8 +403,8 @@ export default function Filters({
           </div>
         )}
 
-        {/* Price filters — restaurants only (almost no hotel price data) */}
-        {!isHotels && (
+        {/* Price filters — restaurants and bars */}
+        {(isRestaurants || isBars) && (
           <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
             <SectionHeader icon={<Euro className="size-4" />}>
               {t("filters.price")}
@@ -418,7 +424,7 @@ export default function Filters({
         )}
 
         {/* Availability & meal filters — restaurants only */}
-        {!isHotels && (
+        {isRestaurants && (
           <>
             <div className="px-5 py-4 border-b border-black/6 dark:border-white/6">
               <SectionHeader icon={<Clock className="size-4" />}>

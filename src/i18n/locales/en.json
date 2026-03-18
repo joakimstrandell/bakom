@@ -10,6 +10,8 @@
     "list": "List",
     "map": "Map",
     "restaurants": "Restaurants",
+    "bars": "Bars",
+    "fika": "Fika",
     "hotels": "Hotels"
   },
   "regions": {
@@ -27,6 +29,8 @@
   "filters": {
     "title": "Filter",
     "showing": "Showing <strong>{{count}}</strong> of {{total}} restaurants",
+    "showing_bars": "Showing <strong>{{count}}</strong> of {{total}} bars",
+    "showing_fika": "Showing <strong>{{count}}</strong> of {{total}} fika spots",
     "showing_hotels": "Showing <strong>{{count}}</strong> of {{total}} hotels",
     "clear": "Clear all filters",
     "close_aria": "Close filters",
@@ -65,6 +69,10 @@
   "list": {
     "restaurants_one": "{{count}} restaurant",
     "restaurants_other": "{{count}} restaurants",
+    "bars_one": "{{count}} bar",
+    "bars_other": "{{count}} bars",
+    "fika_one": "{{count}} fika spot",
+    "fika_other": "{{count}} fika spots",
     "hotels_one": "{{count}} hotel",
     "hotels_other": "{{count}} hotels",
     "sort_name": "Sort by name",

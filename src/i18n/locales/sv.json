@@ -10,6 +10,8 @@
     "list": "Lista",
     "map": "Karta",
     "restaurants": "Restauranger",
+    "bars": "Barer",
+    "fika": "Fika",
     "hotels": "Hotell"
   },
   "regions": {
@@ -27,6 +29,8 @@
   "filters": {
     "title": "Filter",
     "showing": "Visar <strong>{{count}}</strong> av {{total}} restauranger",
+    "showing_bars": "Visar <strong>{{count}}</strong> av {{total}} barer",
+    "showing_fika": "Visar <strong>{{count}}</strong> av {{total}} fikaställen",
     "showing_hotels": "Visar <strong>{{count}}</strong> av {{total}} hotell",
     "clear": "Rensa alla filter",
     "close_aria": "Stäng filter",
@@ -65,6 +69,10 @@
   "list": {
     "restaurants_one": "{{count}} restaurang",
     "restaurants_other": "{{count}} restauranger",
+    "bars_one": "{{count}} bar",
+    "bars_other": "{{count}} barer",
+    "fika_one": "{{count}} fikaställe",
+    "fika_other": "{{count}} fikaställen",
     "hotels_one": "{{count}} hotell",
     "hotels_other": "{{count}} hotell",
     "sort_name": "Sortera efter namn",

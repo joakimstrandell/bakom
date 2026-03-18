@@ -24,6 +24,8 @@ import {
   ChevronDown,
   UtensilsCrossed,
   Hotel,
+  Wine,
+  Coffee,
 } from "lucide-react";
 import FeedbackModal from "../components/FeedbackModal";
 import { IconButton } from "../components/IconButton";
@@ -31,6 +33,8 @@ import { MapOverlayButton } from "../components/MapOverlayButton";
 
 // Static import of all data
 import restaurantData from "../../pipeline/.data/restaurants.frontend.json";
+import barData from "../../pipeline/.data/bars.frontend.json";
+import fikaData from "../../pipeline/.data/fika.frontend.json";
 import hotelData from "../../pipeline/.data/hotels.frontend.json";
 
 // Leaflet accesses `window` at module scope — return a placeholder during SSR
@@ -43,10 +47,12 @@ const Map = lazy(() => {
   return import("../components/Map");
 });
 
-export type DataMode = "restaurants" | "hotels";
+export type DataMode = "restaurants" | "bars" | "fika" | "hotels";
 
 // Pre-filter valid entries (with coordinates)
 const ALL_RESTAURANTS = (restaurantData as Restaurant[]).filter((r) => r.lat && r.lng);
+const ALL_BARS = (barData as Restaurant[]).filter((r) => r.lat && r.lng);
+const ALL_FIKA = (fikaData as Restaurant[]).filter((r) => r.lat && r.lng);
 const ALL_HOTELS = (hotelData as Restaurant[]).filter((r) => r.lat && r.lng);
 
 /** Derive cuisine list from data, sorted by frequency, min 3 occurrences */
@@ -65,8 +71,33 @@ function deriveCuisines(data: Restaurant[]): string[] {
     .map(([k]) => k);
 }
 
-const RESTAURANT_CUISINES = deriveCuisines(ALL_RESTAURANTS);
-const HOTEL_CUISINES = deriveCuisines(ALL_HOTELS);
+const DATA_MAP: Record<DataMode, Restaurant[]> = {
+  restaurants: ALL_RESTAURANTS,
+  bars: ALL_BARS,
+  fika: ALL_FIKA,
+  hotels: ALL_HOTELS,
+};
+
+const CUISINES_MAP: Record<DataMode, string[]> = {
+  restaurants: deriveCuisines(ALL_RESTAURANTS),
+  bars: deriveCuisines(ALL_BARS),
+  fika: deriveCuisines(ALL_FIKA),
+  hotels: deriveCuisines(ALL_HOTELS),
+};
+
+const MODE_ROOT: Record<DataMode, string> = {
+  restaurants: "/",
+  bars: "/b",
+  fika: "/f",
+  hotels: "/h",
+};
+
+const MODE_ROUTE: Record<DataMode, string> = {
+  restaurants: "/r/$id",
+  bars: "/b/$id",
+  fika: "/f/$id",
+  hotels: "/h/$id",
+};
 
 // Count entries per region for the dropdown
 function getRegionCount(regionId: RegionFilter, data: Restaurant[]): number {
@@ -90,9 +121,12 @@ function MapLayout() {
 
   // ─── Data Mode (derived from URL path) ────────────────────────
   const pathname = useRouterState({ select: (s) => s.location.pathname });
-  const dataMode: DataMode = pathname.startsWith("/h") ? "hotels" : "restaurants";
-  const allData = dataMode === "restaurants" ? ALL_RESTAURANTS : ALL_HOTELS;
-  const cuisines = dataMode === "restaurants" ? RESTAURANT_CUISINES : HOTEL_CUISINES;
+  const dataMode: DataMode = pathname.startsWith("/h") ? "hotels"
+    : pathname.startsWith("/b") ? "bars"
+    : pathname.startsWith("/f") ? "fika"
+    : "restaurants";
+  const allData = DATA_MAP[dataMode];
+  const cuisines = CUISINES_MAP[dataMode];
 
   // Find the venue by ID (search current dataset, fall back to both)
   const selectedRestaurant = useMemo(
@@ -100,6 +134,8 @@ function MapLayout() {
       if (!venueId) return null;
       return allData.find((r) => r.id === venueId)
         ?? ALL_RESTAURANTS.find((r) => r.id === venueId)
+        ?? ALL_BARS.find((r) => r.id === venueId)
+        ?? ALL_FIKA.find((r) => r.id === venueId)
         ?? ALL_HOTELS.find((r) => r.id === venueId)
         ?? null;
     },
@@ -168,11 +204,8 @@ function MapLayout() {
   // Handle venue selection - navigates to venue URL with correct prefix
   const handleSelectRestaurant = useCallback(
     (restaurant: Restaurant) => {
-      if (dataMode === "hotels") {
-        navigate({ to: "/h/$id", params: { id: restaurant.id } });
-      } else {
-        navigate({ to: "/r/$id", params: { id: restaurant.id } });
-      }
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      navigate({ to: MODE_ROUTE[dataMode] as any, params: { id: restaurant.id } });
     },
     [navigate, dataMode]
   );
@@ -180,7 +213,8 @@ function MapLayout() {
   // Handle closing sidebar - navigates back to mode root
   const closeSidebar = useCallback(() => {
     setSidebarMode(null);
-    navigate({ to: dataMode === "hotels" ? "/h" : "/" });
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    navigate({ to: MODE_ROOT[dataMode] as any });
   }, [navigate, dataMode]);
 
   // Toggle filter sidebar
@@ -234,15 +268,8 @@ function MapLayout() {
     <div className="h-screen flex flex-col overflow-hidden">
       {/* ─── Compact Header ─────────────────────────────────────── */}
       <header className="flex items-center h-14 px-4 relative z-[1003] gap-2 backdrop-blur-xl bg-white/85 dark:bg-zinc-950/90 border-b border-black/6 dark:border-white/8">
-        {/* Left side: Logo + Region Selector */}
-        <div className="flex items-center gap-3 shrink-0 min-w-0">
-          <button
-            onClick={() => navigate({ to: dataMode === "hotels" ? "/h" : "/" })}
-            className="font-display font-bold text-[28px] tracking-tight bg-gradient-to-br from-zinc-900 to-zinc-500 dark:from-white dark:to-zinc-400 bg-clip-text text-transparent"
-          >
-            B
-          </button>
-
+        {/* Left side: Region Selector */}
+        <div className="flex items-center shrink-0 min-w-0">
           {/* Region selector */}
           <div className="relative" ref={regionMenuRef}>
             <button
@@ -275,30 +302,30 @@ function MapLayout() {
           </div>
         </div>
 
-        {/* Data mode toggle (restaurants / hotels) */}
+        <div className="flex-1" />
+
+        {/* Data mode toggle */}
         <div className="flex items-center h-8 rounded-full border border-black/10 dark:border-white/10 bg-white/50 dark:bg-white/5 p-0.5">
-          <button
-            onClick={() => navigate({ to: "/" })}
-            className={`flex items-center gap-1.5 h-7 px-3 rounded-full text-sm font-medium transition-colors ${
-              dataMode === "restaurants"
-                ? "bg-foreground text-background shadow-sm"
-                : "text-muted-foreground hover:text-foreground"
-            }`}
-          >
-            <UtensilsCrossed className="size-3.5" />
-            <span className="hidden sm:inline">{t("header.restaurants")}</span>
-          </button>
-          <button
-            onClick={() => navigate({ to: "/h" })}
-            className={`flex items-center gap-1.5 h-7 px-3 rounded-full text-sm font-medium transition-colors ${
-              dataMode === "hotels"
-                ? "bg-foreground text-background shadow-sm"
-                : "text-muted-foreground hover:text-foreground"
-            }`}
-          >
-            <Hotel className="size-3.5" />
-            <span className="hidden sm:inline">{t("header.hotels")}</span>
-          </button>
+          {([
+            { mode: "restaurants" as DataMode, to: "/", icon: UtensilsCrossed, label: "header.restaurants" },
+            { mode: "bars" as DataMode, to: "/b", icon: Wine, label: "header.bars" },
+            { mode: "fika" as DataMode, to: "/f", icon: Coffee, label: "header.fika" },
+            { mode: "hotels" as DataMode, to: "/h", icon: Hotel, label: "header.hotels" },
+          ] as const).map(({ mode, to, icon: Icon, label }) => (
+            <button
+              key={mode}
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              onClick={() => navigate({ to: to as any })}
+              title={t(label)}
+              className={`flex items-center justify-center h-7 w-8 rounded-full transition-colors ${
+                dataMode === mode
+                  ? "bg-foreground text-background shadow-sm"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
+            >
+              <Icon className="size-3.5" />
+            </button>
+          ))}
         </div>
 
         {/* Spacer */}
