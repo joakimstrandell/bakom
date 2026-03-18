@@ -4,10 +4,10 @@ import { optimizeAll } from "./optimize.js";
 
 async function main() {
   const start = Date.now();
-  const { restaurants, hotels } = await optimizeAll();
+  const { restaurants, bars, fika, hotels } = await optimizeAll();
   const elapsed = ((Date.now() - start) / 1000).toFixed(1);
   console.log(
-    `\n  Done in ${elapsed}s — ${restaurants.length} restaurants, ${hotels.length} hotels`,
+    `\n  Done in ${elapsed}s — ${restaurants.length} restaurants, ${bars.length} bars, ${fika.length} fika, ${hotels.length} hotels`,
   );
 }
 

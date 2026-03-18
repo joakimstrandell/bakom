@@ -315,8 +315,8 @@ function computeScore(venue: EnrichedVenue): {
 const RANKED_METRO_REGIONS = ["stockholm", "gothenburg", "malmo"];
 
 function assignRanks(venues: ScoredVenue[]): void {
-  // Rank separately per category (restaurant vs hotel)
-  for (const category of ["restaurant", "hotel"] as const) {
+  // Rank separately per category
+  for (const category of ["restaurant", "bar", "fika", "hotel"] as const) {
     const inCategory = venues.filter(
       (v) => v.bakomScore > 0 && v.category === category,
     );

@@ -28,7 +28,7 @@ const FIELD_MASK = [
 // ─── Google enrichment fields added to Venue ────────────────────
 
 export type MetroRegion = "stockholm" | "gothenburg" | "malmo" | "sweden";
-export type VenueCategory = "restaurant" | "hotel" | "exclude";
+export type VenueCategory = "restaurant" | "bar" | "fika" | "hotel" | "exclude";
 
 /** Opening hours entry — same shape as frontend HoursEntry */
 export type PipelineHoursEntry = {
@@ -253,7 +253,16 @@ const HOTEL_TYPES = new Set([
   "hotel", "resort_hotel", "inn", "lodging", "hostel",
 ]);
 
-function categorizeVenue(venue: EnrichedVenue): VenueCategory {
+const BAR_TYPES = new Set([
+  "bar", "wine_bar", "cocktail_bar",
+]);
+
+const FIKA_TYPES = new Set([
+  "cafe", "cafeteria", "coffee_shop", "coffee_roastery",
+  "bakery", "pastry_shop", "ice_cream_shop", "chocolate_shop", "dessert_shop",
+]);
+
+export function categorizeVenue(venue: EnrichedVenue): VenueCategory {
   const gType = venue.googlePrimaryType || "";
 
   if (HOTEL_TYPES.has(gType)) return "hotel";
@@ -261,6 +270,12 @@ function categorizeVenue(venue: EnrichedVenue): VenueCategory {
 
   // Non-food types that survived the retry → exclude
   if (gType && !FOOD_TYPES.has(gType)) return "exclude";
+
+  // Bar/fika: check Google type first, then fall back to WhiteGuide venueType
+  if (BAR_TYPES.has(gType)) return "bar";
+  if (FIKA_TYPES.has(gType)) return "fika";
+  if (venue.venueType === "bar") return "bar";
+  if (venue.venueType === "cafe") return "fika";
 
   return "restaurant";
 }

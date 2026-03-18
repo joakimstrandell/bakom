@@ -209,6 +209,8 @@ function transformVenue(v: ScoredVenue): FrontendVenue {
 
 export async function optimizeAll(): Promise<{
   restaurants: FrontendVenue[];
+  bars: FrontendVenue[];
+  fika: FrontendVenue[];
   hotels: FrontendVenue[];
 }> {
   console.log("=== Optimize ===\n");
@@ -248,31 +250,37 @@ export async function optimizeAll(): Promise<{
 
   // Split by category (assigned in refine step)
   const restaurants: ScoredVenue[] = [];
+  const bars: ScoredVenue[] = [];
+  const fika: ScoredVenue[] = [];
   const hotels: ScoredVenue[] = [];
   const excluded: { name: string; type: string }[] = [];
 
   for (const v of ratedVenues) {
     const cat = v.category || "restaurant";
     if (cat === "restaurant") restaurants.push(v);
+    else if (cat === "bar") bars.push(v);
+    else if (cat === "fika") fika.push(v);
     else if (cat === "hotel") hotels.push(v);
     else excluded.push({ name: v.name, type: v.googlePrimaryType || "unknown" });
   }
 
-  // Transform
-  const restaurantsFrontend = restaurants.map(transformVenue);
-  const hotelsFrontend = hotels.map(transformVenue);
-
-  // Sort by rank
-  restaurantsFrontend.sort((a, b) => a.bakomRank - b.bakomRank);
-  hotelsFrontend.sort((a, b) => a.bakomRank - b.bakomRank);
+  // Transform and sort by rank
+  const restaurantsFrontend = restaurants.map(transformVenue).sort((a, b) => a.bakomRank - b.bakomRank);
+  const barsFrontend = bars.map(transformVenue).sort((a, b) => a.bakomRank - b.bakomRank);
+  const fikaFrontend = fika.map(transformVenue).sort((a, b) => a.bakomRank - b.bakomRank);
+  const hotelsFrontend = hotels.map(transformVenue).sort((a, b) => a.bakomRank - b.bakomRank);
 
   // Save
   saveData("restaurants.frontend.json", restaurantsFrontend);
+  saveData("bars.frontend.json", barsFrontend);
+  saveData("fika.frontend.json", fikaFrontend);
   saveData("hotels.frontend.json", hotelsFrontend);
 
   // Stats
   console.log(`\n  === Optimize Results ===`);
   console.log(`  Restaurants: ${restaurantsFrontend.length}`);
+  console.log(`  Bars:        ${barsFrontend.length}`);
+  console.log(`  Fika:        ${fikaFrontend.length}`);
   console.log(`  Hotels:      ${hotelsFrontend.length}`);
   console.log(`  Excluded:    ${excluded.length}`);
 
@@ -295,44 +303,57 @@ export async function optimizeAll(): Promise<{
   }
 
   // File sizes
-  const restJson = JSON.stringify(restaurantsFrontend);
-  const hotelJson = JSON.stringify(hotelsFrontend);
+  const files = [
+    ["restaurants.frontend.json", restaurantsFrontend],
+    ["bars.frontend.json", barsFrontend],
+    ["fika.frontend.json", fikaFrontend],
+    ["hotels.frontend.json", hotelsFrontend],
+  ] as const;
   console.log(`\n  File sizes:`);
-  console.log(`    restaurants.frontend.json: ${(restJson.length / 1024).toFixed(0)} KB`);
-  console.log(`    hotels.frontend.json:      ${(hotelJson.length / 1024).toFixed(0)} KB`);
+  for (const [name, data] of files) {
+    console.log(`    ${name}: ${(JSON.stringify(data).length / 1024).toFixed(0)} KB`);
+  }
 
   // Generate sitemap.xml
-  generateSitemap(restaurantsFrontend, hotelsFrontend);
+  generateSitemap(restaurantsFrontend, barsFrontend, fikaFrontend, hotelsFrontend);
 
-  return { restaurants: restaurantsFrontend, hotels: hotelsFrontend };
+  return { restaurants: restaurantsFrontend, bars: barsFrontend, fika: fikaFrontend, hotels: hotelsFrontend };
 }
 
 // ─── Sitemap generation ──────────────────────────────────────────
 
 const BASE_URL = "https://bakom.se";
 
-function generateSitemap(restaurants: FrontendVenue[], hotels: FrontendVenue[]): void {
+function generateSitemap(
+  restaurants: FrontendVenue[],
+  bars: FrontendVenue[],
+  fika: FrontendVenue[],
+  hotels: FrontendVenue[],
+): void {
   const today = new Date().toISOString().split("T")[0];
 
   const urls: { loc: string; priority: string; changefreq: string }[] = [
     { loc: BASE_URL, priority: "1.0", changefreq: "weekly" },
+    { loc: `${BASE_URL}/b`, priority: "0.8", changefreq: "weekly" },
+    { loc: `${BASE_URL}/f`, priority: "0.8", changefreq: "weekly" },
     { loc: `${BASE_URL}/h`, priority: "0.8", changefreq: "weekly" },
   ];
 
-  for (const r of restaurants) {
-    urls.push({
-      loc: `${BASE_URL}/r/${r.id}`,
-      priority: r.bakomRank <= 50 ? "0.8" : "0.6",
-      changefreq: "monthly",
-    });
-  }
+  const categories: [FrontendVenue[], string, number][] = [
+    [restaurants, "r", 50],
+    [bars, "b", 20],
+    [fika, "f", 20],
+    [hotels, "h", 20],
+  ];
 
-  for (const h of hotels) {
-    urls.push({
-      loc: `${BASE_URL}/h/${h.id}`,
-      priority: h.bakomRank <= 20 ? "0.8" : "0.6",
-      changefreq: "monthly",
-    });
+  for (const [venues, prefix, topN] of categories) {
+    for (const v of venues) {
+      urls.push({
+        loc: `${BASE_URL}/${prefix}/${v.id}`,
+        priority: v.bakomRank <= topN ? "0.8" : "0.6",
+        changefreq: "monthly",
+      });
+    }
   }
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
