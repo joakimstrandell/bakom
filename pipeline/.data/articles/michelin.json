@@ -6,7 +6,7 @@
     "title": "Koizen",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Just a stone’s throw from the Gothenburg Natural History Museum and Slottsskogen park, is this 22-seater Japanese restaurant comprising a counter and two high-level tables. It’s owned and run by John and Teresa Chu, who offer an omakase experience encompassing appetisers, sashimi, nigiri, aburi nigiri, soup and dessert – as well as monthly special events featuring the likes of bluefin tuna or Wagyu beef. John carefully crafts the dishes in front of you, presenting them along with an explanation of their make-up, while Alven recommends Japanese drinks, sakes by the glass and even sake pairings.",
     "venueType": "restaurant",
     "venueName": "Koizen",
     "venueAddress": "Nordenskiöldsgatan 24",
@@ -19,8 +19,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.844Z",
-    "enrichedAt": "2026-03-14T15:33:47.848Z"
+    "collectedAt": "2026-03-23T18:29:15.850Z",
+    "enrichedAt": "2026-03-23T18:29:15.858Z"
   },
   {
     "id": "9dad7eb197f1ccb9",
@@ -29,7 +29,7 @@
     "title": "Tavolo",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Enter through the huge wooden doors of this old military stable and you’ll find yourself in a large and stunningly converted room with a truly buzzing atmosphere. A huge horse’s head – a copy of Leonardo's Cavallo di Forcione and a reminder of the building’s former life – takes centre stage in the bar, which is a popular spot for a cocktail and some nibbles. When it comes to the food, it’s all about Italy, with the fresh, flavoursome dishes prepared on-view in the open kitchen. From homemade pizzas and pastas to traditional meat dishes, there’s something for everyone here.",
     "venueType": "restaurant",
     "venueName": "Tavolo",
     "venueAddress": "Magasingatan 19",
@@ -42,8 +42,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.849Z",
-    "enrichedAt": "2026-03-14T15:33:47.849Z"
+    "collectedAt": "2026-03-23T18:29:15.858Z",
+    "enrichedAt": "2026-03-23T18:29:15.858Z"
   },
   {
     "id": "7c73202091efb184",
@@ -52,7 +52,7 @@
     "title": "Woodstockholm",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "A compact bistro owned by a group of friends, who set up a furniture making business and now use the bistro to showcase their products. Cooking follows a theme which changes every two months – perhaps a country, a style of food or a famous chef – and the rustic small plates are simple yet full of flavour.",
     "venueType": "restaurant",
     "venueName": "Woodstockholm",
     "venueAddress": "Mosebacke Torg 9",
@@ -66,8 +66,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.849Z",
-    "enrichedAt": "2026-03-14T15:33:47.849Z"
+    "collectedAt": "2026-03-23T18:29:15.858Z",
+    "enrichedAt": "2026-03-23T18:29:15.858Z"
   },
   {
     "id": "e891d89626575953",
@@ -76,7 +76,7 @@
     "title": "Rolfs Kök",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "A buzzing neighbourhood restaurant in a lively commercial district, run by a passionate chef-owner. The contemporary interior was designed by famous Swedish artists; sit at the counter to watch the chefs in action. Dishes have big flavours, a classic heart, and a wine match each from the impressive list.",
     "venueType": "restaurant",
     "venueName": "Rolfs Kök",
     "venueAddress": "Tegnérgatan 41",
@@ -89,8 +89,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.849Z",
-    "enrichedAt": "2026-03-14T15:33:47.849Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "be06e2ce6339fe26",
@@ -99,21 +99,21 @@
     "title": "Mutantur",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "This laid-back, semi-industrial style restaurant comes with exposed brick walls, polished concrete floors, silver ducting and large windows that let in plenty of light. The kitchen counter bends round to become the bar – you can eat here or at the surrounding black tables – and the good value menu offers plenty of options in the form of small plates, allowing you build your meal however you please. Local flavours lead the way, but come with international accents, from oyster with tiger milk, coriander, Swedish vinegar and sweetcorn cream to beef tartare with green tomato, baked yolk and horseradish.",
     "venueType": "restaurant",
     "venueName": "Mutantur",
     "venueAddress": "Erik Dahlbergsgatan 12-14",
     "venueCity": "Malmö",
-    "score": 0.5,
+    "score": 0,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "mellan",
     "tags": [
-      "bib_gourmand"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.849Z",
-    "enrichedAt": "2026-03-14T15:33:47.849Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "7a0e566f5bf740bb",
@@ -122,21 +122,21 @@
     "title": "Babette",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "The very definition of a neighbourhood restaurant, Babette is a lively, bustling spot with a buzzing atmosphere; arrive expecting to squeeze past chairs without stepping on dogs and to sit elbow-to-elbow with your fellow guests. The vibe is chilled, the music is good and the two chefs work away in the tiny kitchen completely unphased. Whether you’re popping in for a glass of wine and the pizza of the day or spending the evening over some ever-evolving small plates – such as ricotta Babette with mushrooms and potatoes or veal tartare with colatura and parmesan – you’ll have a great time.",
     "venueType": "restaurant",
     "venueName": "Babette",
     "venueAddress": "Roslagsgatan 6",
     "venueCity": "Stockholm",
-    "score": 0.5,
+    "score": 0,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "budget",
     "tags": [
-      "bib_gourmand"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.849Z",
-    "enrichedAt": "2026-03-14T15:33:47.849Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "67630ded3395be40",
@@ -145,22 +145,22 @@
     "title": "28+",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "This atmospheric, passionately run basement restaurant has been a Gothenburg institution for over 30 years. Carefully judged, classically based cooking showcases prime seasonal ingredients, skilfully blending French and Swedish influences to create intricate, precise, boldly flavoured dishes. There's an exceptional cheese selection and an outstanding wine list.",
     "venueType": "restaurant",
     "venueName": "28+",
     "venueAddress": "Götabergsgatan 28",
     "venueCity": "Göteborg",
-    "score": 1,
+    "score": 0,
     "cuisine": [
       "Modern Cuisine",
       "Classic French"
     ],
     "priceRange": "lyx",
     "tags": [
-      "1_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.849Z",
-    "enrichedAt": "2026-03-14T15:33:47.849Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "8842fd0ee3116ef2",
@@ -169,7 +169,7 @@
     "title": "Restaurant vRÅ",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "The imposing 1920s city post office is now a hotel, and this glamorous restaurant sits within what was the central hall – the listed cashier booths still on display. A Nordic-Japanese approach sees fine Scandinavian produce meet Asian techniques, and there’s an impressive range of sake by the glass.",
     "venueType": "restaurant",
     "venueName": "Restaurant vRÅ",
     "venueAddress": "Clarion Hotel Post, Drottningtorget 10",
@@ -182,8 +182,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.849Z",
-    "enrichedAt": "2026-03-14T15:33:47.849Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "b67ab5e2613dfecb",
@@ -192,22 +192,22 @@
     "title": "Etoile",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "After travelling the world, two friends opened this restaurant to showcase their experiences through food, yet with a decidedly imaginative streak. The cooking is characterised by bold, surprising flavours and creativity – what appears to be savoury may in fact be sweet, and vice versa. The chefs delight in subverting expectations with their playfully named dishes that reference global food traditions, like 'Surf and Turf' and 'Afternoon Tea Party'.",
     "venueType": "restaurant",
     "venueName": "Etoile",
     "venueAddress": "Norra Stationsgatan 51",
     "venueCity": "Stockholm",
-    "score": 1,
+    "score": 0,
     "cuisine": [
       "Creative",
       "International"
     ],
     "priceRange": "lyx",
     "tags": [
-      "1_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "012050423e7868a0",
@@ -216,7 +216,7 @@
     "title": "Restaurang Atmosfär",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "A large glass-enclosed terrace greets you at this smart yet relaxed corner restaurant on the main road. Natural light fills the room inside too, whether you’re sitting at the large counter, on high stools by the floor-to-ceiling windows or in one of the comfortable dining rooms. Fresh, unfussy cooking delivers generous dishes that are packed with flavour and a joy to eat, such as halibut with a crayfish bisque and Savoy cabbage or deliciously creamy panna cotta with rosemary caramel and apple granita. The atmosphere becomes more lively in the evening thanks, in part, to the homemade cocktails.",
     "venueType": "restaurant",
     "venueName": "Restaurang Atmosfär",
     "venueAddress": "Fersens väg 4",
@@ -229,8 +229,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "eb538bb9289868b3",
@@ -239,21 +239,21 @@
     "title": "SK Mat & Människor",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "There’s a chic, relaxed vibe to this elegant restaurant where you can watch the chefs at work in the open kitchen. They deliver your dishes too, which are attractively presented and a model of self-restraint, utilising well-thought-through combinations. Quality Swedish and Danish produce helps to achieve good depth of flavour, with a beautiful balance of richness and acidity running through the cooking.",
     "venueType": "restaurant",
     "venueName": "SK Mat & Människor",
     "venueAddress": "Johannebergsgatan 24",
     "venueCity": "Göteborg",
-    "score": 1,
+    "score": 0,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "mellan",
     "tags": [
-      "1_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "b20e7e040f114053",
@@ -262,7 +262,7 @@
     "title": "Brasserie Sture 1912",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Sture has been an icon of Malmö since 1912, and it’s now been reborn as a classic brasserie with décor to match; think mosaic flooring, closely set tables, a long bar and black-and-white photos of celebrities adorning the walls. A pavement terrace and bustling atmosphere only add to its appeal, as does an extensive menu mixing Swedish dishes with traditional Western European fare like confit rabbit or salad Niçoise. The lengthy wine list has a similar ‘Old World’ focus.",
     "venueType": "restaurant",
     "venueName": "Brasserie Sture 1912",
     "venueAddress": "Adelgatan 13",
@@ -275,8 +275,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "887a467485ea594c",
@@ -285,7 +285,7 @@
     "title": "Forma",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Chic and sultry, this Södermalm spot delivers the look and vibe of a bar, with the added bonus of flavoursome small plates. The cooking is bang on-trend, blending Nordic and French influences with pan-Asian elements including Korean kimchi, Chinese wontons and a daily selection of Japanese mochi for dessert. If you’re an indecisive diner, go for the keenly priced tasting menu to appreciate the full breadth of the kitchen's talents. Well-versed, professional service is the icing on the cake.",
     "venueType": "restaurant",
     "venueName": "Forma",
     "venueAddress": "Hornsbruksgatan 28",
@@ -299,8 +299,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "614f2b0533cd6c6d",
@@ -309,21 +309,21 @@
     "title": "Celeste",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Arrive at the entrance to the multi-purpose Batteriet building and you will be led into an inner courtyard; here, the chefs greet you with welcome snacks, before showing you to your table in front of the open kitchen. Their cooking (and the décor) changes with the seasons and there is precision, balance and superb produce in each dish – epitomised by an immaculate, super fine tartlet filled with a tartare of Swedish beef. In a twist on the drinks pairing format, diners can choose between a wine, cocktail or soft drink at each course.",
     "venueType": "restaurant",
     "venueName": "Celeste",
     "venueAddress": "Torkel Knutssonsgatan 24",
     "venueCity": "Stockholm",
-    "score": 1,
+    "score": 0,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "lyx",
     "tags": [
-      "1_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "f55783a9d90d6819",
@@ -332,7 +332,7 @@
     "title": "Black Milk Gastro Bar",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "This intimate restaurant offers great cooking and a fun night out, thanks to its moody lighting, pumping soundtrack and lively cocktail bar. Influenced by South America, Asia and Europe, the creative dishes deliver vibrant flavours and well-judged spicing, while using plenty of modern techniques. Expect to see some luxury ingredients, like Oscietra caviar and Périgord truffles, alongside an enjoyable dose of theatricality, with dishes ranging from courgette flower with cime di rapa, salsa verde and urfa pepper to homemade salted coconut and yuzu gelato topped with Oscietra.",
     "venueType": "restaurant",
     "venueName": "Black Milk Gastro Bar",
     "venueAddress": "Engelbrektsgatan 3",
@@ -346,8 +346,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "71a4efa978fca3d8",
@@ -356,21 +356,21 @@
     "title": "Signum",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "An old manor house on the shores of Landvettersjön Lake provides a beautiful setting for this hotel restaurant, which sits in a boathouse-style annexe. The rustic room is characterised by Scandinavian furnishings, sheepskins and modern art, and floor-to-ceiling windows afford wonderful views over the water. The menu is an excellent showcase of Scandinavian ingredients, with produce coming from the kitchen garden, foraged from the surrounding area and plucked from local waters. Bold flavours and original combinations feature in dishes such as squid, mangalitsa and leek or spruce and Schrenkii caviar.",
     "venueType": "restaurant",
     "venueName": "Signum",
     "venueAddress": "Hällsnäs Hotell, Långenäsvägen 150",
     "venueCity": "Mölnlycke",
-    "score": 2,
+    "score": 0,
     "cuisine": [
       "Creative"
     ],
     "priceRange": "lyx",
     "tags": [
-      "2_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "6eca687d3f00b680",
@@ -379,7 +379,7 @@
     "title": "Petri",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "The name is a diminutive version of ‘petrichor’ – which refers to the lovely scent that accompanies rain after a warm period – and there’s a similarly pleasant cosiness to the restaurant itself, thanks to its charming, intimate atmosphere. The set menu follows the seasons, with produce that’s only available in smaller batches offered as optional extra courses, such as pork from Rosa Skattlådan with fermented berries and rose petals. Dishes are well thought out in their creativity, showcasing a good understanding of balance and flavour, while wine and homemade non-alcoholic pairings complete the package.",
     "venueType": "restaurant",
     "venueName": "Petri",
     "venueAddress": "Kommendörsgatan 16",
@@ -392,8 +392,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "acbe4cc0795d5f0a",
@@ -402,22 +402,22 @@
     "title": "ÄRLA",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "The residents of Östermalm can count themselves lucky to call this charming restaurant run by Lotta and Patric Karlsson their local – but whether you’re a regular or not, you’ll instantly feel the warmth of the team’s hospitality. The fully open-plan layout adds a unique touch, as it blurs the line between dining room and kitchen, where Lotta prepares unfussy, flavour-packed dishes such as blue mussels with onion, jalapeno and bergamot or ling with browned butter, hazelnuts and Brussels sprouts. Great value is to be found on the ‘Kvällens Fyra Favoriter’ menu, a four-course ‘Favourites of the Night’.",
     "venueType": "restaurant",
     "venueName": "ÄRLA",
     "venueAddress": "Danderydsgatan 25",
     "venueCity": "Stockholm",
-    "score": 0.5,
+    "score": 0,
     "cuisine": [
       "Farm to table",
       "Swedish"
     ],
     "priceRange": "mellan",
     "tags": [
-      "bib_gourmand"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "7cca1dab0e7f4216",
@@ -426,7 +426,7 @@
     "title": "Fyr",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "After many successful years as co-owner of Two-Michelin-Starred Gastrologik in Stockholm, Jacob Holmström returned to his birthplace with his wife Emelie and fell in love with this fantastic building on the Tylösand headland. Its design is chic and modern, and the atmosphere laid-back – and you’ll find it hard to decide whether to keep your eyes on the view, the open kitchen or the plate in front of you. The menu opens with snacks and ‘Canned Food’ (roe and caviar), before moving onto ‘Fish from the Cabinet’ and dishes showcasing other regional ingredients such as lamb with nettle purée and artichoke.",
     "venueType": "restaurant",
     "venueName": "Fyr",
     "venueAddress": "Tjuvahålsvägen 9",
@@ -439,8 +439,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "2d4439e6742737e5",
@@ -449,7 +449,7 @@
     "title": "Essence",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Essence is the perfect spot for social types who like to mingle with their fellow guests. Everyone is seated around a big counter and served at the same time, with Chef Stefan Taylor centre stage preparing the dishes and explaining their make-up. He works alone, so there’s a slight pause between courses, and it’s here when the atmosphere becomes animated and you find yourself chatting away. Stefan has an intuitive way of combining flavours and spends hours each week drying, pickling and preparing the various elements in advance for dishes such as wild duck with mushrooms, watercress and thyme.",
     "venueType": "restaurant",
     "venueName": "Essence",
     "venueAddress": "Hjalmar Södersbergs Väg 10",
@@ -463,8 +463,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "13d1d98c7bf2fe67",
@@ -473,21 +473,21 @@
     "title": "Västergatan",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Owned and run by a friendly couple – Olle, who cooks, and Sophie, who looks after the service – this unpretentious city centre bistro has certainly stood the test of time, with 2025 marking its 20th year. This is thanks, in part, to the flavour-packed dishes, where good quality regional ingredients are brought together in harmonious, visually appealing combinations. The four-course set menu changes with the seasons, featuring the likes of cod with blue mussels, beach rose and pink peppercorn, followed by grapefruit with ginger and black lime – wine and juice flights are available to accompany.",
     "venueType": "restaurant",
     "venueName": "Västergatan",
     "venueAddress": "Västergatan 16",
     "venueCity": "Malmö",
-    "score": 0.5,
+    "score": 0,
     "cuisine": [
       "Swedish"
     ],
     "priceRange": "mellan",
     "tags": [
-      "bib_gourmand"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "5c1f0c77a180e710",
@@ -496,21 +496,21 @@
     "title": "ÄNG",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "The Ästad Vingård estate plays host to a luxury hotel and this stunningly designed, greenhouse-inspired restaurant set over two levels. Your visit starts with finely crafted snacks at the chef’s counter, then leads into a no-waste surprise tasting menu that uses fantastic seasonal produce from the surrounding Halland region. Skilfully prepared dishes are delicate, balanced and full of flavour, with combinations like scallop, glazed with fruity chilli caramel and served with preserved yellow tomato coulis, a good example of their cooking style. The cheese course is taken in a magnificent wine cellar.",
     "venueType": "restaurant",
     "venueName": "ÄNG",
     "venueAddress": "Ästad Vingård, Ästad 10",
     "venueCity": "Tvååker",
-    "score": 1,
+    "score": 0,
     "cuisine": [
       "Creative"
     ],
     "priceRange": "lyx",
     "tags": [
-      "1_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "09d51c53d3b5a30d",
@@ -519,7 +519,7 @@
     "title": "Brasserie Astoria",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "The former Astoria Cinema, which dates from the 1870s, has been carefully restored and now boasts a bustling brasserie with all the glamour and opulence of yesteryear. Sit at the counter to watch the chefs at work; quality produce is used to create flavoursome modern brasserie classics with the odd Asian influence.",
     "venueType": "restaurant",
     "venueName": "Brasserie Astoria",
     "venueAddress": "Nybrogatan 15",
@@ -532,8 +532,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "64b23273fc8434d4",
@@ -542,22 +542,22 @@
     "title": "AIRA",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "This strikingly designed restaurant sits near the beautiful Royal Djurgården. Its stage is the open kitchen, with the chefs often adding their finishing touches tableside. Beautifully composed dishes use top quality Nordic ingredients and deliver well-judged flavours and textures, featuring the likes of halibut with fermented melon, sesame and jalapeno. Service is top-notch and it’s worth opting for either a wine pairing or the creative non-alcoholic option featuring ingredients from their garden. Be sure arrive early for a drink on the waterside terrace too.",
     "venueType": "restaurant",
     "venueName": "AIRA",
     "venueAddress": "Biskopsvägen 9",
     "venueCity": "Stockholm",
-    "score": 2,
+    "score": 0,
     "cuisine": [
       "Modern Cuisine",
       "Swedish"
     ],
     "priceRange": "lyx",
     "tags": [
-      "2_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.859Z",
+    "enrichedAt": "2026-03-23T18:29:15.859Z"
   },
   {
     "id": "e54c34b5ddb07cff",
@@ -566,22 +566,22 @@
     "title": "Bar Agrikultur",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "This lively wine bar is a perfect fit for the neighbourhood. Sit at closely set tables or on high stools either up at the bar counter or next to the window, surrounded by paintings and hunting trophies, including some impressive antlers and a huge wild boar’s head. Order your way through the menu of small plates, which highlight Swedish ingredients and flavours, and feature the likes of cheese balls with garlic honey or pork neck skewer with oyster sauce and chives. Three stainless steel tanks contain home-distilled gin – flavours change regularly, courtesy of various herbs, oils and fruits.",
     "venueType": "restaurant",
     "venueName": "Bar Agrikultur",
     "venueAddress": "Skånegatan 79",
     "venueCity": "Stockholm",
-    "score": 0.5,
+    "score": 0,
     "cuisine": [
       "Swedish",
       "Small eats"
     ],
     "priceRange": "budget",
     "tags": [
-      "bib_gourmand"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "915ecae381b84206",
@@ -590,21 +590,21 @@
     "title": "PM & Vänner Restaurant",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Their philosophy is based on ‘forest, lake and meadow’, with much of the produce coming from their own garden and bakery. The tasting menu is explained with infectious passion, and cooking is ambitious, elaborate and sophisticated. An extraordinary wine list offers a huge array of vintages from top producers.",
     "venueType": "restaurant",
     "venueName": "PM & Vänner Restaurant",
     "venueAddress": "Storgatan 22",
     "venueCity": "Växjö",
-    "score": 1,
+    "score": 0,
     "cuisine": [
       "Creative"
     ],
     "priceRange": "lyx",
     "tags": [
-      "1_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "9281a299be7d0f5f",
@@ -613,7 +613,7 @@
     "title": "La Cucina Italiana",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "In this cosy, romantic restaurant comprising just eight tables, chef Allesio Fioriniello continues his father’s legacy by cooking up authentic Italian dishes with southern overtones (the family hails from Naples). He is helped along in his mission by childhood friend, Enzo, who takes charge in the restaurant. Carefully prepared, seasonal dishes are a model of their kind and could include the likes of a rich, beautifully textured parmigiana di melanzane or Rossini venison with seared milk bread and panzerotti.",
     "venueType": "restaurant",
     "venueName": "La Cucina Italiana",
     "venueAddress": "Skånegatan 33",
@@ -626,8 +626,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "d8013468c225ffa5",
@@ -636,21 +636,21 @@
     "title": "Lilla Ego",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "With its pared-back feel, rustic exposed brickwork and buzzy vibe, this is just the place for a lively night out. It remains one of the hottest tickets in town, so try for a counter seat overlooking the kitchen if you haven’t booked. The concise menu includes modernised Swedish classics that are robust, well-composed and certainly deliver on flavour. Service is accommodating, warm and efficient.",
     "venueType": "restaurant",
     "venueName": "Lilla Ego",
     "venueAddress": "Västmannagatan 69",
     "venueCity": "Stockholm",
-    "score": 0.5,
+    "score": 0,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "mellan",
     "tags": [
-      "bib_gourmand"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "dc09eaade67ed652",
@@ -659,21 +659,21 @@
     "title": "Frantzén",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "World-renowned Chef Björn Frantzén provides a truly immersive experience that you won't forget in a hurry at his uber-stylish restaurant. Ring the bell to enter, before enjoying an aperitif in the top-floor lounge while the day's ingredients are explained, then head to the dining room with its beautiful counter seating to witness the exceptionally talented chefs at work as they craft creative, perfectly executed dishes. The service works like clockwork to enhance the experience.",
     "venueType": "restaurant",
     "venueName": "Frantzén",
     "venueAddress": "Klara Norra Kyrkogata 26",
     "venueCity": "Stockholm",
-    "score": 3,
+    "score": 0,
     "cuisine": [
       "Creative"
     ],
     "priceRange": "lyx",
     "tags": [
-      "3_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "0b3ecea5d8c48037",
@@ -682,21 +682,21 @@
     "title": "Project",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "This cosy restaurant is personally run by a husband and wife team, whose balanced, seasonal tasting menu sees seafood and local game lead the way. The cooking is refined, original and intensely flavoured, while the eloquent team proudly explain the components of each dish with a smile. There are a number of Japanese influences on the menu too, like in the turbot with yuzu kosho and shiitake. The delicious bread takes five days to make.",
     "venueType": "restaurant",
     "venueName": "Project",
     "venueAddress": "Södra Vägen 45",
     "venueCity": "Göteborg",
-    "score": 1,
+    "score": 0,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "lyx",
     "tags": [
-      "1_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "55cf6adf08744417",
@@ -705,21 +705,21 @@
     "title": "Ekstedt",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Offering one of the city’s most original dining experiences, Niklas Ekstedt uses no electricity in his cooking; instead, everything is prepared over fire. Your visit begins with a tour of the kitchen, where the culinary philosophy is explained and you can try the signature oyster snack, cooked in a cone over flames. Various smoking techniques are applied to top Scandinavian produce, with other flavours introduced to the grill to add an extra dimension, as with the seaweed-fired langoustine. Everything is enhanced by the affable and efficient service team.",
     "venueType": "restaurant",
     "venueName": "Ekstedt",
     "venueAddress": "Humlegårdsgatan 17",
     "venueCity": "Stockholm",
-    "score": 1,
+    "score": 0,
     "cuisine": [
       "Grills"
     ],
     "priceRange": "lyx",
     "tags": [
-      "1_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "b6869b340da374de",
@@ -728,7 +728,7 @@
     "title": "Kockeriet",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "In a characterful 17C former grain warehouse, owned by Malmö-born TV chef Tareq Taylor, a young and talented team prepare well-balanced contemporary dishes with great precision. Scandinavian produce is at its heart, with some coming from the kitchen garden. The timbered dining room is relaxed and inviting, the service friendly, and the drinks pairings well-conceived.",
     "venueType": "restaurant",
     "venueName": "Kockeriet",
     "venueAddress": "Norra Vallgatan 28",
@@ -741,8 +741,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "fb51c724b0435b3f",
@@ -751,7 +751,7 @@
     "title": "Bloom in the Park",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Be sure to arrive early for an aperitif on the terrace of this charming lakeside lodge before heading through to the modern, minimalist restaurant. In an unusual twist, both the menu and the matching wine pairings are a complete surprise! You submit your allergies and dislikes in advance, with the components of the dishes only revealed at the end of the meal when you are given a QR code to scan. Combinations could include halibut with satsuma, endive and crab bisque or seared roe deer with pumpkin and forest mushrooms. This element of the unknown stimulates both the mind and the palate through your meal.",
     "venueType": "restaurant",
     "venueName": "Bloom in the Park",
     "venueAddress": "Pildammsvägen 17",
@@ -764,8 +764,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.850Z",
-    "enrichedAt": "2026-03-14T15:33:47.850Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "8e8c03e02450dd05",
@@ -774,7 +774,7 @@
     "title": "Hillenberg",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Perfectly pitched for busy Humlegårdsgatan is this stylish take on a classic brasserie. It has a smart, elegant feel and a hugely impressive wine cellar. Appealing Swedish classics are immensely satisfying yet exhibit a subtle modern touch and sense of finesse.",
     "venueType": "restaurant",
     "venueName": "Hillenberg",
     "venueAddress": "Humlegårdsgatan 14",
@@ -787,8 +787,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "559e9387c3a27aae",
@@ -797,7 +797,7 @@
     "title": "SOLEN",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "If there's such a thing as ‘industrial elegance’, then they’ve found it at this bang on-trend spot in the city’s meat-packing district. Exposed wires and concrete pillars combine with white tablecloths in a chic space that’s proving hugely popular with Stockholm’s diners. It’s owned by the experienced operators behind Adam / Albin and is an impressively well-run place; the cooking borrows from around the world, including small selections of tacos and wood-fired pizzas. On a cold day, sit round the impressive fire-lit chimney.",
     "venueType": "restaurant",
     "venueName": "SOLEN",
     "venueAddress": "Hallgränd 45",
@@ -810,8 +810,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "7d99f2eda7460e68",
@@ -820,21 +820,21 @@
     "title": "ergo.",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "The net-curtained windows give little away, but once inside you’ll find an elegant room that’s a perfect match for this chic neighbourhood. The chefs work with calm efficiency in the open kitchen and service is attentive and perfectly paced. The detailed cooking has a classic French base but combines modern techniques and international flavours to create stunningly flavoured dishes such as ‘scallop, white truffle, white chocolate, carnaroli risotto’ or ‘roe deer, blood, black garlic, Tellicherry pepper’. Acidity also plays a key role, being employed in harmonious ways to really lighten the dishes.",
     "venueType": "restaurant",
     "venueName": "ergo",
     "venueAddress": "Artillerigatan 14",
     "venueCity": "Stockholm",
-    "score": 1,
+    "score": 0,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "lyx",
     "tags": [
-      "1_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "c8025c36f0d2215c",
@@ -843,21 +843,21 @@
     "title": "Seafood Gastro",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "The magnificent, imposing Grand Hôtel is the home for this decadent restaurant, where rich flavours and impeccable Nordic seafood reign supreme. The tasting menu takes you through a roll-call of high-end fish and shellfish, whether it’s sweet langoustine, milky raw shrimp or Oscietra caviar, the ultimate premium ingredient. Each one is treated with great skill by the chefs, with Japanese influences like wasabi, yuzu and chawanmushi making an appearance. It all comes at a price, but the luxuriousness of the produce is undeniable.",
     "venueType": "restaurant",
     "venueName": "Seafood Gastro",
     "venueAddress": "Södra Blasieholmshamnen 8",
     "venueCity": "Stockholm",
-    "score": 1,
+    "score": 0,
     "cuisine": [
       "Seafood"
     ],
     "priceRange": "lyx",
     "tags": [
-      "1_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "d682780d0b49922f",
@@ -866,21 +866,21 @@
     "title": "Triton",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Charming in its lack of pretension, this bohemian neighbourhood restaurant has a homely feel. It’s simply furnished and the pared-back cooking has an unfussiness to match. Dishes show technical skill and provide some well-judged flavours using great Swedish ingredients. In an expensive city, the set menu presents good value for cooking of this quality.",
     "venueType": "restaurant",
     "venueName": "Triton",
     "venueAddress": "Ringvägen 87",
     "venueCity": "Stockholm",
-    "score": 0.5,
+    "score": 0,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "mellan",
     "tags": [
-      "bib_gourmand"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "423d6168972076f3",
@@ -889,7 +889,7 @@
     "title": "Oxenstiernan",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "You can’t miss this stylish, orange-painted bistro which stands out against the greenery of a city park. In summer, be sure to dine on the terrace, under the trees. A environmentally conscious ethos runs throughout, from the interior design to the ethically sourced produce used in the unfussy, boldly flavoured Swedish dishes.This restaurant is currently closed and due to reopen in Spring 2026.",
     "venueType": "restaurant",
     "venueName": "Oxenstiernan",
     "venueAddress": "Storgatan 35B",
@@ -902,8 +902,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "512460f6349d6376",
@@ -912,21 +912,21 @@
     "title": "Ruths",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "The open kitchen takes centre stage at this buzzy all-day café/bakery/deli, which has been wholeheartedly embraced by the locals. Lunchtime snacks and salads make room for generously sized, boldly flavoured Mediterranean dishes at dinner. Most of the wines on the concise list are available on-tap.",
     "venueType": "restaurant",
     "venueName": "Ruths",
     "venueAddress": "Mäster Johansgatan 11",
     "venueCity": "Malmö",
-    "score": 0.5,
+    "score": 0,
     "cuisine": [
       "Mediterranean Cuisine"
     ],
     "priceRange": "mellan",
     "tags": [
-      "bib_gourmand"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "a7a8d35fc679a37d",
@@ -935,7 +935,7 @@
     "title": "freyja",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Head straight for the roof terrace to kick off your visit with a cocktail and 360° views of Stockholm and, once inside, opt for a seat by the curved window to capitalise on the 13th floor location. The menu includes modernised yet comforting Swedish classics like Kroppkaka, executed with care and confidence, yielding well-balanced flavours. This is a place where you'll feel equally at home dining in a couple or as a group, as it delivers something for everyone.",
     "venueType": "restaurant",
     "venueName": "freyja",
     "venueAddress": "Hornsgatan 18",
@@ -949,8 +949,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "b02bd15472d83a1d",
@@ -959,7 +959,7 @@
     "title": "Poppy",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Chef-Owner Tobias has created a fun little neighbourhood spot here at Poppy, where groups of friends sit shoulder to shoulder at wooden tables in a trendy bistro-style room. It’s a compact place, with room for just 24 diners – including four seats overlooking the kitchen – but that’s all part of its cosy appeal. The five-course tasting menu offers seasonal modern dishes like monkfish 'binchotan' with tomato gel, hazelnut butter emulsion and mussel broth. Unusually, there’s no wine list, just shelves filled with bottles, their prices marked on them in chalk.",
     "venueType": "restaurant",
     "venueName": "Poppy",
     "venueAddress": "Fjärde Långgatan 1",
@@ -973,8 +973,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "54a5b1762ea55551",
@@ -983,7 +983,7 @@
     "title": "Leijontornet",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "After a few years as Djuret, this long-established restaurant has returned to its original guise and provides heaps of old-school charm. The dining room is full of character, with armchairs, vaulted brick ceilings and candlelit tables all adding to the appeal. The cooking has heavy French and other European influences, providing bold flavours across a wide selection of generous dishes. Expect plenty of premium produce, from lobster to turbot, and an extensive, similarly luxurious wine list.",
     "venueType": "restaurant",
     "venueName": "Leijontornet",
     "venueAddress": "Lilla Nygatan 5",
@@ -996,8 +996,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "897f047698194f95",
@@ -1006,7 +1006,7 @@
     "title": "Minh Mat",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "There is a wonderfully personal touch to this well-run Vietnamese restaurant, with posters and old photos adorning the walls, and an array of objects decorating the room. It’s an enjoyably relaxed setting for the cooking, which uses impressive ingredients – some of them from local producers – and mines plenty of flavour from simple-looking compositions. A light, smooth cream of corn sauce, for example, is a skilful and delicious accompaniment to quality grilled prawns.",
     "venueType": "restaurant",
     "venueName": "Minh Mat",
     "venueAddress": "Odengatan 94",
@@ -1019,8 +1019,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "f1068e10cbbf427b",
@@ -1029,7 +1029,7 @@
     "title": "BORD",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "You’re guaranteed a warm welcome at this sweetly run bohemian bistro. A communal table is at the heart of proceedings, but there are a few smaller tables and some counter seating available too. Starters merge into mains on the daily menu of unfussy, pared-back dishes, where skilful Mediterranean-inspired cooking keeps the focus firmly on the top-quality ingredients. They make their own ricotta on-site and the wood-fired oven is used to great effect, from baking bread in the morning to gratinating langoustines in the evening. Dinner is the main event, but they also open on Saturdays for lunch.",
     "venueType": "restaurant",
     "venueName": "BORD",
     "venueAddress": "Roslagsgatan 43",
@@ -1042,8 +1042,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "1590e4b594af96da",
@@ -1052,21 +1052,21 @@
     "title": "JH matbar",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "You will find this bistro at the southern tip of Sweden, in the centre of a small town with picturesque streets that provided the setting for the Wallander detective TV series. The good value menu offers a wide choice of dishes, with vegetarians and vegans well catered for. Scandinavian produce powers many of the modern dishes, which are prepared and presented with real care.",
     "venueType": "restaurant",
     "venueName": "JH matbar",
     "venueAddress": "Stora Östergatan 34",
     "venueCity": "Ystad",
-    "score": 0.5,
+    "score": 0,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "mellan",
     "tags": [
-      "bib_gourmand"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "3f20c5dbc7fe9f07",
@@ -1075,7 +1075,7 @@
     "title": "Prospero",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "There’s a slightly ‘underground’ feel to this small bistro, both figuratively and literally; you enter via a few steps down from street level, into a ‘half-cellar’ dining room where the windows look out at pavement level. The concise, keenly priced tasting menu lists dishes that offer an impressive level of restraint and control, where sauces are a focus. You might find the likes of trout with tomato and langoustine sauce or onglet with ramson and fish sauce, followed by rhubarb with yoghurt and chamomile.",
     "venueType": "restaurant",
     "venueName": "Prospero",
     "venueAddress": "Roslagsgatan 21",
@@ -1088,8 +1088,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "e9edac7dc2c2e4e8",
@@ -1098,22 +1098,22 @@
     "title": "Knystaforsen",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "A meal at Knystaforsen is truly a delight and staying the night further enhances the experience. A former sawmill, it sits in a wonderful spot beside the river, surrounded by woodland, and nature really is at every turn, be that through the panoramic windows or on your plate. Superb ingredients are from the local area and traditional wood-fired cooking adds a smoky edge – one course is even served outside by the campfire. You might sample such delights as moose tartare, trout with lingonberries or duck hearts with wild garlic, which are paired with both wines and interesting non-alcoholic creations.",
     "venueType": "restaurant",
     "venueName": "Knystaforsen",
     "venueAddress": "Rydöforsvägen 4",
     "venueCity": "Rydöbruk",
-    "score": 1,
+    "score": 0,
     "cuisine": [
       "Creative",
       "Modern Cuisine"
     ],
     "priceRange": "lyx",
     "tags": [
-      "1_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "83708b1ef440d988",
@@ -1122,7 +1122,7 @@
     "title": "Human",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "In a quiet residential street behind the 17C Skansen Kronan fortress, you'll find this stylishly decorated restaurant decked out with neutral tones and vintage furniture. The first solo project for Martin Moses, it focuses on New Nordic cooking, which is executed with a skilful touch. In the evening you can sample the quality dishes from either a small or large tasting menu, with a four or five course set menu available at lunch.",
     "venueType": "restaurant",
     "venueName": "Human",
     "venueAddress": "Risåsgatan 8",
@@ -1135,8 +1135,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "21857518e4d55e7c",
@@ -1145,21 +1145,21 @@
     "title": "HOZE",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "A brick house on the edge of town plays host to this discreet restaurant, where the chef’s father welcomes you through a black curtain into a sleek, minimalist space where six chairs sit at an oak counter. The meal starts at 6pm sharp, with the chef preparing his daily omakase menu directly on the countertop. He builds a great connection with guests as he explains how he chooses the best quality fish according to the seasons and the weather. His sushi is prepared with exemplary attention to detail, from kelp-infused jelly with chives and trout roe to leek with miso, hazelnut butter and sherry sauce.",
     "venueType": "restaurant",
     "venueName": "HOZE",
     "venueAddress": "Stigbergsliden 17",
     "venueCity": "Göteborg",
-    "score": 1,
+    "score": 0,
     "cuisine": [
       "Japanese"
     ],
     "priceRange": "lyx",
     "tags": [
-      "1_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "b91adff40894f3b0",
@@ -1168,7 +1168,7 @@
     "title": "Hotell Borgholm",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "The beautiful island of Öland is famous for its wild herbs, and that’s reflected in the cooking at this historic hotel’s restaurant, where the chefs enhance their elaborate dishes with thyme, basil and a host of other flavours from the 100-variety-strong garden. The original, boldly flavoured cooking comes in a tasting menu format, marrying classical techniques with subtle modern ones in dishes such as pan-fried red kingfish with spring chlorophyll, pickled cloudberries, saffron butter sauce and bronze fennel. The accompanying wine list is a real treasure trove for oenophiles.",
     "venueType": "restaurant",
     "venueName": "Hotell Borgholm",
     "venueAddress": "Trädgårdsgatan 15",
@@ -1181,8 +1181,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "e28ac4d6c662d1b0",
@@ -1191,7 +1191,7 @@
     "title": "Carbon",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "There is an elegant quality to this smart, modern bistro de luxe with rich décor and crushed velvet banquettes. The seasonal menu mixes contemporary techniques with a more traditional base and all dishes come with suggested wine pairings; choose between five or eight courses – or come from Monday to Thursday for an additional three-course option. This is a deservedly busy spot where the attentive, personable service adds to the experience. Be sure to look out for the dishes from the Josper oven.",
     "venueType": "restaurant",
     "venueName": "Carbon",
     "venueAddress": "Barnhusgatan 2",
@@ -1204,8 +1204,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "63e88dbc61d8d7ea",
@@ -1214,21 +1214,21 @@
     "title": "Nour",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Up on the third floor of a beautiful city centre townhouse, you’ll find this sedate restaurant with a discreet, intimate feel. In a nod to Chef Sayan Isaksson’s heritage and experience, the menu seamlessly fuses Swedish produce with Japanese influences – such as in the okonomiyaki, which uses black truffle from the island of Gotland. Original, well-composed dishes are spread across a tasting menu of five or eight courses.",
     "venueType": "restaurant",
     "venueName": "Nour",
     "venueAddress": "Norrlandsgatan 24",
     "venueCity": "Stockholm",
-    "score": 1,
+    "score": 0,
     "cuisine": [
       "Creative"
     ],
     "priceRange": "lyx",
     "tags": [
-      "1_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "00935d10e2b1aa04",
@@ -1237,21 +1237,21 @@
     "title": "Namu",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Restaurateur and Swedish MasterChef winner Jennie Walldén is behind this fun, energetic restaurant that blends Nordic ingredients with Jennie's South Korean heritage. Offering great value for money, the cooking is colourful, zingy and generous in both size and flavour; the signature flank steak served with an array of accompaniments is a highlight. Dishes are designed for sharing, with tasting menus available if you're feeling indecisive. Head next door to their Gaji cocktail bar to keep the party going.",
     "venueType": "restaurant",
     "venueName": "Namu",
     "venueAddress": "Landbygatan 5",
     "venueCity": "Malmö",
-    "score": 0.5,
+    "score": 0,
     "cuisine": [
       "Korean"
     ],
     "priceRange": "budget",
     "tags": [
-      "bib_gourmand"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "35a98345e3c596c7",
@@ -1260,7 +1260,7 @@
     "title": "Restaurang B.A.R.",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "This bright, buzzy restaurant is just a cast away from the waterfront and has a semi-industrial fish-market look. Choose your seafood from the fridge or the tank, along with a cooking style, a sauce and one of their interesting sides.",
     "venueType": "restaurant",
     "venueName": "Restaurang B.A.R",
     "venueAddress": "Blasieholmsgatan 4A",
@@ -1273,8 +1273,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "73d2417bb6aef432",
@@ -1283,7 +1283,7 @@
     "title": "Lux Dag för Dag",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "A stylish, red-brick former factory dating back to 1916, set beside the water, is home to this brasserie-style restaurant that has a welcome brightness to both its décor and its atmosphere. Local produce is key to their ethos, including the likes of Östergötland lamb and Ängsö pike-perch, along with plenty of seasonal ingredients such as asparagus and rhubarb. Unfussy, classically based dishes allow this fresh produce to shine, with the flexible courses ranging in size from 'mini' to 'large'. There's also a set Kitchen Menu available for those that can't quite decide.",
     "venueType": "restaurant",
     "venueName": "Lux Dag för Dag",
     "venueAddress": "Primusgatan 116",
@@ -1296,8 +1296,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "053cb3b9d0fb6153",
@@ -1306,7 +1306,7 @@
     "title": "Farang",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "The flavours of Southeast Asia are the inspiration behind this stylish restaurant and bar that occupies the building once home to the Stockholm Electric Company. The unusual front door harks back to its former occupation, but once inside it's a chic space with soft lighting and a large open kitchen. The colorful, zingy cooking includes Thai dishes like laab and crying tiger beef, along with Vietnamese-style sashimi and other influences from the wider region. Strong service, sensible prices and a fun atmosphere complete the picture.",
     "venueType": "restaurant",
     "venueName": "Farang",
     "venueAddress": "Tulegatan 7",
@@ -1319,8 +1319,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "49f556895089a48f",
@@ -1329,33 +1329,10 @@
     "title": "Operakällaren",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "If you're celebrating, then you've come to the right place. Sweden's most opulent restaurant sits within the historic Royal Opera House, and the sumptuous, high-ceilinged room comes bedecked with glittering chandeliers, huge paintings and original carved and gilded oak panelling dating back to 1895. Conversely, the place is run by a young team and comes with cool music and modern international cooking that might include the likes of mallard with burnt apple and trevisano or langoustine with hazelnut, vanilla, white truffle and brown butter vinaigrette. The accompanying wine list is remarkable.",
     "venueType": "restaurant",
     "venueName": "Operakällaren",
     "venueAddress": "Operahuset, Karl XII's Torg",
-    "venueCity": "Stockholm",
-    "score": 1,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "lyx",
-    "tags": [
-      "1_star"
-    ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
-  },
-  {
-    "id": "b884769fe1db7ba4",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/nisch",
-    "title": "NISCH",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "restaurant",
-    "venueName": "NISCH",
-    "venueAddress": "Dalagatan 42",
     "venueCity": "Stockholm",
     "score": 0,
     "cuisine": [
@@ -1365,8 +1342,31 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
+  },
+  {
+    "id": "b884769fe1db7ba4",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/nisch",
+    "title": "NISCH",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "This pleasantly relaxed little neighbourhood restaurant is sleekly and stylishly decorated with a monochrome colour scheme. For its part, the kitchen produces accomplished dishes and boasts some good eco-credentials. The modern, understated Nordic set menu is inspired by global flavours and changes every few weeks. The interesting wine list is mainly organic and biodynamic in nature.",
+    "venueType": "restaurant",
+    "venueName": "NISCH",
+    "venueAddress": "Dalagatan 42",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "0aa3484da6d31172",
@@ -1375,21 +1375,21 @@
     "title": "Allegrine",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Set off the busy Sveavägen thoroughfare, this brasserie provides a hidden oasis. Sit on the attractive front terrace or in the chic dining room, where seats at the kitchen counter are in demand. Variously sized dishes are richly flavoured, with a French base, Scandinavian influences and subtle contrasts.",
     "venueType": "restaurant",
     "venueName": "Allegrine",
     "venueAddress": "Kammakargatan 22",
     "venueCity": "Stockholm",
-    "score": 0.5,
+    "score": 0,
     "cuisine": [
       "French"
     ],
     "priceRange": "budget",
     "tags": [
-      "bib_gourmand"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "2b25ed6bfbac1a94",
@@ -1398,7 +1398,7 @@
     "title": "Ulla Winbladh",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Ulla Winbladh was originally built as a steam bakery for the 1897 Stockholm World Fair and is set in charming parkland beside the Skansen open-air museum. Sit on the terrace or in the older, more characterful part of the building. Typical Swedish dishes include the likes of fish roe and sweet and sour herring.",
     "venueType": "restaurant",
     "venueName": "Ulla Winbladh",
     "venueAddress": "Rosendalsvägen 8",
@@ -1411,8 +1411,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "5b4de54d0e9c7bb4",
@@ -1421,21 +1421,21 @@
     "title": "Vollmers",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Keep an eye out for the small sign hanging above the door of this discreet restaurant on a cobbled Old Town street, otherwise you might walk right on by. From the outside, its whitewashed walls give it something of a residential look, which is matched inside by an elegantly low-key dining room where seven linen-laid tables and comfy chairs set a homely tone. The surprise menu sees texture and acidity used to good effect in creative, sophisticated dishes; some are inspired by the owners’ childhood memories, such as the traditional pork, cabbage and lingonberry, which is elevated into a very personal dish.",
     "venueType": "restaurant",
     "venueName": "Vollmers",
     "venueAddress": "Tegelgårdsgatan 5",
     "venueCity": "Malmö",
-    "score": 2,
+    "score": 0,
     "cuisine": [
       "Contemporary"
     ],
     "priceRange": "lyx",
     "tags": [
-      "2_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "43300d131060a657",
@@ -1444,22 +1444,22 @@
     "title": "Familjen",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "This lively, friendly eatery is divided into three parts: a bar with bench seating and an open kitchen; a bright red room with a characterful cellar and a glass wine cave; and a superb wrap-around terrace. The good value cooking is rich and hearty, with a touch of originality here and there. A relaxed atmosphere and an appealing wine, beer and cocktail list add to the experience.",
     "venueType": "restaurant",
     "venueName": "Familjen",
     "venueAddress": "Arkivgatan 7",
     "venueCity": "Göteborg",
-    "score": 0.5,
+    "score": 0,
     "cuisine": [
       "Scandinavian",
       "Swedish"
     ],
     "priceRange": "budget",
     "tags": [
-      "bib_gourmand"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "f44f93bdf1524a86",
@@ -1468,7 +1468,7 @@
     "title": "Lyran Matbar",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "There’s a pleasingly relaxed air at this small, simply styled restaurant, where the experienced team lead the service with a friendly smile. Upstairs it’s more about drinks, so if you’re here to dine then head down the spiral staircase to the rustic cellar. The well-balanced tasting menus come in Mixed, Pescetarian and Vegetarian versions and are created daily from the best local produce available. All you are presented with is a list of ingredients, which are then turned into modern Swedish creations such as ‘yellow beet, skyr, pistachio, cedrat, fennel pollen, burned butter and sherry’.",
     "venueType": "restaurant",
     "venueName": "Lyran Matbar",
     "venueAddress": "Simrishamnsgatan 36a",
@@ -1482,8 +1482,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "aaf6725e5094b1f7",
@@ -1492,21 +1492,21 @@
     "title": "Matbaren",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Set within the Grand Hotel, this trendy, modern bistro offers well-priced dishes with a Scandinavian heart; three are about right for one person, or order more and share. Grab a seat at the zinc-topped bar counter for a better view of the open kitchen; the keen service team add to the atmosphere.",
     "venueType": "restaurant",
     "venueName": "Matbaren",
     "venueAddress": "Södra Blasieholmshamnen 6",
     "venueCity": "Stockholm",
-    "score": 0.5,
+    "score": 0,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "mellan",
     "tags": [
-      "bib_gourmand"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "6084936d4f3e8e47",
@@ -1515,7 +1515,7 @@
     "title": "Trattoria La Strega",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Run by passionate, charming owners, this lively little trattoria is nestled within a quiet residential area, and serves the kind of authentic Northern Italian food that you would find in a good trattoria in Piemonte or Triveneto. Boldly flavoured dishes are best enjoyed from the 'Menu Degustazione', accompanied by a candlelit table and a glass of wine from the extensive Italian selection.",
     "venueType": "restaurant",
     "venueName": "Trattoria La Strega",
     "venueAddress": "Aschebergsgatan 23B",
@@ -1528,8 +1528,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "143ba1a14cc03e6e",
@@ -1538,7 +1538,7 @@
     "title": "Sjömagasinet",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "A charming split-level restaurant in an old 1775 East India Company warehouse; sit on the upper floor to take in the lovely harbour view. Cooking offers a pleasing mix of classic and modern dishes, with seafood kept to the fore. The wine list offers a good selection of top burgundies.",
     "venueType": "restaurant",
     "venueName": "Sjömagasinet",
     "venueAddress": "Klippans Kulturreservat, Adolf Edelsvärds gata 5",
@@ -1551,8 +1551,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "0eda58ddf3a561e3",
@@ -1561,22 +1561,22 @@
     "title": "Sushi Sho",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "With its white tiled walls and compact counter seating, this restaurant couldn't look simpler, but it is not a place to be underestimated. Classic Japanese sushi preparations soar to a high level thanks to the exceptional quality of the local seafood ingredients. Diners are all served at the same time, omakase style, with the signature soy-cured egg and the sake tasting menu proving the highlights.",
     "venueType": "restaurant",
     "venueName": "Sushi Sho",
     "venueAddress": "Upplandsgatan 45",
     "venueCity": "Stockholm",
-    "score": 1,
+    "score": 0,
     "cuisine": [
       "Japanese",
       "Sushi"
     ],
     "priceRange": "lyx",
     "tags": [
-      "1_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "a0bdf798bf6ed396",
@@ -1585,7 +1585,7 @@
     "title": "JORD",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "‘Forest to plate’ is the message here, with wild and hyper-seasonal ingredients at the fore. Some of the produce is foraged, whilst meat is often hunted by the owner in the surrounding area. The surprise tasting menu delivers a large array of creative dishes with intriguing blends of flavours and textures. Preserving, pickling, smoking and curing are all done in-house, giving new life to the local ingredients.",
     "venueType": "restaurant",
     "venueName": "JORD",
     "venueAddress": "Johannesborgparken 1A",
@@ -1598,8 +1598,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "d111e343345aa955",
@@ -1608,7 +1608,7 @@
     "title": "Washoku TOMO",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "In the western half of Södermalm, Chef-Owner Tomoko Hayashi is bolstering Stockholm’s Japanese dining scene by offering an omakase experience that doesn’t break the bank. While this is Japanese cooking that’s not entirely focussed on sushi, seafood nevertheless plays a central role in the menu. The produce comes from all over the world, be it Spanish sea bass, Argentinian prawns or Canadian black cod. Tomoko leads the smooth service herself with personality and professionalism.",
     "venueType": "restaurant",
     "venueName": "Washoku TOMO",
     "venueAddress": "Timmermansgatan 15",
@@ -1621,8 +1621,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "be881f7109e807e0",
@@ -1631,7 +1631,7 @@
     "title": "Voisine",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Homely and cosy, there is a wonderful lack of pretension to this French-inspired bistro. Flavourful dishes from the small open kitchen include classical French desserts like blueberry clafoutis and Paris-Brest. The restaurant has a lived-in feel, with stripped wooden flooring and leather banquettes. The owners have a wine bar next door and it shows in the excellent wine list and shelves stacked full of bottles.",
     "venueType": "restaurant",
     "venueName": "Voisine",
     "venueAddress": "Erstagatan 21",
@@ -1644,8 +1644,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "5dab480438a0db54",
@@ -1654,21 +1654,21 @@
     "title": "Dashi",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Two chefs, one Swedish and one Australian, are behind this homage to Japanese cuisine which sports the uncluttered, pared-back décor common to both Nordic and Japanese restaurants. Prime Swedish produce powers dishes that come from an ‘osusume’ menu and have a meticulous, delicate construction. Expect the eponymous broth to make several appearances – like as a marinade for amberjack – while desserts such as their take on a classic Mont Blanc are a highlight. Completing the Japanese culinary experience is a varied sake list that includes some rare selections.",
     "venueType": "restaurant",
     "venueName": "Dashi",
     "venueAddress": "Rådmansgatan 23",
     "venueCity": "Stockholm",
-    "score": 1,
+    "score": 0,
     "cuisine": [
       "Japanese"
     ],
     "priceRange": "lyx",
     "tags": [
-      "1_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "511410b074ab72de",
@@ -1677,7 +1677,7 @@
     "title": "aster",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "The faux industrial décor feels like an appropriate fit for this restaurant housed in a former warehouse, in an area once home to the city's shipyards. The kitchen forms part of the room, bringing a certain energy to proceedings, and the friendly team also help to create an enjoyable atmosphere. The short menu offers dishes with a rustic edge, where distinct flavours are nicely balanced – such as minty salsa verde with grilled lamb loin, or sharp apple cutting through a rich chocolate dessert.",
     "venueType": "restaurant",
     "venueName": "aster",
     "venueAddress": "Jagaregatan 6",
@@ -1690,8 +1690,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "312ee66c4cc52ac8",
@@ -1700,21 +1700,21 @@
     "title": "VYN",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "On the southern tip of Sweden, Chef-Owner Daniel Berlin has taken a former farmhouse and turned it into the latest platform for his thrillingly impressive cooking. A dish of milk-fed lamb encapsulates so many of VYN’s strengths: the produce is superb; the cooking over fire is precise and technically accomplished; and the accompanying brunoise of lamb heart, neck and sweetbreads underlines how using the whole animal bolsters both flavour and sustainability. The full operation also includes 15 hotel rooms and the more relaxed Food and Wine bar.",
     "venueType": "restaurant",
     "venueName": "VYN",
     "venueAddress": "Höga vägen 72",
     "venueCity": "Simrishamn",
-    "score": 2,
+    "score": 0,
     "cuisine": [
       "Creative"
     ],
     "priceRange": "lyx",
     "tags": [
-      "2_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "40b85803e5111a85",
@@ -1723,21 +1723,21 @@
     "title": "Koka",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Set beneath an ornate 19th-century glass ceiling fringed by a burgundy canopy, this elegant, airy restaurant comes with modern, light wood panelled walls and bespoke matching furnishings. The refined, well-balanced tasting menu showcases the best of the season, with the spring and summer menus formed largely around plant-led dishes. Classical combinations are subtly modernised by clever twists and well-judged sauces, such as the piquant langoustine bisque with Brussels sprouts and marigold or the slightly tart, fruity venison jus flavoured with blackcurrant to accompany the fallow deer and beetroot.",
     "venueType": "restaurant",
     "venueName": "Koka",
     "venueAddress": "Viktoriagatan 12",
     "venueCity": "Göteborg",
-    "score": 1,
+    "score": 0,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "lyx",
     "tags": [
-      "1_star"
+      "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "c3b2c9ae7da3a63e",
@@ -1746,7 +1746,7 @@
     "title": "Persona",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Named after the 1966 Ingmar Bergman film, this stylish restaurant creates a striking contrast between its old townhouse exterior and its elegant interior design. Before dinner you are invited down to the cellar to pick your wine; the chefs then adjust the à la carte depending on your choice. Alternatively, you can opt for the fixed tasting menu to enjoy the full breadth of the cooking. Expect bold flavours and quality ingredients, supported by relaxed service and an immersive feel.",
     "venueType": "restaurant",
     "venueName": "Persona",
     "venueAddress": "Torstenssonsgatan 11",
@@ -1759,8 +1759,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "a201b8f83a00a013",
@@ -1769,7 +1769,7 @@
     "title": "Villa Dagmar",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Long gone are the days of minimalist sparseness in Scandinavian hotels. In recent years cities like Stockholm have embraced a richly textured and elegant style, and Villa Dagmar, in the city’s upscale Östermalm district, is a fine example: paying tribute to Art Nouveau and other century-old influences, all viewed from a playful contemporary perspective.\n\nWith 70 rooms and suites it’s on the large side for a boutique hotel and on the small side for a luxury hotel, which is sensible given its Goldilocks character. It’s a sequel to the family-owned Hotel, and is named for a particularly well-traveled and curious family member; her spirit is on display all throughout this eclectic hotel’s interiors, including Dagmar Spirit & Retreat, a small wellness center with two treatment rooms.\n\nAnd despite the hotel’s location right next door to the famous 19th-century Saluhall food hall, it goes to the trouble of offering some high-quality culinary options of its own: from Salon, the high-end restaurant, to Dagges, the wine bar, and the more casual Butiken, which serves breakfast, lunch, and light after-work fare.",
     "venueType": "hotel",
     "venueName": "Villa Dagmar",
     "venueAddress": "Nybrogatan 25-27, Östermalm",
@@ -1780,8 +1780,8 @@
     ],
     "lat": 59.335495,
     "lng": 18.077901,
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "f3bd70b44d258371",
@@ -1790,7 +1790,7 @@
     "title": "Hotel Diplomat Stockholm",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Are we at a point yet where we’re comfortable with the idea that Swedish style is no more predisposed to modernism than that of any other country? Go looking for mid-century style and you’ll miss out Stockholm’s deeper historical roots. Something like the gloriously restored Diplomat Hotel, an Art Nouveau classic that’s been painstakingly brought up to date, is the sort of thing this city does best.\n\nThe style, for all its frills and flourishes, still shows off the essential Scandinavian talent for simplicity. The color palette is tightly focused, and the sheer consistency of the visual style is nothing if not soothing. Which is a good thing, because the Diplomat is meant to be a profoundly relaxing place — from the solid construction to the plush Dux beds, this place is built to last.\n\nThe Diplomat is not about to rock your understanding of what a hotel can be, but it isn’t trying to. Nor is it going to start some kind of design revolution. But if it’s professional, high-end hospitality you’re after — to say nothing of local, seasonal and largely organic produce, with a slight Mediterranean inflection — then you’re in the right place indeed.",
     "venueType": "hotel",
     "venueName": "Hotel Diplomat Stockholm",
     "venueAddress": "Strandvagen 7C",
@@ -1801,8 +1801,8 @@
     ],
     "lat": 59.332065,
     "lng": 18.080456,
-    "collectedAt": "2026-03-14T15:33:47.851Z",
-    "enrichedAt": "2026-03-14T15:33:47.851Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "3486b67070f36ecf",
@@ -1811,7 +1811,7 @@
     "title": "Hotel Riverton",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Though it’s named, in a roundabout way, for Gothenburg itself — the city’s Swedish, Göteborg, simply means “the city by the Göta river” — the Hotel Riverton knows better than to try to represent the whole of the city all at once. Instead, like all the best boutique hotels, this family-owned gem presents a singular point of view, and offers an angle on the city that other hotels can’t match — both figuratively and quite literally, thanks to its waterfront setting.\n\nThe building is an unmistakably modern one, though certainly not without warmth, thanks to its red-brick industrial style. And the rooms and suites are even warmer, dressed in the rich textures of figured wood, faux fur, and velour. The tactile comforts are equally enticing, from the Dux beds to the Rituals bath products. And as you work your way up, your view gets bigger and bigger, culminating in the harbor panorama visible from the top-floor penthouse.\n\nOf course it’s the open-air Skybar, on the 12th floor, that offers the finest view; despite it’s name it’s not just a bar but a restaurant as well. It’s joined by a ground-floor restaurant called One, as well as the lobby-adjacent Livingroom bar, and a spa and fitness center that wouldn’t look out of place in a much larger luxury hotel.",
     "venueType": "hotel",
     "venueName": "Hotel Riverton",
     "venueAddress": "Stora Badhusgatan 26",
@@ -1822,8 +1822,8 @@
     ],
     "lat": 57.703877,
     "lng": 11.95671,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "53111f1f010e7672",
@@ -1832,7 +1832,7 @@
     "title": "Villa Dahlia",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Created by the Malmström-Cappelen family of Diplomat Collection fame, Villa Dahlia takes its name and spirit from their flower-filled summer cottage. Behind its Brutalist exteriors are soft-toned rooms, Murano glass, and dahlia-red details that brighten the palette. There is art on the walls, the rooftop is made for evening views, pétanque in the courtyard, and a Nordic spa upstairs. Borrow a bike and you will find much of Stockholm within easy reach. Though with so much to enjoy on site, the biggest decision may be whether to venture out at all.",
     "venueType": "hotel",
     "venueName": "Villa Dahlia",
     "venueAddress": "Tegnerlunden 8",
@@ -1843,8 +1843,8 @@
     ],
     "lat": 59.338656,
     "lng": 18.054743,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "74ce433ee23bf744",
@@ -1853,7 +1853,7 @@
     "title": "Ett Hem",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "In the Sixties Stockholm was the capital of the kind of modernism that’s synonymous with “Scandinavian” design. Nowadays that utopian, vaguely futuristic look is the last thing on anyone’s mind. In the Nordic countries, the best hotels — and their guests — are devoted to something much warmer, a luxe, stylish sort of coziness, and an eclectic approach which makes use of mid-century modernism as just one element among many historical references. And even if Ett Hem’s aesthetic isn’t strictly homegrown — designer Ilse Crawford is London-born, to a Danish mother — the fact is, it’s probably the finest example anywhere of the current tendency in Scandinavian boutique hotel design.\n\nMore importantly, it’s simply one of the most impressive hotels in the region. Twelve rooms might just be the perfect size for a boutique hotel, especially one whose name means “home” — small enough that each room is an authentic original, and the staff has a chance to get to know every guest.\n\nThe rooms are well-appointed, and with their blend of contemporary and vintage design, they’ve got more personality than any ordinary luxury hotel, and in certain departments, more comfort as well — some have rain showers, others luxurious freestanding tubs, not to mention fireplaces or stoves, handy for the long winter months.\n\nAnd like any house worthy of the name, there’s more to Ett Hem than just bedrooms. There’s a library and a couple of sitting rooms, all of them equally as stylish as any space in the house, and come mealtime you’ll have your choice of a walled garden, a sunny conservatory, or the kitchen, where guests gather at a long table for a bit of classic, old-style hospitality. We’re tempted to say it’s like being at home, but if we’re honest, most of us can only wish home was so good.",
     "venueType": "hotel",
     "venueName": "Ett Hem",
     "venueAddress": "Sköldungagatan 2",
@@ -1864,8 +1864,8 @@
     ],
     "lat": 59.345513,
     "lng": 18.067702,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "64e4901bef135047",
@@ -1874,7 +1874,7 @@
     "title": "Berns Hotel",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Since the 19th Century, Berns Hotel has been one of Stockholm’s most desirable addresses, with its Belle Epoque exterior and an opulent interior to match — in fact the Red Room was the setting for August Strindberg’s novel of the same name. \n\nThe hotel has since been renovated, the exterior lovingly restored and the interior completely redesigned in a simple, ultra-contemporary style, in cherry and marble. The suites are a bit more extravagant, some featuring saunas or jacuzzis, with interiors by a number of guest designers, including the ubiquitous Philippe Starck.\n\nThe restaurants and bars have had a facelift courtesy of Terence Conran, and the hotel is one of Stockholm’s top performance venues — the concert hall showcases anything from drama to DJs, rock shows to stand-up comedy, and it’s a different crowd every night. But for all the bustle in the public spaces, Berns as a hotel has a certain intimacy about it — 82 rooms is a very manageable size. Nonetheless, make a point of arranging for a room at some distance from the action if you need to sleep soundly. \n\nThe location is ideal, in the city’s center, providing access to all the capital’s attractions — Old Town and the Royal Palace are nearby, and the National Museum and Royal Opera are not much farther. The financial district is just on the other side of Berzelii Park, and the best shopping in town is just minutes away.",
     "venueType": "hotel",
     "venueName": "Berns Hotel",
     "venueAddress": "Berzelii Park, Nackstromsgatan 8",
@@ -1885,8 +1885,8 @@
     ],
     "lat": 59.33237,
     "lng": 18.07365,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "3f3e71130aab03bd",
@@ -1895,7 +1895,7 @@
     "title": "Nobis Hotel Stockholm",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Long before the Swedish design trio Claesson Koivisto Rune reconfigured this 19th-century stone edifice into an eccentric modernist hotel, the site had achieved a certain notoriety; after a spell as a private residence it was home to a bank where, during a 1970s robbery, the term “Stockholm syndrome” was coined. Later it was pressed into service as a high-end apartment complex, and brands like Marimekko and Acne occupied its retail space. It’s in connection with its current incarnation as the Nobis Hotel, however, that we’re moved to take an interest — what’s otherwise a fairly conventional luxury hotel is elevated to something higher, thanks to the contrast of the buildings 19th-century patina and CKR’s contemporary Scandinavian design sensibility.\n\nThe color scheme and the lighting design are intended to work in tandem. Referred to as “Scandinavian dark blond,” the palette is toned-down and discreet, inspired by the low, off-angle light observed during the Swedish winter. The furnishings enhance this natural aesthetic, with materials sourced from wood, stone, and wool, while subtle patterns suggestive of abstract and organic forms grace the wallpaper and carpets.\n\nAlongside these modern elements is a generous helping of Stockholm history. Much of the original hotel’s interior, like the former bank conference rooms paneled in dark oak and ornate stucco, is under the watchful eye of the Swedish National Heritage Board. For all its design distinction, and despite the repurposed steel reception desk or the automated cellphone check-in, the Nobis is still in some respects a classic luxury hotel.\n\nAll rooms have views of the city or the hotel’s atrium, and bathrooms are sheathed in floor-to-ceiling Carrara marble. The lounge is the focal point, with its lofted cathedral-like ceiling rising high above, and its easy access to the in-house dining and drinking options.",
     "venueType": "hotel",
     "venueName": "Nobis Hotel Stockholm",
     "venueAddress": "Norrmalmstorg 2-4",
@@ -1906,8 +1906,8 @@
     ],
     "lat": 59.333185,
     "lng": 18.073813,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "bf33ed42b1308f1a",
@@ -1916,7 +1916,7 @@
     "title": "Miss Clara by Nobis",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "If there’s one thing we’ve learned about Scandinavian design in our years on the job it’s that it defies stereotyping. Even just in Swedish design there are currents within currents, and to unpack the references involved in Stockholm’s Miss Clara by Nobis would require a proper education. This distinctive 1910 façade is pure Art Nouveau, a former girls’ school which retains much of its historic character. But step back and you’ll see it’s topped by a modern addition, courtesy of the Swedish architect Gert Wingårdhs, who was tasked with bringing Miss Clara into the 21st century.\n\nEven the modern elements bear classic echoes, and there’s nothing about the place that feels confrontational or alienating. And before we go too deep into our dissertation, we’ll skip ahead to the point. The upshot of all this impeccably thoughtful design is a place that can’t help but soothe and welcome any traveler who’s sensitive to the built environment. Whether you’re aware of all the visual references or just appreciate a bit of confident character in your lodging, it’s hard to find fault here.\n\nDo be sure to pry yourself out of your room long enough for a bite at Miss Clara’s restaurant — modern Scandinavian cooking is possibly even more thoughtful than modern Scandinavian design, and as you’ve seen, that’s saying something.",
     "venueType": "hotel",
     "venueName": "Miss Clara by Nobis",
     "venueAddress": "Sveavägen 48",
@@ -1927,8 +1927,8 @@
     ],
     "lat": 59.337593,
     "lng": 18.061904,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "ebdfa6d73b1a6787",
@@ -1937,7 +1937,7 @@
     "title": "Hotel J Stockholm",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Just to the east of Stockholm proper is the island suburb of Nacka Strand, a place where the living is truly easy, even by Swedish standards. Here, just outside the city, is where you’ll find Hotel J, a modernist seaside structure housing a boutique hotel as well as a restaurant that’s popular with overnighters and day-trippers alike.\n\nYou wanted crisp clean lines and you got them — along with a healthy bit of maritime atmosphere, in the paneled wood and nautical colors of the guest rooms. It’s inspired by Newport, Rhode Island, and there certainly is a resemblance — in fact there’s a subtle strain of Americana throughout, as well as plenty that’s cheerful, colorful and oh-so-Swedish.\n\nThe restaurant is well known for a reason, serving inventive brasserie fare made from fresh Swedish produce and seafood — the seasonal brunch is a particularly popular option. Hotel J’s location places it around the far end of the island from Stockholm, which makes for fine sea views, and also means that sea travel is perhaps a better bet than the bridge or the rail link. It’s probably not the place you’d choose for a first visit to Stockholm, but for a fresh perspective on the archipelago it’s unparalleled.\n\nHow to get there:\nHotel J is located in Nacka Strand, which can be reached by car from downtown Stockholm in approximately 10 minutes.  From Arlanda International Airport(ARN), the drive takes about 50 minutes.  Scheduled boat service provides access to and from Nybrokajen and Slussen, making the journey to Nacka Strand in about 15 minutes.",
     "venueType": "hotel",
     "venueName": "Hotel J Stockholm",
     "venueAddress": "Ellensviksvagen 1, Nacka Strand",
@@ -1948,8 +1948,8 @@
     ],
     "lat": 59.3186,
     "lng": 18.1642,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "9adead70285d33cd",
@@ -1958,7 +1958,7 @@
     "title": "Hotel Skeppsholmen",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "The uninitiated traveler most likely imagines Stockholm’s boutique hotel scene to be a haven of modern minimalist design. Those with a finger on the Scandinavian pulse, however, would know to expect a deep vein of cozy, almost rustic tradition. When it comes to the Hotel Skeppsholmen they’d both be right.\n\nLook at the close-ups and you see modern design that’s cleaner than clean, but zoom out and you’ll notice the setting: a pair of classic buildings, dating back to 1699, located on the island of Skeppsholmen, a peaceful little island literally surrounded by the city of Stockholm — a window into the maritime side of the city. It’s a short walk over the bridge and into the city center, but on the island it’s uncannily quiet.\n\nRemarkably few of the landmark houses’ details have been altered — their age made the restoration particularly sensitive, and where some hoteliers might have torn them down to the studs, here the redesign is essentially a triumph of interior decoration, a testament to the impact of some well-chosen furnishings and finishes.\n\nThe restaurant is stylish in a playful and sunny sort of way, and the bar is chic but not too desperately hip. For while the Skeppsholmen bills itself as an urban oasis, it’s not a hideaway, or a hermitage — this is one oasis the locals are happy to visit, whether for dinner or for the Swedish tradition of mid-afternoon coffee and cakes.",
     "venueType": "hotel",
     "venueName": "Hotel Skeppsholmen",
     "venueAddress": "1 Gröna gången",
@@ -1969,8 +1969,8 @@
     ],
     "lat": 59.32476,
     "lng": 18.087685,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "6110b8a05df2652f",
@@ -1979,7 +1979,7 @@
     "title": "Nordic Light Hotel",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Under no circumstances should anyone be put off by the unashamedly dated exterior of this one-time office block. The Sixties are inevitably the new Fifties, and this populist-utopian strain of Sixties modernism is only just now distant enough to be coming back into fashion.\n\nAnd whether or not you’re ready to revisit that era ceases to matter once you’re inside. Nordic Light’s interiors are all 21st-century modern minimalism, Scandinavian style, set apart from countless otherwise similar hotels by an inordinate attention to lighting; the “light architect,” Kai Piippo, has earned his fee several times over. An endless (and seasonally variable) array of lighting effects, both subtle and otherwise, engage the eye at every turn.\n\nStandard and Superior rooms keep it simple, making the most of their allotment of natural light and, in winter, making up the difference in pure white. But it’s in the Mood rooms that Nordic Light has earned its reputation: here moving patterns are projected on the walls, and the backlit headboard cycles through a spectrum of wintry tones.\n\nSome guests will be in the mood for some color therapy, and some won’t. With 169 rooms, Nordic Light is big enough that there’s something for everyone, thanks to its resident artist program, comfort-cuisine restaurant the Crooked Leg, extensive cocktail menu, and Absolut Icebar across the road in the sister Nordic C hotel. The Arlanda Express station is just around the corner, for easy access to the airport, and the surrounding Normalm district is central for business travelers and shoppers alike.",
     "venueType": "hotel",
     "venueName": "Nordic Light Hotel",
     "venueAddress": "7 Vasaplan",
@@ -1990,8 +1990,8 @@
     ],
     "lat": 59.332555,
     "lng": 18.05721,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "02ada2950aeef2cc",
@@ -2000,7 +2000,7 @@
     "title": "Stallmästaregården",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Even in a city rich with green space, Stockholm’s Stallmästaregården offers up a surprisingly pastoral scene. A former stable-master’s farm and the oldest inn in the city, it’s situated on the banks of Brunnsviken Bay in Royal Haga Park, lending it the feel of a country retreat even though it’s just minutes from the center of the city. \n\nThe forty-nine rooms around the 17th-century farmhouse are designed in 18th-century Swedish style, which makes them sound perhaps more old-fashioned than they are. It takes a deft hand — perhaps, more specifically, a Scandinavian one — to create such unfussy rooms from a palette of pastel-colored walls and flower-print curtains. All the rooms, starting with the Classic, include large beds, a writing desk, and bathrooms with amenities by Stockholm-based Byredo Parfums. An upgrade to a Superior or Deluxe room adds garden or park views, respectively, while the suites offer both more space and a flood of sunlight through oversized windows. \n\nThe hotel’s restaurant is just what you’d hope from a former farm in a cosmopolitan city. The space feels both rustic and sophisticated (another trick Scandinavians pull off well). Seasonal menus feature creative preparations of local ingredients, as in a dish of reindeer, beetroot, spruce shoot, moss and blueberries. \n\nBeyond the grounds of the hotel, the nearest neighborhood, Vasastan, is full of restaurants, bars, shops and art galleries — further evidence that, in Stockholm, pastoral beauty and the pleasures of urban life can happily coexist.",
     "venueType": "hotel",
     "venueName": "Stallmästaregården",
     "venueAddress": "Annerovägen 2",
@@ -2011,8 +2011,8 @@
     ],
     "lat": 59.351671,
     "lng": 18.0434,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "d7d3b13655cce33f",
@@ -2021,7 +2021,7 @@
     "title": "Lydmar Hotel",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Some of you might remember another Stockholm hotel that went by the Lydmar name, a rowdy, almost painfully hip sort of place, where the focus was very much on the nightlife, and the revelers at times threatened to overwhelm the guests. Well, that was then, and this is now — around the turn of the new millennium that was what boutique hotels were about. Today, more and more, they’re focused on the traditional values of hospitality, and once again the new version of the Lydmar is exemplary.\n\nIt’s fair to say that in terms of design, Stockholm tends to be a step ahead. By the time most of us figured out what “Scandinavian design” looked like, the Swedes had already moved on to the next thing. Look around Lydmar and you’ll see very little in the way of stark minimalism. These days Scandinavian designers are mining a rich history — there’s the odd mid-century modern chair or sofa, for example, but plenty more that’s traditional, almost rustic.\n\nAt its best the new luxury hotel avoids ostentation whenever possible, and this one is no different — it’s quietly stylish, but more focused on quality materials and on fostering an intimate atmosphere. And though you won’t mistake it for a bar with a boardinghouse attached, the Lydmar does have plenty going on: there’s a smaller, more intimate music venue, as well as a restaurant and lounge that are destined to become local favorites. And you won’t have to look far to find it — the location is stellar, absolutely central, next to the Grand and right up against the Harbor and the old town.",
     "venueType": "hotel",
     "venueName": "Lydmar Hotel",
     "venueAddress": "Södra Blasieholmshamnen 2",
@@ -2032,8 +2032,8 @@
     ],
     "lat": 59.3282,
     "lng": 18.07779,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "ab6ee87416d8a8f6",
@@ -2042,7 +2042,7 @@
     "title": "Hotel At Six",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Contrary to stereotype, most of Stockholm’s best hotels are grand 19th-century edifices. But in Hotel Six you’ll find the modernist paradise you’ve always expected from the Scandinavian boutique-hotel scene. At Six is part of the redevelopment of Brunkebergstorg Square, whose Sixties Brutalist style has come back around from retro curiosity to contemporary inspiration, and the interiors, by the London-based Universal Design Studio, show the way forward — as does the art collection, which is museum-quality, and rather than recede into the background, takes center stage, beginning with the Jaume Plensa statue that dominates the entry stair.\n\nAt Six’s rooms and suites are no less stylish, in their dark monochrome palette, and they feature some real luxuries, including high-end locally made bedding and bath products. Standard rooms are spacious, with desks and lounge seating, and by the time you’re in a suite you’re in what feels like acres of space. An elegant little drink cabinet replaces the ordinary minibar, and the views, thanks to the building’s elevation, are unusual for Stockholm. The Dining Room is the high-end modern-Scandinavian restaurant, and Blanche & Hierta is a coffee house, a wine bar, and a delicatessen all in one. Meanwhile the Cocktail Bar is the chic nightspot, while Hosoi is a more casual space with an emphasis on DJs and live music.",
     "venueType": "hotel",
     "venueName": "Hotel At Six",
     "venueAddress": "Brunkebergstorg 6",
@@ -2053,8 +2053,8 @@
     ],
     "lat": 59.330841,
     "lng": 18.067027,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "d709e990693cb312",
@@ -2063,7 +2063,7 @@
     "title": "Bank Hotel",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Bank Hotel’s proprietors are justifiably proud of the 1910 bank building their hotel calls home, but they’re playful enough to name one of their restaurants after a bank robber (Bonnie Parker of Bonnie & Clyde fame). The interiors are a beautifully realized marriage of the building’s classic inheritance and Stockholm’s modern design sense, and though the smallest rooms are small indeed, they’re all impressively luxurious. The city-center location places guests close to many of the capital’s finest arts and culture institutions, as well as no end of restaurants — and the hotel has several of its own, including the Parisian-style Le Hibou, a rooftop bar with an impressive view.",
     "venueType": "hotel",
     "venueName": "Bank Hotel",
     "venueAddress": "Arsenalsgatan 6",
@@ -2074,512 +2074,8 @@
     ],
     "lat": 59.33137,
     "lng": 18.07466,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "9780fb973b01dd65",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/stockholm-stadshotell-15159",
-    "title": "Stockholm Stadshotell",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Stockholm Stadshotell",
-    "venueAddress": "Björngårdsgatan 23",
-    "venueCity": "Stockholm",
-    "score": 1,
-    "tags": [
-      "1_key"
-    ],
-    "lat": 59.3151814,
-    "lng": 18.0667222,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "2525089b066e9d28",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/harads/treehotel-11346",
-    "title": "Treehotel",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Treehotel",
-    "venueAddress": "Edeforsväg 2 A",
-    "venueCity": "Harads",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 66.07286,
-    "lng": 20.98175,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "9bf86f2084d85bcb",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/grand-hotel-stockholm-8262",
-    "title": "Grand Hotel Stockholm",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Grand Hotel Stockholm",
-    "venueAddress": "Stallgatan 4",
-    "venueCity": "Stockholm",
-    "score": 2,
-    "tags": [
-      "2_key"
-    ],
-    "lat": 59.32961,
-    "lng": 18.07544,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "daa19b789449d23c",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/radisson-collection-strand-hotel-stockholm-5971",
-    "title": "Radisson Collection, Strand Hotel, Stockholm",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Radisson Collection, Strand Hotel, Stockholm",
-    "venueAddress": "Nybrokajen 9",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 59.33094,
-    "lng": 18.07722,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "12de51a06749f199",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/story-hotel-stockholm-stureplan-8694",
-    "title": "Story Hotel Stockholm Stureplan",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Story Hotel Stockholm Stureplan",
-    "venueAddress": "Riddargatan 6",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 59.33473,
-    "lng": 18.0751,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "32e430cad7b0def5",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/blique-by-nobis-10266",
-    "title": "Blique by Nobis",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Blique by Nobis",
-    "venueAddress": "18 Gävlegatan",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 59.34602,
-    "lng": 18.03601,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "92178ce08caa625f",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/jukkasjarvi/the-ice-hotel-10778",
-    "title": "ICEHOTEL",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "ICEHOTEL",
-    "venueAddress": "Marknadsvägen 63, 981 91",
-    "venueCity": "Jukkasjärvi",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 67.8509,
-    "lng": 20.59564,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "3df84d21585b7d9f",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-frantz-12056",
-    "title": "Hotel Frantz",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Hotel Frantz",
-    "venueAddress": "Peter Myndes Backe 5",
-    "venueCity": "Stockholm",
-    "score": 1,
-    "tags": [
-      "1_key"
-    ],
-    "lat": 59.31952,
-    "lng": 18.07095,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "ea9a3442014e3912",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/are/copperhill-mountain-lodge-8343",
-    "title": "Copperhill Mountain Lodge",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Copperhill Mountain Lodge",
-    "venueAddress": "Åre Björnen",
-    "venueCity": "Åre",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 63.382974,
-    "lng": 13.177002,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "338ea452eea14af2",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hobo-hotel-10255",
-    "title": "Hobo Hotel",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Hobo Hotel",
-    "venueAddress": "4 Brunkebergstorg",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 59.3307,
-    "lng": 18.06703,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "21059e23d353dfbc",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/jarfalla/gorvalns-slott-7923",
-    "title": "Görvälns Slott",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Görvälns Slott",
-    "venueAddress": "Görvälnsvägen",
-    "venueCity": "Järfälla",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 59.434668,
-    "lng": 17.78615,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "82edaee7539c7d45",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/downtown-camper-by-scandic-11019",
-    "title": "Downtown Camper by Scandic",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Downtown Camper by Scandic",
-    "venueAddress": "Brunkebergstorg 9",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 59.3313,
-    "lng": 18.06554,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "60fae4cfc1e2b358",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/sheraton-121162-10434",
-    "title": "Sheraton Stockholm Hotel",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Sheraton Stockholm Hotel",
-    "venueAddress": "Tegelbacken 6",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 59.32892,
-    "lng": 18.06187,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "6cb1f9b0cc811a20",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/backstage-hotel-10563",
-    "title": "Backstage Hotel",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Backstage Hotel",
-    "venueAddress": "Djurgårdsvägen 68",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 59.32477,
-    "lng": 18.09709,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "2ac32e34766013d3",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/malmo/story-studio-malmo-10547",
-    "title": "Story Studio Malmö",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Story Studio Malmö",
-    "venueAddress": "Tyfongatan 1",
-    "venueCity": "Malmö",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 55.61224,
-    "lng": 12.99439,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "c47459994845b191",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/gothenburg/hotel-pigalle-10406",
-    "title": "Hotel Pigalle",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Hotel Pigalle",
-    "venueAddress": "Södra Hamngatan 2",
-    "venueCity": "Göteborg",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 57.70696,
-    "lng": 11.97073,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "83c6853f63cf64bd",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/gothenburg/dorsia-10287",
-    "title": "Dorsia Hotel & Restaurant",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Dorsia Hotel & Restaurant",
-    "venueAddress": "Trädgårdsgatan 6",
-    "venueCity": "Göteborg",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 57.70462,
-    "lng": 11.97166,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "4acdd36374e2a4b4",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/vasteras/steam-hotel-11054",
-    "title": "Steam Hotel",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Steam Hotel",
-    "venueAddress": "Ångkraftsvägen 14",
-    "venueCity": "Västerås",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 59.6067,
-    "lng": 16.56746,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "07b6024ec9b25c38",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/malmo/hotel-mjs-9880",
-    "title": "Hotel MJ's",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Hotel MJ's",
-    "venueAddress": "Mäster Johansgatan 13",
-    "venueCity": "Malmö",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 55.60589,
-    "lng": 12.9979,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "fe6672b2de971f47",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/gothenburg/hotel-flora-9782",
-    "title": "Hotel Flora Göteborg",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Hotel Flora Göteborg",
-    "venueAddress": "Grönsakstorget 2",
-    "venueCity": "Göteborg",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 57.70279,
-    "lng": 11.96549,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "a25d02591f83df26",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/Ume%C3%A5/stora-hotellet-12701",
-    "title": "Stora Hotellet",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Stora Hotellet",
-    "venueAddress": "Storgatan 46",
-    "venueCity": "Umeå",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 63.8251,
-    "lng": 20.26109,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "f0cf9e84481cc8c3",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/malmo/best-western-plus-hotel-noble-house-10435",
-    "title": "Best Western Plus Hotel Noble House",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Best Western Plus Hotel Noble House",
-    "venueAddress": "Per Weijersgatan 6",
-    "venueCity": "Malmö",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 55.60369,
-    "lng": 12.99958,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "c0dabe457949cf11",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/M%C3%B6rbyl%C3%A5nga/eco-by-strandnara-12480",
-    "title": "Eco by StrandNara",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Eco by StrandNara",
-    "venueAddress": "Dansbanevägen 3",
-    "venueCity": "Mörbylånga",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 56.57436,
-    "lng": 16.41033,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
-  },
-  {
-    "id": "4d24143ad5984c65",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/huskvarna/huskvarna-stadshotell-11263",
-    "title": "Huskvarna Stadshotell",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "",
-    "venueType": "hotel",
-    "venueName": "Huskvarna Stadshotell",
-    "venueAddress": "Erik Dahlbergsgatan 20",
-    "venueCity": "Huskvarna",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 57.79123,
-    "lng": 14.27526,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
   },
   {
     "id": "5391ad0083f6ae0d",
@@ -2588,7 +2084,7 @@
     "title": "Hotel Kungsträdgården",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "With a name like “King’s Garden” you might expect a regal vibe from Hotel Kungsträdgården, and that’s what you’ll get. This stately 18th-century building wears its Gustavian style proudly, and while in its current incarnation it’s a thoroughly modern luxury boutique hotel, it’s as far as it gets from minimalism — a 2010 renovation updated its classic opulence with a contemporary color sense and the full complement of modern comforts.\n\nThe rooms and suites range widely in size, in classic European grand-hotel style, and if there’s a touch of a French accent about the aesthetic, it’s matched by the cuisine in Brasserie Makalös, which serves Parisian fare in a soaring courtyard space, while the adjacent Crystal Bar stands beneath what must be Stockholm’s largest chandelier. Meanwhile, the Royal Opera is steps from the hotel’s front door, with the Royal Palace and the Nobel museum not much farther.",
     "venueType": "hotel",
     "venueName": "Hotel Kungsträdgården",
     "venueAddress": "Västra Trädgårdsgatan 11B, Entrence Kocksgränd 1",
@@ -2599,8 +2095,512 @@
     ],
     "lat": 59.3313766222,
     "lng": 18.0696957115,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
+  },
+  {
+    "id": "9780fb973b01dd65",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/stockholm-stadshotell-15159",
+    "title": "Stockholm Stadshotell",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Stockholm is known as one of the capitals of Scandinavian design, so it’s no surprise that Stockholm Stadshotell oozes effortless cool. It took a whole roster of creatives to sensitively revive the hotel’s historic home, a late 19th century Stockholm landmark which originally paid homage to King Oscar I. It’s now a celebration of craftmanship, with minimalist rooms stylishly outfitted by the city’s top designers, from the bespoke burl wood headboards right down to the retro radios. The two restaurants, one housed in the building’s former chapel, shine a light on local ingredients and Nordic flavors with daily changing dishes that come summer, can be enjoyed al fresco in the courtyard. And to suit the Swedish temperatures all year round, there’s also a traditional Scandinavian sauna and cold plunge.",
+    "venueType": "hotel",
+    "venueName": "Stockholm Stadshotell",
+    "venueAddress": "Björngårdsgatan 23",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "tags": [
+      "1_key"
+    ],
+    "lat": 59.3151814,
+    "lng": 18.0667222,
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
+  },
+  {
+    "id": "2525089b066e9d28",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/harads/treehotel-11346",
+    "title": "Treehotel",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "We’re happy to report that this is exactly what you would hope a hotel called Treehotel would be. Just south of the Arctic Circle, in Swedish Lapland, a young couple took over a Thirties guest house, which travelers more or less ignored in favor of the single treehouse suite. So with the help of seven different Swedish architecture firms, they built eight more, from the vertiginous Cabin to the dizzying Mirrorcube and the whimsical UFO. A restaurant serves inventive locally inspired fare, but beyond that, services are intentionally minimal, little more than a sauna and riverside hot tub — here, it’s just you and the forest.",
+    "venueType": "hotel",
+    "venueName": "Treehotel",
+    "venueAddress": "Edeforsväg 2 A",
+    "venueCity": "Harads",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 66.07286,
+    "lng": 20.98175,
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
+  },
+  {
+    "id": "9bf86f2084d85bcb",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/grand-hotel-stockholm-8262",
+    "title": "Grand Hotel Stockholm",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "With not an ounce of blonde wood and not a single platform bed in sight, the Grand is Stockholm style circa 1874, and the place to stay if you’re a Nobel winner, foreign dignitary, or just an everyday movie star. The location can’t be faulted, in the heart of the city, across from the Royal Palace, with the better rooms looking out over the harbor and the old town. And though it’s been renovated from time to time, to keep up with the demands of modern hospitality, it’s good to see some things never change, like the hotel ballroom, still a meticulous copy of the Hall of Mirrors at Versailles.\n\nIf you are in the mood for something more contemporary within a \"grand\" venue, Burmanska Palatset - a property adjoining the original building - was acquired in 2004, and underwent a major renovation which was completed in 2006.  The only way to ensure that you book a room in that particular building is to choose a \"deluxe\" or an \"executive suite\".\n\nIn the main building, rooms vary in size but all are decorated in the expected manner—classic furnishings and Italian marble baths. Suites are almost comically decadent, some spanning five rooms including salons and drawing rooms, and the service is impeccable, as you’d infer from the caliber of names in the guestbook. Breakfast is served in the Cadier Bar as well as the Grand Veranda, with a view of the city through panoramic windows. Three additional restaurants add a variety of choices.",
+    "venueType": "hotel",
+    "venueName": "Grand Hotel Stockholm",
+    "venueAddress": "Stallgatan 4",
+    "venueCity": "Stockholm",
+    "score": 2,
+    "tags": [
+      "2_key"
+    ],
+    "lat": 59.32961,
+    "lng": 18.07544,
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
+  },
+  {
+    "id": "daa19b789449d23c",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/radisson-collection-strand-hotel-stockholm-5971",
+    "title": "Radisson Collection, Strand Hotel, Stockholm",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "First-time visitors to Stockholm’s hotels might be surprised to find that the modernist architecture and interiors for which Scandinavia is so well known seem to be produced for export only. Here classics like the Radisson Blu Strand, a 1912 Jugendstil palace topped with an oxidized copper roof, are more the norm, at least for the bigger, mainstream hotels.\n\nOnce you’re inside, though, the Strand presents a different face. A recent makeover leaves it looking sharp and contemporary — not achingly hip, but a mellower sort of contemporary that will appeal to the business travelers who make up the Radisson Blu’s core audience.\n\nThe views from the Strand’s rooms vary, in unexpected ways. Not just the top-flight suites but the Superior rooms as well look out over the waterways of the Stockholm archipelago — and the harbor-view rooms frame postcard-perfect vistas.\n\nThere are hipper boutique hotels in town, and more opulent grand hotels as well. But the Strand stakes out a middle ground, and defends it quite respectably. A conveniently central location is good for business travelers and tourists alike — Gamla Stan, the old town, and the hip shopping and entertainment district of Östermalm are within easy walking distance.",
+    "venueType": "hotel",
+    "venueName": "Radisson Collection, Strand Hotel, Stockholm",
+    "venueAddress": "Nybrokajen 9",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.33094,
+    "lng": 18.07722,
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
+  },
+  {
+    "id": "12de51a06749f199",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/story-hotel-stockholm-stureplan-8694",
+    "title": "Story Hotel Stockholm Stureplan",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "This upscale corner of Stockholm might seem a more natural setting for a traditional luxury hotel, but Östermalm, in the city center, just off Birger Jarlsgatan with its high-end shops, is where you’ll find Story Hotel Stockholm Stureplan. And behind its Thirties façade is a modern boutique hotel that upsets all the old stereotypes about Scandinavian design. It’s equal parts bohemian decadence and rough-edged urban renewal, full of street-inspired art and reclaimed vintage décor.\n\nRooms range from the compact “Single Bed Rooms”, although they’re comfortable enough, to \"King Bed Rooms” which come with the bonus of a private balcony. All of them are stylish, fun, and well-equipped, with plush upholstery and attractive subway-tile bathrooms, and with graphic prints on the well-worn walls and furnishings in styles that span the range from the Thirties to the present, it’s about as far as you can get from the utopian high modernism with which Swedish design used to be synonymous.\n\nThe real action, of course, takes place in the public spaces. There’s a DJ on weekend evenings, and the restaurant and bar are always lively, serving a pan-Asian menu with a Scandinavian spin alongside inventive cocktails by some well-known local bartenders. Not a hotel for shrinking violets, perhaps, but for a taste of Stockholm’s younger, more vibrant side, it would be hard to do much better than this.",
+    "venueType": "hotel",
+    "venueName": "Story Hotel Stockholm Stureplan",
+    "venueAddress": "Riddargatan 6",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.33473,
+    "lng": 18.0751,
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
+  },
+  {
+    "id": "32e430cad7b0def5",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/blique-by-nobis-10266",
+    "title": "Blique by Nobis",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "This stylish design hotel is located in an up-and-coming area of the city and spans a former warehouse and an apartment block. Chic, contemporary bedrooms have a minimalist feel; choose one on the upper floors for a city view. Hungry? Head to trendy Korean restaurant, ARC, with its rooftop terrace, or Boketto for a blend of European and Asian dishes.",
+    "venueType": "hotel",
+    "venueName": "Blique by Nobis",
+    "venueAddress": "18 Gävlegatan",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.34602,
+    "lng": 18.03601,
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
+  },
+  {
+    "id": "92178ce08caa625f",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/jukkasjarvi/the-ice-hotel-10778",
+    "title": "ICEHOTEL",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Swedish Lapland’s famous Icehotel, it turns out, is open year-round. From December through April, guests check in to Ice Rooms made out of ice from the Torne River, or upgrade to Art Suites, which are like Ice Rooms but with unique ice and snow sculptures. But there’s also the all-season Icehotel 365, whose solar-powered building stays cool enough to house permanent ice suites, as well as the Ice Bar. And there’s also the so-called Warm Accommodation, a selection of more traditional hotel rooms or chalet apartments, all housed in permanent wooden structures, along with three restaurants serving modern menus based on the traditional flavors of Jukkasjärvi.",
+    "venueType": "hotel",
+    "venueName": "ICEHOTEL",
+    "venueAddress": "Marknadsvägen 63, 981 91",
+    "venueCity": "Jukkasjärvi",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 67.8509,
+    "lng": 20.59564,
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
+  },
+  {
+    "id": "3df84d21585b7d9f",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-frantz-12056",
+    "title": "Hotel Frantz",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Stockholm’s Hotel Frantz can authentically claim a long-standing role in Stockholm’s history; the eponymous Frantz was a master tailor for whom this red brick house was built in 1647, which makes it one of the city’s oldest structures. Today it’s a strikingly contemporary and quietly luxurious boutique hotel, making the most of the contrast between its colorful modernist-inspired interiors and its atmospheric historical architecture. The location on the island of Södermalm is central and lively, while the restaurant and bar — including a fairly lavish breakfast spread — make the Frantz a perfectly self-sufficient experience.",
+    "venueType": "hotel",
+    "venueName": "Hotel Frantz",
+    "venueAddress": "Peter Myndes Backe 5",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "tags": [
+      "1_key"
+    ],
+    "lat": 59.31952,
+    "lng": 18.07095,
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
+  },
+  {
+    "id": "ea9a3442014e3912",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/are/copperhill-mountain-lodge-8343",
+    "title": "Copperhill Mountain Lodge",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "A naïve observer might expect a five-star ski hotel in the mountains of northern Sweden to be a stark, stimulating, modernist sort of place, where the drama of the cutting-edge architecture and stylish, urbane interiors is only heightened by the sublime alpine landscape. This is one of those times when the naïve observer is exactly right. Mount Åreskutan is by some measures Sweden’s top ski town, and it’s here that you’ll find the stark, stimulating, modernist Copperhill Mountain Lodge.\n\nThe architect, Peter Bohlin, is probably already familiar to you — he’s responsible for quite a few iconic Apple retail stores. Here, as compared to those minimalist cubes, he’s in full rustic mode — the soaring forms are cut in wood, not metal or glass, and in the interiors, alongside the odd mid-century modern piece is more than a little bit of rough-hewn stone and classic furs and textiles.\n\nThis all comes across perhaps better in the photos. What’s important to know is that along with the cutting-edge style you’ll get top-notch comforts, from the thoughtful room amenities (kitchenettes, heated bathroom floors) to the spa, the gym, and the dedicated lift to whisk Copperhill guests to the top of the mountain. There’s a fine dining restaurant, a cozy lounge bar, and a slopeside satellite restaurant and bar — even on-piste you don’t have to leave the Copperhill’s stylish environs.\n\nHow to get there:\nCopperhill Mountain Lodge is a one-hour drive from either Åre-Östersund or Trondheim/Værnes airport.  Åre-Östersund has domestic flights within Sweden, while Værnes is an international airport with regular flights to and from much of Europe. Helicopter transfer is available from both airports, taking you to Copperhill Mountain Lodge’s own helipad in just fifteen minutes. Taxi and bus transfer services are also available from both airports.\n\nBooking Details:\nCopperhill Mountain Lodge requires additional information from guests to ensure the best stay possible. As such, reservations can only be confirmed through our customer service team. Contact us for assistance. This hotel generally has limited weekend availability. Rates begin at 1495 SEK per night.",
+    "venueType": "hotel",
+    "venueName": "Copperhill Mountain Lodge",
+    "venueAddress": "Åre Björnen",
+    "venueCity": "Åre",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 63.382974,
+    "lng": 13.177002,
+    "collectedAt": "2026-03-23T18:29:15.860Z",
+    "enrichedAt": "2026-03-23T18:29:15.860Z"
+  },
+  {
+    "id": "338ea452eea14af2",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hobo-hotel-10255",
+    "title": "Hobo Hotel",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "With eco-inspired décor and quirky design features, Hobo offers something a little different. The ground floor exhibits local businesses’ work and houses a laid-back bar-lounge serving modern menus. Cleverly designed bedrooms come with headboards that transform into desks and pegboard walls hung with gadgets.",
+    "venueType": "hotel",
+    "venueName": "Hobo Hotel",
+    "venueAddress": "4 Brunkebergstorg",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.3307,
+    "lng": 18.06703,
+    "collectedAt": "2026-03-23T18:29:15.861Z",
+    "enrichedAt": "2026-03-23T18:29:15.861Z"
+  },
+  {
+    "id": "21059e23d353dfbc",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/jarfalla/gorvalns-slott-7923",
+    "title": "Görvälns Slott",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "The existence of a place like Görvälns Slott should put to rest forever any idea that Scandinavian hospitality is all about Modernism and minimalism. “Sweden’s most tasteful castle”occupies a 17th-century lakeside manor house (and a number of satellite buildings) a half-hour’s drive from Stockholm, and while it’s certainly stylish — and has been decorated with a keen contemporary eye — there’s nothing at all minimal about it.\n\nAnd while much of the raw material and inspiration is historical, the result is a highly accomplished 21st-century luxury boutique hotel. The rooms feature their fair share of ornamentation, but with their soft colors, their Mille Notti beds, their bath products by c/o Gerd of Swedish Lapland, and their heated bathroom tiles, they’re soothing above all else, from the singles to the grand deluxes. They’re varied in style and layout, and a few have sea views — there’s a bit of something for everyone. (Except children; all guests must be 16 or older, a policy that’s intended to heighten the romance.)\n\nAnd in the restaurant what you’ll find is entirely modern: an organic, zero-waste concept that makes as much use as possible of local and foraged ingredients. The flavors are proudly Swedish, as are the purveyors, including what’s behind the bar. For a taste of the good life, modern Scandinavian style, it would be hard to do much better than this.\n\nHow to get there: Görvälns Slott is located approximately 42 km by car from Stockholm Arlanda Airport via E4, Route 267, and E18.",
+    "venueType": "hotel",
+    "venueName": "Görvälns Slott",
+    "venueAddress": "Görvälnsvägen",
+    "venueCity": "Järfälla",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.434668,
+    "lng": 17.78615,
+    "collectedAt": "2026-03-23T18:29:15.861Z",
+    "enrichedAt": "2026-03-23T18:29:15.861Z"
+  },
+  {
+    "id": "82edaee7539c7d45",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/downtown-camper-by-scandic-11019",
+    "title": "Downtown Camper by Scandic",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Downtown Camper by Scandic, true to its name, is set right in the heart of Stockholm, and styles itself as a home base for “urban explorers.” Twelve types of accommodations range from economical rooms for solo travelers to grand suites and apartments that accommodate up to 12 guests. The interior design is part rustic, part urban, and as impeccably composed as you’d expect from this Nordic style capital. Rent bikes, kayaks and even skateboards at the front desk, or head upstairs to hang out at the the Nest Cocktail Lounge, a cozy bar with panoramic views of downtown Stockholm — right next door to the Nest Wellness Area, which offers an outdoor pool, a sauna and a gym. \n\nPlease note: Access to The Nest Wellness is an extra fee of 345 Sek Monday to Thursday and 445 Sek Friday to Sunday.",
+    "venueType": "hotel",
+    "venueName": "Downtown Camper by Scandic",
+    "venueAddress": "Brunkebergstorg 9",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.3313,
+    "lng": 18.06554,
+    "collectedAt": "2026-03-23T18:29:15.861Z",
+    "enrichedAt": "2026-03-23T18:29:15.861Z"
+  },
+  {
+    "id": "60fae4cfc1e2b358",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/sheraton-121162-10434",
+    "title": "Sheraton Stockholm Hotel",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "This was the first Sheraton to open in Europe, back in 1971, and its unassuming concrete façade is now a listed feature. Bedrooms are smart, spacious and understated; some overlook Lake Mälaren or the Old Town. Brasserie 360 serves classic French dishes.",
+    "venueType": "hotel",
+    "venueName": "Sheraton Stockholm Hotel",
+    "venueAddress": "Tegelbacken 6",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.32892,
+    "lng": 18.06187,
+    "collectedAt": "2026-03-23T18:29:15.861Z",
+    "enrichedAt": "2026-03-23T18:29:15.861Z"
+  },
+  {
+    "id": "6cb1f9b0cc811a20",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/backstage-hotel-10563",
+    "title": "Backstage Hotel",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "A location on the park island of Djurgården, surrounded by museums (including ABBA The Museum) is only part of what’s distinctive about the Backstage Hotel Stockholm. It’s wholly dedicated to the theatrical life (as well as all the other creative arts), and its rooms are suitably dramatic in their style — and they possess a plushness to soothe the diva in all of us. Right next door is Konsthallen, a shop, a bakery, and a restaurant that’s open for three meals a day; beyond that, your hosts pride themselves on their awareness of what’s happening around town.",
+    "venueType": "hotel",
+    "venueName": "Backstage Hotel",
+    "venueAddress": "Djurgårdsvägen 68",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.32477,
+    "lng": 18.09709,
+    "collectedAt": "2026-03-23T18:29:15.861Z",
+    "enrichedAt": "2026-03-23T18:29:15.861Z"
+  },
+  {
+    "id": "2ac32e34766013d3",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/malmo/story-studio-malmo-10547",
+    "title": "Story Studio Malmö",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "The modern, well-equipped bedrooms of this hotel are situated on the top 5 floors of a 14-storey building next to the old port, and feature floor to ceiling windows. The rooftop restaurant serves Japanese dishes accompanied by beautiful city and harbour views.",
+    "venueType": "hotel",
+    "venueName": "Story Studio Malmö",
+    "venueAddress": "Tyfongatan 1",
+    "venueCity": "Malmö",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 55.61224,
+    "lng": 12.99439,
+    "collectedAt": "2026-03-23T18:29:15.861Z",
+    "enrichedAt": "2026-03-23T18:29:15.861Z"
+  },
+  {
+    "id": "c47459994845b191",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/gothenburg/hotel-pigalle-10406",
+    "title": "Hotel Pigalle",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "A quirky, idiosyncratic hotel set within the walls of a historic building. The décor is bold and eclectic, with dramatic features and plenty of personality; ask for one of the newer bedrooms. The top floor restaurant features an impressive roof terrace and comes into its own during the summer months.",
+    "venueType": "hotel",
+    "venueName": "Hotel Pigalle",
+    "venueAddress": "Södra Hamngatan 2",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 57.70696,
+    "lng": 11.97073,
+    "collectedAt": "2026-03-23T18:29:15.861Z",
+    "enrichedAt": "2026-03-23T18:29:15.861Z"
+  },
+  {
+    "id": "83c6853f63cf64bd",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/gothenburg/dorsia-10287",
+    "title": "Dorsia Hotel & Restaurant",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Exuberant, eccentric, seductive and possibly a little decadent, this townhouse hotel comes with a theatrical belle époque style, where art from the owner’s personal collection, fine fabrics and rich colours add to the joie de vivre. The restaurant is equally vibrant and the atmosphere suitably relaxed.",
+    "venueType": "hotel",
+    "venueName": "Dorsia Hotel & Restaurant",
+    "venueAddress": "Trädgårdsgatan 6",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 57.70462,
+    "lng": 11.97166,
+    "collectedAt": "2026-03-23T18:29:15.861Z",
+    "enrichedAt": "2026-03-23T18:29:15.861Z"
+  },
+  {
+    "id": "4acdd36374e2a4b4",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/vasteras/steam-hotel-11054",
+    "title": "Steam Hotel",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "High-design boutique hotels in Stockholm and Gothenburg are common enough, but the lakeside inland city of Västerås has never seen anything like the Steam Hotel. Here a beautiful old red-brick power plant has been expanded and transformed into an 18-story, 227-room luxury hotel whose “industrial-romantic” interiors would be the talk of many a much larger town. Dining and drinking venues include an upscale steakhouse, a rooftop bar, and Voltage Lounge, which features an indoor pool heated by one of the power plant’s old turbines, as well as an indoor water park, complete with waterslides, spanning eight of the structure’s floors.",
+    "venueType": "hotel",
+    "venueName": "Steam Hotel",
+    "venueAddress": "Ångkraftsvägen 14",
+    "venueCity": "Västerås",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.6067,
+    "lng": 16.56746,
+    "collectedAt": "2026-03-23T18:29:15.861Z",
+    "enrichedAt": "2026-03-23T18:29:15.861Z"
+  },
+  {
+    "id": "07b6024ec9b25c38",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/malmo/hotel-mjs-9880",
+    "title": "Hotel MJ's",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "A centrally located hotel, just off the main square, with a relaxed and peaceful air. Stylish, well-proportioned bedrooms have luxurious touches. Enjoy a locally sourced organic breakfast under the atrium's glass roof.",
+    "venueType": "hotel",
+    "venueName": "Hotel MJ's",
+    "venueAddress": "Mäster Johansgatan 13",
+    "venueCity": "Malmö",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 55.60589,
+    "lng": 12.9979,
+    "collectedAt": "2026-03-23T18:29:15.861Z",
+    "enrichedAt": "2026-03-23T18:29:15.861Z"
+  },
+  {
+    "id": "fe6672b2de971f47",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/gothenburg/hotel-flora-9782",
+    "title": "Hotel Flora Göteborg",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "This well-located Victorian mid-terrace is nicely run and has a relaxed, funky feel. Bedrooms benefit from high ceilings; ask for one of the newer, designer rooms. The bar-lounge is a popular spot and doubles as the breakfast room.",
+    "venueType": "hotel",
+    "venueName": "Hotel Flora Göteborg",
+    "venueAddress": "Grönsakstorget 2",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 57.70279,
+    "lng": 11.96549,
+    "collectedAt": "2026-03-23T18:29:15.861Z",
+    "enrichedAt": "2026-03-23T18:29:15.861Z"
+  },
+  {
+    "id": "a25d02591f83df26",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/Ume%C3%A5/stora-hotellet-12701",
+    "title": "Stora Hotellet",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Umeå’s seafaring history is preserved in this fine (and fun) boutique hotel, a former sailor’s lodging that first opened its doors in 1895. Today’s Stora Hotellet is rather more luxurious than it would have been a century ago, and the fantastic aspects of its heritage have been turned up to ten — the rooms are divided into themes like “adventure,” “yearning,” and “mystique.” The original owner, Gotthard Zetterburg, lends his impressive name to the hotel’s restaurant, Gotthard’s Krog, a versatile and richly detailed space that serves everything from breakfast on through to dinner and late-night drinks.",
+    "venueType": "hotel",
+    "venueName": "Stora Hotellet",
+    "venueAddress": "Storgatan 46",
+    "venueCity": "Umeå",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 63.8251,
+    "lng": 20.26109,
+    "collectedAt": "2026-03-23T18:29:15.861Z",
+    "enrichedAt": "2026-03-23T18:29:15.861Z"
+  },
+  {
+    "id": "f0cf9e84481cc8c3",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/malmo/best-western-plus-hotel-noble-house-10435",
+    "title": "Best Western Plus Hotel Noble House",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "A centrally located hotel, close to the bus station. Classically furnished, well-equipped bedrooms offer good value for money; ask for a room on one of the upper floors. There's a cosy lounge and a modern restaurant which serves traditional Swedish dishes.",
+    "venueType": "hotel",
+    "venueName": "Best Western Plus Hotel Noble House",
+    "venueAddress": "Per Weijersgatan 6",
+    "venueCity": "Malmö",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 55.60369,
+    "lng": 12.99958,
+    "collectedAt": "2026-03-23T18:29:15.861Z",
+    "enrichedAt": "2026-03-23T18:29:15.861Z"
+  },
+  {
+    "id": "c0dabe457949cf11",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/M%C3%B6rbyl%C3%A5nga/eco-by-strandnara-12480",
+    "title": "Eco by StrandNara",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Two hundred meters from the beach on the Baltic island of Öland is where you’ll find StrandNära, a lovely boutique b&b-style eco-hotel. Owners Erica & Mikael Anerhaf have transformed this 1926 residence into a picture-perfect 21st-century guest house, bringing a singular focus to the color palette and decorating it in an exemplary Scandinavian country style — crisp and clean, but far from minimal. Breakfast is a given, and dinner, a three-course modern Nordic affair, is a must as well. The village of Stora Frö is a short drive away, as is the Beijershamn nature reserve.",
+    "venueType": "hotel",
+    "venueName": "Eco by StrandNara",
+    "venueAddress": "Dansbanevägen 3",
+    "venueCity": "Mörbylånga",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 56.57436,
+    "lng": 16.41033,
+    "collectedAt": "2026-03-23T18:29:15.861Z",
+    "enrichedAt": "2026-03-23T18:29:15.861Z"
+  },
+  {
+    "id": "4d24143ad5984c65",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/huskvarna/huskvarna-stadshotell-11263",
+    "title": "Huskvarna Stadshotell",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Occupying the corner of a quaint tree-lined street abutting a commons, ten minutes’ drive from the Jönkoping city center, Huskvarna Stadshotell is a tranquil home base for visitors exploring the southern end of Sweden’s immense Vättern lake. This boutique hotel promises a suite for every possible taste —  each of the 35 options is uniquely decorated according to a wide range of themes and design. The Mirror Room and Ralph Lauren Room are perhaps self-explanatory, as are the Sauna Room and the Jacuzzi Room. There’s a common outdoor Jacuzzi as well, and guests can book treatments at a spa next door. Restaurant KAKel serves cosmopolitan favorites for breakfast, lunch and dinner.",
+    "venueType": "hotel",
+    "venueName": "Huskvarna Stadshotell",
+    "venueAddress": "Erik Dahlbergsgatan 20",
+    "venueCity": "Huskvarna",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 57.79123,
+    "lng": 14.27526,
+    "collectedAt": "2026-03-23T18:29:15.861Z",
+    "enrichedAt": "2026-03-23T18:29:15.861Z"
   },
   {
     "id": "a1ba3c43e2c13d2e",
@@ -2609,7 +2609,7 @@
     "title": "Hjortviken Country Club",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Just outside Gothenburg, Hjortviken Country Club brings an upbeat vibe to Sweden’s lake-dotted countryside. It’s built for sociable weekends, where outdoor adventures, heated pools, and crackling firepits take the lead. The heart of it all is Bay Bay Pool Club, 1,750 square meters of splash, sunbeds, firepits, and feel-it-in-your-chest music. Days revolve around fresh air and delightful detours: think lakeside rides, games in the lobby bar, or sharing salty Spanish bites under the sun. Whether you are floating, feasting, or just finding your groove, Hjortviken is all about turning weekends into stories worth telling.",
     "venueType": "hotel",
     "venueName": "Hjortviken Country Club",
     "venueAddress": "Hotellvägen 1, Box 14",
@@ -2620,8 +2620,8 @@
     ],
     "lat": 57.706661,
     "lng": 12.465585,
-    "collectedAt": "2026-03-14T15:33:47.852Z",
-    "enrichedAt": "2026-03-14T15:33:47.852Z"
+    "collectedAt": "2026-03-23T18:29:15.861Z",
+    "enrichedAt": "2026-03-23T18:29:15.861Z"
   },
   {
     "id": "55579e925b0f7495",
@@ -2630,7 +2630,7 @@
     "title": "Arctic Bath",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Suspended over a frozen river in the tiny village of Harads, Arctic Bath is unlike anywhere else: an architectural circle of timber enclosing an ice-cold plunge pool, with cabins tucked among the trees and out on the ice. The journey here is part of the adventure, but it is the stillness of the landscape that stays with you. Days are spent snowshoeing, dog sledding, or simply watching the sky shift from rose to gold. The hotel’s sauna ritual and eight-course dinners built around local game and fish round out the sense of deep, elemental immersion.",
     "venueType": "hotel",
     "venueName": "Arctic Bath",
     "venueAddress": "Ramdalsvägen 10",
@@ -2641,8 +2641,8 @@
     ],
     "lat": 66.088588,
     "lng": 20.937173,
-    "collectedAt": "2026-03-14T15:33:47.853Z",
-    "enrichedAt": "2026-03-14T15:33:47.853Z"
+    "collectedAt": "2026-03-23T18:29:15.861Z",
+    "enrichedAt": "2026-03-23T18:29:15.861Z"
   },
   {
     "id": "1f62732bbb3afbbd",
@@ -2651,7 +2651,7 @@
     "title": "Maryhill Estate",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Maryhill Estate balances its storybook past with a sociable present. Originally built as a castle for a confectioner and later home to a governor, it now brings together 19th-century architecture with a livelier annex, the Sugar Club. Sugar Club draws a fashion-forward crowd with poolside suites, DJ sets, and martinis under parasols. Guests move easily between tennis courts, spa lounges, and oyster hours on striped sunbeds. Rooms in both wings offer comfort and contrast, and views across the Öresund Strait seal the deal.",
     "venueType": "hotel",
     "venueName": "Maryhill Estate",
     "venueAddress": "Örenäs Slott",
@@ -2662,8 +2662,8 @@
     ],
     "lat": 55.940293,
     "lng": 12.781009,
-    "collectedAt": "2026-03-14T15:33:47.853Z",
-    "enrichedAt": "2026-03-14T15:33:47.853Z"
+    "collectedAt": "2026-03-23T18:29:15.861Z",
+    "enrichedAt": "2026-03-23T18:29:15.861Z"
   },
   {
     "id": "68dbea36cb9e2ca2",
@@ -2672,7 +2672,7 @@
     "title": "Hôtel Reisen, part of The Unbound Collection by Hyatt",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Reisen sits right on the waterfront in Stockholm’s Old Town, with views across to Skeppsholmen and the 19th-century sailing ship Chapman. The building dates to 1617 and has lived many lives: coffee house, tavern, literary haunt, before becoming a hotel. Rooms vary in character; some have vaulted ceilings or 17th-century brick, others offer wide water views. The Tjärn spa, built into the city’s old defensive wall, features a vaulted cold plunge pool and sauna, and one brick still bears the footprint of a woman who helped lay it over 300 years ago. The Royal Palace, narrow lanes, and independent shops of Gamla Stan are just steps from the front door.",
     "venueType": "hotel",
     "venueName": "Hôtel Reisen, part of The Unbound Collection by Hyatt",
     "venueAddress": "Skeppsbron 12",
@@ -2683,8 +2683,8 @@
     ],
     "lat": 59.325437,
     "lng": 18.075368,
-    "collectedAt": "2026-03-14T15:33:47.853Z",
-    "enrichedAt": "2026-03-14T15:33:47.853Z"
+    "collectedAt": "2026-03-23T18:29:15.861Z",
+    "enrichedAt": "2026-03-23T18:29:15.861Z"
   },
   {
     "id": "1d92b5d709109cb2",
@@ -2693,7 +2693,7 @@
     "title": "Ruth",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "",
+    "bodyText": "Housed in a 19th-century corner building in Vasastan’s once-quiet Siberia district, Hotel Ruth is a playful, personal project from the Pettersson family. Velvet sofas, custom-made pieces, and rotating art exhibitions sit alongside original tiled stoves and checkerboard floors. Rooms range from compact singles to two spacious suites with Victorian bathtubs. The lobby doubles as a living room, with board games, papers, and a steady hum from the bar. Breakfast is a city favorite, and the mood is friendly, low-key, and full of small surprises.",
     "venueType": "hotel",
     "venueName": "Ruth",
     "venueAddress": "Dobelnsgatan 81",
@@ -2704,7 +2704,7 @@
     ],
     "lat": 59.345707,
     "lng": 18.056713,
-    "collectedAt": "2026-03-14T15:33:47.853Z",
-    "enrichedAt": "2026-03-14T15:33:47.853Z"
+    "collectedAt": "2026-03-23T18:29:15.861Z",
+    "enrichedAt": "2026-03-23T18:29:15.861Z"
   }
 ]

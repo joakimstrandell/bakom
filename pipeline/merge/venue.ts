@@ -51,6 +51,16 @@ export type VenueRatings = {
   thatsup?: NumericRating;
 };
 
+// ─── Quotes ───────────────────────────────────────────────────
+
+/** An editorial quote/text from a specific source about a venue. */
+export type VenueQuote = {
+  sourceId: string;
+  text: string;
+  publishedAt?: string;
+  url: string;
+};
+
 // ─── Venue ─────────────────────────────────────────────────────
 
 export type Venue = {
@@ -78,6 +88,9 @@ export type Venue = {
 
   /** How many distinct sources mention this venue */
   sourceCount: number;
+
+  /** Editorial quotes/text from sources */
+  quotes?: VenueQuote[];
 
   mergedAt: string;
 };

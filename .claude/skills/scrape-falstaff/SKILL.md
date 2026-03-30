@@ -124,6 +124,10 @@ window._falstaffResults = (async () => {
         subScores[m[3].toLowerCase()] = { score: parseInt(m[1]), max: parseInt(m[2]) };
       }
 
+      // Extract editorial description text
+      const descEl = doc.querySelector('.guide-rating__description');
+      const bodyText = descEl ? descEl.textContent.trim() : '';
+
       results.push({
         name: ld.name,
         url: BASE + urls[i],
@@ -136,6 +140,7 @@ window._falstaffResults = (async () => {
         ].filter(Boolean).join(', '),
         cuisine: [],
         subScores: Object.keys(subScores).length > 0 ? subScores : undefined,
+        bodyText: bodyText || undefined,
       });
     } catch (e) {
       errors++;

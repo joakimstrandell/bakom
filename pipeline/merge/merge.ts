@@ -1,10 +1,11 @@
 /** Merge — combines articles from all sources into unified Venues. @see docs/pipeline.md */
 
-import { loadArticles, saveData } from "../utils/save.js";
+import { loadArticles, loadData, saveData } from "../utils/save.js";
 import type { Article, SubArticle, VenueType } from "../types.js";
 import type {
   Venue,
   VenueRatings,
+  VenueQuote,
   SourceReference,
   MichelinRating,
   WhiteguideRating,
@@ -37,6 +38,8 @@ type WorkingVenue = {
   sourceIds: Set<string>;
   /** Names seen across sources (for best-name picking) */
   namesBySource: Map<string, string>;
+  /** Editorial quotes from sources */
+  quotes: VenueQuote[];
 };
 
 // ─── Helpers ────────────────────────────────────────────────────
@@ -59,6 +62,7 @@ function createEmptyVenue(
     sources: [],
     sourceIds: new Set(),
     namesBySource: new Map(),
+    quotes: [],
   };
 }
 
@@ -76,12 +80,35 @@ function pickBestName(namesBySource: Map<string, string>): string {
   return "";
 }
 
+/** Sources we want editorial quotes from */
+const QUOTE_SOURCES = new Set([
+  "michelin", "whiteguide-review", "falstaff", "dn-review", "svd-review", "di",
+]);
+
+function addQuote(
+  venue: WorkingVenue,
+  sourceId: string,
+  article: { bodyText?: string; publishedAt?: string; url: string },
+): void {
+  if (!QUOTE_SOURCES.has(sourceId)) return;
+  if (!article.bodyText || article.bodyText.trim().length < 20) return;
+  // Don't duplicate quotes from the same source
+  if (venue.quotes.some((q) => q.sourceId === sourceId)) return;
+  venue.quotes.push({
+    sourceId,
+    text: article.bodyText.trim(),
+    publishedAt: article.publishedAt || undefined,
+    url: article.url,
+  });
+}
+
 function addSource(
   venue: WorkingVenue,
   sourceId: string,
-  article: { id: string; url: string; contentType: string; publishedAt?: string },
+  article: { id: string; url: string; contentType: string; publishedAt?: string; bodyText?: string },
 ): void {
   venue.sourceIds.add(sourceId);
+  addQuote(venue, sourceId, article);
   // Find existing source reference or create new
   const existing = venue.sources.find((s) => s.sourceId === sourceId);
   if (existing) {
@@ -504,6 +531,14 @@ export async function mergeAll(): Promise<Venue[]> {
   const venues: WorkingVenue[] = [];
   const index = new VenueIndex();
 
+  // Load known merges from refine dedup (if available)
+  const knownMerges = loadData<{ canonicalName: string; aliases: string[] }[]>("known-merges.json");
+  if (knownMerges && knownMerges.length > 0) {
+    index.loadAliases(knownMerges);
+    const totalAliases = knownMerges.reduce((sum, m) => sum + m.aliases.length, 0);
+    console.log(`  Known merges: ${knownMerges.length} entries (${totalAliases} aliases)`);
+  }
+
   // 1. White Guide as base — best structural data
   console.log("\n  [1/8] White Guide (base)...");
   const wgResult = processWhiteGuide(wgReviews, venues, index);
@@ -581,6 +616,7 @@ export async function mergeAll(): Promise<Venue[]> {
       ratings: wv.ratings,
       sources: wv.sources,
       sourceCount: wv.sourceIds.size,
+      quotes: wv.quotes.length > 0 ? wv.quotes : undefined,
       mergedAt: now,
     };
   });

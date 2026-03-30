@@ -24,6 +24,7 @@ pipeline/
   refine/
     index.ts              Refine CLI entry point (--force, --id flags)
     google.ts             Google Places enrichment, cleanup, categorization, metro regions
+    (quote extraction is a Claude Code skill: /refine-quotes)
   score/
     index.ts              Score CLI entry point
     score.ts              Scoring engine (normalize, weight, dampen, rank)
@@ -40,9 +41,11 @@ pipeline/
   .data/
     articles/             Raw collected articles per source
     falstaff-raw.json     Cached Falstaff scrape (Chrome-based, Cloudflare-protected)
-    venues.json           ~1,954 merged venue records
-    venues-refined.json   ~1,566 Google-enriched venues (with sourceHash for incremental)
-    venues-scored.json    ~1,566 scored + ranked venues
+    venues-merged.json    Merged venue records (with quotes)
+    venues-refined.json   Google-enriched venues (with sourceHash for incremental)
+    venues-scored.json    Scored + ranked venues
+    google-lookups.json   Persistent Google API lookup cache (avoids re-querying)
+    known-merges.json     Dedup aliases from Google Place ID (fed back to merge)
     restaurants.frontend.json  ~1,342 restaurants (frontend-ready)
     hotels.frontend.json       ~179 hotels (frontend-ready)
 ```
@@ -50,13 +53,12 @@ pipeline/
 ## Usage
 
 ```bash
-# ── Collect ──
+# ── Collect (Step 1: Automated scripts) ──
 # Collect all enabled sources (normalizes data after collection)
 pnpm pipeline:collect
 
 # Collect a specific source
 pnpm pipeline:collect --source whiteguide-review
-pnpm pipeline:collect --source dn-review
 pnpm pipeline:collect --source svd-review
 pnpm pipeline:collect --source michelin
 pnpm pipeline:collect --source di
@@ -69,8 +71,30 @@ pnpm pipeline:collect --source krogguiden --force
 # Skip normalization step
 pnpm pipeline:collect --skip-normalize
 
+# ── Collect (Step 2: Manual MCP skills) ──
+# These require Chrome MCP (Claude in Chrome extension) with a logged-in browser.
+# Run via Claude Code skills:
+/scrape-falstaff                      # Falstaff (Cloudflare-protected)
+/enrich-quotes --source dn            # DN (paywalled, requires login)
+/enrich-quotes --source di            # DI (blocks server-side HTTP)
+
 # ── Merge ──
 pnpm pipeline:merge
+
+# ── Refine (Step 1: Google Places enrichment) ──
+pnpm pipeline:refine
+
+# ── Refine (Step 2: LLM quote extraction) ──
+# Run via Claude Code skill (Claude extracts quotes inline, no API cost):
+/refine-quotes
+/refine-quotes --limit 50    # Process at most 50 venues
+/refine-quotes --force       # Re-extract all quotes
+
+# ── Score ──
+pnpm pipeline:score
+
+# ── Optimize ──
+pnpm pipeline:optimize
 ```
 
 ## Data Model
@@ -96,6 +120,7 @@ One Venue per physical place, with per-source ratings and links. Key fields:
 - `ratings`: Per-source ratings in native scales (Michelin distinction, WG classification, DN 1-5, SvD 1-6, DI 0-25, KG 1-5, Falstaff 0-100)
 - `sources`: Array of source references with article IDs, URLs, content types
 - `sourceCount`: Number of distinct sources mentioning this venue (1-7)
+- `quotes`: Per-source editorial text, each with `sourceId`, `text` (full bodyText), `publishedAt`, `url`. After LLM refinement, each quote also has an `excerpt` (short extracted quote, ~1-2 sentences)
 
 ## Normalization
 
@@ -145,6 +170,7 @@ For sources without city data (SvD), the name threshold is raised to 0.90 to avo
 | **venueType** | White Guide (explicit) > Michelin (hotel override) > "restaurant" default |
 | **cuisine** | Merged from all sources, deduplicated |
 | **priceRange** | First available in merge order |
+| **quotes** | One per source (first bodyText seen), from: Michelin, White Guide, Falstaff, DN, SvD, DI |
 
 ### Current merge output
 
@@ -181,7 +207,9 @@ Fetches all rated venues from the White Guide API across four venue types: resta
 
 Sub-scores are normalized to 0-10 scale. White Guide does not use a single numeric rating — venues are ranked by classification labels stored in `tags`.
 
-**Output**: `whiteguide-review.json` (~942 entries)
+After API collection, the collector makes a second pass to fetch review text (bodyText) from each venue's detail page on whiteguide.com. The `.review` div contains the editorial review text.
+
+**Output**: `whiteguide-review.json` (~942 entries, ~99% with bodyText)
 
 ### News
 
@@ -231,10 +259,10 @@ SvD publishes restaurant reviews under the "Krogguiden" brand. Anonymous critics
 
 1. **Discovery**: Paginated API at `svd.se/api/topic-backfill/story/krogguiden` returns HTML with article URLs
 2. **Scraping**: Each article page has `<script type="application/ld+json">` with `@type: "Review"` + `itemReviewed: { @type: "Restaurant" }`. Publicly accessible. Provides name, address, rating (1-6), `servesCuisine` (actually price class), publish date
-3. **No enrichment needed**: All structured data is in the JSON-LD
+3. **bodyText**: Pre-paywall article paragraphs are extracted from the same HTML during collection (no separate enrichment step needed)
 4. **Incremental**: Skips already-collected URLs. Non-review URLs saved as stubs to prevent re-scraping
 
-**Note**: SvD articles have no city data — matching relies on name only (with stricter 0.90 threshold).
+**Note**: SvD articles have no city data — matching relies on name only (with stricter 0.90 threshold). bodyText is partial (pre-paywall only).
 
 **Output**: `svd-review.json` (~382 articles: 277 with scores, 105 stubs)
 
@@ -361,15 +389,24 @@ Falstaff.com is protected by Cloudflare and blocks direct HTTP requests. The col
 
 ### Phase 1: Collect ✅
 
-All 7 source collectors are built and operational. ~3,310 articles collected. Normalization runs after each collection.
+Two-step collection process:
+
+**Step 1 — Automated scripts** (`pnpm pipeline:collect`): All source collectors run as Node.js scripts. Michelin, White Guide, and SvD fetch editorial bodyText inline during collection. Normalization runs after each collection.
+
+**Step 2 — Manual MCP skills**: Sources that require a real browser (Cloudflare protection, paywalls, HTTP blocking) are collected via Chrome MCP skills:
+- `/scrape-falstaff` — Falstaff venues + bodyText (Cloudflare-protected)
+- `/enrich-quotes --source dn` — DN article text (paywalled, requires login)
+- `/enrich-quotes --source di` — DI article text (blocks server-side HTTP)
 
 ### Phase 2: Merge ✅
 
-Articles merged into ~1,954 unified Venue records. Fuzzy name + address matching with city-scoped fallback. 2 venues have ratings from all 7 sources.
+Articles merged into unified Venue records. Fuzzy name + address matching with city-scoped fallback. The merge step carries `bodyText` from articles into per-venue `quotes[]` (one per source, with sourceId, full text, publishedAt, and URL).
 
 ### Phase 3: Refine ✅
 
-Enriches venues with **Google Places API** data. Run: `pnpm pipeline:refine`
+Two-step refinement:
+
+**Step 1 — Google Places enrichment** (`pnpm pipeline:refine`): Enriches venues with Google Places API data.
 
 **Google Places Text Search** for each venue:
 - Searches by `"{name}, {city}, Sweden"` with city-based location bias (50 km radius)
@@ -379,7 +416,7 @@ Enriches venues with **Google Places API** data. Run: `pnpm pipeline:refine`
 
 **Enrichment fields added**: `googlePlaceId`, `googleRating`, `googleRatingCount`, `googleMapsUri`, `googlePrimaryType`, `businessStatus`, `hours` (opening hours), `website`, `phone`
 
-**Incremental processing**: Hash-based staleness detection. If `venues.json` hasn't changed since last run, skips already-enriched venues. Progress saved every 100 venues for crash recovery. `--force` re-fetches all. `--id {venue-id}` targets a single venue. `--backfill` re-fetches only venues that have a Google Place ID but are missing hours, website, or phone.
+**Incremental processing**: Hash-based staleness detection. If `venues-merged.json` hasn't changed since last run, skips already-enriched venues. A persistent lookup cache (`google-lookups.json`) tracks all Google API queries — including "not found" results — so venues are never queried twice. Progress saved every 100 venues for crash recovery. `--force` re-fetches all (ignores cache). `--id {venue-id}` targets a single venue. `--backfill` re-fetches only venues that have a Google Place ID but are missing hours, website, or phone.
 
 **Post-enrichment passes**:
 1. **Deduplication**: Merges venues that resolve to the same Google Place ID (sources, ratings, and metadata merged into the venue with the most sources)
@@ -388,6 +425,8 @@ Enriches venues with **Google Places API** data. Run: `pnpm pipeline:refine`
 4. **Venue categorization**: `restaurant` (food-related Google types), `hotel` (hotel/resort/inn/lodging/hostel), or `exclude` (non-food types that survived retry, e.g. camping, museum)
 
 **Output**: `venues-refined.json` (~1,566 venues with `sourceHash` for incremental detection)
+
+**Step 2 — LLM quote extraction** (`/refine-quotes`): A Claude Code skill where Claude reads `venues-refined.json` and extracts short, representative editorial quotes from the full `bodyText` stored in each venue's `quotes[]`. For each quote, Claude picks the most vivid 1-2 sentence excerpt and stores it as `excerpt` alongside the original `text`. No API cost — Claude processes quotes inline. Supports `--limit N` and `--force` flags. Saves progress incrementally.
 
 ### Phase 4: Score ✅
 

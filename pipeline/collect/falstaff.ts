@@ -38,6 +38,7 @@ interface FalstaffRaw {
   cuisine: string[];
   forks?: number;
   subScores?: Record<string, FalstaffSubScore>;
+  bodyText?: string;
 }
 
 // ─── Helpers ────────────────────────────────────────────────────
@@ -106,7 +107,7 @@ function rawToArticle(entry: FalstaffRaw): Article {
     title: entry.name,
     publishedAt: "",
     contentType: "review",
-    bodyText: "",
+    bodyText: entry.bodyText || "",
 
     venueType: entry.url.includes("/bars/") ? "bar" as const : "restaurant" as const,
     venueName: normalizeVenueName(entry.name),

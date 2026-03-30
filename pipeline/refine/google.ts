@@ -59,6 +59,12 @@ type RefinedData = {
   venues: EnrichedVenue[];
 };
 
+/** Persistent cache of Google API lookup results — avoids re-querying venues */
+type GoogleLookupCache = Record<string, {
+  googlePlaceId: string | null;
+  queriedAt: string;
+}>;
+
 // ─── City location biases ───────────────────────────────────────
 
 const CITY_COORDS: Record<string, { lat: number; lng: number }> = {
@@ -404,9 +410,19 @@ async function enrichVenue(
 
 // ─── Dedup pass ─────────────────────────────────────────────────
 
+/** A known merge: venues that resolve to the same Google Place ID */
+export type KnownMerge = {
+  googlePlaceId: string;
+  /** The canonical venue name (keeper) */
+  canonicalName: string;
+  /** All venue names/slugs that should merge into the canonical */
+  aliases: string[];
+};
+
 function deduplicateByPlaceId(venues: EnrichedVenue[]): {
   deduped: EnrichedVenue[];
   mergedCount: number;
+  knownMerges: KnownMerge[];
 } {
   const byPlaceId = new Map<string, number[]>();
 
@@ -423,6 +439,7 @@ function deduplicateByPlaceId(venues: EnrichedVenue[]): {
 
   const toMerge = new Set<number>();
   let mergedCount = 0;
+  const knownMerges: KnownMerge[] = [];
 
   for (const [placeId, indices] of byPlaceId) {
     if (indices.length < 2) continue;
@@ -433,12 +450,14 @@ function deduplicateByPlaceId(venues: EnrichedVenue[]): {
     );
     const keeper = sorted[0];
     const keperVenue = venues[keeper];
+    const aliases: string[] = [];
 
     for (let k = 1; k < sorted.length; k++) {
       const donor = venues[sorted[k]];
       console.log(
         `    Dedup: "${donor.name}" → "${keperVenue.name}" (placeId: ${placeId})`,
       );
+      aliases.push(donor.name);
 
       // Merge sources
       for (const src of donor.sources) {
@@ -461,6 +480,16 @@ function deduplicateByPlaceId(venues: EnrichedVenue[]): {
         }
       }
 
+      // Merge quotes
+      if (donor.quotes) {
+        if (!keperVenue.quotes) keperVenue.quotes = [];
+        for (const q of donor.quotes) {
+          if (!keperVenue.quotes.some((eq) => eq.sourceId === q.sourceId)) {
+            keperVenue.quotes.push(q);
+          }
+        }
+      }
+
       // Update source count
       const srcIds = new Set(keperVenue.sources.map((s) => s.sourceId));
       keperVenue.sourceCount = srcIds.size;
@@ -473,10 +502,17 @@ function deduplicateByPlaceId(venues: EnrichedVenue[]): {
       toMerge.add(sorted[k]);
       mergedCount++;
     }
+
+    // Record this merge for the known-merges map
+    knownMerges.push({
+      googlePlaceId: placeId,
+      canonicalName: keperVenue.name,
+      aliases,
+    });
   }
 
   const deduped = venues.filter((_, i) => !toMerge.has(i));
-  return { deduped, mergedCount };
+  return { deduped, mergedCount, knownMerges };
 }
 
 // ─── Main refine function ───────────────────────────────────────
@@ -537,6 +573,17 @@ export async function refineWithGoogle(
             lng: prev.lng,
           });
           if (!v.city && prev.city) v.city = prev.city;
+          // Carry over quote excerpts from previous refined data
+          if (prev.quotes && v.quotes) {
+            for (const vq of v.quotes) {
+              const prevQ = prev.quotes.find((pq: Record<string, unknown>) =>
+                pq.sourceId === vq.sourceId && pq.excerpt,
+              );
+              if (prevQ) {
+                (vq as Record<string, unknown>).excerpt = (prevQ as Record<string, unknown>).excerpt;
+              }
+            }
+          }
           carried++;
         }
       }
@@ -546,6 +593,9 @@ export async function refineWithGoogle(
   }
 
   console.log(`  Total venues: ${venues.length}`);
+
+  // Load Google lookup cache — tracks all previous API queries (including "not found")
+  const lookupCache = loadData<GoogleLookupCache>("google-lookups.json") ?? {};
 
   // Determine what needs enrichment
   let needsEnrich: EnrichedVenue[];
@@ -562,7 +612,12 @@ export async function refineWithGoogle(
       (v) => v.googlePlaceId && (!v.hours || !v.website || !v.phone),
     );
   } else {
-    needsEnrich = venues.filter((v) => !v.googlePlaceId);
+    // Skip venues that already have Google data OR were previously queried (cache hit)
+    needsEnrich = venues.filter((v) => !v.googlePlaceId && !lookupCache[v.id]);
+    const cachedSkips = venues.filter((v) => !v.googlePlaceId && lookupCache[v.id]).length;
+    if (cachedSkips > 0) {
+      console.log(`  Skipped from cache (previously queried): ${cachedSkips}`);
+    }
   }
 
   const totalNeeding = needsEnrich.length;
@@ -600,6 +655,7 @@ export async function refineWithGoogle(
       const success = await enrichVenue(apiKey, venue);
       if (success) {
         enriched++;
+        lookupCache[venue.id] = { googlePlaceId: venue.googlePlaceId!, queriedAt: new Date().toISOString() };
         const status =
           venue.businessStatus !== "OPERATIONAL"
             ? ` [${venue.businessStatus}]`
@@ -609,10 +665,12 @@ export async function refineWithGoogle(
         );
       } else {
         notFound++;
+        lookupCache[venue.id] = { googlePlaceId: null, queriedAt: new Date().toISOString() };
         process.stdout.write(` not found\n`);
       }
     } catch (err) {
       notFound++;
+      lookupCache[venue.id] = { googlePlaceId: null, queriedAt: new Date().toISOString() };
       process.stdout.write(` ERROR: ${err}\n`);
     }
 
@@ -621,13 +679,38 @@ export async function refineWithGoogle(
     // Save progress
     if ((i + 1) % SAVE_INTERVAL === 0) {
       saveData("venues-refined.json", { sourceHash, venues } satisfies RefinedData);
+      saveData("google-lookups.json", lookupCache);
       console.log(`  [progress saved — ${enriched} enriched so far]\n`);
     }
   }
 
+  // Save final lookup cache
+  saveData("google-lookups.json", lookupCache);
+
   // Dedup pass
   console.log("\n  Deduplicating by Google Place ID...");
-  const { deduped, mergedCount } = deduplicateByPlaceId(venues);
+  const { deduped, mergedCount, knownMerges } = deduplicateByPlaceId(venues);
+
+  // Save known merges for the merge step to use on future runs
+  if (knownMerges.length > 0) {
+    // Load existing and merge (accumulate over time)
+    const existingMerges = loadData<KnownMerge[]>("known-merges.json") ?? [];
+    const byPlaceId = new Map(existingMerges.map((m) => [m.googlePlaceId, m]));
+    for (const m of knownMerges) {
+      const existing = byPlaceId.get(m.googlePlaceId);
+      if (existing) {
+        // Merge aliases
+        for (const a of m.aliases) {
+          if (!existing.aliases.includes(a)) existing.aliases.push(a);
+        }
+        existing.canonicalName = m.canonicalName;
+      } else {
+        byPlaceId.set(m.googlePlaceId, m);
+      }
+    }
+    saveData("known-merges.json", [...byPlaceId.values()]);
+    console.log(`  Saved ${byPlaceId.size} known merges (${knownMerges.length} from this run)`);
+  }
 
   // Cleanup pass — remove venues we can't verify or that aren't in Sweden
   const beforeCleanup = deduped.length;

@@ -1,7 +1,8 @@
 /** White Guide collector — guide entries (restaurant/bar/cafe/hotel) + news. */
 
 import { createHash } from "crypto";
-import { fetchWithRetry } from "../utils/fetch.js";
+import * as cheerio from "cheerio";
+import { fetchWithRetry, sleep } from "../utils/fetch.js";
 import { saveArticles } from "../utils/save.js";
 import { normalizeAddress, normalizeVenueName, normalizeCity } from "../utils/normalize.js";
 import type { Article, VenueType } from "../types.js";
@@ -78,6 +79,18 @@ function stripHtml(html: string): string {
     .replace(/\r\n/g, "\n")
     .replace(/\n{3,}/g, "\n\n")
     .trim();
+}
+
+// ─── Review Text Enrichment ─────────────────────────────────────
+
+const ENRICH_BATCH_SIZE = 25;
+const ENRICH_DELAY_MS = 500;
+
+async function fetchReviewText(url: string): Promise<string> {
+  const res = await fetchWithRetry(url);
+  const html = await res.text();
+  const $ = cheerio.load(html);
+  return $(".review").text().trim();
 }
 
 // ─── Guide Entries (Reviews) ────────────────────────────────────
@@ -169,6 +182,37 @@ export async function collectWhiteGuideEntries(): Promise<Article[]> {
     const count = allArticles.filter((a) => a.venueType === vt).length;
     if (count > 0) console.log(`    ${vt}: ${count}`);
   }
+
+  // ─── Enrich with review text from venue pages ─────────────────
+  console.log(`\n  Enriching with review text...`);
+  let enriched = 0;
+  let empty = 0;
+  let errors = 0;
+
+  for (let i = 0; i < allArticles.length; i++) {
+    const article = allArticles[i];
+    try {
+      const text = await fetchReviewText(article.url);
+      if (text && text.length > 20) {
+        article.bodyText = text;
+        article.enrichedAt = new Date().toISOString();
+        enriched++;
+      } else {
+        empty++;
+      }
+    } catch {
+      errors++;
+    }
+
+    if ((i + 1) % ENRICH_BATCH_SIZE === 0) {
+      console.log(`    [${i + 1}/${allArticles.length}] enriched: ${enriched}, empty: ${empty}, errors: ${errors}`);
+      saveArticles("whiteguide-review.json", allArticles);
+    }
+
+    await sleep(ENRICH_DELAY_MS);
+  }
+
+  console.log(`\n  Review text: ${enriched} enriched, ${empty} empty, ${errors} errors`);
 
   saveArticles("whiteguide-review.json", allArticles);
   return allArticles;

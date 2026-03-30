@@ -25,6 +25,19 @@ function now(): string {
   return new Date().toISOString();
 }
 
+/** Extract pre-paywall article text from HTML */
+function extractArticleText(html: string): string {
+  const $ = cheerio.load(html);
+  const paragraphs: string[] = [];
+  $("article p, .article__body p, [class*='article'] p").each((_, el) => {
+    const text = $(el).text().trim();
+    if (text.length > 20 && !text.includes("Redan prenumerant") && !text.includes("Logga in för")) {
+      paragraphs.push(text);
+    }
+  });
+  return paragraphs.join("\n\n");
+}
+
 
 // ─── Discovery ──────────────────────────────────────────────────
 
@@ -144,6 +157,8 @@ export async function collectSvdReviews(): Promise<Article[]> {
       const html = await res.text();
       const parsed = parseJsonLd(html);
 
+      const bodyText = extractArticleText(html);
+
       if (parsed?.name) {
         articles.push({
           id: articleId(url),
@@ -152,7 +167,7 @@ export async function collectSvdReviews(): Promise<Article[]> {
           title: parsed.name,
           publishedAt: parsed.publishedAt,
           contentType: "review",
-          bodyText: "",
+          bodyText,
           venueName: parsed.name,
           venueAddress: parsed.address || undefined,
           score: parsed.score ?? undefined,
@@ -178,10 +193,9 @@ export async function collectSvdReviews(): Promise<Article[]> {
           title: ogTitle || url.split("/").pop()?.replace(/-/g, " ") || "",
           publishedAt,
           contentType: isReview ? "review" : "listing",
-          bodyText: "",
+          bodyText,
           venueName: "",
           collectedAt: now(),
-          // No enrichedAt — these may benefit from Chrome MCP enrichment later
         });
         skipped++;
         console.log(`    → No JSON-LD (saved as ${isReview ? "review" : "listing"})`);

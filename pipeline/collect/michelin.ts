@@ -38,6 +38,7 @@ interface MichelinEntry {
   lat?: number;
   lng?: number;
   guestScore?: number;
+  bodyText?: string;
 }
 
 // ─── Helpers ────────────────────────────────────────────────────
@@ -314,6 +315,26 @@ async function enrichFromDetailPage(
       }
     });
 
+    // Extract editorial description text
+    const descEl = $(".restaurant-details__description, .data-sheet__description, .restaurant-details__heading--text");
+    if (descEl.length) {
+      const desc = descEl.first().text().trim();
+      if (desc.length > 20) {
+        entry.bodyText = desc;
+      }
+    }
+    // Fallback: look for the main descriptive paragraph in the body section
+    if (!entry.bodyText) {
+      $(".data-sheet__body p, .restaurant-details__description p").each((_, el) => {
+        if (!entry.bodyText) {
+          const text = $(el).text().trim();
+          if (text.length > 50) {
+            entry.bodyText = text;
+          }
+        }
+      });
+    }
+
     if (entry.venueType === "restaurant") {
       $(".restaurant-details__heading-price, .data-sheet__heading").each(
         (_, el) => {
@@ -349,7 +370,7 @@ function entryToArticle(entry: MichelinEntry): Article {
     title: entry.name,
     publishedAt: "", // Michelin doesn't expose publish dates
     contentType: "review",
-    bodyText: "",
+    bodyText: entry.bodyText || "",
     venueType: entry.venueType,
     venueName: normalizeVenueName(entry.name),
     venueAddress: addr || undefined,

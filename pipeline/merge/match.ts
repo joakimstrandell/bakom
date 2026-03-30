@@ -112,6 +112,18 @@ export class VenueIndex {
   private byExactName = new Map<string, number[]>();
   private byCity = new Map<string, number[]>();
   private all: MatchCandidate[] = [];
+  /** Alias → canonical normalized name (from known-merges.json) */
+  private aliasMap = new Map<string, string>();
+
+  /** Load known aliases so that alias names resolve to their canonical venue. */
+  loadAliases(aliases: { canonicalName: string; aliases: string[] }[]): void {
+    for (const entry of aliases) {
+      const canonicalNorm = normalizeName(entry.canonicalName);
+      for (const alias of entry.aliases) {
+        this.aliasMap.set(normalizeName(alias), canonicalNorm);
+      }
+    }
+  }
 
   add(candidate: MatchCandidate): void {
     this.all.push(candidate);
@@ -136,9 +148,14 @@ export class VenueIndex {
     }
   }
 
-  /** Try exact name match first. Returns indices. */
+  /** Try exact name match first, then alias lookup. Returns indices. */
   findExact(normalizedName: string): number[] {
-    return this.byExactName.get(normalizedName) ?? [];
+    const direct = this.byExactName.get(normalizedName);
+    if (direct && direct.length > 0) return direct;
+    // Check if this name is a known alias
+    const canonical = this.aliasMap.get(normalizedName);
+    if (canonical) return this.byExactName.get(canonical) ?? [];
+    return [];
   }
 
   /**
