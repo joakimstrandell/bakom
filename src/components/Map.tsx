@@ -3,7 +3,7 @@ import MarkerClusterGroup from "react-leaflet-cluster";
 import L from "leaflet";
 import "react-leaflet-cluster/dist/assets/MarkerCluster.css";
 import "react-leaflet-cluster/dist/assets/MarkerCluster.Default.css";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { Restaurant } from "../types";
 import { scoreColor, scoreStrokeColor } from "../lib/colors";
 import type { RegionFilter } from "../lib/regions";
@@ -138,6 +138,32 @@ function FlyToRegion({ region }: { region: RegionFilter }) {
   return null;
 }
 
+/** Flies to approximate IP-based location on initial load (no marker shown) */
+function FlyToIPLocation({ enabled }: { enabled: boolean }) {
+  const map = useMap();
+  const [fetched, setFetched] = useState(false);
+
+  useEffect(() => {
+    if (!enabled || fetched) return;
+    setFetched(true);
+
+    fetch("https://get.geojs.io/v1/ip/geo.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const lat = parseFloat(data.latitude);
+        const lng = parseFloat(data.longitude);
+        if (!isNaN(lat) && !isNaN(lng)) {
+          map.flyTo([lat, lng], 12, { duration: 0.8 });
+        }
+      })
+      .catch(() => {
+        // Silently fail — keep default view
+      });
+  }, [enabled, fetched, map]);
+
+  return null;
+}
+
 /** Pans/zooms map to selected restaurant if not visible or in a cluster */
 function PanToSelected({
   restaurant,
@@ -265,6 +291,7 @@ export default function Map({
         url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
       />
 
+      <FlyToIPLocation enabled={region === "all" && !initialRestaurantId.current} />
       <FlyToRegion region={region} />
       <FlyToUser location={userLocation} />
       <PanToSelected
