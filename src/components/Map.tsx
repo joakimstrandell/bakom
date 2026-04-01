@@ -3,7 +3,7 @@ import MarkerClusterGroup from "react-leaflet-cluster";
 import L from "leaflet";
 import "react-leaflet-cluster/dist/assets/MarkerCluster.css";
 import "react-leaflet-cluster/dist/assets/MarkerCluster.Default.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import type { Restaurant } from "../types";
 import { scoreColor, scoreStrokeColor } from "../lib/colors";
 import type { RegionFilter } from "../lib/regions";
@@ -138,14 +138,14 @@ function FlyToRegion({ region }: { region: RegionFilter }) {
   return null;
 }
 
-/** Flies to approximate IP-based location on initial load (no marker shown) */
+/** Zooms to approximate IP-based location on initial load (no marker shown) */
 function FlyToIPLocation({ enabled }: { enabled: boolean }) {
   const map = useMap();
-  const [fetched, setFetched] = useState(false);
+  const fetched = useRef(false);
 
   useEffect(() => {
-    if (!enabled || fetched) return;
-    setFetched(true);
+    if (!enabled || fetched.current) return;
+    fetched.current = true;
 
     fetch("https://get.geojs.io/v1/ip/geo.json")
       .then((res) => res.json())
@@ -153,13 +153,15 @@ function FlyToIPLocation({ enabled }: { enabled: boolean }) {
         const lat = parseFloat(data.latitude);
         const lng = parseFloat(data.longitude);
         if (!isNaN(lat) && !isNaN(lng)) {
-          map.flyTo([lat, lng], 12, { duration: 0.8 });
+          // Use setView instead of flyTo — more reliable on mobile where
+          // the map container may not be fully laid out yet.
+          map.setView([lat, lng], 12);
         }
       })
       .catch(() => {
         // Silently fail — keep default view
       });
-  }, [enabled, fetched, map]);
+  }, [enabled, map]);
 
   return null;
 }
