@@ -2,7 +2,7 @@
 
 import { createHash } from "crypto";
 import { fetchWithRetry } from "../utils/fetch.js";
-import { saveArticles } from "../utils/save.js";
+import { saveArticles, loadArticles } from "../utils/save.js";
 import {
   normalizeVenueName,
   normalizeAddress,
@@ -180,8 +180,30 @@ export async function collectDi(): Promise<Article[]> {
   const entries = parseResponse(data);
   console.log(`  Parsed ${entries.length} restaurants`);
 
-  // Convert to articles
-  const articles = entries.map(entryToArticle);
+  // Load existing articles and preserve enriched fields (bodyText/enrichedAt)
+  // DI's API is a full snapshot, but /enrich-quotes --source di adds bodyText
+  // via Chrome MCP later — without this merge, those values would be wiped on
+  // every re-run.
+  const existing = loadArticles<Article[]>("di.json") ?? [];
+  const existingByUrl = new Map(existing.map((a) => [a.url, a]));
+
+  let carried = 0;
+  const articles = entries.map((entry) => {
+    const fresh = entryToArticle(entry);
+    const prev = existingByUrl.get(fresh.url);
+    if (prev?.bodyText) {
+      fresh.bodyText = prev.bodyText;
+      if (prev.enrichedAt) fresh.enrichedAt = prev.enrichedAt;
+      carried++;
+    }
+    return fresh;
+  });
+
+  if (carried > 0) {
+    console.log(
+      `  Preserved bodyText on ${carried}/${articles.length} existing articles`,
+    );
+  }
 
   // Stats
   const cities: Record<string, number> = {};
