@@ -317,7 +317,7 @@ DI Weekend restaurant guide. Single JSON API endpoint returns all restaurants (~
 1. **Fetch**: Single POST to `di.se/pang-ms/widgets/RestaurantGuide/` returns all entries in a cols/rows tabular format
 2. **Parse**: Maps column indices to fields (name, address, city, scores, price, coordinates, URL, date)
 3. **Sub-scores**: Food (max 15), Environment (max 5), Service (max 5) — normalized to 0-10 scale
-4. **Snapshot mode**: Always re-fetches everything (~3 seconds)
+4. **Snapshot API + incremental merge**: fetches all restaurants from the API each run, but preserves `bodyText` and `enrichedAt` on existing articles (matches DN/SvD/Krogguiden pattern). As of 2026-04, bodyText added by `/enrich-quotes --source di` survives re-collection.
 
 ### Price mapping
 
@@ -416,6 +416,8 @@ Two-step refinement:
 
 **Enrichment fields added**: `googlePlaceId`, `googleRating`, `googleRatingCount`, `googleMapsUri`, `googlePrimaryType`, `businessStatus`, `hours` (opening hours), `website`, `phone`
 
+**Cost note**: The script prints `~$0.032/call` based on Text Search Essentials pricing. The current field mask includes atmosphere fields (`rating`, `userRatingCount`, `regularOpeningHours`, `websiteUri`, `nationalPhoneNumber`) which are billed under the Enterprise + Atmosphere SKU at **$35/1000 requests** (actual cost ~10% above script estimate).
+
 **Incremental processing**: Hash-based staleness detection. If `venues-merged.json` hasn't changed since last run, skips already-enriched venues. A persistent lookup cache (`google-lookups.json`) tracks all Google API queries — including "not found" results — so venues are never queried twice. Progress saved every 100 venues for crash recovery. `--force` re-fetches all (ignores cache). `--id {venue-id}` targets a single venue. `--backfill` re-fetches only venues that have a Google Place ID but are missing hours, website, or phone.
 
 **Post-enrichment passes**:
@@ -427,6 +429,8 @@ Two-step refinement:
 **Output**: `venues-refined.json` (~1,566 venues with `sourceHash` for incremental detection)
 
 **Step 2 — LLM quote extraction** (`/refine-quotes`): A Claude Code skill where Claude reads `venues-refined.json` and extracts short, representative editorial quotes from the full `bodyText` stored in each venue's `quotes[]`. For each quote, Claude picks the most vivid 1-2 sentence excerpt and stores it as `excerpt` alongside the original `text`. No API cost — Claude processes quotes inline. Supports `--limit N` and `--force` flags. Saves progress incrementally.
+
+For large sets (>100 venues), the skill dispatches N parallel sub-agents (~100 venues each). Proven runtime: 1887 quotes, 1873 extracted in ~7 min wall-clock across 10 agents. See the skill for the shard + dispatch pattern.
 
 ### Phase 4: Score ✅
 
@@ -478,3 +482,30 @@ Shapes scored venues into frontend-ready JSON. Run: `pnpm pipeline:optimize`
 **Output**:
 - `restaurants.frontend.json` — ~1,342 restaurants sorted by rank
 - `hotels.frontend.json` — ~179 hotels sorted by rank
+
+---
+
+## Troubleshooting
+
+### Chrome auto-download silently blocked
+
+Chrome blocks subsequent automatic downloads from the same origin after the first one succeeds. Symptoms: `a.click()` on a blob URL fires without error but no file appears in Downloads. No UI prompt is visible to the MCP viewport.
+
+Workarounds (in order of preference):
+1. Start a local HTTP receiver (`node /tmp/receiver.mjs` listening on 127.0.0.1) and `POST` the JSON from the browser tab. Note: HTTPS → `http://127.0.0.1` is usually allowed as a secure context, but some pages silently drop the request — test with a small payload first.
+2. Store the data in `window.name` or `sessionStorage`, navigate to a different origin, retrieve there.
+3. Chunk the data into many small files and download with delays (>5s between).
+
+### DI Node fetch returns paywall HTML
+
+`fetch("https://www.di.se/nyheter/...")` from Node with a browser `User-Agent` returns HTTP 200 — but the HTML body is the paywall signup page, not article content. Detection: real articles contain dish/venue-specific text; paywall pages contain `"Är du redan prenumerant"` or `"Prenumerera utan bindningstid"`.
+
+Only Chrome same-origin `fetch()` from `di.se` returns real article bodies. Use `/enrich-quotes --source di` with Chrome MCP.
+
+### DI collector wipes enrichment (fixed 2026-04)
+
+Historical issue: `pnpm pipeline:collect --source di` used to overwrite `bodyText` and `enrichedAt` on every run, wiping all data added by `/enrich-quotes`. Fixed by adding a load-and-merge pass to the collector (matching the DN/SvD pattern). If you see this behavior on another source, it's the same bug pattern — patch that collector the same way.
+
+### whiteguide-news count unexpectedly dropped (open)
+
+Observed 2026-04-16: `whiteguide-news.json` went from 2400 → 166 articles after a fresh `pnpm pipeline:collect`. The cutoff date is 2025-01-01 (docs say paginated newest-first, stops at cutoff). Needs investigation — either the API changed, pagination stops early, or the cutoff logic was modified. Does not affect venue data (news isn't merged into venues).
