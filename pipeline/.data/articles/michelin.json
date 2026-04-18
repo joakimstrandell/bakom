@@ -1,5 +1,52 @@
 [
   {
+    "id": "40b85803e5111a85",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/koka",
+    "title": "Koka",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Set beneath an ornate 19th-century glass ceiling fringed by a burgundy canopy, this elegant, airy restaurant comes with modern, light wood panelled walls and bespoke matching furnishings. The refined, well-balanced tasting menu showcases the best of the season, with the spring and summer menus formed largely around plant-led dishes. Classical combinations are subtly modernised by clever twists and well-judged sauces, such as the piquant langoustine bisque with Brussels sprouts and marigold or the slightly tart, fruity venison jus flavoured with blackcurrant to accompany the fallow deer and beetroot.",
+    "venueType": "restaurant",
+    "venueName": "Koka",
+    "venueAddress": "Viktoriagatan 12",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.454Z",
+    "enrichedAt": "2026-04-16T16:24:33.454Z"
+  },
+  {
+    "id": "acbe4cc0795d5f0a",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/arla",
+    "title": "ÄRLA",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "The residents of Östermalm can count themselves lucky to call this charming restaurant run by a husband-and-wide duo their local – but whether you’re a regular or not, you’ll instantly feel the warmth of the team’s hospitality. The fully open-plan layout adds a unique touch, as it blurs the line between dining room and kitchen, where Lotta prepares unfussy, flavour-packed dishes such as blue mussels with onion, jalapeno and bergamot or ling with browned butter, hazelnuts and Brussels sprouts. Great value is to be found on the ‘Kvällens Fyra Favoriter’ menu, a four-course ‘Favourites of the Night’.",
+    "venueType": "restaurant",
+    "venueName": "ÄRLA",
+    "venueAddress": "Danderydsgatan 25",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Farm to table",
+      "Swedish"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.455Z",
+    "enrichedAt": "2026-04-16T16:24:33.455Z"
+  },
+  {
     "id": "89a2221edb5c0ba1",
     "sourceId": "michelin",
     "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/koizen",
@@ -19,498 +66,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-23T18:29:15.850Z",
-    "enrichedAt": "2026-03-23T18:29:15.858Z"
-  },
-  {
-    "id": "9dad7eb197f1ccb9",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/tavolo",
-    "title": "Tavolo",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Enter through the huge wooden doors of this old military stable and you’ll find yourself in a large and stunningly converted room with a truly buzzing atmosphere. A huge horse’s head – a copy of Leonardo's Cavallo di Forcione and a reminder of the building’s former life – takes centre stage in the bar, which is a popular spot for a cocktail and some nibbles. When it comes to the food, it’s all about Italy, with the fresh, flavoursome dishes prepared on-view in the open kitchen. From homemade pizzas and pastas to traditional meat dishes, there’s something for everyone here.",
-    "venueType": "restaurant",
-    "venueName": "Tavolo",
-    "venueAddress": "Magasingatan 19",
-    "venueCity": "Göteborg",
-    "score": 0,
-    "cuisine": [
-      "Italian-American"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.858Z",
-    "enrichedAt": "2026-03-23T18:29:15.858Z"
-  },
-  {
-    "id": "7c73202091efb184",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/woodstockholm",
-    "title": "Woodstockholm",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "A compact bistro owned by a group of friends, who set up a furniture making business and now use the bistro to showcase their products. Cooking follows a theme which changes every two months – perhaps a country, a style of food or a famous chef – and the rustic small plates are simple yet full of flavour.",
-    "venueType": "restaurant",
-    "venueName": "Woodstockholm",
-    "venueAddress": "Mosebacke Torg 9",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Contemporary",
-      "International"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.858Z",
-    "enrichedAt": "2026-03-23T18:29:15.858Z"
-  },
-  {
-    "id": "e891d89626575953",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/rolfs-kok",
-    "title": "Rolfs Kök",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "A buzzing neighbourhood restaurant in a lively commercial district, run by a passionate chef-owner. The contemporary interior was designed by famous Swedish artists; sit at the counter to watch the chefs in action. Dishes have big flavours, a classic heart, and a wine match each from the impressive list.",
-    "venueType": "restaurant",
-    "venueName": "Rolfs Kök",
-    "venueAddress": "Tegnérgatan 41",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Traditional Cuisine"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
-  },
-  {
-    "id": "be06e2ce6339fe26",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/mutantur",
-    "title": "Mutantur",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "This laid-back, semi-industrial style restaurant comes with exposed brick walls, polished concrete floors, silver ducting and large windows that let in plenty of light. The kitchen counter bends round to become the bar – you can eat here or at the surrounding black tables – and the good value menu offers plenty of options in the form of small plates, allowing you build your meal however you please. Local flavours lead the way, but come with international accents, from oyster with tiger milk, coriander, Swedish vinegar and sweetcorn cream to beef tartare with green tomato, baked yolk and horseradish.",
-    "venueType": "restaurant",
-    "venueName": "Mutantur",
-    "venueAddress": "Erik Dahlbergsgatan 12-14",
-    "venueCity": "Malmö",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
-  },
-  {
-    "id": "7a0e566f5bf740bb",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/babette",
-    "title": "Babette",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "The very definition of a neighbourhood restaurant, Babette is a lively, bustling spot with a buzzing atmosphere; arrive expecting to squeeze past chairs without stepping on dogs and to sit elbow-to-elbow with your fellow guests. The vibe is chilled, the music is good and the two chefs work away in the tiny kitchen completely unphased. Whether you’re popping in for a glass of wine and the pizza of the day or spending the evening over some ever-evolving small plates – such as ricotta Babette with mushrooms and potatoes or veal tartare with colatura and parmesan – you’ll have a great time.",
-    "venueType": "restaurant",
-    "venueName": "Babette",
-    "venueAddress": "Roslagsgatan 6",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "budget",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
-  },
-  {
-    "id": "67630ded3395be40",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/28",
-    "title": "28+",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "This atmospheric, passionately run basement restaurant has been a Gothenburg institution for over 30 years. Carefully judged, classically based cooking showcases prime seasonal ingredients, skilfully blending French and Swedish influences to create intricate, precise, boldly flavoured dishes. There's an exceptional cheese selection and an outstanding wine list.",
-    "venueType": "restaurant",
-    "venueName": "28+",
-    "venueAddress": "Götabergsgatan 28",
-    "venueCity": "Göteborg",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine",
-      "Classic French"
-    ],
-    "priceRange": "lyx",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
-  },
-  {
-    "id": "8842fd0ee3116ef2",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/vra",
-    "title": "Restaurant vRÅ",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "The imposing 1920s city post office is now a hotel, and this glamorous restaurant sits within what was the central hall – the listed cashier booths still on display. A Nordic-Japanese approach sees fine Scandinavian produce meet Asian techniques, and there’s an impressive range of sake by the glass.",
-    "venueType": "restaurant",
-    "venueName": "Restaurant vRÅ",
-    "venueAddress": "Clarion Hotel Post, Drottningtorget 10",
-    "venueCity": "Göteborg",
-    "score": 0,
-    "cuisine": [
-      "Fusion"
-    ],
-    "priceRange": "budget",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
-  },
-  {
-    "id": "b67ab5e2613dfecb",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/etoile",
-    "title": "Etoile",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "After travelling the world, two friends opened this restaurant to showcase their experiences through food, yet with a decidedly imaginative streak. The cooking is characterised by bold, surprising flavours and creativity – what appears to be savoury may in fact be sweet, and vice versa. The chefs delight in subverting expectations with their playfully named dishes that reference global food traditions, like 'Surf and Turf' and 'Afternoon Tea Party'.",
-    "venueType": "restaurant",
-    "venueName": "Etoile",
-    "venueAddress": "Norra Stationsgatan 51",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Creative",
-      "International"
-    ],
-    "priceRange": "lyx",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
-  },
-  {
-    "id": "012050423e7868a0",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/atmosfar",
-    "title": "Restaurang Atmosfär",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "A large glass-enclosed terrace greets you at this smart yet relaxed corner restaurant on the main road. Natural light fills the room inside too, whether you’re sitting at the large counter, on high stools by the floor-to-ceiling windows or in one of the comfortable dining rooms. Fresh, unfussy cooking delivers generous dishes that are packed with flavour and a joy to eat, such as halibut with a crayfish bisque and Savoy cabbage or deliciously creamy panna cotta with rosemary caramel and apple granita. The atmosphere becomes more lively in the evening thanks, in part, to the homemade cocktails.",
-    "venueType": "restaurant",
-    "venueName": "Restaurang Atmosfär",
-    "venueAddress": "Fersens väg 4",
-    "venueCity": "Malmö",
-    "score": 0,
-    "cuisine": [
-      "Swedish"
-    ],
-    "priceRange": "budget",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
-  },
-  {
-    "id": "eb538bb9289868b3",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/sk-mat-manniskor",
-    "title": "SK Mat & Människor",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "There’s a chic, relaxed vibe to this elegant restaurant where you can watch the chefs at work in the open kitchen. They deliver your dishes too, which are attractively presented and a model of self-restraint, utilising well-thought-through combinations. Quality Swedish and Danish produce helps to achieve good depth of flavour, with a beautiful balance of richness and acidity running through the cooking.",
-    "venueType": "restaurant",
-    "venueName": "SK Mat & Människor",
-    "venueAddress": "Johannebergsgatan 24",
-    "venueCity": "Göteborg",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
-  },
-  {
-    "id": "b20e7e040f114053",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/brasserie-sture",
-    "title": "Brasserie Sture 1912",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Sture has been an icon of Malmö since 1912, and it’s now been reborn as a classic brasserie with décor to match; think mosaic flooring, closely set tables, a long bar and black-and-white photos of celebrities adorning the walls. A pavement terrace and bustling atmosphere only add to its appeal, as does an extensive menu mixing Swedish dishes with traditional Western European fare like confit rabbit or salad Niçoise. The lengthy wine list has a similar ‘Old World’ focus.",
-    "venueType": "restaurant",
-    "venueName": "Brasserie Sture 1912",
-    "venueAddress": "Adelgatan 13",
-    "venueCity": "Malmö",
-    "score": 0,
-    "cuisine": [
-      "Mediterranean Cuisine"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
-  },
-  {
-    "id": "887a467485ea594c",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/forma-1210349",
-    "title": "Forma",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Chic and sultry, this Södermalm spot delivers the look and vibe of a bar, with the added bonus of flavoursome small plates. The cooking is bang on-trend, blending Nordic and French influences with pan-Asian elements including Korean kimchi, Chinese wontons and a daily selection of Japanese mochi for dessert. If you’re an indecisive diner, go for the keenly priced tasting menu to appreciate the full breadth of the kitchen's talents. Well-versed, professional service is the icing on the cake.",
-    "venueType": "restaurant",
-    "venueName": "Forma",
-    "venueAddress": "Hornsbruksgatan 28",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine",
-      "Asian"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
-  },
-  {
-    "id": "614f2b0533cd6c6d",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/celeste-1209889",
-    "title": "Celeste",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Arrive at the entrance to the multi-purpose Batteriet building and you will be led into an inner courtyard; here, the chefs greet you with welcome snacks, before showing you to your table in front of the open kitchen. Their cooking (and the décor) changes with the seasons and there is precision, balance and superb produce in each dish – epitomised by an immaculate, super fine tartlet filled with a tartare of Swedish beef. In a twist on the drinks pairing format, diners can choose between a wine, cocktail or soft drink at each course.",
-    "venueType": "restaurant",
-    "venueName": "Celeste",
-    "venueAddress": "Torkel Knutssonsgatan 24",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "lyx",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
-  },
-  {
-    "id": "f55783a9d90d6819",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/black-milk-gastro-bar",
-    "title": "Black Milk Gastro Bar",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "This intimate restaurant offers great cooking and a fun night out, thanks to its moody lighting, pumping soundtrack and lively cocktail bar. Influenced by South America, Asia and Europe, the creative dishes deliver vibrant flavours and well-judged spicing, while using plenty of modern techniques. Expect to see some luxury ingredients, like Oscietra caviar and Périgord truffles, alongside an enjoyable dose of theatricality, with dishes ranging from courgette flower with cime di rapa, salsa verde and urfa pepper to homemade salted coconut and yuzu gelato topped with Oscietra.",
-    "venueType": "restaurant",
-    "venueName": "Black Milk Gastro Bar",
-    "venueAddress": "Engelbrektsgatan 3",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Creative",
-      "Modern Cuisine"
-    ],
-    "priceRange": "lyx",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
-  },
-  {
-    "id": "71a4efa978fca3d8",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/vastra-gotaland/molnlycke_2675596/restaurant/signum-1205585",
-    "title": "Signum",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "An old manor house on the shores of Landvettersjön Lake provides a beautiful setting for this hotel restaurant, which sits in a boathouse-style annexe. The rustic room is characterised by Scandinavian furnishings, sheepskins and modern art, and floor-to-ceiling windows afford wonderful views over the water. The menu is an excellent showcase of Scandinavian ingredients, with produce coming from the kitchen garden, foraged from the surrounding area and plucked from local waters. Bold flavours and original combinations feature in dishes such as squid, mangalitsa and leek or spruce and Schrenkii caviar.",
-    "venueType": "restaurant",
-    "venueName": "Signum",
-    "venueAddress": "Hällsnäs Hotell, Långenäsvägen 150",
-    "venueCity": "Mölnlycke",
-    "score": 0,
-    "cuisine": [
-      "Creative"
-    ],
-    "priceRange": "lyx",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
-  },
-  {
-    "id": "6eca687d3f00b680",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/petri",
-    "title": "Petri",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "The name is a diminutive version of ‘petrichor’ – which refers to the lovely scent that accompanies rain after a warm period – and there’s a similarly pleasant cosiness to the restaurant itself, thanks to its charming, intimate atmosphere. The set menu follows the seasons, with produce that’s only available in smaller batches offered as optional extra courses, such as pork from Rosa Skattlådan with fermented berries and rose petals. Dishes are well thought out in their creativity, showcasing a good understanding of balance and flavour, while wine and homemade non-alcoholic pairings complete the package.",
-    "venueType": "restaurant",
-    "venueName": "Petri",
-    "venueAddress": "Kommendörsgatan 16",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "lyx",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
-  },
-  {
-    "id": "acbe4cc0795d5f0a",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/arla",
-    "title": "ÄRLA",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "The residents of Östermalm can count themselves lucky to call this charming restaurant run by Lotta and Patric Karlsson their local – but whether you’re a regular or not, you’ll instantly feel the warmth of the team’s hospitality. The fully open-plan layout adds a unique touch, as it blurs the line between dining room and kitchen, where Lotta prepares unfussy, flavour-packed dishes such as blue mussels with onion, jalapeno and bergamot or ling with browned butter, hazelnuts and Brussels sprouts. Great value is to be found on the ‘Kvällens Fyra Favoriter’ menu, a four-course ‘Favourites of the Night’.",
-    "venueType": "restaurant",
-    "venueName": "ÄRLA",
-    "venueAddress": "Danderydsgatan 25",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Farm to table",
-      "Swedish"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
-  },
-  {
-    "id": "7cca1dab0e7f4216",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hallands/halmstad_2659154/restaurant/fyr",
-    "title": "Fyr",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "After many successful years as co-owner of Two-Michelin-Starred Gastrologik in Stockholm, Jacob Holmström returned to his birthplace with his wife Emelie and fell in love with this fantastic building on the Tylösand headland. Its design is chic and modern, and the atmosphere laid-back – and you’ll find it hard to decide whether to keep your eyes on the view, the open kitchen or the plate in front of you. The menu opens with snacks and ‘Canned Food’ (roe and caviar), before moving onto ‘Fish from the Cabinet’ and dishes showcasing other regional ingredients such as lamb with nettle purée and artichoke.",
-    "venueType": "restaurant",
-    "venueName": "Fyr",
-    "venueAddress": "Tjuvahålsvägen 9",
-    "venueCity": "Halmstad",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
-  },
-  {
-    "id": "2d4439e6742737e5",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/essence-1203656",
-    "title": "Essence",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Essence is the perfect spot for social types who like to mingle with their fellow guests. Everyone is seated around a big counter and served at the same time, with Chef Stefan Taylor centre stage preparing the dishes and explaining their make-up. He works alone, so there’s a slight pause between courses, and it’s here when the atmosphere becomes animated and you find yourself chatting away. Stefan has an intuitive way of combining flavours and spends hours each week drying, pickling and preparing the various elements in advance for dishes such as wild duck with mushrooms, watercress and thyme.",
-    "venueType": "restaurant",
-    "venueName": "Essence",
-    "venueAddress": "Hjalmar Södersbergs Väg 10",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine",
-      "Seasonal Cuisine"
-    ],
-    "priceRange": "lyx",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
-  },
-  {
-    "id": "13d1d98c7bf2fe67",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/vastergatan",
-    "title": "Västergatan",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Owned and run by a friendly couple – Olle, who cooks, and Sophie, who looks after the service – this unpretentious city centre bistro has certainly stood the test of time, with 2025 marking its 20th year. This is thanks, in part, to the flavour-packed dishes, where good quality regional ingredients are brought together in harmonious, visually appealing combinations. The four-course set menu changes with the seasons, featuring the likes of cod with blue mussels, beach rose and pink peppercorn, followed by grapefruit with ginger and black lime – wine and juice flights are available to accompany.",
-    "venueType": "restaurant",
-    "venueName": "Västergatan",
-    "venueAddress": "Västergatan 16",
-    "venueCity": "Malmö",
-    "score": 0,
-    "cuisine": [
-      "Swedish"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
-  },
-  {
-    "id": "5c1f0c77a180e710",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hallands/tvaaker/restaurant/ang",
-    "title": "ÄNG",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "The Ästad Vingård estate plays host to a luxury hotel and this stunningly designed, greenhouse-inspired restaurant set over two levels. Your visit starts with finely crafted snacks at the chef’s counter, then leads into a no-waste surprise tasting menu that uses fantastic seasonal produce from the surrounding Halland region. Skilfully prepared dishes are delicate, balanced and full of flavour, with combinations like scallop, glazed with fruity chilli caramel and served with preserved yellow tomato coulis, a good example of their cooking style. The cheese course is taken in a magnificent wine cellar.",
-    "venueType": "restaurant",
-    "venueName": "ÄNG",
-    "venueAddress": "Ästad Vingård, Ästad 10",
-    "venueCity": "Tvååker",
-    "score": 0,
-    "cuisine": [
-      "Creative"
-    ],
-    "priceRange": "lyx",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
+    "collectedAt": "2026-04-16T16:24:33.455Z",
+    "enrichedAt": "2026-04-16T16:24:33.455Z"
   },
   {
     "id": "09d51c53d3b5a30d",
@@ -532,8 +89,77 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
+    "collectedAt": "2026-04-16T16:24:33.455Z",
+    "enrichedAt": "2026-04-16T16:24:33.455Z"
+  },
+  {
+    "id": "73d2417bb6aef432",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/lux-dag-for-dag",
+    "title": "Lux Dag för Dag",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "A stylish, red-brick former factory dating back to 1916, set beside the water, is home to this brasserie-style restaurant that has a welcome brightness to both its décor and its atmosphere. Local produce is key to their ethos, including the likes of Östergötland lamb and Ängsö pike-perch, along with plenty of seasonal ingredients such as asparagus and rhubarb. Unfussy, classically based dishes allow this fresh produce to shine, with the flexible courses ranging in size from 'mini' to 'large'. There's also a set Kitchen Menu available for those that can't quite decide.",
+    "venueType": "restaurant",
+    "venueName": "Lux Dag för Dag",
+    "venueAddress": "Primusgatan 116",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.455Z",
+    "enrichedAt": "2026-04-16T16:24:33.455Z"
+  },
+  {
+    "id": "dc09eaade67ed652",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/frantzen",
+    "title": "Frantzén",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "World-renowned Chef Björn Frantzén provides a truly immersive experience that you won't forget in a hurry at his uber-stylish restaurant. Ring the bell to enter, before enjoying an aperitif in the top-floor lounge while the day's ingredients are explained, then head to the dining room with its beautiful counter seating to witness the exceptionally talented chefs at work as they craft creative, perfectly executed dishes. The service works like clockwork to enhance the experience.",
+    "venueType": "restaurant",
+    "venueName": "Frantzén",
+    "venueAddress": "Klara Norra Kyrkogata 26",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Creative"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.455Z",
+    "enrichedAt": "2026-04-16T16:24:33.455Z"
+  },
+  {
+    "id": "71a4efa978fca3d8",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/molnlycke_2675596/restaurant/signum-1205585",
+    "title": "Signum",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "An old manor house on the shores of Landvettersjön Lake provides a beautiful setting for this hotel restaurant, which sits in a boathouse-style annexe. The rustic room is characterised by Scandinavian furnishings, sheepskins and modern art, and floor-to-ceiling windows afford wonderful views over the water. The menu is an excellent showcase of Scandinavian ingredients, with produce coming from the kitchen garden, foraged from the surrounding area and plucked from local waters. Bold flavours and original combinations feature in dishes such as squid, mangalitsa and leek or spruce and Schrenkii caviar.",
+    "venueType": "restaurant",
+    "venueName": "Signum",
+    "venueAddress": "Hällsnäs Hotell, Långenäsvägen 150",
+    "venueCity": "Mölnlycke",
+    "score": 0,
+    "cuisine": [
+      "Creative"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.457Z",
+    "enrichedAt": "2026-04-16T16:24:33.457Z"
   },
   {
     "id": "64b23273fc8434d4",
@@ -556,32 +182,171 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-23T18:29:15.859Z",
-    "enrichedAt": "2026-03-23T18:29:15.859Z"
+    "collectedAt": "2026-04-16T16:24:33.457Z",
+    "enrichedAt": "2026-04-16T16:24:33.457Z"
   },
   {
-    "id": "e54c34b5ddb07cff",
+    "id": "5b4de54d0e9c7bb4",
     "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/bar-agrikultur",
-    "title": "Bar Agrikultur",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/vollmers",
+    "title": "Vollmers",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "This lively wine bar is a perfect fit for the neighbourhood. Sit at closely set tables or on high stools either up at the bar counter or next to the window, surrounded by paintings and hunting trophies, including some impressive antlers and a huge wild boar’s head. Order your way through the menu of small plates, which highlight Swedish ingredients and flavours, and feature the likes of cheese balls with garlic honey or pork neck skewer with oyster sauce and chives. Three stainless steel tanks contain home-distilled gin – flavours change regularly, courtesy of various herbs, oils and fruits.",
+    "bodyText": "Keep an eye out for the small sign hanging above the door of this discreet restaurant on a cobbled Old Town street, otherwise you might walk right on by. From the outside, its whitewashed walls give it something of a residential look, which is matched inside by an elegantly low-key dining room where seven linen-laid tables and comfy chairs set a homely tone. The surprise menu sees texture and acidity used to good effect in creative, sophisticated dishes; some are inspired by the owners’ childhood memories, such as the traditional pork, cabbage and lingonberry, which is elevated into a very personal dish.",
     "venueType": "restaurant",
-    "venueName": "Bar Agrikultur",
-    "venueAddress": "Skånegatan 79",
-    "venueCity": "Stockholm",
+    "venueName": "Vollmers",
+    "venueAddress": "Tegelgårdsgatan 5",
+    "venueCity": "Malmö",
     "score": 0,
     "cuisine": [
-      "Swedish",
-      "Small eats"
+      "Contemporary"
     ],
-    "priceRange": "budget",
+    "priceRange": "lyx",
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.457Z",
+    "enrichedAt": "2026-04-16T16:24:33.457Z"
+  },
+  {
+    "id": "312ee66c4cc52ac8",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/simrishamn_2683288/restaurant/vyn",
+    "title": "VYN",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "On the southern tip of Sweden, Chef-Owner Daniel Berlin has taken a former farmhouse and turned it into the latest platform for his thrillingly impressive cooking. A dish of milk-fed lamb encapsulates so many of VYN’s strengths: the produce is superb; the cooking over fire is precise and technically accomplished; and the accompanying brunoise of lamb heart, neck and sweetbreads underlines how using the whole animal bolsters both flavour and sustainability. The full operation also includes 15 hotel rooms and the more relaxed Food and Wine bar.",
+    "venueType": "restaurant",
+    "venueName": "VYN",
+    "venueAddress": "Höga vägen 72",
+    "venueCity": "Simrishamn",
+    "score": 0,
+    "cuisine": [
+      "Creative"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.457Z",
+    "enrichedAt": "2026-04-16T16:24:33.457Z"
+  },
+  {
+    "id": "67630ded3395be40",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/28",
+    "title": "28+",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "This atmospheric, passionately run basement restaurant has been a Gothenburg institution for over 30 years. Carefully judged, classically based cooking showcases prime seasonal ingredients, skilfully blending French and Swedish influences to create intricate, precise, boldly flavoured dishes. There's an exceptional cheese selection and an outstanding wine list.",
+    "venueType": "restaurant",
+    "venueName": "28+",
+    "venueAddress": "Götabergsgatan 28",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine",
+      "Classic French"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.457Z",
+    "enrichedAt": "2026-04-16T16:24:33.457Z"
+  },
+  {
+    "id": "b67ab5e2613dfecb",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/etoile",
+    "title": "Etoile",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "After travelling the world, two friends opened this restaurant to showcase their experiences through food, yet with a decidedly imaginative streak. The cooking is characterised by bold, surprising flavours and creativity – what appears to be savoury may in fact be sweet, and vice versa. The chefs delight in subverting expectations with their playfully named dishes that reference global food traditions, like 'Surf and Turf' and 'Afternoon Tea Party'.",
+    "venueType": "restaurant",
+    "venueName": "Etoile",
+    "venueAddress": "Norra Stationsgatan 51",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Creative",
+      "International"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.458Z",
+    "enrichedAt": "2026-04-16T16:24:33.458Z"
+  },
+  {
+    "id": "eb538bb9289868b3",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/sk-mat-manniskor",
+    "title": "SK Mat & Människor",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "There’s a chic, relaxed vibe to this elegant restaurant where you can watch the chefs at work in the open kitchen. They deliver your dishes too, which are attractively presented and a model of self-restraint, utilising well-thought-through combinations. Quality Swedish and Danish produce helps to achieve good depth of flavour, with a beautiful balance of richness and acidity running through the cooking.",
+    "venueType": "restaurant",
+    "venueName": "SK Mat & Människor",
+    "venueAddress": "Johannebergsgatan 24",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.458Z",
+    "enrichedAt": "2026-04-16T16:24:33.458Z"
+  },
+  {
+    "id": "614f2b0533cd6c6d",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/celeste-1209889",
+    "title": "Celeste",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Arrive at the entrance to the multi-purpose Batteriet building and you will be led into an inner courtyard; here, the chefs greet you with welcome snacks, before showing you to your table in front of the open kitchen. Their cooking (and the décor) changes with the seasons and there is precision, balance and superb produce in each dish – epitomised by an immaculate, super fine tartlet filled with a tartare of Swedish beef. In a twist on the drinks pairing format, diners can choose between a wine, cocktail or soft drink at each course.",
+    "venueType": "restaurant",
+    "venueName": "Celeste",
+    "venueAddress": "Torkel Knutssonsgatan 24",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.458Z",
+    "enrichedAt": "2026-04-16T16:24:33.458Z"
+  },
+  {
+    "id": "5c1f0c77a180e710",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hallands/tvaaker/restaurant/ang",
+    "title": "ÄNG",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "The Ästad Vingård estate plays host to a luxury hotel and this stunningly designed, greenhouse-inspired restaurant set over two levels. Your visit starts with finely crafted snacks at the chef’s counter, then leads into a no-waste surprise tasting menu that uses fantastic seasonal produce from the surrounding Halland region. Skilfully prepared dishes are delicate, balanced and full of flavour, with combinations like scallop, glazed with fruity chilli caramel and served with preserved yellow tomato coulis, a good example of their cooking style. The cheese course is taken in a magnificent wine cellar.",
+    "venueType": "restaurant",
+    "venueName": "ÄNG",
+    "venueAddress": "Ästad Vingård, Ästad 10",
+    "venueCity": "Tvååker",
+    "score": 0,
+    "cuisine": [
+      "Creative"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.458Z",
+    "enrichedAt": "2026-04-16T16:24:33.458Z"
   },
   {
     "id": "915ecae381b84206",
@@ -603,77 +368,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "9281a299be7d0f5f",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/la-cucina-italiana",
-    "title": "La Cucina Italiana",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "In this cosy, romantic restaurant comprising just eight tables, chef Allesio Fioriniello continues his father’s legacy by cooking up authentic Italian dishes with southern overtones (the family hails from Naples). He is helped along in his mission by childhood friend, Enzo, who takes charge in the restaurant. Carefully prepared, seasonal dishes are a model of their kind and could include the likes of a rich, beautifully textured parmigiana di melanzane or Rossini venison with seared milk bread and panzerotti.",
-    "venueType": "restaurant",
-    "venueName": "La Cucina Italiana",
-    "venueAddress": "Skånegatan 33",
-    "venueCity": "Göteborg",
-    "score": 0,
-    "cuisine": [
-      "Italian"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "d8013468c225ffa5",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/lilla-ego",
-    "title": "Lilla Ego",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "With its pared-back feel, rustic exposed brickwork and buzzy vibe, this is just the place for a lively night out. It remains one of the hottest tickets in town, so try for a counter seat overlooking the kitchen if you haven’t booked. The concise menu includes modernised Swedish classics that are robust, well-composed and certainly deliver on flavour. Service is accommodating, warm and efficient.",
-    "venueType": "restaurant",
-    "venueName": "Lilla Ego",
-    "venueAddress": "Västmannagatan 69",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "dc09eaade67ed652",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/frantzen",
-    "title": "Frantzén",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "World-renowned Chef Björn Frantzén provides a truly immersive experience that you won't forget in a hurry at his uber-stylish restaurant. Ring the bell to enter, before enjoying an aperitif in the top-floor lounge while the day's ingredients are explained, then head to the dining room with its beautiful counter seating to witness the exceptionally talented chefs at work as they craft creative, perfectly executed dishes. The service works like clockwork to enhance the experience.",
-    "venueType": "restaurant",
-    "venueName": "Frantzén",
-    "venueAddress": "Klara Norra Kyrkogata 26",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Creative"
-    ],
-    "priceRange": "lyx",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.458Z",
+    "enrichedAt": "2026-04-16T16:24:33.458Z"
   },
   {
     "id": "0b3ecea5d8c48037",
@@ -695,8 +391,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.458Z",
+    "enrichedAt": "2026-04-16T16:24:33.458Z"
   },
   {
     "id": "55cf6adf08744417",
@@ -718,100 +414,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "b6869b340da374de",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/kockeriet",
-    "title": "Kockeriet",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "In a characterful 17C former grain warehouse, owned by Malmö-born TV chef Tareq Taylor, a young and talented team prepare well-balanced contemporary dishes with great precision. Scandinavian produce is at its heart, with some coming from the kitchen garden. The timbered dining room is relaxed and inviting, the service friendly, and the drinks pairings well-conceived.",
-    "venueType": "restaurant",
-    "venueName": "Kockeriet",
-    "venueAddress": "Norra Vallgatan 28",
-    "venueCity": "Malmö",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "lyx",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "fb51c724b0435b3f",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/bloom-in-the-park",
-    "title": "Bloom in the Park",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Be sure to arrive early for an aperitif on the terrace of this charming lakeside lodge before heading through to the modern, minimalist restaurant. In an unusual twist, both the menu and the matching wine pairings are a complete surprise! You submit your allergies and dislikes in advance, with the components of the dishes only revealed at the end of the meal when you are given a QR code to scan. Combinations could include halibut with satsuma, endive and crab bisque or seared roe deer with pumpkin and forest mushrooms. This element of the unknown stimulates both the mind and the palate through your meal.",
-    "venueType": "restaurant",
-    "venueName": "Bloom in the Park",
-    "venueAddress": "Pildammsvägen 17",
-    "venueCity": "Malmö",
-    "score": 0,
-    "cuisine": [
-      "Creative"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "8e8c03e02450dd05",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/hillenberg",
-    "title": "Hillenberg",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Perfectly pitched for busy Humlegårdsgatan is this stylish take on a classic brasserie. It has a smart, elegant feel and a hugely impressive wine cellar. Appealing Swedish classics are immensely satisfying yet exhibit a subtle modern touch and sense of finesse.",
-    "venueType": "restaurant",
-    "venueName": "Hillenberg",
-    "venueAddress": "Humlegårdsgatan 14",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "559e9387c3a27aae",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/solen",
-    "title": "SOLEN",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "If there's such a thing as ‘industrial elegance’, then they’ve found it at this bang on-trend spot in the city’s meat-packing district. Exposed wires and concrete pillars combine with white tablecloths in a chic space that’s proving hugely popular with Stockholm’s diners. It’s owned by the experienced operators behind Adam / Albin and is an impressively well-run place; the cooking borrows from around the world, including small selections of tacos and wood-fired pizzas. On a cold day, sit round the impressive fire-lit chimney.",
-    "venueType": "restaurant",
-    "venueName": "SOLEN",
-    "venueAddress": "Hallgränd 45",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "budget",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.458Z",
+    "enrichedAt": "2026-04-16T16:24:33.458Z"
   },
   {
     "id": "7d99f2eda7460e68",
@@ -833,8 +437,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.458Z",
+    "enrichedAt": "2026-04-16T16:24:33.458Z"
   },
   {
     "id": "c8025c36f0d2215c",
@@ -856,240 +460,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "d682780d0b49922f",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/triton",
-    "title": "Triton",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Charming in its lack of pretension, this bohemian neighbourhood restaurant has a homely feel. It’s simply furnished and the pared-back cooking has an unfussiness to match. Dishes show technical skill and provide some well-judged flavours using great Swedish ingredients. In an expensive city, the set menu presents good value for cooking of this quality.",
-    "venueType": "restaurant",
-    "venueName": "Triton",
-    "venueAddress": "Ringvägen 87",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "423d6168972076f3",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/oxenstiernan",
-    "title": "Oxenstiernan",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "You can’t miss this stylish, orange-painted bistro which stands out against the greenery of a city park. In summer, be sure to dine on the terrace, under the trees. A environmentally conscious ethos runs throughout, from the interior design to the ethically sourced produce used in the unfussy, boldly flavoured Swedish dishes.This restaurant is currently closed and due to reopen in Spring 2026.",
-    "venueType": "restaurant",
-    "venueName": "Oxenstiernan",
-    "venueAddress": "Storgatan 35B",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Swedish"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "512460f6349d6376",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/ruths",
-    "title": "Ruths",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "The open kitchen takes centre stage at this buzzy all-day café/bakery/deli, which has been wholeheartedly embraced by the locals. Lunchtime snacks and salads make room for generously sized, boldly flavoured Mediterranean dishes at dinner. Most of the wines on the concise list are available on-tap.",
-    "venueType": "restaurant",
-    "venueName": "Ruths",
-    "venueAddress": "Mäster Johansgatan 11",
-    "venueCity": "Malmö",
-    "score": 0,
-    "cuisine": [
-      "Mediterranean Cuisine"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "a7a8d35fc679a37d",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/freyja",
-    "title": "freyja",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Head straight for the roof terrace to kick off your visit with a cocktail and 360° views of Stockholm and, once inside, opt for a seat by the curved window to capitalise on the 13th floor location. The menu includes modernised yet comforting Swedish classics like Kroppkaka, executed with care and confidence, yielding well-balanced flavours. This is a place where you'll feel equally at home dining in a couple or as a group, as it delivers something for everyone.",
-    "venueType": "restaurant",
-    "venueName": "freyja",
-    "venueAddress": "Hornsgatan 18",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Swedish",
-      "Modern Cuisine"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "b02bd15472d83a1d",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/poppy",
-    "title": "Poppy",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Chef-Owner Tobias has created a fun little neighbourhood spot here at Poppy, where groups of friends sit shoulder to shoulder at wooden tables in a trendy bistro-style room. It’s a compact place, with room for just 24 diners – including four seats overlooking the kitchen – but that’s all part of its cosy appeal. The five-course tasting menu offers seasonal modern dishes like monkfish 'binchotan' with tomato gel, hazelnut butter emulsion and mussel broth. Unusually, there’s no wine list, just shelves filled with bottles, their prices marked on them in chalk.",
-    "venueType": "restaurant",
-    "venueName": "Poppy",
-    "venueAddress": "Fjärde Långgatan 1",
-    "venueCity": "Göteborg",
-    "score": 0,
-    "cuisine": [
-      "Seasonal Cuisine",
-      "Farm to table"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "54a5b1762ea55551",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/leijontornet",
-    "title": "Leijontornet",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "After a few years as Djuret, this long-established restaurant has returned to its original guise and provides heaps of old-school charm. The dining room is full of character, with armchairs, vaulted brick ceilings and candlelit tables all adding to the appeal. The cooking has heavy French and other European influences, providing bold flavours across a wide selection of generous dishes. Expect plenty of premium produce, from lobster to turbot, and an extensive, similarly luxurious wine list.",
-    "venueType": "restaurant",
-    "venueName": "Leijontornet",
-    "venueAddress": "Lilla Nygatan 5",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "European"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "897f047698194f95",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/minh-mat",
-    "title": "Minh Mat",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "There is a wonderfully personal touch to this well-run Vietnamese restaurant, with posters and old photos adorning the walls, and an array of objects decorating the room. It’s an enjoyably relaxed setting for the cooking, which uses impressive ingredients – some of them from local producers – and mines plenty of flavour from simple-looking compositions. A light, smooth cream of corn sauce, for example, is a skilful and delicious accompaniment to quality grilled prawns.",
-    "venueType": "restaurant",
-    "venueName": "Minh Mat",
-    "venueAddress": "Odengatan 94",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Vietnamese"
-    ],
-    "priceRange": "budget",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "f1068e10cbbf427b",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/bord",
-    "title": "BORD",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "You’re guaranteed a warm welcome at this sweetly run bohemian bistro. A communal table is at the heart of proceedings, but there are a few smaller tables and some counter seating available too. Starters merge into mains on the daily menu of unfussy, pared-back dishes, where skilful Mediterranean-inspired cooking keeps the focus firmly on the top-quality ingredients. They make their own ricotta on-site and the wood-fired oven is used to great effect, from baking bread in the morning to gratinating langoustines in the evening. Dinner is the main event, but they also open on Saturdays for lunch.",
-    "venueType": "restaurant",
-    "venueName": "BORD",
-    "venueAddress": "Roslagsgatan 43",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Mediterranean Cuisine"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "1590e4b594af96da",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/skane/ystad_2694134/restaurant/jh-matbar",
-    "title": "JH matbar",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "You will find this bistro at the southern tip of Sweden, in the centre of a small town with picturesque streets that provided the setting for the Wallander detective TV series. The good value menu offers a wide choice of dishes, with vegetarians and vegans well catered for. Scandinavian produce powers many of the modern dishes, which are prepared and presented with real care.",
-    "venueType": "restaurant",
-    "venueName": "JH matbar",
-    "venueAddress": "Stora Östergatan 34",
-    "venueCity": "Ystad",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "3f20c5dbc7fe9f07",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/prospero",
-    "title": "Prospero",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "There’s a slightly ‘underground’ feel to this small bistro, both figuratively and literally; you enter via a few steps down from street level, into a ‘half-cellar’ dining room where the windows look out at pavement level. The concise, keenly priced tasting menu lists dishes that offer an impressive level of restraint and control, where sauces are a focus. You might find the likes of trout with tomato and langoustine sauce or onglet with ramson and fish sauce, followed by rhubarb with yoghurt and chamomile.",
-    "venueType": "restaurant",
-    "venueName": "Prospero",
-    "venueAddress": "Roslagsgatan 21",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "budget",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.458Z",
+    "enrichedAt": "2026-04-16T16:24:33.458Z"
   },
   {
     "id": "e9edac7dc2c2e4e8",
@@ -1112,31 +484,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "83708b1ef440d988",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/human",
-    "title": "Human",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "In a quiet residential street behind the 17C Skansen Kronan fortress, you'll find this stylishly decorated restaurant decked out with neutral tones and vintage furniture. The first solo project for Martin Moses, it focuses on New Nordic cooking, which is executed with a skilful touch. In the evening you can sample the quality dishes from either a small or large tasting menu, with a four or five course set menu available at lunch.",
-    "venueType": "restaurant",
-    "venueName": "Human",
-    "venueAddress": "Risåsgatan 8",
-    "venueCity": "Göteborg",
-    "score": 0,
-    "cuisine": [
-      "Creative"
-    ],
-    "priceRange": "lyx",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
   },
   {
     "id": "21857518e4d55e7c",
@@ -1145,7 +494,7 @@
     "title": "HOZE",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "A brick house on the edge of town plays host to this discreet restaurant, where the chef’s father welcomes you through a black curtain into a sleek, minimalist space where six chairs sit at an oak counter. The meal starts at 6pm sharp, with the chef preparing his daily omakase menu directly on the countertop. He builds a great connection with guests as he explains how he chooses the best quality fish according to the seasons and the weather. His sushi is prepared with exemplary attention to detail, from kelp-infused jelly with chives and trout roe to leek with miso, hazelnut butter and sherry sauce.",
+    "bodyText": "A brick house on the edge of town plays host to this discreet restaurant, where you are welcomed through a black curtain into a sleek, minimalist space where six chairs sit at an oak counter. The meal starts at 6pm sharp, with the chef preparing his daily omakase menu directly on the countertop. He builds a great connection with guests as he explains how he chooses the best quality fish according to the seasons and the weather. His sushi is prepared with exemplary attention to detail, from kelp-infused jelly with chives and trout roe to leek with miso, hazelnut butter and sherry sauce. A mindful beverage pairing complements his philosophy of seasonal harmony.",
     "venueType": "restaurant",
     "venueName": "HOZE",
     "venueAddress": "Stigbergsliden 17",
@@ -1158,54 +507,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "b91adff40894f3b0",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/oland/borgholm/restaurant/hotell-borgholm1186400",
-    "title": "Hotell Borgholm",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "The beautiful island of Öland is famous for its wild herbs, and that’s reflected in the cooking at this historic hotel’s restaurant, where the chefs enhance their elaborate dishes with thyme, basil and a host of other flavours from the 100-variety-strong garden. The original, boldly flavoured cooking comes in a tasting menu format, marrying classical techniques with subtle modern ones in dishes such as pan-fried red kingfish with spring chlorophyll, pickled cloudberries, saffron butter sauce and bronze fennel. The accompanying wine list is a real treasure trove for oenophiles.",
-    "venueType": "restaurant",
-    "venueName": "Hotell Borgholm",
-    "venueAddress": "Trädgårdsgatan 15",
-    "venueCity": "Borgholm",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "lyx",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "e28ac4d6c662d1b0",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/carbon",
-    "title": "Carbon",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "There is an elegant quality to this smart, modern bistro de luxe with rich décor and crushed velvet banquettes. The seasonal menu mixes contemporary techniques with a more traditional base and all dishes come with suggested wine pairings; choose between five or eight courses – or come from Monday to Thursday for an additional three-course option. This is a deservedly busy spot where the attentive, personable service adds to the experience. Be sure to look out for the dishes from the Josper oven.",
-    "venueType": "restaurant",
-    "venueName": "Carbon",
-    "venueAddress": "Barnhusgatan 2",
-    "venueCity": "Göteborg",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "lyx",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
   },
   {
     "id": "63e88dbc61d8d7ea",
@@ -1227,100 +530,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "00935d10e2b1aa04",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/namu",
-    "title": "Namu",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Restaurateur and Swedish MasterChef winner Jennie Walldén is behind this fun, energetic restaurant that blends Nordic ingredients with Jennie's South Korean heritage. Offering great value for money, the cooking is colourful, zingy and generous in both size and flavour; the signature flank steak served with an array of accompaniments is a highlight. Dishes are designed for sharing, with tasting menus available if you're feeling indecisive. Head next door to their Gaji cocktail bar to keep the party going.",
-    "venueType": "restaurant",
-    "venueName": "Namu",
-    "venueAddress": "Landbygatan 5",
-    "venueCity": "Malmö",
-    "score": 0,
-    "cuisine": [
-      "Korean"
-    ],
-    "priceRange": "budget",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "35a98345e3c596c7",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/b-a-r",
-    "title": "Restaurang B.A.R.",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "This bright, buzzy restaurant is just a cast away from the waterfront and has a semi-industrial fish-market look. Choose your seafood from the fridge or the tank, along with a cooking style, a sauce and one of their interesting sides.",
-    "venueType": "restaurant",
-    "venueName": "Restaurang B.A.R",
-    "venueAddress": "Blasieholmsgatan 4A",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Seafood"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "73d2417bb6aef432",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/lux-dag-for-dag",
-    "title": "Lux Dag för Dag",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "A stylish, red-brick former factory dating back to 1916, set beside the water, is home to this brasserie-style restaurant that has a welcome brightness to both its décor and its atmosphere. Local produce is key to their ethos, including the likes of Östergötland lamb and Ängsö pike-perch, along with plenty of seasonal ingredients such as asparagus and rhubarb. Unfussy, classically based dishes allow this fresh produce to shine, with the flexible courses ranging in size from 'mini' to 'large'. There's also a set Kitchen Menu available for those that can't quite decide.",
-    "venueType": "restaurant",
-    "venueName": "Lux Dag för Dag",
-    "venueAddress": "Primusgatan 116",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "053cb3b9d0fb6153",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/farang",
-    "title": "Farang",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "The flavours of Southeast Asia are the inspiration behind this stylish restaurant and bar that occupies the building once home to the Stockholm Electric Company. The unusual front door harks back to its former occupation, but once inside it's a chic space with soft lighting and a large open kitchen. The colorful, zingy cooking includes Thai dishes like laab and crying tiger beef, along with Vietnamese-style sashimi and other influences from the wider region. Strong service, sensible prices and a fun atmosphere complete the picture.",
-    "venueType": "restaurant",
-    "venueName": "Farang",
-    "venueAddress": "Tulegatan 7",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "South East Asian"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
   },
   {
     "id": "49f556895089a48f",
@@ -1342,217 +553,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "b884769fe1db7ba4",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/nisch",
-    "title": "NISCH",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "This pleasantly relaxed little neighbourhood restaurant is sleekly and stylishly decorated with a monochrome colour scheme. For its part, the kitchen produces accomplished dishes and boasts some good eco-credentials. The modern, understated Nordic set menu is inspired by global flavours and changes every few weeks. The interesting wine list is mainly organic and biodynamic in nature.",
-    "venueType": "restaurant",
-    "venueName": "NISCH",
-    "venueAddress": "Dalagatan 42",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "0aa3484da6d31172",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/allegrine",
-    "title": "Allegrine",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Set off the busy Sveavägen thoroughfare, this brasserie provides a hidden oasis. Sit on the attractive front terrace or in the chic dining room, where seats at the kitchen counter are in demand. Variously sized dishes are richly flavoured, with a French base, Scandinavian influences and subtle contrasts.",
-    "venueType": "restaurant",
-    "venueName": "Allegrine",
-    "venueAddress": "Kammakargatan 22",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "French"
-    ],
-    "priceRange": "budget",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "2b25ed6bfbac1a94",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/ulla-winbladh",
-    "title": "Ulla Winbladh",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Ulla Winbladh was originally built as a steam bakery for the 1897 Stockholm World Fair and is set in charming parkland beside the Skansen open-air museum. Sit on the terrace or in the older, more characterful part of the building. Typical Swedish dishes include the likes of fish roe and sweet and sour herring.",
-    "venueType": "restaurant",
-    "venueName": "Ulla Winbladh",
-    "venueAddress": "Rosendalsvägen 8",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Swedish"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "5b4de54d0e9c7bb4",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/vollmers",
-    "title": "Vollmers",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Keep an eye out for the small sign hanging above the door of this discreet restaurant on a cobbled Old Town street, otherwise you might walk right on by. From the outside, its whitewashed walls give it something of a residential look, which is matched inside by an elegantly low-key dining room where seven linen-laid tables and comfy chairs set a homely tone. The surprise menu sees texture and acidity used to good effect in creative, sophisticated dishes; some are inspired by the owners’ childhood memories, such as the traditional pork, cabbage and lingonberry, which is elevated into a very personal dish.",
-    "venueType": "restaurant",
-    "venueName": "Vollmers",
-    "venueAddress": "Tegelgårdsgatan 5",
-    "venueCity": "Malmö",
-    "score": 0,
-    "cuisine": [
-      "Contemporary"
-    ],
-    "priceRange": "lyx",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "43300d131060a657",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/familjen",
-    "title": "Familjen",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "This lively, friendly eatery is divided into three parts: a bar with bench seating and an open kitchen; a bright red room with a characterful cellar and a glass wine cave; and a superb wrap-around terrace. The good value cooking is rich and hearty, with a touch of originality here and there. A relaxed atmosphere and an appealing wine, beer and cocktail list add to the experience.",
-    "venueType": "restaurant",
-    "venueName": "Familjen",
-    "venueAddress": "Arkivgatan 7",
-    "venueCity": "Göteborg",
-    "score": 0,
-    "cuisine": [
-      "Scandinavian",
-      "Swedish"
-    ],
-    "priceRange": "budget",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "f44f93bdf1524a86",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/lyran",
-    "title": "Lyran Matbar",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "There’s a pleasingly relaxed air at this small, simply styled restaurant, where the experienced team lead the service with a friendly smile. Upstairs it’s more about drinks, so if you’re here to dine then head down the spiral staircase to the rustic cellar. The well-balanced tasting menus come in Mixed, Pescetarian and Vegetarian versions and are created daily from the best local produce available. All you are presented with is a list of ingredients, which are then turned into modern Swedish creations such as ‘yellow beet, skyr, pistachio, cedrat, fennel pollen, burned butter and sherry’.",
-    "venueType": "restaurant",
-    "venueName": "Lyran Matbar",
-    "venueAddress": "Simrishamnsgatan 36a",
-    "venueCity": "Malmö",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine",
-      "Swedish"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "aaf6725e5094b1f7",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/matbaren",
-    "title": "Matbaren",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Set within the Grand Hotel, this trendy, modern bistro offers well-priced dishes with a Scandinavian heart; three are about right for one person, or order more and share. Grab a seat at the zinc-topped bar counter for a better view of the open kitchen; the keen service team add to the atmosphere.",
-    "venueType": "restaurant",
-    "venueName": "Matbaren",
-    "venueAddress": "Södra Blasieholmshamnen 6",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "6084936d4f3e8e47",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/trattoria-la-strega",
-    "title": "Trattoria La Strega",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Run by passionate, charming owners, this lively little trattoria is nestled within a quiet residential area, and serves the kind of authentic Northern Italian food that you would find in a good trattoria in Piemonte or Triveneto. Boldly flavoured dishes are best enjoyed from the 'Menu Degustazione', accompanied by a candlelit table and a glass of wine from the extensive Italian selection.",
-    "venueType": "restaurant",
-    "venueName": "Trattoria La Strega",
-    "venueAddress": "Aschebergsgatan 23B",
-    "venueCity": "Göteborg",
-    "score": 0,
-    "cuisine": [
-      "Italian"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "143ba1a14cc03e6e",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/sjomagasinet",
-    "title": "Sjömagasinet",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "A charming split-level restaurant in an old 1775 East India Company warehouse; sit on the upper floor to take in the lovely harbour view. Cooking offers a pleasing mix of classic and modern dishes, with seafood kept to the fore. The wine list offers a good selection of top burgundies.",
-    "venueType": "restaurant",
-    "venueName": "Sjömagasinet",
-    "venueAddress": "Klippans Kulturreservat, Adolf Edelsvärds gata 5",
-    "venueCity": "Göteborg",
-    "score": 0,
-    "cuisine": [
-      "Seafood"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
   },
   {
     "id": "0eda58ddf3a561e3",
@@ -1575,77 +577,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "a0bdf798bf6ed396",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/ostergotland/linkoping_2608143/restaurant/jord-1202242",
-    "title": "JORD",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "‘Forest to plate’ is the message here, with wild and hyper-seasonal ingredients at the fore. Some of the produce is foraged, whilst meat is often hunted by the owner in the surrounding area. The surprise tasting menu delivers a large array of creative dishes with intriguing blends of flavours and textures. Preserving, pickling, smoking and curing are all done in-house, giving new life to the local ingredients.",
-    "venueType": "restaurant",
-    "venueName": "JORD",
-    "venueAddress": "Johannesborgparken 1A",
-    "venueCity": "Linkoping",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "lyx",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "d111e343345aa955",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/washoku-tomo",
-    "title": "Washoku TOMO",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "In the western half of Södermalm, Chef-Owner Tomoko Hayashi is bolstering Stockholm’s Japanese dining scene by offering an omakase experience that doesn’t break the bank. While this is Japanese cooking that’s not entirely focussed on sushi, seafood nevertheless plays a central role in the menu. The produce comes from all over the world, be it Spanish sea bass, Argentinian prawns or Canadian black cod. Tomoko leads the smooth service herself with personality and professionalism.",
-    "venueType": "restaurant",
-    "venueName": "Washoku TOMO",
-    "venueAddress": "Timmermansgatan 15",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Japanese"
-    ],
-    "priceRange": "lyx",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "be881f7109e807e0",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/voisine",
-    "title": "Voisine",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Homely and cosy, there is a wonderful lack of pretension to this French-inspired bistro. Flavourful dishes from the small open kitchen include classical French desserts like blueberry clafoutis and Paris-Brest. The restaurant has a lived-in feel, with stripped wooden flooring and leather banquettes. The owners have a wine bar next door and it shows in the excellent wine list and shelves stacked full of bottles.",
-    "venueType": "restaurant",
-    "venueName": "Voisine",
-    "venueAddress": "Erstagatan 21",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "budget",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
   },
   {
     "id": "5dab480438a0db54",
@@ -1667,8 +600,1121 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "be06e2ce6339fe26",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/mutantur",
+    "title": "Mutantur",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "This laid-back, semi-industrial style restaurant comes with exposed brick walls, polished concrete floors, silver ducting and large windows that let in plenty of light. The kitchen counter bends round to become the bar – you can eat here or at the surrounding black tables – and the good value menu offers plenty of options in the form of small plates, allowing you build your meal however you please. Local flavours lead the way, but come with international accents, from oyster with tiger milk, coriander, Swedish vinegar and sweetcorn cream to beef tartare with green tomato, baked yolk and horseradish.",
+    "venueType": "restaurant",
+    "venueName": "Mutantur",
+    "venueAddress": "Erik Dahlbergsgatan 12-14",
+    "venueCity": "Malmö",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "7a0e566f5bf740bb",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/babette",
+    "title": "Babette",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "The very definition of a neighbourhood restaurant, Babette is a lively, bustling spot with a buzzing atmosphere; arrive expecting to squeeze past chairs without stepping on dogs and to sit elbow-to-elbow with your fellow guests. The vibe is chilled, the music is good and the two chefs work away in the tiny kitchen completely unphased. Whether you’re popping in for a glass of wine and the pizza of the day or spending the evening over some ever-evolving small plates – such as ricotta Babette with mushrooms and potatoes or veal tartare with colatura and parmesan – you’ll have a great time.",
+    "venueType": "restaurant",
+    "venueName": "Babette",
+    "venueAddress": "Roslagsgatan 6",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "13d1d98c7bf2fe67",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/vastergatan",
+    "title": "Västergatan",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Owned and run by a friendly couple – Olle, who cooks, and Sophie, who looks after the service – this unpretentious city centre bistro has certainly stood the test of time, with 2025 marking its 20th year. This is thanks, in part, to the flavour-packed dishes, where good quality regional ingredients are brought together in harmonious, visually appealing combinations. The four-course set menu changes with the seasons, featuring the likes of cod with blue mussels, beach rose and pink peppercorn, followed by grapefruit with ginger and black lime – wine and juice flights are available to accompany.",
+    "venueType": "restaurant",
+    "venueName": "Västergatan",
+    "venueAddress": "Västergatan 16",
+    "venueCity": "Malmö",
+    "score": 0,
+    "cuisine": [
+      "Swedish"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "e54c34b5ddb07cff",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/bar-agrikultur",
+    "title": "Bar Agrikultur",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "This lively wine bar is a perfect fit for the neighbourhood. Sit at closely set tables or on high stools either up at the bar counter or next to the window, surrounded by paintings and hunting trophies, including some impressive antlers and a huge wild boar’s head. Order your way through the menu of small plates, which highlight Swedish ingredients and flavours, and feature the likes of cheese balls with garlic honey or pork neck skewer with oyster sauce and chives. Three stainless steel tanks contain home-distilled gin – flavours change regularly, courtesy of various herbs, oils and fruits.",
+    "venueType": "restaurant",
+    "venueName": "Bar Agrikultur",
+    "venueAddress": "Skånegatan 79",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Swedish",
+      "Small eats"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "d8013468c225ffa5",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/lilla-ego",
+    "title": "Lilla Ego",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "With its pared-back feel, rustic exposed brickwork and buzzy vibe, this is just the place for a lively night out. It remains one of the hottest tickets in town, so try for a counter seat overlooking the kitchen if you haven’t booked. The concise menu includes modernised Swedish classics that are robust, well-composed and certainly deliver on flavour. Service is accommodating, warm and efficient.",
+    "venueType": "restaurant",
+    "venueName": "Lilla Ego",
+    "venueAddress": "Västmannagatan 69",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "d682780d0b49922f",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/triton",
+    "title": "Triton",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Charming in its lack of pretension, this bohemian neighbourhood restaurant has a homely feel. It’s simply furnished and the pared-back cooking has an unfussiness to match. Dishes show technical skill and provide some well-judged flavours using great Swedish ingredients. In an expensive city, the set menu presents good value for cooking of this quality.",
+    "venueType": "restaurant",
+    "venueName": "Triton",
+    "venueAddress": "Ringvägen 87",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "512460f6349d6376",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/ruths",
+    "title": "Ruths",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "The open kitchen takes centre stage at this buzzy all-day café/bakery/deli, which has been wholeheartedly embraced by the locals. Lunchtime snacks and salads make room for generously sized, boldly flavoured Mediterranean dishes at dinner. Most of the wines on the concise list are available on-tap.",
+    "venueType": "restaurant",
+    "venueName": "Ruths",
+    "venueAddress": "Mäster Johansgatan 11",
+    "venueCity": "Malmö",
+    "score": 0,
+    "cuisine": [
+      "Mediterranean Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "1590e4b594af96da",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/ystad_2694134/restaurant/jh-matbar",
+    "title": "JH matbar",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "You will find this bistro at the southern tip of Sweden, in the centre of a small town with picturesque streets that provided the setting for the Wallander detective TV series. The good value menu offers a wide choice of dishes, with vegetarians and vegans well catered for. Scandinavian produce powers many of the modern dishes, which are prepared and presented with real care.",
+    "venueType": "restaurant",
+    "venueName": "JH matbar",
+    "venueAddress": "Stora Östergatan 34",
+    "venueCity": "Ystad",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "00935d10e2b1aa04",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/namu",
+    "title": "Namu",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Restaurateur and Swedish MasterChef winner Jennie Walldén is behind this fun, energetic restaurant that blends Nordic ingredients with Jennie's South Korean heritage. Offering great value for money, the cooking is colourful, zingy and generous in both size and flavour; the signature flank steak served with an array of accompaniments is a highlight. Dishes are designed for sharing, with tasting menus available if you're feeling indecisive. Head next door to their Gaji cocktail bar to keep the party going.",
+    "venueType": "restaurant",
+    "venueName": "Namu",
+    "venueAddress": "Landbygatan 5",
+    "venueCity": "Malmö",
+    "score": 0,
+    "cuisine": [
+      "Korean"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "0aa3484da6d31172",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/allegrine",
+    "title": "Allegrine",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Set off the busy Sveavägen thoroughfare, this brasserie provides a hidden oasis. Sit on the attractive front terrace or in the chic dining room, where seats at the kitchen counter are in demand. Variously sized dishes are richly flavoured, with a French base, Scandinavian influences and subtle contrasts.",
+    "venueType": "restaurant",
+    "venueName": "Allegrine",
+    "venueAddress": "Kammakargatan 22",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "French"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "43300d131060a657",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/familjen",
+    "title": "Familjen",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "This lively, friendly eatery is divided into three parts: a bar with bench seating and an open kitchen; a bright red room with a characterful cellar and a glass wine cave; and a superb wrap-around terrace. The good value cooking is rich and hearty, with a touch of originality here and there. A relaxed atmosphere and an appealing wine, beer and cocktail list add to the experience.",
+    "venueType": "restaurant",
+    "venueName": "Familjen",
+    "venueAddress": "Arkivgatan 7",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Scandinavian",
+      "Swedish"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "aaf6725e5094b1f7",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/matbaren",
+    "title": "Matbaren",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Set within the Grand Hotel, this trendy, modern bistro offers well-priced dishes with a Scandinavian heart; three are about right for one person, or order more and share. Grab a seat at the zinc-topped bar counter for a better view of the open kitchen; the keen service team add to the atmosphere.",
+    "venueType": "restaurant",
+    "venueName": "Matbaren",
+    "venueAddress": "Södra Blasieholmshamnen 6",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "9dad7eb197f1ccb9",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/tavolo",
+    "title": "Tavolo",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Enter through the huge wooden doors of this old military stable and you’ll find yourself in a large and stunningly converted room with a truly buzzing atmosphere. A huge horse’s head – a copy of Leonardo's Cavallo di Forcione and a reminder of the building’s former life – takes centre stage in the bar, which is a popular spot for a cocktail and some nibbles. When it comes to the food, it’s all about Italy, with the fresh, flavoursome dishes prepared on-view in the open kitchen. From homemade pizzas and pastas to traditional meat dishes, there’s something for everyone here.",
+    "venueType": "restaurant",
+    "venueName": "Tavolo",
+    "venueAddress": "Magasingatan 19",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Italian-American"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "7c73202091efb184",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/woodstockholm",
+    "title": "Woodstockholm",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "A compact bistro owned by a group of friends, who set up a furniture making business and now use the bistro to showcase their products. Cooking follows a theme which changes every two months – perhaps a country, a style of food or a famous chef – and the rustic small plates are simple yet full of flavour.",
+    "venueType": "restaurant",
+    "venueName": "Woodstockholm",
+    "venueAddress": "Mosebacke Torg 9",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Contemporary",
+      "International"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "e891d89626575953",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/rolfs-kok",
+    "title": "Rolfs Kök",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "A buzzing neighbourhood restaurant in a lively commercial district, run by a passionate chef-owner. The contemporary interior was designed by famous Swedish artists; sit at the counter to watch the chefs in action. Dishes have big flavours, a classic heart, and a wine match each from the impressive list.",
+    "venueType": "restaurant",
+    "venueName": "Rolfs Kök",
+    "venueAddress": "Tegnérgatan 41",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Traditional Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "8842fd0ee3116ef2",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/vra",
+    "title": "Restaurant vRÅ",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "The imposing 1920s city post office is now a hotel, and this glamorous restaurant sits within what was the central hall – the listed cashier booths still on display. A Nordic-Japanese approach sees fine Scandinavian produce meet Asian techniques, and there’s an impressive range of sake by the glass.",
+    "venueType": "restaurant",
+    "venueName": "Restaurant vRÅ",
+    "venueAddress": "Clarion Hotel Post, Drottningtorget 10",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Fusion"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "012050423e7868a0",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/atmosfar",
+    "title": "Restaurang Atmosfär",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "A large glass-enclosed terrace greets you at this smart yet relaxed corner restaurant on the main road. Natural light fills the room inside too, whether you’re sitting at the large counter, on high stools by the floor-to-ceiling windows or in one of the comfortable dining rooms. Fresh, unfussy cooking delivers generous dishes that are packed with flavour and a joy to eat, such as halibut with a crayfish bisque and Savoy cabbage or deliciously creamy panna cotta with rosemary caramel and apple granita. The atmosphere becomes more lively in the evening thanks, in part, to the homemade cocktails.",
+    "venueType": "restaurant",
+    "venueName": "Restaurang Atmosfär",
+    "venueAddress": "Fersens väg 4",
+    "venueCity": "Malmö",
+    "score": 0,
+    "cuisine": [
+      "Swedish"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "b20e7e040f114053",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/brasserie-sture",
+    "title": "Brasserie Sture 1912",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Sture has been an icon of Malmö since 1912, and it’s now been reborn as a classic brasserie with décor to match; think mosaic flooring, closely set tables, a long bar and black-and-white photos of celebrities adorning the walls. A pavement terrace and bustling atmosphere only add to its appeal, as does an extensive menu mixing Swedish dishes with traditional Western European fare like confit rabbit or salad Niçoise. The lengthy wine list has a similar ‘Old World’ focus.",
+    "venueType": "restaurant",
+    "venueName": "Brasserie Sture 1912",
+    "venueAddress": "Adelgatan 13",
+    "venueCity": "Malmö",
+    "score": 0,
+    "cuisine": [
+      "Mediterranean Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "887a467485ea594c",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/forma-1210349",
+    "title": "Forma",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Chic and sultry, this Södermalm spot delivers the look and vibe of a bar, with the added bonus of flavoursome small plates. The cooking is bang on-trend, blending Nordic and French influences with pan-Asian elements including Korean kimchi, Chinese wontons and a daily selection of Japanese mochi for dessert. If you’re an indecisive diner, go for the keenly priced tasting menu to appreciate the full breadth of the kitchen's talents. Well-versed, professional service is the icing on the cake.",
+    "venueType": "restaurant",
+    "venueName": "Forma",
+    "venueAddress": "Hornsbruksgatan 28",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine",
+      "Asian"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "f55783a9d90d6819",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/black-milk-gastro-bar",
+    "title": "Black Milk Gastro Bar",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "This intimate restaurant offers great cooking and a fun night out, thanks to its moody lighting, pumping soundtrack and lively cocktail bar. Influenced by South America, Asia and Europe, the creative dishes deliver vibrant flavours and well-judged spicing, while using plenty of modern techniques. Expect to see some luxury ingredients, like Oscietra caviar and Périgord truffles, alongside an enjoyable dose of theatricality, with dishes ranging from courgette flower with cime di rapa, salsa verde and urfa pepper to homemade salted coconut and yuzu gelato topped with Oscietra.",
+    "venueType": "restaurant",
+    "venueName": "Black Milk Gastro Bar",
+    "venueAddress": "Engelbrektsgatan 3",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Creative",
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "6eca687d3f00b680",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/petri",
+    "title": "Petri",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "The name is a diminutive version of ‘petrichor’ – which refers to the lovely scent that accompanies rain after a warm period – and there’s a similarly pleasant cosiness to the restaurant itself, thanks to its charming, intimate atmosphere. The set menu follows the seasons, with produce that’s only available in smaller batches offered as optional extra courses, such as pork from Rosa Skattlådan with fermented berries and rose petals. Dishes are well thought out in their creativity, showcasing a good understanding of balance and flavour, while wine and homemade non-alcoholic pairings complete the package.",
+    "venueType": "restaurant",
+    "venueName": "Petri",
+    "venueAddress": "Kommendörsgatan 16",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "7cca1dab0e7f4216",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hallands/halmstad_2659154/restaurant/fyr",
+    "title": "Fyr",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "After many successful years as co-owner of Two-Michelin-Starred Gastrologik in Stockholm, Jacob Holmström returned to his birthplace with his wife Emelie and fell in love with this fantastic building on the Tylösand headland. Its design is chic and modern, and the atmosphere laid-back – and you’ll find it hard to decide whether to keep your eyes on the view, the open kitchen or the plate in front of you. The menu opens with snacks and ‘Canned Food’ (roe and caviar), before moving onto ‘Fish from the Cabinet’ and dishes showcasing other regional ingredients such as lamb with nettle purée and artichoke.",
+    "venueType": "restaurant",
+    "venueName": "Fyr",
+    "venueAddress": "Tjuvahålsvägen 9",
+    "venueCity": "Halmstad",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "2d4439e6742737e5",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/essence-1203656",
+    "title": "Essence",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Essence is the perfect spot for social types who like to mingle with their fellow guests. Everyone is seated around a big counter and served at the same time, with Chef Stefan Taylor centre stage preparing the dishes and explaining their make-up. He works alone, so there’s a slight pause between courses, and it’s here when the atmosphere becomes animated and you find yourself chatting away. Stefan has an intuitive way of combining flavours and spends hours each week drying, pickling and preparing the various elements in advance for dishes such as wild duck with mushrooms, watercress and thyme.",
+    "venueType": "restaurant",
+    "venueName": "Essence",
+    "venueAddress": "Hjalmar Södersbergs Väg 10",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine",
+      "Seasonal Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "9281a299be7d0f5f",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/la-cucina-italiana",
+    "title": "La Cucina Italiana",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "In this cosy, romantic restaurant comprising just eight tables, chef Allesio Fioriniello continues his father’s legacy by cooking up authentic Italian dishes with southern overtones (the family hails from Naples). He is helped along in his mission by childhood friend, Enzo, who takes charge in the restaurant. Carefully prepared, seasonal dishes are a model of their kind and could include the likes of a rich, beautifully textured parmigiana di melanzane or Rossini venison with seared milk bread and panzerotti.",
+    "venueType": "restaurant",
+    "venueName": "La Cucina Italiana",
+    "venueAddress": "Skånegatan 33",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Italian"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "b6869b340da374de",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/kockeriet",
+    "title": "Kockeriet",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "In a characterful 17C former grain warehouse, owned by Malmö-born TV chef Tareq Taylor, a young and talented team prepare well-balanced contemporary dishes with great precision. Scandinavian produce is at its heart, with some coming from the kitchen garden. The timbered dining room is relaxed and inviting, the service friendly, and the drinks pairings well-conceived.",
+    "venueType": "restaurant",
+    "venueName": "Kockeriet",
+    "venueAddress": "Norra Vallgatan 28",
+    "venueCity": "Malmö",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "fb51c724b0435b3f",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/bloom-in-the-park",
+    "title": "Bloom in the Park",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Be sure to arrive early for an aperitif on the terrace of this charming lakeside lodge before heading through to the modern, minimalist restaurant. In an unusual twist, both the menu and the matching wine pairings are a complete surprise! You submit your allergies and dislikes in advance, with the components of the dishes only revealed at the end of the meal when you are given a QR code to scan. Combinations could include halibut with satsuma, endive and crab bisque or seared roe deer with pumpkin and forest mushrooms. This element of the unknown stimulates both the mind and the palate through your meal.",
+    "venueType": "restaurant",
+    "venueName": "Bloom in the Park",
+    "venueAddress": "Pildammsvägen 17",
+    "venueCity": "Malmö",
+    "score": 0,
+    "cuisine": [
+      "Creative"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "8e8c03e02450dd05",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/hillenberg",
+    "title": "Hillenberg",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Perfectly pitched for busy Humlegårdsgatan is this stylish take on a classic brasserie. It has a smart, elegant feel and a hugely impressive wine cellar. Appealing Swedish classics are immensely satisfying yet exhibit a subtle modern touch and sense of finesse.",
+    "venueType": "restaurant",
+    "venueName": "Hillenberg",
+    "venueAddress": "Humlegårdsgatan 14",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "559e9387c3a27aae",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/solen",
+    "title": "SOLEN",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "If there's such a thing as ‘industrial elegance’, then they’ve found it at this bang on-trend spot in the city’s meat-packing district. Exposed wires and concrete pillars combine with white tablecloths in a chic space that’s proving hugely popular with Stockholm’s diners. It’s owned by the experienced operators behind Adam / Albin and is an impressively well-run place; the cooking borrows from around the world, including small selections of tacos and wood-fired pizzas. On a cold day, sit round the impressive fire-lit chimney.",
+    "venueType": "restaurant",
+    "venueName": "SOLEN",
+    "venueAddress": "Hallgränd 45",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "423d6168972076f3",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/oxenstiernan",
+    "title": "Oxenstiernan",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "You can’t miss this stylish, orange-painted bistro which stands out against the greenery of a city park. In summer, be sure to dine on the terrace, under the trees. A environmentally conscious ethos runs throughout, from the interior design to the ethically sourced produce used in the unfussy, boldly flavoured Swedish dishes.This restaurant is currently closed and due to reopen in Spring 2026.",
+    "venueType": "restaurant",
+    "venueName": "Oxenstiernan",
+    "venueAddress": "Storgatan 35B",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Swedish"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "a7a8d35fc679a37d",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/freyja",
+    "title": "freyja",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Head straight for the roof terrace to kick off your visit with a cocktail and 360° views of Stockholm and, once inside, opt for a seat by the curved window to capitalise on the 13th floor location. The menu includes modernised yet comforting Swedish classics like Kroppkaka, executed with care and confidence, yielding well-balanced flavours. This is a place where you'll feel equally at home dining in a couple or as a group, as it delivers something for everyone.",
+    "venueType": "restaurant",
+    "venueName": "freyja",
+    "venueAddress": "Hornsgatan 18",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Swedish",
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "b02bd15472d83a1d",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/poppy",
+    "title": "Poppy",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Chef-Owner Tobias has created a fun little neighbourhood spot here at Poppy, where groups of friends sit shoulder to shoulder at wooden tables in a trendy bistro-style room. It’s a compact place, with room for just 24 diners – including four seats overlooking the kitchen – but that’s all part of its cosy appeal. The five-course tasting menu offers seasonal modern dishes like monkfish 'binchotan' with tomato gel, hazelnut butter emulsion and mussel broth. Unusually, there’s no wine list, just shelves filled with bottles, their prices marked on them in chalk.",
+    "venueType": "restaurant",
+    "venueName": "Poppy",
+    "venueAddress": "Fjärde Långgatan 1",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Seasonal Cuisine",
+      "Farm to table"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "54a5b1762ea55551",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/leijontornet",
+    "title": "Leijontornet",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "After a few years as Djuret, this long-established restaurant has returned to its original guise and provides heaps of old-school charm. The dining room is full of character, with armchairs, vaulted brick ceilings and candlelit tables all adding to the appeal. The cooking has heavy French and other European influences, providing bold flavours across a wide selection of generous dishes. Expect plenty of premium produce, from lobster to turbot, and an extensive, similarly luxurious wine list.",
+    "venueType": "restaurant",
+    "venueName": "Leijontornet",
+    "venueAddress": "Lilla Nygatan 5",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "European"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "897f047698194f95",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/minh-mat",
+    "title": "Minh Mat",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "There is a wonderfully personal touch to this well-run Vietnamese restaurant, with posters and old photos adorning the walls, and an array of objects decorating the room. It’s an enjoyably relaxed setting for the cooking, which uses impressive ingredients – some of them from local producers – and mines plenty of flavour from simple-looking compositions. A light, smooth cream of corn sauce, for example, is a skilful and delicious accompaniment to quality grilled prawns.",
+    "venueType": "restaurant",
+    "venueName": "Minh Mat",
+    "venueAddress": "Odengatan 94",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Vietnamese"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "f1068e10cbbf427b",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/bord",
+    "title": "BORD",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "You’re guaranteed a warm welcome at this sweetly run bohemian bistro. A communal table is at the heart of proceedings, but there are a few smaller tables and some counter seating available too. Starters merge into mains on the daily menu of unfussy, pared-back dishes, where skilful Mediterranean-inspired cooking keeps the focus firmly on the top-quality ingredients. They make their own ricotta on-site and the wood-fired oven is used to great effect, from baking bread in the morning to gratinating langoustines in the evening. Dinner is the main event, but they also open on Saturdays for lunch.",
+    "venueType": "restaurant",
+    "venueName": "BORD",
+    "venueAddress": "Roslagsgatan 43",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Mediterranean Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "3f20c5dbc7fe9f07",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/prospero",
+    "title": "Prospero",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "There’s a slightly ‘underground’ feel to this small bistro, both figuratively and literally; you enter via a few steps down from street level, into a ‘half-cellar’ dining room where the windows look out at pavement level. The concise, keenly priced tasting menu lists dishes that offer an impressive level of restraint and control, where sauces are a focus. You might find the likes of trout with tomato and langoustine sauce or onglet with ramson and fish sauce, followed by rhubarb with yoghurt and chamomile.",
+    "venueType": "restaurant",
+    "venueName": "Prospero",
+    "venueAddress": "Roslagsgatan 21",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.459Z",
+    "enrichedAt": "2026-04-16T16:24:33.459Z"
+  },
+  {
+    "id": "83708b1ef440d988",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/human",
+    "title": "Human",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "In a quiet residential street behind the 17C Skansen Kronan fortress, you'll find this stylishly decorated restaurant decked out with neutral tones and vintage furniture. The first solo project for Martin Moses, it focuses on New Nordic cooking, which is executed with a skilful touch. In the evening you can sample the quality dishes from either a small or large tasting menu, with a four or five course set menu available at lunch.",
+    "venueType": "restaurant",
+    "venueName": "Human",
+    "venueAddress": "Risåsgatan 8",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Creative"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
+  },
+  {
+    "id": "b91adff40894f3b0",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/oland/borgholm/restaurant/hotell-borgholm1186400",
+    "title": "Hotell Borgholm",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "The beautiful island of Öland is famous for its wild herbs, and that’s reflected in the cooking at this historic hotel’s restaurant, where the chefs enhance their elaborate dishes with thyme, basil and a host of other flavours from the 100-variety-strong garden. The original, boldly flavoured cooking comes in a tasting menu format, marrying classical techniques with subtle modern ones in dishes such as pan-fried red kingfish with spring chlorophyll, pickled cloudberries, saffron butter sauce and bronze fennel. The accompanying wine list is a real treasure trove for oenophiles.",
+    "venueType": "restaurant",
+    "venueName": "Hotell Borgholm",
+    "venueAddress": "Trädgårdsgatan 15",
+    "venueCity": "Borgholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
+  },
+  {
+    "id": "e28ac4d6c662d1b0",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/carbon",
+    "title": "Carbon",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "There is an elegant quality to this smart, modern bistro de luxe with rich décor and crushed velvet banquettes. The seasonal menu mixes contemporary techniques with a more traditional base and all dishes come with suggested wine pairings. Choose between six, eight or eleven courses during the week, with only the longer two options available on Fridays and Saturdays. This is a deservedly busy spot where the attentive, personable service adds to the experience. Be sure to look out for the dishes from the Josper oven.",
+    "venueType": "restaurant",
+    "venueName": "Carbon",
+    "venueAddress": "Barnhusgatan 2",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
+  },
+  {
+    "id": "35a98345e3c596c7",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/b-a-r",
+    "title": "Restaurang B.A.R.",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "This bright, buzzy restaurant is just a cast away from the waterfront and has a semi-industrial fish-market look. Choose your seafood from the fridge or the tank, along with a cooking style, a sauce and one of their interesting sides.",
+    "venueType": "restaurant",
+    "venueName": "Restaurang B.A.R",
+    "venueAddress": "Blasieholmsgatan 4A",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Seafood"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
+  },
+  {
+    "id": "053cb3b9d0fb6153",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/farang",
+    "title": "Farang",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "The flavours of Southeast Asia are the inspiration behind this stylish restaurant and bar that occupies the building once home to the Stockholm Electric Company. The unusual front door harks back to its former occupation, but once inside it's a chic space with soft lighting and a large open kitchen. The colorful, zingy cooking includes Thai dishes like laab and crying tiger beef, along with Vietnamese-style sashimi and other influences from the wider region. Strong service, sensible prices and a fun atmosphere complete the picture.",
+    "venueType": "restaurant",
+    "venueName": "Farang",
+    "venueAddress": "Tulegatan 7",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "South East Asian"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
+  },
+  {
+    "id": "b884769fe1db7ba4",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/nisch",
+    "title": "NISCH",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "This pleasantly relaxed little neighbourhood restaurant is sleekly and stylishly decorated with a monochrome colour scheme. For its part, the kitchen produces accomplished dishes and boasts some good eco-credentials. The modern, understated Nordic set menu is inspired by global flavours and changes every few weeks. The interesting wine list is mainly organic and biodynamic in nature.",
+    "venueType": "restaurant",
+    "venueName": "NISCH",
+    "venueAddress": "Dalagatan 42",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
+  },
+  {
+    "id": "2b25ed6bfbac1a94",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/ulla-winbladh",
+    "title": "Ulla Winbladh",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Ulla Winbladh was originally built as a steam bakery for the 1897 Stockholm World Fair and is set in charming parkland beside the Skansen open-air museum. Sit on the terrace or in the older, more characterful part of the building. Typical Swedish dishes include the likes of fish roe and sweet and sour herring.",
+    "venueType": "restaurant",
+    "venueName": "Ulla Winbladh",
+    "venueAddress": "Rosendalsvägen 8",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Swedish"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
+  },
+  {
+    "id": "f44f93bdf1524a86",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/skane/malmo/restaurant/lyran",
+    "title": "Lyran Matbar",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "There’s a pleasingly relaxed air at this small, simply styled restaurant, where the experienced team lead the service with a friendly smile. Upstairs it’s more about drinks, so if you’re here to dine then head down the spiral staircase to the rustic cellar. The well-balanced tasting menus come in Mixed, Pescetarian and Vegetarian versions and are created daily from the best local produce available. All you are presented with is a list of ingredients, which are then turned into modern Swedish creations such as ‘yellow beet, skyr, pistachio, cedrat, fennel pollen, burned butter and sherry’.",
+    "venueType": "restaurant",
+    "venueName": "Lyran Matbar",
+    "venueAddress": "Simrishamnsgatan 36a",
+    "venueCity": "Malmö",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine",
+      "Swedish"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
+  },
+  {
+    "id": "6084936d4f3e8e47",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/trattoria-la-strega",
+    "title": "Trattoria La Strega",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Run by passionate, charming owners, this lively little trattoria is nestled within a quiet residential area, and serves the kind of authentic Northern Italian food that you would find in a good trattoria in Piemonte or Triveneto. Boldly flavoured dishes are best enjoyed from the 'Menu Degustazione', accompanied by a candlelit table and a glass of wine from the extensive Italian selection.",
+    "venueType": "restaurant",
+    "venueName": "Trattoria La Strega",
+    "venueAddress": "Aschebergsgatan 23B",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Italian"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
+  },
+  {
+    "id": "143ba1a14cc03e6e",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/sjomagasinet",
+    "title": "Sjömagasinet",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "A charming split-level restaurant in an old 1775 East India Company warehouse; sit on the upper floor to take in the lovely harbour view. Cooking offers a pleasing mix of classic and modern dishes, with seafood kept to the fore. The wine list offers a good selection of top burgundies.",
+    "venueType": "restaurant",
+    "venueName": "Sjömagasinet",
+    "venueAddress": "Klippans Kulturreservat, Adolf Edelsvärds gata 5",
+    "venueCity": "Göteborg",
+    "score": 0,
+    "cuisine": [
+      "Seafood"
+    ],
+    "priceRange": "mellan",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
+  },
+  {
+    "id": "a0bdf798bf6ed396",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/ostergotland/linkoping_2608143/restaurant/jord-1202242",
+    "title": "JORD",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "‘Forest to plate’ is the message here, with wild and hyper-seasonal ingredients at the fore. Some of the produce is foraged, whilst meat is often hunted by the owner in the surrounding area. The surprise tasting menu delivers a large array of creative dishes with intriguing blends of flavours and textures. Preserving, pickling, smoking and curing are all done in-house, giving new life to the local ingredients.",
+    "venueType": "restaurant",
+    "venueName": "JORD",
+    "venueAddress": "Johannesborgparken 1A",
+    "venueCity": "Linkoping",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
+  },
+  {
+    "id": "d111e343345aa955",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/washoku-tomo",
+    "title": "Washoku TOMO",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "In the western half of Södermalm, Chef-Owner Tomoko Hayashi is bolstering Stockholm’s Japanese dining scene by offering an omakase experience that doesn’t break the bank. While this is Japanese cooking that’s not entirely focussed on sushi, seafood nevertheless plays a central role in the menu. The produce comes from all over the world, be it Spanish sea bass, Argentinian prawns or Canadian black cod. Tomoko leads the smooth service herself with personality and professionalism.",
+    "venueType": "restaurant",
+    "venueName": "Washoku TOMO",
+    "venueAddress": "Timmermansgatan 15",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Japanese"
+    ],
+    "priceRange": "lyx",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
+  },
+  {
+    "id": "be881f7109e807e0",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/voisine",
+    "title": "Voisine",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Homely and cosy, there is a wonderful lack of pretension to this French-inspired bistro. Flavourful dishes from the small open kitchen include classical French desserts like blueberry clafoutis and Paris-Brest. The restaurant has a lived-in feel, with stripped wooden flooring and leather banquettes. The owners have a wine bar next door and it shows in the excellent wine list and shelves stacked full of bottles.",
+    "venueType": "restaurant",
+    "venueName": "Voisine",
+    "venueAddress": "Erstagatan 21",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "cuisine": [
+      "Modern Cuisine"
+    ],
+    "priceRange": "budget",
+    "tags": [
+      "selected"
+    ],
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "511410b074ab72de",
@@ -1690,54 +1736,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "312ee66c4cc52ac8",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/skane/simrishamn_2683288/restaurant/vyn",
-    "title": "VYN",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "On the southern tip of Sweden, Chef-Owner Daniel Berlin has taken a former farmhouse and turned it into the latest platform for his thrillingly impressive cooking. A dish of milk-fed lamb encapsulates so many of VYN’s strengths: the produce is superb; the cooking over fire is precise and technically accomplished; and the accompanying brunoise of lamb heart, neck and sweetbreads underlines how using the whole animal bolsters both flavour and sustainability. The full operation also includes 15 hotel rooms and the more relaxed Food and Wine bar.",
-    "venueType": "restaurant",
-    "venueName": "VYN",
-    "venueAddress": "Höga vägen 72",
-    "venueCity": "Simrishamn",
-    "score": 0,
-    "cuisine": [
-      "Creative"
-    ],
-    "priceRange": "lyx",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
-  },
-  {
-    "id": "40b85803e5111a85",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/koka",
-    "title": "Koka",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Set beneath an ornate 19th-century glass ceiling fringed by a burgundy canopy, this elegant, airy restaurant comes with modern, light wood panelled walls and bespoke matching furnishings. The refined, well-balanced tasting menu showcases the best of the season, with the spring and summer menus formed largely around plant-led dishes. Classical combinations are subtly modernised by clever twists and well-judged sauces, such as the piquant langoustine bisque with Brussels sprouts and marigold or the slightly tart, fruity venison jus flavoured with blackcurrant to accompany the fallow deer and beetroot.",
-    "venueType": "restaurant",
-    "venueName": "Koka",
-    "venueAddress": "Viktoriagatan 12",
-    "venueCity": "Göteborg",
-    "score": 0,
-    "cuisine": [
-      "Modern Cuisine"
-    ],
-    "priceRange": "lyx",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "c3b2c9ae7da3a63e",
@@ -1759,8 +1759,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "a201b8f83a00a013",
@@ -1780,19 +1780,19 @@
     ],
     "lat": 59.335495,
     "lng": 18.077901,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "f3bd70b44d258371",
     "sourceId": "michelin",
     "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-diplomat-stockholm-7834",
-    "title": "Hotel Diplomat Stockholm",
+    "title": "Hotel Diplomat",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "Are we at a point yet where we’re comfortable with the idea that Swedish style is no more predisposed to modernism than that of any other country? Go looking for mid-century style and you’ll miss out Stockholm’s deeper historical roots. Something like the gloriously restored Diplomat Hotel, an Art Nouveau classic that’s been painstakingly brought up to date, is the sort of thing this city does best.\n\nThe style, for all its frills and flourishes, still shows off the essential Scandinavian talent for simplicity. The color palette is tightly focused, and the sheer consistency of the visual style is nothing if not soothing. Which is a good thing, because the Diplomat is meant to be a profoundly relaxing place — from the solid construction to the plush Dux beds, this place is built to last.\n\nThe Diplomat is not about to rock your understanding of what a hotel can be, but it isn’t trying to. Nor is it going to start some kind of design revolution. But if it’s professional, high-end hospitality you’re after — to say nothing of local, seasonal and largely organic produce, with a slight Mediterranean inflection — then you’re in the right place indeed.",
+    "bodyText": "Are we at a point yet where we’re comfortable with the idea that Swedish style is no more predisposed to modernism than that of any other country? Go looking for mid-century style and you’ll miss out Stockholm’s deeper historical roots. Something like the gloriously restored Diplomat Hotel, an Art Nouveau classic that’s been painstakingly brought up to date, is the sort of thing this city does best.\n\nThe style, for all its frills and flourishes, still shows off the essential Scandinavian talent for simplicity. The color palette is tightly focused, and the sheer consistency of the visual style is nothing if not soothing. Which is a good thing, because the Diplomat is meant to be a profoundly relaxing place — from the solid construction to the plush Dux beds, this place is built to last.\n\nHotel Diplomat is not about to rock your understanding of what a hotel can be, but it isn’t trying to. Nor is it going to start some kind of design revolution. But if it’s professional, high-end hospitality you’re after — to say nothing of local, seasonal and largely organic produce, with a slight Mediterranean inflection — then you’re in the right place indeed.",
     "venueType": "hotel",
-    "venueName": "Hotel Diplomat Stockholm",
+    "venueName": "Hotel Diplomat",
     "venueAddress": "Strandvagen 7C",
     "venueCity": "Stockholm",
     "score": 0,
@@ -1801,8 +1801,8 @@
     ],
     "lat": 59.332065,
     "lng": 18.080456,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "3486b67070f36ecf",
@@ -1822,8 +1822,8 @@
     ],
     "lat": 57.703877,
     "lng": 11.95671,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "53111f1f010e7672",
@@ -1843,8 +1843,8 @@
     ],
     "lat": 59.338656,
     "lng": 18.054743,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "74ce433ee23bf744",
@@ -1864,8 +1864,8 @@
     ],
     "lat": 59.345513,
     "lng": 18.067702,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "64e4901bef135047",
@@ -1885,8 +1885,8 @@
     ],
     "lat": 59.33237,
     "lng": 18.07365,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "3f3e71130aab03bd",
@@ -1906,8 +1906,8 @@
     ],
     "lat": 59.333185,
     "lng": 18.073813,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "bf33ed42b1308f1a",
@@ -1927,8 +1927,8 @@
     ],
     "lat": 59.337593,
     "lng": 18.061904,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "ebdfa6d73b1a6787",
@@ -1948,8 +1948,8 @@
     ],
     "lat": 59.3186,
     "lng": 18.1642,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "9adead70285d33cd",
@@ -1969,8 +1969,8 @@
     ],
     "lat": 59.32476,
     "lng": 18.087685,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "6110b8a05df2652f",
@@ -1990,8 +1990,8 @@
     ],
     "lat": 59.332555,
     "lng": 18.05721,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "02ada2950aeef2cc",
@@ -2011,8 +2011,8 @@
     ],
     "lat": 59.351671,
     "lng": 18.0434,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "d7d3b13655cce33f",
@@ -2032,8 +2032,8 @@
     ],
     "lat": 59.3282,
     "lng": 18.07779,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "ab6ee87416d8a8f6",
@@ -2053,8 +2053,8 @@
     ],
     "lat": 59.330841,
     "lng": 18.067027,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "d709e990693cb312",
@@ -2074,8 +2074,8 @@
     ],
     "lat": 59.33137,
     "lng": 18.07466,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "5391ad0083f6ae0d",
@@ -2095,8 +2095,8 @@
     ],
     "lat": 59.3313766222,
     "lng": 18.0696957115,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "9780fb973b01dd65",
@@ -2116,8 +2116,8 @@
     ],
     "lat": 59.3151814,
     "lng": 18.0667222,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "2525089b066e9d28",
@@ -2137,8 +2137,8 @@
     ],
     "lat": 66.07286,
     "lng": 20.98175,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "9bf86f2084d85bcb",
@@ -2158,8 +2158,8 @@
     ],
     "lat": 59.32961,
     "lng": 18.07544,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "daa19b789449d23c",
@@ -2179,8 +2179,8 @@
     ],
     "lat": 59.33094,
     "lng": 18.07722,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "12de51a06749f199",
@@ -2200,8 +2200,8 @@
     ],
     "lat": 59.33473,
     "lng": 18.0751,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "32e430cad7b0def5",
@@ -2221,8 +2221,8 @@
     ],
     "lat": 59.34602,
     "lng": 18.03601,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "92178ce08caa625f",
@@ -2242,8 +2242,8 @@
     ],
     "lat": 67.8509,
     "lng": 20.59564,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "3df84d21585b7d9f",
@@ -2263,8 +2263,8 @@
     ],
     "lat": 59.31952,
     "lng": 18.07095,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "ea9a3442014e3912",
@@ -2284,8 +2284,8 @@
     ],
     "lat": 63.382974,
     "lng": 13.177002,
-    "collectedAt": "2026-03-23T18:29:15.860Z",
-    "enrichedAt": "2026-03-23T18:29:15.860Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "338ea452eea14af2",
@@ -2305,8 +2305,8 @@
     ],
     "lat": 59.3307,
     "lng": 18.06703,
-    "collectedAt": "2026-03-23T18:29:15.861Z",
-    "enrichedAt": "2026-03-23T18:29:15.861Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "21059e23d353dfbc",
@@ -2326,8 +2326,8 @@
     ],
     "lat": 59.434668,
     "lng": 17.78615,
-    "collectedAt": "2026-03-23T18:29:15.861Z",
-    "enrichedAt": "2026-03-23T18:29:15.861Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "82edaee7539c7d45",
@@ -2347,8 +2347,8 @@
     ],
     "lat": 59.3313,
     "lng": 18.06554,
-    "collectedAt": "2026-03-23T18:29:15.861Z",
-    "enrichedAt": "2026-03-23T18:29:15.861Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "60fae4cfc1e2b358",
@@ -2368,8 +2368,8 @@
     ],
     "lat": 59.32892,
     "lng": 18.06187,
-    "collectedAt": "2026-03-23T18:29:15.861Z",
-    "enrichedAt": "2026-03-23T18:29:15.861Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "6cb1f9b0cc811a20",
@@ -2389,8 +2389,8 @@
     ],
     "lat": 59.32477,
     "lng": 18.09709,
-    "collectedAt": "2026-03-23T18:29:15.861Z",
-    "enrichedAt": "2026-03-23T18:29:15.861Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "2ac32e34766013d3",
@@ -2410,8 +2410,8 @@
     ],
     "lat": 55.61224,
     "lng": 12.99439,
-    "collectedAt": "2026-03-23T18:29:15.861Z",
-    "enrichedAt": "2026-03-23T18:29:15.861Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "c47459994845b191",
@@ -2431,8 +2431,8 @@
     ],
     "lat": 57.70696,
     "lng": 11.97073,
-    "collectedAt": "2026-03-23T18:29:15.861Z",
-    "enrichedAt": "2026-03-23T18:29:15.861Z"
+    "collectedAt": "2026-04-16T16:24:33.460Z",
+    "enrichedAt": "2026-04-16T16:24:33.460Z"
   },
   {
     "id": "83c6853f63cf64bd",
@@ -2452,8 +2452,8 @@
     ],
     "lat": 57.70462,
     "lng": 11.97166,
-    "collectedAt": "2026-03-23T18:29:15.861Z",
-    "enrichedAt": "2026-03-23T18:29:15.861Z"
+    "collectedAt": "2026-04-16T16:24:33.461Z",
+    "enrichedAt": "2026-04-16T16:24:33.461Z"
   },
   {
     "id": "4acdd36374e2a4b4",
@@ -2473,8 +2473,8 @@
     ],
     "lat": 59.6067,
     "lng": 16.56746,
-    "collectedAt": "2026-03-23T18:29:15.861Z",
-    "enrichedAt": "2026-03-23T18:29:15.861Z"
+    "collectedAt": "2026-04-16T16:24:33.461Z",
+    "enrichedAt": "2026-04-16T16:24:33.461Z"
   },
   {
     "id": "07b6024ec9b25c38",
@@ -2494,8 +2494,8 @@
     ],
     "lat": 55.60589,
     "lng": 12.9979,
-    "collectedAt": "2026-03-23T18:29:15.861Z",
-    "enrichedAt": "2026-03-23T18:29:15.861Z"
+    "collectedAt": "2026-04-16T16:24:33.461Z",
+    "enrichedAt": "2026-04-16T16:24:33.461Z"
   },
   {
     "id": "fe6672b2de971f47",
@@ -2515,8 +2515,8 @@
     ],
     "lat": 57.70279,
     "lng": 11.96549,
-    "collectedAt": "2026-03-23T18:29:15.861Z",
-    "enrichedAt": "2026-03-23T18:29:15.861Z"
+    "collectedAt": "2026-04-16T16:24:33.461Z",
+    "enrichedAt": "2026-04-16T16:24:33.461Z"
   },
   {
     "id": "a25d02591f83df26",
@@ -2536,8 +2536,8 @@
     ],
     "lat": 63.8251,
     "lng": 20.26109,
-    "collectedAt": "2026-03-23T18:29:15.861Z",
-    "enrichedAt": "2026-03-23T18:29:15.861Z"
+    "collectedAt": "2026-04-16T16:24:33.461Z",
+    "enrichedAt": "2026-04-16T16:24:33.461Z"
   },
   {
     "id": "f0cf9e84481cc8c3",
@@ -2557,8 +2557,8 @@
     ],
     "lat": 55.60369,
     "lng": 12.99958,
-    "collectedAt": "2026-03-23T18:29:15.861Z",
-    "enrichedAt": "2026-03-23T18:29:15.861Z"
+    "collectedAt": "2026-04-16T16:24:33.461Z",
+    "enrichedAt": "2026-04-16T16:24:33.461Z"
   },
   {
     "id": "c0dabe457949cf11",
@@ -2578,8 +2578,8 @@
     ],
     "lat": 56.57436,
     "lng": 16.41033,
-    "collectedAt": "2026-03-23T18:29:15.861Z",
-    "enrichedAt": "2026-03-23T18:29:15.861Z"
+    "collectedAt": "2026-04-16T16:24:33.461Z",
+    "enrichedAt": "2026-04-16T16:24:33.461Z"
   },
   {
     "id": "4d24143ad5984c65",
@@ -2599,8 +2599,8 @@
     ],
     "lat": 57.79123,
     "lng": 14.27526,
-    "collectedAt": "2026-03-23T18:29:15.861Z",
-    "enrichedAt": "2026-03-23T18:29:15.861Z"
+    "collectedAt": "2026-04-16T16:24:33.461Z",
+    "enrichedAt": "2026-04-16T16:24:33.461Z"
   },
   {
     "id": "a1ba3c43e2c13d2e",
@@ -2620,8 +2620,8 @@
     ],
     "lat": 57.706661,
     "lng": 12.465585,
-    "collectedAt": "2026-03-23T18:29:15.861Z",
-    "enrichedAt": "2026-03-23T18:29:15.861Z"
+    "collectedAt": "2026-04-16T16:24:33.461Z",
+    "enrichedAt": "2026-04-16T16:24:33.461Z"
   },
   {
     "id": "55579e925b0f7495",
@@ -2641,8 +2641,8 @@
     ],
     "lat": 66.088588,
     "lng": 20.937173,
-    "collectedAt": "2026-03-23T18:29:15.861Z",
-    "enrichedAt": "2026-03-23T18:29:15.861Z"
+    "collectedAt": "2026-04-16T16:24:33.461Z",
+    "enrichedAt": "2026-04-16T16:24:33.461Z"
   },
   {
     "id": "1f62732bbb3afbbd",
@@ -2662,8 +2662,8 @@
     ],
     "lat": 55.940293,
     "lng": 12.781009,
-    "collectedAt": "2026-03-23T18:29:15.861Z",
-    "enrichedAt": "2026-03-23T18:29:15.861Z"
+    "collectedAt": "2026-04-16T16:24:33.461Z",
+    "enrichedAt": "2026-04-16T16:24:33.461Z"
   },
   {
     "id": "68dbea36cb9e2ca2",
@@ -2683,8 +2683,8 @@
     ],
     "lat": 59.325437,
     "lng": 18.075368,
-    "collectedAt": "2026-03-23T18:29:15.861Z",
-    "enrichedAt": "2026-03-23T18:29:15.861Z"
+    "collectedAt": "2026-04-16T16:24:33.461Z",
+    "enrichedAt": "2026-04-16T16:24:33.461Z"
   },
   {
     "id": "1d92b5d709109cb2",
@@ -2704,7 +2704,7 @@
     ],
     "lat": 59.345707,
     "lng": 18.056713,
-    "collectedAt": "2026-03-23T18:29:15.861Z",
-    "enrichedAt": "2026-03-23T18:29:15.861Z"
+    "collectedAt": "2026-04-16T16:24:33.461Z",
+    "enrichedAt": "2026-04-16T16:24:33.461Z"
   }
 ]

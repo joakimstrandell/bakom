@@ -13902,5 +13902,174 @@
       "Gamla Stan"
     ],
     "collectedAt": "2026-03-16T09:50:05.393Z"
+  },
+  {
+    "id": "cde2f708febf",
+    "sourceId": "krogguiden",
+    "url": "https://www.krogguiden.se/restauranger/view/adam--albin",
+    "title": "Adam & Albin",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Adam & Albin",
+    "venueAddress": "Regeringsgatan 2",
+    "venueCity": "Stockholm",
+    "priceRange": "lyx",
+    "tags": [
+      "City"
+    ],
+    "collectedAt": "2026-04-16T16:24:45.360Z"
+  },
+  {
+    "id": "41ab5e216864",
+    "sourceId": "krogguiden",
+    "url": "https://www.krogguiden.se/restauranger/view/bibon",
+    "title": "Bibon",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Bibon",
+    "venueAddress": "Biblioteksgatan 6",
+    "venueCity": "Stockholm",
+    "priceRange": "mellan",
+    "tags": [
+      "City"
+    ],
+    "collectedAt": "2026-04-16T16:24:47.613Z"
+  },
+  {
+    "id": "5ed2184f3338",
+    "sourceId": "krogguiden",
+    "url": "https://www.krogguiden.se/restauranger/view/baroma",
+    "title": "Baroma",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Baroma",
+    "venueAddress": "Jakobsbergsgatan 21",
+    "venueCity": "Stockholm",
+    "priceRange": "mellan",
+    "cuisine": [
+      "Italien"
+    ],
+    "tags": [
+      "City"
+    ],
+    "collectedAt": "2026-04-16T16:24:47.628Z"
+  },
+  {
+    "id": "353e6028073c",
+    "sourceId": "krogguiden",
+    "url": "https://www.krogguiden.se/restauranger/view/elefantpojken",
+    "title": "Elefantpojken",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Elefantpojken",
+    "venueAddress": "Ringvägen 151",
+    "venueCity": "Stockholm",
+    "priceRange": "budget",
+    "cuisine": [
+      "Asien",
+      "Crossover"
+    ],
+    "tags": [
+      "Södermalm"
+    ],
+    "collectedAt": "2026-04-16T16:24:49.698Z"
+  },
+  {
+    "id": "176219ef7fa1",
+    "sourceId": "krogguiden",
+    "url": "https://www.krogguiden.se/restauranger/view/la-civetta",
+    "title": "La Civetta",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "La Civetta",
+    "venueAddress": "Folkungagatan 95",
+    "venueCity": "Stockholm",
+    "priceRange": "lyx",
+    "cuisine": [
+      "Fokus på fisk",
+      "Fokus på grönt",
+      "Fokus på kött",
+      "Italien"
+    ],
+    "tags": [
+      "Södermalm"
+    ],
+    "collectedAt": "2026-04-16T16:24:57.666Z"
+  },
+  {
+    "id": "21ce2281b5f0",
+    "sourceId": "krogguiden",
+    "url": "https://www.krogguiden.se/restauranger/view/muscadet",
+    "title": "Muscadet",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Muscadet",
+    "venueAddress": "Sankt Eriksgatan 108",
+    "venueCity": "Stockholm",
+    "priceRange": "mellan",
+    "cuisine": [
+      "Fokus på fisk",
+      "Frankrike"
+    ],
+    "tags": [
+      "Vasastan"
+    ],
+    "collectedAt": "2026-04-16T16:25:01.810Z"
+  },
+  {
+    "id": "dad0892e8251",
+    "sourceId": "krogguiden",
+    "url": "https://www.krogguiden.se/restauranger/view/restaurang-nuvara",
+    "title": "Restaurang Nuvara",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Restaurang Nuvara",
+    "venueAddress": "Rådmansgatan 73",
+    "venueCity": "Stockholm",
+    "priceRange": "lyx",
+    "cuisine": [
+      "Fokus på fisk",
+      "Fokus på grönt",
+      "Fokus på kött"
+    ],
+    "tags": [
+      "Vasastan"
+    ],
+    "collectedAt": "2026-04-16T16:25:05.734Z"
+  },
+  {
+    "id": "d5cffd79e456",
+    "sourceId": "krogguiden",
+    "url": "https://www.krogguiden.se/restauranger/view/sabai-soong",
+    "title": "Sabai Soong",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "",
+    "venueType": "restaurant",
+    "venueName": "Sabai Soong",
+    "venueAddress": "Linnégatan 39B",
+    "venueCity": "Stockholm",
+    "priceRange": "budget",
+    "cuisine": [
+      "Asien"
+    ],
+    "tags": [
+      "Östermalm"
+    ],
+    "collectedAt": "2026-04-16T16:25:05.746Z"
   }
 ]

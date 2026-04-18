@@ -28,7 +28,8 @@
     "googlePlaceId": "ChIJh2Ns-13GYEYRahMc5pHvmg4",
     "canonicalName": "Matildas Kvarterskrog",
     "aliases": [
-      "Matilda"
+      "Matilda",
+      "Matildas"
     ]
   },
   {
@@ -2697,6 +2698,34 @@
     "canonicalName": "Thelins Konditori Solna Strand",
     "aliases": [
       "Thelins Konditori Solna"
+    ]
+  },
+  {
+    "googlePlaceId": "ChIJCTJX9GTzT0YR9tPbLDpN3aI",
+    "canonicalName": "Hotel Pigalle",
+    "aliases": [
+      "Pigalle Restaurang & Bar"
+    ]
+  },
+  {
+    "googlePlaceId": "ChIJHyfEal6dX0YR1ecd-ZXPozE",
+    "canonicalName": "Hasselsson",
+    "aliases": [
+      "Hasselsson Stockholm"
+    ]
+  },
+  {
+    "googlePlaceId": "ChIJr3Xy1XCdX0YR3Z97-c_7xpU",
+    "canonicalName": "Muskot kök & bar",
+    "aliases": [
+      "Muskot Kök & Bar Vasastan"
+    ]
+  },
+  {
+    "googlePlaceId": "ChIJVyMUYmnzT0YRL9vbKNRcwMA",
+    "canonicalName": "Sjöbaren Haga",
+    "aliases": [
+      "Fisk"
     ]
   }
 ]

@@ -3538,5 +3538,445 @@
   "courtyard-by-marriott-stockholm-stockholm": {
     "googlePlaceId": "ChIJDdAaF9V3X0YR-rpujg8wQ98",
     "queriedAt": "2026-03-26T19:57:42.366Z"
+  },
+  "a-mano-orebro": {
+    "googlePlaceId": "ChIJlxCz8OIUXEYRbKNAhlZrOcA",
+    "queriedAt": "2026-04-17T07:07:49.230Z"
+  },
+  "bomans-hotel-restaurang-trosa": {
+    "googlePlaceId": "ChIJWwV5LeRGX0YR_4uQMGvDccg",
+    "queriedAt": "2026-04-17T07:07:49.712Z"
+  },
+  "skoogs-bistro-funasdalen": {
+    "googlePlaceId": "ChIJ56xfdi2nbkYRLsqoUCc5dC0",
+    "queriedAt": "2026-04-17T07:07:50.109Z"
+  },
+  "hambergs-fisk-uppsala": {
+    "googlePlaceId": "ChIJ5fxQ0_DLX0YRXGWxX85xuc8",
+    "queriedAt": "2026-04-17T07:07:50.521Z"
+  },
+  "aaltos-italian-grill-garden-uppsala": {
+    "googlePlaceId": "ChIJE2qFUYc7k0MRLAC6Eh1SdHY",
+    "queriedAt": "2026-04-17T07:07:50.924Z"
+  },
+  "wolfgang-vincafe-goteborg": {
+    "googlePlaceId": "ChIJSfbjpK7zT0YRr8nL7FoFCLI",
+    "queriedAt": "2026-04-17T07:07:51.357Z"
+  },
+  "cucolo-stockholm": {
+    "googlePlaceId": "ChIJ_zoIO5adX0YRTV2lIUUFuC0",
+    "queriedAt": "2026-04-17T07:07:51.721Z"
+  },
+  "at-six-restaurang-dining-room-stockholm": {
+    "googlePlaceId": "ChIJXRu-616dX0YR909ERinknPg",
+    "queriedAt": "2026-04-17T07:07:52.284Z"
+  },
+  "djurgardsbrunns-vardshus-stockholm": {
+    "googlePlaceId": "ChIJMyO28q2DX0YRDC3NkIbe-bs",
+    "queriedAt": "2026-04-17T07:07:52.698Z"
+  },
+  "gat-stockholm": {
+    "googlePlaceId": "ChIJkxf4DeydX0YR4KqjqBexfLM",
+    "queriedAt": "2026-04-17T07:07:53.513Z"
+  },
+  "froken-vandal-stockholm": {
+    "googlePlaceId": "ChIJe5Eyqn93X0YRbIkgsqCWCSY",
+    "queriedAt": "2026-04-17T07:07:54.269Z"
+  },
+  "la-bocca-stockholm": {
+    "googlePlaceId": "ChIJKbHp5PedX0YR10PEnEX1E-k",
+    "queriedAt": "2026-04-17T07:07:54.743Z"
+  },
+  "lilla-ljunggrens-stockholm": {
+    "googlePlaceId": "ChIJuZvoVgCdX0YRkfEeAFx4R88",
+    "queriedAt": "2026-04-17T07:07:55.132Z"
+  },
+  "milles-bakficka-stockholm": {
+    "googlePlaceId": "ChIJKxhdSFqdX0YRw5u8tX2uDRs",
+    "queriedAt": "2026-04-17T07:07:55.527Z"
+  },
+  "napolyon-stockholm": {
+    "googlePlaceId": "ChIJgz956vGdX0YRhryo2WdIBuM",
+    "queriedAt": "2026-04-17T07:07:55.910Z"
+  },
+  "nektar-stockholm": {
+    "googlePlaceId": "ChIJ4WbOCW2dX0YRLtWMFQEF4A4",
+    "queriedAt": "2026-04-17T07:07:56.299Z"
+  },
+  "manoshe-stockholm": {
+    "googlePlaceId": "ChIJvywvw5idX0YRVIemF28u8RY",
+    "queriedAt": "2026-04-17T07:07:57.108Z"
+  },
+  "oscars-bar-brasserie-stockholm": {
+    "googlePlaceId": "ChIJI0INSE6dX0YRezJp-dpm4g0",
+    "queriedAt": "2026-04-17T07:07:57.505Z"
+  },
+  "restaurant-pelikan-betyg-3-stockholm": {
+    "googlePlaceId": "ChIJrSV1Pfd3X0YRxwhoxSQ-Cug",
+    "queriedAt": "2026-04-17T07:07:57.920Z"
+  },
+  "restaurang-santo-stockholm": {
+    "googlePlaceId": "ChIJBTKjTrd3X0YRd2xq0cbKf0w",
+    "queriedAt": "2026-04-17T07:07:58.323Z"
+  },
+  "savocca-stockholm": {
+    "googlePlaceId": "ChIJR8sPrm-dX0YRcVhuDYgSPR0",
+    "queriedAt": "2026-04-17T07:07:58.839Z"
+  },
+  "usine-bistro-38-stockholm": {
+    "googlePlaceId": "ChIJZTMpS2KdX0YRZczpqplq1fo",
+    "queriedAt": "2026-04-17T07:07:59.228Z"
+  },
+  "kotetsu-stockholm": {
+    "googlePlaceId": "ChIJed8SUAB3X0YRn9KYVQvXtWU",
+    "queriedAt": "2026-04-17T07:07:59.605Z"
+  },
+  "bibon-stockholm": {
+    "googlePlaceId": "ChIJi8P_V1GdX0YRTOpGJUcUmeQ",
+    "queriedAt": "2026-04-17T07:08:00.005Z"
+  },
+  "la-civetta-stockholm": {
+    "googlePlaceId": "ChIJqWDbaAB3X0YR7F9JpYscOa4",
+    "queriedAt": "2026-04-17T07:08:00.397Z"
+  },
+  "muscadet-stockholm": {
+    "googlePlaceId": "ChIJCU2iDwCdX0YRoTDjjQi2M8g",
+    "queriedAt": "2026-04-17T07:08:00.765Z"
+  },
+  "la-girafe-uppsala": {
+    "googlePlaceId": "ChIJ6Vj-PwDLX0YR2B-ZQhlxMgk",
+    "queriedAt": "2026-04-17T07:08:01.145Z"
+  },
+  "arc-rooftop-stockholm": {
+    "googlePlaceId": "ChIJ8XmTsCudX0YRPB674cFWMFc",
+    "queriedAt": "2026-04-17T07:08:01.540Z"
+  },
+  "bistro-bestick-stockholm": {
+    "googlePlaceId": "ChIJbUwut2CdX0YRc2Ctv0LIzIM",
+    "queriedAt": "2026-04-17T07:08:01.994Z"
+  },
+  "malarpaviljongen-stockholm": {
+    "googlePlaceId": "ChIJY9F1dNd3X0YRvKslCki_OH4",
+    "queriedAt": "2026-04-17T07:08:02.417Z"
+  },
+  "ollis-deli-stockholm": {
+    "googlePlaceId": "ChIJcWjqFMGdX0YRL1-jPPyA3r0",
+    "queriedAt": "2026-04-17T07:08:02.832Z"
+  },
+  "rosa-bar-restaurang-stockholm": {
+    "googlePlaceId": "ChIJ7fMEXqGdX0YRnTQJkWGUneQ",
+    "queriedAt": "2026-04-17T07:08:03.347Z"
+  },
+  "savoj-soder-stockholm": {
+    "googlePlaceId": "ChIJ_esjzZd3X0YR0G8UY90Dhhc",
+    "queriedAt": "2026-04-17T07:08:03.746Z"
+  },
+  "angbatsbryggan-stockholm": {
+    "googlePlaceId": "ChIJk1AlulCdX0YRhxzahiwnGU0",
+    "queriedAt": "2026-04-17T07:08:04.148Z"
+  },
+  "la-petite-soeur-ystad": {
+    "googlePlaceId": "ChIJu58wLAN9VEYR6_hSkitP4VQ",
+    "queriedAt": "2026-04-17T07:08:04.525Z"
+  },
+  "kouthoofd-familie-winkel-stockholm": {
+    "googlePlaceId": "ChIJhdg0vvt3X0YRbJa0ubQdVEE",
+    "queriedAt": "2026-04-17T07:08:04.895Z"
+  },
+  "fjaderholmarnas-krog-stockholm": {
+    "googlePlaceId": "ChIJ1arALoqCX0YRnvHFN3qFl9w",
+    "queriedAt": "2026-04-17T07:08:05.362Z"
+  },
+  "the-streetfood-labs-stockholm": {
+    "googlePlaceId": "ChIJwZ4sAqp3X0YRwUaVui9wpRo",
+    "queriedAt": "2026-04-17T07:08:05.760Z"
+  },
+  "hotorgets-kvarterskrog-stockholm": {
+    "googlePlaceId": "ChIJd1R3GcudX0YReApG--Jgmew",
+    "queriedAt": "2026-04-17T07:08:06.312Z"
+  },
+  "ilse-goteborg": {
+    "googlePlaceId": "ChIJYRy59oPzT0YRrWx99yZvN2I",
+    "queriedAt": "2026-04-17T07:08:06.693Z"
+  },
+  "carousel-goteborg": {
+    "googlePlaceId": "ChIJayz_X_XzT0YRhh4Qdq9aVXU",
+    "queriedAt": "2026-04-17T07:08:07.646Z"
+  },
+  "gyllenborgens-mat-goteborg": {
+    "googlePlaceId": "ChIJi6MeKRXzT0YRQrft27XPgNc",
+    "queriedAt": "2026-04-17T07:08:08.048Z"
+  },
+  "hongkist-sweden": {
+    "googlePlaceId": "ChIJk_UMuESdX0YR72Xhe4_ryxw",
+    "queriedAt": "2026-04-17T07:08:08.803Z"
+  },
+  "matildas-gavle": {
+    "googlePlaceId": "ChIJh2Ns-13GYEYRahMc5pHvmg4",
+    "queriedAt": "2026-04-17T07:08:09.200Z"
+  },
+  "hasselsson-stockholm-stockholm": {
+    "googlePlaceId": "ChIJHyfEal6dX0YR1ecd-ZXPozE",
+    "queriedAt": "2026-04-17T07:08:09.582Z"
+  },
+  "izakaya-sthlm-odengatan-stockholm": {
+    "googlePlaceId": "ChIJ_dboTnqdX0YRhK-4dtmAibE",
+    "queriedAt": "2026-04-17T07:08:09.987Z"
+  },
+  "meza-libanesisk-restaurang-stockholm": {
+    "googlePlaceId": "ChIJYdSF7FudX0YRMiTDbnPAQAI",
+    "queriedAt": "2026-04-17T07:08:10.457Z"
+  },
+  "pigalle-restaurang-bar-goteborg": {
+    "googlePlaceId": "ChIJCTJX9GTzT0YR9tPbLDpN3aI",
+    "queriedAt": "2026-04-17T07:08:10.892Z"
+  },
+  "muskot-kok-bar-vasastan-stockholm": {
+    "googlePlaceId": "ChIJr3Xy1XCdX0YR3Z97-c_7xpU",
+    "queriedAt": "2026-04-17T07:08:11.293Z"
+  },
+  "bullando-krog-stockholm": {
+    "googlePlaceId": "ChIJ43MYF_SAX0YRNutEzwafWHI",
+    "queriedAt": "2026-04-17T07:08:11.690Z"
+  },
+  "skrovet-stockholm": {
+    "googlePlaceId": "ChIJ6cAxXvN3X0YROXcizN6GLJk",
+    "queriedAt": "2026-04-17T07:08:12.095Z"
+  },
+  "bar-saigon-stockholm": {
+    "googlePlaceId": "ChIJB1gNzGCdX0YRbcjEIweaOMc",
+    "queriedAt": "2026-04-17T07:08:12.530Z"
+  },
+  "lasse-i-parken-stockholm": {
+    "googlePlaceId": "ChIJd4gPFsV3X0YRUzJCT7FyQoE",
+    "queriedAt": "2026-04-17T07:08:12.937Z"
+  },
+  "sakura-stockholm": {
+    "googlePlaceId": "ChIJK-p2hmidX0YRKiWiU_OncHI",
+    "queriedAt": "2026-04-17T07:08:13.332Z"
+  },
+  "havsbaren-tyska-bron-goteborg": {
+    "googlePlaceId": "ChIJXdr3gGbzT0YRuiYvZaTJWuY",
+    "queriedAt": "2026-04-17T07:08:13.708Z"
+  },
+  "mazzarini-stockholm": {
+    "googlePlaceId": "ChIJA_tpJeN3X0YReYAEXoeIUjs",
+    "queriedAt": "2026-04-17T07:08:14.082Z"
+  },
+  "edsbacka-krog-stockholm": {
+    "googlePlaceId": "ChIJ21CRIS2ZX0YRW5P3s1LfCgk",
+    "queriedAt": "2026-04-17T07:08:14.610Z"
+  },
+  "klover-stockholm": {
+    "googlePlaceId": "ChIJeV-n4NV3X0YRrwF_BG4Sf9U",
+    "queriedAt": "2026-04-17T07:08:14.986Z"
+  },
+  "solstugan-stockholm": {
+    "googlePlaceId": "ChIJbWqOGSZ2X0YR0Wd1KVQfi4I",
+    "queriedAt": "2026-04-17T07:08:15.360Z"
+  },
+  "posto-mall-of-scandinavia-solna-kommun": {
+    "googlePlaceId": "ChIJ8f0E08edX0YRMohZa5iZdf0",
+    "queriedAt": "2026-04-17T07:08:16.349Z"
+  },
+  "bistro-creme-blasieholmen-stockholm": {
+    "googlePlaceId": "ChIJjfHe6lmdX0YRgMbo2zXjCM8",
+    "queriedAt": "2026-04-17T07:08:16.753Z"
+  },
+  "backyard-vastra-gotalands-lan": {
+    "googlePlaceId": "ChIJxddBpwEpW0YRLfcm6W8Dut4",
+    "queriedAt": "2026-04-17T07:08:17.301Z"
+  },
+  "hasselsson-drottninggatan-goteborg": {
+    "googlePlaceId": "ChIJ8zfCSgDzT0YR-m9W2SWoHrk",
+    "queriedAt": "2026-04-17T07:08:18.028Z"
+  },
+  "jinx-empire-goteborg": {
+    "googlePlaceId": "ChIJKRmSJgDzT0YRLBs2EFm7DbI",
+    "queriedAt": "2026-04-17T07:08:18.401Z"
+  },
+  "hall-kaft-at-goteborg": {
+    "googlePlaceId": "ChIJrft28oEPUEYRP289pYf18r0",
+    "queriedAt": "2026-04-17T07:08:18.777Z"
+  },
+  "piada-mia-goteborg": {
+    "googlePlaceId": "ChIJ85AZjNbzT0YRTy15RIlIe94",
+    "queriedAt": "2026-04-17T07:08:19.177Z"
+  },
+  "hasselsson-majorna-goteborg": {
+    "googlePlaceId": "ChIJ9d6XfK70T0YR02ucjJ7_Qqo",
+    "queriedAt": "2026-04-17T07:08:19.544Z"
+  },
+  "restaurang-bo-goteborg": {
+    "googlePlaceId": "ChIJs_lVVTbzT0YRQ63Gq9lduEo",
+    "queriedAt": "2026-04-17T07:08:20.138Z"
+  },
+  "bistro-breve-goteborg": {
+    "googlePlaceId": "ChIJO7H55HzzT0YRP6gGQELeJqk",
+    "queriedAt": "2026-04-17T07:08:20.520Z"
+  },
+  "fisk-goteborg": {
+    "googlePlaceId": "ChIJVyMUYmnzT0YRL9vbKNRcwMA",
+    "queriedAt": "2026-04-17T07:08:21.061Z"
+  },
+  "lisas-bistro-goteborg": {
+    "googlePlaceId": "ChIJi9FPHwD5T0YRsq-K482x84k",
+    "queriedAt": "2026-04-17T07:08:21.456Z"
+  },
+  "apex-burgers-bolandsgatan-uppsala": {
+    "googlePlaceId": "ChIJA_kfVlrNX0YRFl3JVSNRnAI",
+    "queriedAt": "2026-04-17T07:08:21.830Z"
+  },
+  "ulva-krog-uppsala": {
+    "googlePlaceId": "ChIJncS7N0fNX0YR9CfIE9IPZ74",
+    "queriedAt": "2026-04-17T07:08:22.229Z"
+  },
+  "restaurang-sverre-uppsala": {
+    "googlePlaceId": "ChIJSUVbAPrLX0YRM0d12Xllz3w",
+    "queriedAt": "2026-04-17T07:08:22.596Z"
+  },
+  "are-bageri-are": {
+    "googlePlaceId": "ChIJeUCIeQ0LbkYRUdMzPhsClT8",
+    "queriedAt": "2026-04-17T07:08:22.970Z"
+  },
+  "mehak-e-india-helsingborg-helsingborg": {
+    "googlePlaceId": "ChIJl-6cULozUkYRN3JbS2bO4T8",
+    "queriedAt": "2026-04-17T07:08:23.410Z"
+  },
+  "marin-grill-meze-orebro": {
+    "googlePlaceId": "ChIJLX1rAgAVXEYRbqeu7PMVNmg",
+    "queriedAt": "2026-04-17T07:08:24.177Z"
+  },
+  "miju-glanshammar": {
+    "googlePlaceId": "ChIJPz6xwbE9XEYRwA9Paf3mNAk",
+    "queriedAt": "2026-04-17T07:08:24.550Z"
+  },
+  "restaurang-wongs-orebro": {
+    "googlePlaceId": "ChIJM6Ccjx0VXEYRMnsShn2wU9U",
+    "queriedAt": "2026-04-17T07:08:24.933Z"
+  },
+  "stora-hjortstorps-gard-glanshammar": {
+    "googlePlaceId": "ChIJ8fqVulkVXEYRB0EjtUXhmak",
+    "queriedAt": "2026-04-17T07:08:25.325Z"
+  },
+  "tinget-matbar-orebro": {
+    "googlePlaceId": "ChIJJ7ic3KcVXEYRVj_nB4FYe84",
+    "queriedAt": "2026-04-17T07:08:25.693Z"
+  },
+  "cv-matstudio-orebro": {
+    "googlePlaceId": "ChIJy7-tCLAVXEYRluNzkaH68AE",
+    "queriedAt": "2026-04-17T07:08:26.065Z"
+  },
+  "glassery-orebro": {
+    "googlePlaceId": "ChIJvWTcaTEVXEYR9JBn2Fqao-s",
+    "queriedAt": "2026-04-17T07:08:26.423Z"
+  },
+  "wasa-kallar-n-orebro": {
+    "googlePlaceId": "ChIJqYZ4XeAUXEYRXZQdLgzCPmc",
+    "queriedAt": "2026-04-17T07:08:26.799Z"
+  },
+  "restaurang-rocca-orebro": {
+    "googlePlaceId": "ChIJcUjlEgIVXEYR6u5Vr3qw9jY",
+    "queriedAt": "2026-04-17T07:08:27.176Z"
+  },
+  "chandani-osterplan-orebro": {
+    "googlePlaceId": "ChIJgXoICQAVXEYRQao4Ems2LOA",
+    "queriedAt": "2026-04-17T07:08:27.587Z"
+  },
+  "kajsas-i-parken-stockholm": {
+    "googlePlaceId": "ChIJxTzh0wJ4X0YRL8eEtu3IVk8",
+    "queriedAt": "2026-04-17T07:08:27.982Z"
+  },
+  "bodarna-by-melanders-stockholm": {
+    "googlePlaceId": "ChIJtfG9lPp3X0YRfNAKhUpeYEI",
+    "queriedAt": "2026-04-17T07:08:28.368Z"
+  },
+  "pizza-punks-hammarbyhojden-solna-kommun": {
+    "googlePlaceId": "ChIJW3p9GoR5X0YRYAaSFkczJ9A",
+    "queriedAt": "2026-04-17T07:08:28.742Z"
+  },
+  "kvarnen-uteservering-stockholm": {
+    "googlePlaceId": "ChIJC9eZI0l3X0YRiTKeQ0DLQwg",
+    "queriedAt": "2026-04-17T07:08:29.155Z"
+  },
+  "continental-bar-stockholm": {
+    "googlePlaceId": "ChIJP7lhMQB3X0YR1hZPcSHK1jc",
+    "queriedAt": "2026-04-17T07:08:29.577Z"
+  },
+  "alstromerbaren-stockholm": {
+    "googlePlaceId": "ChIJSQ_SJnydX0YR5xyBjA1bwsQ",
+    "queriedAt": "2026-04-17T07:08:29.997Z"
+  },
+  "mariedals-tradgardscafe-stockholm": {
+    "googlePlaceId": "ChIJHQdrvpudX0YRkXZta4ef83Y",
+    "queriedAt": "2026-04-17T07:08:30.390Z"
+  },
+  "happy-atelier-kungsholmen-stockholm": {
+    "googlePlaceId": "ChIJuc1vpAV3X0YRtxiGi1WqJSg",
+    "queriedAt": "2026-04-17T07:08:30.764Z"
+  },
+  "glass-pa-hornet-stockholm": {
+    "googlePlaceId": "ChIJLZX8SL6GX0YR6SNM7Cdx-AY",
+    "queriedAt": "2026-04-17T07:08:31.183Z"
+  },
+  "gelatokiosken-stockholm": {
+    "googlePlaceId": "ChIJ4WoV1RN3X0YRvytgVWS545c",
+    "queriedAt": "2026-04-17T07:08:31.563Z"
+  },
+  "glasseria-lindholmen-goteborg": {
+    "googlePlaceId": "ChIJcf4MeqPzT0YRZRMqUQQWWLA",
+    "queriedAt": "2026-04-17T07:08:32.006Z"
+  },
+  "petjos-cafe-villa-skoga-kungsangen": {
+    "googlePlaceId": "ChIJBd38nOijX0YRtUthLvjYq4s",
+    "queriedAt": "2026-04-17T07:08:32.421Z"
+  },
+  "cafe-ekorren-stockholm": {
+    "googlePlaceId": "ChIJ9ev-zaaCX0YRPlBzAiVl9MI",
+    "queriedAt": "2026-04-17T07:08:32.834Z"
+  },
+  "glasseriet-stockholm": {
+    "googlePlaceId": "ChIJWdzWil-dX0YRFvR8dgi_dfU",
+    "queriedAt": "2026-04-17T07:08:33.213Z"
+  },
+  "gelato-crema-kungsholms-strand-stockholm": {
+    "googlePlaceId": "ChIJz5IJDnCdX0YR-MYPFqh579s",
+    "queriedAt": "2026-04-17T07:08:33.670Z"
+  },
+  "hokeriet-stockholm": {
+    "googlePlaceId": "ChIJ-cvXh8-XU0YRLhpd6E_VGuk",
+    "queriedAt": "2026-04-17T07:08:34.436Z"
+  },
+  "matchaverket-stockholm": {
+    "googlePlaceId": "ChIJSQ0dld-dX0YR4g7jvgBg-LE",
+    "queriedAt": "2026-04-17T07:08:34.807Z"
+  },
+  "yalla-rinkeby-hjulstavagen-stockholm": {
+    "googlePlaceId": "ChIJAyHS1F6eX0YRJKHw9Todq24",
+    "queriedAt": "2026-04-17T07:08:35.221Z"
+  },
+  "slottsskogens-vaffelstuga-cafe-braket-goteborg": {
+    "googlePlaceId": "ChIJb-8iOjzzT0YRhYPFkOA9Evc",
+    "queriedAt": "2026-04-17T07:08:35.638Z"
+  },
+  "brod-salt-centralen-stockholm": {
+    "googlePlaceId": "ChIJaT9aD2udX0YRKJTnqaPDhK0",
+    "queriedAt": "2026-04-17T07:08:36.213Z"
+  },
+  "kajsas-i-tullen-stockholm": {
+    "googlePlaceId": "ChIJrwb09Cl3X0YRhloUbcRzBNo",
+    "queriedAt": "2026-04-17T07:08:36.659Z"
+  },
+  "portvaktsstugans-vaffelkafe-stockholm": {
+    "googlePlaceId": "ChIJ42wMydydX0YRacENA4rT53o",
+    "queriedAt": "2026-04-17T07:08:37.027Z"
+  },
+  "grand-hotel-stockholm-stockholm-2": {
+    "googlePlaceId": "ChIJKcNgo1mdX0YRZ_wU8-ZX24w",
+    "queriedAt": "2026-04-17T07:08:37.676Z"
+  },
+  "vallevikens-hotell-sweden": {
+    "googlePlaceId": "ChIJxeH19YXk9kYRTahWENJV-So",
+    "queriedAt": "2026-04-17T07:08:38.463Z"
   }
 }
