@@ -86,9 +86,9 @@ function parseRestaurantDistinction(
 
   imgs.each((_, img) => {
     const src = $(img).attr("src") || $(img).attr("data-src") || "";
-    if (src.includes("1star")) {
+    if (src.includes("michelin-star")) {
       starCount++;
-    } else if (src.includes("bib-gourmand")) {
+    } else if (/bibendum/i.test(src) || src.includes("bib-gourmand")) {
       isBib = true;
     }
   });
