@@ -2011,7 +2011,8 @@
     "googlePlaceId": "ChIJeyACsZF3X0YRM2ZGE0RqMC0",
     "canonicalName": "Två Små Svin",
     "aliases": [
-      "Två Små Svin Stockholm"
+      "Två Små Svin Stockholm",
+      "Två Små Svin Årsta"
     ]
   },
   {
@@ -2074,7 +2075,8 @@
     "googlePlaceId": "ChIJ8Z8h0LydX0YRaZJb9GtZarM",
     "canonicalName": "Gelatovnova (glassbar)",
     "aliases": [
-      "GelatoNova Odengatan"
+      "GelatoNova Odengatan",
+      "GelatoNova Hagastaden"
     ]
   },
   {
@@ -2726,6 +2728,41 @@
     "canonicalName": "Sjöbaren Haga",
     "aliases": [
       "Fisk"
+    ]
+  },
+  {
+    "googlePlaceId": "ChIJ3eX8BAxbfEYRjO8dnaMvpsA",
+    "canonicalName": "Hunger och Törst",
+    "aliases": [
+      "Hunger & Törst"
+    ]
+  },
+  {
+    "googlePlaceId": "ChIJAV8X02dc9UYRi1jlgEPKp-4",
+    "canonicalName": "Furusund Värdshus",
+    "aliases": [
+      "Hotell Furusund"
+    ]
+  },
+  {
+    "googlePlaceId": "ChIJL91ch-x3X0YRV7NlpighPCw",
+    "canonicalName": "Cong",
+    "aliases": [
+      "Cong Cong"
+    ]
+  },
+  {
+    "googlePlaceId": "ChIJoUAc_ZudX0YRiTGvC7qjvKE",
+    "canonicalName": "Stockholm 1897",
+    "aliases": [
+      "Stockholm 1897 by Monika"
+    ]
+  },
+  {
+    "googlePlaceId": "ChIJxWzsM_t3X0YRGywmg_MulX4",
+    "canonicalName": "Espresso House Skrapan",
+    "aliases": [
+      "Espresso House Götgatan 15"
     ]
   }
 ]

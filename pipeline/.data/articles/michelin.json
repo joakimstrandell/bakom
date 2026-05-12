@@ -19,8 +19,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.454Z",
-    "enrichedAt": "2026-04-16T16:24:33.454Z"
+    "collectedAt": "2026-05-12T10:19:47.860Z",
+    "enrichedAt": "2026-05-12T10:19:47.860Z"
   },
   {
     "id": "acbe4cc0795d5f0a",
@@ -43,8 +43,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.455Z",
-    "enrichedAt": "2026-04-16T16:24:33.455Z"
+    "collectedAt": "2026-05-12T10:19:47.860Z",
+    "enrichedAt": "2026-05-12T10:19:47.860Z"
   },
   {
     "id": "89a2221edb5c0ba1",
@@ -66,8 +66,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.455Z",
-    "enrichedAt": "2026-04-16T16:24:33.455Z"
+    "collectedAt": "2026-05-12T10:19:47.860Z",
+    "enrichedAt": "2026-05-12T10:19:47.860Z"
   },
   {
     "id": "09d51c53d3b5a30d",
@@ -89,8 +89,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.455Z",
-    "enrichedAt": "2026-04-16T16:24:33.455Z"
+    "collectedAt": "2026-05-12T10:19:47.861Z",
+    "enrichedAt": "2026-05-12T10:19:47.861Z"
   },
   {
     "id": "73d2417bb6aef432",
@@ -112,8 +112,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.455Z",
-    "enrichedAt": "2026-04-16T16:24:33.455Z"
+    "collectedAt": "2026-05-12T10:19:47.861Z",
+    "enrichedAt": "2026-05-12T10:19:47.861Z"
   },
   {
     "id": "dc09eaade67ed652",
@@ -135,8 +135,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.455Z",
-    "enrichedAt": "2026-04-16T16:24:33.455Z"
+    "collectedAt": "2026-05-12T10:19:47.861Z",
+    "enrichedAt": "2026-05-12T10:19:47.861Z"
   },
   {
     "id": "71a4efa978fca3d8",
@@ -158,8 +158,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.457Z",
-    "enrichedAt": "2026-04-16T16:24:33.457Z"
+    "collectedAt": "2026-05-12T10:19:47.862Z",
+    "enrichedAt": "2026-05-12T10:19:47.862Z"
   },
   {
     "id": "64b23273fc8434d4",
@@ -175,15 +175,14 @@
     "venueCity": "Stockholm",
     "score": 0,
     "cuisine": [
-      "Modern Cuisine",
-      "Swedish"
+      "Modern Cuisine"
     ],
     "priceRange": "lyx",
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.457Z",
-    "enrichedAt": "2026-04-16T16:24:33.457Z"
+    "collectedAt": "2026-05-12T10:19:47.862Z",
+    "enrichedAt": "2026-05-12T10:19:47.862Z"
   },
   {
     "id": "5b4de54d0e9c7bb4",
@@ -205,8 +204,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.457Z",
-    "enrichedAt": "2026-04-16T16:24:33.457Z"
+    "collectedAt": "2026-05-12T10:19:47.863Z",
+    "enrichedAt": "2026-05-12T10:19:47.863Z"
   },
   {
     "id": "312ee66c4cc52ac8",
@@ -228,8 +227,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.457Z",
-    "enrichedAt": "2026-04-16T16:24:33.457Z"
+    "collectedAt": "2026-05-12T10:19:47.863Z",
+    "enrichedAt": "2026-05-12T10:19:47.863Z"
   },
   {
     "id": "67630ded3395be40",
@@ -252,8 +251,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.457Z",
-    "enrichedAt": "2026-04-16T16:24:33.457Z"
+    "collectedAt": "2026-05-12T10:19:47.863Z",
+    "enrichedAt": "2026-05-12T10:19:47.863Z"
   },
   {
     "id": "b67ab5e2613dfecb",
@@ -276,8 +275,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.458Z",
-    "enrichedAt": "2026-04-16T16:24:33.458Z"
+    "collectedAt": "2026-05-12T10:19:47.863Z",
+    "enrichedAt": "2026-05-12T10:19:47.863Z"
   },
   {
     "id": "eb538bb9289868b3",
@@ -299,8 +298,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.458Z",
-    "enrichedAt": "2026-04-16T16:24:33.458Z"
+    "collectedAt": "2026-05-12T10:19:47.863Z",
+    "enrichedAt": "2026-05-12T10:19:47.863Z"
   },
   {
     "id": "614f2b0533cd6c6d",
@@ -322,8 +321,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.458Z",
-    "enrichedAt": "2026-04-16T16:24:33.458Z"
+    "collectedAt": "2026-05-12T10:19:47.863Z",
+    "enrichedAt": "2026-05-12T10:19:47.863Z"
   },
   {
     "id": "5c1f0c77a180e710",
@@ -345,8 +344,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.458Z",
-    "enrichedAt": "2026-04-16T16:24:33.458Z"
+    "collectedAt": "2026-05-12T10:19:47.863Z",
+    "enrichedAt": "2026-05-12T10:19:47.863Z"
   },
   {
     "id": "915ecae381b84206",
@@ -368,8 +367,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.458Z",
-    "enrichedAt": "2026-04-16T16:24:33.458Z"
+    "collectedAt": "2026-05-12T10:19:47.863Z",
+    "enrichedAt": "2026-05-12T10:19:47.863Z"
   },
   {
     "id": "0b3ecea5d8c48037",
@@ -391,8 +390,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.458Z",
-    "enrichedAt": "2026-04-16T16:24:33.458Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "55cf6adf08744417",
@@ -414,8 +413,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.458Z",
-    "enrichedAt": "2026-04-16T16:24:33.458Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "7d99f2eda7460e68",
@@ -437,8 +436,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.458Z",
-    "enrichedAt": "2026-04-16T16:24:33.458Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "c8025c36f0d2215c",
@@ -460,8 +459,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.458Z",
-    "enrichedAt": "2026-04-16T16:24:33.458Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "e9edac7dc2c2e4e8",
@@ -484,8 +483,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "21857518e4d55e7c",
@@ -507,8 +506,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "63e88dbc61d8d7ea",
@@ -530,8 +529,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "49f556895089a48f",
@@ -553,8 +552,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "0eda58ddf3a561e3",
@@ -577,8 +576,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "5dab480438a0db54",
@@ -600,8 +599,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "be06e2ce6339fe26",
@@ -623,8 +622,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "7a0e566f5bf740bb",
@@ -646,8 +645,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "13d1d98c7bf2fe67",
@@ -669,8 +668,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "e54c34b5ddb07cff",
@@ -693,8 +692,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "d8013468c225ffa5",
@@ -716,8 +715,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "d682780d0b49922f",
@@ -739,8 +738,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "512460f6349d6376",
@@ -762,8 +761,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "1590e4b594af96da",
@@ -785,8 +784,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "00935d10e2b1aa04",
@@ -808,8 +807,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "0aa3484da6d31172",
@@ -831,8 +830,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "43300d131060a657",
@@ -851,12 +850,12 @@
       "Scandinavian",
       "Swedish"
     ],
-    "priceRange": "budget",
+    "priceRange": "mellan",
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "aaf6725e5094b1f7",
@@ -878,8 +877,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "9dad7eb197f1ccb9",
@@ -901,8 +900,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "7c73202091efb184",
@@ -925,8 +924,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "e891d89626575953",
@@ -948,19 +947,19 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "8842fd0ee3116ef2",
     "sourceId": "michelin",
     "url": "https://guide.michelin.com/se/en/vastra-gotaland/gothenburg/restaurant/vra",
-    "title": "Restaurant vRÅ",
+    "title": "Restaurant Vrå",
     "publishedAt": "",
     "contentType": "review",
     "bodyText": "The imposing 1920s city post office is now a hotel, and this glamorous restaurant sits within what was the central hall – the listed cashier booths still on display. A Nordic-Japanese approach sees fine Scandinavian produce meet Asian techniques, and there’s an impressive range of sake by the glass.",
     "venueType": "restaurant",
-    "venueName": "Restaurant vRÅ",
+    "venueName": "Restaurant Vrå",
     "venueAddress": "Clarion Hotel Post, Drottningtorget 10",
     "venueCity": "Göteborg",
     "score": 0,
@@ -971,8 +970,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "012050423e7868a0",
@@ -994,8 +993,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "b20e7e040f114053",
@@ -1017,8 +1016,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "887a467485ea594c",
@@ -1041,8 +1040,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "f55783a9d90d6819",
@@ -1065,8 +1064,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "6eca687d3f00b680",
@@ -1088,8 +1087,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "7cca1dab0e7f4216",
@@ -1111,8 +1110,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "2d4439e6742737e5",
@@ -1135,8 +1134,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "9281a299be7d0f5f",
@@ -1158,8 +1157,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "b6869b340da374de",
@@ -1181,8 +1180,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "fb51c724b0435b3f",
@@ -1204,8 +1203,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "8e8c03e02450dd05",
@@ -1227,8 +1226,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "559e9387c3a27aae",
@@ -1250,31 +1249,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
-  },
-  {
-    "id": "423d6168972076f3",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/stockholm-region/stockholm/restaurant/oxenstiernan",
-    "title": "Oxenstiernan",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "You can’t miss this stylish, orange-painted bistro which stands out against the greenery of a city park. In summer, be sure to dine on the terrace, under the trees. A environmentally conscious ethos runs throughout, from the interior design to the ethically sourced produce used in the unfussy, boldly flavoured Swedish dishes.This restaurant is currently closed and due to reopen in Spring 2026.",
-    "venueType": "restaurant",
-    "venueName": "Oxenstiernan",
-    "venueAddress": "Storgatan 35B",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "cuisine": [
-      "Swedish"
-    ],
-    "priceRange": "mellan",
-    "tags": [
-      "selected"
-    ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "a7a8d35fc679a37d",
@@ -1297,8 +1273,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "b02bd15472d83a1d",
@@ -1321,8 +1297,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "54a5b1762ea55551",
@@ -1344,8 +1320,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "897f047698194f95",
@@ -1367,8 +1343,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "f1068e10cbbf427b",
@@ -1390,8 +1366,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.864Z",
+    "enrichedAt": "2026-05-12T10:19:47.864Z"
   },
   {
     "id": "3f20c5dbc7fe9f07",
@@ -1413,8 +1389,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.459Z",
-    "enrichedAt": "2026-04-16T16:24:33.459Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "83708b1ef440d988",
@@ -1436,8 +1412,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "b91adff40894f3b0",
@@ -1459,8 +1435,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "e28ac4d6c662d1b0",
@@ -1482,8 +1458,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "35a98345e3c596c7",
@@ -1505,8 +1481,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "053cb3b9d0fb6153",
@@ -1528,8 +1504,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "b884769fe1db7ba4",
@@ -1551,8 +1527,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "2b25ed6bfbac1a94",
@@ -1574,8 +1550,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "f44f93bdf1524a86",
@@ -1598,8 +1574,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "6084936d4f3e8e47",
@@ -1621,8 +1597,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "143ba1a14cc03e6e",
@@ -1644,8 +1620,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "a0bdf798bf6ed396",
@@ -1667,8 +1643,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "d111e343345aa955",
@@ -1690,8 +1666,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "be881f7109e807e0",
@@ -1713,8 +1689,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "511410b074ab72de",
@@ -1736,8 +1712,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "c3b2c9ae7da3a63e",
@@ -1759,8 +1735,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "a201b8f83a00a013",
@@ -1780,8 +1756,8 @@
     ],
     "lat": 59.335495,
     "lng": 18.077901,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "f3bd70b44d258371",
@@ -1801,8 +1777,8 @@
     ],
     "lat": 59.332065,
     "lng": 18.080456,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "3486b67070f36ecf",
@@ -1822,281 +1798,8 @@
     ],
     "lat": 57.703877,
     "lng": 11.95671,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
-  },
-  {
-    "id": "53111f1f010e7672",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/villa-dahlia-15140",
-    "title": "Villa Dahlia",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Created by the Malmström-Cappelen family of Diplomat Collection fame, Villa Dahlia takes its name and spirit from their flower-filled summer cottage. Behind its Brutalist exteriors are soft-toned rooms, Murano glass, and dahlia-red details that brighten the palette. There is art on the walls, the rooftop is made for evening views, pétanque in the courtyard, and a Nordic spa upstairs. Borrow a bike and you will find much of Stockholm within easy reach. Though with so much to enjoy on site, the biggest decision may be whether to venture out at all.",
-    "venueType": "hotel",
-    "venueName": "Villa Dahlia",
-    "venueAddress": "Tegnerlunden 8",
-    "venueCity": "Stockholm",
-    "score": 1,
-    "tags": [
-      "1_key"
-    ],
-    "lat": 59.338656,
-    "lng": 18.054743,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
-  },
-  {
-    "id": "74ce433ee23bf744",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/ett-hem-7183",
-    "title": "Ett Hem",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "In the Sixties Stockholm was the capital of the kind of modernism that’s synonymous with “Scandinavian” design. Nowadays that utopian, vaguely futuristic look is the last thing on anyone’s mind. In the Nordic countries, the best hotels — and their guests — are devoted to something much warmer, a luxe, stylish sort of coziness, and an eclectic approach which makes use of mid-century modernism as just one element among many historical references. And even if Ett Hem’s aesthetic isn’t strictly homegrown — designer Ilse Crawford is London-born, to a Danish mother — the fact is, it’s probably the finest example anywhere of the current tendency in Scandinavian boutique hotel design.\n\nMore importantly, it’s simply one of the most impressive hotels in the region. Twelve rooms might just be the perfect size for a boutique hotel, especially one whose name means “home” — small enough that each room is an authentic original, and the staff has a chance to get to know every guest.\n\nThe rooms are well-appointed, and with their blend of contemporary and vintage design, they’ve got more personality than any ordinary luxury hotel, and in certain departments, more comfort as well — some have rain showers, others luxurious freestanding tubs, not to mention fireplaces or stoves, handy for the long winter months.\n\nAnd like any house worthy of the name, there’s more to Ett Hem than just bedrooms. There’s a library and a couple of sitting rooms, all of them equally as stylish as any space in the house, and come mealtime you’ll have your choice of a walled garden, a sunny conservatory, or the kitchen, where guests gather at a long table for a bit of classic, old-style hospitality. We’re tempted to say it’s like being at home, but if we’re honest, most of us can only wish home was so good.",
-    "venueType": "hotel",
-    "venueName": "Ett Hem",
-    "venueAddress": "Sköldungagatan 2",
-    "venueCity": "Stockholm",
-    "score": 1,
-    "tags": [
-      "1_key"
-    ],
-    "lat": 59.345513,
-    "lng": 18.067702,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
-  },
-  {
-    "id": "64e4901bef135047",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/berns-hotel-6180",
-    "title": "Berns Hotel",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Since the 19th Century, Berns Hotel has been one of Stockholm’s most desirable addresses, with its Belle Epoque exterior and an opulent interior to match — in fact the Red Room was the setting for August Strindberg’s novel of the same name. \n\nThe hotel has since been renovated, the exterior lovingly restored and the interior completely redesigned in a simple, ultra-contemporary style, in cherry and marble. The suites are a bit more extravagant, some featuring saunas or jacuzzis, with interiors by a number of guest designers, including the ubiquitous Philippe Starck.\n\nThe restaurants and bars have had a facelift courtesy of Terence Conran, and the hotel is one of Stockholm’s top performance venues — the concert hall showcases anything from drama to DJs, rock shows to stand-up comedy, and it’s a different crowd every night. But for all the bustle in the public spaces, Berns as a hotel has a certain intimacy about it — 82 rooms is a very manageable size. Nonetheless, make a point of arranging for a room at some distance from the action if you need to sleep soundly. \n\nThe location is ideal, in the city’s center, providing access to all the capital’s attractions — Old Town and the Royal Palace are nearby, and the National Museum and Royal Opera are not much farther. The financial district is just on the other side of Berzelii Park, and the best shopping in town is just minutes away.",
-    "venueType": "hotel",
-    "venueName": "Berns Hotel",
-    "venueAddress": "Berzelii Park, Nackstromsgatan 8",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 59.33237,
-    "lng": 18.07365,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
-  },
-  {
-    "id": "3f3e71130aab03bd",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/nobis-hotel-stockholm-6391",
-    "title": "Nobis Hotel Stockholm",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Long before the Swedish design trio Claesson Koivisto Rune reconfigured this 19th-century stone edifice into an eccentric modernist hotel, the site had achieved a certain notoriety; after a spell as a private residence it was home to a bank where, during a 1970s robbery, the term “Stockholm syndrome” was coined. Later it was pressed into service as a high-end apartment complex, and brands like Marimekko and Acne occupied its retail space. It’s in connection with its current incarnation as the Nobis Hotel, however, that we’re moved to take an interest — what’s otherwise a fairly conventional luxury hotel is elevated to something higher, thanks to the contrast of the buildings 19th-century patina and CKR’s contemporary Scandinavian design sensibility.\n\nThe color scheme and the lighting design are intended to work in tandem. Referred to as “Scandinavian dark blond,” the palette is toned-down and discreet, inspired by the low, off-angle light observed during the Swedish winter. The furnishings enhance this natural aesthetic, with materials sourced from wood, stone, and wool, while subtle patterns suggestive of abstract and organic forms grace the wallpaper and carpets.\n\nAlongside these modern elements is a generous helping of Stockholm history. Much of the original hotel’s interior, like the former bank conference rooms paneled in dark oak and ornate stucco, is under the watchful eye of the Swedish National Heritage Board. For all its design distinction, and despite the repurposed steel reception desk or the automated cellphone check-in, the Nobis is still in some respects a classic luxury hotel.\n\nAll rooms have views of the city or the hotel’s atrium, and bathrooms are sheathed in floor-to-ceiling Carrara marble. The lounge is the focal point, with its lofted cathedral-like ceiling rising high above, and its easy access to the in-house dining and drinking options.",
-    "venueType": "hotel",
-    "venueName": "Nobis Hotel Stockholm",
-    "venueAddress": "Norrmalmstorg 2-4",
-    "venueCity": "Stockholm",
-    "score": 1,
-    "tags": [
-      "1_key"
-    ],
-    "lat": 59.333185,
-    "lng": 18.073813,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
-  },
-  {
-    "id": "bf33ed42b1308f1a",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/miss-clara-by-nobis-7230",
-    "title": "Miss Clara by Nobis",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "If there’s one thing we’ve learned about Scandinavian design in our years on the job it’s that it defies stereotyping. Even just in Swedish design there are currents within currents, and to unpack the references involved in Stockholm’s Miss Clara by Nobis would require a proper education. This distinctive 1910 façade is pure Art Nouveau, a former girls’ school which retains much of its historic character. But step back and you’ll see it’s topped by a modern addition, courtesy of the Swedish architect Gert Wingårdhs, who was tasked with bringing Miss Clara into the 21st century.\n\nEven the modern elements bear classic echoes, and there’s nothing about the place that feels confrontational or alienating. And before we go too deep into our dissertation, we’ll skip ahead to the point. The upshot of all this impeccably thoughtful design is a place that can’t help but soothe and welcome any traveler who’s sensitive to the built environment. Whether you’re aware of all the visual references or just appreciate a bit of confident character in your lodging, it’s hard to find fault here.\n\nDo be sure to pry yourself out of your room long enough for a bite at Miss Clara’s restaurant — modern Scandinavian cooking is possibly even more thoughtful than modern Scandinavian design, and as you’ve seen, that’s saying something.",
-    "venueType": "hotel",
-    "venueName": "Miss Clara by Nobis",
-    "venueAddress": "Sveavägen 48",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 59.337593,
-    "lng": 18.061904,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
-  },
-  {
-    "id": "ebdfa6d73b1a6787",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-j-6389",
-    "title": "Hotel J Stockholm",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Just to the east of Stockholm proper is the island suburb of Nacka Strand, a place where the living is truly easy, even by Swedish standards. Here, just outside the city, is where you’ll find Hotel J, a modernist seaside structure housing a boutique hotel as well as a restaurant that’s popular with overnighters and day-trippers alike.\n\nYou wanted crisp clean lines and you got them — along with a healthy bit of maritime atmosphere, in the paneled wood and nautical colors of the guest rooms. It’s inspired by Newport, Rhode Island, and there certainly is a resemblance — in fact there’s a subtle strain of Americana throughout, as well as plenty that’s cheerful, colorful and oh-so-Swedish.\n\nThe restaurant is well known for a reason, serving inventive brasserie fare made from fresh Swedish produce and seafood — the seasonal brunch is a particularly popular option. Hotel J’s location places it around the far end of the island from Stockholm, which makes for fine sea views, and also means that sea travel is perhaps a better bet than the bridge or the rail link. It’s probably not the place you’d choose for a first visit to Stockholm, but for a fresh perspective on the archipelago it’s unparalleled.\n\nHow to get there:\nHotel J is located in Nacka Strand, which can be reached by car from downtown Stockholm in approximately 10 minutes.  From Arlanda International Airport(ARN), the drive takes about 50 minutes.  Scheduled boat service provides access to and from Nybrokajen and Slussen, making the journey to Nacka Strand in about 15 minutes.",
-    "venueType": "hotel",
-    "venueName": "Hotel J Stockholm",
-    "venueAddress": "Ellensviksvagen 1, Nacka Strand",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 59.3186,
-    "lng": 18.1642,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
-  },
-  {
-    "id": "9adead70285d33cd",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-skeppsholmen-6390",
-    "title": "Hotel Skeppsholmen",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "The uninitiated traveler most likely imagines Stockholm’s boutique hotel scene to be a haven of modern minimalist design. Those with a finger on the Scandinavian pulse, however, would know to expect a deep vein of cozy, almost rustic tradition. When it comes to the Hotel Skeppsholmen they’d both be right.\n\nLook at the close-ups and you see modern design that’s cleaner than clean, but zoom out and you’ll notice the setting: a pair of classic buildings, dating back to 1699, located on the island of Skeppsholmen, a peaceful little island literally surrounded by the city of Stockholm — a window into the maritime side of the city. It’s a short walk over the bridge and into the city center, but on the island it’s uncannily quiet.\n\nRemarkably few of the landmark houses’ details have been altered — their age made the restoration particularly sensitive, and where some hoteliers might have torn them down to the studs, here the redesign is essentially a triumph of interior decoration, a testament to the impact of some well-chosen furnishings and finishes.\n\nThe restaurant is stylish in a playful and sunny sort of way, and the bar is chic but not too desperately hip. For while the Skeppsholmen bills itself as an urban oasis, it’s not a hideaway, or a hermitage — this is one oasis the locals are happy to visit, whether for dinner or for the Swedish tradition of mid-afternoon coffee and cakes.",
-    "venueType": "hotel",
-    "venueName": "Hotel Skeppsholmen",
-    "venueAddress": "1 Gröna gången",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 59.32476,
-    "lng": 18.087685,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
-  },
-  {
-    "id": "6110b8a05df2652f",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/nordic-light-hotel-6392",
-    "title": "Nordic Light Hotel",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Under no circumstances should anyone be put off by the unashamedly dated exterior of this one-time office block. The Sixties are inevitably the new Fifties, and this populist-utopian strain of Sixties modernism is only just now distant enough to be coming back into fashion.\n\nAnd whether or not you’re ready to revisit that era ceases to matter once you’re inside. Nordic Light’s interiors are all 21st-century modern minimalism, Scandinavian style, set apart from countless otherwise similar hotels by an inordinate attention to lighting; the “light architect,” Kai Piippo, has earned his fee several times over. An endless (and seasonally variable) array of lighting effects, both subtle and otherwise, engage the eye at every turn.\n\nStandard and Superior rooms keep it simple, making the most of their allotment of natural light and, in winter, making up the difference in pure white. But it’s in the Mood rooms that Nordic Light has earned its reputation: here moving patterns are projected on the walls, and the backlit headboard cycles through a spectrum of wintry tones.\n\nSome guests will be in the mood for some color therapy, and some won’t. With 169 rooms, Nordic Light is big enough that there’s something for everyone, thanks to its resident artist program, comfort-cuisine restaurant the Crooked Leg, extensive cocktail menu, and Absolut Icebar across the road in the sister Nordic C hotel. The Arlanda Express station is just around the corner, for easy access to the airport, and the surrounding Normalm district is central for business travelers and shoppers alike.",
-    "venueType": "hotel",
-    "venueName": "Nordic Light Hotel",
-    "venueAddress": "7 Vasaplan",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 59.332555,
-    "lng": 18.05721,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
-  },
-  {
-    "id": "02ada2950aeef2cc",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/stallmastaregarden-6662",
-    "title": "Stallmästaregården",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Even in a city rich with green space, Stockholm’s Stallmästaregården offers up a surprisingly pastoral scene. A former stable-master’s farm and the oldest inn in the city, it’s situated on the banks of Brunnsviken Bay in Royal Haga Park, lending it the feel of a country retreat even though it’s just minutes from the center of the city. \n\nThe forty-nine rooms around the 17th-century farmhouse are designed in 18th-century Swedish style, which makes them sound perhaps more old-fashioned than they are. It takes a deft hand — perhaps, more specifically, a Scandinavian one — to create such unfussy rooms from a palette of pastel-colored walls and flower-print curtains. All the rooms, starting with the Classic, include large beds, a writing desk, and bathrooms with amenities by Stockholm-based Byredo Parfums. An upgrade to a Superior or Deluxe room adds garden or park views, respectively, while the suites offer both more space and a flood of sunlight through oversized windows. \n\nThe hotel’s restaurant is just what you’d hope from a former farm in a cosmopolitan city. The space feels both rustic and sophisticated (another trick Scandinavians pull off well). Seasonal menus feature creative preparations of local ingredients, as in a dish of reindeer, beetroot, spruce shoot, moss and blueberries. \n\nBeyond the grounds of the hotel, the nearest neighborhood, Vasastan, is full of restaurants, bars, shops and art galleries — further evidence that, in Stockholm, pastoral beauty and the pleasures of urban life can happily coexist.",
-    "venueType": "hotel",
-    "venueName": "Stallmästaregården",
-    "venueAddress": "Annerovägen 2",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 59.351671,
-    "lng": 18.0434,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
-  },
-  {
-    "id": "d7d3b13655cce33f",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/lydmar-hotel-5807",
-    "title": "Lydmar Hotel",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Some of you might remember another Stockholm hotel that went by the Lydmar name, a rowdy, almost painfully hip sort of place, where the focus was very much on the nightlife, and the revelers at times threatened to overwhelm the guests. Well, that was then, and this is now — around the turn of the new millennium that was what boutique hotels were about. Today, more and more, they’re focused on the traditional values of hospitality, and once again the new version of the Lydmar is exemplary.\n\nIt’s fair to say that in terms of design, Stockholm tends to be a step ahead. By the time most of us figured out what “Scandinavian design” looked like, the Swedes had already moved on to the next thing. Look around Lydmar and you’ll see very little in the way of stark minimalism. These days Scandinavian designers are mining a rich history — there’s the odd mid-century modern chair or sofa, for example, but plenty more that’s traditional, almost rustic.\n\nAt its best the new luxury hotel avoids ostentation whenever possible, and this one is no different — it’s quietly stylish, but more focused on quality materials and on fostering an intimate atmosphere. And though you won’t mistake it for a bar with a boardinghouse attached, the Lydmar does have plenty going on: there’s a smaller, more intimate music venue, as well as a restaurant and lounge that are destined to become local favorites. And you won’t have to look far to find it — the location is stellar, absolutely central, next to the Grand and right up against the Harbor and the old town.",
-    "venueType": "hotel",
-    "venueName": "Lydmar Hotel",
-    "venueAddress": "Södra Blasieholmshamnen 2",
-    "venueCity": "Stockholm",
-    "score": 1,
-    "tags": [
-      "1_key"
-    ],
-    "lat": 59.3282,
-    "lng": 18.07779,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
-  },
-  {
-    "id": "ab6ee87416d8a8f6",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-at-six-8825",
-    "title": "Hotel At Six",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Contrary to stereotype, most of Stockholm’s best hotels are grand 19th-century edifices. But in Hotel Six you’ll find the modernist paradise you’ve always expected from the Scandinavian boutique-hotel scene. At Six is part of the redevelopment of Brunkebergstorg Square, whose Sixties Brutalist style has come back around from retro curiosity to contemporary inspiration, and the interiors, by the London-based Universal Design Studio, show the way forward — as does the art collection, which is museum-quality, and rather than recede into the background, takes center stage, beginning with the Jaume Plensa statue that dominates the entry stair.\n\nAt Six’s rooms and suites are no less stylish, in their dark monochrome palette, and they feature some real luxuries, including high-end locally made bedding and bath products. Standard rooms are spacious, with desks and lounge seating, and by the time you’re in a suite you’re in what feels like acres of space. An elegant little drink cabinet replaces the ordinary minibar, and the views, thanks to the building’s elevation, are unusual for Stockholm. The Dining Room is the high-end modern-Scandinavian restaurant, and Blanche & Hierta is a coffee house, a wine bar, and a delicatessen all in one. Meanwhile the Cocktail Bar is the chic nightspot, while Hosoi is a more casual space with an emphasis on DJs and live music.",
-    "venueType": "hotel",
-    "venueName": "Hotel At Six",
-    "venueAddress": "Brunkebergstorg 6",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 59.330841,
-    "lng": 18.067027,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
-  },
-  {
-    "id": "d709e990693cb312",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/bank-hotel-122824-12734",
-    "title": "Bank Hotel",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Bank Hotel’s proprietors are justifiably proud of the 1910 bank building their hotel calls home, but they’re playful enough to name one of their restaurants after a bank robber (Bonnie Parker of Bonnie & Clyde fame). The interiors are a beautifully realized marriage of the building’s classic inheritance and Stockholm’s modern design sense, and though the smallest rooms are small indeed, they’re all impressively luxurious. The city-center location places guests close to many of the capital’s finest arts and culture institutions, as well as no end of restaurants — and the hotel has several of its own, including the Parisian-style Le Hibou, a rooftop bar with an impressive view.",
-    "venueType": "hotel",
-    "venueName": "Bank Hotel",
-    "venueAddress": "Arsenalsgatan 6",
-    "venueCity": "Stockholm",
-    "score": 1,
-    "tags": [
-      "1_key"
-    ],
-    "lat": 59.33137,
-    "lng": 18.07466,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
-  },
-  {
-    "id": "5391ad0083f6ae0d",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-kungstradgarden-16322",
-    "title": "Hotel Kungsträdgården",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "With a name like “King’s Garden” you might expect a regal vibe from Hotel Kungsträdgården, and that’s what you’ll get. This stately 18th-century building wears its Gustavian style proudly, and while in its current incarnation it’s a thoroughly modern luxury boutique hotel, it’s as far as it gets from minimalism — a 2010 renovation updated its classic opulence with a contemporary color sense and the full complement of modern comforts.\n\nThe rooms and suites range widely in size, in classic European grand-hotel style, and if there’s a touch of a French accent about the aesthetic, it’s matched by the cuisine in Brasserie Makalös, which serves Parisian fare in a soaring courtyard space, while the adjacent Crystal Bar stands beneath what must be Stockholm’s largest chandelier. Meanwhile, the Royal Opera is steps from the hotel’s front door, with the Royal Palace and the Nobel museum not much farther.",
-    "venueType": "hotel",
-    "venueName": "Hotel Kungsträdgården",
-    "venueAddress": "Västra Trädgårdsgatan 11B, Entrence Kocksgränd 1",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 59.3313766222,
-    "lng": 18.0696957115,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "9780fb973b01dd65",
@@ -2116,260 +1819,260 @@
     ],
     "lat": 59.3151814,
     "lng": 18.0667222,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
-    "id": "2525089b066e9d28",
+    "id": "53111f1f010e7672",
     "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/harads/treehotel-11346",
-    "title": "Treehotel",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/villa-dahlia-15140",
+    "title": "Villa Dahlia",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "We’re happy to report that this is exactly what you would hope a hotel called Treehotel would be. Just south of the Arctic Circle, in Swedish Lapland, a young couple took over a Thirties guest house, which travelers more or less ignored in favor of the single treehouse suite. So with the help of seven different Swedish architecture firms, they built eight more, from the vertiginous Cabin to the dizzying Mirrorcube and the whimsical UFO. A restaurant serves inventive locally inspired fare, but beyond that, services are intentionally minimal, little more than a sauna and riverside hot tub — here, it’s just you and the forest.",
+    "bodyText": "Created by the Malmström-Cappelen family of Diplomat Collection fame, Villa Dahlia takes its name and spirit from their flower-filled summer cottage. Behind its Brutalist exteriors are soft-toned rooms, Murano glass, and dahlia-red details that brighten the palette. There is art on the walls, the rooftop is made for evening views, pétanque in the courtyard, and a Nordic spa upstairs. Borrow a bike and you will find much of Stockholm within easy reach. Though with so much to enjoy on site, the biggest decision may be whether to venture out at all.",
     "venueType": "hotel",
-    "venueName": "Treehotel",
-    "venueAddress": "Edeforsväg 2 A",
-    "venueCity": "Harads",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 66.07286,
-    "lng": 20.98175,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
-  },
-  {
-    "id": "9bf86f2084d85bcb",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/grand-hotel-stockholm-8262",
-    "title": "Grand Hotel Stockholm",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "With not an ounce of blonde wood and not a single platform bed in sight, the Grand is Stockholm style circa 1874, and the place to stay if you’re a Nobel winner, foreign dignitary, or just an everyday movie star. The location can’t be faulted, in the heart of the city, across from the Royal Palace, with the better rooms looking out over the harbor and the old town. And though it’s been renovated from time to time, to keep up with the demands of modern hospitality, it’s good to see some things never change, like the hotel ballroom, still a meticulous copy of the Hall of Mirrors at Versailles.\n\nIf you are in the mood for something more contemporary within a \"grand\" venue, Burmanska Palatset - a property adjoining the original building - was acquired in 2004, and underwent a major renovation which was completed in 2006.  The only way to ensure that you book a room in that particular building is to choose a \"deluxe\" or an \"executive suite\".\n\nIn the main building, rooms vary in size but all are decorated in the expected manner—classic furnishings and Italian marble baths. Suites are almost comically decadent, some spanning five rooms including salons and drawing rooms, and the service is impeccable, as you’d infer from the caliber of names in the guestbook. Breakfast is served in the Cadier Bar as well as the Grand Veranda, with a view of the city through panoramic windows. Three additional restaurants add a variety of choices.",
-    "venueType": "hotel",
-    "venueName": "Grand Hotel Stockholm",
-    "venueAddress": "Stallgatan 4",
-    "venueCity": "Stockholm",
-    "score": 2,
-    "tags": [
-      "2_key"
-    ],
-    "lat": 59.32961,
-    "lng": 18.07544,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
-  },
-  {
-    "id": "daa19b789449d23c",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/radisson-collection-strand-hotel-stockholm-5971",
-    "title": "Radisson Collection, Strand Hotel, Stockholm",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "First-time visitors to Stockholm’s hotels might be surprised to find that the modernist architecture and interiors for which Scandinavia is so well known seem to be produced for export only. Here classics like the Radisson Blu Strand, a 1912 Jugendstil palace topped with an oxidized copper roof, are more the norm, at least for the bigger, mainstream hotels.\n\nOnce you’re inside, though, the Strand presents a different face. A recent makeover leaves it looking sharp and contemporary — not achingly hip, but a mellower sort of contemporary that will appeal to the business travelers who make up the Radisson Blu’s core audience.\n\nThe views from the Strand’s rooms vary, in unexpected ways. Not just the top-flight suites but the Superior rooms as well look out over the waterways of the Stockholm archipelago — and the harbor-view rooms frame postcard-perfect vistas.\n\nThere are hipper boutique hotels in town, and more opulent grand hotels as well. But the Strand stakes out a middle ground, and defends it quite respectably. A conveniently central location is good for business travelers and tourists alike — Gamla Stan, the old town, and the hip shopping and entertainment district of Östermalm are within easy walking distance.",
-    "venueType": "hotel",
-    "venueName": "Radisson Collection, Strand Hotel, Stockholm",
-    "venueAddress": "Nybrokajen 9",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 59.33094,
-    "lng": 18.07722,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
-  },
-  {
-    "id": "12de51a06749f199",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/story-hotel-stockholm-stureplan-8694",
-    "title": "Story Hotel Stockholm Stureplan",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "This upscale corner of Stockholm might seem a more natural setting for a traditional luxury hotel, but Östermalm, in the city center, just off Birger Jarlsgatan with its high-end shops, is where you’ll find Story Hotel Stockholm Stureplan. And behind its Thirties façade is a modern boutique hotel that upsets all the old stereotypes about Scandinavian design. It’s equal parts bohemian decadence and rough-edged urban renewal, full of street-inspired art and reclaimed vintage décor.\n\nRooms range from the compact “Single Bed Rooms”, although they’re comfortable enough, to \"King Bed Rooms” which come with the bonus of a private balcony. All of them are stylish, fun, and well-equipped, with plush upholstery and attractive subway-tile bathrooms, and with graphic prints on the well-worn walls and furnishings in styles that span the range from the Thirties to the present, it’s about as far as you can get from the utopian high modernism with which Swedish design used to be synonymous.\n\nThe real action, of course, takes place in the public spaces. There’s a DJ on weekend evenings, and the restaurant and bar are always lively, serving a pan-Asian menu with a Scandinavian spin alongside inventive cocktails by some well-known local bartenders. Not a hotel for shrinking violets, perhaps, but for a taste of Stockholm’s younger, more vibrant side, it would be hard to do much better than this.",
-    "venueType": "hotel",
-    "venueName": "Story Hotel Stockholm Stureplan",
-    "venueAddress": "Riddargatan 6",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 59.33473,
-    "lng": 18.0751,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
-  },
-  {
-    "id": "32e430cad7b0def5",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/blique-by-nobis-10266",
-    "title": "Blique by Nobis",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "This stylish design hotel is located in an up-and-coming area of the city and spans a former warehouse and an apartment block. Chic, contemporary bedrooms have a minimalist feel; choose one on the upper floors for a city view. Hungry? Head to trendy Korean restaurant, ARC, with its rooftop terrace, or Boketto for a blend of European and Asian dishes.",
-    "venueType": "hotel",
-    "venueName": "Blique by Nobis",
-    "venueAddress": "18 Gävlegatan",
-    "venueCity": "Stockholm",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 59.34602,
-    "lng": 18.03601,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
-  },
-  {
-    "id": "92178ce08caa625f",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/jukkasjarvi/the-ice-hotel-10778",
-    "title": "ICEHOTEL",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Swedish Lapland’s famous Icehotel, it turns out, is open year-round. From December through April, guests check in to Ice Rooms made out of ice from the Torne River, or upgrade to Art Suites, which are like Ice Rooms but with unique ice and snow sculptures. But there’s also the all-season Icehotel 365, whose solar-powered building stays cool enough to house permanent ice suites, as well as the Ice Bar. And there’s also the so-called Warm Accommodation, a selection of more traditional hotel rooms or chalet apartments, all housed in permanent wooden structures, along with three restaurants serving modern menus based on the traditional flavors of Jukkasjärvi.",
-    "venueType": "hotel",
-    "venueName": "ICEHOTEL",
-    "venueAddress": "Marknadsvägen 63, 981 91",
-    "venueCity": "Jukkasjärvi",
-    "score": 0,
-    "tags": [
-      "selected"
-    ],
-    "lat": 67.8509,
-    "lng": 20.59564,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
-  },
-  {
-    "id": "3df84d21585b7d9f",
-    "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-frantz-12056",
-    "title": "Hotel Frantz",
-    "publishedAt": "",
-    "contentType": "review",
-    "bodyText": "Stockholm’s Hotel Frantz can authentically claim a long-standing role in Stockholm’s history; the eponymous Frantz was a master tailor for whom this red brick house was built in 1647, which makes it one of the city’s oldest structures. Today it’s a strikingly contemporary and quietly luxurious boutique hotel, making the most of the contrast between its colorful modernist-inspired interiors and its atmospheric historical architecture. The location on the island of Södermalm is central and lively, while the restaurant and bar — including a fairly lavish breakfast spread — make the Frantz a perfectly self-sufficient experience.",
-    "venueType": "hotel",
-    "venueName": "Hotel Frantz",
-    "venueAddress": "Peter Myndes Backe 5",
+    "venueName": "Villa Dahlia",
+    "venueAddress": "Tegnerlunden 8",
     "venueCity": "Stockholm",
     "score": 1,
     "tags": [
       "1_key"
     ],
-    "lat": 59.31952,
-    "lng": 18.07095,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "lat": 59.338656,
+    "lng": 18.054743,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
-    "id": "ea9a3442014e3912",
+    "id": "74ce433ee23bf744",
     "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/are/copperhill-mountain-lodge-8343",
-    "title": "Copperhill Mountain Lodge",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/ett-hem-7183",
+    "title": "Ett Hem",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "A naïve observer might expect a five-star ski hotel in the mountains of northern Sweden to be a stark, stimulating, modernist sort of place, where the drama of the cutting-edge architecture and stylish, urbane interiors is only heightened by the sublime alpine landscape. This is one of those times when the naïve observer is exactly right. Mount Åreskutan is by some measures Sweden’s top ski town, and it’s here that you’ll find the stark, stimulating, modernist Copperhill Mountain Lodge.\n\nThe architect, Peter Bohlin, is probably already familiar to you — he’s responsible for quite a few iconic Apple retail stores. Here, as compared to those minimalist cubes, he’s in full rustic mode — the soaring forms are cut in wood, not metal or glass, and in the interiors, alongside the odd mid-century modern piece is more than a little bit of rough-hewn stone and classic furs and textiles.\n\nThis all comes across perhaps better in the photos. What’s important to know is that along with the cutting-edge style you’ll get top-notch comforts, from the thoughtful room amenities (kitchenettes, heated bathroom floors) to the spa, the gym, and the dedicated lift to whisk Copperhill guests to the top of the mountain. There’s a fine dining restaurant, a cozy lounge bar, and a slopeside satellite restaurant and bar — even on-piste you don’t have to leave the Copperhill’s stylish environs.\n\nHow to get there:\nCopperhill Mountain Lodge is a one-hour drive from either Åre-Östersund or Trondheim/Værnes airport.  Åre-Östersund has domestic flights within Sweden, while Værnes is an international airport with regular flights to and from much of Europe. Helicopter transfer is available from both airports, taking you to Copperhill Mountain Lodge’s own helipad in just fifteen minutes. Taxi and bus transfer services are also available from both airports.\n\nBooking Details:\nCopperhill Mountain Lodge requires additional information from guests to ensure the best stay possible. As such, reservations can only be confirmed through our customer service team. Contact us for assistance. This hotel generally has limited weekend availability. Rates begin at 1495 SEK per night.",
+    "bodyText": "In the Sixties Stockholm was the capital of the kind of modernism that’s synonymous with “Scandinavian” design. Nowadays that utopian, vaguely futuristic look is the last thing on anyone’s mind. In the Nordic countries, the best hotels — and their guests — are devoted to something much warmer, a luxe, stylish sort of coziness, and an eclectic approach which makes use of mid-century modernism as just one element among many historical references. And even if Ett Hem’s aesthetic isn’t strictly homegrown — designer Ilse Crawford is London-born, to a Danish mother — the fact is, it’s probably the finest example anywhere of the current tendency in Scandinavian boutique hotel design.\n\nMore importantly, it’s simply one of the most impressive hotels in the region. Twelve rooms might just be the perfect size for a boutique hotel, especially one whose name means “home” — small enough that each room is an authentic original, and the staff has a chance to get to know every guest.\n\nThe rooms are well-appointed, and with their blend of contemporary and vintage design, they’ve got more personality than any ordinary luxury hotel, and in certain departments, more comfort as well — some have rain showers, others luxurious freestanding tubs, not to mention fireplaces or stoves, handy for the long winter months.\n\nAnd like any house worthy of the name, there’s more to Ett Hem than just bedrooms. There’s a library and a couple of sitting rooms, all of them equally as stylish as any space in the house, and come mealtime you’ll have your choice of a walled garden, a sunny conservatory, or the kitchen, where guests gather at a long table for a bit of classic, old-style hospitality. We’re tempted to say it’s like being at home, but if we’re honest, most of us can only wish home was so good.",
     "venueType": "hotel",
-    "venueName": "Copperhill Mountain Lodge",
-    "venueAddress": "Åre Björnen",
-    "venueCity": "Åre",
-    "score": 0,
+    "venueName": "Ett Hem",
+    "venueAddress": "Sköldungagatan 2",
+    "venueCity": "Stockholm",
+    "score": 1,
     "tags": [
-      "selected"
+      "1_key"
     ],
-    "lat": 63.382974,
-    "lng": 13.177002,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "lat": 59.345513,
+    "lng": 18.067702,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
-    "id": "338ea452eea14af2",
+    "id": "64e4901bef135047",
     "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hobo-hotel-10255",
-    "title": "Hobo Hotel",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/berns-hotel-6180",
+    "title": "Berns Hotel",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "With eco-inspired décor and quirky design features, Hobo offers something a little different. The ground floor exhibits local businesses’ work and houses a laid-back bar-lounge serving modern menus. Cleverly designed bedrooms come with headboards that transform into desks and pegboard walls hung with gadgets.",
+    "bodyText": "Since the 19th Century, Berns Hotel has been one of Stockholm’s most desirable addresses, with its Belle Epoque exterior and an opulent interior to match — in fact the Red Room was the setting for August Strindberg’s novel of the same name. \n\nThe hotel has since been renovated, the exterior lovingly restored and the interior completely redesigned in a simple, ultra-contemporary style, in cherry and marble. The suites are a bit more extravagant, some featuring saunas or jacuzzis, with interiors by a number of guest designers, including the ubiquitous Philippe Starck.\n\nThe restaurants and bars have had a facelift courtesy of Terence Conran, and the hotel is one of Stockholm’s top performance venues — the concert hall showcases anything from drama to DJs, rock shows to stand-up comedy, and it’s a different crowd every night. But for all the bustle in the public spaces, Berns as a hotel has a certain intimacy about it — 82 rooms is a very manageable size. Nonetheless, make a point of arranging for a room at some distance from the action if you need to sleep soundly. \n\nThe location is ideal, in the city’s center, providing access to all the capital’s attractions — Old Town and the Royal Palace are nearby, and the National Museum and Royal Opera are not much farther. The financial district is just on the other side of Berzelii Park, and the best shopping in town is just minutes away.",
     "venueType": "hotel",
-    "venueName": "Hobo Hotel",
-    "venueAddress": "4 Brunkebergstorg",
+    "venueName": "Berns Hotel",
+    "venueAddress": "Berzelii Park, Nackstromsgatan 8",
     "venueCity": "Stockholm",
     "score": 0,
     "tags": [
       "selected"
     ],
-    "lat": 59.3307,
-    "lng": 18.06703,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "lat": 59.33237,
+    "lng": 18.07365,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
-    "id": "21059e23d353dfbc",
+    "id": "3f3e71130aab03bd",
     "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/jarfalla/gorvalns-slott-7923",
-    "title": "Görvälns Slott",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/nobis-hotel-stockholm-6391",
+    "title": "Nobis Hotel Stockholm",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "The existence of a place like Görvälns Slott should put to rest forever any idea that Scandinavian hospitality is all about Modernism and minimalism. “Sweden’s most tasteful castle”occupies a 17th-century lakeside manor house (and a number of satellite buildings) a half-hour’s drive from Stockholm, and while it’s certainly stylish — and has been decorated with a keen contemporary eye — there’s nothing at all minimal about it.\n\nAnd while much of the raw material and inspiration is historical, the result is a highly accomplished 21st-century luxury boutique hotel. The rooms feature their fair share of ornamentation, but with their soft colors, their Mille Notti beds, their bath products by c/o Gerd of Swedish Lapland, and their heated bathroom tiles, they’re soothing above all else, from the singles to the grand deluxes. They’re varied in style and layout, and a few have sea views — there’s a bit of something for everyone. (Except children; all guests must be 16 or older, a policy that’s intended to heighten the romance.)\n\nAnd in the restaurant what you’ll find is entirely modern: an organic, zero-waste concept that makes as much use as possible of local and foraged ingredients. The flavors are proudly Swedish, as are the purveyors, including what’s behind the bar. For a taste of the good life, modern Scandinavian style, it would be hard to do much better than this.\n\nHow to get there: Görvälns Slott is located approximately 42 km by car from Stockholm Arlanda Airport via E4, Route 267, and E18.",
+    "bodyText": "Long before the Swedish design trio Claesson Koivisto Rune reconfigured this 19th-century stone edifice into an eccentric modernist hotel, the site had achieved a certain notoriety; after a spell as a private residence it was home to a bank where, during a 1970s robbery, the term “Stockholm syndrome” was coined. Later it was pressed into service as a high-end apartment complex, and brands like Marimekko and Acne occupied its retail space. It’s in connection with its current incarnation as the Nobis Hotel, however, that we’re moved to take an interest — what’s otherwise a fairly conventional luxury hotel is elevated to something higher, thanks to the contrast of the buildings 19th-century patina and CKR’s contemporary Scandinavian design sensibility.\n\nThe color scheme and the lighting design are intended to work in tandem. Referred to as “Scandinavian dark blond,” the palette is toned-down and discreet, inspired by the low, off-angle light observed during the Swedish winter. The furnishings enhance this natural aesthetic, with materials sourced from wood, stone, and wool, while subtle patterns suggestive of abstract and organic forms grace the wallpaper and carpets.\n\nAlongside these modern elements is a generous helping of Stockholm history. Much of the original hotel’s interior, like the former bank conference rooms paneled in dark oak and ornate stucco, is under the watchful eye of the Swedish National Heritage Board. For all its design distinction, and despite the repurposed steel reception desk or the automated cellphone check-in, the Nobis is still in some respects a classic luxury hotel.\n\nAll rooms have views of the city or the hotel’s atrium, and bathrooms are sheathed in floor-to-ceiling Carrara marble. The lounge is the focal point, with its lofted cathedral-like ceiling rising high above, and its easy access to the in-house dining and drinking options.",
     "venueType": "hotel",
-    "venueName": "Görvälns Slott",
-    "venueAddress": "Görvälnsvägen",
-    "venueCity": "Järfälla",
-    "score": 0,
+    "venueName": "Nobis Hotel Stockholm",
+    "venueAddress": "Norrmalmstorg 2-4",
+    "venueCity": "Stockholm",
+    "score": 1,
     "tags": [
-      "selected"
+      "1_key"
     ],
-    "lat": 59.434668,
-    "lng": 17.78615,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "lat": 59.333185,
+    "lng": 18.073813,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
-    "id": "82edaee7539c7d45",
+    "id": "bf33ed42b1308f1a",
     "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/downtown-camper-by-scandic-11019",
-    "title": "Downtown Camper by Scandic",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/miss-clara-by-nobis-7230",
+    "title": "Miss Clara by Nobis",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "Downtown Camper by Scandic, true to its name, is set right in the heart of Stockholm, and styles itself as a home base for “urban explorers.” Twelve types of accommodations range from economical rooms for solo travelers to grand suites and apartments that accommodate up to 12 guests. The interior design is part rustic, part urban, and as impeccably composed as you’d expect from this Nordic style capital. Rent bikes, kayaks and even skateboards at the front desk, or head upstairs to hang out at the the Nest Cocktail Lounge, a cozy bar with panoramic views of downtown Stockholm — right next door to the Nest Wellness Area, which offers an outdoor pool, a sauna and a gym. \n\nPlease note: Access to The Nest Wellness is an extra fee of 345 Sek Monday to Thursday and 445 Sek Friday to Sunday.",
+    "bodyText": "If there’s one thing we’ve learned about Scandinavian design in our years on the job it’s that it defies stereotyping. Even just in Swedish design there are currents within currents, and to unpack the references involved in Stockholm’s Miss Clara by Nobis would require a proper education. This distinctive 1910 façade is pure Art Nouveau, a former girls’ school which retains much of its historic character. But step back and you’ll see it’s topped by a modern addition, courtesy of the Swedish architect Gert Wingårdhs, who was tasked with bringing Miss Clara into the 21st century.\n\nEven the modern elements bear classic echoes, and there’s nothing about the place that feels confrontational or alienating. And before we go too deep into our dissertation, we’ll skip ahead to the point. The upshot of all this impeccably thoughtful design is a place that can’t help but soothe and welcome any traveler who’s sensitive to the built environment. Whether you’re aware of all the visual references or just appreciate a bit of confident character in your lodging, it’s hard to find fault here.\n\nDo be sure to pry yourself out of your room long enough for a bite at Miss Clara’s restaurant — modern Scandinavian cooking is possibly even more thoughtful than modern Scandinavian design, and as you’ve seen, that’s saying something.",
     "venueType": "hotel",
-    "venueName": "Downtown Camper by Scandic",
-    "venueAddress": "Brunkebergstorg 9",
+    "venueName": "Miss Clara by Nobis",
+    "venueAddress": "Sveavägen 48",
     "venueCity": "Stockholm",
     "score": 0,
     "tags": [
       "selected"
     ],
-    "lat": 59.3313,
-    "lng": 18.06554,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "lat": 59.337593,
+    "lng": 18.061904,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
-    "id": "60fae4cfc1e2b358",
+    "id": "ebdfa6d73b1a6787",
     "sourceId": "michelin",
-    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/sheraton-121162-10434",
-    "title": "Sheraton Stockholm Hotel",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-j-6389",
+    "title": "Hotel J Stockholm",
     "publishedAt": "",
     "contentType": "review",
-    "bodyText": "This was the first Sheraton to open in Europe, back in 1971, and its unassuming concrete façade is now a listed feature. Bedrooms are smart, spacious and understated; some overlook Lake Mälaren or the Old Town. Brasserie 360 serves classic French dishes.",
+    "bodyText": "Just to the east of Stockholm proper is the island suburb of Nacka Strand, a place where the living is truly easy, even by Swedish standards. Here, just outside the city, is where you’ll find Hotel J, a modernist seaside structure housing a boutique hotel as well as a restaurant that’s popular with overnighters and day-trippers alike.\n\nYou wanted crisp clean lines and you got them — along with a healthy bit of maritime atmosphere, in the paneled wood and nautical colors of the guest rooms. It’s inspired by Newport, Rhode Island, and there certainly is a resemblance — in fact there’s a subtle strain of Americana throughout, as well as plenty that’s cheerful, colorful and oh-so-Swedish.\n\nThe restaurant is well known for a reason, serving inventive brasserie fare made from fresh Swedish produce and seafood — the seasonal brunch is a particularly popular option. Hotel J’s location places it around the far end of the island from Stockholm, which makes for fine sea views, and also means that sea travel is perhaps a better bet than the bridge or the rail link. It’s probably not the place you’d choose for a first visit to Stockholm, but for a fresh perspective on the archipelago it’s unparalleled.\n\nHow to get there:\nHotel J is located in Nacka Strand, which can be reached by car from downtown Stockholm in approximately 10 minutes.  From Arlanda International Airport(ARN), the drive takes about 50 minutes.  Scheduled boat service provides access to and from Nybrokajen and Slussen, making the journey to Nacka Strand in about 15 minutes.",
     "venueType": "hotel",
-    "venueName": "Sheraton Stockholm Hotel",
-    "venueAddress": "Tegelbacken 6",
+    "venueName": "Hotel J Stockholm",
+    "venueAddress": "Ellensviksvagen 1, Nacka Strand",
     "venueCity": "Stockholm",
     "score": 0,
     "tags": [
       "selected"
     ],
-    "lat": 59.32892,
-    "lng": 18.06187,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "lat": 59.3186,
+    "lng": 18.1642,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
+  },
+  {
+    "id": "9adead70285d33cd",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-skeppsholmen-6390",
+    "title": "Hotel Skeppsholmen",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "The uninitiated traveler most likely imagines Stockholm’s boutique hotel scene to be a haven of modern minimalist design. Those with a finger on the Scandinavian pulse, however, would know to expect a deep vein of cozy, almost rustic tradition. When it comes to the Hotel Skeppsholmen they’d both be right.\n\nLook at the close-ups and you see modern design that’s cleaner than clean, but zoom out and you’ll notice the setting: a pair of classic buildings, dating back to 1699, located on the island of Skeppsholmen, a peaceful little island literally surrounded by the city of Stockholm — a window into the maritime side of the city. It’s a short walk over the bridge and into the city center, but on the island it’s uncannily quiet.\n\nRemarkably few of the landmark houses’ details have been altered — their age made the restoration particularly sensitive, and where some hoteliers might have torn them down to the studs, here the redesign is essentially a triumph of interior decoration, a testament to the impact of some well-chosen furnishings and finishes.\n\nThe restaurant is stylish in a playful and sunny sort of way, and the bar is chic but not too desperately hip. For while the Skeppsholmen bills itself as an urban oasis, it’s not a hideaway, or a hermitage — this is one oasis the locals are happy to visit, whether for dinner or for the Swedish tradition of mid-afternoon coffee and cakes.",
+    "venueType": "hotel",
+    "venueName": "Hotel Skeppsholmen",
+    "venueAddress": "1 Gröna gången",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.32476,
+    "lng": 18.087685,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
+  },
+  {
+    "id": "6110b8a05df2652f",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/nordic-light-hotel-6392",
+    "title": "Nordic Light Hotel",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Under no circumstances should anyone be put off by the unashamedly dated exterior of this one-time office block. The Sixties are inevitably the new Fifties, and this populist-utopian strain of Sixties modernism is only just now distant enough to be coming back into fashion.\n\nAnd whether or not you’re ready to revisit that era ceases to matter once you’re inside. Nordic Light’s interiors are all 21st-century modern minimalism, Scandinavian style, set apart from countless otherwise similar hotels by an inordinate attention to lighting; the “light architect,” Kai Piippo, has earned his fee several times over. An endless (and seasonally variable) array of lighting effects, both subtle and otherwise, engage the eye at every turn.\n\nStandard and Superior rooms keep it simple, making the most of their allotment of natural light and, in winter, making up the difference in pure white. But it’s in the Mood rooms that Nordic Light has earned its reputation: here moving patterns are projected on the walls, and the backlit headboard cycles through a spectrum of wintry tones.\n\nSome guests will be in the mood for some color therapy, and some won’t. With 169 rooms, Nordic Light is big enough that there’s something for everyone, thanks to its resident artist program, comfort-cuisine restaurant the Crooked Leg, extensive cocktail menu, and Absolut Icebar across the road in the sister Nordic C hotel. The Arlanda Express station is just around the corner, for easy access to the airport, and the surrounding Normalm district is central for business travelers and shoppers alike.",
+    "venueType": "hotel",
+    "venueName": "Nordic Light Hotel",
+    "venueAddress": "7 Vasaplan",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.332555,
+    "lng": 18.05721,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
+  },
+  {
+    "id": "02ada2950aeef2cc",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/stallmastaregarden-6662",
+    "title": "Stallmästaregården",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Even in a city rich with green space, Stockholm’s Stallmästaregården offers up a surprisingly pastoral scene. A former stable-master’s farm and the oldest inn in the city, it’s situated on the banks of Brunnsviken Bay in Royal Haga Park, lending it the feel of a country retreat even though it’s just minutes from the center of the city. \n\nThe forty-nine rooms around the 17th-century farmhouse are designed in 18th-century Swedish style, which makes them sound perhaps more old-fashioned than they are. It takes a deft hand — perhaps, more specifically, a Scandinavian one — to create such unfussy rooms from a palette of pastel-colored walls and flower-print curtains. All the rooms, starting with the Classic, include large beds, a writing desk, and bathrooms with amenities by Stockholm-based Byredo Parfums. An upgrade to a Superior or Deluxe room adds garden or park views, respectively, while the suites offer both more space and a flood of sunlight through oversized windows. \n\nThe hotel’s restaurant is just what you’d hope from a former farm in a cosmopolitan city. The space feels both rustic and sophisticated (another trick Scandinavians pull off well). Seasonal menus feature creative preparations of local ingredients, as in a dish of reindeer, beetroot, spruce shoot, moss and blueberries. \n\nBeyond the grounds of the hotel, the nearest neighborhood, Vasastan, is full of restaurants, bars, shops and art galleries — further evidence that, in Stockholm, pastoral beauty and the pleasures of urban life can happily coexist.",
+    "venueType": "hotel",
+    "venueName": "Stallmästaregården",
+    "venueAddress": "Annerovägen 2",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.351671,
+    "lng": 18.0434,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
+  },
+  {
+    "id": "d7d3b13655cce33f",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/lydmar-hotel-5807",
+    "title": "Lydmar Hotel",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Some of you might remember another Stockholm hotel that went by the Lydmar name, a rowdy, almost painfully hip sort of place, where the focus was very much on the nightlife, and the revelers at times threatened to overwhelm the guests. Well, that was then, and this is now — around the turn of the new millennium that was what boutique hotels were about. Today, more and more, they’re focused on the traditional values of hospitality, and once again the new version of the Lydmar is exemplary.\n\nIt’s fair to say that in terms of design, Stockholm tends to be a step ahead. By the time most of us figured out what “Scandinavian design” looked like, the Swedes had already moved on to the next thing. Look around Lydmar and you’ll see very little in the way of stark minimalism. These days Scandinavian designers are mining a rich history — there’s the odd mid-century modern chair or sofa, for example, but plenty more that’s traditional, almost rustic.\n\nAt its best the new luxury hotel avoids ostentation whenever possible, and this one is no different — it’s quietly stylish, but more focused on quality materials and on fostering an intimate atmosphere. And though you won’t mistake it for a bar with a boardinghouse attached, the Lydmar does have plenty going on: there’s a smaller, more intimate music venue, as well as a restaurant and lounge that are destined to become local favorites. And you won’t have to look far to find it — the location is stellar, absolutely central, next to the Grand and right up against the Harbor and the old town.",
+    "venueType": "hotel",
+    "venueName": "Lydmar Hotel",
+    "venueAddress": "Södra Blasieholmshamnen 2",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "tags": [
+      "1_key"
+    ],
+    "lat": 59.3282,
+    "lng": 18.07779,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
+  },
+  {
+    "id": "ab6ee87416d8a8f6",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-at-six-8825",
+    "title": "Hotel At Six",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Contrary to stereotype, most of Stockholm’s best hotels are grand 19th-century edifices. But in Hotel Six you’ll find the modernist paradise you’ve always expected from the Scandinavian boutique-hotel scene. At Six is part of the redevelopment of Brunkebergstorg Square, whose Sixties Brutalist style has come back around from retro curiosity to contemporary inspiration, and the interiors, by the London-based Universal Design Studio, show the way forward — as does the art collection, which is museum-quality, and rather than recede into the background, takes center stage, beginning with the Jaume Plensa statue that dominates the entry stair.\n\nAt Six’s rooms and suites are no less stylish, in their dark monochrome palette, and they feature some real luxuries, including high-end locally made bedding and bath products. Standard rooms are spacious, with desks and lounge seating, and by the time you’re in a suite you’re in what feels like acres of space. An elegant little drink cabinet replaces the ordinary minibar, and the views, thanks to the building’s elevation, are unusual for Stockholm. The Dining Room is the high-end modern-Scandinavian restaurant, and Blanche & Hierta is a coffee house, a wine bar, and a delicatessen all in one. Meanwhile the Cocktail Bar is the chic nightspot, while Hosoi is a more casual space with an emphasis on DJs and live music.",
+    "venueType": "hotel",
+    "venueName": "Hotel At Six",
+    "venueAddress": "Brunkebergstorg 6",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.330841,
+    "lng": 18.067027,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
+  },
+  {
+    "id": "d709e990693cb312",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/bank-hotel-122824-12734",
+    "title": "Bank Hotel",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Bank Hotel’s proprietors are justifiably proud of the 1910 bank building their hotel calls home, but they’re playful enough to name one of their restaurants after a bank robber (Bonnie Parker of Bonnie & Clyde fame). The interiors are a beautifully realized marriage of the building’s classic inheritance and Stockholm’s modern design sense, and though the smallest rooms are small indeed, they’re all impressively luxurious. The city-center location places guests close to many of the capital’s finest arts and culture institutions, as well as no end of restaurants — and the hotel has several of its own, including the Parisian-style Le Hibou, a rooftop bar with an impressive view.",
+    "venueType": "hotel",
+    "venueName": "Bank Hotel",
+    "venueAddress": "Arsenalsgatan 6",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "tags": [
+      "1_key"
+    ],
+    "lat": 59.33137,
+    "lng": 18.07466,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "6cb1f9b0cc811a20",
@@ -2389,8 +2092,281 @@
     ],
     "lat": 59.32477,
     "lng": 18.09709,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
+  },
+  {
+    "id": "5391ad0083f6ae0d",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-kungstradgarden-16322",
+    "title": "Hotel Kungsträdgården",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "With a name like “King’s Garden” you might expect a regal vibe from Hotel Kungsträdgården, and that’s what you’ll get. This stately 18th-century building wears its Gustavian style proudly, and while in its current incarnation it’s a thoroughly modern luxury boutique hotel, it’s as far as it gets from minimalism — a 2010 renovation updated its classic opulence with a contemporary color sense and the full complement of modern comforts.\n\nThe rooms and suites range widely in size, in classic European grand-hotel style, and if there’s a touch of a French accent about the aesthetic, it’s matched by the cuisine in Brasserie Makalös, which serves Parisian fare in a soaring courtyard space, while the adjacent Crystal Bar stands beneath what must be Stockholm’s largest chandelier. Meanwhile, the Royal Opera is steps from the hotel’s front door, with the Royal Palace and the Nobel museum not much farther.",
+    "venueType": "hotel",
+    "venueName": "Hotel Kungsträdgården",
+    "venueAddress": "Västra Trädgårdsgatan 11B, Entrence Kocksgränd 1",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.3313766222,
+    "lng": 18.0696957115,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
+  },
+  {
+    "id": "2525089b066e9d28",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/harads/treehotel-11346",
+    "title": "Treehotel",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "We’re happy to report that this is exactly what you would hope a hotel called Treehotel would be. Just south of the Arctic Circle, in Swedish Lapland, a young couple took over a Thirties guest house, which travelers more or less ignored in favor of the single treehouse suite. So with the help of seven different Swedish architecture firms, they built eight more, from the vertiginous Cabin to the dizzying Mirrorcube and the whimsical UFO. A restaurant serves inventive locally inspired fare, but beyond that, services are intentionally minimal, little more than a sauna and riverside hot tub — here, it’s just you and the forest.",
+    "venueType": "hotel",
+    "venueName": "Treehotel",
+    "venueAddress": "Edeforsväg 2 A",
+    "venueCity": "Harads",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 66.07286,
+    "lng": 20.98175,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
+  },
+  {
+    "id": "9bf86f2084d85bcb",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/grand-hotel-stockholm-8262",
+    "title": "Grand Hotel Stockholm",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "With not an ounce of blonde wood and not a single platform bed in sight, the Grand is Stockholm style circa 1874, and the place to stay if you’re a Nobel winner, foreign dignitary, or just an everyday movie star. The location can’t be faulted, in the heart of the city, across from the Royal Palace, with the better rooms looking out over the harbor and the old town. And though it’s been renovated from time to time, to keep up with the demands of modern hospitality, it’s good to see some things never change, like the hotel ballroom, still a meticulous copy of the Hall of Mirrors at Versailles.\n\nIf you are in the mood for something more contemporary within a \"grand\" venue, Burmanska Palatset - a property adjoining the original building - was acquired in 2004, and underwent a major renovation which was completed in 2006.  The only way to ensure that you book a room in that particular building is to choose a \"deluxe\" or an \"executive suite\".\n\nIn the main building, rooms vary in size but all are decorated in the expected manner—classic furnishings and Italian marble baths. Suites are almost comically decadent, some spanning five rooms including salons and drawing rooms, and the service is impeccable, as you’d infer from the caliber of names in the guestbook. Breakfast is served in the Cadier Bar as well as the Grand Veranda, with a view of the city through panoramic windows. Three additional restaurants add a variety of choices.",
+    "venueType": "hotel",
+    "venueName": "Grand Hotel Stockholm",
+    "venueAddress": "Stallgatan 4",
+    "venueCity": "Stockholm",
+    "score": 2,
+    "tags": [
+      "2_key"
+    ],
+    "lat": 59.32961,
+    "lng": 18.07544,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
+  },
+  {
+    "id": "daa19b789449d23c",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/radisson-collection-strand-hotel-stockholm-5971",
+    "title": "Radisson Collection, Strand Hotel, Stockholm",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "First-time visitors to Stockholm’s hotels might be surprised to find that the modernist architecture and interiors for which Scandinavia is so well known seem to be produced for export only. Here classics like the Radisson Blu Strand, a 1912 Jugendstil palace topped with an oxidized copper roof, are more the norm, at least for the bigger, mainstream hotels.\n\nOnce you’re inside, though, the Strand presents a different face. A recent makeover leaves it looking sharp and contemporary — not achingly hip, but a mellower sort of contemporary that will appeal to the business travelers who make up the Radisson Blu’s core audience.\n\nThe views from the Strand’s rooms vary, in unexpected ways. Not just the top-flight suites but the Superior rooms as well look out over the waterways of the Stockholm archipelago — and the harbor-view rooms frame postcard-perfect vistas.\n\nThere are hipper boutique hotels in town, and more opulent grand hotels as well. But the Strand stakes out a middle ground, and defends it quite respectably. A conveniently central location is good for business travelers and tourists alike — Gamla Stan, the old town, and the hip shopping and entertainment district of Östermalm are within easy walking distance.",
+    "venueType": "hotel",
+    "venueName": "Radisson Collection, Strand Hotel, Stockholm",
+    "venueAddress": "Nybrokajen 9",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.33094,
+    "lng": 18.07722,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
+  },
+  {
+    "id": "12de51a06749f199",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/story-hotel-stockholm-stureplan-8694",
+    "title": "Story Hotel Stockholm Stureplan",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "This upscale corner of Stockholm might seem a more natural setting for a traditional luxury hotel, but Östermalm, in the city center, just off Birger Jarlsgatan with its high-end shops, is where you’ll find Story Hotel Stockholm Stureplan. And behind its Thirties façade is a modern boutique hotel that upsets all the old stereotypes about Scandinavian design. It’s equal parts bohemian decadence and rough-edged urban renewal, full of street-inspired art and reclaimed vintage décor.\n\nRooms range from the compact “Single Bed Rooms”, although they’re comfortable enough, to \"King Bed Rooms” which come with the bonus of a private balcony. All of them are stylish, fun, and well-equipped, with plush upholstery and attractive subway-tile bathrooms, and with graphic prints on the well-worn walls and furnishings in styles that span the range from the Thirties to the present, it’s about as far as you can get from the utopian high modernism with which Swedish design used to be synonymous.\n\nThe real action, of course, takes place in the public spaces. There’s a DJ on weekend evenings, and the restaurant and bar are always lively, serving a pan-Asian menu with a Scandinavian spin alongside inventive cocktails by some well-known local bartenders. Not a hotel for shrinking violets, perhaps, but for a taste of Stockholm’s younger, more vibrant side, it would be hard to do much better than this.",
+    "venueType": "hotel",
+    "venueName": "Story Hotel Stockholm Stureplan",
+    "venueAddress": "Riddargatan 6",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.33473,
+    "lng": 18.0751,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
+  },
+  {
+    "id": "32e430cad7b0def5",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/blique-by-nobis-10266",
+    "title": "Blique by Nobis",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "This stylish design hotel is located in an up-and-coming area of the city and spans a former warehouse and an apartment block. Chic, contemporary bedrooms have a minimalist feel; choose one on the upper floors for a city view. Hungry? Head to trendy Korean restaurant, ARC, with its rooftop terrace, or Boketto for a blend of European and Asian dishes.",
+    "venueType": "hotel",
+    "venueName": "Blique by Nobis",
+    "venueAddress": "18 Gävlegatan",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.34602,
+    "lng": 18.03601,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
+  },
+  {
+    "id": "92178ce08caa625f",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/jukkasjarvi/the-ice-hotel-10778",
+    "title": "ICEHOTEL",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Swedish Lapland’s famous Icehotel, it turns out, is open year-round. From December through April, guests check in to Ice Rooms made out of ice from the Torne River, or upgrade to Art Suites, which are like Ice Rooms but with unique ice and snow sculptures. But there’s also the all-season Icehotel 365, whose solar-powered building stays cool enough to house permanent ice suites, as well as the Ice Bar. And there’s also the so-called Warm Accommodation, a selection of more traditional hotel rooms or chalet apartments, all housed in permanent wooden structures, along with three restaurants serving modern menus based on the traditional flavors of Jukkasjärvi.",
+    "venueType": "hotel",
+    "venueName": "ICEHOTEL",
+    "venueAddress": "Marknadsvägen 63, 981 91",
+    "venueCity": "Jukkasjärvi",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 67.8509,
+    "lng": 20.59564,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
+  },
+  {
+    "id": "3df84d21585b7d9f",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hotel-frantz-12056",
+    "title": "Hotel Frantz",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Stockholm’s Hotel Frantz can authentically claim a long-standing role in Stockholm’s history; the eponymous Frantz was a master tailor for whom this red brick house was built in 1647, which makes it one of the city’s oldest structures. Today it’s a strikingly contemporary and quietly luxurious boutique hotel, making the most of the contrast between its colorful modernist-inspired interiors and its atmospheric historical architecture. The location on the island of Södermalm is central and lively, while the restaurant and bar — including a fairly lavish breakfast spread — make the Frantz a perfectly self-sufficient experience.",
+    "venueType": "hotel",
+    "venueName": "Hotel Frantz",
+    "venueAddress": "Peter Myndes Backe 5",
+    "venueCity": "Stockholm",
+    "score": 1,
+    "tags": [
+      "1_key"
+    ],
+    "lat": 59.31952,
+    "lng": 18.07095,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
+  },
+  {
+    "id": "ea9a3442014e3912",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/are/copperhill-mountain-lodge-8343",
+    "title": "Copperhill Mountain Lodge",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "A naïve observer might expect a five-star ski hotel in the mountains of northern Sweden to be a stark, stimulating, modernist sort of place, where the drama of the cutting-edge architecture and stylish, urbane interiors is only heightened by the sublime alpine landscape. This is one of those times when the naïve observer is exactly right. Mount Åreskutan is by some measures Sweden’s top ski town, and it’s here that you’ll find the stark, stimulating, modernist Copperhill Mountain Lodge.\n\nThe architect, Peter Bohlin, is probably already familiar to you — he’s responsible for quite a few iconic Apple retail stores. Here, as compared to those minimalist cubes, he’s in full rustic mode — the soaring forms are cut in wood, not metal or glass, and in the interiors, alongside the odd mid-century modern piece is more than a little bit of rough-hewn stone and classic furs and textiles.\n\nThis all comes across perhaps better in the photos. What’s important to know is that along with the cutting-edge style you’ll get top-notch comforts, from the thoughtful room amenities (kitchenettes, heated bathroom floors) to the spa, the gym, and the dedicated lift to whisk Copperhill guests to the top of the mountain. There’s a fine dining restaurant, a cozy lounge bar, and a slopeside satellite restaurant and bar — even on-piste you don’t have to leave the Copperhill’s stylish environs.\n\nHow to get there:\nCopperhill Mountain Lodge is a one-hour drive from either Åre-Östersund or Trondheim/Værnes airport.  Åre-Östersund has domestic flights within Sweden, while Værnes is an international airport with regular flights to and from much of Europe. Helicopter transfer is available from both airports, taking you to Copperhill Mountain Lodge’s own helipad in just fifteen minutes. Taxi and bus transfer services are also available from both airports.\n\nBooking Details:\nCopperhill Mountain Lodge requires additional information from guests to ensure the best stay possible. As such, reservations can only be confirmed through our customer service team. Contact us for assistance. This hotel generally has limited weekend availability. Rates begin at 1495 SEK per night.",
+    "venueType": "hotel",
+    "venueName": "Copperhill Mountain Lodge",
+    "venueAddress": "Åre Björnen",
+    "venueCity": "Åre",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 63.382974,
+    "lng": 13.177002,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
+  },
+  {
+    "id": "338ea452eea14af2",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/hobo-hotel-10255",
+    "title": "Hobo Hotel",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "With eco-inspired décor and quirky design features, Hobo offers something a little different. The ground floor exhibits local businesses’ work and houses a laid-back bar-lounge serving modern menus. Cleverly designed bedrooms come with headboards that transform into desks and pegboard walls hung with gadgets.",
+    "venueType": "hotel",
+    "venueName": "Hobo Hotel",
+    "venueAddress": "4 Brunkebergstorg",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.3307,
+    "lng": 18.06703,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
+  },
+  {
+    "id": "21059e23d353dfbc",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/jarfalla/gorvalns-slott-7923",
+    "title": "Görvälns Slott",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "The existence of a place like Görvälns Slott should put to rest forever any idea that Scandinavian hospitality is all about Modernism and minimalism. “Sweden’s most tasteful castle”occupies a 17th-century lakeside manor house (and a number of satellite buildings) a half-hour’s drive from Stockholm, and while it’s certainly stylish — and has been decorated with a keen contemporary eye — there’s nothing at all minimal about it.\n\nAnd while much of the raw material and inspiration is historical, the result is a highly accomplished 21st-century luxury boutique hotel. The rooms feature their fair share of ornamentation, but with their soft colors, their Mille Notti beds, their bath products by c/o Gerd of Swedish Lapland, and their heated bathroom tiles, they’re soothing above all else, from the singles to the grand deluxes. They’re varied in style and layout, and a few have sea views — there’s a bit of something for everyone. (Except children; all guests must be 16 or older, a policy that’s intended to heighten the romance.)\n\nAnd in the restaurant what you’ll find is entirely modern: an organic, zero-waste concept that makes as much use as possible of local and foraged ingredients. The flavors are proudly Swedish, as are the purveyors, including what’s behind the bar. For a taste of the good life, modern Scandinavian style, it would be hard to do much better than this.\n\nHow to get there: Görvälns Slott is located approximately 42 km by car from Stockholm Arlanda Airport via E4, Route 267, and E18.",
+    "venueType": "hotel",
+    "venueName": "Görvälns Slott",
+    "venueAddress": "Görvälnsvägen",
+    "venueCity": "Järfälla",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.434668,
+    "lng": 17.78615,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
+  },
+  {
+    "id": "82edaee7539c7d45",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/downtown-camper-by-scandic-11019",
+    "title": "Downtown Camper by Scandic",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "Downtown Camper by Scandic, true to its name, is set right in the heart of Stockholm, and styles itself as a home base for “urban explorers.” Twelve types of accommodations range from economical rooms for solo travelers to grand suites and apartments that accommodate up to 12 guests. The interior design is part rustic, part urban, and as impeccably composed as you’d expect from this Nordic style capital. Rent bikes, kayaks and even skateboards at the front desk, or head upstairs to hang out at the the Nest Cocktail Lounge, a cozy bar with panoramic views of downtown Stockholm — right next door to the Nest Wellness Area, which offers an outdoor pool, a sauna and a gym. \n\nPlease note: Access to The Nest Wellness is an extra fee of 345 Sek Monday to Thursday and 445 Sek Friday to Sunday.",
+    "venueType": "hotel",
+    "venueName": "Downtown Camper by Scandic",
+    "venueAddress": "Brunkebergstorg 9",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.3313,
+    "lng": 18.06554,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
+  },
+  {
+    "id": "60fae4cfc1e2b358",
+    "sourceId": "michelin",
+    "url": "https://guide.michelin.com/se/en/hotels-stays/stockholm/sheraton-121162-10434",
+    "title": "Sheraton Stockholm Hotel",
+    "publishedAt": "",
+    "contentType": "review",
+    "bodyText": "This was the first Sheraton to open in Europe, back in 1971, and its unassuming concrete façade is now a listed feature. Bedrooms are smart, spacious and understated; some overlook Lake Mälaren or the Old Town. Brasserie 360 serves classic French dishes.",
+    "venueType": "hotel",
+    "venueName": "Sheraton Stockholm Hotel",
+    "venueAddress": "Tegelbacken 6",
+    "venueCity": "Stockholm",
+    "score": 0,
+    "tags": [
+      "selected"
+    ],
+    "lat": 59.32892,
+    "lng": 18.06187,
+    "collectedAt": "2026-05-12T10:19:47.865Z",
+    "enrichedAt": "2026-05-12T10:19:47.865Z"
   },
   {
     "id": "2ac32e34766013d3",
@@ -2410,8 +2386,8 @@
     ],
     "lat": 55.61224,
     "lng": 12.99439,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.866Z",
+    "enrichedAt": "2026-05-12T10:19:47.866Z"
   },
   {
     "id": "c47459994845b191",
@@ -2431,8 +2407,8 @@
     ],
     "lat": 57.70696,
     "lng": 11.97073,
-    "collectedAt": "2026-04-16T16:24:33.460Z",
-    "enrichedAt": "2026-04-16T16:24:33.460Z"
+    "collectedAt": "2026-05-12T10:19:47.866Z",
+    "enrichedAt": "2026-05-12T10:19:47.866Z"
   },
   {
     "id": "83c6853f63cf64bd",
@@ -2452,8 +2428,8 @@
     ],
     "lat": 57.70462,
     "lng": 11.97166,
-    "collectedAt": "2026-04-16T16:24:33.461Z",
-    "enrichedAt": "2026-04-16T16:24:33.461Z"
+    "collectedAt": "2026-05-12T10:19:47.866Z",
+    "enrichedAt": "2026-05-12T10:19:47.866Z"
   },
   {
     "id": "4acdd36374e2a4b4",
@@ -2473,8 +2449,8 @@
     ],
     "lat": 59.6067,
     "lng": 16.56746,
-    "collectedAt": "2026-04-16T16:24:33.461Z",
-    "enrichedAt": "2026-04-16T16:24:33.461Z"
+    "collectedAt": "2026-05-12T10:19:47.866Z",
+    "enrichedAt": "2026-05-12T10:19:47.866Z"
   },
   {
     "id": "07b6024ec9b25c38",
@@ -2494,8 +2470,8 @@
     ],
     "lat": 55.60589,
     "lng": 12.9979,
-    "collectedAt": "2026-04-16T16:24:33.461Z",
-    "enrichedAt": "2026-04-16T16:24:33.461Z"
+    "collectedAt": "2026-05-12T10:19:47.866Z",
+    "enrichedAt": "2026-05-12T10:19:47.866Z"
   },
   {
     "id": "fe6672b2de971f47",
@@ -2515,8 +2491,8 @@
     ],
     "lat": 57.70279,
     "lng": 11.96549,
-    "collectedAt": "2026-04-16T16:24:33.461Z",
-    "enrichedAt": "2026-04-16T16:24:33.461Z"
+    "collectedAt": "2026-05-12T10:19:47.866Z",
+    "enrichedAt": "2026-05-12T10:19:47.866Z"
   },
   {
     "id": "a25d02591f83df26",
@@ -2536,8 +2512,8 @@
     ],
     "lat": 63.8251,
     "lng": 20.26109,
-    "collectedAt": "2026-04-16T16:24:33.461Z",
-    "enrichedAt": "2026-04-16T16:24:33.461Z"
+    "collectedAt": "2026-05-12T10:19:47.866Z",
+    "enrichedAt": "2026-05-12T10:19:47.866Z"
   },
   {
     "id": "f0cf9e84481cc8c3",
@@ -2557,8 +2533,8 @@
     ],
     "lat": 55.60369,
     "lng": 12.99958,
-    "collectedAt": "2026-04-16T16:24:33.461Z",
-    "enrichedAt": "2026-04-16T16:24:33.461Z"
+    "collectedAt": "2026-05-12T10:19:47.866Z",
+    "enrichedAt": "2026-05-12T10:19:47.866Z"
   },
   {
     "id": "c0dabe457949cf11",
@@ -2578,8 +2554,8 @@
     ],
     "lat": 56.57436,
     "lng": 16.41033,
-    "collectedAt": "2026-04-16T16:24:33.461Z",
-    "enrichedAt": "2026-04-16T16:24:33.461Z"
+    "collectedAt": "2026-05-12T10:19:47.866Z",
+    "enrichedAt": "2026-05-12T10:19:47.866Z"
   },
   {
     "id": "4d24143ad5984c65",
@@ -2599,8 +2575,8 @@
     ],
     "lat": 57.79123,
     "lng": 14.27526,
-    "collectedAt": "2026-04-16T16:24:33.461Z",
-    "enrichedAt": "2026-04-16T16:24:33.461Z"
+    "collectedAt": "2026-05-12T10:19:47.866Z",
+    "enrichedAt": "2026-05-12T10:19:47.866Z"
   },
   {
     "id": "a1ba3c43e2c13d2e",
@@ -2620,8 +2596,8 @@
     ],
     "lat": 57.706661,
     "lng": 12.465585,
-    "collectedAt": "2026-04-16T16:24:33.461Z",
-    "enrichedAt": "2026-04-16T16:24:33.461Z"
+    "collectedAt": "2026-05-12T10:19:47.866Z",
+    "enrichedAt": "2026-05-12T10:19:47.866Z"
   },
   {
     "id": "55579e925b0f7495",
@@ -2641,8 +2617,8 @@
     ],
     "lat": 66.088588,
     "lng": 20.937173,
-    "collectedAt": "2026-04-16T16:24:33.461Z",
-    "enrichedAt": "2026-04-16T16:24:33.461Z"
+    "collectedAt": "2026-05-12T10:19:47.866Z",
+    "enrichedAt": "2026-05-12T10:19:47.866Z"
   },
   {
     "id": "1f62732bbb3afbbd",
@@ -2662,8 +2638,8 @@
     ],
     "lat": 55.940293,
     "lng": 12.781009,
-    "collectedAt": "2026-04-16T16:24:33.461Z",
-    "enrichedAt": "2026-04-16T16:24:33.461Z"
+    "collectedAt": "2026-05-12T10:19:47.866Z",
+    "enrichedAt": "2026-05-12T10:19:47.866Z"
   },
   {
     "id": "68dbea36cb9e2ca2",
@@ -2683,8 +2659,8 @@
     ],
     "lat": 59.325437,
     "lng": 18.075368,
-    "collectedAt": "2026-04-16T16:24:33.461Z",
-    "enrichedAt": "2026-04-16T16:24:33.461Z"
+    "collectedAt": "2026-05-12T10:19:47.866Z",
+    "enrichedAt": "2026-05-12T10:19:47.866Z"
   },
   {
     "id": "1d92b5d709109cb2",
@@ -2704,7 +2680,7 @@
     ],
     "lat": 59.345707,
     "lng": 18.056713,
-    "collectedAt": "2026-04-16T16:24:33.461Z",
-    "enrichedAt": "2026-04-16T16:24:33.461Z"
+    "collectedAt": "2026-05-12T10:19:47.866Z",
+    "enrichedAt": "2026-05-12T10:19:47.866Z"
   }
 ]
