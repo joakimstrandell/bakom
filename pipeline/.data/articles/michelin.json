@@ -11,16 +11,16 @@
     "venueName": "Koka",
     "venueAddress": "Viktoriagatan 12",
     "venueCity": "Göteborg",
-    "score": 0,
+    "score": 1,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "1_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.860Z",
-    "enrichedAt": "2026-05-12T10:19:47.860Z"
+    "collectedAt": "2026-05-12T12:53:40.573Z",
+    "enrichedAt": "2026-05-12T12:53:40.580Z"
   },
   {
     "id": "acbe4cc0795d5f0a",
@@ -34,17 +34,17 @@
     "venueName": "ÄRLA",
     "venueAddress": "Danderydsgatan 25",
     "venueCity": "Stockholm",
-    "score": 0,
+    "score": 0.5,
     "cuisine": [
       "Farm to table",
       "Swedish"
     ],
     "priceRange": "mellan",
     "tags": [
-      "selected"
+      "bib_gourmand"
     ],
-    "collectedAt": "2026-05-12T10:19:47.860Z",
-    "enrichedAt": "2026-05-12T10:19:47.860Z"
+    "collectedAt": "2026-05-12T12:53:40.581Z",
+    "enrichedAt": "2026-05-12T12:53:40.581Z"
   },
   {
     "id": "89a2221edb5c0ba1",
@@ -66,8 +66,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.860Z",
-    "enrichedAt": "2026-05-12T10:19:47.860Z"
+    "collectedAt": "2026-05-12T12:53:40.581Z",
+    "enrichedAt": "2026-05-12T12:53:40.581Z"
   },
   {
     "id": "09d51c53d3b5a30d",
@@ -89,8 +89,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.861Z",
-    "enrichedAt": "2026-05-12T10:19:47.861Z"
+    "collectedAt": "2026-05-12T12:53:40.581Z",
+    "enrichedAt": "2026-05-12T12:53:40.581Z"
   },
   {
     "id": "73d2417bb6aef432",
@@ -112,8 +112,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.861Z",
-    "enrichedAt": "2026-05-12T10:19:47.861Z"
+    "collectedAt": "2026-05-12T12:53:40.581Z",
+    "enrichedAt": "2026-05-12T12:53:40.581Z"
   },
   {
     "id": "dc09eaade67ed652",
@@ -127,16 +127,16 @@
     "venueName": "Frantzén",
     "venueAddress": "Klara Norra Kyrkogata 26",
     "venueCity": "Stockholm",
-    "score": 0,
+    "score": 3,
     "cuisine": [
       "Creative"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "3_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.861Z",
-    "enrichedAt": "2026-05-12T10:19:47.861Z"
+    "collectedAt": "2026-05-12T12:53:40.581Z",
+    "enrichedAt": "2026-05-12T12:53:40.581Z"
   },
   {
     "id": "71a4efa978fca3d8",
@@ -150,16 +150,16 @@
     "venueName": "Signum",
     "venueAddress": "Hällsnäs Hotell, Långenäsvägen 150",
     "venueCity": "Mölnlycke",
-    "score": 0,
+    "score": 2,
     "cuisine": [
       "Creative"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "2_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.862Z",
-    "enrichedAt": "2026-05-12T10:19:47.862Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "64b23273fc8434d4",
@@ -173,16 +173,16 @@
     "venueName": "AIRA",
     "venueAddress": "Biskopsvägen 9",
     "venueCity": "Stockholm",
-    "score": 0,
+    "score": 2,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "2_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.862Z",
-    "enrichedAt": "2026-05-12T10:19:47.862Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "5b4de54d0e9c7bb4",
@@ -196,16 +196,16 @@
     "venueName": "Vollmers",
     "venueAddress": "Tegelgårdsgatan 5",
     "venueCity": "Malmö",
-    "score": 0,
+    "score": 2,
     "cuisine": [
       "Contemporary"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "2_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.863Z",
-    "enrichedAt": "2026-05-12T10:19:47.863Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "312ee66c4cc52ac8",
@@ -219,16 +219,16 @@
     "venueName": "VYN",
     "venueAddress": "Höga vägen 72",
     "venueCity": "Simrishamn",
-    "score": 0,
+    "score": 2,
     "cuisine": [
       "Creative"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "2_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.863Z",
-    "enrichedAt": "2026-05-12T10:19:47.863Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "67630ded3395be40",
@@ -242,17 +242,17 @@
     "venueName": "28+",
     "venueAddress": "Götabergsgatan 28",
     "venueCity": "Göteborg",
-    "score": 0,
+    "score": 1,
     "cuisine": [
       "Modern Cuisine",
       "Classic French"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "1_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.863Z",
-    "enrichedAt": "2026-05-12T10:19:47.863Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "b67ab5e2613dfecb",
@@ -266,17 +266,17 @@
     "venueName": "Etoile",
     "venueAddress": "Norra Stationsgatan 51",
     "venueCity": "Stockholm",
-    "score": 0,
+    "score": 1,
     "cuisine": [
       "Creative",
       "International"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "1_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.863Z",
-    "enrichedAt": "2026-05-12T10:19:47.863Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "eb538bb9289868b3",
@@ -290,16 +290,16 @@
     "venueName": "SK Mat & Människor",
     "venueAddress": "Johannebergsgatan 24",
     "venueCity": "Göteborg",
-    "score": 0,
+    "score": 1,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "mellan",
     "tags": [
-      "selected"
+      "1_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.863Z",
-    "enrichedAt": "2026-05-12T10:19:47.863Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "614f2b0533cd6c6d",
@@ -313,16 +313,16 @@
     "venueName": "Celeste",
     "venueAddress": "Torkel Knutssonsgatan 24",
     "venueCity": "Stockholm",
-    "score": 0,
+    "score": 1,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "1_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.863Z",
-    "enrichedAt": "2026-05-12T10:19:47.863Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "5c1f0c77a180e710",
@@ -336,16 +336,16 @@
     "venueName": "ÄNG",
     "venueAddress": "Ästad Vingård, Ästad 10",
     "venueCity": "Tvååker",
-    "score": 0,
+    "score": 1,
     "cuisine": [
       "Creative"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "1_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.863Z",
-    "enrichedAt": "2026-05-12T10:19:47.863Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "915ecae381b84206",
@@ -359,16 +359,16 @@
     "venueName": "PM & Vänner Restaurant",
     "venueAddress": "Storgatan 22",
     "venueCity": "Växjö",
-    "score": 0,
+    "score": 1,
     "cuisine": [
       "Creative"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "1_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.863Z",
-    "enrichedAt": "2026-05-12T10:19:47.863Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "0b3ecea5d8c48037",
@@ -382,16 +382,16 @@
     "venueName": "Project",
     "venueAddress": "Södra Vägen 45",
     "venueCity": "Göteborg",
-    "score": 0,
+    "score": 1,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "1_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "55cf6adf08744417",
@@ -405,16 +405,16 @@
     "venueName": "Ekstedt",
     "venueAddress": "Humlegårdsgatan 17",
     "venueCity": "Stockholm",
-    "score": 0,
+    "score": 1,
     "cuisine": [
       "Grills"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "1_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "7d99f2eda7460e68",
@@ -428,16 +428,16 @@
     "venueName": "ergo",
     "venueAddress": "Artillerigatan 14",
     "venueCity": "Stockholm",
-    "score": 0,
+    "score": 1,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "1_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "c8025c36f0d2215c",
@@ -451,16 +451,16 @@
     "venueName": "Seafood Gastro",
     "venueAddress": "Södra Blasieholmshamnen 8",
     "venueCity": "Stockholm",
-    "score": 0,
+    "score": 1,
     "cuisine": [
       "Seafood"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "1_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "e9edac7dc2c2e4e8",
@@ -474,17 +474,17 @@
     "venueName": "Knystaforsen",
     "venueAddress": "Rydöforsvägen 4",
     "venueCity": "Rydöbruk",
-    "score": 0,
+    "score": 1,
     "cuisine": [
       "Creative",
       "Modern Cuisine"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "1_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "21857518e4d55e7c",
@@ -498,16 +498,16 @@
     "venueName": "HOZE",
     "venueAddress": "Stigbergsliden 17",
     "venueCity": "Göteborg",
-    "score": 0,
+    "score": 1,
     "cuisine": [
       "Japanese"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "1_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "63e88dbc61d8d7ea",
@@ -521,16 +521,16 @@
     "venueName": "Nour",
     "venueAddress": "Norrlandsgatan 24",
     "venueCity": "Stockholm",
-    "score": 0,
+    "score": 1,
     "cuisine": [
       "Creative"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "1_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "49f556895089a48f",
@@ -544,16 +544,16 @@
     "venueName": "Operakällaren",
     "venueAddress": "Operahuset, Karl XII's Torg",
     "venueCity": "Stockholm",
-    "score": 0,
+    "score": 1,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "1_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "0eda58ddf3a561e3",
@@ -567,17 +567,17 @@
     "venueName": "Sushi Sho",
     "venueAddress": "Upplandsgatan 45",
     "venueCity": "Stockholm",
-    "score": 0,
+    "score": 1,
     "cuisine": [
       "Japanese",
       "Sushi"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "1_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "5dab480438a0db54",
@@ -591,16 +591,16 @@
     "venueName": "Dashi",
     "venueAddress": "Rådmansgatan 23",
     "venueCity": "Stockholm",
-    "score": 0,
+    "score": 1,
     "cuisine": [
       "Japanese"
     ],
     "priceRange": "lyx",
     "tags": [
-      "selected"
+      "1_star"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "be06e2ce6339fe26",
@@ -614,16 +614,16 @@
     "venueName": "Mutantur",
     "venueAddress": "Erik Dahlbergsgatan 12-14",
     "venueCity": "Malmö",
-    "score": 0,
+    "score": 0.5,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "mellan",
     "tags": [
-      "selected"
+      "bib_gourmand"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "7a0e566f5bf740bb",
@@ -637,16 +637,16 @@
     "venueName": "Babette",
     "venueAddress": "Roslagsgatan 6",
     "venueCity": "Stockholm",
-    "score": 0,
+    "score": 0.5,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "budget",
     "tags": [
-      "selected"
+      "bib_gourmand"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "13d1d98c7bf2fe67",
@@ -660,16 +660,16 @@
     "venueName": "Västergatan",
     "venueAddress": "Västergatan 16",
     "venueCity": "Malmö",
-    "score": 0,
+    "score": 0.5,
     "cuisine": [
       "Swedish"
     ],
     "priceRange": "mellan",
     "tags": [
-      "selected"
+      "bib_gourmand"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "e54c34b5ddb07cff",
@@ -683,17 +683,17 @@
     "venueName": "Bar Agrikultur",
     "venueAddress": "Skånegatan 79",
     "venueCity": "Stockholm",
-    "score": 0,
+    "score": 0.5,
     "cuisine": [
       "Swedish",
       "Small eats"
     ],
     "priceRange": "budget",
     "tags": [
-      "selected"
+      "bib_gourmand"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "d8013468c225ffa5",
@@ -707,16 +707,16 @@
     "venueName": "Lilla Ego",
     "venueAddress": "Västmannagatan 69",
     "venueCity": "Stockholm",
-    "score": 0,
+    "score": 0.5,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "mellan",
     "tags": [
-      "selected"
+      "bib_gourmand"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "d682780d0b49922f",
@@ -730,16 +730,16 @@
     "venueName": "Triton",
     "venueAddress": "Ringvägen 87",
     "venueCity": "Stockholm",
-    "score": 0,
+    "score": 0.5,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "mellan",
     "tags": [
-      "selected"
+      "bib_gourmand"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "512460f6349d6376",
@@ -753,16 +753,16 @@
     "venueName": "Ruths",
     "venueAddress": "Mäster Johansgatan 11",
     "venueCity": "Malmö",
-    "score": 0,
+    "score": 0.5,
     "cuisine": [
       "Mediterranean Cuisine"
     ],
     "priceRange": "mellan",
     "tags": [
-      "selected"
+      "bib_gourmand"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "1590e4b594af96da",
@@ -776,16 +776,16 @@
     "venueName": "JH matbar",
     "venueAddress": "Stora Östergatan 34",
     "venueCity": "Ystad",
-    "score": 0,
+    "score": 0.5,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "mellan",
     "tags": [
-      "selected"
+      "bib_gourmand"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "00935d10e2b1aa04",
@@ -799,16 +799,16 @@
     "venueName": "Namu",
     "venueAddress": "Landbygatan 5",
     "venueCity": "Malmö",
-    "score": 0,
+    "score": 0.5,
     "cuisine": [
       "Korean"
     ],
     "priceRange": "budget",
     "tags": [
-      "selected"
+      "bib_gourmand"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.582Z",
+    "enrichedAt": "2026-05-12T12:53:40.582Z"
   },
   {
     "id": "0aa3484da6d31172",
@@ -822,16 +822,16 @@
     "venueName": "Allegrine",
     "venueAddress": "Kammakargatan 22",
     "venueCity": "Stockholm",
-    "score": 0,
+    "score": 0.5,
     "cuisine": [
       "French"
     ],
     "priceRange": "budget",
     "tags": [
-      "selected"
+      "bib_gourmand"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "43300d131060a657",
@@ -845,17 +845,17 @@
     "venueName": "Familjen",
     "venueAddress": "Arkivgatan 7",
     "venueCity": "Göteborg",
-    "score": 0,
+    "score": 0.5,
     "cuisine": [
       "Scandinavian",
       "Swedish"
     ],
     "priceRange": "mellan",
     "tags": [
-      "selected"
+      "bib_gourmand"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "aaf6725e5094b1f7",
@@ -869,16 +869,16 @@
     "venueName": "Matbaren",
     "venueAddress": "Södra Blasieholmshamnen 6",
     "venueCity": "Stockholm",
-    "score": 0,
+    "score": 0.5,
     "cuisine": [
       "Modern Cuisine"
     ],
     "priceRange": "mellan",
     "tags": [
-      "selected"
+      "bib_gourmand"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "9dad7eb197f1ccb9",
@@ -900,8 +900,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "7c73202091efb184",
@@ -924,8 +924,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "e891d89626575953",
@@ -947,8 +947,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "8842fd0ee3116ef2",
@@ -970,8 +970,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "012050423e7868a0",
@@ -993,8 +993,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "b20e7e040f114053",
@@ -1016,8 +1016,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "887a467485ea594c",
@@ -1040,8 +1040,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "f55783a9d90d6819",
@@ -1064,8 +1064,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "6eca687d3f00b680",
@@ -1087,8 +1087,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "7cca1dab0e7f4216",
@@ -1110,8 +1110,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "2d4439e6742737e5",
@@ -1134,8 +1134,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "9281a299be7d0f5f",
@@ -1157,8 +1157,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "b6869b340da374de",
@@ -1180,8 +1180,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "fb51c724b0435b3f",
@@ -1203,8 +1203,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "8e8c03e02450dd05",
@@ -1226,8 +1226,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "559e9387c3a27aae",
@@ -1249,8 +1249,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "a7a8d35fc679a37d",
@@ -1273,8 +1273,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "b02bd15472d83a1d",
@@ -1297,8 +1297,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "54a5b1762ea55551",
@@ -1320,8 +1320,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "897f047698194f95",
@@ -1343,8 +1343,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "f1068e10cbbf427b",
@@ -1366,8 +1366,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.864Z",
-    "enrichedAt": "2026-05-12T10:19:47.864Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "3f20c5dbc7fe9f07",
@@ -1389,8 +1389,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "83708b1ef440d988",
@@ -1412,8 +1412,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "b91adff40894f3b0",
@@ -1435,8 +1435,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "e28ac4d6c662d1b0",
@@ -1458,8 +1458,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "35a98345e3c596c7",
@@ -1481,8 +1481,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "053cb3b9d0fb6153",
@@ -1504,8 +1504,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "b884769fe1db7ba4",
@@ -1527,8 +1527,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "2b25ed6bfbac1a94",
@@ -1550,8 +1550,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "f44f93bdf1524a86",
@@ -1574,8 +1574,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "6084936d4f3e8e47",
@@ -1597,8 +1597,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "143ba1a14cc03e6e",
@@ -1620,8 +1620,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "a0bdf798bf6ed396",
@@ -1643,8 +1643,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "d111e343345aa955",
@@ -1666,8 +1666,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "be881f7109e807e0",
@@ -1689,8 +1689,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "511410b074ab72de",
@@ -1712,8 +1712,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "c3b2c9ae7da3a63e",
@@ -1735,8 +1735,8 @@
     "tags": [
       "selected"
     ],
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "a201b8f83a00a013",
@@ -1756,8 +1756,8 @@
     ],
     "lat": 59.335495,
     "lng": 18.077901,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "f3bd70b44d258371",
@@ -1777,8 +1777,8 @@
     ],
     "lat": 59.332065,
     "lng": 18.080456,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "3486b67070f36ecf",
@@ -1798,8 +1798,8 @@
     ],
     "lat": 57.703877,
     "lng": 11.95671,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "9780fb973b01dd65",
@@ -1819,8 +1819,8 @@
     ],
     "lat": 59.3151814,
     "lng": 18.0667222,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "53111f1f010e7672",
@@ -1840,8 +1840,8 @@
     ],
     "lat": 59.338656,
     "lng": 18.054743,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "74ce433ee23bf744",
@@ -1861,8 +1861,8 @@
     ],
     "lat": 59.345513,
     "lng": 18.067702,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "64e4901bef135047",
@@ -1882,8 +1882,8 @@
     ],
     "lat": 59.33237,
     "lng": 18.07365,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "3f3e71130aab03bd",
@@ -1903,8 +1903,8 @@
     ],
     "lat": 59.333185,
     "lng": 18.073813,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "bf33ed42b1308f1a",
@@ -1924,8 +1924,8 @@
     ],
     "lat": 59.337593,
     "lng": 18.061904,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "ebdfa6d73b1a6787",
@@ -1945,8 +1945,8 @@
     ],
     "lat": 59.3186,
     "lng": 18.1642,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "9adead70285d33cd",
@@ -1966,8 +1966,8 @@
     ],
     "lat": 59.32476,
     "lng": 18.087685,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "6110b8a05df2652f",
@@ -1987,8 +1987,8 @@
     ],
     "lat": 59.332555,
     "lng": 18.05721,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "02ada2950aeef2cc",
@@ -2008,8 +2008,8 @@
     ],
     "lat": 59.351671,
     "lng": 18.0434,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "d7d3b13655cce33f",
@@ -2029,8 +2029,8 @@
     ],
     "lat": 59.3282,
     "lng": 18.07779,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "ab6ee87416d8a8f6",
@@ -2050,8 +2050,8 @@
     ],
     "lat": 59.330841,
     "lng": 18.067027,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "d709e990693cb312",
@@ -2071,8 +2071,8 @@
     ],
     "lat": 59.33137,
     "lng": 18.07466,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "6cb1f9b0cc811a20",
@@ -2092,8 +2092,8 @@
     ],
     "lat": 59.32477,
     "lng": 18.09709,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "5391ad0083f6ae0d",
@@ -2113,8 +2113,8 @@
     ],
     "lat": 59.3313766222,
     "lng": 18.0696957115,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "2525089b066e9d28",
@@ -2134,8 +2134,8 @@
     ],
     "lat": 66.07286,
     "lng": 20.98175,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "9bf86f2084d85bcb",
@@ -2155,8 +2155,8 @@
     ],
     "lat": 59.32961,
     "lng": 18.07544,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "daa19b789449d23c",
@@ -2176,8 +2176,8 @@
     ],
     "lat": 59.33094,
     "lng": 18.07722,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "12de51a06749f199",
@@ -2197,8 +2197,8 @@
     ],
     "lat": 59.33473,
     "lng": 18.0751,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "32e430cad7b0def5",
@@ -2218,8 +2218,8 @@
     ],
     "lat": 59.34602,
     "lng": 18.03601,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "92178ce08caa625f",
@@ -2239,8 +2239,8 @@
     ],
     "lat": 67.8509,
     "lng": 20.59564,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "3df84d21585b7d9f",
@@ -2260,8 +2260,8 @@
     ],
     "lat": 59.31952,
     "lng": 18.07095,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "ea9a3442014e3912",
@@ -2281,8 +2281,8 @@
     ],
     "lat": 63.382974,
     "lng": 13.177002,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "338ea452eea14af2",
@@ -2302,8 +2302,8 @@
     ],
     "lat": 59.3307,
     "lng": 18.06703,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "21059e23d353dfbc",
@@ -2323,8 +2323,8 @@
     ],
     "lat": 59.434668,
     "lng": 17.78615,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "82edaee7539c7d45",
@@ -2344,8 +2344,8 @@
     ],
     "lat": 59.3313,
     "lng": 18.06554,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "60fae4cfc1e2b358",
@@ -2365,8 +2365,8 @@
     ],
     "lat": 59.32892,
     "lng": 18.06187,
-    "collectedAt": "2026-05-12T10:19:47.865Z",
-    "enrichedAt": "2026-05-12T10:19:47.865Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "2ac32e34766013d3",
@@ -2386,8 +2386,8 @@
     ],
     "lat": 55.61224,
     "lng": 12.99439,
-    "collectedAt": "2026-05-12T10:19:47.866Z",
-    "enrichedAt": "2026-05-12T10:19:47.866Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "c47459994845b191",
@@ -2407,8 +2407,8 @@
     ],
     "lat": 57.70696,
     "lng": 11.97073,
-    "collectedAt": "2026-05-12T10:19:47.866Z",
-    "enrichedAt": "2026-05-12T10:19:47.866Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "83c6853f63cf64bd",
@@ -2428,8 +2428,8 @@
     ],
     "lat": 57.70462,
     "lng": 11.97166,
-    "collectedAt": "2026-05-12T10:19:47.866Z",
-    "enrichedAt": "2026-05-12T10:19:47.866Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "4acdd36374e2a4b4",
@@ -2449,8 +2449,8 @@
     ],
     "lat": 59.6067,
     "lng": 16.56746,
-    "collectedAt": "2026-05-12T10:19:47.866Z",
-    "enrichedAt": "2026-05-12T10:19:47.866Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "07b6024ec9b25c38",
@@ -2470,8 +2470,8 @@
     ],
     "lat": 55.60589,
     "lng": 12.9979,
-    "collectedAt": "2026-05-12T10:19:47.866Z",
-    "enrichedAt": "2026-05-12T10:19:47.866Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "fe6672b2de971f47",
@@ -2491,8 +2491,8 @@
     ],
     "lat": 57.70279,
     "lng": 11.96549,
-    "collectedAt": "2026-05-12T10:19:47.866Z",
-    "enrichedAt": "2026-05-12T10:19:47.866Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "a25d02591f83df26",
@@ -2512,8 +2512,8 @@
     ],
     "lat": 63.8251,
     "lng": 20.26109,
-    "collectedAt": "2026-05-12T10:19:47.866Z",
-    "enrichedAt": "2026-05-12T10:19:47.866Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "f0cf9e84481cc8c3",
@@ -2533,8 +2533,8 @@
     ],
     "lat": 55.60369,
     "lng": 12.99958,
-    "collectedAt": "2026-05-12T10:19:47.866Z",
-    "enrichedAt": "2026-05-12T10:19:47.866Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "c0dabe457949cf11",
@@ -2554,8 +2554,8 @@
     ],
     "lat": 56.57436,
     "lng": 16.41033,
-    "collectedAt": "2026-05-12T10:19:47.866Z",
-    "enrichedAt": "2026-05-12T10:19:47.866Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "4d24143ad5984c65",
@@ -2575,8 +2575,8 @@
     ],
     "lat": 57.79123,
     "lng": 14.27526,
-    "collectedAt": "2026-05-12T10:19:47.866Z",
-    "enrichedAt": "2026-05-12T10:19:47.866Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "a1ba3c43e2c13d2e",
@@ -2596,8 +2596,8 @@
     ],
     "lat": 57.706661,
     "lng": 12.465585,
-    "collectedAt": "2026-05-12T10:19:47.866Z",
-    "enrichedAt": "2026-05-12T10:19:47.866Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "55579e925b0f7495",
@@ -2617,8 +2617,8 @@
     ],
     "lat": 66.088588,
     "lng": 20.937173,
-    "collectedAt": "2026-05-12T10:19:47.866Z",
-    "enrichedAt": "2026-05-12T10:19:47.866Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "1f62732bbb3afbbd",
@@ -2638,8 +2638,8 @@
     ],
     "lat": 55.940293,
     "lng": 12.781009,
-    "collectedAt": "2026-05-12T10:19:47.866Z",
-    "enrichedAt": "2026-05-12T10:19:47.866Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "68dbea36cb9e2ca2",
@@ -2659,8 +2659,8 @@
     ],
     "lat": 59.325437,
     "lng": 18.075368,
-    "collectedAt": "2026-05-12T10:19:47.866Z",
-    "enrichedAt": "2026-05-12T10:19:47.866Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   },
   {
     "id": "1d92b5d709109cb2",
@@ -2680,7 +2680,7 @@
     ],
     "lat": 59.345707,
     "lng": 18.056713,
-    "collectedAt": "2026-05-12T10:19:47.866Z",
-    "enrichedAt": "2026-05-12T10:19:47.866Z"
+    "collectedAt": "2026-05-12T12:53:40.583Z",
+    "enrichedAt": "2026-05-12T12:53:40.583Z"
   }
 ]
