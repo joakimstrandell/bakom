@@ -21,6 +21,9 @@ const MIN_DELAY_MS = 2000;
 const MAX_PAGES = 60;
 const SAVE_INTERVAL = 50;
 
+// Site self-promo entries that appear in the venue list URL space
+const EXCLUDE_SLUGS = new Set(["annonsera-pa-krogguiden"]);
+
 // ─── Types ──────────────────────────────────────────────────────
 
 interface KrogguidenEntry {
@@ -373,7 +376,7 @@ export async function collectKrogguiden(
   }
 
   // Phase 1: Discover slugs
-  const slugs = await fetchAllSlugs();
+  const slugs = (await fetchAllSlugs()).filter((s) => !EXCLUDE_SLUGS.has(s));
 
   // Determine which to scrape
   let toScrape: string[];
